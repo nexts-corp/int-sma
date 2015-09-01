@@ -1,0 +1,14 @@
+.\Discover-More\timers.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\timers.c
+.\Discover-More\timers.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\Discover-More\timers.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\include\FreeRTOS.h
+.\Discover-More\timers.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\Discover-More\timers.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\Discover-More\timers.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\include\projdefs.h
+.\Discover-More\timers.o: ..\User\inc\FreeRTOSConfig.h
+.\Discover-More\timers.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\include\portable.h
+.\Discover-More\timers.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\portable\RVDS\ARM_CM4F\portmacro.h
+.\Discover-More\timers.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\include\mpu_wrappers.h
+.\Discover-More\timers.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\include\task.h
+.\Discover-More\timers.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\include\list.h
+.\Discover-More\timers.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\include\queue.h
+.\Discover-More\timers.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\include\timers.h
