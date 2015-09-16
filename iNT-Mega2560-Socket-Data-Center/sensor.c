@@ -5,30 +5,47 @@
 #include "sensor.h"
 #include "config.h"
 #include "timer.h"
-#include "gaussian.h"
 #include "debug.h"
 #include "dht11.h"
+#include "calibration.h"
 
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
 
+
+//extern eeprom ST_CAL sensorCalulate;
 struct sens_val_st      sensor[5];
 extern ST_DHT11 dhtDevice;
 ST_DHT11 dhtDevice;
+//eeprom float calS1[5];//standrad point 1
+//eeprom float calS2[5];//standrad point 2
+//eeprom float calS3[5];//standrad point 3
+//eeprom float calX1[5];//input sensor point 1
+//eeprom float calX2[5];//input sensor point 2
+//eeprom float calX3[5];//input sensor point 3
+
+float sensorGetValue(unsigned int channelID){
+    printDebug("Sensor ch[%d] is a raw data[%0.2f] , calProcess[%0.2f]\r\n",channelID-1,adcData[channelID-1],calProcessValue(adcData[channelID-1],channelID));
+    return calProcessValue(adcData[channelID-1],channelID);
+}
 
 int sensorRead(int ch, struct sens_val_st *sensor){
     int dhtRet = 0;
     
     updateSensorADC(ch);
     if(ch==0){  
-       sensor->value = adcData[ch]; 
+       sensor->value = calProcessValue(adcData[ch],ch+1);
+       //sensor->value = adcData[ch]; 
     }else if(ch==3){
-       sensor->value = adcData[ch];
-    }else if(ch==4){
-       sensor->value = adcData[ch];
+    sensor->value = calProcessValue(adcData[ch],ch+1);
+       //sensor->value = adcData[ch];
+    }else if(ch==4){ 
+       sensor->value = calProcessValue(adcData[ch],ch+1);
+       //sensor->value = adcData[ch];
     }else if((ch==1) || (ch==2)){
         dhtRet = dhtDevice.status;
-        if(dhtRet == DHT11_SUCCESS){  
-           sensor->value = adcData[ch];
+        if(dhtRet == DHT11_SUCCESS){
+           sensor->value = calProcessValue(adcData[ch],ch+1);  
+           //sensor->value = adcData[ch];
         }else if(dhtRet == DHT11_ERROR_TIMEOUT){       
            sensor->status  = SENS_ERROR;
            //return -2;
@@ -141,38 +158,6 @@ void updateSensorADC(int ch)
                adcData[ch] = average(bufferHumi,1);
             }
         }
-         
-//        if(ch==1){
-//            
-//            //dhtRet = DHT11Read(&dhtDevice);
-//            if(dhtRet == DHT11_SUCCESS){
-//                 
-//               //sensor->value = dhtDevice.temp;
-//               //adcData[ch] = dhtDevice.temp;   
-//               adcData[ch] = average(bufferTemp,2); 
-//               //printDebug("[%d]ADC:DHT11: Temp(%f)\r\n", ch,adcData[ch]); 
-//            }else if(dhtRet == DHT11_ERROR_TIMEOUT){
-//          //      sensor->status  = SENS_ERR_UNKNOWN;       
-//               //printDebug("[%d]ADC:DHT11:Time out. \r\n", ch);
-//            }else if(dhtRet == DHT11_ERROR_CHECKSUM){      
-//               //printDebug("[%d]ADC:DHT11:Check sum error. \r\n", ch);
-//            } 
-//        }else if(ch==2){   
-//            
-//            //dhtRet = DHT11Read(&dhtDevice);
-//            if(dhtRet == DHT11_SUCCESS){
-//              //printDebug("[%d]ADC:DHT11: Humi(%f) \r\n", ch,dhtDevice.humi);
-//               //sensor->value = dhtDevice.humi;
-//               //adcData[ch] = dhtDevice.humi;  
-//               adcData[ch] = average(bufferHumi,2); 
-//               //printDebug("[%d]ADC:DHT11: Humip(%f)\r\n", ch,adcData[ch]); 
-//            }else if(dhtRet == DHT11_ERROR_TIMEOUT){  
-//             //   sensor->status  = SENS_ERR_UNKNOWN; 
-//               //printDebug("[%d]ADC:DHT11:Time out. \r\n", ch);
-//            }else if(dhtRet == DHT11_ERROR_CHECKSUM){      
-//               //printDebug("[%d]ADC:DHT11:Check sum error. \r\n", ch);
-//            }  
-//        }
     }
     return;    
 }
@@ -203,3 +188,6 @@ float average(float data[],int count){      //Volt value
      avg =(sum/count);
      return avg;
 }
+
+
+ 

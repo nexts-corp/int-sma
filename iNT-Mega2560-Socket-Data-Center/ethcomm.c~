@@ -8,7 +8,9 @@
 #include "logqueue.h"
 #include "debug.h"
                                                 
-eeprom char     DEVICE_SERIAL[8]    = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x01};     
+//eeprom char     DEVICE_SERIAL[8]    = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x01};  
+eeprom char     DEVICE_SERIAL[8]    = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x01};  
+/*bongkot edit default of serial number*/   
 
 TIMER           commLostTimer       = 0;                  
 unsigned char   duplicateListClear  = 0;                     
@@ -1145,8 +1147,9 @@ int ETH_send(char *frameData, int frameLen, char frameID, int timeout)
 //        TIMER_setTimer(&commLostTimer,30);      
 //    }  
                      
-//    printDebug("\r\n--Transmitting [0x%02X]\r\n",frameID);
-//    print_payload(sendPacket,packetLen); 
+    printDebug("\r\n--Transmitting [0x%02X]\r\n",frameID);
+    print_payload(sendPacket,packetLen); 
+    
     write_uart0(sendPacket,packetLen);  
     free(sendPacket);
        

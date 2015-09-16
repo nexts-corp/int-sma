@@ -22,7 +22,9 @@ struct buzz_cnfg_st buzz_config;
 struct stat_cnfg_st status_config;
 struct alm_cnfg_st  env_config;
 
-flash char FIRMWARE_VERSION[] = "iNT-ETH-0.24b";        
+//flash char FIRMWARE_VERSION[] = "iNT-ETH-0.24b";  
+//iNT-ETH-DC-0.01a 
+flash char FIRMWARE_VERSION[] = "iNT-ETH-DC-0.01a";        
 /*============================================================*/
 
 /**************************************************************/

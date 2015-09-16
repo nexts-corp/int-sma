@@ -102,6 +102,11 @@ void init_io(void)
 /*============================================================*/
 void IO_dout(int ch, char state)
 {
+//    /*bongkot edit output is actived high(1)*/   
+//    //triger state input function
+//    state = !state;
+//    /* end edit*/
+    
     switch(ch){
         case 0  :   DOUT1       =   !state;
                     d_out[0]    =   state;         

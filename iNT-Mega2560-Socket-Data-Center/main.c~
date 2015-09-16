@@ -26,8 +26,8 @@ AVR Core Clock frequency: 8.000000 MHz
 #include "eventqueue.h"
 #include "log.h"
 #include "logqueue.h"
-#include "oled.h"
-#include "menu.h"
+//#include "oled.h"
+//#include "menu.h"
 #include "io.h"
 #include "debug.h"
 #include "gaussian.h"
@@ -107,25 +107,25 @@ void main(void)
 //    }
 //    
     /*bongkot*/  
-    while(1){ 
-        #asm("wdr")
-        for(countSenserRead=0;countSenserRead<5;countSenserRead++){
-//            if(TIMER_checkTimerExceed(readSensorTimer)){       
-//                TIMER_setTimer(&readSensorTimer, 5); 
-//                updateSensorADC(countSenserRead);                    // -- update adcData[ch] -- //
-//                //printDebug("[%d]ADC: %f, Volt: %f \r\n", i, adcData[i], (adcData[i]/1023)*2.56);   
-//                //printDebug("[%d]ADC: %f, Volt: %f \r\n", i, adcData[countSenserRead], (adcData[countSenserRead]/1023)*3.30);
-//            } 
-            
-             updateSensorADC(countSenserRead);     
-//             updateSensorADC(1); 
+//    while(1){ 
+//        #asm("wdr")
+//        for(countSenserRead=0;countSenserRead<5;countSenserRead++){
+////            if(TIMER_checkTimerExceed(readSensorTimer)){       
+////                TIMER_setTimer(&readSensorTimer, 5); 
+////                updateSensorADC(countSenserRead);                    // -- update adcData[ch] -- //
+////                //printDebug("[%d]ADC: %f, Volt: %f \r\n", i, adcData[i], (adcData[i]/1023)*2.56);   
+////                //printDebug("[%d]ADC: %f, Volt: %f \r\n", i, adcData[countSenserRead], (adcData[countSenserRead]/1023)*3.30);
+////            } 
+//            
+//             updateSensorADC(countSenserRead);     
+////             updateSensorADC(1); 
+////             delay_ms(100);
+////             updateSensorADC(2);
 //             delay_ms(100);
-//             updateSensorADC(2);
-             delay_ms(100);
-        }   
-        //delay_ms(2000); 
-        
-    }
+//        }   
+//        //delay_ms(2000); 
+//        
+//    }
                    
     //ETH_CONF;
                                                        
@@ -141,8 +141,10 @@ void main(void)
     // -- alarm indicator initialize -- //                                       
     buzzer_on = 0;          // -- buzzer off -- //    
     for(k=0;k<2;k++)        // -- MAX_DO_CHANNEL
-    {                                                                                         
-        IO_dout(k,!dout_config[k].stateOnEvent);     // -- Digital Output X OFF -- //              
+    {    
+        /*bongkot edit logic*/                                                                                     
+        IO_dout(k,dout_config[k].stateOnEvent);     // -- Digital Output X OFF -- //      
+        //IO_dout(k,!dout_config[k].stateOnEvent);     // -- Digital Output X OFF -- //           
     }                                         
     
     initDataLogQueue();
@@ -194,10 +196,10 @@ void main(void)
         if(flag_PackageTerminate3){    debug_req();     }
         
         // ----------- On Device Key Press ------------- //
-        key_press = IO_keyCheck();
-        if(key_press){
-            MENU_processKey(key_press);
-        }
+//        key_press = IO_keyCheck();
+//        if(key_press){
+//            MENU_processKey(key_press);
+//        }
               
         // ----------- Ethernet Communication ---------- //
         ETH_receive();                   
@@ -256,6 +258,19 @@ void main(void)
             getEnvAlarmConfig(&env_config);
             is_env_config_update = 0;             
         }
+        
+        /**
+           bongkot test data;
+        **/
+//        operating_config.alarmEnable = 0;
+//        operating_config.deviceEnable = 1; 
+//        operating_config.mode = 0;
+//        operating_config.sensorEnable[0] = 1; 
+//        operating_config.sensorEnable[1] = 1;
+//        operating_config.sensorEnable[2] = 1;
+//        operating_config.sensorEnable[3] = 1;
+//        operating_config.sensorEnable[4] = 1;
+        
         
         if(operating_config.deviceEnable)                       // ----- device enable ------ //
         {    
@@ -344,16 +359,22 @@ void main(void)
                             // -- check alarm Digital Output -- //                                                                          
 //                            printDebug("<main> dout[%d] alarm check -- \r\n",k);
                             res = checkAlarm(dout_config[k].eventSource, dout_config[k].eventSourceNumber);       // -- alarm.h -- //
-                            if(res){              
-                                IO_dout(k,dout_config[k].stateOnEvent);     // -- Digital Output X ON -- // 
+                            if(res){ 
+                                /*bongkot edit logic*/  
+                                IO_dout(k,!dout_config[k].stateOnEvent);     // -- Digital Output X ON -- //              
+                                //IO_dout(k,dout_config[k].stateOnEvent);     // -- Digital Output X ON -- // 
                             }
-                            else{                                                                          
-                                IO_dout(k,!dout_config[k].stateOnEvent);    // -- Digital Output X OFF -- //                        
+                            else{ 
+                                /*bongkot edit logic*/
+                                IO_dout(k,dout_config[k].stateOnEvent);    // -- Digital Output X OFF -- //                                                                           
+                                //IO_dout(k,!dout_config[k].stateOnEvent);    // -- Digital Output X OFF -- //                        
                             }                        
                         }                    
                         else                                                // -- digital output disabled -- //
-                        {                                                                                          
-                            IO_dout(k,!dout_config[k].stateOnEvent);        // -- Digital Output X OFF -- // 
+                        {  
+                            /*bongkot edit logic*/
+                            IO_dout(k,dout_config[k].stateOnEvent);        // -- Digital Output X OFF -- //                                                                                         
+                            //IO_dout(k,!dout_config[k].stateOnEvent);        // -- Digital Output X OFF -- // 
                         }
                     }
                 }                                   
@@ -362,8 +383,10 @@ void main(void)
                     // -- no alarm -- // ^_^                                         
                     buzzer_on = 0;                  // -- buzzer off -- //    
                     for(k=0;k<USE_DOUT;k++)         // -- MAX_DO_CHANNEL
-                    {                                          
-                        IO_dout(k,!dout_config[k].stateOnEvent);     // -- Digital Output X OFF -- //              
+                    {   
+                        /*bongkot edit logic*/ 
+                        IO_dout(k,dout_config[k].stateOnEvent);     // -- Digital Output X OFF -- //                                      
+                        //IO_dout(k,!dout_config[k].stateOnEvent);     // -- Digital Output X OFF -- //              
                     }
                 }
                 
@@ -375,8 +398,10 @@ void main(void)
                 // -- no alarm -- // ;-P                                           
                 buzzer_on = 0;                      // -- buzzer off -- //    
                 for(k=0;k<USE_DOUT;k++)             // -- MAX_DO_CHANNEL
-                {                                                                                  
-                    IO_dout(k,!dout_config[k].stateOnEvent);    // -- Digital Output X OFF -- //              
+                { 
+                    /*bongkot edit logic*/   
+                    IO_dout(k,dout_config[k].stateOnEvent);    // -- Digital Output X OFF -- //                                                                               
+                    //IO_dout(k,!dout_config[k].stateOnEvent);    // -- Digital Output X OFF -- //              
                 } 
             }        
                     
@@ -447,65 +472,65 @@ void main(void)
                     }    
                 }                     
                 
-                if(currentPage == P_MONITOR)
-                {                                 
-              //      printDebug("<main> OLED_showSensorValue\r\n");  
-                    OLED_showSensorValue();    
-                    
-                    for(i=0;i<2;i++){  
-                        OLED_showInputStatus(i,dinStatus[i]);   
-                    }                                        
-
-                    for(i=0;i<2;i++){  
-                        OLED_showOutputStatus(i,doutStatus[i]);
-                    }                                          
-                                                              
-               //     printDebug("<main> OLED_showDateTime\r\n");  
-                    OLED_showDateTime(properties_config.timeZone); 
-                                                        
-              //      printDebug("<main> OLED_showAlarmStatus\r\n");          
-                    OLED_showAlarmStatus();
-                }                        
+//                if(currentPage == P_MONITOR)
+//                {                                 
+//              //      printDebug("<main> OLED_showSensorValue\r\n");  
+//                    OLED_showSensorValue();    
+//                    
+//                    for(i=0;i<2;i++){  
+//                        OLED_showInputStatus(i,dinStatus[i]);   
+//                    }                                        
+//
+//                    for(i=0;i<2;i++){  
+//                        OLED_showOutputStatus(i,doutStatus[i]);
+//                    }                                          
+//                                                              
+//               //     printDebug("<main> OLED_showDateTime\r\n");  
+//                    OLED_showDateTime(properties_config.timeZone); 
+//                                                        
+//              //      printDebug("<main> OLED_showAlarmStatus\r\n");          
+//                    OLED_showAlarmStatus();
+//                }                        
                                                 
               //  printDebug("<main> powerSrcStatus\r\n");  
-                switch(powerSrcStatus){
-                    case PWR_NORMAL     :   OLED_showPowerStatus(PWR_NORMAL,0);                     break;
-                    case PWR_DOWN       :   OLED_showPowerStatus(PWR_DOWN,batteryVolt);             break; 
-                    default             :   break; 
-                }                        
-                                          
-            //    printDebug("<main> serverCommStatus\r\n");  
-                switch(serverCommStatus){
-                    case COMM_NORMAL    :   OLED_showServerCommStatus(OLED_SERVER_CONNECT);         break;
-                    case COMM_LOST      :   OLED_showServerCommStatus(OLED_SERVER_DISCONNECT);      break; 
-                    default             :   OLED_showServerCommStatus(OLED_SERVER_UNKNOWN);         break; 
-                }
-                                   
-            //    printDebug("<main> lanStatus\r\n");  
-                switch(lanStatus){
-                    case COMM_LAN_CONNECT       :   OLED_showLanStatus(OLED_LAN_CONNECT);           break;
-                    case COMM_LAN_DISCONNECT    :   OLED_showLanStatus(OLED_LAN_DISCONNECT);        break; 
-                    default                     :   break; 
-                }
-                                       
-            //    printDebug("<main> OLED_showBuzzerStatus\r\n");  
-                if(muteMode){
-                    OLED_showBuzzerStatus(OLED_BUZZER_MUTE);
-                }
-                else if(buzz_config.enable == 0x01){
-                    OLED_showBuzzerStatus(OLED_BUZZER_ENABLE);
-                }
-                else{
-                    OLED_showBuzzerStatus(OLED_BUZZER_DISABLE);
-                }
-                                                     
-           //     printDebug("<main> memoryStatus\r\n"); 
-                switch(memoryStatus){   
-                    case MEM_NORMAL         :   OLED_showMemoryStatus(OLED_MEMORY_NORMAL);          break;
-                    case MEM_LOW            :   OLED_showMemoryStatus(OLED_MEMORY_LOW);             break; 
-                    case MEM_ERROR          :   OLED_showMemoryStatus(OLED_MEMORY_ERROR);           break; 
-                    default                 :   break; 
-                }                   
+//                switch(powerSrcStatus){
+//                    case PWR_NORMAL     :   OLED_showPowerStatus(PWR_NORMAL,0);                     break;
+//                    case PWR_DOWN       :   OLED_showPowerStatus(PWR_DOWN,batteryVolt);             break; 
+//                    default             :   break; 
+//                }                        
+//                                          
+//            //    printDebug("<main> serverCommStatus\r\n");  
+//                switch(serverCommStatus){
+//                    case COMM_NORMAL    :   OLED_showServerCommStatus(OLED_SERVER_CONNECT);         break;
+//                    case COMM_LOST      :   OLED_showServerCommStatus(OLED_SERVER_DISCONNECT);      break; 
+//                    default             :   OLED_showServerCommStatus(OLED_SERVER_UNKNOWN);         break; 
+//                }
+//                                   
+//            //    printDebug("<main> lanStatus\r\n");  
+//                switch(lanStatus){
+//                    case COMM_LAN_CONNECT       :   OLED_showLanStatus(OLED_LAN_CONNECT);           break;
+//                    case COMM_LAN_DISCONNECT    :   OLED_showLanStatus(OLED_LAN_DISCONNECT);        break; 
+//                    default                     :   break; 
+//                }
+//                                       
+//            //    printDebug("<main> OLED_showBuzzerStatus\r\n");  
+//                if(muteMode){
+//                    OLED_showBuzzerStatus(OLED_BUZZER_MUTE);
+//                }
+//                else if(buzz_config.enable == 0x01){
+//                    OLED_showBuzzerStatus(OLED_BUZZER_ENABLE);
+//                }
+//                else{
+//                    OLED_showBuzzerStatus(OLED_BUZZER_DISABLE);
+//                }
+//                                                     
+//           //     printDebug("<main> memoryStatus\r\n"); 
+//                switch(memoryStatus){   
+//                    case MEM_NORMAL         :   OLED_showMemoryStatus(OLED_MEMORY_NORMAL);          break;
+//                    case MEM_LOW            :   OLED_showMemoryStatus(OLED_MEMORY_LOW);             break; 
+//                    case MEM_ERROR          :   OLED_showMemoryStatus(OLED_MEMORY_ERROR);           break; 
+//                    default                 :   break; 
+//                }                   
                                        
                 timer_1sec_flag = 0;
             }  
@@ -515,32 +540,11 @@ void main(void)
             // -- no alarm -- // ;-P                                           
             buzzer_on = 0;                      // -- buzzer off -- //    
             for(k=0;k<USE_DOUT;k++)             // -- MAX_DO_CHANNEL
-            {                                                                                  
-                IO_dout(k,!dout_config[k].stateOnEvent);    // -- Digital Output X OFF -- //              
+            { 
+                /*bongkot edit logic*/  
+                IO_dout(k,dout_config[k].stateOnEvent);    // -- Digital Output X OFF -- //                                                                                
+                //IO_dout(k,!dout_config[k].stateOnEvent);    // -- Digital Output X OFF -- //              
             } 
-                     
-                                      
-            if(TEMP_SEL == TEMP_TYPE_K){   
-                if(hwCalId == 9){
-                    printDebug("<main> [Device disable] [TYPE-K] $CMDSNS N : X.XX                    \r");
-                }
-                else if(SENSOR_CONNECT){
-                    printDebug("<main> [Device disable] [TYPE-K] $CMDSNS %d : %f                     \r",hwCalId,(adcData[hwCalId]*ADC_CONV_FAC*100));
-                }        
-                else{                       
-                    printDebug("<main> [Device disable] [TYPE-K] $CMDSNS %d : disconnected           \r",hwCalId);
-                }                                                                                        
-                delay_ms(200);
-            }                
-            else if(TEMP_SEL == TEMP_TMEC){
-                    printDebug("<main> [Device disable] [TMEC]                                       \r");
-            }
-            else if(TEMP_SEL == TEMP_PT100){
-                    printDebug("<main> [Device disable] [PT100]                                      \r");
-            }
-            else if(TEMP_SEL == TEMP_RESERVED){
-                    printDebug("<main> [Device disable] [RESERVED]                                   \r");
-            }
         }                                                                                                              
         
         #asm("wdr")
@@ -983,11 +987,11 @@ int sensorDataSave(void)
     while (count < MAX_DATA_QUEUE)
     {
         res = fetchDataQueue(&timestamp, &channel, &value);
-        if(res < 0)
+        if(res < 0)    //queue empty
         {
             break;
         }
-        else
+        else          //there are data in queue
         {   
             printDebug("<sensorDataSave> time[%ld],ch[%d],val[%.2f]\r\n",timestamp,channel,value);             
             /*                             

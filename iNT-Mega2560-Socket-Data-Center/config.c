@@ -14,7 +14,8 @@ char is_status_config_update                    = 1;
 char is_env_config_update                       = 1;
 
 struct prop_cnfg_st properties_config;
-struct oper_cnfg_st operating_config;                            
+struct oper_cnfg_st operating_config; 
+struct oper_cnfg_st operating_config;                             
 struct sens_cnfg_st sensor_config[MAX_SENS_CHANNEL];       
 struct din_cnfg_st  din_config[MAX_DI_CHANNEL];
 struct dout_cnfg_st dout_config[MAX_DO_CHANNEL];

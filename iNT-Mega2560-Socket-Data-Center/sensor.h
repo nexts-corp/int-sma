@@ -1,6 +1,9 @@
 #ifndef SENSOR_H
 #define SENSOR_H
 
+
+#include <mega2560.h>
+#include <stdio.h>
 #include "adc.h"
 #include "io.h"
 
@@ -38,7 +41,11 @@ bit 7   6   5   4       3   2   1   0
 #define CAL_SELFCOMPARE         0x01           
 #define CAL_EXTOFFSET           0x02
 #define CAL_EXTLINEAR           0x03                 
-#define CAL_EXTPOLYNOMIAL       0x04                           
+#define CAL_EXTPOLYNOMIAL       0x04       
+
+#define CAL_STD_REF_P1              0x01           //standrad value reference
+#define CAL_STD_REF_P2              0x02
+#define CAL_STD_REF_P3              0x03                  
 
 #define CALPOINT(x)             (100+x)
 
@@ -47,6 +54,20 @@ bit 7   6   5   4       3   2   1   0
 #define TMEC_OPEN_LIMIT         1021.0
 #define PT100_SHORT_LIMIT       8.0
 #define PT100_OPEN_LIMIT        970.0
+
+//extern eeprom float calS1[5];//standrad point 1
+//extern eeprom float calS2[5];//standrad point 2
+//extern eeprom float calS3[5];//standrad point 3
+////
+//extern eeprom float calX1[5];//input sensor point 1
+//extern eeprom float calX2[5];//input sensor point 2
+//extern eeprom float calX3[5];//input sensor point 3
+
+
+
+
+
+
 
 struct sens_val_st
 {
@@ -61,6 +82,7 @@ int sensorRead(int ch, struct sens_val_st *sensor);
 void updateSensorADC(int ch); 
 float voltPeak(float data[]);
 float average(float data[],int count); 
+float sensorGetValue(unsigned int channelID);
 //int sensorCalibrate1(int p1, int p2);                       
 //int sensorCalibrate2(int prbId); 
 //int sensorGetCurrentSetPoint(int ch,int pnt,unsigned char *buf);          

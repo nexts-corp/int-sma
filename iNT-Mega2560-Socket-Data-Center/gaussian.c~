@@ -91,7 +91,7 @@ void gaussian(float factor1, float factor2, float factor3, float ref1, float ref
     a[2][0] = 1.0;      a[2][1] = factor3;     a[2][2] = factor3 * factor3;  a[2][3] = ref3; 
                          
                                           
-    printDebug("\r\n--- start ---\r\n");
+    printDebug("\r\n<gaussian> --- start ---\r\n");
     for (i = 0; i < n; ++i) {                   
         printDebug("\t\t");
         for (j = 0; j < n + 1; ++j)
@@ -102,19 +102,19 @@ void gaussian(float factor1, float factor2, float factor3, float ref1, float ref
     forwardSubstitution();
     reverseElimination();
                                           
-    printDebug("\r\n--- finish ---\r\n");
-    for (i = 0; i < n; ++i) {                   
-        printDebug("\t\t");
-        for (j = 0; j < n + 1; ++j)
-            printDebug("%.2f\t", a[i][j]);
-        printDebug("\r\n");
-    } 
+//    printDebug("\r\n<gaussian> --- finish ---\r\n");
+//    for (i = 0; i < n; ++i) {                   
+//        printDebug("\t\t");
+//        for (j = 0; j < n + 1; ++j)
+//            printDebug("%.2f\t", a[i][j]);
+//        printDebug("\r\n");
+//    } 
                                         
     *resA = a[2][3];
     *resB = a[1][3];
     *resC = a[0][3];    
                                                                                                            
-    printDebug("\r\n<gaussian> y = %f(x^2) + %f(x) + %f\r\n",*resA,*resB,*resC); 
+   // printDebug("\r\n<gaussian> y = %f(x^2) + %f(x) + %f\r\n",*resA,*resB,*resC); 
     
     return;
 }

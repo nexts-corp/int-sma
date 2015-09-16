@@ -8,7 +8,9 @@
 #include "logqueue.h"
 #include "debug.h"
                                                 
-eeprom char     DEVICE_SERIAL[8]    = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x01};     
+//eeprom char     DEVICE_SERIAL[8]    = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x01};  
+eeprom char     DEVICE_SERIAL[8]    = {0x00,0x00,0x00,0x00,0x00,0x00,0x02,0x22};  
+/*bongkot edit default of serial number*/   
 
 TIMER           commLostTimer       = 0;                  
 unsigned char   duplicateListClear  = 0;                     

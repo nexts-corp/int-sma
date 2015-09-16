@@ -11,6 +11,12 @@
 #include "log.h"
 #include "io.h"
 #include "ethcomm.h"
+#include "calibration.h"
+#include "sensor.h"
+//sensorGetValue(u int)
+extern ST_CAL_CONFIG sensorCalConfig;
+extern eeprom  ST_CAL sensorCalulate;          //improtance    extern from  calibration.h
+extern void (*pfCalibrate) (ST_CAL_CONFIG calConfig);   //pointer function of calibation set  extern from  calibration.h
 
 flash unsigned char cmdSetRTCDateTime[]     = "$CMDSDT";        // -- Set Date/Time -- //
 flash unsigned char cmdResetAlarmStatus[]   = "$CMDRAS";        // -- Re-initiate all alarm flag -- //  
@@ -21,6 +27,11 @@ flash unsigned char cmdDeviceEnable[]       = "$CMDDEN";        // -- Enable Dev
 flash unsigned char cmdDeviceDisable[]      = "$CMDDDS";        // -- Disable Device -- //
 flash unsigned char cmdSetSerialNumber[]    = "$CMDSSN";        // -- Set Serial Number -- //
 flash unsigned char cmdReadSerialNumber[]   = "$CMDRSN";        // -- Read Serial Number -- //
+
+flash unsigned char cmdGetCal[]             = "$CMDGCL";         // -- Get calibrate value -- //      $CMDRCL,1#        ,chID(1)
+flash unsigned char cmdSetCal[]             = "$CMDSCL";         // -- Set calibrate value -- //      $CMDSCL,1,1,29.20     ,chID(1),pointID(1),std1Value(29.20)#
+flash unsigned char cmdConfirmCal[]         = "$CMDCCL";         // -- Confirm calibrate type -- //   ,chID(1),calType(1) 0:defualt-1:offset-2:linear-3:polynomail
+flash unsigned char cmdGetCurSensor[]       = "$CMDGCS";         // -- Get current sensor value -- //   ,chID(1)
 /*============================================================*/
 
 unsigned int hwCalId    = 9;
@@ -29,6 +40,162 @@ unsigned int hwCalId    = 9;
 /************* Service Debug Command Function *****************/
 /**************************************************************/
 /*============================================================*/
+int debugGetCurSensor(){
+    unsigned char i=0;
+    unsigned char buffer[2];  
+    unsigned int channelID;
+    
+    printDebug("\r\n<Debug>GetCurSensor: \r\n");
+    memset(buffer,0,sizeof(buffer));  
+    for(i=0;i<1;i++){
+       buffer[i] = rxPackage3[i+8];
+    }
+    channelID = atoi(buffer);
+    printDebug("Channel ID:%d \r\n",channelID);
+    printDebug("\r\n"); 
+    
+    if( channelID>0 && channelID<6 ){           //max 5 ch
+       printDebug("current sensor ch[%d] , value:%0.2f\r\n",channelID,sensorGetValue(channelID));
+    }else{
+        printDebug("Channel ID is in range.\r\n");
+    }
+    
+    return 0;
+}
+int debugGetCal(){
+    unsigned char i=0;
+    unsigned char buffer[4];  
+    unsigned int channelID;
+    
+    printDebug("\r\n<Debug>GetCal: \r\n");
+    memset(buffer,0,sizeof(buffer));  
+    for(i=0;i<1;i++){
+       buffer[i] = rxPackage3[i+8];
+    }
+    channelID = atoi(buffer);
+    printDebug("Channel ID:%d \r\n",channelID);
+    printDebug("\r\n"); 
+    
+    if( channelID>0 && channelID<6 ){           //max 5 ch
+       for(i=0;i<3;i++){
+           printDebug("stdRef[%d] : %0.2f , ",i+1,sensorCalulate.sChennel[channelID-1].stdRef[i]); 
+           printDebug("sensorRef[%d] : %0.2f\r\n",i+1,sensorCalulate.sChennel[channelID-1].sensorRef[i]);
+       } 
+       switch(sensorCalulate.sChennel[channelID-1].calType){
+            case CAL_DEFAULT:{               //0
+                printDebug("CalType : CAL_DEFAULT");
+                break;
+            } 
+            case CAL_EXTOFFSET:{             //1
+                printDebug("CalType : CAL_EXTOFFSET");
+                break;
+            }
+            case CAL_EXTLINEAR:{             //2
+                printDebug("CalType : CAL_EXTLINEAR");
+                break;
+            }
+            case CAL_EXTPOLYNOMIAL:{         //3
+                printDebug("CalType : CAL_EXTPOLYNOMIAL");
+                break;
+            }
+       }
+       printDebug("\r\n");
+    }else{
+        printDebug("Channel ID is in range.\r\n");
+    }
+    
+    return 0;
+}
+int debugSetCal(){
+    unsigned char i=0;
+    unsigned char buffer[6];  
+    unsigned int channelID;
+    unsigned int pointID;
+    float pointValue;         //std value
+    
+    //void (*pfnCalibrate) (ST_CAL_CONFIG calConfig);   
+    
+    pfCalibrate = &calSet;
+    
+    printDebug("\r\n<Debug>SetCal: \r\n");
+    memset(buffer,0,sizeof(buffer));  
+    for(i=0;i<1;i++){
+       buffer[i] = rxPackage3[i+8];
+    }
+    channelID = atoi(buffer);
+    sensorCalConfig.channelID =  channelID;
+    printDebug("Channel ID:%d \r\n",channelID);  
+    
+    memset(buffer,0,sizeof(buffer)); 
+    for(i=0;i<1;i++){
+       buffer[i] = rxPackage3[i+10];
+    }
+    pointID = atoi(buffer);
+    sensorCalConfig.pointID =  pointID;
+    printDebug("Point ID:%d \r\n",pointID); 
+    
+    memset(buffer,0,sizeof(buffer)); 
+    for(i=0;i<5;i++){
+       buffer[i] = rxPackage3[i+12];
+    }
+    pointValue = atof(buffer);
+    sensorCalConfig.pointValue =  pointValue;     //std value for meter
+    printDebug("pointValue(meterRef) :%0.2f \r\n",pointValue);
+    printDebug("\r\n"); 
+    
+    pfCalibrate(sensorCalConfig);
+    
+    return 0;
+}
+int debugConfirmCal(){
+    unsigned char i=0;
+    unsigned char buffer[6];
+    unsigned int channelID;
+    unsigned int calType; 
+    
+    pfCalibrate = &calSetConfirm;
+    
+    printDebug("\r\n<Debug>ConfirmCal: \r\n");
+    memset(buffer,0,sizeof(buffer));  
+    for(i=0;i<1;i++){
+       buffer[i] = rxPackage3[i+8];
+    }
+    channelID = atoi(buffer);
+    sensorCalConfig.channelID =  channelID;
+    printDebug("Channel ID:%d \r\n",channelID);  
+    
+    memset(buffer,0,sizeof(buffer)); 
+    for(i=0;i<1;i++){
+       buffer[i] = rxPackage3[i+10];
+    }
+    calType = atoi(buffer);
+    sensorCalConfig.calType =  calType;
+    //printDebug("calType :%d \r\n",calType);
+    switch(sensorCalConfig.calType){
+        case CAL_DEFAULT:{               //0
+            printDebug("CalType : CAL_DEFAULT");
+            break;
+        } 
+        case CAL_EXTOFFSET:{             //2
+            printDebug("CalType : CAL_EXTOFFSET");
+            break;
+        }
+        case CAL_EXTLINEAR:{             //3
+            printDebug("CalType : CAL_EXTLINEAR");
+            break;
+        }
+        case CAL_EXTPOLYNOMIAL:{         //4
+            printDebug("CalType : CAL_EXTPOLYNOMIAL");
+            break;
+        }
+    }
+    printDebug("\r\n");
+    
+    pfCalibrate(sensorCalConfig);
+    
+    return 0;
+}
+
 int DEBUG_setDateTime(void)
 {
     unsigned char   i; 
@@ -201,7 +368,7 @@ void DEBUG_setDeviceEnable(char flag)
         config_oper.deviceEnable        =   0x00;
     }                                         
                                                
-    config_oper_flag                    =   0x01
+    config_oper_flag                    =   0x01;
     is_operating_config_update          =   1;
                                                     
     return;
@@ -312,8 +479,15 @@ void debug_req(void)
     }
     else if(!strncmpf(rxPackage3,cmdReadSerialNumber,7)){
         DEBUG_readSerialNumber();
+    }else if(!strncmpf(rxPackage3,cmdGetCal,7)){
+        debugGetCal();
+    }else if(!strncmpf(rxPackage3,cmdSetCal,7)){
+        debugSetCal();
+    }else if(!strncmpf(rxPackage3,cmdConfirmCal,7)){
+        debugConfirmCal();
+    }else if(!strncmpf(rxPackage3,cmdGetCurSensor,7)){
+        debugConfirmCal();
     }
-    
     return;         
 }
 /*============================================================*/
