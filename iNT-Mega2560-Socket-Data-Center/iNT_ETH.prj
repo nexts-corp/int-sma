@@ -489,7 +489,7 @@ Row=24
 Column=50
 ScrollPosX=0
 ScrollPosY=17
-TimeStamp=1194352105
+TimeStamp=1194363699
 [BeforeMake]
 RunUserProg=0
 WaitUserProgFinish=1
@@ -637,8 +637,8 @@ BK8=-1
 BK9=-1
 [Bookmarks3]
 TimeStamp=1194298883
-Row=494
-Column=158
+Row=44
+Column=28
 ScrollPosX=0
 ScrollPosY=0
 BK0=-1
