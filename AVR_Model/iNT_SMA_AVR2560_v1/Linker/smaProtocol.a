@@ -1,0 +1,842 @@
+;#include "io.h"
+;PCODE: $00000000 VOL: 0
+	#ifndef __SLEEP_DEFINED__
+;PCODE: $00000001 VOL: 0
+	#define __SLEEP_DEFINED__
+;PCODE: $00000002 VOL: 0
+	.EQU __se_bit=0x01
+;PCODE: $00000003 VOL: 0
+	.EQU __sm_mask=0x0E
+;PCODE: $00000004 VOL: 0
+	.EQU __sm_powerdown=0x04
+;PCODE: $00000005 VOL: 0
+	.EQU __sm_powersave=0x06
+;PCODE: $00000006 VOL: 0
+	.EQU __sm_standby=0x0C
+;PCODE: $00000007 VOL: 0
+	.EQU __sm_ext_standby=0x0E
+;PCODE: $00000008 VOL: 0
+	.EQU __sm_adc_noise_red=0x02
+;PCODE: $00000009 VOL: 0
+	.SET power_ctrl_reg=smcr
+;PCODE: $0000000A VOL: 0
+	#endif
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;#include "ds1672.h"
+;#include "smaProtocol.h"
+;#include "debug.h"
+;#include "sensorTask.h"
+;
+;extern iData_t viRXData;
+;extern iData_t viTXData;
+;
+;iPTC_t iPTC_RX;
+;iPTC_t iPTC_TX;
+;
+;//iChar_t * pviPTCData;
+;
+;iChar_t iPTCParser(iData_t *pviOutData_arg){
+; 0019 000F iChar_t iPTCParser(iData_t *pviOutData_arg){
+
+	.CSEG
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+; 0019 0010      char *pviCheck;
+; 0019 0011      iChar_t viReturn = PTC_INVALID;
+; 0019 0012      iInt_t indexParser = 0;
+; 0019 0013      iUInt_t viDataLen = 0;
+; 0019 0014      iInt_t viCheckSD = 0;
+; 0019 0015      iInt_t viCheckSum = 0;
+; 0019 0016      iInt_t viCheckLen = 0;
+; 0019 0017      int i = 0;
+; 0019 0018 
+; 0019 0019 
+; 0019 001A      //Prepair data that correct
+; 0019 001B      pviCheck = viRXData.value;
+;PCODE: $0000000F VOL: 0
+;PCODE: $00000010 VOL: 0
+;PCODE: $00000011 VOL: 0
+;PCODE: $00000012 VOL: 0
+;PCODE: $00000013 VOL: 0
+;PCODE: $00000014 VOL: 0
+;PCODE: $00000015 VOL: 0
+;	*pviOutData_arg -> Y+16
+;	*pviCheck -> R16,R17
+;	viReturn -> R19
+;	indexParser -> R20,R21
+;	viDataLen -> Y+14
+;	viCheckSD -> Y+12
+;	viCheckSum -> Y+10
+;	viCheckLen -> Y+8
+;	i -> Y+6
+;PCODE: $00000016 VOL: 0
+;PCODE: $00000017 VOL: 0
+;PCODE: $00000018 VOL: 0
+;PCODE: $00000019 VOL: 0
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+;PCODE: $0000001C VOL: 0
+; 0019 001C      if(*pviCheck == 0x7e){
+;PCODE: $0000001D VOL: 0
+;PCODE: $0000001E VOL: 0
+;PCODE: $0000001F VOL: 0
+;PCODE: $00000020 VOL: 0
+; 0019 001D         printDebug("[iPTCparser]Start Delimiter OK(%02x).\r\n",*pviCheck);
+;PCODE: $00000021 VOL: 0
+;PCODE: $00000022 VOL: 0
+;PCODE: $00000023 VOL: 0
+;PCODE: $00000024 VOL: 0
+;PCODE: $00000025 VOL: 0
+;PCODE: $00000026 VOL: 0
+;PCODE: $00000027 VOL: 0
+;PCODE: $00000028 VOL: 0
+;PCODE: $00000029 VOL: 0
+;PCODE: $0000002A VOL: 0
+;PCODE: $0000002B VOL: 0
+; 0019 001E         viCheckSD = PTC_DS_SUCCESS;
+;PCODE: $0000002C VOL: 0
+;PCODE: $0000002D VOL: 0
+; 0019 001F      }else{
+;PCODE: $0000002E VOL: 0
+;PCODE: $0000002F VOL: 0
+; 0019 0020         viCheckSD = PTC_DS_INVALID;
+;PCODE: $00000030 VOL: 0
+;PCODE: $00000031 VOL: 0
+; 0019 0021      }
+;PCODE: $00000032 VOL: 0
+; 0019 0022 
+; 0019 0023      viDataLen = (viRXData.value[1]<<8) | viRXData.value[2];
+;PCODE: $00000033 VOL: 0
+;PCODE: $00000034 VOL: 0
+;PCODE: $00000035 VOL: 0
+;PCODE: $00000036 VOL: 0
+;PCODE: $00000037 VOL: 0
+;PCODE: $00000038 VOL: 0
+;PCODE: $00000039 VOL: 0
+;PCODE: $0000003A VOL: 0
+;PCODE: $0000003B VOL: 0
+; 0019 0024      if(viDataLen>4 && viDataLen<512){
+;PCODE: $0000003C VOL: 0
+;PCODE: $0000003D VOL: 0
+;PCODE: $0000003E VOL: 0
+;PCODE: $0000003F VOL: 0
+;PCODE: $00000040 VOL: 0
+;PCODE: $00000041 VOL: 0
+;PCODE: $00000042 VOL: 0
+;PCODE: $00000043 VOL: 0
+;PCODE: $00000044 VOL: 0
+;PCODE: $00000045 VOL: 0
+; 0019 0025         viCheckLen = PTC_LEN_SUCCESS;
+;PCODE: $00000046 VOL: 0
+;PCODE: $00000047 VOL: 0
+; 0019 0026         printDebug("[iPTCparser]Length (%d).\r\n",viDataLen);
+;PCODE: $00000048 VOL: 0
+;PCODE: $00000049 VOL: 0
+;PCODE: $0000004A VOL: 0
+;PCODE: $0000004B VOL: 0
+;PCODE: $0000004C VOL: 0
+;PCODE: $0000004D VOL: 0
+;PCODE: $0000004E VOL: 0
+;PCODE: $0000004F VOL: 0
+;PCODE: $00000050 VOL: 0
+;PCODE: $00000051 VOL: 0
+; 0019 0027      }else{
+;PCODE: $00000052 VOL: 0
+;PCODE: $00000053 VOL: 0
+; 0019 0028         viCheckLen = PTC_LEN_INVALID;
+;PCODE: $00000054 VOL: 0
+;PCODE: $00000055 VOL: 0
+; 0019 0029      }
+;PCODE: $00000056 VOL: 0
+; 0019 002A 
+; 0019 002B 
+; 0019 002C      pviCheck += (3 + viDataLen);         //3= SD(1)+Length(2)
+;PCODE: $00000057 VOL: 0
+;PCODE: $00000058 VOL: 0
+;PCODE: $00000059 VOL: 0
+;PCODE: $0000005A VOL: 0
+; 0019 002D      viCheckSum = *pviCheck;
+;PCODE: $0000005B VOL: 0
+;PCODE: $0000005C VOL: 0
+;PCODE: $0000005D VOL: 0
+;PCODE: $0000005E VOL: 0
+; 0019 002E      printDebug("[iPTCparser]Check sum (%02x).\r\n",viCheckSum);
+;PCODE: $0000005F VOL: 0
+;PCODE: $00000060 VOL: 0
+;PCODE: $00000061 VOL: 0
+;PCODE: $00000062 VOL: 0
+;PCODE: $00000063 VOL: 0
+;PCODE: $00000064 VOL: 0
+;PCODE: $00000065 VOL: 0
+;PCODE: $00000066 VOL: 0
+;PCODE: $00000067 VOL: 0
+;PCODE: $00000068 VOL: 0
+; 0019 002F      viCheckSum = iCheckSum(&viRXData.value[3],(viRXData.length+1));
+;PCODE: $00000069 VOL: 0
+;PCODE: $0000006A VOL: 0
+;PCODE: $0000006B VOL: 0
+;PCODE: $0000006C VOL: 0
+;PCODE: $0000006D VOL: 0
+;PCODE: $0000006E VOL: 0
+;PCODE: $0000006F VOL: 0
+; 0019 0030      if(viCheckSum == 0){
+;PCODE: $00000070 VOL: 0
+;PCODE: $00000071 VOL: 0
+;PCODE: $00000072 VOL: 0
+; 0019 0031          printDebug("[iPTCparser]Check sum correct(%d).\r\n",viCheckSum);
+;PCODE: $00000073 VOL: 0
+;PCODE: $00000074 VOL: 0
+;PCODE: $00000075 VOL: 0
+;PCODE: $00000076 VOL: 0
+;PCODE: $00000077 VOL: 0
+;PCODE: $00000078 VOL: 0
+;PCODE: $00000079 VOL: 0
+;PCODE: $0000007A VOL: 0
+;PCODE: $0000007B VOL: 0
+;PCODE: $0000007C VOL: 0
+; 0019 0032          viCheckSum = PTC_CS_SUCCESS;
+;PCODE: $0000007D VOL: 0
+;PCODE: $0000007E VOL: 0
+; 0019 0033      }else{
+;PCODE: $0000007F VOL: 0
+;PCODE: $00000080 VOL: 0
+; 0019 0034          printDebug("[iPTCparser]Check sum incorrect(%d).\r\n",viCheckSum);
+;PCODE: $00000081 VOL: 0
+;PCODE: $00000082 VOL: 0
+;PCODE: $00000083 VOL: 0
+;PCODE: $00000084 VOL: 0
+;PCODE: $00000085 VOL: 0
+;PCODE: $00000086 VOL: 0
+;PCODE: $00000087 VOL: 0
+;PCODE: $00000088 VOL: 0
+;PCODE: $00000089 VOL: 0
+;PCODE: $0000008A VOL: 0
+; 0019 0035          viCheckSum = PTC_CS_INVALID;
+;PCODE: $0000008B VOL: 0
+;PCODE: $0000008C VOL: 0
+; 0019 0036      }
+;PCODE: $0000008D VOL: 0
+; 0019 0037 
+; 0019 0038      if((viCheckSD == PTC_DS_SUCCESS) && (viCheckLen == PTC_LEN_SUCCESS) && (viCheckSum == PTC_CS_SUCCESS)){
+;PCODE: $0000008E VOL: 0
+;PCODE: $0000008F VOL: 0
+;PCODE: $00000090 VOL: 0
+;PCODE: $00000091 VOL: 0
+;PCODE: $00000092 VOL: 0
+;PCODE: $00000093 VOL: 0
+;PCODE: $00000094 VOL: 0
+;PCODE: $00000095 VOL: 0
+;PCODE: $00000096 VOL: 0
+;PCODE: $00000097 VOL: 0
+;PCODE: $00000098 VOL: 0
+;PCODE: $00000099 VOL: 0
+;PCODE: $0000009A VOL: 0
+; 0019 0039          memcpy(&iPTC_RX.hd,&viRXData.value[1],sizeof(iPTC_RX.hd));
+;PCODE: $0000009B VOL: 0
+;PCODE: $0000009C VOL: 0
+;PCODE: $0000009D VOL: 0
+;PCODE: $0000009E VOL: 0
+;PCODE: $0000009F VOL: 0
+;PCODE: $000000A0 VOL: 0
+;PCODE: $000000A1 VOL: 0
+;PCODE: $000000A2 VOL: 0
+; 0019 003A          indexParser += sizeof(iPTC_RX.hd);
+;PCODE: $000000A3 VOL: 0
+;PCODE: $000000A4 VOL: 0
+; 0019 003B          iPTC_RX.dat.value = &viRXData.value[19];        //sd(1),len(2),mti(2),tid(8),tim(4),fid(2)   = 1+2+2+8+4+2 = 19
+;PCODE: $000000A5 VOL: 0
+;PCODE: $000000A6 VOL: 0
+;PCODE: $000000A7 VOL: 0
+;PCODE: $000000A8 VOL: 0
+; 0019 003C          iPTC_RX.dat.len = (viDataLen + 3)-19;                               //(viDataLen) + sd(3) - 19
+;PCODE: $000000A9 VOL: 0
+;PCODE: $000000AA VOL: 0
+;PCODE: $000000AB VOL: 0
+;PCODE: $000000AC VOL: 0
+;PCODE: $000000AD VOL: 0
+;PCODE: $000000AE VOL: 0
+;PCODE: $000000AF VOL: 0
+; 0019 003D          //printDebug("[iPTCParser]Data will process(%d).[\r\n",iPTC_RX.dat.len);
+; 0019 003E          //print_payload(iPTC_RX.dat.value, iPTC_RX.dat.len);
+; 0019 003F 
+; 0019 0040          pviOutData_arg->length = iPTC_RX.dat.len;
+;PCODE: $000000B0 VOL: 0
+;PCODE: $000000B1 VOL: 0
+;PCODE: $000000B2 VOL: 0
+;PCODE: $000000B3 VOL: 0
+; 0019 0041          memcpy(&pviOutData_arg->value[0],&viRXData.value[19],iPTC_RX.dat.len);
+;PCODE: $000000B4 VOL: 0
+;PCODE: $000000B5 VOL: 0
+;PCODE: $000000B6 VOL: 0
+;PCODE: $000000B7 VOL: 0
+;PCODE: $000000B8 VOL: 0
+;PCODE: $000000B9 VOL: 0
+;PCODE: $000000BA VOL: 0
+;PCODE: $000000BB VOL: 0
+;PCODE: $000000BC VOL: 0
+; 0019 0042 
+; 0019 0043          viReturn = PTC_SUCCESS;
+;PCODE: $000000BD VOL: 0
+;PCODE: $000000BE VOL: 0
+; 0019 0044      }else{
+;PCODE: $000000BF VOL: 0
+;PCODE: $000000C0 VOL: 0
+; 0019 0045          viReturn = PTC_INVALID;
+;PCODE: $000000C1 VOL: 0
+;PCODE: $000000C2 VOL: 0
+; 0019 0046      }
+;PCODE: $000000C3 VOL: 0
+; 0019 0047      return viReturn;
+;PCODE: $000000C4 VOL: 0
+;PCODE: $000000C5 VOL: 0
+;PCODE: $000000C6 VOL: 0
+;PCODE: $000000C7 VOL: 0
+; 0019 0048 }
+;PCODE: $000000C8 VOL: 0
+;
+;
+;
+;iUChar_t iPTCCheckHostReq(iData_t *pviData_arg){
+; 0019 004C iUChar_t iPTCCheckHostReq(iData_t *pviData_arg){
+;PCODE: $000000C9 VOL: 0
+;PCODE: $000000CA VOL: 0
+; 0019 004D    iUChar_t iReturn = PTC_HOST_NOT_REQ;
+; 0019 004E    printDebug("[iPTCCheckHostReq]MTI(%02x%02x)",iPTC_RX.hd.mti[0],iPTC_RX.hd.mti[1]);
+;PCODE: $000000CB VOL: 0
+;PCODE: $000000CC VOL: 0
+;	*pviData_arg -> Y+1
+;	iReturn -> R17
+;PCODE: $000000CD VOL: 0
+;PCODE: $000000CE VOL: 0
+;PCODE: $000000CF VOL: 0
+;PCODE: $000000D0 VOL: 0
+;PCODE: $000000D1 VOL: 0
+;PCODE: $000000D2 VOL: 0
+;PCODE: $000000D3 VOL: 0
+;PCODE: $000000D4 VOL: 0
+;PCODE: $000000D5 VOL: 0
+;PCODE: $000000D6 VOL: 0
+;PCODE: $000000D7 VOL: 0
+;PCODE: $000000D8 VOL: 0
+;PCODE: $000000D9 VOL: 0
+;PCODE: $000000DA VOL: 0
+;PCODE: $000000DB VOL: 0
+;PCODE: $000000DC VOL: 0
+;PCODE: $000000DD VOL: 0
+; 0019 004F    if((iPTC_RX.hd.mti[1] & 0x01) == 1){
+;PCODE: $000000DE VOL: 0
+;PCODE: $000000DF VOL: 0
+;PCODE: $000000E0 VOL: 0
+;PCODE: $000000E1 VOL: 0
+;PCODE: $000000E2 VOL: 0
+; 0019 0050       printDebug("[iPTCCheckHostReq]Host Request.\r\n");
+;PCODE: $000000E3 VOL: 0
+;PCODE: $000000E4 VOL: 0
+;PCODE: $000000E5 VOL: 0
+;PCODE: $000000E6 VOL: 0
+;PCODE: $000000E7 VOL: 0
+;PCODE: $000000E8 VOL: 0
+;PCODE: $000000E9 VOL: 0
+; 0019 0051       iReturn = PTC_HOST_REQ;
+;PCODE: $000000EA VOL: 0
+;PCODE: $000000EB VOL: 0
+; 0019 0052    }else{
+;PCODE: $000000EC VOL: 0
+;PCODE: $000000ED VOL: 0
+; 0019 0053       printDebug("[iPTCCheckHostReq]Host is not Request.\r\n");
+;PCODE: $000000EE VOL: 0
+;PCODE: $000000EF VOL: 0
+;PCODE: $000000F0 VOL: 0
+;PCODE: $000000F1 VOL: 0
+;PCODE: $000000F2 VOL: 0
+;PCODE: $000000F3 VOL: 0
+;PCODE: $000000F4 VOL: 0
+; 0019 0054    }
+;PCODE: $000000F5 VOL: 0
+; 0019 0055    return iReturn;
+;PCODE: $000000F6 VOL: 0
+;PCODE: $000000F7 VOL: 0
+;PCODE: $000000F8 VOL: 0
+;PCODE: $000000F9 VOL: 0
+;PCODE: $000000FA VOL: 0
+; 0019 0056 }
+;PCODE: $000000FB VOL: 0
+;
+;iInt_t iCheckSum(iChar_t buf_ags[], iInt_t len_ags) {
+; 0019 0058 iInt_t iCheckSum(iChar_t buf_ags[], iInt_t len_ags) {
+;PCODE: $000000FC VOL: 0
+;PCODE: $000000FD VOL: 0
+; 0019 0059     iUInt_t 	i = 0;
+; 0019 005A     iUInt_t 	sum = 0;
+; 0019 005B 
+; 0019 005C     for (i = 0; i < len_ags; i++) {
+;PCODE: $000000FE VOL: 0
+;PCODE: $000000FF VOL: 0
+;	buf_ags -> Y+6
+;	len_ags -> Y+4
+;	i -> R16,R17
+;	sum -> R18,R19
+;PCODE: $00000100 VOL: 0
+;PCODE: $00000101 VOL: 0
+;PCODE: $00000102 VOL: 0
+;PCODE: $00000103 VOL: 0
+;PCODE: $00000104 VOL: 0
+;PCODE: $00000105 VOL: 0
+;PCODE: $00000106 VOL: 0
+;PCODE: $00000107 VOL: 0
+;PCODE: $00000108 VOL: 0
+;PCODE: $00000109 VOL: 0
+;PCODE: $0000010A VOL: 0
+;PCODE: $0000010B VOL: 0
+;PCODE: $0000010C VOL: 0
+; 0019 005D         sum += buf_ags[i];
+;PCODE: $0000010D VOL: 0
+;PCODE: $0000010E VOL: 0
+;PCODE: $0000010F VOL: 0
+;PCODE: $00000110 VOL: 0
+;PCODE: $00000111 VOL: 0
+;PCODE: $00000112 VOL: 0
+;PCODE: $00000113 VOL: 0
+; 0019 005E     }
+;PCODE: $00000114 VOL: 0
+;PCODE: $00000115 VOL: 0
+;PCODE: $00000116 VOL: 0
+;PCODE: $00000117 VOL: 0
+;PCODE: $00000118 VOL: 0
+; 0019 005F     return (0xFF - (sum & 0xFF));
+;PCODE: $00000119 VOL: 0
+;PCODE: $0000011A VOL: 0
+;PCODE: $0000011B VOL: 0
+;PCODE: $0000011C VOL: 0
+;PCODE: $0000011D VOL: 0
+;PCODE: $0000011E VOL: 0
+;PCODE: $0000011F VOL: 0
+;PCODE: $00000120 VOL: 0
+; 0019 0060 }
+;PCODE: $00000121 VOL: 0
+;
+;void iHostResponse(){}
+; 0019 0062 void iHostResponse(){}
+;PCODE: $00000122 VOL: 0
+;PCODE: $00000123 VOL: 0
+;PCODE: $00000124 VOL: 0
+;PCODE: $00000125 VOL: 0
+;
+;iInt_t iGenFID(){
+; 0019 0064 iInt_t iGenFID(){
+;PCODE: $00000126 VOL: 0
+;PCODE: $00000127 VOL: 0
+; 0019 0065    iInt_t viFID = 0;
+; 0019 0066    do{
+;PCODE: $00000128 VOL: 0
+;PCODE: $00000129 VOL: 0
+;	viFID -> R16,R17
+;PCODE: $0000012A VOL: 0
+;PCODE: $0000012B VOL: 0
+;PCODE: $0000012C VOL: 0
+; 0019 0067       viFID = rand();
+;PCODE: $0000012D VOL: 0
+;PCODE: $0000012E VOL: 0
+; 0019 0068    }while((viFID == 0) && (viFID == 0xffff));
+;PCODE: $0000012F VOL: 0
+;PCODE: $00000130 VOL: 0
+;PCODE: $00000131 VOL: 0
+;PCODE: $00000132 VOL: 0
+;PCODE: $00000133 VOL: 0
+;PCODE: $00000134 VOL: 0
+;PCODE: $00000135 VOL: 0
+;PCODE: $00000136 VOL: 0
+;PCODE: $00000137 VOL: 0
+;PCODE: $00000138 VOL: 0
+;PCODE: $00000139 VOL: 0
+;PCODE: $0000013A VOL: 0
+; 0019 0069    return viFID;
+;PCODE: $0000013B VOL: 0
+;PCODE: $0000013C VOL: 0
+;PCODE: $0000013D VOL: 0
+; 0019 006A }
+;PCODE: $0000013E VOL: 0
+;
+;
+;void iAckHostReq(){
+; 0019 006D void iAckHostReq(){
+;PCODE: $0000013F VOL: 0
+;PCODE: $00000140 VOL: 0
+; 0019 006E     //7E0014080005050505050505055173C95524224B024A0010
+; 0019 006F     //7E001008000505050505050505D072C95500006F
+; 0019 0070 
+; 0019 0071 //    iChat_t mit[2] = {0x80,0x00};
+; 0019 0072 //    iInt_t viFrameID = 0;
+; 0019 0073 //    viFrameID = iGenFID();
+; 0019 0074 //    iPTCPack(iData_t *pviOutData_arg, iChar_t *pviData_arg, iUInt_t viLength_arg, iChar_t *pviMTI_arg, iChar_t *pviTID_arg)
+; 0019 0075 }
+;PCODE: $00000141 VOL: 0
+;PCODE: $00000142 VOL: 0
+;
+;void iPTCPack(iData_t *pviOutData_arg, iChar_t *pviData_arg, iUInt_t viLength_arg, iChar_t *pviMTI_arg, iChar_t *pviTID_arg){
+; 0019 0077 void iPTCPack(iData_t *pviOutData_arg, iChar_t *pviData_arg, iUInt_t viLength_arg, iChar_t *pviMTI_arg, iChar_t *pviTID_arg){
+;PCODE: $00000143 VOL: 0
+;PCODE: $00000144 VOL: 0
+; 0019 0078     //iChar_t * pviPTCData;
+; 0019 0079     iUInt_t viIndexWrite = 0;
+; 0019 007A     iUInt_t viLength = 0;
+; 0019 007B     iUChar_t viCharLength[2];
+; 0019 007C     iChar_t viCharMTI[2];
+; 0019 007D     iChar_t viSD = 0x7e;
+; 0019 007E     iUInt_t viCheckSum;
+; 0019 007F     iUInt_t viFrameCSLen = 0;
+; 0019 0080     iInt_t viFrameID = 0;
+; 0019 0081     unsigned long int timestamp;
+; 0019 0082 
+; 0019 0083     viFrameCSLen = 2 + 8 + 4 + 2 + viLength_arg + 1;     //2(mti) + 8(tid) + 4(tim) + 2(fid) + ?(data) +1(cs)
+;PCODE: $00000145 VOL: 0
+;PCODE: $00000146 VOL: 0
+;PCODE: $00000147 VOL: 0
+;PCODE: $00000148 VOL: 0
+;PCODE: $00000149 VOL: 0
+;PCODE: $0000014A VOL: 0
+;PCODE: $0000014B VOL: 0
+;PCODE: $0000014C VOL: 0
+;PCODE: $0000014D VOL: 0
+;PCODE: $0000014E VOL: 0
+;PCODE: $0000014F VOL: 0
+;	*pviOutData_arg -> Y+28
+;	*pviData_arg -> Y+26
+;	viLength_arg -> Y+24
+;	*pviMTI_arg -> Y+22
+;	*pviTID_arg -> Y+20
+;	viIndexWrite -> R16,R17
+;	viLength -> R18,R19
+;	viCharLength -> Y+18
+;	viCharMTI -> Y+16
+;	viSD -> R21
+;	viCheckSum -> Y+14
+;	viFrameCSLen -> Y+12
+;	viFrameID -> Y+10
+;	timestamp -> Y+6
+;PCODE: $00000150 VOL: 0
+;PCODE: $00000151 VOL: 0
+;PCODE: $00000152 VOL: 0
+;PCODE: $00000153 VOL: 0
+;PCODE: $00000154 VOL: 0
+;PCODE: $00000155 VOL: 0
+;PCODE: $00000156 VOL: 0
+;PCODE: $00000157 VOL: 0
+;PCODE: $00000158 VOL: 0
+; 0019 0084     //pviPTCData = (iChar_t *)malloc((viLength+20)); //sd(1),len(2),mti(2),tid(8),tim(4),fid(2),cs(1)
+; 0019 0085 
+; 0019 0086     //if(pviPTCData != NULL){
+; 0019 0087         //sd
+; 0019 0088         memcpy(&pviOutData_arg->value[viIndexWrite],&viSD,1);
+;PCODE: $00000159 VOL: 0
+;PCODE: $0000015A VOL: 0
+;PCODE: $0000015B VOL: 0
+;PCODE: $0000015C VOL: 0
+;PCODE: $0000015D VOL: 0
+;PCODE: $0000015E VOL: 0
+;PCODE: $0000015F VOL: 0
+;PCODE: $00000160 VOL: 0
+;PCODE: $00000161 VOL: 0
+;PCODE: $00000162 VOL: 0
+;PCODE: $00000163 VOL: 0
+; 0019 0089         viIndexWrite += 1;
+;PCODE: $00000164 VOL: 0
+;PCODE: $00000165 VOL: 0
+; 0019 008A 
+; 0019 008B         //len
+; 0019 008C         viLength = viLength_arg+16;
+;PCODE: $00000166 VOL: 0
+;PCODE: $00000167 VOL: 0
+;PCODE: $00000168 VOL: 0
+; 0019 008D         viCharLength[0] = (viLength<<8);
+;PCODE: $00000169 VOL: 0
+;PCODE: $0000016A VOL: 0
+;PCODE: $0000016B VOL: 0
+;PCODE: $0000016C VOL: 0
+; 0019 008E         viCharLength[1] = viLength;
+;PCODE: $0000016D VOL: 0
+;PCODE: $0000016E VOL: 0
+; 0019 008F         memcpy(&pviOutData_arg->value[viIndexWrite],&viCharLength[0],2);
+;PCODE: $0000016F VOL: 0
+;PCODE: $00000170 VOL: 0
+;PCODE: $00000171 VOL: 0
+;PCODE: $00000172 VOL: 0
+;PCODE: $00000173 VOL: 0
+;PCODE: $00000174 VOL: 0
+;PCODE: $00000175 VOL: 0
+;PCODE: $00000176 VOL: 0
+;PCODE: $00000177 VOL: 0
+; 0019 0090         viIndexWrite += 2;
+;PCODE: $00000178 VOL: 0
+;PCODE: $00000179 VOL: 0
+; 0019 0091 
+; 0019 0092         //mti
+; 0019 0093         memcpy(&pviOutData_arg->value[viIndexWrite],&pviMTI_arg[0],2);
+;PCODE: $0000017A VOL: 0
+;PCODE: $0000017B VOL: 0
+;PCODE: $0000017C VOL: 0
+;PCODE: $0000017D VOL: 0
+;PCODE: $0000017E VOL: 0
+;PCODE: $0000017F VOL: 0
+;PCODE: $00000180 VOL: 0
+;PCODE: $00000181 VOL: 0
+;PCODE: $00000182 VOL: 0
+; 0019 0094         viIndexWrite += 2;
+;PCODE: $00000183 VOL: 0
+;PCODE: $00000184 VOL: 0
+; 0019 0095 
+; 0019 0096         //tid
+; 0019 0097         memcpy(&pviOutData_arg->value[viIndexWrite],&pviTID_arg[0],8);
+;PCODE: $00000185 VOL: 0
+;PCODE: $00000186 VOL: 0
+;PCODE: $00000187 VOL: 0
+;PCODE: $00000188 VOL: 0
+;PCODE: $00000189 VOL: 0
+;PCODE: $0000018A VOL: 0
+;PCODE: $0000018B VOL: 0
+;PCODE: $0000018C VOL: 0
+;PCODE: $0000018D VOL: 0
+; 0019 0098         viIndexWrite += 8;
+;PCODE: $0000018E VOL: 0
+;PCODE: $0000018F VOL: 0
+; 0019 0099 
+; 0019 009A         //tim
+; 0019 009B         timestamp = DS1672_read();
+;PCODE: $00000190 VOL: 0
+;PCODE: $00000191 VOL: 0
+; 0019 009C         memcpy(&pviOutData_arg->value[viIndexWrite],&timestamp,sizeof(timestamp));
+;PCODE: $00000192 VOL: 0
+;PCODE: $00000193 VOL: 0
+;PCODE: $00000194 VOL: 0
+;PCODE: $00000195 VOL: 0
+;PCODE: $00000196 VOL: 0
+;PCODE: $00000197 VOL: 0
+;PCODE: $00000198 VOL: 0
+;PCODE: $00000199 VOL: 0
+;PCODE: $0000019A VOL: 0
+; 0019 009D         viIndexWrite += sizeof(timestamp);
+;PCODE: $0000019B VOL: 0
+;PCODE: $0000019C VOL: 0
+; 0019 009E 
+; 0019 009F         memcpy(&viCharMTI[0],&pviMTI_arg[0],2);
+;PCODE: $0000019D VOL: 0
+;PCODE: $0000019E VOL: 0
+;PCODE: $0000019F VOL: 0
+;PCODE: $000001A0 VOL: 0
+;PCODE: $000001A1 VOL: 0
+;PCODE: $000001A2 VOL: 0
+;PCODE: $000001A3 VOL: 0
+; 0019 00A0         if((viCharMTI[0] == 0x08) && (viCharMTI[1] == 0x00)){
+;PCODE: $000001A4 VOL: 0
+;PCODE: $000001A5 VOL: 0
+;PCODE: $000001A6 VOL: 0
+;PCODE: $000001A7 VOL: 0
+;PCODE: $000001A8 VOL: 0
+;PCODE: $000001A9 VOL: 0
+;PCODE: $000001AA VOL: 0
+;PCODE: $000001AB VOL: 0
+;PCODE: $000001AC VOL: 0
+;PCODE: $000001AD VOL: 0
+; 0019 00A1             //fid
+; 0019 00A2             if(viLength_arg==0){
+;PCODE: $000001AE VOL: 0
+;PCODE: $000001AF VOL: 0
+;PCODE: $000001B0 VOL: 0
+; 0019 00A3                 viFrameID = 0;
+;PCODE: $000001B1 VOL: 0
+;PCODE: $000001B2 VOL: 0
+; 0019 00A4                 memcpy(&pviOutData_arg->value[viIndexWrite],&viFrameID,2);
+;PCODE: $000001B3 VOL: 0
+;PCODE: $000001B4 VOL: 0
+;PCODE: $000001B5 VOL: 0
+;PCODE: $000001B6 VOL: 0
+;PCODE: $000001B7 VOL: 0
+;PCODE: $000001B8 VOL: 0
+;PCODE: $000001B9 VOL: 0
+;PCODE: $000001BA VOL: 0
+;PCODE: $000001BB VOL: 0
+; 0019 00A5                 viIndexWrite += 2;
+;PCODE: $000001BC VOL: 0
+;PCODE: $000001BD VOL: 0
+; 0019 00A6             }else{
+;PCODE: $000001BE VOL: 0
+;PCODE: $000001BF VOL: 0
+; 0019 00A7                 //fid
+; 0019 00A8                 viFrameID = iGenFID();
+;PCODE: $000001C0 VOL: 0
+;PCODE: $000001C1 VOL: 0
+; 0019 00A9                 memcpy(&pviOutData_arg->value[viIndexWrite],&viFrameID,2);
+;PCODE: $000001C2 VOL: 0
+;PCODE: $000001C3 VOL: 0
+;PCODE: $000001C4 VOL: 0
+;PCODE: $000001C5 VOL: 0
+;PCODE: $000001C6 VOL: 0
+;PCODE: $000001C7 VOL: 0
+;PCODE: $000001C8 VOL: 0
+;PCODE: $000001C9 VOL: 0
+;PCODE: $000001CA VOL: 0
+; 0019 00AA                 viIndexWrite += 2;
+;PCODE: $000001CB VOL: 0
+;PCODE: $000001CC VOL: 0
+; 0019 00AB             }
+;PCODE: $000001CD VOL: 0
+; 0019 00AC         }else{
+;PCODE: $000001CE VOL: 0
+;PCODE: $000001CF VOL: 0
+; 0019 00AD             //fid
+; 0019 00AE             viFrameID = iGenFID();
+;PCODE: $000001D0 VOL: 0
+;PCODE: $000001D1 VOL: 0
+; 0019 00AF             memcpy(&pviOutData_arg->value[viIndexWrite],&viFrameID,2);
+;PCODE: $000001D2 VOL: 0
+;PCODE: $000001D3 VOL: 0
+;PCODE: $000001D4 VOL: 0
+;PCODE: $000001D5 VOL: 0
+;PCODE: $000001D6 VOL: 0
+;PCODE: $000001D7 VOL: 0
+;PCODE: $000001D8 VOL: 0
+;PCODE: $000001D9 VOL: 0
+;PCODE: $000001DA VOL: 0
+; 0019 00B0             viIndexWrite += 2;
+;PCODE: $000001DB VOL: 0
+;PCODE: $000001DC VOL: 0
+; 0019 00B1         }
+;PCODE: $000001DD VOL: 0
+; 0019 00B2 
+; 0019 00B3 
+; 0019 00B4 
+; 0019 00B5         if(viLength_arg != 0 ){
+;PCODE: $000001DE VOL: 0
+;PCODE: $000001DF VOL: 0
+;PCODE: $000001E0 VOL: 0
+; 0019 00B6             //data
+; 0019 00B7             memcpy(&pviOutData_arg->value[viIndexWrite],&pviData_arg[0],viLength_arg);
+;PCODE: $000001E1 VOL: 0
+;PCODE: $000001E2 VOL: 0
+;PCODE: $000001E3 VOL: 0
+;PCODE: $000001E4 VOL: 0
+;PCODE: $000001E5 VOL: 0
+;PCODE: $000001E6 VOL: 0
+;PCODE: $000001E7 VOL: 0
+;PCODE: $000001E8 VOL: 0
+; 0019 00B8             viIndexWrite += viLength_arg;
+;PCODE: $000001E9 VOL: 0
+;PCODE: $000001EA VOL: 0
+;PCODE: $000001EB VOL: 0
+; 0019 00B9         }
+; 0019 00BA 
+; 0019 00BB 
+; 0019 00BC         //cs
+; 0019 00BD         viCheckSum = iCheckSum(&pviOutData_arg->value[3],viFrameCSLen);
+;PCODE: $000001EC VOL: 0
+;PCODE: $000001ED VOL: 0
+;PCODE: $000001EE VOL: 0
+;PCODE: $000001EF VOL: 0
+;PCODE: $000001F0 VOL: 0
+;PCODE: $000001F1 VOL: 0
+;PCODE: $000001F2 VOL: 0
+; 0019 00BE         memcpy(&pviOutData_arg->value[viIndexWrite],&viCheckSum,1);
+;PCODE: $000001F3 VOL: 0
+;PCODE: $000001F4 VOL: 0
+;PCODE: $000001F5 VOL: 0
+;PCODE: $000001F6 VOL: 0
+;PCODE: $000001F7 VOL: 0
+;PCODE: $000001F8 VOL: 0
+;PCODE: $000001F9 VOL: 0
+;PCODE: $000001FA VOL: 0
+;PCODE: $000001FB VOL: 0
+; 0019 00BF         viIndexWrite += 1;
+;PCODE: $000001FC VOL: 0
+;PCODE: $000001FD VOL: 0
+; 0019 00C0 
+; 0019 00C1         pviOutData_arg->length = viLength_arg+20;
+;PCODE: $000001FE VOL: 0
+;PCODE: $000001FF VOL: 0
+;PCODE: $00000200 VOL: 0
+;PCODE: $00000201 VOL: 0
+; 0019 00C2 
+; 0019 00C3         //printDebug("[iPTCPack]Print:\r\n");
+; 0019 00C4         //print_payload(pviOutData_arg->value, (viLength_arg+20));
+; 0019 00C5 
+; 0019 00C6 //    }else{
+; 0019 00C7 //        printDebug("[iPTCPack]can 't allocate mem.\r\n");
+; 0019 00C8 //        //pviPTCData = 0;
+; 0019 00C9 //    }
+; 0019 00CA     //free(pviPTCData);
+; 0019 00CB     //return pviPTCData;
+; 0019 00CC }
+;PCODE: $00000202 VOL: 0
+;PCODE: $00000203 VOL: 0
+;PCODE: $00000204 VOL: 0
+;PCODE: $00000205 VOL: 0
+;
+;//iChar_t * iPTCPack(iData_t *pviData_arg, iChar_t *pviData_arg, iUInt_t viLength_arg, iChar_t *pviMTI_arg, iChar_t *pviTID_arg){
+;//    //iChar_t * pviPTCData;
+;//    iUInt_t viIndexWrite = 0;
+;//    iUInt_t viLength = 0;
+;//    iUChar_t viCharLength[2];
+;//    iChar_t viSD = 0x7e;
+;//    iUInt_t viCheckSum;
+;//    iUInt_t viFrameCSLen = 0;
+;//    iInt_t viFrameID = 0;
+;//    unsigned long int timestamp;
+;//
+;//    viFrameCSLen = 2 + 8 + 4 + 2 + viLength_arg + 1;     //2(mti) + 8(tid) + 4(tim) + 2(fid) + ?(data) +1(cs)
+;//    pviPTCData = (iChar_t *)malloc((viLength+20)); //sd(1),len(2),mti(2),tid(8),tim(4),fid(2),cs(1)
+;//
+;//    if(pviPTCData != NULL){
+;//        //sd
+;//        memcpy(&pviPTCData[viIndexWrite],&viSD,1);
+;//        viIndexWrite += 1;
+;//
+;//        //len
+;//        viLength = viLength_arg+16;
+;//        viCharLength[0] = (viLength<<8);
+;//        viCharLength[1] = viLength;
+;//        memcpy(&pviPTCData[viIndexWrite],&viCharLength[0],2);
+;//        viIndexWrite += 2;
+;//
+;//        //mti
+;//        memcpy(&pviPTCData[viIndexWrite],&pviMTI_arg[0],2);
+;//        viIndexWrite += 2;
+;//
+;//        //tid
+;//        memcpy(&pviPTCData[viIndexWrite],&pviTID_arg[0],8);
+;//        viIndexWrite += 8;
+;//
+;//        //tim
+;//        timestamp = DS1672_read();
+;//        memcpy(&pviPTCData[viIndexWrite],&timestamp,sizeof(timestamp));
+;//        viIndexWrite += sizeof(timestamp);
+;//
+;//        //fid
+;//        viFrameID = iGenFID();
+;//        memcpy(&pviPTCData[viIndexWrite],&viFrameID,2);
+;//        viIndexWrite += 2;
+;//
+;//        //data
+;//        memcpy(&pviPTCData[viIndexWrite],&pviData_arg[0],viLength_arg);
+;//        viIndexWrite += viLength_arg;
+;//
+;//        //cs
+;//        viCheckSum = iCheckSum(&pviPTCData[3],viFrameCSLen);
+;//        memcpy(&pviPTCData[viIndexWrite],&viCheckSum,1);
+;//        viIndexWrite += 1;
+;//
+;//        pviData_arg.length = viLength_arg+20;
+;//
+;//        printDebug("[iPTCPack]Print:\r\n");
+;//        print_payload(pviPTCData, (viLength_arg+20));
+;//
+;//    }else{
+;//        printDebug("[iPTCPack]can 't allocate mem.\r\n");
+;//        pviPTCData = 0;
+;//    }
+;//    //free(pviPTCData);
+;//    return pviPTCData;
+;//}
+;
+;//void iDataReportPack(iChar_t *pviOutData,iDataReport_t *pviInData){
+;//
+;//}

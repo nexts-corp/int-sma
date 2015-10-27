@@ -1,0 +1,32 @@
+;#include "logTask.h"
+;#include "debug.h"
+;
+;void logTask(void *pviParameter){
+; 0026 0004 void logTask(void *pviParameter){
+
+	.CSEG
+;PCODE: $00000000 VOL: 0
+;PCODE: $00000001 VOL: 0
+; 0026 0005      printDebug("[logTask]Running...\r\n");
+;PCODE: $00000002 VOL: 0
+;	*pviParameter -> Y+0
+;PCODE: $00000003 VOL: 0
+;PCODE: $00000004 VOL: 0
+;PCODE: $00000005 VOL: 0
+;PCODE: $00000006 VOL: 0
+;PCODE: $00000007 VOL: 0
+;PCODE: $00000008 VOL: 0
+;PCODE: $00000009 VOL: 0
+; 0026 0006 
+; 0026 0007      printDebug("Hello World!.\r\n");
+;PCODE: $0000000A VOL: 0
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+;PCODE: $0000000F VOL: 0
+;PCODE: $00000010 VOL: 0
+; 0026 0008 }
+;PCODE: $00000011 VOL: 0
+;PCODE: $00000012 VOL: 0
+;PCODE: $00000013 VOL: 0

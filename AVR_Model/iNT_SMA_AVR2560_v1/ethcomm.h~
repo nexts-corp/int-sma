@@ -1,0 +1,130 @@
+#ifndef ETHCOMM_H
+#define ETHCOMM_H
+
+#include "uart.h"
+#include "ethparser.h"
+#include "ethservice.h"
+#include "ethqueue.h"        
+#include "timer.h"
+
+#define MAX_MTU         RX_BUFFER_SIZE0     // -- Maximum Transfer Unit  255
+#define CMD_TIMEOUT     12                  // -- Default acknowledgement waiting timeout value (for COMMAND)
+                                         
+#define MODE_CONF       0x00
+#define MODE_NORM       0x80
+
+// -- COMMAND -- //
+#define STATREQC        0x1A        // -- Status Request COMMAND      
+#define STATREPC        0x2A        // -- Status Report COMMAND     
+#define EVENREPC        0x3A        // -- Event Report COMMAND     
+#define CONFMANC        0x4A        // -- Configuration Management COMMAND   
+#define DATAREPC        0x5A        // -- Data Report COMMAND                
+#define LOGMANIC        0x6A        // -- Log Manipulation COMMAND    
+#define NETMAINC        0x7A        // -- Network Maintenance COMMAND    
+#define RMDCTRLC        0x8A        // -- Remote Device Control COMMAND    
+#define CLRLISTC        0x9A        // -- Clear List COMMAND
+#define FMWUPLDC        0xFA        // -- Firmware Upload COMMAND (Reserved)   
+                   
+// -- ACKNOWLEDGE -- //
+#define STATREQA        0x1B        // -- Status Request ACKNOWLEDGE
+#define STATREPA        0x2B        // -- Status Report ACKNOWLEDGE
+#define EVENREPA        0x3B        // -- Event Report ACKNOWLEDGE
+#define CONFMANA        0x4B        // -- Configuration Management ACKNOWLEDGE
+#define DATAREPA        0x5B        // -- Data Report ACKNOWLEDGE
+#define LOGMANIA        0x6B        // -- Log Manipulation ACKNOWLEDGE
+#define NETMAINA        0x7B        // -- Network Maintenance ACKNOWLEDGE
+#define RMDCTRLA        0x8B        // -- Remote Device Control ACKNOWLEDGE        
+#define CLRLISTA        0x9B        // -- Clear List ACKNOWLEDGE
+#define PROTOERROR      0xEB        // -- Protocol Error Feedback 
+#define FMWUPLDA        0xFB        // -- Firmware Upload ACKNOWLEDGE (Reserved)
+
+// -- Error -- //
+#define SUCCESS                 0x00
+#define ERROR                   0x01
+#define INVALID_LENGTH          0x10
+#define UNKNOWN_FRAME_TYPE      0x20
+#define INVALID_PARAMETER       0x30
+#define OUT_OF_RANGE            0x40
+#define NOT_READY               0x50
+#define UNKNOWN_ERROR           0xFF
+
+// -- Data & Event Type -- //
+#define TYP_RLT                 0x00
+#define TYP_LOG                 0x01
+#define TYP_SAV                 0x02
+
+// -- Event ID -- //
+#define EVENT_MTNC              0x10
+#define EVENT_GSM               0x20
+#define EVENT_GBAL              0x21
+#define EVENT_PWR               0x50
+#define EVENT_BAT               0x51
+#define EVENT_MEM               0x70
+#define EVENT_COM               0x80
+#define EVENT_DIN(x)            (0xC0 | x)
+#define EVENT_AIN(x)            (0xD0 | x)   
+#define EVENT_DAT(x)            (0xE0 | x)
+#define EVENT_SEN(x)            (0xF0 | x)              
+
+// -- Event Status -- //
+#define ES_NORMAL               0x00
+#define ES_MIP                  0x01
+#define ES_POOR                 0x01
+#define ES_EXPIRED              0x02
+#define ES_NOOPERATER           0x03
+#define ES_TOPUP                0x10
+#define ES_LOWCREDIT            0x01
+#define ES_POWERDOWN            0x01
+#define ES_LOWBATTERY           0x01
+#define ES_LOWMEMORY            0x01
+#define ES_MEMORYERROR          0x02
+#define ES_LOSTCOMM             0x02
+#define ES_DIFALLING            0x00
+#define ES_DIRISING             0x01
+#define ES_AILOWER              0x00
+#define ES_AIHIGHER             0x01
+
+#define ES_LOWERLIMIT           0x01
+#define ES_LOWERANDDELAY        0x11
+#define ES_LOWEREXTREME         0x02
+#define ES_UPPERLIMIT           0x04
+#define ES_UPPERANDDELAY        0x14
+#define ES_UPPEREXTREME         0x08
+
+#define ES_SENSERROR            0x80
+#define ES_SENSLOWERBOUND       0x81
+#define ES_SENSUPPERBOUND       0x82
+#define ES_SENSDISCONNECT       0x84
+#define ES_SENSSHORT            0x90
+
+#define ES_UNKNOWN              0xFF
+                 
+struct log_wait_st
+{
+    unsigned char       frameID;   
+    unsigned long int   logID;
+};
+
+extern eeprom char      DEVICE_SERIAL[];        
+extern char             ETH_current_mode;         
+
+extern TIMER            commLostTimer;
+extern unsigned char    duplicateListClear;
+
+extern struct log_wait_st    logDataWait;
+extern struct log_wait_st    logEventWait;
+                                                                           
+int  ETH_sendStatusReportCmd(unsigned long int timestamp, unsigned char accm, unsigned char *paraResp, int paraLen);
+int  ETH_sendEventReportCmd(char eventType, unsigned long int timestamp, char eventID, char statusCode);           
+int  ETH_sendDataReportCmd(char dataType, unsigned long int timestamp, unsigned int sensorID, float value);   
+int  ETH_clearDuplicateRequestCmd(void);          
+void ETH_processPacket(char *ptr2frame,int len);
+void ETH_receive();                                      
+int  ETH_send(char *frameData, int frameLen, char frameID, int timeout);  
+void ETH_retransmit(void);
+int  ETH_checksum(char buf[],int len);       
+char ETH_switchMode(char mode);
+int ETH_getConfig(unsigned char *readBuffer, unsigned int *buflen);
+void ETH_reset(void);
+
+#endif

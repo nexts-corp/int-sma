@@ -1,0 +1,4 @@
+VERSION:3 SOURCE_TIMESTAMP:474753BC
+NODE:I LEVEL:0 LINE:1 "C:\Data\Projects\AVR\iNT_SMA_AVR2560_v1\logTask.h"
+NODE:I LEVEL:0 LINE:2 "C:\Data\Projects\AVR\iNT_SMA_AVR2560_v1\debug.h"
+NODE:F LEVEL:0 LINE:4 "logTask(void * pviParameter)"
