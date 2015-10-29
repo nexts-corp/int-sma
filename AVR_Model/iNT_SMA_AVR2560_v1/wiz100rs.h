@@ -11,7 +11,7 @@
 #define WIZ100RS_ON                      (PORTG |= (1 << 4))                   //PORTG.5 set 1 = normal mode, 0 = reset mode
 #define WIZ100RS_OFF                     (PORTG &= ~(1 << 4))
 #define WIZ100RS_DATA_MAX_SIZE           500
-#define WIZ100SR_PRINT_DEBUG            1
+#define WIZ100SR_PRINT_DEBUG            0
 
 typedef struct{
     char macAddress[12];       //MAC Address (xxxxxx is unique factory value)      //12=ASCII , 6 = byte

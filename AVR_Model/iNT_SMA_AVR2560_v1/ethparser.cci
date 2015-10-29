@@ -1,7 +1,7 @@
 VERSION:3 SOURCE_TIMESTAMP:449EAC10
 NODE:I LEVEL:0 LINE:1 "C:\cvavr2\inc\stdlib.h"
-NODE:I LEVEL:0 LINE:2 "C:\Data\Projects\AVR\iNT_SMA_AVR2560_v1\ethparser.h"
-NODE:I LEVEL:0 LINE:3 "C:\Data\Projects\AVR\iNT_SMA_AVR2560_v1\debug.h"
+NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\ethparser.h"
+NODE:I LEVEL:0 LINE:3 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\debug.h"
 NODE:F LEVEL:0 LINE:6 "statusRequestParser(unsigned char * pkt,int len,struct stat_req_st * st)"
 NODE:F LEVEL:0 LINE:40 "statusReportParser(unsigned char * pkt,unsigned long * time)"
 NODE:F LEVEL:0 LINE:54 "configManageParser(unsigned char * pkt,int len,struct conf_man_st * st)"

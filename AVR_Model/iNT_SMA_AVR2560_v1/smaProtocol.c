@@ -2,7 +2,7 @@
 #include "ds1672.h" 
 #include "smaProtocol.h"
 #include "debug.h"
-#include "sensorTask.h"
+#include "dataAndStatusTask.h"
 
 extern iData_t viRXData;
 extern iData_t viTXData;

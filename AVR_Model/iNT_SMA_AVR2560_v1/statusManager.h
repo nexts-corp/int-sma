@@ -2,6 +2,7 @@
 #define STATUS_MANAGER_H
 
 #include "main.h"
+#include "dataAndStatusTask.h"
 
 #define STATUS_MAX  0x02
 
@@ -12,14 +13,9 @@
 #define STATUS_INTEGER      0x03
 #define STATUS_FLOAT        0x04
 
-typedef struct{
-    iChar_t viStatusType; 
-    iChar_t viDataType;
-    float viData;
-}iStatusReport_t;
 
 iChar_t iStatusRead(iDataMini_t *pviOutData_arg);
-float iStatusReadByType(iStatusReport_t *pviInOutData_arg);
-float iStatusReadBattery();
+void iStatusReadByType(iStatusReport_t *pviInOutData_arg);
+//float iStatusReadBattery();
 
 #endif 

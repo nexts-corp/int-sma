@@ -8,12 +8,12 @@
 ;iConfigFormat_t viDataConfig;
 ;
 ;void deviceTask(void *pviParameter){
-; 0024 000A void deviceTask(void *pviParameter){
+; 0023 000A void deviceTask(void *pviParameter){
 
 	.CSEG
 ;PCODE: $00000000 VOL: 0
 ;PCODE: $00000001 VOL: 0
-; 0024 000B     printDebug("[deviceTask]Task Running...\r\n");
+; 0023 000B     printDebug("[deviceTask]Task Running...\r\n");
 ;PCODE: $00000002 VOL: 0
 ;	*pviParameter -> Y+0
 ;PCODE: $00000003 VOL: 0
@@ -23,27 +23,27 @@
 ;PCODE: $00000007 VOL: 0
 ;PCODE: $00000008 VOL: 0
 ;PCODE: $00000009 VOL: 0
-; 0024 000C 
-; 0024 000D     if(viFlagTerInit!=0){
+; 0023 000C 
+; 0023 000D     if(viFlagTerInit!=0){
 ;PCODE: $0000000A VOL: 0
 ;PCODE: $0000000B VOL: 0
 ;PCODE: $0000000C VOL: 0
-; 0024 000E 
-; 0024 000F     }else{
+; 0023 000E 
+; 0023 000F     }else{
 ;PCODE: $0000000D VOL: 0
 ;PCODE: $0000000E VOL: 0
-; 0024 0010 
-; 0024 0011     }
+; 0023 0010 
+; 0023 0011     }
 ;PCODE: $0000000F VOL: 0
-; 0024 0012 
-; 0024 0013     if(iQueueReceive(pviQueueMangToConfig,&viDataConfig)==1){
+; 0023 0012 
+; 0023 0013     if(iQueueReceive(pviQueueMangToConfig,&viDataConfig)==1){
 ;PCODE: $00000010 VOL: 0
 ;PCODE: $00000011 VOL: 0
 ;PCODE: $00000012 VOL: 0
 ;PCODE: $00000013 VOL: 0
 ;PCODE: $00000014 VOL: 0
 ;PCODE: $00000015 VOL: 0
-; 0024 0014         printDebug("[deviceTask]There is configuration.\r\n");
+; 0023 0014         printDebug("[deviceTask]There is configuration.\r\n");
 ;PCODE: $00000016 VOL: 0
 ;PCODE: $00000017 VOL: 0
 ;PCODE: $00000018 VOL: 0
@@ -51,10 +51,10 @@
 ;PCODE: $0000001A VOL: 0
 ;PCODE: $0000001B VOL: 0
 ;PCODE: $0000001C VOL: 0
-; 0024 0015 	}else{
+; 0023 0015 	}else{
 ;PCODE: $0000001D VOL: 0
 ;PCODE: $0000001E VOL: 0
-; 0024 0016 		printDebug("[deviceTask]There is not config.\r\n");
+; 0023 0016 		printDebug("[deviceTask]There is not config.\r\n");
 ;PCODE: $0000001F VOL: 0
 ;PCODE: $00000020 VOL: 0
 ;PCODE: $00000021 VOL: 0
@@ -62,9 +62,9 @@
 ;PCODE: $00000023 VOL: 0
 ;PCODE: $00000024 VOL: 0
 ;PCODE: $00000025 VOL: 0
-; 0024 0017 	}
+; 0023 0017 	}
 ;PCODE: $00000026 VOL: 0
-; 0024 0018 }
+; 0023 0018 }
 ;PCODE: $00000027 VOL: 0
 ;PCODE: $00000028 VOL: 0
 ;PCODE: $00000029 VOL: 0

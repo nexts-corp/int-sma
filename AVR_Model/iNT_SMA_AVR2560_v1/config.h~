@@ -16,7 +16,7 @@ typedef struct{
 typedef struct{
    iChar_t viDeviceEnable;
    iChar_t viAlarmEnable;
-   iChar_t viSensorEnable[5];
+   iChar_t viSensorEnable[7];
 }iOperate_t;
 
 
@@ -35,7 +35,7 @@ typedef struct{
 
 
 typedef struct{
-   iChar_t viProbChannel;
+   iChar_t viChannelID;
    iChar_t viSensorID;
    iChar_t viUnitID;
    

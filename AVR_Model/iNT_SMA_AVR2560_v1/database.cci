@@ -1,6 +1,6 @@
 VERSION:3 SOURCE_TIMESTAMP:47497DD3
-NODE:I LEVEL:0 LINE:1 "C:\Data\Projects\AVR\iNT_SMA_AVR2560_v1\database.h"
-NODE:I LEVEL:0 LINE:2 "C:\Data\Projects\AVR\iNT_SMA_AVR2560_v1\sdManager.h"
+NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\database.h"
+NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\sdManager.h"
 NODE:V LEVEL:0 LINE:27 "*pviDataBaseHandle -> RAM:????"
 NODE:F LEVEL:0 LINE:29 "iDataLogInsert(const iChar_t * pviDataBuffer_arg,iUInt_t viLength_arg)"
 NODE:F LEVEL:0 LINE:67 "iDataLogUpdate(iChar_t * pviDataBuffer_arg,iUInt_t viLineID_arg)"

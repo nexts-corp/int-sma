@@ -3,7 +3,7 @@
 #include "sensor.h"
 #include "managerTask.h"
 extern eeprom iDVConfig_t viDVConfigUpdate;
-iDataReport_t viDataReportBuff;
+extern iDataReport_t viDataReportBuff;
 
 extern iDataMini_t viDataReport;
 extern iDataMini_t viStatusReport;
@@ -77,7 +77,7 @@ iChar_t iSensorRead(iDataMini_t *pviOutData_arg){
 void iSensorReadByType(iDataReport_t *pviInOutData_arg){
     switch(pviInOutData_arg->viSensorID){
         case SEN_ADC_TYPE:{
-            //pviInOutData_arg->viData = read_adc(8+pviInOutData_arg->viChannelID); 
+            pviInOutData_arg->viData = read_adc(8+pviInOutData_arg->viChannelID); 
             printDebug("[iSensorReadByType]Channel[%d] data : %f\r\n",pviInOutData_arg->viChannelID,pviInOutData_arg->viData);
             break;
         }

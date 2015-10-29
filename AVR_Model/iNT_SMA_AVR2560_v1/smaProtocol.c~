@@ -2,7 +2,7 @@
 #include "ds1672.h" 
 #include "smaProtocol.h"
 #include "debug.h"
-#include "sensorTask.h"
+#include "dataAndStatus.h"
 
 extern iData_t viRXData;
 extern iData_t viTXData;
@@ -269,6 +269,6 @@ void iPTCPack(iData_t *pviOutData_arg, iChar_t *pviData_arg, iUInt_t viLength_ar
 //    return pviPTCData;
 //}
 
-void iDataReportPack(iChar_t *pviOutData,iDataReport_t *pviInData){
-
-}
+//void iDataReportPack(iChar_t *pviOutData,iDataReport_t *pviInData){
+//
+//}

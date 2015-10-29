@@ -1,7 +1,7 @@
 VERSION:3 SOURCE_TIMESTAMP:449EACC9
 NODE:M LEVEL:0 LINE:2 "LOGQUEUE_H"
-NODE:I LEVEL:0 LINE:4 "C:\Data\Projects\AVR\iNT_SMA_AVR2560_v1\dataqueue.h"
-NODE:I LEVEL:0 LINE:5 "C:\Data\Projects\AVR\iNT_SMA_AVR2560_v1\eventqueue.h"
+NODE:I LEVEL:0 LINE:4 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\dataqueue.h"
+NODE:I LEVEL:0 LINE:5 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\eventqueue.h"
 NODE:T LEVEL:0 LINE:7 "data_log_st"
 LEVEL:1 LINE:9 ICON:T "id"
 LEVEL:1 LINE:10 ICON:T "data"

@@ -3,7 +3,7 @@
 #include "sensor.h"
 #include "managerTask.h"
 extern eeprom iDVConfig_t viDVConfigUpdate;
-iDataReport_t viDataReportBuff;
+extern iDataReport_t viDataReportBuff;
 
 extern iDataMini_t viDataReport;
 extern iDataMini_t viStatusReport;
@@ -120,6 +120,16 @@ float iDHT11TypeCalculator(){
 }
 
 float iDHT22TypeCalculator(){
+    float viReturn = 0;
+    return viReturn;
+}
+
+float iDS1820TypeCalculator(){
+    float viReturn = 0;
+    return viReturn;
+}
+
+float iDS18B20TypeCalculator(){
     float viReturn = 0;
     return viReturn;
 }

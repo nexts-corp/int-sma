@@ -1,5 +1,5 @@
 /*****************************************************
-Project : SMA_AVR : 1
+Project : SMA_AVR2560_V1 : 1
 Date    : 17/7/2012
 Author  : Nexs-Crop Team
 Company : Nexs-Crop Co.,Ltd.
@@ -20,7 +20,7 @@ AVR Core Clock frequency: 8.000000 MHz
 #include "debug.h"
 #include "uart.h"
 //#include "queue.h"
-#include "sensorTask.h"
+#include "dataAndStatus.h"
 #include "managerTask.h"
 #include "debugTask.h"
 #include "communicateTask.h"
@@ -114,7 +114,7 @@ void main(void){
     int err,i=0,k=0,res,last_status;   
     do{ err = initial_system();  }while(err);  
     
-    printDebug("<main>Semi-RTOS-V1\r\n");
+    printDebug("[main]Initial...\r\n");
     
 //    pviQueueData1 = iQueueCreate(10,sizeof(int));
 //	printDebug("<main>pviQueueData1 adr : %p\r\n",pviQueueData1);
@@ -178,15 +178,15 @@ void main(void){
 //    }
     
     ///////////////create task//////////////// 
-    piDeviceTask = iTaskCreate(sensorTask,"sensor",5);      
+    piDeviceTask = iTaskCreate(dataAndStatusTask,"dataAndStatus",5);      
     if(piDeviceTask){
         printDebug("<main>sensorTask addr : %p\r\n",&piDeviceTask);
     }
 //    printDebug("[main],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);		
-//    piDeviceTask = iTaskCreate(managerTask,"mang",5);
-//    if(piDeviceTask){
-//        printDebug("<main>managerTask addr : %p\r\n",&piDeviceTask);
-//    }  
+    piDeviceTask = iTaskCreate(managerTask,"mang",5);
+    if(piDeviceTask){
+        printDebug("<main>managerTask addr : %p\r\n",&piDeviceTask);
+    }  
     
 //    piDeviceTask = iTaskCreate(logTask,"logger",5);
 //    if(piDeviceTask){
@@ -208,10 +208,10 @@ void main(void){
 //        printDebug("<main>interruptTask addr : %p\r\n",&piDeviceTask);
 //    } 
 //    
-    piDeviceTask = iTaskCreate(deviceTask,"device",5);
-    if(piDeviceTask){
-        printDebug("<main>deviceTask addr : %p\r\n",&piDeviceTask);
-    } 
+//    piDeviceTask = iTaskCreate(deviceTask,"device",5);
+//    if(piDeviceTask){
+//        printDebug("<main>deviceTask addr : %p\r\n",&piDeviceTask);
+//    } 
   
    startSchedulerTask();
 }

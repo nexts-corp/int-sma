@@ -1,7 +1,7 @@
 #include "io.h" 
 #include "timer.h"
 #include "managerTask.h"
-#include "sensorTask.h"
+#include "dataAndStatusTask.h"
 #include "smaProtocol.h"
 #include "lan.h"
 #include "database.h"
@@ -11,6 +11,9 @@ extern piQueueHandle_t pviQueueSensorToMang;
 extern piQueueHandle_t pviQueueDeviceToMang;
 
 extern iUChar_t viFlagTerInit;           //Terminal initial frist
+
+extern iDataMini_t viDataReport;
+extern iDataMini_t viStatusReport;
 
 iMangQueue_t viMangQueue[MANG_QUEUE_MAX];
 
@@ -22,9 +25,11 @@ iSensorData_t pviRXReceiveSensor;
 
 void managerTask(void *pviParameter){
      int i; 
-     iData_t viTXDataBuff;
-     iData_t viRXDataBuff; 
-     iUChar_t viHostRetransmit = 3;
+     iData_t    viTXDataBuff;
+     iData_t    viRXDataBuff; 
+     iUChar_t   viHostRetransmit = 3; 
+     iChar_t *  pviDatAndStatBuff;   
+     iUInt_t    viDatAndStatLength = 0;
      
 //     char viGenDataElem[80] = {
 //         0x7e,
@@ -61,7 +66,7 @@ void managerTask(void *pviParameter){
     
     #asm("wdr")
     
-     printDebug("<managerTask>Task Running...\r\n");    
+     printDebug("[managerTask]Task Running...\r\n");    
      
      
 //    if(iQueueReceive(pviQueueSensorToMang,&pviRXReceiveSensor)==1){
@@ -87,6 +92,7 @@ void managerTask(void *pviParameter){
 //		printDebug("<managerTask>data can not sent a data to pviQueueSensorToMang.\r\n");
 //	} 
     
+    //Terminal frist initial//
     if(viFlagTerInit==0){
         mti[0] = 0x08;
         mti[1] = 0x00;
@@ -118,7 +124,19 @@ void managerTask(void *pviParameter){
 //            if(){
 //            
 //            } 
-            
+            viDatAndStatLength = (viDataReport.length + viStatusReport.length);
+            if(viDatAndStatLength<=0){
+               return;
+            };
+            pviDatAndStatBuff = (iChar_t*)malloc(viDatAndStatLength);
+            if(pviDatAndStatBuff!=NULL){
+                memcpy(&pviDatAndStatBuff[0],viDataReport.value,viDataReport.length);
+                memcpy(&pviDatAndStatBuff[viDataReport.length],viStatusReport.value,viStatusReport.length);
+            }else{
+                free(pviDatAndStatBuff);
+                printDebug("[managerTask]data and ststus can't allocate mem.\r\n"); 
+                return;
+            }
             
             if(modeOperate == REALTIME_MODE){
                  mti[0] = 0x02;
@@ -128,7 +146,10 @@ void managerTask(void *pviParameter){
                  mti[1] = 0x00; 
             }
             
-            iPTCPack(&viTXDataBuff,viGenDataElem,sizeof(viGenDataElem),mti,tid); 
+            //iPTCPack(&viTXDataBuff,viGenDataElem,sizeof(viGenDataElem),mti,tid);   
+            iPTCPack(&viTXDataBuff,(const char*) pviDatAndStatBuff,viDatAndStatLength,mti,tid);
+            free(pviDatAndStatBuff);
+             
             iMangQueueAddItem(&viTXDataBuff,&viTXDataBuff.value[17]); //add protocol in mang queue
             iMangQueueDisplay();//display mang queue
             delay_ms(1000);

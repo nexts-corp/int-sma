@@ -1,5 +1,5 @@
 ;/*****************************************************
-;Project : SMA_AVR : 1
+;Project : SMA_AVR2560_V1 : 1
 ;Date    : 17/7/2012
 ;Author  : Nexs-Crop Team
 ;Company : Nexs-Crop Co.,Ltd.
@@ -44,7 +44,7 @@
 ;#include "debug.h"
 ;#include "uart.h"
 ;//#include "queue.h"
-;#include "sensorTask.h"
+;#include "dataAndStatusTask.h"
 ;#include "managerTask.h"
 ;#include "debugTask.h"
 ;#include "communicateTask.h"
@@ -178,7 +178,7 @@
 ;PCODE: $00000022 VOL: 0
 ;PCODE: $00000023 VOL: 0
 ; 0000 0074 
-; 0000 0075     printDebug("<main>Semi-RTOS-V1\r\n");
+; 0000 0075     printDebug("[main]Initial...\r\n");
 ;PCODE: $00000024 VOL: 0
 ;PCODE: $00000025 VOL: 0
 ;PCODE: $00000026 VOL: 0
@@ -354,7 +354,7 @@
 ; 0000 00B2 //    }
 ; 0000 00B3 
 ; 0000 00B4     ///////////////create task////////////////
-; 0000 00B5     piDeviceTask = iTaskCreate(sensorTask,"sensor",5);
+; 0000 00B5     piDeviceTask = iTaskCreate(dataAndStatusTask,"dataAndStatus",5);
 ;PCODE: $00000094 VOL: 0
 ;PCODE: $00000095 VOL: 0
 ;PCODE: $00000096 VOL: 0
@@ -379,10 +379,31 @@
 ;PCODE: $000000A7 VOL: 0
 ; 0000 00B8     }
 ; 0000 00B9 //    printDebug("[main],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);
-; 0000 00BA //    piDeviceTask = iTaskCreate(managerTask,"mang",5);
-; 0000 00BB //    if(piDeviceTask){
-; 0000 00BC //        printDebug("<main>managerTask addr : %p\r\n",&piDeviceTask);
-; 0000 00BD //    }
+; 0000 00BA     piDeviceTask = iTaskCreate(managerTask,"mang",5);
+;PCODE: $000000A8 VOL: 0
+;PCODE: $000000A9 VOL: 0
+;PCODE: $000000AA VOL: 0
+;PCODE: $000000AB VOL: 0
+;PCODE: $000000AC VOL: 0
+;PCODE: $000000AD VOL: 0
+;PCODE: $000000AE VOL: 0
+;PCODE: $000000AF VOL: 0
+;PCODE: $000000B0 VOL: 0
+;PCODE: $000000B1 VOL: 0
+; 0000 00BB     if(piDeviceTask){
+;PCODE: $000000B2 VOL: 0
+;PCODE: $000000B3 VOL: 0
+; 0000 00BC         printDebug("<main>managerTask addr : %p\r\n",&piDeviceTask);
+;PCODE: $000000B4 VOL: 0
+;PCODE: $000000B5 VOL: 0
+;PCODE: $000000B6 VOL: 0
+;PCODE: $000000B7 VOL: 0
+;PCODE: $000000B8 VOL: 0
+;PCODE: $000000B9 VOL: 0
+;PCODE: $000000BA VOL: 0
+;PCODE: $000000BB VOL: 0
+;PCODE: $000000BC VOL: 0
+; 0000 00BD     }
 ; 0000 00BE 
 ; 0000 00BF //    piDeviceTask = iTaskCreate(logTask,"logger",5);
 ; 0000 00C0 //    if(piDeviceTask){
@@ -410,14 +431,14 @@
 ; 0000 00D6 //    }
 ; 0000 00D7 
 ; 0000 00D8    startSchedulerTask();
-;PCODE: $000000A8 VOL: 0
-;PCODE: $000000A9 VOL: 0
+;PCODE: $000000BD VOL: 0
+;PCODE: $000000BE VOL: 0
 ; 0000 00D9 }
-;PCODE: $000000AA VOL: 0
-;PCODE: $000000AB VOL: 0
-;PCODE: $000000AC VOL: 0
-;PCODE: $000000AD VOL: 0
+;PCODE: $000000BF VOL: 0
+;PCODE: $000000C0 VOL: 0
+;PCODE: $000000C1 VOL: 0
+;PCODE: $000000C2 VOL: 0
 
 	.DSEG
 _0xF:
-	.BYTE 0x7
+	.BYTE 0x13

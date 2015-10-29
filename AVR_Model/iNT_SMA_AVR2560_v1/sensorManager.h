@@ -2,13 +2,8 @@
 #define SENSOR_MANAGER_H
 
 #include "main.h"
+#include "dataAndStatusTask.h"
 
-typedef struct{
-    iChar_t viChannelID;
-    iChar_t viSensorID; 
-    iChar_t viUnitID;
-    float viData;
-}iDataReport_t;
 
 
 //#define  SEN_ANALOG_GROUP   0x10
