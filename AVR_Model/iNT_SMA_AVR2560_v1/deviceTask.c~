@@ -1,7 +1,7 @@
 #include "deviceTask.h"
 #include "config.h"
 
-iUChar_t viFlagTerInit = 0;
+eeprom unsigned char viFlagTerInit = 0;
 
 extern piQueueHandle_t pviQueueMangToConfig;
 
@@ -11,6 +11,8 @@ void deviceTask(void *pviParameter){
     printDebug("[deviceTask]Task Running...\r\n");   
     
     if(viFlagTerInit!=0){
+    
+    }else{
     
     }
      

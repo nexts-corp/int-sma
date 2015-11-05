@@ -3,7 +3,7 @@
 #include "sensor.h"
 #include "managerTask.h"
 extern eeprom iDVConfig_t viDVConfigUpdate;
-extern iDataReport_t viDataReportBuff;
+extern iDataReport_t viDataReportBuff[];
 
 extern iDataMini_t viDataReport;
 extern iDataMini_t viStatusReport;
@@ -56,14 +56,14 @@ iChar_t iSensorRead(iDataMini_t *pviOutData_arg){
     for(i=0;i<5;i++){
         #asm("wdr")
        if(viDVConfigUpdate.viOperate.viSensorEnable[i]==1){
-           viDataReportBuff.viChannelID = viDVConfigUpdate.viSensorConfig[i].viChannelID;
-           viDataReportBuff.viSensorID = viDVConfigUpdate.viSensorConfig[i].viSensorID;
-           viDataReportBuff.viUnitID =   viDVConfigUpdate.viSensorConfig[i].viUnitID; 
+           viDataReportBuff[i].viChannelID = viDVConfigUpdate.viSensorConfig[i].viChannelID;
+           viDataReportBuff[i].viSensorID = viDVConfigUpdate.viSensorConfig[i].viSensorID;
+           viDataReportBuff[i].viUnitID =   viDVConfigUpdate.viSensorConfig[i].viUnitID; 
            iSensorReadByType(&viDataReportBuff);
            memcpy(&pviOutData_arg->value[viIndexWrite],viCMD,2);
            viIndexWrite += 2;
-           memcpy(&pviOutData_arg->value[viIndexWrite],&viDataReportBuff,sizeof(viDataReportBuff));
-           viIndexWrite += sizeof(viDataReportBuff);
+           memcpy(&pviOutData_arg->value[viIndexWrite],&viDataReportBuff[i],sizeof(viDataReportBuff[i]));
+           viIndexWrite += sizeof(viDataReportBuff[i]);
            pviOutData_arg->length = viIndexWrite;
        }
     }
@@ -120,6 +120,16 @@ float iDHT11TypeCalculator(){
 }
 
 float iDHT22TypeCalculator(){
+    float viReturn = 0;
+    return viReturn;
+}
+
+float iDS1820TypeCalculator(){
+    float viReturn = 0;
+    return viReturn;
+}
+
+float iDS18B20TypeCalculator(){
     float viReturn = 0;
     return viReturn;
 }

@@ -12,7 +12,7 @@ extern piQueueHandle_t pviQueueTaskAToTaskB;
 extern piQueueHandle_t pviQueueSensorToMang;
 extern piQueueHandle_t pviQueueMangToSensor;
 
-iDataReport_t viDataReportBuff;
+iDataReport_t viDataReportBuff[7];
 iStatusReport_t viStatusReportBuff;
 
 extern iDataMini_t viDataReport;
@@ -21,7 +21,7 @@ extern iDataMini_t viStatusReport;
 iSensorData_t pviSensorData;
 
 void dataAndStatusTask(void *pviParameter){
-    printDebug("<sensorTask>Task Running...\r\n"); 
+    printDebug("[dataAndStatusTask]Task Running...\r\n"); 
      
 //    swContextSensor();
 //    swContextSensor(); 
@@ -35,7 +35,7 @@ void dataAndStatusTask(void *pviParameter){
     #asm("wdr")
     iSensorRead(&viDataReport);                        //the 5A packed 
     #asm("wdr")
-    iStatusRead(&viStatusReport);                      //the 5A packed 
+    iStatusRead(&viStatusReport);                      //the 2A packed 
     #asm("wdr")
     delay_ms(100);
 }

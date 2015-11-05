@@ -3,6 +3,10 @@
 
 #include "main.h"
 
+#define SENSOR_DISABLE_def           0x00
+#define SENSOR_ENABLE_def            0x01
+
+
 typedef struct{
    iChar_t viDeviceType[20]; 
    iChar_t viFirmVersion[20];

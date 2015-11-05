@@ -1,5 +1,6 @@
 #include "io.h" 
 #include "timer.h"
+#include "ds1672.h"
 #include "managerTask.h"
 #include "dataAndStatusTask.h"
 #include "smaProtocol.h"
@@ -10,7 +11,7 @@ extern piQueueHandle_t pviQueueTaskAToTaskB;
 extern piQueueHandle_t pviQueueSensorToMang;
 extern piQueueHandle_t pviQueueDeviceToMang;
 
-extern iUChar_t viFlagTerInit;           //Terminal initial frist
+extern eeprom iUChar_t viFlagTerInit;           //Terminal initial frist
 
 extern iDataMini_t viDataReport;
 extern iDataMini_t viStatusReport;
@@ -60,9 +61,15 @@ void managerTask(void *pviParameter){
      char mti[2] = {0x02,0x00}; 
      char tid[8] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}; 
      TIMER   viDelay_s; 
+     TIMER   viTEver1min;
      iUChar_t viCommuInterface = 0;
      iUChar_t modeOperate = REALTIME_MODE;
-     iUChar_t deviceStatus = DEVICE_ENABLE;
+     iUChar_t deviceStatus = DEVICE_ENABLE;        
+     
+    TIMER_setTimer(&viTEver1min, 60);
+    while(!TIMER_checkTimerExceed(viTEver1min)){
+       #asm("wdr")
+    }
     
     #asm("wdr")
     
@@ -119,24 +126,26 @@ void managerTask(void *pviParameter){
             while(!TIMER_checkTimerExceed(viDelay_s)){
                #asm("wdr")
             }
-//            
-//            
-//            if(){
-//            
-//            } 
+            
             viDatAndStatLength = (viDataReport.length + viStatusReport.length);
-            if(viDatAndStatLength==0){
-               return;
-            };
-            pviDatAndStatBuff = (iChar_t*)malloc(viDatAndStatLength);
-            if(pviDatAndStatBuff!=NULL){
-                memcpy(&pviDatAndStatBuff[0],viDataReport.value,viDataReport.length);
-                memcpy(&pviDatAndStatBuff[viDataReport.length],viStatusReport.value,viStatusReport.length);
+            if(viDatAndStatLength<=0){
+               modeOperate = LOGGER_MODE;
+               if(1){   //if SD record file empty then to return
+                  return;
+               }          
             }else{
-                free(pviDatAndStatBuff);
-                printDebug("[managerTask]data and ststus can't allocate mem.\r\n"); 
-                return;
+               pviDatAndStatBuff = (iChar_t*)malloc(viDatAndStatLength);
+               if(pviDatAndStatBuff!=NULL){
+                  memcpy(&pviDatAndStatBuff[0],viDataReport.value,viDataReport.length);
+                  memcpy(&pviDatAndStatBuff[viDataReport.length],viStatusReport.value,viStatusReport.length);
+               }else{
+                  free(pviDatAndStatBuff);
+                  printDebug("[managerTask]data and ststus can't allocate mem.\r\n"); 
+                  return;
+               } 
+               modeOperate = REALTIME_MODE;
             }
+            
             
             if(modeOperate == REALTIME_MODE){
                  mti[0] = 0x02;
@@ -546,4 +555,12 @@ void printConfig(char eeprom *eptr,unsigned int len)
    } 
    printDebug("\r\n]\r\n");
    return;
+}
+
+void iSyncUniTime(unsigned long int *viUniTime_arg){
+     unsigned long int viUniTime;
+     //tim 
+     viUniTime = DS1672_read();  
+     printDebug("[iSyncUniTime]Terminal %X\r\n",viUniTime);
+     printDebug("[iSyncUniTime]Server %X\r\n",viUniTime_arg);
 }

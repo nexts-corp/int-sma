@@ -32,7 +32,7 @@ typedef struct{
      float dht11Humi;
 }iSensorData_t;
 
-extern iDataReport_t    viDataReportBuff;
+extern iDataReport_t    viDataReportBuff[];
 extern iStatusReport_t  viStatusReportBuff;
 
 

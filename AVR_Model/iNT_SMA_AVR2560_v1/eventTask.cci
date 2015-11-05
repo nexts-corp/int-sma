@@ -1,0 +1,7 @@
+VERSION:3 SOURCE_TIMESTAMP:476384F3
+NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\eventTask.h"
+NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\eventManager.h"
+NODE:V LEVEL:0 LINE:4 "viEventReportBuff -> RAM:????"
+LEVEL:1 LINE:6 ICON:T "viEventID"
+LEVEL:1 LINE:7 ICON:T "viData"
+NODE:F LEVEL:0 LINE:7 "eventTask(void * pviParameter)"

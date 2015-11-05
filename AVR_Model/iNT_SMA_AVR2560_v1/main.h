@@ -48,5 +48,6 @@ extern iData_t viTXData;
 
 extern iDataMini_t viDataReport;
 extern iDataMini_t viStatusReport;
+extern iDataMini_t viEventReport;
 
 #endif 

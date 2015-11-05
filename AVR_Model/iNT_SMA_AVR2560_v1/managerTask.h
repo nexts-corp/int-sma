@@ -36,6 +36,7 @@ void memcpyd(char *dptr, char eeprom *eptr,  int len);
 void memcpye(char eeprom *eptr, char *dptr, int len);
 void printConfig(char eeprom *eptr,unsigned int len);
 void iTerAckByTagB(iChar_t viTagName, iChar_t viPropNumber);
+void iSyncUniTime(unsigned long int *viUniTime_arg);
 
 
 #endif 

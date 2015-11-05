@@ -1,4 +1,4 @@
-VERSION:3 SOURCE_TIMESTAMP:475D4ED8
+VERSION:3 SOURCE_TIMESTAMP:476372D7
 NODE:I LEVEL:0 LINE:1 "C:\cvavr2\inc\delay.h"
 NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\dataAndStatusTask.h"
 NODE:I LEVEL:0 LINE:3 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\sensorManager.h"
@@ -7,10 +7,6 @@ NODE:I LEVEL:0 LINE:5 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AV
 NODE:I LEVEL:0 LINE:6 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\dht11.h"
 NODE:V LEVEL:0 LINE:8 "viSwitchContextSensor -> RAM:????"
 NODE:V LEVEL:0 LINE:15 "viDataReportBuff -> RAM:????"
-LEVEL:1 LINE:16 ICON:T "viChannelID"
-LEVEL:1 LINE:17 ICON:T "viSensorID"
-LEVEL:1 LINE:18 ICON:T "viUnitID"
-LEVEL:1 LINE:19 ICON:T "viData"
 NODE:V LEVEL:0 LINE:16 "viStatusReportBuff -> RAM:????"
 LEVEL:1 LINE:24 ICON:T "viStatusType"
 LEVEL:1 LINE:25 ICON:T "viDataType"

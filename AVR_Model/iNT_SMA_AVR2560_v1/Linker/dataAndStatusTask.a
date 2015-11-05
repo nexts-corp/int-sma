@@ -36,7 +36,7 @@
 ;extern piQueueHandle_t pviQueueSensorToMang;
 ;extern piQueueHandle_t pviQueueMangToSensor;
 ;
-;iDataReport_t viDataReportBuff;
+;iDataReport_t viDataReportBuff[7];
 ;iStatusReport_t viStatusReportBuff;
 ;
 ;extern iDataMini_t viDataReport;
@@ -45,12 +45,12 @@
 ;iSensorData_t pviSensorData;
 ;
 ;void dataAndStatusTask(void *pviParameter){
-; 002B 0017 void dataAndStatusTask(void *pviParameter){
+; 002A 0017 void dataAndStatusTask(void *pviParameter){
 
 	.CSEG
 ;PCODE: $0000000D VOL: 0
 ;PCODE: $0000000E VOL: 0
-; 002B 0018     printDebug("<sensorTask>Task Running...\r\n");
+; 002A 0018     printDebug("[dataAndStatusTask]Task Running...\r\n");
 ;PCODE: $0000000F VOL: 0
 ;	*pviParameter -> Y+0
 ;PCODE: $00000010 VOL: 0
@@ -60,39 +60,39 @@
 ;PCODE: $00000014 VOL: 0
 ;PCODE: $00000015 VOL: 0
 ;PCODE: $00000016 VOL: 0
-; 002B 0019 
-; 002B 001A //    swContextSensor();
-; 002B 001B //    swContextSensor();
-; 002B 001C 
-; 002B 001D     //printDebug("[sensorTask],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);
-; 002B 001E //    if(iQueueSend(pviQueueSensorToMang,&pviSensorData)==1){
-; 002B 001F //        printDebug("<sensorTask>pviQueueSensorToMang can sent a data.\r\n");
-; 002B 0020 //    }else{
-; 002B 0021 //        printDebug("<sensorTask>data can not sent a data to pviQueueSensorToMang.\r\n");
-; 002B 0022 //    }
-; 002B 0023     #asm("wdr")
+; 002A 0019 
+; 002A 001A //    swContextSensor();
+; 002A 001B //    swContextSensor();
+; 002A 001C 
+; 002A 001D     //printDebug("[sensorTask],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);
+; 002A 001E //    if(iQueueSend(pviQueueSensorToMang,&pviSensorData)==1){
+; 002A 001F //        printDebug("<sensorTask>pviQueueSensorToMang can sent a data.\r\n");
+; 002A 0020 //    }else{
+; 002A 0021 //        printDebug("<sensorTask>data can not sent a data to pviQueueSensorToMang.\r\n");
+; 002A 0022 //    }
+; 002A 0023     #asm("wdr")
 ;PCODE: $00000017 VOL: 0
 	wdr
 ;PCODE: $00000018 VOL: 0
-; 002B 0024     iSensorRead(&viDataReport);                        //the 5A packed
+; 002A 0024     iSensorRead(&viDataReport);                        //the 5A packed
 ;PCODE: $00000019 VOL: 0
 ;PCODE: $0000001A VOL: 0
-; 002B 0025     #asm("wdr")
+; 002A 0025     #asm("wdr")
 ;PCODE: $0000001B VOL: 0
 	wdr
 ;PCODE: $0000001C VOL: 0
-; 002B 0026     iStatusRead(&viStatusReport);                      //the 5A packed
+; 002A 0026     iStatusRead(&viStatusReport);                      //the 2A packed
 ;PCODE: $0000001D VOL: 0
 ;PCODE: $0000001E VOL: 0
-; 002B 0027     #asm("wdr")
+; 002A 0027     #asm("wdr")
 ;PCODE: $0000001F VOL: 0
 	wdr
 ;PCODE: $00000020 VOL: 0
-; 002B 0028     delay_ms(100);
+; 002A 0028     delay_ms(100);
 ;PCODE: $00000021 VOL: 0
 ;PCODE: $00000022 VOL: 0
 ;PCODE: $00000023 VOL: 0
-; 002B 0029 }
+; 002A 0029 }
 ;PCODE: $00000024 VOL: 0
 ;PCODE: $00000025 VOL: 0
 ;PCODE: $00000026 VOL: 0

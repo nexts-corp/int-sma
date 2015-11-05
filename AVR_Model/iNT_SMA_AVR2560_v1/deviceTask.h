@@ -13,7 +13,7 @@ typedef struct{
     iChar_t viData; 
 }iDeviceCMD;
 
-extern iUChar_t viFlagTerInit;
+extern eeprom iUChar_t viFlagTerInit;           //Terminal initial frist
 void deviceTask(void *pviParameter);
 
 

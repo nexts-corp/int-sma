@@ -1,7 +1,7 @@
-VERSION:3 SOURCE_TIMESTAMP:47547EE0
+VERSION:3 SOURCE_TIMESTAMP:475D5741
 NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\deviceTask.h"
 NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\config.h"
-NODE:V LEVEL:0 LINE:4 "viFlagTerInit -> RAM:????"
+NODE:V LEVEL:0 LINE:4 "viFlagTerInit -> EEPROM:????"
 NODE:V LEVEL:0 LINE:8 "viDataConfig -> RAM:????"
 LEVEL:1 LINE:40 ICON:T "viId"
 LEVEL:1 LINE:41 ICON:T "viCmd"

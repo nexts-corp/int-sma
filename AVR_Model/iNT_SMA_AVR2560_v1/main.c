@@ -27,6 +27,7 @@ AVR Core Clock frequency: 8.000000 MHz
 #include "interruptTask.h"
 #include "deviceTask.h"
 #include "logTask.h"
+#include "eventTask.h"
 
 //#include "wiz100rs.h"
 #include "lan.h"
@@ -85,6 +86,7 @@ iData_t viTXData;
 
 iDataMini_t viDataReport;
 iDataMini_t viStatusReport;
+iDataMini_t viEventReport;
 
 /*============================================================*/
 void main(void){
@@ -180,12 +182,12 @@ void main(void){
     ///////////////create task//////////////// 
     piDeviceTask = iTaskCreate(dataAndStatusTask,"dataAndStatus",5);      
     if(piDeviceTask){
-        printDebug("<main>sensorTask addr : %p\r\n",&piDeviceTask);
+        printDebug("<main>sensorTask addr : %p\r\n",piDeviceTask);
     }
 //    printDebug("[main],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);		
     piDeviceTask = iTaskCreate(managerTask,"mang",5);
     if(piDeviceTask){
-        printDebug("<main>managerTask addr : %p\r\n",&piDeviceTask);
+        printDebug("<main>managerTask addr : %p\r\n",piDeviceTask);
     }  
     
 //    piDeviceTask = iTaskCreate(logTask,"logger",5);
@@ -212,6 +214,11 @@ void main(void){
 //    if(piDeviceTask){
 //        printDebug("<main>deviceTask addr : %p\r\n",&piDeviceTask);
 //    } 
+
+    piDeviceTask = iTaskCreate(eventTask,"event",5);
+    if(piDeviceTask){
+        printDebug("<main>eventTask addr : %p\r\n",piDeviceTask);
+    } 
   
    startSchedulerTask();
 }

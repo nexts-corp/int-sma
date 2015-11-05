@@ -1,7 +1,7 @@
 #include "deviceTask.h"
 #include "config.h"
 
-iUChar_t viFlagTerInit = 0;
+eeprom iUChar_t viFlagTerInit = 0;
 
 extern piQueueHandle_t pviQueueMangToConfig;
 
