@@ -2104,7 +2104,7 @@ _0x420040:
 ;PCODE: $00000560 VOL: 0
 ; 0021 0255 
 ; 0021 0256     //wait wiz module response
-; 0021 0257     TIMER_setTimer(&timeout, 1);
+; 0021 0257     TIMER_setTimer(&timeout, 3);
 ;PCODE: $00000561 VOL: 0
 ;PCODE: $00000562 VOL: 0
 ;PCODE: $00000563 VOL: 0

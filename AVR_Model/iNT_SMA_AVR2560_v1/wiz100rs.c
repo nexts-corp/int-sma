@@ -596,7 +596,7 @@ void iWizReadConfig(){
     }    
 
     //wait wiz module response  
-    TIMER_setTimer(&timeout, 1);
+    TIMER_setTimer(&timeout, 3);
     while(!TIMER_checkTimerExceed(timeout)){
        #asm("wdr")  
        if(index0Buffer>0){ 

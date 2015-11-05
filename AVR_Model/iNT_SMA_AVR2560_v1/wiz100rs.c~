@@ -391,7 +391,7 @@ int iWizRead(){
                     if(viFlagHttpResCode == WIZ_HTTP_RES_CODE_OK){
                          break;
                     }
-                    pviReadLine = strtok(NULL,"\r\n");  
+                    //pviReadLine = strtok(NULL,"\r\n");  
                 }
                 pviReadLine = strtok(NULL,"\r\n");
             }
