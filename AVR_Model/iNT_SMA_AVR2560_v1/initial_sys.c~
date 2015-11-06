@@ -163,13 +163,13 @@ void playBeep(void)
 /*============================================================*/
 void showDebugInitComplete(void)
 {                        
-    struct rtc_structure time;       
-    struct prop_cnfg_st properties_config;
-    
-    printDebug("Initial Device Completed at - ");
-    RTC_getDateTime(&time,properties_config.timeZone);       
-    printDebug("%04d-%02d-%02d %02d:%02d:%02d\r\n",
-            time.year,time.month,time.date,time.hour,time.min,time.sec);
+//    struct rtc_structure time;       
+//    struct prop_cnfg_st properties_config;
+//    
+//    printDebug("Initial Device Completed at - ");
+//    RTC_getDateTime(&time,properties_config.timeZone);       
+//    printDebug("%04d-%02d-%02d %02d:%02d:%02d\r\n",
+//            time.year,time.month,time.date,time.hour,time.min,time.sec);
 }
 /*============================================================*/
 void showLedInitComplete(void)

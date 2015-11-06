@@ -34,6 +34,7 @@ void iFDisplayReturn(FRESULT viFResulyt_arg);
 void iFCreate(FIL *pviOutFilePtr_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg);
 void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg);
 void iFDelete(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg);
+void iFCreateFileDaily(iChar_t *pviFilename_arg);
 
 
 #endif 

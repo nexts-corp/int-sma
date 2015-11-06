@@ -180,6 +180,11 @@ void main(void){
 //    }
     
     ///////////////create task//////////////// 
+    piDeviceTask = iTaskCreate(logTask,"logger",5);
+    if(piDeviceTask){
+        printDebug("<main>logTask addr : %p\r\n",piDeviceTask);
+    }  
+    
     piDeviceTask = iTaskCreate(dataAndStatusTask,"dataAndStatus",5);      
     if(piDeviceTask){
         printDebug("<main>sensorTask addr : %p\r\n",piDeviceTask);
@@ -190,10 +195,7 @@ void main(void){
         printDebug("<main>managerTask addr : %p\r\n",piDeviceTask);
     }  
     
-//    piDeviceTask = iTaskCreate(logTask,"logger",5);
-//    if(piDeviceTask){
-//        printDebug("<main>managerTask addr : %p\r\n",&piDeviceTask);
-//    }  
+
 //    
 //    piDeviceTask = iTaskCreate(debugTask,"debug",5);
 //    if(piDeviceTask){

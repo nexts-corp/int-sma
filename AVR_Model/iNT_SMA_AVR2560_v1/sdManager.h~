@@ -5,7 +5,7 @@
 #include "memcard.h"
 
 extern iChar_t viFolderDataName[];
-extern iChar_t viFolderDataName[];
+extern iChar_t viFolderDataLogName[];
 extern iChar_t viFolderEventName[];
 extern iChar_t viFolderStatusName[];
 extern iChar_t viFolderErrorName[];     

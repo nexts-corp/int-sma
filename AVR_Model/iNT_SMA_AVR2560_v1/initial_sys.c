@@ -82,11 +82,11 @@ int initial_system(void)
     
     if(SD_init() == 0)
     {      
-        if(LOG_init() < 0)
-        {
-            // -- log status = error -- //
-            printDebug("<initial_system> LOG_init() failed\r\n");
-        }        
+//        if(LOG_init() < 0)
+//        {
+//            // -- log status = error -- //
+//            printDebug("<initial_system> LOG_init() failed\r\n");
+//        }        
     
         // -- log status = ok -- //
     }              

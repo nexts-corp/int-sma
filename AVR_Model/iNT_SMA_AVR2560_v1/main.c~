@@ -27,7 +27,7 @@ AVR Core Clock frequency: 8.000000 MHz
 #include "interruptTask.h"
 #include "deviceTask.h"
 #include "logTask.h"
-#include "eventTask;"
+#include "eventTask.h"
 
 //#include "wiz100rs.h"
 #include "lan.h"
@@ -190,10 +190,10 @@ void main(void){
         printDebug("<main>managerTask addr : %p\r\n",piDeviceTask);
     }  
     
-//    piDeviceTask = iTaskCreate(logTask,"logger",5);
-//    if(piDeviceTask){
-//        printDebug("<main>managerTask addr : %p\r\n",&piDeviceTask);
-//    }  
+    piDeviceTask = iTaskCreate(logTask,"logger",5);
+    if(piDeviceTask){
+        printDebug("<main>logTask addr : %p\r\n",piDeviceTask);
+    }  
 //    
 //    piDeviceTask = iTaskCreate(debugTask,"debug",5);
 //    if(piDeviceTask){

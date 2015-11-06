@@ -1,22 +1,27 @@
 #include "sdManager.h"
 
 // global variable
-iChar_t viFolderDataName[] = "Data";
-iChar_t viFolderDataLogName[] = "Data_Log";
+//iChar_t viFolderDataName[] = "Data";
+iChar_t viFolderDataName[] = "Record";
+//iChar_t viFolderDataLogName[] = "Data_Log";
+iChar_t viFolderDataLogName[] = "Log";
 iChar_t viFolderEventName[] = "Event";
 iChar_t viFolderStatusName[] = "Status";
 iChar_t viFolderErrorName[] = "Error";     
 iChar_t viFolderConfigName[] = "Config"; 
 
 iChar_t viDirRootPath[] = "0:/";
-iChar_t viDirDataPath[] = "0:/DATA";
-iChar_t viDirDataLogPath[] = "0:/DATA_LOG";
+//iChar_t viDirDataPath[] = "0:/DATA";
+iChar_t viDirDataPath[] = "0:/RECORD";
+//iChar_t viDirDataLogPath[] = "0:/DATA_LOG";
+iChar_t viDirDataLogPath[] = "0:/LOG";
 iChar_t viDirEventPath[] = "0:/EVENT";
 iChar_t viDirStatusPath[] = "0:/STATUS";
 iChar_t viDirErrorPath[] = "0:/ERROR"; 
 iChar_t viDirConfigPath[] = "0:/CONFIG";
 
-iChar_t viDataFName[] = "0:./data1.nc";
+//iChar_t viDataFName[] = "0:./data1.nc";
+iChar_t viDataFName[] = "0:./00000000.nc";
 iChar_t viDataLogFName[] = "0:./dataLog1.nc";
 iChar_t viEventFName[] = "0:./event1.nc";
 iChar_t viStatusFName[] = "0:./status1.nc";
@@ -119,15 +124,15 @@ iInt_t iInitSDCard(){
     
     viFReturn = f_opendir(&viOutDir, viDirDataLogPath);
     if(viFReturn == FR_OK){
-        printDebug("[iInitSDCard]Data dir is exist.\r\n");
+        printDebug("[iInitSDCard]DataLog dir is exist.\r\n");
     }else{
         iFDisplayReturn(viFReturn);
         if(viFReturn == FR_NO_PATH){
             viFReturn = f_mkdir(viFolderDataLogName);
             if(viFReturn == FR_OK){
-               printDebug("[iInitSDCard]mkdir Data success.\r\n");
+               printDebug("[iInitSDCard]mkdir DataLog success.\r\n");
             }else{
-               printDebug("[iInitSDCard]mkdir Data error.\r\n");
+               printDebug("[iInitSDCard]mkdir DataLog error.\r\n");
             } 
         }
     }
@@ -343,6 +348,35 @@ void iFDelete(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg){
        }
     }else{
        printDebug("[iFDelete]directory : %s.[\r\n",pviDirPath_arg); 
+       iFDisplayReturn(viFReturn);
+       printDebug("]\r\n"); 
+    }
+}
+
+void iFCreateFileDaily(iChar_t *pviFilename_arg){
+    FRESULT viFReturn;
+    DIR viOutDir;
+    FIL *viFilePtr;
+
+    if((viFReturn=f_chdir(viDirDataPath))==FR_OK){
+        printDebug("[iFCreateFileDaily]Current directory : %s.\r\n",viDirDataPath);  
+        if(viFReturn == FR_OK){
+            printDebug("[iFCreateFileDaily]Data dir is exist.\r\n");  
+            if((viFReturn=f_open(viFilePtr,pviFilename_arg,FA_OPEN_ALWAYS))==FR_OK){
+                printDebug("[iGenFileDaily]File %s is openned.\r\n",pviFilename_arg);  
+                if((viFReturn=f_close(viFilePtr))==FR_OK){ 
+                }else{
+                   iFDisplayReturn(viFReturn);
+                }
+            }else{
+                iFDisplayReturn(viFReturn);
+                printDebug("\r\n");
+            }
+        }else{
+            iFDisplayReturn(viFReturn);
+        } 
+    }else{
+       printDebug("[iFCreateFileDaily]directory : %s.[\r\n",viDirDataPath); 
        iFDisplayReturn(viFReturn);
        printDebug("]\r\n"); 
     }

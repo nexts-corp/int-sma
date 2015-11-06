@@ -356,7 +356,7 @@
 ; 0000 00B4 //    }
 ; 0000 00B5 
 ; 0000 00B6     ///////////////create task////////////////
-; 0000 00B7     piDeviceTask = iTaskCreate(dataAndStatusTask,"dataAndStatus",5);
+; 0000 00B7     piDeviceTask = iTaskCreate(logTask,"logger",5);
 ;PCODE: $00000094 VOL: 0
 ;PCODE: $00000095 VOL: 0
 ;PCODE: $00000096 VOL: 0
@@ -369,7 +369,7 @@
 ; 0000 00B8     if(piDeviceTask){
 ;PCODE: $0000009D VOL: 0
 ;PCODE: $0000009E VOL: 0
-; 0000 00B9         printDebug("<main>sensorTask addr : %p\r\n",piDeviceTask);
+; 0000 00B9         printDebug("<main>logTask addr : %p\r\n",piDeviceTask);
 ;PCODE: $0000009F VOL: 0
 ;PCODE: $000000A0 VOL: 0
 ;PCODE: $000000A1 VOL: 0
@@ -381,8 +381,8 @@
 ;PCODE: $000000A7 VOL: 0
 ;PCODE: $000000A8 VOL: 0
 ; 0000 00BA     }
-; 0000 00BB //    printDebug("[main],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);
-; 0000 00BC     piDeviceTask = iTaskCreate(managerTask,"mang",5);
+; 0000 00BB 
+; 0000 00BC     piDeviceTask = iTaskCreate(dataAndStatusTask,"dataAndStatus",5);
 ;PCODE: $000000A9 VOL: 0
 ;PCODE: $000000AA VOL: 0
 ;PCODE: $000000AB VOL: 0
@@ -396,7 +396,7 @@
 ; 0000 00BD     if(piDeviceTask){
 ;PCODE: $000000B3 VOL: 0
 ;PCODE: $000000B4 VOL: 0
-; 0000 00BE         printDebug("<main>managerTask addr : %p\r\n",piDeviceTask);
+; 0000 00BE         printDebug("<main>sensorTask addr : %p\r\n",piDeviceTask);
 ;PCODE: $000000B5 VOL: 0
 ;PCODE: $000000B6 VOL: 0
 ;PCODE: $000000B7 VOL: 0
@@ -408,33 +408,8 @@
 ;PCODE: $000000BD VOL: 0
 ;PCODE: $000000BE VOL: 0
 ; 0000 00BF     }
-; 0000 00C0 
-; 0000 00C1 //    piDeviceTask = iTaskCreate(logTask,"logger",5);
-; 0000 00C2 //    if(piDeviceTask){
-; 0000 00C3 //        printDebug("<main>managerTask addr : %p\r\n",&piDeviceTask);
-; 0000 00C4 //    }
-; 0000 00C5 //
-; 0000 00C6 //    piDeviceTask = iTaskCreate(debugTask,"debug",5);
-; 0000 00C7 //    if(piDeviceTask){
-; 0000 00C8 //        printDebug("<main>debugTask addr : %p\r\n",&piDeviceTask);
-; 0000 00C9 //    }
-; 0000 00CA //
-; 0000 00CB //    piDeviceTask = iTaskCreate(communicateTask,"commu",5);
-; 0000 00CC //    if(piDeviceTask){
-; 0000 00CD //        printDebug("<main>communicateTask addr : %p\r\n",&piDeviceTask);
-; 0000 00CE //    }
-; 0000 00CF //
-; 0000 00D0 //    piDeviceTask = iTaskCreate(interruptTask,"intp",10);
-; 0000 00D1 //    if(piDeviceTask){
-; 0000 00D2 //        printDebug("<main>interruptTask addr : %p\r\n",&piDeviceTask);
-; 0000 00D3 //    }
-; 0000 00D4 //
-; 0000 00D5 //    piDeviceTask = iTaskCreate(deviceTask,"device",5);
-; 0000 00D6 //    if(piDeviceTask){
-; 0000 00D7 //        printDebug("<main>deviceTask addr : %p\r\n",&piDeviceTask);
-; 0000 00D8 //    }
-; 0000 00D9 
-; 0000 00DA     piDeviceTask = iTaskCreate(eventTask,"event",5);
+; 0000 00C0 //    printDebug("[main],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);
+; 0000 00C1     piDeviceTask = iTaskCreate(managerTask,"mang",5);
 ;PCODE: $000000BF VOL: 0
 ;PCODE: $000000C0 VOL: 0
 ;PCODE: $000000C1 VOL: 0
@@ -445,10 +420,10 @@
 ;PCODE: $000000C6 VOL: 0
 ;PCODE: $000000C7 VOL: 0
 ;PCODE: $000000C8 VOL: 0
-; 0000 00DB     if(piDeviceTask){
+; 0000 00C2     if(piDeviceTask){
 ;PCODE: $000000C9 VOL: 0
 ;PCODE: $000000CA VOL: 0
-; 0000 00DC         printDebug("<main>eventTask addr : %p\r\n",piDeviceTask);
+; 0000 00C3         printDebug("<main>managerTask addr : %p\r\n",piDeviceTask);
 ;PCODE: $000000CB VOL: 0
 ;PCODE: $000000CC VOL: 0
 ;PCODE: $000000CD VOL: 0
@@ -459,17 +434,66 @@
 ;PCODE: $000000D2 VOL: 0
 ;PCODE: $000000D3 VOL: 0
 ;PCODE: $000000D4 VOL: 0
-; 0000 00DD     }
-; 0000 00DE 
-; 0000 00DF    startSchedulerTask();
+; 0000 00C4     }
+; 0000 00C5 
+; 0000 00C6 
+; 0000 00C7 //
+; 0000 00C8 //    piDeviceTask = iTaskCreate(debugTask,"debug",5);
+; 0000 00C9 //    if(piDeviceTask){
+; 0000 00CA //        printDebug("<main>debugTask addr : %p\r\n",&piDeviceTask);
+; 0000 00CB //    }
+; 0000 00CC //
+; 0000 00CD //    piDeviceTask = iTaskCreate(communicateTask,"commu",5);
+; 0000 00CE //    if(piDeviceTask){
+; 0000 00CF //        printDebug("<main>communicateTask addr : %p\r\n",&piDeviceTask);
+; 0000 00D0 //    }
+; 0000 00D1 //
+; 0000 00D2 //    piDeviceTask = iTaskCreate(interruptTask,"intp",10);
+; 0000 00D3 //    if(piDeviceTask){
+; 0000 00D4 //        printDebug("<main>interruptTask addr : %p\r\n",&piDeviceTask);
+; 0000 00D5 //    }
+; 0000 00D6 //
+; 0000 00D7 //    piDeviceTask = iTaskCreate(deviceTask,"device",5);
+; 0000 00D8 //    if(piDeviceTask){
+; 0000 00D9 //        printDebug("<main>deviceTask addr : %p\r\n",&piDeviceTask);
+; 0000 00DA //    }
+; 0000 00DB 
+; 0000 00DC     piDeviceTask = iTaskCreate(eventTask,"event",5);
 ;PCODE: $000000D5 VOL: 0
 ;PCODE: $000000D6 VOL: 0
-; 0000 00E0 }
 ;PCODE: $000000D7 VOL: 0
 ;PCODE: $000000D8 VOL: 0
 ;PCODE: $000000D9 VOL: 0
 ;PCODE: $000000DA VOL: 0
+;PCODE: $000000DB VOL: 0
+;PCODE: $000000DC VOL: 0
+;PCODE: $000000DD VOL: 0
+;PCODE: $000000DE VOL: 0
+; 0000 00DD     if(piDeviceTask){
+;PCODE: $000000DF VOL: 0
+;PCODE: $000000E0 VOL: 0
+; 0000 00DE         printDebug("<main>eventTask addr : %p\r\n",piDeviceTask);
+;PCODE: $000000E1 VOL: 0
+;PCODE: $000000E2 VOL: 0
+;PCODE: $000000E3 VOL: 0
+;PCODE: $000000E4 VOL: 0
+;PCODE: $000000E5 VOL: 0
+;PCODE: $000000E6 VOL: 0
+;PCODE: $000000E7 VOL: 0
+;PCODE: $000000E8 VOL: 0
+;PCODE: $000000E9 VOL: 0
+;PCODE: $000000EA VOL: 0
+; 0000 00DF     }
+; 0000 00E0 
+; 0000 00E1    startSchedulerTask();
+;PCODE: $000000EB VOL: 0
+;PCODE: $000000EC VOL: 0
+; 0000 00E2 }
+;PCODE: $000000ED VOL: 0
+;PCODE: $000000EE VOL: 0
+;PCODE: $000000EF VOL: 0
+;PCODE: $000000F0 VOL: 0
 
 	.DSEG
 _0xF:
-	.BYTE 0x19
+	.BYTE 0x20

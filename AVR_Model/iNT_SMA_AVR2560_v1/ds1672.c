@@ -351,7 +351,7 @@ void init_RTC(void)
 
     DS1672_trickerChargeEnable();
     
-    RTC_getDateTime(&rtcTest,0);        
+    RTC_getDateTime(&rtcTest,7);        
                                   
     printDebug("Running with System Clock @ ");  
      

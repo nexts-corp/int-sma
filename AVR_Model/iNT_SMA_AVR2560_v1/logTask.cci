@@ -1,4 +1,5 @@
-VERSION:3 SOURCE_TIMESTAMP:474753BC
+VERSION:3 SOURCE_TIMESTAMP:4766710C
 NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\logTask.h"
 NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\debug.h"
-NODE:F LEVEL:0 LINE:4 "logTask(void * pviParameter)"
+NODE:I LEVEL:0 LINE:3 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\logManager.h"
+NODE:F LEVEL:0 LINE:5 "logTask(void * pviParameter)"

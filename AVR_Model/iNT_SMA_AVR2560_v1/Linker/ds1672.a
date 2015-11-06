@@ -1296,7 +1296,7 @@
 ; 0006 0160     DS1672_trickerChargeEnable();
 ;PCODE: $0000037A VOL: 0
 ; 0006 0161 
-; 0006 0162     RTC_getDateTime(&rtcTest,0);
+; 0006 0162     RTC_getDateTime(&rtcTest,7);
 ;PCODE: $0000037B VOL: 0
 ;PCODE: $0000037C VOL: 0
 ;PCODE: $0000037D VOL: 0

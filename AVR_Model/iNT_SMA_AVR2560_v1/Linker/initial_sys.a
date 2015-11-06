@@ -227,49 +227,38 @@
 ;PCODE: $00000081 VOL: 0
 ;PCODE: $00000082 VOL: 0
 ; 0001 0054     {
-; 0001 0055         if(LOG_init() < 0)
+; 0001 0055 //        if(LOG_init() < 0)
+; 0001 0056 //        {
+; 0001 0057 //            // -- log status = error -- //
+; 0001 0058 //            printDebug("<initial_system> LOG_init() failed\r\n");
+; 0001 0059 //        }
+; 0001 005A 
+; 0001 005B         // -- log status = ok -- //
+; 0001 005C     }
+; 0001 005D     else
 ;PCODE: $00000083 VOL: 0
 ;PCODE: $00000084 VOL: 0
+; 0001 005E     {
+; 0001 005F         // -- sd status = error -- //
+; 0001 0060         printDebug("<initial_system> SD_init() failed\r\n");
 ;PCODE: $00000085 VOL: 0
-; 0001 0056         {
-; 0001 0057             // -- log status = error -- //
-; 0001 0058             printDebug("<initial_system> LOG_init() failed\r\n");
 ;PCODE: $00000086 VOL: 0
 ;PCODE: $00000087 VOL: 0
 ;PCODE: $00000088 VOL: 0
 ;PCODE: $00000089 VOL: 0
 ;PCODE: $0000008A VOL: 0
 ;PCODE: $0000008B VOL: 0
+; 0001 0061     }
 ;PCODE: $0000008C VOL: 0
-; 0001 0059         }
-; 0001 005A 
-; 0001 005B         // -- log status = ok -- //
-; 0001 005C     }
+; 0001 0062 
+; 0001 0063     srand((unsigned int)raw_rtc + (unsigned int)(read_adc(8) * 13));        // set random seed
 ;PCODE: $0000008D VOL: 0
-; 0001 005D     else
 ;PCODE: $0000008E VOL: 0
 ;PCODE: $0000008F VOL: 0
-; 0001 005E     {
-; 0001 005F         // -- sd status = error -- //
-; 0001 0060         printDebug("<initial_system> SD_init() failed\r\n");
 ;PCODE: $00000090 VOL: 0
 ;PCODE: $00000091 VOL: 0
 ;PCODE: $00000092 VOL: 0
 ;PCODE: $00000093 VOL: 0
-;PCODE: $00000094 VOL: 0
-;PCODE: $00000095 VOL: 0
-;PCODE: $00000096 VOL: 0
-; 0001 0061     }
-;PCODE: $00000097 VOL: 0
-; 0001 0062 
-; 0001 0063     srand((unsigned int)raw_rtc + (unsigned int)(read_adc(8) * 13));        // set random seed
-;PCODE: $00000098 VOL: 0
-;PCODE: $00000099 VOL: 0
-;PCODE: $0000009A VOL: 0
-;PCODE: $0000009B VOL: 0
-;PCODE: $0000009C VOL: 0
-;PCODE: $0000009D VOL: 0
-;PCODE: $0000009E VOL: 0
 ; 0001 0064 
 ; 0001 0065     // -------- Configuration Initialize ----------- //
 ; 0001 0066 //    readConfig();
@@ -282,27 +271,27 @@
 ; 0001 006D 
 ; 0001 006E 
 ; 0001 006F     return res;
-;PCODE: $0000009F VOL: 0
-;PCODE: $000000A0 VOL: 0
-;PCODE: $000000A1 VOL: 0
+;PCODE: $00000094 VOL: 0
+;PCODE: $00000095 VOL: 0
+;PCODE: $00000096 VOL: 0
 ; 0001 0070 }
-;PCODE: $000000A2 VOL: 0
+;PCODE: $00000097 VOL: 0
 ;/*============================================================*/
 ;void init_i2c(void)
 ; 0001 0073 {
-;PCODE: $000000A3 VOL: 0
-;PCODE: $000000A4 VOL: 0
+;PCODE: $00000098 VOL: 0
+;PCODE: $00000099 VOL: 0
 ; 0001 0074     // I2C Bus initialization
 ; 0001 0075     i2c_init();
-;PCODE: $000000A5 VOL: 0
+;PCODE: $0000009A VOL: 0
 ; 0001 0076 }
-;PCODE: $000000A6 VOL: 0
-;PCODE: $000000A7 VOL: 0
+;PCODE: $0000009B VOL: 0
+;PCODE: $0000009C VOL: 0
 ;/*============================================================*/
 ;void init_spi(void)
 ; 0001 0079 {
-;PCODE: $000000A8 VOL: 0
-;PCODE: $000000A9 VOL: 0
+;PCODE: $0000009D VOL: 0
+;PCODE: $0000009E VOL: 0
 ; 0001 007A     // SPI initialization
 ; 0001 007B     // SPI Type: Master
 ; 0001 007C     // SPI Clock Rate: 2000.000 kHz
@@ -310,88 +299,88 @@
 ; 0001 007E     // SPI Clock Polarity: Low
 ; 0001 007F     // SPI Data Order: MSB First
 ; 0001 0080     SPCR=0x50;
-;PCODE: $000000AA VOL: 0
-;PCODE: $000000AB VOL: 0
+;PCODE: $0000009F VOL: 0
+;PCODE: $000000A0 VOL: 0
 ; 0001 0081     SPSR=0x00;
-;PCODE: $000000AC VOL: 0
-;PCODE: $000000AD VOL: 0
+;PCODE: $000000A1 VOL: 0
+;PCODE: $000000A2 VOL: 0
 ; 0001 0082 }
-;PCODE: $000000AE VOL: 0
-;PCODE: $000000AF VOL: 0
+;PCODE: $000000A3 VOL: 0
+;PCODE: $000000A4 VOL: 0
 ;/*============================================================*/
 ;void init_common(void)
 ; 0001 0085 {
-;PCODE: $000000B0 VOL: 0
-;PCODE: $000000B1 VOL: 0
+;PCODE: $000000A5 VOL: 0
+;PCODE: $000000A6 VOL: 0
 ; 0001 0086     // External Interrupt(s) initialization
 ; 0001 0087     // INT0: Off, INT1: Off, INT2: Off, INT3: Off, INT4: Off, INT5: Off, INT6: Off, INT7: Off
 ; 0001 0088     EICRA=0x00;
-;PCODE: $000000B2 VOL: 0
-;PCODE: $000000B3 VOL: 0
+;PCODE: $000000A7 VOL: 0
+;PCODE: $000000A8 VOL: 0
 ; 0001 0089     EICRB=0x00;
-;PCODE: $000000B4 VOL: 0
-;PCODE: $000000B5 VOL: 0
+;PCODE: $000000A9 VOL: 0
+;PCODE: $000000AA VOL: 0
 ; 0001 008A     EIMSK=0x00;
-;PCODE: $000000B6 VOL: 0
-;PCODE: $000000B7 VOL: 0
+;PCODE: $000000AB VOL: 0
+;PCODE: $000000AC VOL: 0
 ; 0001 008B 
 ; 0001 008C     PCMSK0=0x00;
-;PCODE: $000000B8 VOL: 0
-;PCODE: $000000B9 VOL: 0
+;PCODE: $000000AD VOL: 0
+;PCODE: $000000AE VOL: 0
 ; 0001 008D     PCMSK1=0x00;
-;PCODE: $000000BA VOL: 0
-;PCODE: $000000BB VOL: 0
+;PCODE: $000000AF VOL: 0
+;PCODE: $000000B0 VOL: 0
 ; 0001 008E     PCMSK2=0x00;
-;PCODE: $000000BC VOL: 0
-;PCODE: $000000BD VOL: 0
+;PCODE: $000000B1 VOL: 0
+;PCODE: $000000B2 VOL: 0
 ; 0001 008F     PCICR=0x00;
-;PCODE: $000000BE VOL: 0
-;PCODE: $000000BF VOL: 0
+;PCODE: $000000B3 VOL: 0
+;PCODE: $000000B4 VOL: 0
 ; 0001 0090 
 ; 0001 0091     // Analog Comparator initialization
 ; 0001 0092     // Analog Comparator: Off
 ; 0001 0093     // Analog Comparator Input Capture by Timer/Counter 1: Off
 ; 0001 0094     ACSR=0x80;
-;PCODE: $000000C0 VOL: 0
-;PCODE: $000000C1 VOL: 0
+;PCODE: $000000B5 VOL: 0
+;PCODE: $000000B6 VOL: 0
 ; 0001 0095     ADCSRB=0x00;
-;PCODE: $000000C2 VOL: 0
-;PCODE: $000000C3 VOL: 0
+;PCODE: $000000B7 VOL: 0
+;PCODE: $000000B8 VOL: 0
 ; 0001 0096     DIDR1=0x00;
-;PCODE: $000000C4 VOL: 0
-;PCODE: $000000C5 VOL: 0
+;PCODE: $000000B9 VOL: 0
+;PCODE: $000000BA VOL: 0
 ; 0001 0097 
 ; 0001 0098     // TWI initialization
 ; 0001 0099     // TWI disabled
 ; 0001 009A     TWCR=0x00;
-;PCODE: $000000C6 VOL: 0
-;PCODE: $000000C7 VOL: 0
+;PCODE: $000000BB VOL: 0
+;PCODE: $000000BC VOL: 0
 ; 0001 009B }
-;PCODE: $000000C8 VOL: 0
-;PCODE: $000000C9 VOL: 0
+;PCODE: $000000BD VOL: 0
+;PCODE: $000000BE VOL: 0
 ;/*============================================================*/
 ;void playBeep(void)
 ; 0001 009E {
-;PCODE: $000000CA VOL: 0
-;PCODE: $000000CB VOL: 0
+;PCODE: $000000BF VOL: 0
+;PCODE: $000000C0 VOL: 0
 ; 0001 009F     BUZZER = 1;                                     // Buzzer ON Starting
-;PCODE: $000000CC VOL: 0
-;PCODE: $000000CD VOL: 0
+;PCODE: $000000C1 VOL: 0
+;PCODE: $000000C2 VOL: 0
 ; 0001 00A0     delay_ms(200);
-;PCODE: $000000CE VOL: 0
-;PCODE: $000000CF VOL: 0
-;PCODE: $000000D0 VOL: 0
+;PCODE: $000000C3 VOL: 0
+;PCODE: $000000C4 VOL: 0
+;PCODE: $000000C5 VOL: 0
 ; 0001 00A1     BUZZER = 0;
-;PCODE: $000000D1 VOL: 0
-;PCODE: $000000D2 VOL: 0
+;PCODE: $000000C6 VOL: 0
+;PCODE: $000000C7 VOL: 0
 ; 0001 00A2 }
-;PCODE: $000000D3 VOL: 0
-;PCODE: $000000D4 VOL: 0
+;PCODE: $000000C8 VOL: 0
+;PCODE: $000000C9 VOL: 0
 ;/*============================================================*/
 ;void showDebugInitComplete(void)
 ; 0001 00A5 {
-;PCODE: $000000D5 VOL: 0
-;PCODE: $000000D6 VOL: 0
+;PCODE: $000000CA VOL: 0
+;PCODE: $000000CB VOL: 0
 ; 0001 00A6 //    struct rtc_structure time;
 ; 0001 00A7 //    struct prop_cnfg_st properties_config;
 ; 0001 00A8 //
@@ -400,68 +389,68 @@
 ; 0001 00AB //    printDebug("%04d-%02d-%02d %02d:%02d:%02d\r\n",
 ; 0001 00AC //            time.year,time.month,time.date,time.hour,time.min,time.sec);
 ; 0001 00AD }
-;PCODE: $000000D7 VOL: 0
-;PCODE: $000000D8 VOL: 0
+;PCODE: $000000CC VOL: 0
+;PCODE: $000000CD VOL: 0
 ;/*============================================================*/
 ;void showLedInitComplete(void)
 ; 0001 00B0 {
-;PCODE: $000000D9 VOL: 0
-;PCODE: $000000DA VOL: 0
+;PCODE: $000000CE VOL: 0
+;PCODE: $000000CF VOL: 0
 ; 0001 00B1     LED_ON(BIT_LED_ALARM);
-;PCODE: $000000DB VOL: 0
-;PCODE: $000000DC VOL: 0
-;PCODE: $000000DD VOL: 0
+;PCODE: $000000D0 VOL: 0
+;PCODE: $000000D1 VOL: 0
+;PCODE: $000000D2 VOL: 0
 ; 0001 00B2     delay_ms(200);
-;PCODE: $000000DE VOL: 0
-;PCODE: $000000DF VOL: 0
-;PCODE: $000000E0 VOL: 0
+;PCODE: $000000D3 VOL: 0
+;PCODE: $000000D4 VOL: 0
+;PCODE: $000000D5 VOL: 0
 ; 0001 00B3 
 ; 0001 00B4     LED_ON(BIT_LED_LINK);
-;PCODE: $000000E1 VOL: 0
-;PCODE: $000000E2 VOL: 0
-;PCODE: $000000E3 VOL: 0
+;PCODE: $000000D6 VOL: 0
+;PCODE: $000000D7 VOL: 0
+;PCODE: $000000D8 VOL: 0
 ; 0001 00B5     delay_ms(200);
-;PCODE: $000000E4 VOL: 0
-;PCODE: $000000E5 VOL: 0
-;PCODE: $000000E6 VOL: 0
+;PCODE: $000000D9 VOL: 0
+;PCODE: $000000DA VOL: 0
+;PCODE: $000000DB VOL: 0
 ; 0001 00B6 
 ; 0001 00B7     LED_ON(BIT_LED_TEMP);
-;PCODE: $000000E7 VOL: 0
-;PCODE: $000000E8 VOL: 0
-;PCODE: $000000E9 VOL: 0
+;PCODE: $000000DC VOL: 0
+;PCODE: $000000DD VOL: 0
+;PCODE: $000000DE VOL: 0
 ; 0001 00B8     delay_ms(200);
-;PCODE: $000000EA VOL: 0
-;PCODE: $000000EB VOL: 0
-;PCODE: $000000EC VOL: 0
+;PCODE: $000000DF VOL: 0
+;PCODE: $000000E0 VOL: 0
+;PCODE: $000000E1 VOL: 0
 ; 0001 00B9 
 ; 0001 00BA     LED_ON(BIT_LED_PWR);
-;PCODE: $000000ED VOL: 0
-;PCODE: $000000EE VOL: 0
-;PCODE: $000000EF VOL: 0
+;PCODE: $000000E2 VOL: 0
+;PCODE: $000000E3 VOL: 0
+;PCODE: $000000E4 VOL: 0
 ; 0001 00BB     delay_ms(200);
-;PCODE: $000000F0 VOL: 0
-;PCODE: $000000F1 VOL: 0
-;PCODE: $000000F2 VOL: 0
+;PCODE: $000000E5 VOL: 0
+;PCODE: $000000E6 VOL: 0
+;PCODE: $000000E7 VOL: 0
 ; 0001 00BC 
 ; 0001 00BD     LED_OFF(BIT_LED_PWR|BIT_LED_TEMP|BIT_LED_LINK|BIT_LED_ALARM);
-;PCODE: $000000F3 VOL: 0
-;PCODE: $000000F4 VOL: 0
-;PCODE: $000000F5 VOL: 0
+;PCODE: $000000E8 VOL: 0
+;PCODE: $000000E9 VOL: 0
+;PCODE: $000000EA VOL: 0
 ; 0001 00BE     delay_ms(200);
-;PCODE: $000000F6 VOL: 0
-;PCODE: $000000F7 VOL: 0
-;PCODE: $000000F8 VOL: 0
+;PCODE: $000000EB VOL: 0
+;PCODE: $000000EC VOL: 0
+;PCODE: $000000ED VOL: 0
 ; 0001 00BF 
 ; 0001 00C0     LED_ON(BIT_LED_PWR);
-;PCODE: $000000F9 VOL: 0
-;PCODE: $000000FA VOL: 0
-;PCODE: $000000FB VOL: 0
+;PCODE: $000000EE VOL: 0
+;PCODE: $000000EF VOL: 0
+;PCODE: $000000F0 VOL: 0
 ; 0001 00C1     delay_ms(50);
-;PCODE: $000000FC VOL: 0
-;PCODE: $000000FD VOL: 0
-;PCODE: $000000FE VOL: 0
+;PCODE: $000000F1 VOL: 0
+;PCODE: $000000F2 VOL: 0
+;PCODE: $000000F3 VOL: 0
 ; 0001 00C2 }
-;PCODE: $000000FF VOL: 0
-;PCODE: $00000100 VOL: 0
+;PCODE: $000000F4 VOL: 0
+;PCODE: $000000F5 VOL: 0
 ;/*============================================================*/
 ;
