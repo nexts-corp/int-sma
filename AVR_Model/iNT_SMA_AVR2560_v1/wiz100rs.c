@@ -11,7 +11,7 @@ int flagConnect = 0;
 
 iWiz100srConfig_t iWiz100srConfig;
 //char httpPostHeader[] = "POST /smasmartdevice HTTP/1.1\r\nHost: smasmartdevice.appspot.com\r\nUser-Agent: AVR2560-LAN\r\nConnection: close\r\nContent-Length: ";
-char httpPostHeader[] = "POST /smasmartdevice HTTP/1.1\r\nHost: smasmartdevice.appspot.com\r\nX-CLIENT-UUID: 001100110011\r\nUser-Agent: AVR2560-LAN\r\nConnection: close\r\nContent-Length: ";
+//char httpPostHeader[] = "POST /smasmartdevice HTTP/1.1\r\nHost: smasmartdevice.appspot.com\r\nX-CLIENT-UUID: 001100110011\r\nUser-Agent: AVR2560-LAN\r\nConnection: close\r\nContent-Length: ";
 
 
 //iWiz100srData_t iWiz100srData;
@@ -525,7 +525,7 @@ void iWizReadConfig(){
            break;
        }
     } 
-    
+    delay_ms(20);
     if(iWizConfigSend(viCmdMAC,viWizReadBuffer)==1){
         iWizConfigMACParser(iWiz100srConfig.macAddress,viWizReadBuffer);  
         printDebug("[iWizReadConfig]MAC:");
@@ -539,7 +539,7 @@ void iWizReadConfig(){
            
         printDebug("\r\n");
     }
-    
+    delay_ms(20);
     if(iWizConfigSend(viCmdIP,viWizReadBuffer)==1){
         iWizConfigIPParser(iWiz100srConfig.ip,viWizReadBuffer);  
         printDebug("[iWizReadConfig]IP:");
@@ -552,7 +552,7 @@ void iWizReadConfig(){
         } 
         printDebug("\r\n");
     }
-     
+    delay_ms(20); 
     if(iWizConfigSend(viCmdSubnet,viWizReadBuffer)==1){
         iWizConfigIPParser(iWiz100srConfig.subnet,viWizReadBuffer);  
         printDebug("[iWizReadConfig]Subnet mask:");
@@ -565,7 +565,7 @@ void iWizReadConfig(){
         } 
         printDebug("\r\n");
     }
-      
+    delay_ms(20);  
     if(iWizConfigSend(viCmdGateWay,viWizReadBuffer)==1){
         iWizConfigIPParser(iWiz100srConfig.gateWay,viWizReadBuffer);  
         printDebug("[iWizReadConfig]Gateway:");
@@ -578,11 +578,11 @@ void iWizReadConfig(){
         } 
         printDebug("\r\n");
     }
-     
+    delay_ms(20); 
     iWizConfigSend(viCmdLocalPort,viWizReadBuffer);
     iWizConfigSend(viCmdIPMethod,viWizReadBuffer);  
     iWizConfigSend(viCmdOperMode,viWizReadBuffer); 
-     
+    delay_ms(20); 
     if(iWizConfigSend(viCmdCmdDomainName,viWizReadBuffer)){
         memcpy(iWiz100srConfig.sdn,&viWizReadBuffer[2],sizeof(iWiz100srConfig.sdn));
         printDebug("[iWizReadConfig]SDN:%s\r\n",iWiz100srConfig.sdn);
@@ -594,7 +594,7 @@ void iWizReadConfig(){
     for(viI=0;viI<strlen(viCmdRestart);viI++){
         putchar0(viCmdRestart[viI]);
     }    
-
+    delay_ms(20);
     //wait wiz module response  
     TIMER_setTimer(&timeout, 3);
     while(!TIMER_checkTimerExceed(timeout)){

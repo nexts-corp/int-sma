@@ -32,6 +32,7 @@ void managerTask(void *pviParameter){
      iChar_t *  pviDatAndStatBuff;   
      iUInt_t    viDatAndStatLength = 0;    
      unsigned long int viUniTime = 0;
+     iUInt_t viRecordID = 0;
      
 //     char viGenDataElem[80] = {
 //         0x7e,
@@ -66,6 +67,8 @@ void managerTask(void *pviParameter){
      iUChar_t viCommuInterface = 0;
      iUChar_t modeOperate = REALTIME_MODE;
      iUChar_t deviceStatus = DEVICE_ENABLE;        
+    
+    
      
     TIMER_setTimer(&viTEver1min, 60);  
     //TIMER_setTimer(&viTEver1min, 30);
@@ -100,7 +103,7 @@ void managerTask(void *pviParameter){
 //	}else{
 //		printDebug("<managerTask>data can not sent a data to pviQueueSensorToMang.\r\n");
 //	} 
-    
+    iDataSelect('N');
     //Terminal frist initial//
     if(viFlagTerInit==0){
         mti[0] = 0x08;
@@ -162,11 +165,16 @@ void managerTask(void *pviParameter){
             //iPTCPack(&viTXDataBuff,viGenDataElem,sizeof(viGenDataElem),mti,tid);   
             iPTCPack(&viTXDataBuff,(const char*) pviDatAndStatBuff,viDatAndStatLength,mti,tid);
             free(pviDatAndStatBuff);
+            
+            viRecordID = iDataInsert(viTXDataBuff.value,viTXDataBuff.length);
+            if(viRecordID>0){
+                printDebug("");
+            }
              
-            iMangQueueAddItem(&viTXDataBuff,&viTXDataBuff.value[17]); //add protocol in mang queue
+            iMangQueueAddItem(viRecordID,&viTXDataBuff,&viTXDataBuff.value[17]); //add protocol in mang queue
             iMangQueueDisplay();//display mang queue
             delay_ms(1000);
-            iDataInsert(viTXDataBuff.value,viTXDataBuff.length);
+            //iDataInsert(viTXDataBuff.value,viTXDataBuff.length);
             #asm("wdr")
             
             //print_payload(viTXDataBuff.value, (sizeof(viGenDataElem)+20));               //20 = header + check sum   
@@ -205,7 +213,7 @@ void managerTask(void *pviParameter){
                        }
                 }
                 if(iMangCheckRetransmit(&viTXDataBuff.value[17])==0){
-                     iDataLogInsert(viTXDataBuff.value,viTXDataBuff.length);
+                     //iDataLogInsert(viTXDataBuff.value,viTXDataBuff.length);
                      iMangQueueDelItem(&viTXDataBuff.value[17]);       //del queue with fid  due over retransmit
                 }
             }
@@ -417,7 +425,7 @@ void iTagParser(iData_t *pviData_arg){
 }
 
 
-iInt_t iMangQueueAddItem(iData_t *pviDataItem_arg,iChar_t *pviFid_arg){
+iInt_t iMangQueueAddItem(iUInt_t viRecordID_arg,iData_t *pviDataItem_arg,iChar_t *pviFid_arg){
     iInt_t viReturn = -1;
     iInt_t i;  
     iChar_t viFid[2];
@@ -428,6 +436,7 @@ iInt_t iMangQueueAddItem(iData_t *pviDataItem_arg,iChar_t *pviFid_arg){
             viMangQueue[i].value = (iChar_t * const)malloc(pviDataItem_arg->length);
             if(viMangQueue[i].value != NULL){
                 viMangQueue[i].length = pviDataItem_arg->length; 
+                viMangQueue[i].recordID = viRecordID_arg;
                 memcpy(viMangQueue[i].value,&pviDataItem_arg->value[0],pviDataItem_arg->length);
                 memcpy(&viMangQueue[i].fid[0],&viFid[0],2);
                 viMangQueue[i].reTransmit = MANG_RETRANSMIT; 
@@ -573,23 +582,23 @@ void iSyncUniTime(unsigned long int *viUniTime_arg){
      viUniTimeServer = *viUniTime_arg; 
       
      if((viUniTimeServer-viUniTimeTerminal)>40){
-         printDebug("[iSyncUniTime]Terminal %ld\r\n",viUniTimeTerminal);
-         printDebug("[iSyncUniTime]Server %ld\r\n",viUniTimeServer);  
-         printDebug("[iSyncUniTime]Time Diff %ld\r\n",(viUniTimeServer-viUniTimeTerminal)); 
-         
-         printDebug("[iSyncUniTime]Update Time.\r\n");  
+//         printDebug("[iSyncUniTime]Terminal %ld\r\n",viUniTimeTerminal);
+//         printDebug("[iSyncUniTime]Server %ld\r\n",viUniTimeServer);  
+//         printDebug("[iSyncUniTime]Time Diff %ld\r\n",(viUniTimeServer-viUniTimeTerminal)); 
+//         
+//         printDebug("[iSyncUniTime]Update Time.\r\n");  
          RTC_setBinary(viUniTimeServer);
-         RTC_getDateTime(&rtcTest,0);
-         printRTC(rtcTest);
+//         RTC_getDateTime(&rtcTest,0);
+//         printRTC(rtcTest);
      }else if((viUniTimeServer-viUniTimeTerminal)>(-40)){ 
-         printDebug("[iSyncUniTime]Terminal %ld\r\n",viUniTimeTerminal);
-         printDebug("[iSyncUniTime]Server %ld\r\n",viUniTimeServer);  
-         printDebug("[iSyncUniTime]Time Diff %ld\r\n",(viUniTimeServer-viUniTimeTerminal)); 
-         
-         printDebug("[iSyncUniTime]Update Time.\r\n"); 
+//         printDebug("[iSyncUniTime]Terminal %ld\r\n",viUniTimeTerminal);
+//         printDebug("[iSyncUniTime]Server %ld\r\n",viUniTimeServer);  
+//         printDebug("[iSyncUniTime]Time Diff %ld\r\n",(viUniTimeServer-viUniTimeTerminal)); 
+//         
+//         printDebug("[iSyncUniTime]Update Time.\r\n"); 
          RTC_setBinary(viUniTimeServer);
-         RTC_getDateTime(&rtcTest,0);
-         printRTC(rtcTest);
+//         RTC_getDateTime(&rtcTest,0);
+//         printRTC(rtcTest);
      }
      
      

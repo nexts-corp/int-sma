@@ -12,6 +12,7 @@ iChar_t viFolderConfigName[] = "Config";
 
 iChar_t viDirRootPath[] = "0:/";
 //iChar_t viDirDataPath[] = "0:/DATA";
+//iChar_t viDirDataPath[] = "0:/RECORD";
 iChar_t viDirDataPath[] = "0:/RECORD";
 //iChar_t viDirDataLogPath[] = "0:/DATA_LOG";
 iChar_t viDirDataLogPath[] = "0:/LOG";
@@ -32,56 +33,56 @@ iChar_t viConfigFName[] = "0:./config1.nc";
 FILINFO file_info;
 
 
-/* recursively scan directory entries and display them */
-FRESULT directory_scan(char *path){
-    /* will hold the directory information */
-    DIR directory;
-    /* FAT function result */
-    FRESULT res;
-    int i;
-
-
-    if ((res=f_opendir(&directory,path))==FR_OK){
-       while (((res=f_readdir(&directory,&file_info))==FR_OK) &&
-             file_info.fname[0])
-             {
-             /* display file/directory name and associated information */
-             printDebug("%c%c%c%c%c %02u/%02u/%u %02u:%02u:%02u %9lu"                 "  %s/%s\r\n",
-                    (file_info.fattrib & AM_DIR) ? 'D' : '-',
-                    (file_info.fattrib & AM_RDO) ? 'R' : '-',
-                    (file_info.fattrib & AM_HID) ? 'H' : '-',
-                    (file_info.fattrib & AM_SYS) ? 'S' : '-',
-                    (file_info.fattrib & AM_ARC) ? 'A' : '-',
-                    file_info.fdate & 0x1F,(file_info.fdate >> 5) & 0xF,
-                    (file_info.fdate >> 9)+1980,
-                    file_info.ftime >> 11,(file_info.ftime >> 5) & 0x3F,
-                    (file_info.ftime & 0xF) << 1,
-                    file_info.fsize,path,file_info.fname);
-             if (file_info.fattrib & AM_DIR)
-                {
-                /* its a subdirectory */
-                /* make sure to skip past "." and ".." when recursing */
-                if (file_info.fname[0]!='.')
-                   {
-                   i=strlen(path);
-                   /* append the subdirectory name to the path */
-                   if (path[i-1]!='/') strcatf(path,"/");
-                   strcat(path,file_info.fname);
-                   /* scan subdirectory */
-                   res=directory_scan(path);
-                   /* restore the old path name */
-                   path[i]=0;
-                   /* remove any eventual '/' from the end of the path */
-                   --i;
-                   if (path[i]=='/') path[i]=0;
-                   /* stop if an error occured */
-                   if (res!=FR_OK) break;
-                   }
-                }
-              }
-    }
-   return res;
-}
+///* recursively scan directory entries and display them */
+//FRESULT directory_scan(char *path){
+//    /* will hold the directory information */
+//    DIR directory;
+//    /* FAT function result */
+//    FRESULT res;
+//    int i;
+//
+//
+//    if ((res=f_opendir(&directory,path))==FR_OK){
+//       while (((res=f_readdir(&directory,&file_info))==FR_OK) &&
+//             file_info.fname[0])
+//             {
+//             /* display file/directory name and associated information */
+//             printDebug("%c%c%c%c%c %02u/%02u/%u %02u:%02u:%02u %9lu"                 "  %s/%s\r\n",
+//                    (file_info.fattrib & AM_DIR) ? 'D' : '-',
+//                    (file_info.fattrib & AM_RDO) ? 'R' : '-',
+//                    (file_info.fattrib & AM_HID) ? 'H' : '-',
+//                    (file_info.fattrib & AM_SYS) ? 'S' : '-',
+//                    (file_info.fattrib & AM_ARC) ? 'A' : '-',
+//                    file_info.fdate & 0x1F,(file_info.fdate >> 5) & 0xF,
+//                    (file_info.fdate >> 9)+1980,
+//                    file_info.ftime >> 11,(file_info.ftime >> 5) & 0x3F,
+//                    (file_info.ftime & 0xF) << 1,
+//                    file_info.fsize,path,file_info.fname);
+//             if (file_info.fattrib & AM_DIR)
+//                {
+//                /* its a subdirectory */
+//                /* make sure to skip past "." and ".." when recursing */
+//                if (file_info.fname[0]!='.')
+//                   {
+//                   i=strlen(path);
+//                   /* append the subdirectory name to the path */
+//                   if (path[i-1]!='/') strcatf(path,"/");
+//                   strcat(path,file_info.fname);
+//                   /* scan subdirectory */
+//                   res=directory_scan(path);
+//                   /* restore the old path name */
+//                   path[i]=0;
+//                   /* remove any eventual '/' from the end of the path */
+//                   --i;
+//                   if (path[i]=='/') path[i]=0;
+//                   /* stop if an error occured */
+//                   if (res!=FR_OK) break;
+//                   }
+//                }
+//              }
+//    }
+//   return res;
+//}
 
 
 
@@ -283,7 +284,7 @@ void iFCreate(FIL *pviOutFilePtr_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilenam
     }
 }
 
-void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg){
+void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,iUInt_t viBlockSize_arg){
     FIL *viFilePtr;
     FRESULT viFReturn;
     unsigned int nbytes;
@@ -353,6 +354,44 @@ void iFDelete(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg){
     }
 }
 
+iChar_t iFSize(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long *pviOutFileSize_arg){
+    FIL *viFilePtr;
+    FRESULT viFReturn; 
+    iChar_t viReturn = -1; 
+    
+    viFilePtr = (FIL * const)malloc(sizeof(FIL)); 
+    if(viFilePtr!=NULL){
+       if((viFReturn=f_chdir(pviDirPath_arg))==FR_OK){
+           printDebug("[iFSize]Current directory : %s.\r\n",pviDirPath_arg);  
+           if((viFReturn=f_open(viFilePtr,pviFilename_arg,FA_WRITE|FA_OPEN_ALWAYS))==FR_OK){
+               printDebug("[iFSize]File %s is openned.\r\n",pviFilename_arg);
+                   
+               /* Move to end of the file to append data */ 
+               printDebug("[iFSize]File size(%ld).\r\n",viFilePtr->fsize);
+               *pviOutFileSize_arg = viFilePtr->fsize;
+                   
+               if((viFReturn=f_close(viFilePtr))==FR_OK){ 
+               }else{
+                  iFDisplayReturn(viFReturn);
+               }
+               viReturn = 1;
+           }else{
+               printDebug("[iFSize]File %s : %s.[\r\n",pviFilename_arg); 
+               iFDisplayReturn(viFReturn);
+               printDebug("]\r\n");
+           }
+        }else{
+           printDebug("[iFSize]directory : %s.[\r\n",pviDirPath_arg); 
+           iFDisplayReturn(viFReturn);
+           printDebug("]\r\n"); 
+        } 
+        free(viFilePtr);
+    }else{
+        printDebug("[iFSize]can't allocate mem.\r\n");
+    }
+    return viReturn;
+}
+
 void iFCreateFileDaily(iChar_t *pviFilename_arg){
     FRESULT viFReturn;
     DIR viOutDir;
@@ -380,4 +419,56 @@ void iFCreateFileDaily(iChar_t *pviFilename_arg){
        iFDisplayReturn(viFReturn);
        printDebug("]\r\n"); 
     }
+}
+
+iChar_t iFRead(iChar_t * pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long *pviReadPtr_arg){
+    FIL *viFilePtr;
+    FRESULT viFReturn;
+    unsigned int nbytes; 
+    iChar_t viReturn = -1;
+
+    //print_payload(pviDataBuffRef,ivLength_arg);
+    viFilePtr = (FIL * const)malloc(sizeof(FIL));
+    if(viFilePtr!=NULL){
+        if((viFReturn=f_chdir(pviDirPath_arg))==FR_OK){
+           printDebug("[iFRead]Current directory : %s.\r\n",pviDirPath_arg);  
+           if((viFReturn=f_open(viFilePtr,pviFilename_arg,FA_READ))==FR_OK){
+               printDebug("[iFRead]File %s is openned.\r\n",pviFilename_arg);
+               
+               /* Move to end of the file to append data */ 
+               //printDebug("[iFRead]File size(%ld).\r\n",viFilePtr->fsize);
+               if((viFReturn=f_lseek(viFilePtr, *pviReadPtr_arg))==FR_OK){        //seek end of file in order append 
+                   printDebug("[iFRead]Pointer(seek) of File moved(%ld).\r\n",pviReadPtr_arg); 
+                   //print_payload((const iChar_t *)pviDataBuff,ivLength_arg);
+                  // print_payload(pviDataBuffRef,ivLength_arg);
+                   if((viFReturn=f_read(viFilePtr,pviDataBuff,ivLength_arg,&nbytes))==FR_OK){    //viFReturn=f_write(viFilePtr,&pviDataBuff[0],strlen(pviDataBuff),&nbytes)
+                       printDebug("[iFRead]%d bytes Reading of %d\r\n",nbytes,ivLength_arg);   
+                       viReturn = 1;
+                   }else{
+                       printDebug("[iFRead]Read error(%d)\r\n",viFReturn);
+                       iFDisplayReturn(viFReturn);
+                   }  
+               }else{
+                   iFDisplayReturn(viFReturn);
+               }
+               
+               if((viFReturn=f_close(viFilePtr))==FR_OK){ 
+               }else{
+                  iFDisplayReturn(viFReturn);
+               }
+           }else{
+               printDebug("[iFRead]File %s : %s.[\r\n",pviFilename_arg); 
+               iFDisplayReturn(viFReturn);
+               printDebug("]\r\n");
+           }
+        }else{
+           printDebug("[iFRead]directory : %s.[\r\n",pviDirPath_arg); 
+           iFDisplayReturn(viFReturn);
+           printDebug("]\r\n"); 
+        }
+        free(viFilePtr);
+    }else{
+        printDebug("[iFRead]can't allocate mem.\r\n");
+    }
+    return viReturn;
 }

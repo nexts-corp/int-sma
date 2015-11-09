@@ -1,4 +1,4 @@
-VERSION:3 SOURCE_TIMESTAMP:47658C19
+VERSION:3 SOURCE_TIMESTAMP:4769803B
 NODE:I LEVEL:0 LINE:1 "C:\cvavr2\inc\delay.h"
 NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\interruptTask.h"
 NODE:I LEVEL:0 LINE:3 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\wiz100rs.h"
@@ -36,7 +36,6 @@ LEVEL:1 LINE:40 ICON:T "dnsFlag"
 LEVEL:1 LINE:41 ICON:T "dnsServerIP"
 LEVEL:1 LINE:42 ICON:T "sdn"
 LEVEL:1 LINE:43 ICON:T "reservedByte"
-NODE:V LEVEL:0 LINE:14 "httpPostHeader -> RAM:????"
 NODE:V LEVEL:0 LINE:19 "*pfiWiz100rs -> RAM:????"
 NODE:V LEVEL:0 LINE:20 "*piWizCallBack -> RAM:????"
 NODE:V LEVEL:0 LINE:28 "iWizStatus -> RAM:????"

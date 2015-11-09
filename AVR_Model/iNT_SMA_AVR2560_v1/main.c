@@ -28,33 +28,10 @@ AVR Core Clock frequency: 8.000000 MHz
 #include "deviceTask.h"
 #include "logTask.h"
 #include "eventTask.h"
-
-//#include "wiz100rs.h"
 #include "lan.h"
 #include "smaProtocol.h"
-
-
 #include "sdManager.h"
 #include "database.h"
-
-
-//#include "config.h"
-//#include "timer.h"
-//#include "ds1672.h"
-//#include "sensor.h"        
-//#include "status.h"
-//#include "alarm.h"
-//#include "dataqueue.h"
-//#include "eventqueue.h"
-//#include "log.h"
-//#include "logqueue.h"
-//#include "io.h"
-
-//#include "gaussian.h"
-//#include "dht11.h"
-
-
-//#include <stdio.h>
            
 #define MAX(a,b)                (((a) > (b)) ? (a) : (b))
 #define MIN(a,b)                (((a) < (b)) ? (a) : (b))
@@ -100,16 +77,16 @@ void main(void){
     //int viConnect = 0;
     //char *b2; 
     
-    unsigned char fileNameCreate[20]; 
-    //char fileNameCreate1[] = "FileFF";  
-    int retFile = 0;           
-    char viPath[20]="0:/";
-    DIR pviDir; 
-    FIL pviFilePtr;
-    iChar_t viDirectoryPath[] = "0:/DATA";   
-    iChar_t viFileName[] = "0:./data7.txt"; 
-    iChar_t viCurrentDirect[50];  
-    iChar_t viDataBuffTest[100] = "Data Test 11111119999999999999999999999999999";               //N=not send 
+//    unsigned char fileNameCreate[20]; 
+//    //char fileNameCreate1[] = "FileFF";  
+//    int retFile = 0;           
+//    char viPath[20]="0:/";
+//    DIR pviDir; 
+//    FIL pviFilePtr;
+//    iChar_t viDirectoryPath[] = "0:/DATA";   
+//    iChar_t viFileName[] = "0:./data7.txt"; 
+//    iChar_t viCurrentDirect[50];  
+//    iChar_t viDataBuffTest[100] = "Data Test 11111119999999999999999999999999999";               //N=not send 
     //FRESULT 
     
     

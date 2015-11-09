@@ -32,8 +32,11 @@ FRESULT directory_scan(char *path);
 iInt_t iInitSDCard();
 void iFDisplayReturn(FRESULT viFResulyt_arg);
 void iFCreate(FIL *pviOutFilePtr_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg);
-void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg);
+void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,iUInt_t viBlockSize_arg);
 void iFDelete(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg);
+void iFCreateFileDaily(iChar_t *pviFilename_arg);
+iChar_t iFSize(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long int *pviOutFileSize_arg);
+iChar_t iFRead(iChar_t * pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long *pviReadPtr_arg);
 
 
 #endif 

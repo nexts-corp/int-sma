@@ -13,16 +13,7 @@ void iGenFileDaily(){
         printDebug("[iGenFileDaily]\r\n"); 
         viDate_e =  viRTCGet.date;
         printRTC(viRTCGet);
-        if((viRTCGet.month<10) && (viRTCGet.day<10)){
-            sprintf(viFileName,"0:./%d0%d0%d.nc",viRTCGet.year,viRTCGet.month,viRTCGet.day);
-        }else if(viRTCGet.month<10){
-            sprintf(viFileName,"0:./%d0%d%d.nc",viRTCGet.year,viRTCGet.month,viRTCGet.day);
-        }else if(viRTCGet.day<10){
-            sprintf(viFileName,"0:./%d%d0%d.nc",viRTCGet.year,viRTCGet.month,viRTCGet.day);
-        }else{
-            sprintf(viFileName,"0:./%d%d%d.nc",viRTCGet.year,viRTCGet.month,viRTCGet.day);
-        }
-        
+        sprintf(viFileName,"0:./%04d%02d%02d.nc",viRTCGet.year,viRTCGet.month,viRTCGet.date);
         memcpy(viDataFName,viFileName,strlen(viFileName)); 
         printDebug("[iGenFileDaily]File name: %s\r\n",viDataFName);
     }

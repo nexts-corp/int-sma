@@ -14,10 +14,11 @@
 #define WIFI_INTERFACE  0x01
 #define GSM_INTERFACE   0x02
 
-#define MANG_QUEUE_MAX  5
+#define MANG_QUEUE_MAX  2
 #define MANG_RETRANSMIT 3
 
 typedef struct{
+    iUInt_t recordID;
     iChar_t fid[2];
     iChar_t reTransmit; 
     iUInt_t length; 
@@ -28,7 +29,7 @@ typedef struct{
 void managerTask(void *pviParameter);
 void iTagParser(iData_t *pviData_arg);
 iUInt_t iHostReqProcess(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg);
-iInt_t iMangQueueAddItem(iData_t *pviDataItem_arg,iChar_t *pviFid_arg);
+iInt_t iMangQueueAddItem(iUInt_t viRecordID_arg,iData_t *pviDataItem_arg,iChar_t *pviFid_arg);
 iInt_t iMangQueueDelItem(iChar_t *pviFid_arg);
 void iMangQueueDisplay();
 iChar_t iMangCheckRetransmit(iChar_t *pviFid_arg);

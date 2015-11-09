@@ -10,7 +10,7 @@ void communicateTask(void * pviParameter){
 //    if(pviUart0TimeOut == 0){
 //        pviUart0TimeOut   = 1;
 //    }  
-    delay_ms(1000);
+    //delay_ms(1000);
     iWizGetConf();
     
 }

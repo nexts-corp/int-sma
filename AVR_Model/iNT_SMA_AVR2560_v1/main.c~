@@ -28,33 +28,10 @@ AVR Core Clock frequency: 8.000000 MHz
 #include "deviceTask.h"
 #include "logTask.h"
 #include "eventTask.h"
-
-//#include "wiz100rs.h"
 #include "lan.h"
 #include "smaProtocol.h"
-
-
 #include "sdManager.h"
 #include "database.h"
-
-
-//#include "config.h"
-//#include "timer.h"
-//#include "ds1672.h"
-//#include "sensor.h"        
-//#include "status.h"
-//#include "alarm.h"
-//#include "dataqueue.h"
-//#include "eventqueue.h"
-//#include "log.h"
-//#include "logqueue.h"
-//#include "io.h"
-
-//#include "gaussian.h"
-//#include "dht11.h"
-
-
-//#include <stdio.h>
            
 #define MAX(a,b)                (((a) > (b)) ? (a) : (b))
 #define MIN(a,b)                (((a) < (b)) ? (a) : (b))
@@ -180,6 +157,11 @@ void main(void){
 //    }
     
     ///////////////create task//////////////// 
+    piDeviceTask = iTaskCreate(logTask,"logger",5);
+    if(piDeviceTask){
+        printDebug("<main>logTask addr : %p\r\n",piDeviceTask);
+    }  
+    
     piDeviceTask = iTaskCreate(dataAndStatusTask,"dataAndStatus",5);      
     if(piDeviceTask){
         printDebug("<main>sensorTask addr : %p\r\n",piDeviceTask);
@@ -190,10 +172,7 @@ void main(void){
         printDebug("<main>managerTask addr : %p\r\n",piDeviceTask);
     }  
     
-    piDeviceTask = iTaskCreate(logTask,"logger",5);
-    if(piDeviceTask){
-        printDebug("<main>logTask addr : %p\r\n",piDeviceTask);
-    }  
+
 //    
 //    piDeviceTask = iTaskCreate(debugTask,"debug",5);
 //    if(piDeviceTask){

@@ -4,136 +4,149 @@
 ;
 ;extern iChar_t viFolderDataName[];
 ;extern iChar_t viFolderDataLogName[];
-;extern iChar_t viFolderEventName[];
-;extern iChar_t viFolderStatusName[];
-;extern iChar_t viFolderErrorName[];
-;extern iChar_t viFolderConfigName[];
+;//extern iChar_t viFolderEventName[];
+;//extern iChar_t viFolderStatusName[];
+;//extern iChar_t viFolderErrorName[];
+;//extern iChar_t viFolderConfigName[];
 ;
 ;extern iChar_t viDirRootPath[];
 ;extern iChar_t viDirDataPath[];
-;extern iChar_t viDirDataLogPath[];
-;extern iChar_t viDirEventPath[];
-;extern iChar_t viDirStatusPath[];
-;extern iChar_t viDirErrorPath[];
-;extern iChar_t viDirConfigPath[];
+;//extern iChar_t viDirDataLogPath[];
+;//extern iChar_t viDirEventPath[];
+;//extern iChar_t viDirStatusPath[];
+;//extern iChar_t viDirErrorPath[];
+;//extern iChar_t viDirConfigPath[];
 ;
 ;extern iChar_t viDataFName[];
-;extern iChar_t viDataLogFName[];
-;extern iChar_t viEventFName[];
-;extern iChar_t viStatusFName[];
-;extern iChar_t viErrorFName[];
-;extern iChar_t viConfigFName[];
+;//extern iChar_t viDataLogFName[];
+;//extern iChar_t viEventFName[];
+;//extern iChar_t viStatusFName[];
+;//extern iChar_t viErrorFName[];
+;//extern iChar_t viConfigFName[];
 ;
 ;piDataBaseHandle_t pviDataBaseHandle = NULL;
+;eeprom unsigned int viLineID=0;
 ;
-;iChar_t iDataLogInsert(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
-; 0027 001D iChar_t iDataLogInsert(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
+;
+;
+;iChar_t iDataLogUpdate(iChar_t *pviDataBuffer_arg,iUInt_t viLineID_arg){
+; 0027 0020 iChar_t iDataLogUpdate(iChar_t *pviDataBuffer_arg,iUInt_t viLineID_arg){
 
 	.CSEG
 ;PCODE: $00000000 VOL: 0
 ;PCODE: $00000001 VOL: 0
-; 0027 001E     iDB_t *pviDBLogger;
-; 0027 001F     iChar_t viReturn = 0;
-; 0027 0020     iChar_t *pviDataBuffInsert;
-; 0027 0021     const iChar_t viStatusField = 'N';
-; 0027 0022     const iChar_t viTokenSplite = '|';
-; 0027 0023     const iChar_t viNewLine[] = {0x0d,0x0a};           //"\r\n"
-; 0027 0024     iChar_t viDataBuff[255];
-; 0027 0025 
-; 0027 0026 
-; 0027 0027 
-; 0027 0028 
-; 0027 0029     pviDBLogger = (iDB_t * const)malloc(sizeof(iDB_t));
+; 0027 0021     iDB_t *pviDBLogger;
+; 0027 0022     iChar_t viReturn = 0;
+; 0027 0023 
+; 0027 0024     return viReturn;
 ;PCODE: $00000002 VOL: 0
 ;PCODE: $00000003 VOL: 0
+;	*pviDataBuffer_arg -> Y+6
+;	viLineID_arg -> Y+4
+;	*pviDBLogger -> R16,R17
+;	viReturn -> R19
 ;PCODE: $00000004 VOL: 0
 ;PCODE: $00000005 VOL: 0
 ;PCODE: $00000006 VOL: 0
 ;PCODE: $00000007 VOL: 0
 ;PCODE: $00000008 VOL: 0
-;	*pviDataBuffer_arg -> Y+266
-;	viLength_arg -> Y+264
-;	*pviDBLogger -> R16,R17
-;	viReturn -> R19
-;	*pviDataBuffInsert -> R20,R21
-;	viStatusField -> R18
-;	viTokenSplite -> Y+263
-;	viNewLine -> Y+261
-;	viDataBuff -> Y+6
 ;PCODE: $00000009 VOL: 0
+; 0027 0025 }
 ;PCODE: $0000000A VOL: 0
+;
+;iUInt_t iDataInsert(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
+; 0027 0027 iUInt_t iDataInsert(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
 ;PCODE: $0000000B VOL: 0
 ;PCODE: $0000000C VOL: 0
+; 0027 0028     iDB_t *pviDBLogger;
+; 0027 0029     iUInt_t viReturnID = 0;
+; 0027 002A     iChar_t *pviDataBuffInsert;
+; 0027 002B     const iChar_t viStatusField = 'N';
+; 0027 002C     iChar_t viDataBuff[255];
+; 0027 002D     unsigned int viRecordID = 0;
+; 0027 002E     unsigned int indexWrite = 0;
+; 0027 002F     unsigned long viFileSize = 0;
+; 0027 0030 
+; 0027 0031     pviDBLogger = (iDB_t * const)malloc(sizeof(iDB_t));
 ;PCODE: $0000000D VOL: 0
 ;PCODE: $0000000E VOL: 0
 ;PCODE: $0000000F VOL: 0
 ;PCODE: $00000010 VOL: 0
-; 0027 002A     if(pviDBLogger!=NULL){
 ;PCODE: $00000011 VOL: 0
 ;PCODE: $00000012 VOL: 0
-; 0027 002B         pviDBLogger->dirPath = viDirDataLogPath;
 ;PCODE: $00000013 VOL: 0
+;	*pviDataBuffer_arg -> Y+272
+;	viLength_arg -> Y+270
+;	*pviDBLogger -> R16,R17
+;	viReturnID -> R18,R19
+;	*pviDataBuffInsert -> R20,R21
+;	viStatusField -> Y+269
+;	viDataBuff -> Y+14
+;	viRecordID -> Y+12
+;	indexWrite -> Y+10
+;	viFileSize -> Y+6
 ;PCODE: $00000014 VOL: 0
 ;PCODE: $00000015 VOL: 0
-; 0027 002C         pviDBLogger->fileName = viDataLogFName;
 ;PCODE: $00000016 VOL: 0
 ;PCODE: $00000017 VOL: 0
 ;PCODE: $00000018 VOL: 0
-; 0027 002D         pviDBLogger->viTable.status = 'N';
 ;PCODE: $00000019 VOL: 0
+; 0027 0032     if(pviDBLogger!=NULL){
 ;PCODE: $0000001A VOL: 0
 ;PCODE: $0000001B VOL: 0
+; 0027 0033         memset(viDataBuff,0,sizeof(viDataBuff));
 ;PCODE: $0000001C VOL: 0
-; 0027 002E 
-; 0027 002F         memcpy(&viDataBuff[0],&viStatusField,1);
 ;PCODE: $0000001D VOL: 0
 ;PCODE: $0000001E VOL: 0
 ;PCODE: $0000001F VOL: 0
 ;PCODE: $00000020 VOL: 0
 ;PCODE: $00000021 VOL: 0
 ;PCODE: $00000022 VOL: 0
+; 0027 0034         if(iFSize((char const * const)viDirDataPath,(char const * const)viDataFName,&viFileSize)){
 ;PCODE: $00000023 VOL: 0
 ;PCODE: $00000024 VOL: 0
 ;PCODE: $00000025 VOL: 0
-; 0027 0030         memcpy(&viDataBuff[1],&viTokenSplite,1);
 ;PCODE: $00000026 VOL: 0
 ;PCODE: $00000027 VOL: 0
 ;PCODE: $00000028 VOL: 0
 ;PCODE: $00000029 VOL: 0
 ;PCODE: $0000002A VOL: 0
+; 0027 0035            if(viFileSize == 0){
 ;PCODE: $0000002B VOL: 0
 ;PCODE: $0000002C VOL: 0
-; 0027 0031         memcpy(&viDataBuff[1+1],&pviDataBuffer_arg[0],viLength_arg);
 ;PCODE: $0000002D VOL: 0
+; 0027 0036               viLineID = 0;
 ;PCODE: $0000002E VOL: 0
 ;PCODE: $0000002F VOL: 0
 ;PCODE: $00000030 VOL: 0
+; 0027 0037            }
+; 0027 0038         }
 ;PCODE: $00000031 VOL: 0
+; 0027 0039         viRecordID = ++viLineID;
 ;PCODE: $00000032 VOL: 0
-; 0027 0032         memcpy(&viDataBuff[1+1+viLength_arg],viNewLine,2);
 ;PCODE: $00000033 VOL: 0
 ;PCODE: $00000034 VOL: 0
 ;PCODE: $00000035 VOL: 0
 ;PCODE: $00000036 VOL: 0
 ;PCODE: $00000037 VOL: 0
+; 0027 003A         indexWrite = 0;
 ;PCODE: $00000038 VOL: 0
 ;PCODE: $00000039 VOL: 0
+; 0027 003B         memcpy(&viDataBuff[indexWrite],&viRecordID,2);
 ;PCODE: $0000003A VOL: 0
 ;PCODE: $0000003B VOL: 0
 ;PCODE: $0000003C VOL: 0
-; 0027 0033 
-; 0027 0034         pviDBLogger->viTable.length = viLength_arg+4;
 ;PCODE: $0000003D VOL: 0
 ;PCODE: $0000003E VOL: 0
 ;PCODE: $0000003F VOL: 0
 ;PCODE: $00000040 VOL: 0
-; 0027 0035         pviDBLogger->viTable.value = viDataBuff;
 ;PCODE: $00000041 VOL: 0
 ;PCODE: $00000042 VOL: 0
+; 0027 003C         indexWrite += 2;
 ;PCODE: $00000043 VOL: 0
 ;PCODE: $00000044 VOL: 0
-; 0027 0036         iFRwite(pviDBLogger->viTable.value,pviDBLogger->viTable.length,pviDBLogger->dirPath,pviDBLogger->fileName);
 ;PCODE: $00000045 VOL: 0
+; 0027 003D         memcpy(&viDataBuff[indexWrite],&viStatusField,1);
 ;PCODE: $00000046 VOL: 0
 ;PCODE: $00000047 VOL: 0
 ;PCODE: $00000048 VOL: 0
@@ -143,27 +156,25 @@
 ;PCODE: $0000004C VOL: 0
 ;PCODE: $0000004D VOL: 0
 ;PCODE: $0000004E VOL: 0
+; 0027 003E         indexWrite += 1;
 ;PCODE: $0000004F VOL: 0
 ;PCODE: $00000050 VOL: 0
-; 0027 0037         viReturn = 1;
 ;PCODE: $00000051 VOL: 0
+; 0027 003F         memcpy(&viDataBuff[indexWrite],&viLength_arg,2);
 ;PCODE: $00000052 VOL: 0
-; 0027 0038 
-; 0027 0039         free(pviDBLogger);
 ;PCODE: $00000053 VOL: 0
 ;PCODE: $00000054 VOL: 0
-; 0027 003A         printDebug("[iDataLogInsert]Insert is success.\r\n");
 ;PCODE: $00000055 VOL: 0
 ;PCODE: $00000056 VOL: 0
 ;PCODE: $00000057 VOL: 0
 ;PCODE: $00000058 VOL: 0
 ;PCODE: $00000059 VOL: 0
 ;PCODE: $0000005A VOL: 0
+; 0027 0040         indexWrite += 2;
 ;PCODE: $0000005B VOL: 0
-; 0027 003B     }else{
 ;PCODE: $0000005C VOL: 0
 ;PCODE: $0000005D VOL: 0
-; 0027 003C         printDebug("[iDataLogInsert]Databuff_arg can't allocate mem.\r\n");
+; 0027 0041         memcpy(&viDataBuff[indexWrite],&pviDataBuffer_arg[0],viLength_arg);
 ;PCODE: $0000005E VOL: 0
 ;PCODE: $0000005F VOL: 0
 ;PCODE: $00000060 VOL: 0
@@ -171,133 +182,111 @@
 ;PCODE: $00000062 VOL: 0
 ;PCODE: $00000063 VOL: 0
 ;PCODE: $00000064 VOL: 0
-; 0027 003D     }
 ;PCODE: $00000065 VOL: 0
-; 0027 003E     return viReturn;
+; 0027 0042         indexWrite += viLength_arg;
 ;PCODE: $00000066 VOL: 0
 ;PCODE: $00000067 VOL: 0
 ;PCODE: $00000068 VOL: 0
 ;PCODE: $00000069 VOL: 0
-; 0027 003F }
+; 0027 0043 
+; 0027 0044         pviDBLogger->viTable.length = indexWrite;
 ;PCODE: $0000006A VOL: 0
-;
-;
-;
-;iChar_t iDataLogUpdate(iChar_t *pviDataBuffer_arg,iUInt_t viLineID_arg){
-; 0027 0043 iChar_t iDataLogUpdate(iChar_t *pviDataBuffer_arg,iUInt_t viLineID_arg){
 ;PCODE: $0000006B VOL: 0
 ;PCODE: $0000006C VOL: 0
-; 0027 0044     iDB_t *pviDBLogger;
-; 0027 0045     iChar_t viReturn = 0;
-; 0027 0046 
-; 0027 0047     return viReturn;
+; 0027 0045         pviDBLogger->viTable.value = viDataBuff;
 ;PCODE: $0000006D VOL: 0
 ;PCODE: $0000006E VOL: 0
-;	*pviDataBuffer_arg -> Y+6
-;	viLineID_arg -> Y+4
-;	*pviDBLogger -> R16,R17
-;	viReturn -> R19
 ;PCODE: $0000006F VOL: 0
+; 0027 0046         iFRwite(pviDBLogger->viTable.value,sizeof(viDataBuff),(const char*)viDirDataPath,(const char*)viDataFName,DB_BLOCK_WRITE_def);
 ;PCODE: $00000070 VOL: 0
 ;PCODE: $00000071 VOL: 0
 ;PCODE: $00000072 VOL: 0
 ;PCODE: $00000073 VOL: 0
 ;PCODE: $00000074 VOL: 0
-; 0027 0048 }
 ;PCODE: $00000075 VOL: 0
-;
-;iChar_t iDataLogSelect(iChar_t *pviDataBuffer_arg,iUInt_t viLineID_arg){
-; 0027 004A iChar_t iDataLogSelect(iChar_t *pviDataBuffer_arg,iUInt_t viLineID_arg){
 ;PCODE: $00000076 VOL: 0
 ;PCODE: $00000077 VOL: 0
-; 0027 004B     iDB_t *pviDBLogger;
-; 0027 004C     iChar_t viReturn = 0;
-; 0027 004D 
-; 0027 004E     return viReturn;
 ;PCODE: $00000078 VOL: 0
 ;PCODE: $00000079 VOL: 0
-;	*pviDataBuffer_arg -> Y+6
-;	viLineID_arg -> Y+4
-;	*pviDBLogger -> R16,R17
-;	viReturn -> R19
 ;PCODE: $0000007A VOL: 0
 ;PCODE: $0000007B VOL: 0
+; 0027 0047 
+; 0027 0048         free(pviDBLogger);
 ;PCODE: $0000007C VOL: 0
 ;PCODE: $0000007D VOL: 0
+; 0027 0049 
+; 0027 004A         printDebug("[iDataInsert]Insert is success.\r\n");
 ;PCODE: $0000007E VOL: 0
 ;PCODE: $0000007F VOL: 0
-; 0027 004F }
 ;PCODE: $00000080 VOL: 0
-;
-;
-;iChar_t iDataInsert(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
-; 0027 0052 iChar_t iDataInsert(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
 ;PCODE: $00000081 VOL: 0
 ;PCODE: $00000082 VOL: 0
-; 0027 0053     iDB_t *pviDBLogger;
-; 0027 0054     iChar_t viReturn = 0;
-; 0027 0055     iChar_t *pviDataBuffInsert;
-; 0027 0056     const iChar_t viStatusField = 'N';
-; 0027 0057     const iChar_t viTokenSplite = '|';
-; 0027 0058     const iChar_t viNewLine[] = {0x0d,0x0a};           //"\r\n"
-; 0027 0059     iChar_t viDataBuff[255];
-; 0027 005A 
-; 0027 005B 
-; 0027 005C 
-; 0027 005D 
-; 0027 005E     pviDBLogger = (iDB_t * const)malloc(sizeof(iDB_t));
 ;PCODE: $00000083 VOL: 0
 ;PCODE: $00000084 VOL: 0
+; 0027 004B         viReturnID = viRecordID;
 ;PCODE: $00000085 VOL: 0
 ;PCODE: $00000086 VOL: 0
+; 0027 004C     }else{
 ;PCODE: $00000087 VOL: 0
 ;PCODE: $00000088 VOL: 0
+; 0027 004D         printDebug("[iDataInsert]Databuff_arg can't allocate mem.\r\n");
 ;PCODE: $00000089 VOL: 0
-;	*pviDataBuffer_arg -> Y+266
-;	viLength_arg -> Y+264
-;	*pviDBLogger -> R16,R17
-;	viReturn -> R19
-;	*pviDataBuffInsert -> R20,R21
-;	viStatusField -> R18
-;	viTokenSplite -> Y+263
-;	viNewLine -> Y+261
-;	viDataBuff -> Y+6
 ;PCODE: $0000008A VOL: 0
 ;PCODE: $0000008B VOL: 0
 ;PCODE: $0000008C VOL: 0
 ;PCODE: $0000008D VOL: 0
 ;PCODE: $0000008E VOL: 0
 ;PCODE: $0000008F VOL: 0
+; 0027 004E     }
 ;PCODE: $00000090 VOL: 0
+; 0027 004F     return viReturnID;
 ;PCODE: $00000091 VOL: 0
-; 0027 005F     if(pviDBLogger!=NULL){
 ;PCODE: $00000092 VOL: 0
 ;PCODE: $00000093 VOL: 0
-; 0027 0060         pviDBLogger->dirPath = viDirDataPath;
 ;PCODE: $00000094 VOL: 0
+; 0027 0050 }
 ;PCODE: $00000095 VOL: 0
+;
+;iChar_t iDataSelect(iUChar_t viStatus_arg){             //'N' log and not send data , 'Y' sent data ,'S' settlemented
+; 0027 0052 iChar_t iDataSelect(iUChar_t viStatus_arg){
 ;PCODE: $00000096 VOL: 0
-; 0027 0061         pviDBLogger->fileName = viDataFName;
 ;PCODE: $00000097 VOL: 0
+; 0027 0053     iDB_t *pviDBLogger;
+; 0027 0054     iChar_t viReturn = 0;
+; 0027 0055     iChar_t *pviDataBuffInsert;
+; 0027 0056     iChar_t viDataBuff[255];
+; 0027 0057     unsigned int viRecordID = 0;
+; 0027 0058     unsigned long indexRead = 0;
+; 0027 0059     unsigned int viLenOfData = 0;
+; 0027 005A     unsigned long viFileSize = 0;
+; 0027 005B 
+; 0027 005C     pviDBLogger = (iDB_t * const)malloc(sizeof(iDB_t));
 ;PCODE: $00000098 VOL: 0
 ;PCODE: $00000099 VOL: 0
-; 0027 0062         pviDBLogger->viTable.status = 'N';
 ;PCODE: $0000009A VOL: 0
 ;PCODE: $0000009B VOL: 0
 ;PCODE: $0000009C VOL: 0
 ;PCODE: $0000009D VOL: 0
-; 0027 0063 
-; 0027 0064         memcpy(&viDataBuff[0],&viStatusField,1);
 ;PCODE: $0000009E VOL: 0
+;	viStatus_arg -> Y+273
+;	*pviDBLogger -> R16,R17
+;	viReturn -> R19
+;	*pviDataBuffInsert -> R20,R21
+;	viDataBuff -> Y+18
+;	viRecordID -> Y+16
+;	indexRead -> Y+12
+;	viLenOfData -> Y+10
+;	viFileSize -> Y+6
 ;PCODE: $0000009F VOL: 0
 ;PCODE: $000000A0 VOL: 0
 ;PCODE: $000000A1 VOL: 0
 ;PCODE: $000000A2 VOL: 0
 ;PCODE: $000000A3 VOL: 0
 ;PCODE: $000000A4 VOL: 0
+; 0027 005D     if(pviDBLogger!=NULL){
 ;PCODE: $000000A5 VOL: 0
 ;PCODE: $000000A6 VOL: 0
-; 0027 0065         memcpy(&viDataBuff[1],&viTokenSplite,1);
+; 0027 005E         memset(viDataBuff,0,sizeof(viDataBuff));
 ;PCODE: $000000A7 VOL: 0
 ;PCODE: $000000A8 VOL: 0
 ;PCODE: $000000A9 VOL: 0
@@ -305,41 +294,41 @@
 ;PCODE: $000000AB VOL: 0
 ;PCODE: $000000AC VOL: 0
 ;PCODE: $000000AD VOL: 0
-; 0027 0066         memcpy(&viDataBuff[1+1],&pviDataBuffer_arg[0],viLength_arg);
+; 0027 005F         if(iFSize((char const * const)viDirDataPath,(char const * const)viDataFName,&viFileSize)==1){
 ;PCODE: $000000AE VOL: 0
 ;PCODE: $000000AF VOL: 0
 ;PCODE: $000000B0 VOL: 0
 ;PCODE: $000000B1 VOL: 0
 ;PCODE: $000000B2 VOL: 0
 ;PCODE: $000000B3 VOL: 0
-; 0027 0067         memcpy(&viDataBuff[1+1+viLength_arg],viNewLine,2);
 ;PCODE: $000000B4 VOL: 0
 ;PCODE: $000000B5 VOL: 0
+; 0027 0060            if(viFileSize == 0){
 ;PCODE: $000000B6 VOL: 0
 ;PCODE: $000000B7 VOL: 0
 ;PCODE: $000000B8 VOL: 0
+; 0027 0061               printDebug("[iDataSelect]File is empty.\r\n");
 ;PCODE: $000000B9 VOL: 0
 ;PCODE: $000000BA VOL: 0
 ;PCODE: $000000BB VOL: 0
 ;PCODE: $000000BC VOL: 0
 ;PCODE: $000000BD VOL: 0
-; 0027 0068 
-; 0027 0069         pviDBLogger->viTable.length = viLength_arg+4;
 ;PCODE: $000000BE VOL: 0
 ;PCODE: $000000BF VOL: 0
+; 0027 0062            }else{
 ;PCODE: $000000C0 VOL: 0
 ;PCODE: $000000C1 VOL: 0
-; 0027 006A         pviDBLogger->viTable.value = viDataBuff;
+; 0027 0063               printDebug("[iDataSelect]File size(%ld).\r\n",viFileSize);
 ;PCODE: $000000C2 VOL: 0
 ;PCODE: $000000C3 VOL: 0
 ;PCODE: $000000C4 VOL: 0
 ;PCODE: $000000C5 VOL: 0
-; 0027 006B         iFRwite(pviDBLogger->viTable.value,pviDBLogger->viTable.length,pviDBLogger->dirPath,pviDBLogger->fileName);
 ;PCODE: $000000C6 VOL: 0
 ;PCODE: $000000C7 VOL: 0
 ;PCODE: $000000C8 VOL: 0
 ;PCODE: $000000C9 VOL: 0
 ;PCODE: $000000CA VOL: 0
+; 0027 0064               iFRead(viDataBuff,(iUInt_t)DB_BLOCK_READ_def,(char const * const)viDirDataPath,(char const * const)viDataFName,&indexRead);
 ;PCODE: $000000CB VOL: 0
 ;PCODE: $000000CC VOL: 0
 ;PCODE: $000000CD VOL: 0
@@ -347,38 +336,50 @@
 ;PCODE: $000000CF VOL: 0
 ;PCODE: $000000D0 VOL: 0
 ;PCODE: $000000D1 VOL: 0
-; 0027 006C         viReturn = 1;
 ;PCODE: $000000D2 VOL: 0
 ;PCODE: $000000D3 VOL: 0
-; 0027 006D 
-; 0027 006E         free(pviDBLogger);
 ;PCODE: $000000D4 VOL: 0
+; 0027 0065               print_payload(viDataBuff,255);
 ;PCODE: $000000D5 VOL: 0
-; 0027 006F         printDebug("[iDataInsert]Insert is success.\r\n");
 ;PCODE: $000000D6 VOL: 0
 ;PCODE: $000000D7 VOL: 0
 ;PCODE: $000000D8 VOL: 0
 ;PCODE: $000000D9 VOL: 0
+; 0027 0066            }
 ;PCODE: $000000DA VOL: 0
+; 0027 0067         }
+; 0027 0068         free(pviDBLogger);
 ;PCODE: $000000DB VOL: 0
 ;PCODE: $000000DC VOL: 0
-; 0027 0070     }else{
 ;PCODE: $000000DD VOL: 0
+; 0027 0069         printDebug("[iDataSelect]iDataSelect is success.\r\n");
 ;PCODE: $000000DE VOL: 0
-; 0027 0071         printDebug("[iDataInsert]Databuff_arg can't allocate mem.\r\n");
 ;PCODE: $000000DF VOL: 0
 ;PCODE: $000000E0 VOL: 0
 ;PCODE: $000000E1 VOL: 0
 ;PCODE: $000000E2 VOL: 0
 ;PCODE: $000000E3 VOL: 0
 ;PCODE: $000000E4 VOL: 0
+; 0027 006A         viReturn = 1;
 ;PCODE: $000000E5 VOL: 0
-; 0027 0072     }
 ;PCODE: $000000E6 VOL: 0
-; 0027 0073     return viReturn;
+; 0027 006B     }else{
 ;PCODE: $000000E7 VOL: 0
 ;PCODE: $000000E8 VOL: 0
+; 0027 006C         printDebug("[iDataSelect]Databuff_arg can't allocate mem.\r\n");
 ;PCODE: $000000E9 VOL: 0
 ;PCODE: $000000EA VOL: 0
-; 0027 0074 }
 ;PCODE: $000000EB VOL: 0
+;PCODE: $000000EC VOL: 0
+;PCODE: $000000ED VOL: 0
+;PCODE: $000000EE VOL: 0
+;PCODE: $000000EF VOL: 0
+; 0027 006D     }
+;PCODE: $000000F0 VOL: 0
+; 0027 006E     return viReturn;
+;PCODE: $000000F1 VOL: 0
+;PCODE: $000000F2 VOL: 0
+;PCODE: $000000F3 VOL: 0
+;PCODE: $000000F4 VOL: 0
+; 0027 006F }
+;PCODE: $000000F5 VOL: 0

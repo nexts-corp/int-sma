@@ -49,10 +49,9 @@
 ; 001F 000B //        pviUart0TimeOut   = 1;
 ; 001F 000C //    }
 ; 001F 000D     //delay_ms(1000);
-; 001F 000E     iWizGetConf();
-;PCODE: $00000017 VOL: 0
+; 001F 000E     //iWizGetConf();
 ; 001F 000F 
 ; 001F 0010 }
+;PCODE: $00000017 VOL: 0
 ;PCODE: $00000018 VOL: 0
 ;PCODE: $00000019 VOL: 0
-;PCODE: $0000001A VOL: 0

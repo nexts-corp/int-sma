@@ -35,9 +35,7 @@
 ;
 ;iWiz100srConfig_t iWiz100srConfig;
 ;//char httpPostHeader[] = "POST /smasmartdevice HTTP/1.1\r\nHost: smasmartdevice.appspot.com\r\nUser-Agent: AVR2560-LAN\r\nConnection: close\r\nContent-Length: ";
-;char httpPostHeader[] = "POST /smasmartdevice HTTP/1.1\r\nHost: smasmartdevice.appspot.com\r\nX-CLIENT-UUID: 001100110011\r\nUser-Agent: AVR2560-LAN\r\nConnection: close\r\nContent-Length: ";
-
-	.DSEG
+;//char httpPostHeader[] = "POST /smasmartdevice HTTP/1.1\r\nHost: smasmartdevice.appspot.com\r\nX-CLIENT-UUID: 001100110011\r\nUser-Agent: AVR2560-LAN\r\nConnection: close\r\nContent-Length: ";
 ;
 ;
 ;//iWiz100srData_t iWiz100srData;
@@ -274,7 +272,7 @@
 ;PCODE: $0000009C VOL: 0
 
 	.DSEG
-_0x42000C:
+_0x42000B:
 	.BYTE 0x4
 ;int iWizCBCheckHTTPContextLen(char *const data_p,unsigned int const len_p){
 ; 0021 005A int iWizCBCheckHTTPContextLen(char *const data_p,unsigned int const len_p){
@@ -428,7 +426,7 @@ _0x42000C:
 ;PCODE: $00000101 VOL: 0
 
 	.DSEG
-_0x420012:
+_0x420011:
 	.BYTE 0xF
 ;
 ;int iWizCBChekStat(char *const data_p,unsigned int const len_p){
@@ -528,7 +526,7 @@ _0x420012:
 ;PCODE: $0000013E VOL: 0
 
 	.DSEG
-_0x420018:
+_0x420017:
 	.BYTE 0x15
 ;int iWizCBReadData(char *const data_p,unsigned int const len_p){
 ; 0021 009E int iWizCBReadData(char *const data_p,unsigned int const len_p){
@@ -1104,7 +1102,7 @@ _0x420018:
 ;PCODE: $000002B2 VOL: 0
 
 	.DSEG
-_0x420030:
+_0x42002F:
 	.BYTE 0x18
 ;
 ;int iWizRead(){
@@ -1520,7 +1518,7 @@ _0x420030:
 ;PCODE: $000003B0 VOL: 0
 
 	.DSEG
-_0x420040:
+_0x42003F:
 	.BYTE 0x1E
 ;
 ;void iWizReadConfig(){
@@ -1683,45 +1681,45 @@ _0x420040:
 ;PCODE: $00000400 VOL: 0
 ;PCODE: $00000401 VOL: 0
 ;PCODE: $00000402 VOL: 0
-; 0021 0210 
-; 0021 0211     if(iWizConfigSend(viCmdMAC,viWizReadBuffer)==1){
+; 0021 0210     delay_ms(20);
 ;PCODE: $00000403 VOL: 0
 ;PCODE: $00000404 VOL: 0
 ;PCODE: $00000405 VOL: 0
+; 0021 0211     if(iWizConfigSend(viCmdMAC,viWizReadBuffer)==1){
 ;PCODE: $00000406 VOL: 0
 ;PCODE: $00000407 VOL: 0
 ;PCODE: $00000408 VOL: 0
-; 0021 0212         iWizConfigMACParser(iWiz100srConfig.macAddress,viWizReadBuffer);
 ;PCODE: $00000409 VOL: 0
 ;PCODE: $0000040A VOL: 0
 ;PCODE: $0000040B VOL: 0
+; 0021 0212         iWizConfigMACParser(iWiz100srConfig.macAddress,viWizReadBuffer);
 ;PCODE: $0000040C VOL: 0
-; 0021 0213         printDebug("[iWizReadConfig]MAC:");
 ;PCODE: $0000040D VOL: 0
 ;PCODE: $0000040E VOL: 0
 ;PCODE: $0000040F VOL: 0
+; 0021 0213         printDebug("[iWizReadConfig]MAC:");
 ;PCODE: $00000410 VOL: 0
 ;PCODE: $00000411 VOL: 0
 ;PCODE: $00000412 VOL: 0
 ;PCODE: $00000413 VOL: 0
-; 0021 0214         for(viI=0;viI<sizeof(iWiz100srConfig.macAddress);viI++){
 ;PCODE: $00000414 VOL: 0
 ;PCODE: $00000415 VOL: 0
 ;PCODE: $00000416 VOL: 0
+; 0021 0214         for(viI=0;viI<sizeof(iWiz100srConfig.macAddress);viI++){
 ;PCODE: $00000417 VOL: 0
 ;PCODE: $00000418 VOL: 0
 ;PCODE: $00000419 VOL: 0
 ;PCODE: $0000041A VOL: 0
 ;PCODE: $0000041B VOL: 0
 ;PCODE: $0000041C VOL: 0
-; 0021 0215             if(viI!=sizeof(iWiz100srConfig.macAddress)-1){
 ;PCODE: $0000041D VOL: 0
 ;PCODE: $0000041E VOL: 0
 ;PCODE: $0000041F VOL: 0
-; 0021 0216                 printDebug("%02x:",iWiz100srConfig.macAddress[viI]);
+; 0021 0215             if(viI!=sizeof(iWiz100srConfig.macAddress)-1){
 ;PCODE: $00000420 VOL: 0
 ;PCODE: $00000421 VOL: 0
 ;PCODE: $00000422 VOL: 0
+; 0021 0216                 printDebug("%02x:",iWiz100srConfig.macAddress[viI]);
 ;PCODE: $00000423 VOL: 0
 ;PCODE: $00000424 VOL: 0
 ;PCODE: $00000425 VOL: 0
@@ -1732,13 +1730,13 @@ _0x420040:
 ;PCODE: $0000042A VOL: 0
 ;PCODE: $0000042B VOL: 0
 ;PCODE: $0000042C VOL: 0
-; 0021 0217             }else{
 ;PCODE: $0000042D VOL: 0
 ;PCODE: $0000042E VOL: 0
-; 0021 0218                 printDebug("%02x",iWiz100srConfig.macAddress[viI]);
 ;PCODE: $0000042F VOL: 0
+; 0021 0217             }else{
 ;PCODE: $00000430 VOL: 0
 ;PCODE: $00000431 VOL: 0
+; 0021 0218                 printDebug("%02x",iWiz100srConfig.macAddress[viI]);
 ;PCODE: $00000432 VOL: 0
 ;PCODE: $00000433 VOL: 0
 ;PCODE: $00000434 VOL: 0
@@ -1749,68 +1747,68 @@ _0x420040:
 ;PCODE: $00000439 VOL: 0
 ;PCODE: $0000043A VOL: 0
 ;PCODE: $0000043B VOL: 0
-; 0021 0219             }
 ;PCODE: $0000043C VOL: 0
-; 0021 021A         }
 ;PCODE: $0000043D VOL: 0
 ;PCODE: $0000043E VOL: 0
+; 0021 0219             }
 ;PCODE: $0000043F VOL: 0
+; 0021 021A         }
 ;PCODE: $00000440 VOL: 0
 ;PCODE: $00000441 VOL: 0
-; 0021 021B 
-; 0021 021C         printDebug("\r\n");
 ;PCODE: $00000442 VOL: 0
 ;PCODE: $00000443 VOL: 0
 ;PCODE: $00000444 VOL: 0
+; 0021 021B 
+; 0021 021C         printDebug("\r\n");
 ;PCODE: $00000445 VOL: 0
 ;PCODE: $00000446 VOL: 0
 ;PCODE: $00000447 VOL: 0
 ;PCODE: $00000448 VOL: 0
-; 0021 021D     }
-; 0021 021E 
-; 0021 021F     if(iWizConfigSend(viCmdIP,viWizReadBuffer)==1){
 ;PCODE: $00000449 VOL: 0
 ;PCODE: $0000044A VOL: 0
 ;PCODE: $0000044B VOL: 0
+; 0021 021D     }
+; 0021 021E     delay_ms(20);
 ;PCODE: $0000044C VOL: 0
 ;PCODE: $0000044D VOL: 0
 ;PCODE: $0000044E VOL: 0
 ;PCODE: $0000044F VOL: 0
-; 0021 0220         iWizConfigIPParser(iWiz100srConfig.ip,viWizReadBuffer);
+; 0021 021F     if(iWizConfigSend(viCmdIP,viWizReadBuffer)==1){
 ;PCODE: $00000450 VOL: 0
 ;PCODE: $00000451 VOL: 0
 ;PCODE: $00000452 VOL: 0
 ;PCODE: $00000453 VOL: 0
 ;PCODE: $00000454 VOL: 0
-; 0021 0221         printDebug("[iWizReadConfig]IP:");
 ;PCODE: $00000455 VOL: 0
+; 0021 0220         iWizConfigIPParser(iWiz100srConfig.ip,viWizReadBuffer);
 ;PCODE: $00000456 VOL: 0
 ;PCODE: $00000457 VOL: 0
 ;PCODE: $00000458 VOL: 0
 ;PCODE: $00000459 VOL: 0
 ;PCODE: $0000045A VOL: 0
+; 0021 0221         printDebug("[iWizReadConfig]IP:");
 ;PCODE: $0000045B VOL: 0
-; 0021 0222         for(viI=0;viI<sizeof(iWiz100srConfig.ip);viI++){
 ;PCODE: $0000045C VOL: 0
 ;PCODE: $0000045D VOL: 0
 ;PCODE: $0000045E VOL: 0
 ;PCODE: $0000045F VOL: 0
 ;PCODE: $00000460 VOL: 0
 ;PCODE: $00000461 VOL: 0
+; 0021 0222         for(viI=0;viI<sizeof(iWiz100srConfig.ip);viI++){
 ;PCODE: $00000462 VOL: 0
 ;PCODE: $00000463 VOL: 0
 ;PCODE: $00000464 VOL: 0
-; 0021 0223             if(viI!=sizeof(iWiz100srConfig.ip)-1){
 ;PCODE: $00000465 VOL: 0
 ;PCODE: $00000466 VOL: 0
 ;PCODE: $00000467 VOL: 0
-; 0021 0224                 printDebug("%02x.",iWiz100srConfig.ip[viI]);
 ;PCODE: $00000468 VOL: 0
 ;PCODE: $00000469 VOL: 0
 ;PCODE: $0000046A VOL: 0
+; 0021 0223             if(viI!=sizeof(iWiz100srConfig.ip)-1){
 ;PCODE: $0000046B VOL: 0
 ;PCODE: $0000046C VOL: 0
 ;PCODE: $0000046D VOL: 0
+; 0021 0224                 printDebug("%02x.",iWiz100srConfig.ip[viI]);
 ;PCODE: $0000046E VOL: 0
 ;PCODE: $0000046F VOL: 0
 ;PCODE: $00000470 VOL: 0
@@ -1818,16 +1816,16 @@ _0x420040:
 ;PCODE: $00000472 VOL: 0
 ;PCODE: $00000473 VOL: 0
 ;PCODE: $00000474 VOL: 0
-; 0021 0225             }else{
 ;PCODE: $00000475 VOL: 0
 ;PCODE: $00000476 VOL: 0
-; 0021 0226                 printDebug("%02x",iWiz100srConfig.ip[viI]);
 ;PCODE: $00000477 VOL: 0
 ;PCODE: $00000478 VOL: 0
 ;PCODE: $00000479 VOL: 0
 ;PCODE: $0000047A VOL: 0
+; 0021 0225             }else{
 ;PCODE: $0000047B VOL: 0
 ;PCODE: $0000047C VOL: 0
+; 0021 0226                 printDebug("%02x",iWiz100srConfig.ip[viI]);
 ;PCODE: $0000047D VOL: 0
 ;PCODE: $0000047E VOL: 0
 ;PCODE: $0000047F VOL: 0
@@ -1835,49 +1833,48 @@ _0x420040:
 ;PCODE: $00000481 VOL: 0
 ;PCODE: $00000482 VOL: 0
 ;PCODE: $00000483 VOL: 0
-; 0021 0227             }
 ;PCODE: $00000484 VOL: 0
-; 0021 0228         }
 ;PCODE: $00000485 VOL: 0
 ;PCODE: $00000486 VOL: 0
 ;PCODE: $00000487 VOL: 0
 ;PCODE: $00000488 VOL: 0
 ;PCODE: $00000489 VOL: 0
-; 0021 0229         printDebug("\r\n");
+; 0021 0227             }
 ;PCODE: $0000048A VOL: 0
+; 0021 0228         }
 ;PCODE: $0000048B VOL: 0
 ;PCODE: $0000048C VOL: 0
 ;PCODE: $0000048D VOL: 0
 ;PCODE: $0000048E VOL: 0
 ;PCODE: $0000048F VOL: 0
+; 0021 0229         printDebug("\r\n");
 ;PCODE: $00000490 VOL: 0
-; 0021 022A     }
-; 0021 022B 
-; 0021 022C     if(iWizConfigSend(viCmdSubnet,viWizReadBuffer)==1){
 ;PCODE: $00000491 VOL: 0
 ;PCODE: $00000492 VOL: 0
 ;PCODE: $00000493 VOL: 0
 ;PCODE: $00000494 VOL: 0
 ;PCODE: $00000495 VOL: 0
 ;PCODE: $00000496 VOL: 0
+; 0021 022A     }
+; 0021 022B     delay_ms(20);
 ;PCODE: $00000497 VOL: 0
-; 0021 022D         iWizConfigIPParser(iWiz100srConfig.subnet,viWizReadBuffer);
 ;PCODE: $00000498 VOL: 0
 ;PCODE: $00000499 VOL: 0
 ;PCODE: $0000049A VOL: 0
+; 0021 022C     if(iWizConfigSend(viCmdSubnet,viWizReadBuffer)==1){
 ;PCODE: $0000049B VOL: 0
 ;PCODE: $0000049C VOL: 0
-; 0021 022E         printDebug("[iWizReadConfig]Subnet mask:");
 ;PCODE: $0000049D VOL: 0
 ;PCODE: $0000049E VOL: 0
 ;PCODE: $0000049F VOL: 0
 ;PCODE: $000004A0 VOL: 0
+; 0021 022D         iWizConfigIPParser(iWiz100srConfig.subnet,viWizReadBuffer);
 ;PCODE: $000004A1 VOL: 0
 ;PCODE: $000004A2 VOL: 0
 ;PCODE: $000004A3 VOL: 0
-; 0021 022F         for(viI=0;viI<sizeof(iWiz100srConfig.subnet);viI++){
 ;PCODE: $000004A4 VOL: 0
 ;PCODE: $000004A5 VOL: 0
+; 0021 022E         printDebug("[iWizReadConfig]Subnet mask:");
 ;PCODE: $000004A6 VOL: 0
 ;PCODE: $000004A7 VOL: 0
 ;PCODE: $000004A8 VOL: 0
@@ -1885,28 +1882,27 @@ _0x420040:
 ;PCODE: $000004AA VOL: 0
 ;PCODE: $000004AB VOL: 0
 ;PCODE: $000004AC VOL: 0
-; 0021 0230             if(viI!=sizeof(iWiz100srConfig.subnet)-1){
+; 0021 022F         for(viI=0;viI<sizeof(iWiz100srConfig.subnet);viI++){
 ;PCODE: $000004AD VOL: 0
 ;PCODE: $000004AE VOL: 0
 ;PCODE: $000004AF VOL: 0
-; 0021 0231                 printDebug("%02x.",iWiz100srConfig.subnet[viI]);
 ;PCODE: $000004B0 VOL: 0
 ;PCODE: $000004B1 VOL: 0
 ;PCODE: $000004B2 VOL: 0
 ;PCODE: $000004B3 VOL: 0
 ;PCODE: $000004B4 VOL: 0
 ;PCODE: $000004B5 VOL: 0
+; 0021 0230             if(viI!=sizeof(iWiz100srConfig.subnet)-1){
 ;PCODE: $000004B6 VOL: 0
 ;PCODE: $000004B7 VOL: 0
 ;PCODE: $000004B8 VOL: 0
+; 0021 0231                 printDebug("%02x.",iWiz100srConfig.subnet[viI]);
 ;PCODE: $000004B9 VOL: 0
 ;PCODE: $000004BA VOL: 0
 ;PCODE: $000004BB VOL: 0
 ;PCODE: $000004BC VOL: 0
-; 0021 0232             }else{
 ;PCODE: $000004BD VOL: 0
 ;PCODE: $000004BE VOL: 0
-; 0021 0233                 printDebug("%02x",iWiz100srConfig.subnet[viI]);
 ;PCODE: $000004BF VOL: 0
 ;PCODE: $000004C0 VOL: 0
 ;PCODE: $000004C1 VOL: 0
@@ -1914,67 +1910,67 @@ _0x420040:
 ;PCODE: $000004C3 VOL: 0
 ;PCODE: $000004C4 VOL: 0
 ;PCODE: $000004C5 VOL: 0
+; 0021 0232             }else{
 ;PCODE: $000004C6 VOL: 0
 ;PCODE: $000004C7 VOL: 0
+; 0021 0233                 printDebug("%02x",iWiz100srConfig.subnet[viI]);
 ;PCODE: $000004C8 VOL: 0
 ;PCODE: $000004C9 VOL: 0
 ;PCODE: $000004CA VOL: 0
 ;PCODE: $000004CB VOL: 0
-; 0021 0234             }
 ;PCODE: $000004CC VOL: 0
-; 0021 0235         }
 ;PCODE: $000004CD VOL: 0
 ;PCODE: $000004CE VOL: 0
 ;PCODE: $000004CF VOL: 0
 ;PCODE: $000004D0 VOL: 0
 ;PCODE: $000004D1 VOL: 0
-; 0021 0236         printDebug("\r\n");
 ;PCODE: $000004D2 VOL: 0
 ;PCODE: $000004D3 VOL: 0
 ;PCODE: $000004D4 VOL: 0
+; 0021 0234             }
 ;PCODE: $000004D5 VOL: 0
+; 0021 0235         }
 ;PCODE: $000004D6 VOL: 0
 ;PCODE: $000004D7 VOL: 0
 ;PCODE: $000004D8 VOL: 0
-; 0021 0237     }
-; 0021 0238 
-; 0021 0239     if(iWizConfigSend(viCmdGateWay,viWizReadBuffer)==1){
 ;PCODE: $000004D9 VOL: 0
 ;PCODE: $000004DA VOL: 0
+; 0021 0236         printDebug("\r\n");
 ;PCODE: $000004DB VOL: 0
 ;PCODE: $000004DC VOL: 0
 ;PCODE: $000004DD VOL: 0
 ;PCODE: $000004DE VOL: 0
 ;PCODE: $000004DF VOL: 0
-; 0021 023A         iWizConfigIPParser(iWiz100srConfig.gateWay,viWizReadBuffer);
 ;PCODE: $000004E0 VOL: 0
 ;PCODE: $000004E1 VOL: 0
+; 0021 0237     }
+; 0021 0238     delay_ms(20);
 ;PCODE: $000004E2 VOL: 0
 ;PCODE: $000004E3 VOL: 0
 ;PCODE: $000004E4 VOL: 0
-; 0021 023B         printDebug("[iWizReadConfig]Gateway:");
 ;PCODE: $000004E5 VOL: 0
+; 0021 0239     if(iWizConfigSend(viCmdGateWay,viWizReadBuffer)==1){
 ;PCODE: $000004E6 VOL: 0
 ;PCODE: $000004E7 VOL: 0
 ;PCODE: $000004E8 VOL: 0
 ;PCODE: $000004E9 VOL: 0
 ;PCODE: $000004EA VOL: 0
 ;PCODE: $000004EB VOL: 0
-; 0021 023C         for(viI=0;viI<sizeof(iWiz100srConfig.gateWay);viI++){
+; 0021 023A         iWizConfigIPParser(iWiz100srConfig.gateWay,viWizReadBuffer);
 ;PCODE: $000004EC VOL: 0
 ;PCODE: $000004ED VOL: 0
 ;PCODE: $000004EE VOL: 0
 ;PCODE: $000004EF VOL: 0
 ;PCODE: $000004F0 VOL: 0
+; 0021 023B         printDebug("[iWizReadConfig]Gateway:");
 ;PCODE: $000004F1 VOL: 0
 ;PCODE: $000004F2 VOL: 0
 ;PCODE: $000004F3 VOL: 0
 ;PCODE: $000004F4 VOL: 0
-; 0021 023D             if(viI!=sizeof(iWiz100srConfig.gateWay)-1){
 ;PCODE: $000004F5 VOL: 0
 ;PCODE: $000004F6 VOL: 0
 ;PCODE: $000004F7 VOL: 0
-; 0021 023E                 printDebug("%02x.",iWiz100srConfig.gateWay[viI]);
+; 0021 023C         for(viI=0;viI<sizeof(iWiz100srConfig.gateWay);viI++){
 ;PCODE: $000004F8 VOL: 0
 ;PCODE: $000004F9 VOL: 0
 ;PCODE: $000004FA VOL: 0
@@ -1984,14 +1980,14 @@ _0x420040:
 ;PCODE: $000004FE VOL: 0
 ;PCODE: $000004FF VOL: 0
 ;PCODE: $00000500 VOL: 0
+; 0021 023D             if(viI!=sizeof(iWiz100srConfig.gateWay)-1){
 ;PCODE: $00000501 VOL: 0
 ;PCODE: $00000502 VOL: 0
 ;PCODE: $00000503 VOL: 0
+; 0021 023E                 printDebug("%02x.",iWiz100srConfig.gateWay[viI]);
 ;PCODE: $00000504 VOL: 0
-; 0021 023F             }else{
 ;PCODE: $00000505 VOL: 0
 ;PCODE: $00000506 VOL: 0
-; 0021 0240                 printDebug("%02x",iWiz100srConfig.gateWay[viI]);
 ;PCODE: $00000507 VOL: 0
 ;PCODE: $00000508 VOL: 0
 ;PCODE: $00000509 VOL: 0
@@ -2002,85 +1998,81 @@ _0x420040:
 ;PCODE: $0000050E VOL: 0
 ;PCODE: $0000050F VOL: 0
 ;PCODE: $00000510 VOL: 0
+; 0021 023F             }else{
 ;PCODE: $00000511 VOL: 0
 ;PCODE: $00000512 VOL: 0
+; 0021 0240                 printDebug("%02x",iWiz100srConfig.gateWay[viI]);
 ;PCODE: $00000513 VOL: 0
-; 0021 0241             }
 ;PCODE: $00000514 VOL: 0
-; 0021 0242         }
 ;PCODE: $00000515 VOL: 0
 ;PCODE: $00000516 VOL: 0
 ;PCODE: $00000517 VOL: 0
 ;PCODE: $00000518 VOL: 0
 ;PCODE: $00000519 VOL: 0
-; 0021 0243         printDebug("\r\n");
 ;PCODE: $0000051A VOL: 0
 ;PCODE: $0000051B VOL: 0
 ;PCODE: $0000051C VOL: 0
 ;PCODE: $0000051D VOL: 0
 ;PCODE: $0000051E VOL: 0
 ;PCODE: $0000051F VOL: 0
+; 0021 0241             }
 ;PCODE: $00000520 VOL: 0
-; 0021 0244     }
-; 0021 0245 
-; 0021 0246     iWizConfigSend(viCmdLocalPort,viWizReadBuffer);
+; 0021 0242         }
 ;PCODE: $00000521 VOL: 0
 ;PCODE: $00000522 VOL: 0
 ;PCODE: $00000523 VOL: 0
 ;PCODE: $00000524 VOL: 0
 ;PCODE: $00000525 VOL: 0
-; 0021 0247     iWizConfigSend(viCmdIPMethod,viWizReadBuffer);
+; 0021 0243         printDebug("\r\n");
 ;PCODE: $00000526 VOL: 0
 ;PCODE: $00000527 VOL: 0
 ;PCODE: $00000528 VOL: 0
 ;PCODE: $00000529 VOL: 0
-; 0021 0248     iWizConfigSend(viCmdOperMode,viWizReadBuffer);
 ;PCODE: $0000052A VOL: 0
 ;PCODE: $0000052B VOL: 0
 ;PCODE: $0000052C VOL: 0
+; 0021 0244     }
+; 0021 0245     delay_ms(20);
 ;PCODE: $0000052D VOL: 0
-; 0021 0249 
-; 0021 024A     if(iWizConfigSend(viCmdCmdDomainName,viWizReadBuffer)){
 ;PCODE: $0000052E VOL: 0
 ;PCODE: $0000052F VOL: 0
 ;PCODE: $00000530 VOL: 0
+; 0021 0246     iWizConfigSend(viCmdLocalPort,viWizReadBuffer);
 ;PCODE: $00000531 VOL: 0
 ;PCODE: $00000532 VOL: 0
 ;PCODE: $00000533 VOL: 0
-; 0021 024B         memcpy(iWiz100srConfig.sdn,&viWizReadBuffer[2],sizeof(iWiz100srConfig.sdn));
 ;PCODE: $00000534 VOL: 0
+; 0021 0247     iWizConfigSend(viCmdIPMethod,viWizReadBuffer);
 ;PCODE: $00000535 VOL: 0
 ;PCODE: $00000536 VOL: 0
 ;PCODE: $00000537 VOL: 0
 ;PCODE: $00000538 VOL: 0
+; 0021 0248     iWizConfigSend(viCmdOperMode,viWizReadBuffer);
 ;PCODE: $00000539 VOL: 0
 ;PCODE: $0000053A VOL: 0
 ;PCODE: $0000053B VOL: 0
-; 0021 024C         printDebug("[iWizReadConfig]SDN:%s\r\n",iWiz100srConfig.sdn);
 ;PCODE: $0000053C VOL: 0
+; 0021 0249     delay_ms(20);
 ;PCODE: $0000053D VOL: 0
 ;PCODE: $0000053E VOL: 0
 ;PCODE: $0000053F VOL: 0
+; 0021 024A     if(iWizConfigSend(viCmdCmdDomainName,viWizReadBuffer)){
 ;PCODE: $00000540 VOL: 0
 ;PCODE: $00000541 VOL: 0
 ;PCODE: $00000542 VOL: 0
 ;PCODE: $00000543 VOL: 0
 ;PCODE: $00000544 VOL: 0
 ;PCODE: $00000545 VOL: 0
+; 0021 024B         memcpy(iWiz100srConfig.sdn,&viWizReadBuffer[2],sizeof(iWiz100srConfig.sdn));
 ;PCODE: $00000546 VOL: 0
-; 0021 024D     }
-; 0021 024E 
-; 0021 024F 
-; 0021 0250 
-; 0021 0251     index0Buffer = 0;
 ;PCODE: $00000547 VOL: 0
 ;PCODE: $00000548 VOL: 0
 ;PCODE: $00000549 VOL: 0
-; 0021 0252     for(viI=0;viI<strlen(viCmdRestart);viI++){
 ;PCODE: $0000054A VOL: 0
 ;PCODE: $0000054B VOL: 0
 ;PCODE: $0000054C VOL: 0
 ;PCODE: $0000054D VOL: 0
+; 0021 024C         printDebug("[iWizReadConfig]SDN:%s\r\n",iWiz100srConfig.sdn);
 ;PCODE: $0000054E VOL: 0
 ;PCODE: $0000054F VOL: 0
 ;PCODE: $00000550 VOL: 0
@@ -2089,256 +2081,283 @@ _0x420040:
 ;PCODE: $00000553 VOL: 0
 ;PCODE: $00000554 VOL: 0
 ;PCODE: $00000555 VOL: 0
-; 0021 0253         putchar0(viCmdRestart[viI]);
 ;PCODE: $00000556 VOL: 0
 ;PCODE: $00000557 VOL: 0
 ;PCODE: $00000558 VOL: 0
+; 0021 024D     }
+; 0021 024E 
+; 0021 024F 
+; 0021 0250 
+; 0021 0251     index0Buffer = 0;
 ;PCODE: $00000559 VOL: 0
 ;PCODE: $0000055A VOL: 0
 ;PCODE: $0000055B VOL: 0
-; 0021 0254     }
+; 0021 0252     for(viI=0;viI<strlen(viCmdRestart);viI++){
 ;PCODE: $0000055C VOL: 0
 ;PCODE: $0000055D VOL: 0
 ;PCODE: $0000055E VOL: 0
 ;PCODE: $0000055F VOL: 0
 ;PCODE: $00000560 VOL: 0
-; 0021 0255 
-; 0021 0256     //wait wiz module response
-; 0021 0257     TIMER_setTimer(&timeout, 3);
 ;PCODE: $00000561 VOL: 0
 ;PCODE: $00000562 VOL: 0
 ;PCODE: $00000563 VOL: 0
 ;PCODE: $00000564 VOL: 0
-; 0021 0258     while(!TIMER_checkTimerExceed(timeout)){
 ;PCODE: $00000565 VOL: 0
 ;PCODE: $00000566 VOL: 0
 ;PCODE: $00000567 VOL: 0
+; 0021 0253         putchar0(viCmdRestart[viI]);
 ;PCODE: $00000568 VOL: 0
 ;PCODE: $00000569 VOL: 0
-; 0021 0259        #asm("wdr")
 ;PCODE: $0000056A VOL: 0
-	wdr
 ;PCODE: $0000056B VOL: 0
-; 0021 025A        if(index0Buffer>0){
 ;PCODE: $0000056C VOL: 0
 ;PCODE: $0000056D VOL: 0
+; 0021 0254     }
 ;PCODE: $0000056E VOL: 0
-; 0021 025B            delay_ms(100);
 ;PCODE: $0000056F VOL: 0
 ;PCODE: $00000570 VOL: 0
 ;PCODE: $00000571 VOL: 0
-; 0021 025C            memset(viWizReadBuffer,0,sizeof(viWizReadBuffer));
 ;PCODE: $00000572 VOL: 0
+; 0021 0255     delay_ms(20);
 ;PCODE: $00000573 VOL: 0
 ;PCODE: $00000574 VOL: 0
 ;PCODE: $00000575 VOL: 0
+; 0021 0256     //wait wiz module response
+; 0021 0257     TIMER_setTimer(&timeout, 3);
 ;PCODE: $00000576 VOL: 0
 ;PCODE: $00000577 VOL: 0
 ;PCODE: $00000578 VOL: 0
-; 0021 025D            memcpy(&viWizReadBuffer[0],&rx0Buffer[0],index0Buffer);
 ;PCODE: $00000579 VOL: 0
+; 0021 0258     while(!TIMER_checkTimerExceed(timeout)){
 ;PCODE: $0000057A VOL: 0
 ;PCODE: $0000057B VOL: 0
 ;PCODE: $0000057C VOL: 0
 ;PCODE: $0000057D VOL: 0
 ;PCODE: $0000057E VOL: 0
-; 0021 025E 
-; 0021 025F            pviCheckResponse = strstr(viWizReadBuffer,"<S>");
+; 0021 0259        #asm("wdr")
 ;PCODE: $0000057F VOL: 0
+	wdr
 ;PCODE: $00000580 VOL: 0
+; 0021 025A        if(index0Buffer>0){
 ;PCODE: $00000581 VOL: 0
 ;PCODE: $00000582 VOL: 0
 ;PCODE: $00000583 VOL: 0
+; 0021 025B            delay_ms(100);
 ;PCODE: $00000584 VOL: 0
-; 0021 0260            if(pviCheckResponse){
 ;PCODE: $00000585 VOL: 0
 ;PCODE: $00000586 VOL: 0
+; 0021 025C            memset(viWizReadBuffer,0,sizeof(viWizReadBuffer));
+;PCODE: $00000587 VOL: 0
+;PCODE: $00000588 VOL: 0
+;PCODE: $00000589 VOL: 0
+;PCODE: $0000058A VOL: 0
+;PCODE: $0000058B VOL: 0
+;PCODE: $0000058C VOL: 0
+;PCODE: $0000058D VOL: 0
+; 0021 025D            memcpy(&viWizReadBuffer[0],&rx0Buffer[0],index0Buffer);
+;PCODE: $0000058E VOL: 0
+;PCODE: $0000058F VOL: 0
+;PCODE: $00000590 VOL: 0
+;PCODE: $00000591 VOL: 0
+;PCODE: $00000592 VOL: 0
+;PCODE: $00000593 VOL: 0
+; 0021 025E 
+; 0021 025F            pviCheckResponse = strstr(viWizReadBuffer,"<S>");
+;PCODE: $00000594 VOL: 0
+;PCODE: $00000595 VOL: 0
+;PCODE: $00000596 VOL: 0
+;PCODE: $00000597 VOL: 0
+;PCODE: $00000598 VOL: 0
+;PCODE: $00000599 VOL: 0
+; 0021 0260            if(pviCheckResponse){
+;PCODE: $0000059A VOL: 0
+;PCODE: $0000059B VOL: 0
 ; 0021 0261 #if (WIZ100SR_PRINT_DEBUG == 1)
 ; 0021 0262                printDebug("[iWizReadConfig]Restart Wiz100SR success.\r\n");
 ; 0021 0263 #endif
 ; 0021 0264            }else{
-;PCODE: $00000587 VOL: 0
-;PCODE: $00000588 VOL: 0
+;PCODE: $0000059C VOL: 0
+;PCODE: $0000059D VOL: 0
 ; 0021 0265 #if (WIZ100SR_PRINT_DEBUG == 1)
 ; 0021 0266                printDebug("[iWizReadConfig]Restart Wiz100SR unsuccess.\r\n");
 ; 0021 0267 #endif
 ; 0021 0268            }
-;PCODE: $00000589 VOL: 0
+;PCODE: $0000059E VOL: 0
 ; 0021 0269            break;
-;PCODE: $0000058A VOL: 0
+;PCODE: $0000059F VOL: 0
 ; 0021 026A        }
 ; 0021 026B     }
-;PCODE: $0000058B VOL: 0
-;PCODE: $0000058C VOL: 0
-;PCODE: $0000058D VOL: 0
+;PCODE: $000005A0 VOL: 0
+;PCODE: $000005A1 VOL: 0
+;PCODE: $000005A2 VOL: 0
 ; 0021 026C 
 ; 0021 026D     index0Buffer = 0;
-;PCODE: $0000058E VOL: 0
-;PCODE: $0000058F VOL: 0
+;PCODE: $000005A3 VOL: 0
+;PCODE: $000005A4 VOL: 0
 ; 0021 026E     viConfigMode = WIZ_CONFIG_NORMAL_MODE;
-;PCODE: $00000590 VOL: 0
-;PCODE: $00000591 VOL: 0
+;PCODE: $000005A5 VOL: 0
+;PCODE: $000005A6 VOL: 0
 ; 0021 026F }
-;PCODE: $00000592 VOL: 0
-;PCODE: $00000593 VOL: 0
-;PCODE: $00000594 VOL: 0
-;PCODE: $00000595 VOL: 0
+;PCODE: $000005A7 VOL: 0
+;PCODE: $000005A8 VOL: 0
+;PCODE: $000005A9 VOL: 0
+;PCODE: $000005AA VOL: 0
 
 	.DSEG
-_0x42005B:
+_0x42005A:
 	.BYTE 0x8
 ;
 ;iChar_t iWizConfigSend(iChar_t * pviCmd_arg,iChar_t *pviDataBuff_arg){
 ; 0021 0271 iChar_t iWizConfigSend(iChar_t * pviCmd_arg,iChar_t *pviDataBuff_arg){
 
 	.CSEG
-;PCODE: $00000596 VOL: 0
-;PCODE: $00000597 VOL: 0
+;PCODE: $000005AB VOL: 0
+;PCODE: $000005AC VOL: 0
 ; 0021 0272     iChar_t viReturn = 0;
 ; 0021 0273     TIMER   timeout;
 ; 0021 0274     iChar_t viI = 0;
 ; 0021 0275     iChar_t * pviCheckResponse;
 ; 0021 0276 
 ; 0021 0277     index0Buffer = 0;
-;PCODE: $00000598 VOL: 0
-;PCODE: $00000599 VOL: 0
-;PCODE: $0000059A VOL: 0
+;PCODE: $000005AD VOL: 0
+;PCODE: $000005AE VOL: 0
+;PCODE: $000005AF VOL: 0
 ;	*pviCmd_arg -> Y+10
 ;	*pviDataBuff_arg -> Y+8
 ;	viReturn -> R17
 ;	timeout -> Y+4
 ;	viI -> R16
 ;	*pviCheckResponse -> R18,R19
-;PCODE: $0000059B VOL: 0
-;PCODE: $0000059C VOL: 0
-;PCODE: $0000059D VOL: 0
-;PCODE: $0000059E VOL: 0
-;PCODE: $0000059F VOL: 0
-;PCODE: $000005A0 VOL: 0
-; 0021 0278     for(viI=0;viI<strlen(pviCmd_arg);viI++){
-;PCODE: $000005A1 VOL: 0
-;PCODE: $000005A2 VOL: 0
-;PCODE: $000005A3 VOL: 0
-;PCODE: $000005A4 VOL: 0
-;PCODE: $000005A5 VOL: 0
-;PCODE: $000005A6 VOL: 0
-;PCODE: $000005A7 VOL: 0
-;PCODE: $000005A8 VOL: 0
-;PCODE: $000005A9 VOL: 0
-;PCODE: $000005AA VOL: 0
-;PCODE: $000005AB VOL: 0
-;PCODE: $000005AC VOL: 0
-; 0021 0279         putchar0(*(pviCmd_arg+viI));
-;PCODE: $000005AD VOL: 0
-;PCODE: $000005AE VOL: 0
-;PCODE: $000005AF VOL: 0
 ;PCODE: $000005B0 VOL: 0
 ;PCODE: $000005B1 VOL: 0
 ;PCODE: $000005B2 VOL: 0
-; 0021 027A     }
 ;PCODE: $000005B3 VOL: 0
 ;PCODE: $000005B4 VOL: 0
 ;PCODE: $000005B5 VOL: 0
+; 0021 0278     for(viI=0;viI<strlen(pviCmd_arg);viI++){
 ;PCODE: $000005B6 VOL: 0
 ;PCODE: $000005B7 VOL: 0
-; 0021 027B 
-; 0021 027C     //wait wiz module response
-; 0021 027D     TIMER_setTimer(&timeout, 1);
 ;PCODE: $000005B8 VOL: 0
 ;PCODE: $000005B9 VOL: 0
 ;PCODE: $000005BA VOL: 0
 ;PCODE: $000005BB VOL: 0
-; 0021 027E     while(!TIMER_checkTimerExceed(timeout)){
 ;PCODE: $000005BC VOL: 0
 ;PCODE: $000005BD VOL: 0
 ;PCODE: $000005BE VOL: 0
 ;PCODE: $000005BF VOL: 0
 ;PCODE: $000005C0 VOL: 0
-; 0021 027F        #asm("wdr")
 ;PCODE: $000005C1 VOL: 0
-	wdr
+; 0021 0279         putchar0(*(pviCmd_arg+viI));
 ;PCODE: $000005C2 VOL: 0
-; 0021 0280        if(index0Buffer>0){
 ;PCODE: $000005C3 VOL: 0
 ;PCODE: $000005C4 VOL: 0
 ;PCODE: $000005C5 VOL: 0
-; 0021 0281            delay_ms(100);
 ;PCODE: $000005C6 VOL: 0
 ;PCODE: $000005C7 VOL: 0
+; 0021 027A     }
 ;PCODE: $000005C8 VOL: 0
-; 0021 0282            memset(pviDataBuff_arg,0,sizeof(pviDataBuff_arg));
 ;PCODE: $000005C9 VOL: 0
 ;PCODE: $000005CA VOL: 0
 ;PCODE: $000005CB VOL: 0
 ;PCODE: $000005CC VOL: 0
+; 0021 027B 
+; 0021 027C     //wait wiz module response
+; 0021 027D     TIMER_setTimer(&timeout, 1);
 ;PCODE: $000005CD VOL: 0
 ;PCODE: $000005CE VOL: 0
 ;PCODE: $000005CF VOL: 0
-; 0021 0283            memcpy(pviDataBuff_arg,&rx0Buffer[0],index0Buffer);
 ;PCODE: $000005D0 VOL: 0
+; 0021 027E     while(!TIMER_checkTimerExceed(timeout)){
 ;PCODE: $000005D1 VOL: 0
 ;PCODE: $000005D2 VOL: 0
 ;PCODE: $000005D3 VOL: 0
 ;PCODE: $000005D4 VOL: 0
 ;PCODE: $000005D5 VOL: 0
-; 0021 0284 
-; 0021 0285            pviCheckResponse = strstr(pviDataBuff_arg,"<S");
+; 0021 027F        #asm("wdr")
 ;PCODE: $000005D6 VOL: 0
+	wdr
 ;PCODE: $000005D7 VOL: 0
+; 0021 0280        if(index0Buffer>0){
 ;PCODE: $000005D8 VOL: 0
 ;PCODE: $000005D9 VOL: 0
 ;PCODE: $000005DA VOL: 0
+; 0021 0281            delay_ms(100);
 ;PCODE: $000005DB VOL: 0
-; 0021 0286            if(pviCheckResponse){
 ;PCODE: $000005DC VOL: 0
 ;PCODE: $000005DD VOL: 0
+; 0021 0282            memset(pviDataBuff_arg,0,sizeof(pviDataBuff_arg));
+;PCODE: $000005DE VOL: 0
+;PCODE: $000005DF VOL: 0
+;PCODE: $000005E0 VOL: 0
+;PCODE: $000005E1 VOL: 0
+;PCODE: $000005E2 VOL: 0
+;PCODE: $000005E3 VOL: 0
+;PCODE: $000005E4 VOL: 0
+; 0021 0283            memcpy(pviDataBuff_arg,&rx0Buffer[0],index0Buffer);
+;PCODE: $000005E5 VOL: 0
+;PCODE: $000005E6 VOL: 0
+;PCODE: $000005E7 VOL: 0
+;PCODE: $000005E8 VOL: 0
+;PCODE: $000005E9 VOL: 0
+;PCODE: $000005EA VOL: 0
+; 0021 0284 
+; 0021 0285            pviCheckResponse = strstr(pviDataBuff_arg,"<S");
+;PCODE: $000005EB VOL: 0
+;PCODE: $000005EC VOL: 0
+;PCODE: $000005ED VOL: 0
+;PCODE: $000005EE VOL: 0
+;PCODE: $000005EF VOL: 0
+;PCODE: $000005F0 VOL: 0
+; 0021 0286            if(pviCheckResponse){
+;PCODE: $000005F1 VOL: 0
+;PCODE: $000005F2 VOL: 0
 ; 0021 0287 #if (WIZ100SR_PRINT_DEBUG == 1)
 ; 0021 0288                printDebug("[iWizReadConfig]response data[.\r\n");
 ; 0021 0289                print_payload(pviDataBuff_arg,strlen(pviDataBuff_arg));
 ; 0021 028A                printDebug("].\r\n");
 ; 0021 028B #endif
 ; 0021 028C            }else{
-;PCODE: $000005DE VOL: 0
-;PCODE: $000005DF VOL: 0
+;PCODE: $000005F3 VOL: 0
+;PCODE: $000005F4 VOL: 0
 ; 0021 028D #if (WIZ100SR_PRINT_DEBUG == 1)
 ; 0021 028E                printDebug("[iWizReadConfig]wiz is not response.\r\n");
 ; 0021 028F #endif
 ; 0021 0290            }
-;PCODE: $000005E0 VOL: 0
+;PCODE: $000005F5 VOL: 0
 ; 0021 0291            break;
-;PCODE: $000005E1 VOL: 0
+;PCODE: $000005F6 VOL: 0
 ; 0021 0292        }
 ; 0021 0293     }
-;PCODE: $000005E2 VOL: 0
-;PCODE: $000005E3 VOL: 0
-;PCODE: $000005E4 VOL: 0
+;PCODE: $000005F7 VOL: 0
+;PCODE: $000005F8 VOL: 0
+;PCODE: $000005F9 VOL: 0
 ; 0021 0294     viReturn = 1;
-;PCODE: $000005E5 VOL: 0
-;PCODE: $000005E6 VOL: 0
+;PCODE: $000005FA VOL: 0
+;PCODE: $000005FB VOL: 0
 ; 0021 0295     return viReturn;
-;PCODE: $000005E7 VOL: 0
-;PCODE: $000005E8 VOL: 0
-;PCODE: $000005E9 VOL: 0
-;PCODE: $000005EA VOL: 0
+;PCODE: $000005FC VOL: 0
+;PCODE: $000005FD VOL: 0
+;PCODE: $000005FE VOL: 0
+;PCODE: $000005FF VOL: 0
 ; 0021 0296 }
-;PCODE: $000005EB VOL: 0
+;PCODE: $00000600 VOL: 0
 
 	.DSEG
-_0x420087:
+_0x420086:
 	.BYTE 0x3
 ;
 ;unsigned int* hex_decode(char *in, unsigned int len, unsigned int *out)
 ; 0021 0299 {
 
 	.CSEG
-;PCODE: $000005EC VOL: 0
-;PCODE: $000005ED VOL: 0
+;PCODE: $00000601 VOL: 0
+;PCODE: $00000602 VOL: 0
 ; 0021 029A     unsigned int i, t, hn, ln;
 ; 0021 029B 
 ; 0021 029C     for (t = 0,i = 0; i < len; i+=2,++t) {
-;PCODE: $000005EE VOL: 0
-;PCODE: $000005EF VOL: 0
-;PCODE: $000005F0 VOL: 0
+;PCODE: $00000603 VOL: 0
+;PCODE: $00000604 VOL: 0
+;PCODE: $00000605 VOL: 0
 ;	*in -> Y+12
 ;	len -> Y+10
 ;	*out -> Y+8
@@ -2346,29 +2365,6 @@ _0x420087:
 ;	t -> R18,R19
 ;	hn -> R20,R21
 ;	ln -> Y+6
-;PCODE: $000005F1 VOL: 0
-;PCODE: $000005F2 VOL: 0
-;PCODE: $000005F3 VOL: 0
-;PCODE: $000005F4 VOL: 0
-;PCODE: $000005F5 VOL: 0
-;PCODE: $000005F6 VOL: 0
-;PCODE: $000005F7 VOL: 0
-;PCODE: $000005F8 VOL: 0
-;PCODE: $000005F9 VOL: 0
-;PCODE: $000005FA VOL: 0
-;PCODE: $000005FB VOL: 0
-;PCODE: $000005FC VOL: 0
-;PCODE: $000005FD VOL: 0
-; 0021 029D 
-; 0021 029E             hn = in[i] > '9' ? (in[i]|32) - 'a' + 10 : in[i] - '0';
-;PCODE: $000005FE VOL: 0
-;PCODE: $000005FF VOL: 0
-;PCODE: $00000600 VOL: 0
-;PCODE: $00000601 VOL: 0
-;PCODE: $00000602 VOL: 0
-;PCODE: $00000603 VOL: 0
-;PCODE: $00000604 VOL: 0
-;PCODE: $00000605 VOL: 0
 ;PCODE: $00000606 VOL: 0
 ;PCODE: $00000607 VOL: 0
 ;PCODE: $00000608 VOL: 0
@@ -2382,12 +2378,13 @@ _0x420087:
 ;PCODE: $00000610 VOL: 0
 ;PCODE: $00000611 VOL: 0
 ;PCODE: $00000612 VOL: 0
+; 0021 029D 
+; 0021 029E             hn = in[i] > '9' ? (in[i]|32) - 'a' + 10 : in[i] - '0';
 ;PCODE: $00000613 VOL: 0
 ;PCODE: $00000614 VOL: 0
 ;PCODE: $00000615 VOL: 0
 ;PCODE: $00000616 VOL: 0
 ;PCODE: $00000617 VOL: 0
-; 0021 029F             ln = in[i+1] > '9' ? (in[i+1]|32) - 'a' + 10 : in[i+1] - '0';
 ;PCODE: $00000618 VOL: 0
 ;PCODE: $00000619 VOL: 0
 ;PCODE: $0000061A VOL: 0
@@ -2409,6 +2406,7 @@ _0x420087:
 ;PCODE: $0000062A VOL: 0
 ;PCODE: $0000062B VOL: 0
 ;PCODE: $0000062C VOL: 0
+; 0021 029F             ln = in[i+1] > '9' ? (in[i+1]|32) - 'a' + 10 : in[i+1] - '0';
 ;PCODE: $0000062D VOL: 0
 ;PCODE: $0000062E VOL: 0
 ;PCODE: $0000062F VOL: 0
@@ -2417,8 +2415,6 @@ _0x420087:
 ;PCODE: $00000632 VOL: 0
 ;PCODE: $00000633 VOL: 0
 ;PCODE: $00000634 VOL: 0
-; 0021 02A0 
-; 0021 02A1             out[t] = (hn << 4 ) | ln;
 ;PCODE: $00000635 VOL: 0
 ;PCODE: $00000636 VOL: 0
 ;PCODE: $00000637 VOL: 0
@@ -2430,7 +2426,6 @@ _0x420087:
 ;PCODE: $0000063D VOL: 0
 ;PCODE: $0000063E VOL: 0
 ;PCODE: $0000063F VOL: 0
-; 0021 02A2             printf("%s",out[t]);
 ;PCODE: $00000640 VOL: 0
 ;PCODE: $00000641 VOL: 0
 ;PCODE: $00000642 VOL: 0
@@ -2441,11 +2436,12 @@ _0x420087:
 ;PCODE: $00000647 VOL: 0
 ;PCODE: $00000648 VOL: 0
 ;PCODE: $00000649 VOL: 0
+; 0021 02A0 
+; 0021 02A1             out[t] = (hn << 4 ) | ln;
 ;PCODE: $0000064A VOL: 0
 ;PCODE: $0000064B VOL: 0
 ;PCODE: $0000064C VOL: 0
 ;PCODE: $0000064D VOL: 0
-; 0021 02A3     }
 ;PCODE: $0000064E VOL: 0
 ;PCODE: $0000064F VOL: 0
 ;PCODE: $00000650 VOL: 0
@@ -2453,39 +2449,22 @@ _0x420087:
 ;PCODE: $00000652 VOL: 0
 ;PCODE: $00000653 VOL: 0
 ;PCODE: $00000654 VOL: 0
-; 0021 02A4     return out;
+; 0021 02A2             printf("%s",out[t]);
 ;PCODE: $00000655 VOL: 0
 ;PCODE: $00000656 VOL: 0
 ;PCODE: $00000657 VOL: 0
 ;PCODE: $00000658 VOL: 0
-; 0021 02A5 }
 ;PCODE: $00000659 VOL: 0
-;
-;iChar_t iWizConfigIPParser(iChar_t *pviOutData_arg,iChar_t *pviInData_arg){
-; 0021 02A7 iChar_t iWizConfigIPParser(iChar_t *pviOutData_arg,iChar_t *pviInData_arg){
 ;PCODE: $0000065A VOL: 0
 ;PCODE: $0000065B VOL: 0
-; 0021 02A8     iChar_t *ptrCh;
-; 0021 02A9     iChar_t viIP[4];   //ip,subnet,gateway
-; 0021 02AA     iInt_t viNumber;
-; 0021 02AB     iChar_t viReturn = 0;
-; 0021 02AC     iChar_t viI=0;
-; 0021 02AD 
-; 0021 02AE     ptrCh = strtok((pviInData_arg+2),".");   //2= <S
 ;PCODE: $0000065C VOL: 0
 ;PCODE: $0000065D VOL: 0
 ;PCODE: $0000065E VOL: 0
-;	*pviOutData_arg -> Y+12
-;	*pviInData_arg -> Y+10
-;	*ptrCh -> R16,R17
-;	viIP -> Y+6
-;	viNumber -> R18,R19
-;	viReturn -> R21
-;	viI -> R20
 ;PCODE: $0000065F VOL: 0
 ;PCODE: $00000660 VOL: 0
 ;PCODE: $00000661 VOL: 0
 ;PCODE: $00000662 VOL: 0
+; 0021 02A3     }
 ;PCODE: $00000663 VOL: 0
 ;PCODE: $00000664 VOL: 0
 ;PCODE: $00000665 VOL: 0
@@ -2493,60 +2472,100 @@ _0x420087:
 ;PCODE: $00000667 VOL: 0
 ;PCODE: $00000668 VOL: 0
 ;PCODE: $00000669 VOL: 0
-; 0021 02AF 
-; 0021 02B0 	viI=0;
+; 0021 02A4     return out;
 ;PCODE: $0000066A VOL: 0
 ;PCODE: $0000066B VOL: 0
-; 0021 02B1 	while(ptrCh != NULL) {
 ;PCODE: $0000066C VOL: 0
 ;PCODE: $0000066D VOL: 0
+; 0021 02A5 }
 ;PCODE: $0000066E VOL: 0
-; 0021 02B2 		viIP[viI] = (unsigned char)(atoi(ptrCh));
+;
+;iChar_t iWizConfigIPParser(iChar_t *pviOutData_arg,iChar_t *pviInData_arg){
+; 0021 02A7 iChar_t iWizConfigIPParser(iChar_t *pviOutData_arg,iChar_t *pviInData_arg){
 ;PCODE: $0000066F VOL: 0
 ;PCODE: $00000670 VOL: 0
+; 0021 02A8     iChar_t *ptrCh;
+; 0021 02A9     iChar_t viIP[4];   //ip,subnet,gateway
+; 0021 02AA     iInt_t viNumber;
+; 0021 02AB     iChar_t viReturn = 0;
+; 0021 02AC     iChar_t viI=0;
+; 0021 02AD 
+; 0021 02AE     ptrCh = strtok((pviInData_arg+2),".");   //2= <S
 ;PCODE: $00000671 VOL: 0
 ;PCODE: $00000672 VOL: 0
 ;PCODE: $00000673 VOL: 0
+;	*pviOutData_arg -> Y+12
+;	*pviInData_arg -> Y+10
+;	*ptrCh -> R16,R17
+;	viIP -> Y+6
+;	viNumber -> R18,R19
+;	viReturn -> R21
+;	viI -> R20
 ;PCODE: $00000674 VOL: 0
 ;PCODE: $00000675 VOL: 0
 ;PCODE: $00000676 VOL: 0
 ;PCODE: $00000677 VOL: 0
-; 0021 02B3 		ptrCh = strtok(NULL,".");
 ;PCODE: $00000678 VOL: 0
 ;PCODE: $00000679 VOL: 0
 ;PCODE: $0000067A VOL: 0
 ;PCODE: $0000067B VOL: 0
 ;PCODE: $0000067C VOL: 0
 ;PCODE: $0000067D VOL: 0
-; 0021 02B4 		viI++;
 ;PCODE: $0000067E VOL: 0
+; 0021 02AF 
+; 0021 02B0 	viI=0;
 ;PCODE: $0000067F VOL: 0
-; 0021 02B5 	}
 ;PCODE: $00000680 VOL: 0
+; 0021 02B1 	while(ptrCh != NULL) {
 ;PCODE: $00000681 VOL: 0
-; 0021 02B6     memcpy(pviOutData_arg,viIP,4);
 ;PCODE: $00000682 VOL: 0
 ;PCODE: $00000683 VOL: 0
+; 0021 02B2 		viIP[viI] = (unsigned char)(atoi(ptrCh));
 ;PCODE: $00000684 VOL: 0
 ;PCODE: $00000685 VOL: 0
 ;PCODE: $00000686 VOL: 0
 ;PCODE: $00000687 VOL: 0
 ;PCODE: $00000688 VOL: 0
+;PCODE: $00000689 VOL: 0
+;PCODE: $0000068A VOL: 0
+;PCODE: $0000068B VOL: 0
+;PCODE: $0000068C VOL: 0
+; 0021 02B3 		ptrCh = strtok(NULL,".");
+;PCODE: $0000068D VOL: 0
+;PCODE: $0000068E VOL: 0
+;PCODE: $0000068F VOL: 0
+;PCODE: $00000690 VOL: 0
+;PCODE: $00000691 VOL: 0
+;PCODE: $00000692 VOL: 0
+; 0021 02B4 		viI++;
+;PCODE: $00000693 VOL: 0
+;PCODE: $00000694 VOL: 0
+; 0021 02B5 	}
+;PCODE: $00000695 VOL: 0
+;PCODE: $00000696 VOL: 0
+; 0021 02B6     memcpy(pviOutData_arg,viIP,4);
+;PCODE: $00000697 VOL: 0
+;PCODE: $00000698 VOL: 0
+;PCODE: $00000699 VOL: 0
+;PCODE: $0000069A VOL: 0
+;PCODE: $0000069B VOL: 0
+;PCODE: $0000069C VOL: 0
+;PCODE: $0000069D VOL: 0
 ; 0021 02B7 //	printf("\r\n");
 ; 0021 02B8 //	for(i=0; i<4; i++) {
 ; 0021 02B9 //		printf("%02x ",ip[i]);
 ; 0021 02BA //	}
 ; 0021 02BB 
 ; 0021 02BC     viReturn = 1;
-;PCODE: $00000689 VOL: 0
-;PCODE: $0000068A VOL: 0
+;PCODE: $0000069E VOL: 0
+;PCODE: $0000069F VOL: 0
 ; 0021 02BD     return viReturn;
-;PCODE: $0000068B VOL: 0
-;PCODE: $0000068C VOL: 0
-;PCODE: $0000068D VOL: 0
-;PCODE: $0000068E VOL: 0
+;PCODE: $000006A0 VOL: 0
+;PCODE: $000006A1 VOL: 0
+;PCODE: $000006A2 VOL: 0
+;PCODE: $000006A3 VOL: 0
 ; 0021 02BE }
-;PCODE: $0000068F VOL: 0
+;PCODE: $000006A4 VOL: 0
 ;
 ;//iChar_t iWizConfigMACParser(iUChar_t *pviOutData_arg,iChar_t *pviInData_arg){
 ;//    iChar_t *ptrCh;
@@ -2570,8 +2589,8 @@ _0x420087:
 ;//}
 ;iChar_t iWizConfigMACParser(iUChar_t *pviOutData_arg,iChar_t *pviInData_arg){
 ; 0021 02D4 iChar_t iWizConfigMACParser(iUChar_t *pviOutData_arg,iChar_t *pviInData_arg){
-;PCODE: $00000690 VOL: 0
-;PCODE: $00000691 VOL: 0
+;PCODE: $000006A5 VOL: 0
+;PCODE: $000006A6 VOL: 0
 ; 0021 02D5     iChar_t *ptrCh;
 ; 0021 02D6     iChar_t viMAC[12];
 ; 0021 02D7     iInt_t viNumber;
@@ -2579,9 +2598,9 @@ _0x420087:
 ; 0021 02D9     iChar_t viI=0;
 ; 0021 02DA 
 ; 0021 02DB     ptrCh = strtok((pviInData_arg+2),".");    //2= <S
-;PCODE: $00000692 VOL: 0
-;PCODE: $00000693 VOL: 0
-;PCODE: $00000694 VOL: 0
+;PCODE: $000006A7 VOL: 0
+;PCODE: $000006A8 VOL: 0
+;PCODE: $000006A9 VOL: 0
 ;	*pviOutData_arg -> Y+20
 ;	*pviInData_arg -> Y+18
 ;	*ptrCh -> R16,R17
@@ -2589,72 +2608,72 @@ _0x420087:
 ;	viNumber -> R18,R19
 ;	viReturn -> R21
 ;	viI -> R20
-;PCODE: $00000695 VOL: 0
-;PCODE: $00000696 VOL: 0
-;PCODE: $00000697 VOL: 0
-;PCODE: $00000698 VOL: 0
-;PCODE: $00000699 VOL: 0
-;PCODE: $0000069A VOL: 0
-;PCODE: $0000069B VOL: 0
-;PCODE: $0000069C VOL: 0
-;PCODE: $0000069D VOL: 0
-;PCODE: $0000069E VOL: 0
-;PCODE: $0000069F VOL: 0
-; 0021 02DC 	viI=0;
-;PCODE: $000006A0 VOL: 0
-;PCODE: $000006A1 VOL: 0
-; 0021 02DD 	while(ptrCh != NULL){
-;PCODE: $000006A2 VOL: 0
-;PCODE: $000006A3 VOL: 0
-;PCODE: $000006A4 VOL: 0
-; 0021 02DE 		//viMAC[viI] = iMapAsciiHexToChar(ptrCh);
-; 0021 02DF         memcpy((pviOutData_arg+viI),ptrCh,2);
-;PCODE: $000006A5 VOL: 0
-;PCODE: $000006A6 VOL: 0
-;PCODE: $000006A7 VOL: 0
-;PCODE: $000006A8 VOL: 0
-;PCODE: $000006A9 VOL: 0
 ;PCODE: $000006AA VOL: 0
 ;PCODE: $000006AB VOL: 0
 ;PCODE: $000006AC VOL: 0
 ;PCODE: $000006AD VOL: 0
-; 0021 02E0 		ptrCh = strtok(NULL,".");
 ;PCODE: $000006AE VOL: 0
 ;PCODE: $000006AF VOL: 0
 ;PCODE: $000006B0 VOL: 0
 ;PCODE: $000006B1 VOL: 0
 ;PCODE: $000006B2 VOL: 0
 ;PCODE: $000006B3 VOL: 0
-; 0021 02E1 		viI+=2;
 ;PCODE: $000006B4 VOL: 0
+; 0021 02DC 	viI=0;
 ;PCODE: $000006B5 VOL: 0
-; 0021 02E2 	}
 ;PCODE: $000006B6 VOL: 0
+; 0021 02DD 	while(ptrCh != NULL){
 ;PCODE: $000006B7 VOL: 0
-; 0021 02E3     viReturn = 1;
 ;PCODE: $000006B8 VOL: 0
 ;PCODE: $000006B9 VOL: 0
-; 0021 02E4     return viReturn;
+; 0021 02DE 		//viMAC[viI] = iMapAsciiHexToChar(ptrCh);
+; 0021 02DF         memcpy((pviOutData_arg+viI),ptrCh,2);
 ;PCODE: $000006BA VOL: 0
 ;PCODE: $000006BB VOL: 0
 ;PCODE: $000006BC VOL: 0
 ;PCODE: $000006BD VOL: 0
-; 0021 02E5 }
 ;PCODE: $000006BE VOL: 0
+;PCODE: $000006BF VOL: 0
+;PCODE: $000006C0 VOL: 0
+;PCODE: $000006C1 VOL: 0
+;PCODE: $000006C2 VOL: 0
+; 0021 02E0 		ptrCh = strtok(NULL,".");
+;PCODE: $000006C3 VOL: 0
+;PCODE: $000006C4 VOL: 0
+;PCODE: $000006C5 VOL: 0
+;PCODE: $000006C6 VOL: 0
+;PCODE: $000006C7 VOL: 0
+;PCODE: $000006C8 VOL: 0
+; 0021 02E1 		viI+=2;
+;PCODE: $000006C9 VOL: 0
+;PCODE: $000006CA VOL: 0
+; 0021 02E2 	}
+;PCODE: $000006CB VOL: 0
+;PCODE: $000006CC VOL: 0
+; 0021 02E3     viReturn = 1;
+;PCODE: $000006CD VOL: 0
+;PCODE: $000006CE VOL: 0
+; 0021 02E4     return viReturn;
+;PCODE: $000006CF VOL: 0
+;PCODE: $000006D0 VOL: 0
+;PCODE: $000006D1 VOL: 0
+;PCODE: $000006D2 VOL: 0
+; 0021 02E5 }
+;PCODE: $000006D3 VOL: 0
 ;
 ;iChar_t iMapAsciiHexToChar(iChar_t *chIn_arg){      //ascii hex 2 byte => char 1 byte
 ; 0021 02E7 iChar_t iMapAsciiHexToChar(iChar_t *chIn_arg){
-;PCODE: $000006BF VOL: 0
-;PCODE: $000006C0 VOL: 0
+;PCODE: $000006D4 VOL: 0
+;PCODE: $000006D5 VOL: 0
 ; 0021 02E8 	iChar_t ivChar=0x00;
 ; 0021 02E9 	iChar_t *ptrCh;
 ; 0021 02EA 	iChar_t chReturn;
 ; 0021 02EB 	iChar_t i,j,k,l;
 ; 0021 02EC 
 ; 0021 02ED 	ptrCh = chIn_arg;
-;PCODE: $000006C1 VOL: 0
-;PCODE: $000006C2 VOL: 0
-;PCODE: $000006C3 VOL: 0
+;PCODE: $000006D6 VOL: 0
+;PCODE: $000006D7 VOL: 0
+;PCODE: $000006D8 VOL: 0
 ;	*chIn_arg -> Y+8
 ;	ivChar -> R17
 ;	*ptrCh -> R18,R19
@@ -2663,37 +2682,14 @@ _0x420087:
 ;	j -> R20
 ;	k -> Y+7
 ;	l -> Y+6
-;PCODE: $000006C4 VOL: 0
-;PCODE: $000006C5 VOL: 0
-;PCODE: $000006C6 VOL: 0
-;PCODE: $000006C7 VOL: 0
-; 0021 02EE 
-; 0021 02EF 	for(i=0,j=0x41,k=0x61,l=10; i<6; i++,j++,k++,l++) { //41='A' //61='a'
-;PCODE: $000006C8 VOL: 0
-;PCODE: $000006C9 VOL: 0
-;PCODE: $000006CA VOL: 0
-;PCODE: $000006CB VOL: 0
-;PCODE: $000006CC VOL: 0
-;PCODE: $000006CD VOL: 0
-;PCODE: $000006CE VOL: 0
-;PCODE: $000006CF VOL: 0
-;PCODE: $000006D0 VOL: 0
-;PCODE: $000006D1 VOL: 0
-;PCODE: $000006D2 VOL: 0
-;PCODE: $000006D3 VOL: 0
-;PCODE: $000006D4 VOL: 0
-;PCODE: $000006D5 VOL: 0
-;PCODE: $000006D6 VOL: 0
-;PCODE: $000006D7 VOL: 0
-;PCODE: $000006D8 VOL: 0
 ;PCODE: $000006D9 VOL: 0
 ;PCODE: $000006DA VOL: 0
 ;PCODE: $000006DB VOL: 0
 ;PCODE: $000006DC VOL: 0
+; 0021 02EE 
+; 0021 02EF 	for(i=0,j=0x41,k=0x61,l=10; i<6; i++,j++,k++,l++) { //41='A' //61='a'
 ;PCODE: $000006DD VOL: 0
 ;PCODE: $000006DE VOL: 0
-; 0021 02F0 		//printDebug("[hex1]%02x:%02x:%02x (%d) \r\n",i,j,k,l);
-; 0021 02F1 		if((*(ptrCh) == j) || (*(ptrCh) == k)) {
 ;PCODE: $000006DF VOL: 0
 ;PCODE: $000006E0 VOL: 0
 ;PCODE: $000006E1 VOL: 0
@@ -2705,13 +2701,9 @@ _0x420087:
 ;PCODE: $000006E7 VOL: 0
 ;PCODE: $000006E8 VOL: 0
 ;PCODE: $000006E9 VOL: 0
-; 0021 02F2 			ivChar = l;
 ;PCODE: $000006EA VOL: 0
 ;PCODE: $000006EB VOL: 0
-; 0021 02F3 			break;
 ;PCODE: $000006EC VOL: 0
-; 0021 02F4 		}
-; 0021 02F5 	}
 ;PCODE: $000006ED VOL: 0
 ;PCODE: $000006EE VOL: 0
 ;PCODE: $000006EF VOL: 0
@@ -2719,6 +2711,8 @@ _0x420087:
 ;PCODE: $000006F1 VOL: 0
 ;PCODE: $000006F2 VOL: 0
 ;PCODE: $000006F3 VOL: 0
+; 0021 02F0 		//printDebug("[hex1]%02x:%02x:%02x (%d) \r\n",i,j,k,l);
+; 0021 02F1 		if((*(ptrCh) == j) || (*(ptrCh) == k)) {
 ;PCODE: $000006F4 VOL: 0
 ;PCODE: $000006F5 VOL: 0
 ;PCODE: $000006F6 VOL: 0
@@ -2726,33 +2720,32 @@ _0x420087:
 ;PCODE: $000006F8 VOL: 0
 ;PCODE: $000006F9 VOL: 0
 ;PCODE: $000006FA VOL: 0
-; 0021 02F6 	for(i=0,j=0x30; i<10; i++,j++) { //0-9 = 0x30-0x39
 ;PCODE: $000006FB VOL: 0
 ;PCODE: $000006FC VOL: 0
 ;PCODE: $000006FD VOL: 0
 ;PCODE: $000006FE VOL: 0
+; 0021 02F2 			ivChar = l;
 ;PCODE: $000006FF VOL: 0
 ;PCODE: $00000700 VOL: 0
+; 0021 02F3 			break;
 ;PCODE: $00000701 VOL: 0
+; 0021 02F4 		}
+; 0021 02F5 	}
 ;PCODE: $00000702 VOL: 0
 ;PCODE: $00000703 VOL: 0
 ;PCODE: $00000704 VOL: 0
 ;PCODE: $00000705 VOL: 0
 ;PCODE: $00000706 VOL: 0
 ;PCODE: $00000707 VOL: 0
-; 0021 02F7 		if(*(ptrCh) == j) {
 ;PCODE: $00000708 VOL: 0
 ;PCODE: $00000709 VOL: 0
 ;PCODE: $0000070A VOL: 0
 ;PCODE: $0000070B VOL: 0
-; 0021 02F8 			ivChar = i;
 ;PCODE: $0000070C VOL: 0
 ;PCODE: $0000070D VOL: 0
-; 0021 02F9 			break;
 ;PCODE: $0000070E VOL: 0
-; 0021 02FA 		}
-; 0021 02FB 	}
 ;PCODE: $0000070F VOL: 0
+; 0021 02F6 	for(i=0,j=0x30; i<10; i++,j++) { //0-9 = 0x30-0x39
 ;PCODE: $00000710 VOL: 0
 ;PCODE: $00000711 VOL: 0
 ;PCODE: $00000712 VOL: 0
@@ -2760,23 +2753,24 @@ _0x420087:
 ;PCODE: $00000714 VOL: 0
 ;PCODE: $00000715 VOL: 0
 ;PCODE: $00000716 VOL: 0
-; 0021 02FC 	//printDebug("hex1:%02x \r\n",ivChar);
-; 0021 02FD 	ptrCh++;
 ;PCODE: $00000717 VOL: 0
 ;PCODE: $00000718 VOL: 0
-; 0021 02FE 
-; 0021 02FF 	for(i=0,j=0x41,k=0x61,l=10; i<6; i++,j++,k++,l++) { //41='A' //61='a'
 ;PCODE: $00000719 VOL: 0
 ;PCODE: $0000071A VOL: 0
 ;PCODE: $0000071B VOL: 0
 ;PCODE: $0000071C VOL: 0
+; 0021 02F7 		if(*(ptrCh) == j) {
 ;PCODE: $0000071D VOL: 0
 ;PCODE: $0000071E VOL: 0
 ;PCODE: $0000071F VOL: 0
 ;PCODE: $00000720 VOL: 0
+; 0021 02F8 			ivChar = i;
 ;PCODE: $00000721 VOL: 0
 ;PCODE: $00000722 VOL: 0
+; 0021 02F9 			break;
 ;PCODE: $00000723 VOL: 0
+; 0021 02FA 		}
+; 0021 02FB 	}
 ;PCODE: $00000724 VOL: 0
 ;PCODE: $00000725 VOL: 0
 ;PCODE: $00000726 VOL: 0
@@ -2785,12 +2779,14 @@ _0x420087:
 ;PCODE: $00000729 VOL: 0
 ;PCODE: $0000072A VOL: 0
 ;PCODE: $0000072B VOL: 0
+; 0021 02FC 	//printDebug("hex1:%02x \r\n",ivChar);
+; 0021 02FD 	ptrCh++;
 ;PCODE: $0000072C VOL: 0
 ;PCODE: $0000072D VOL: 0
+; 0021 02FE 
+; 0021 02FF 	for(i=0,j=0x41,k=0x61,l=10; i<6; i++,j++,k++,l++) { //41='A' //61='a'
 ;PCODE: $0000072E VOL: 0
 ;PCODE: $0000072F VOL: 0
-; 0021 0300 		//printDebug("[hex1]%02x:%02x:%02x (%d) \r\n",i,j,k,l);
-; 0021 0301 		if((*(ptrCh) == j) || (*(ptrCh) == k)) {
 ;PCODE: $00000730 VOL: 0
 ;PCODE: $00000731 VOL: 0
 ;PCODE: $00000732 VOL: 0
@@ -2802,20 +2798,18 @@ _0x420087:
 ;PCODE: $00000738 VOL: 0
 ;PCODE: $00000739 VOL: 0
 ;PCODE: $0000073A VOL: 0
-; 0021 0302 			ivChar = (ivChar<<4)|l;
 ;PCODE: $0000073B VOL: 0
 ;PCODE: $0000073C VOL: 0
 ;PCODE: $0000073D VOL: 0
 ;PCODE: $0000073E VOL: 0
 ;PCODE: $0000073F VOL: 0
-; 0021 0303 			break;
 ;PCODE: $00000740 VOL: 0
-; 0021 0304 		}
-; 0021 0305 	}
 ;PCODE: $00000741 VOL: 0
 ;PCODE: $00000742 VOL: 0
 ;PCODE: $00000743 VOL: 0
 ;PCODE: $00000744 VOL: 0
+; 0021 0300 		//printDebug("[hex1]%02x:%02x:%02x (%d) \r\n",i,j,k,l);
+; 0021 0301 		if((*(ptrCh) == j) || (*(ptrCh) == k)) {
 ;PCODE: $00000745 VOL: 0
 ;PCODE: $00000746 VOL: 0
 ;PCODE: $00000747 VOL: 0
@@ -2826,34 +2820,33 @@ _0x420087:
 ;PCODE: $0000074C VOL: 0
 ;PCODE: $0000074D VOL: 0
 ;PCODE: $0000074E VOL: 0
-; 0021 0306 	for(i=0,j=0x30; i<10; i++,j++) { //0-9 = 0x30-0x39
 ;PCODE: $0000074F VOL: 0
+; 0021 0302 			ivChar = (ivChar<<4)|l;
 ;PCODE: $00000750 VOL: 0
 ;PCODE: $00000751 VOL: 0
 ;PCODE: $00000752 VOL: 0
 ;PCODE: $00000753 VOL: 0
 ;PCODE: $00000754 VOL: 0
+; 0021 0303 			break;
 ;PCODE: $00000755 VOL: 0
+; 0021 0304 		}
+; 0021 0305 	}
 ;PCODE: $00000756 VOL: 0
 ;PCODE: $00000757 VOL: 0
 ;PCODE: $00000758 VOL: 0
 ;PCODE: $00000759 VOL: 0
 ;PCODE: $0000075A VOL: 0
 ;PCODE: $0000075B VOL: 0
-; 0021 0307 		if(*(ptrCh) == j) {
 ;PCODE: $0000075C VOL: 0
 ;PCODE: $0000075D VOL: 0
 ;PCODE: $0000075E VOL: 0
 ;PCODE: $0000075F VOL: 0
-; 0021 0308 			ivChar = (ivChar<<4)|i;
 ;PCODE: $00000760 VOL: 0
 ;PCODE: $00000761 VOL: 0
 ;PCODE: $00000762 VOL: 0
 ;PCODE: $00000763 VOL: 0
-; 0021 0309 			break;
+; 0021 0306 	for(i=0,j=0x30; i<10; i++,j++) { //0-9 = 0x30-0x39
 ;PCODE: $00000764 VOL: 0
-; 0021 030A 		}
-; 0021 030B 	}
 ;PCODE: $00000765 VOL: 0
 ;PCODE: $00000766 VOL: 0
 ;PCODE: $00000767 VOL: 0
@@ -2862,14 +2855,40 @@ _0x420087:
 ;PCODE: $0000076A VOL: 0
 ;PCODE: $0000076B VOL: 0
 ;PCODE: $0000076C VOL: 0
-; 0021 030C 	//printDebug("hex2:%02x \r\n",ivChar);
-; 0021 030D 	chReturn = ivChar;
 ;PCODE: $0000076D VOL: 0
 ;PCODE: $0000076E VOL: 0
-; 0021 030E 	return chReturn;
 ;PCODE: $0000076F VOL: 0
 ;PCODE: $00000770 VOL: 0
+; 0021 0307 		if(*(ptrCh) == j) {
 ;PCODE: $00000771 VOL: 0
 ;PCODE: $00000772 VOL: 0
-; 0021 030F }
 ;PCODE: $00000773 VOL: 0
+;PCODE: $00000774 VOL: 0
+; 0021 0308 			ivChar = (ivChar<<4)|i;
+;PCODE: $00000775 VOL: 0
+;PCODE: $00000776 VOL: 0
+;PCODE: $00000777 VOL: 0
+;PCODE: $00000778 VOL: 0
+; 0021 0309 			break;
+;PCODE: $00000779 VOL: 0
+; 0021 030A 		}
+; 0021 030B 	}
+;PCODE: $0000077A VOL: 0
+;PCODE: $0000077B VOL: 0
+;PCODE: $0000077C VOL: 0
+;PCODE: $0000077D VOL: 0
+;PCODE: $0000077E VOL: 0
+;PCODE: $0000077F VOL: 0
+;PCODE: $00000780 VOL: 0
+;PCODE: $00000781 VOL: 0
+; 0021 030C 	//printDebug("hex2:%02x \r\n",ivChar);
+; 0021 030D 	chReturn = ivChar;
+;PCODE: $00000782 VOL: 0
+;PCODE: $00000783 VOL: 0
+; 0021 030E 	return chReturn;
+;PCODE: $00000784 VOL: 0
+;PCODE: $00000785 VOL: 0
+;PCODE: $00000786 VOL: 0
+;PCODE: $00000787 VOL: 0
+; 0021 030F }
+;PCODE: $00000788 VOL: 0

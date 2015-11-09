@@ -3,10 +3,10 @@
 #include "main.h"
 #include "queue.h"
 #include "debug.h"
-
-#define DEVICE_ENABLE       0
-#define ALARM_ENABLE        1
-#define ALARM_ENABLE        1
+//
+//#define DEVICE_ENABLE       0
+//#define ALARM_ENABLE        1
+//#define ALARM_ENABLE        1
 
 typedef struct{
     iChar_t viCMD;
