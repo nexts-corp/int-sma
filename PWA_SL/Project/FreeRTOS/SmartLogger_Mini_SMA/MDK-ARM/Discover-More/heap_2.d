@@ -1,0 +1,12 @@
+.\Discover-More\heap_2.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\portable\MemMang\heap_2.c
+.\Discover-More\heap_2.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\Discover-More\heap_2.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\include\FreeRTOS.h
+.\Discover-More\heap_2.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\Discover-More\heap_2.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\Discover-More\heap_2.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\include\projdefs.h
+.\Discover-More\heap_2.o: ..\User\inc\FreeRTOSConfig.h
+.\Discover-More\heap_2.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\include\portable.h
+.\Discover-More\heap_2.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\portable\RVDS\ARM_CM4F\portmacro.h
+.\Discover-More\heap_2.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\include\mpu_wrappers.h
+.\Discover-More\heap_2.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\include\task.h
+.\Discover-More\heap_2.o: ..\..\..\..\Utilities\FreeRTOSv8.0.1\include\list.h
