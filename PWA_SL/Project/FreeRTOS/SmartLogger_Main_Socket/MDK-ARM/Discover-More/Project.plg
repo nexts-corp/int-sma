@@ -1,0 +1,31 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\ThanutSri\SkyDrive\Working\PWA_SL\Project\FreeRTOS\SmartLogger_v4\MDK-ARM\Project.uvproj
+Project File Date:  09/04/2015
+
+<h2>Output:</h2>
+Build target 'Discover-More'
+compiling SD_Task.c...
+..\User\src\SD_Task.c(67): warning:  #177-D: variable "check_regis" was declared but never referenced
+..\User\src\SD_Task.c(73): warning:  #177-D: variable "stBuf_Conf" was declared but never referenced
+..\User\src\SD_Task.c(80): warning:  #177-D: variable "log_res" was declared but never referenced
+..\User\src\SD_Task.c(300): warning:  #111-D: statement is unreachable
+..\User\src\SD_Task.c(1278): warning:  #177-D: variable "j" was declared but never referenced
+..\User\src\SD_Task.c(1279): warning:  #177-D: variable "printLevel" was declared but never referenced
+..\User\src\SD_Task.c(37): warning:  #177-D: function "xSD_CheckRegis" was declared but never referenced
+..\User\src\SD_Task.c(38): warning:  #177-D: function "xSD_SaveNetFlow" was declared but never referenced
+..\User\src\SD_Task.c(39): warning:  #177-D: function "xSD_HandleSaveConfig" was declared but never referenced
+..\User\src\SD_Task.c(40): warning:  #177-D: function "xSD_HandleStatusQueue" was declared but never referenced
+..\User\src\SD_Task.c(903): warning:  #177-D: function "vSD_HandleDataQueue" was declared but never referenced
+linking...
+Program Size: Code=126820 RO-data=7148 RW-data=1200 ZI-data=127584  
+FromELF: creating hex file...
+".\Discover-More\Project.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Users\\ThanutSri\\SkyDrive\\Working\\PWA_SL\\Project\\FreeRTOS\\SmartLogger_v4\\MDK-ARM\\Discover-More\\Project.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
