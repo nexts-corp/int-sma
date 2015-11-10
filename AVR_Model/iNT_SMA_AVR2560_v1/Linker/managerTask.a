@@ -34,7 +34,7 @@
 ;extern piQueueHandle_t pviQueueTaskAToTaskB;
 ;extern piQueueHandle_t pviQueueSensorToMang;
 ;extern piQueueHandle_t pviQueueDeviceToMang;
-;
+;extern eeprom iDVConfig_t viDVConfigUpdate;
 ;extern eeprom iUChar_t viFlagTerInit;           //Terminal initial frist
 ;
 ;extern iDataMini_t viDataReport;
@@ -80,15 +80,15 @@
 ; 001A 0033 //         0x70
 ; 001A 0034 //    } ;
 ; 001A 0035 
-; 001A 0036     char viGenDataElem[60] = {
-; 001A 0037          0x2A,0x06,0x11,0x04,0xCD,0xCC,0xC7,0x42,
-; 001A 0038          0x2A,0x06,0x12,0x04,0x00,0x00,0x00,0x00,
-; 001A 0039          0x2A,0x06,0x13,0x04,0x00,0x00,0xE0,0x41,
-; 001A 003A          0x5A,0x07,0x31,0x0c,0x0d,0x00,0x00,0x00,0x00,
-; 001A 003B          0x5A,0x07,0x32,0x0d,0x0d,0x01,0x0f,0xf0,0x3b,
-; 001A 003C          0x5A,0x07,0x41,0x0a,0x09,0x00,0x0f,0xe0,0x41,
-; 001A 003D          0x5A,0x07,0x42,0x0a,0x0b,0x00,0x0f,0x08,0x42
-; 001A 003E     } ;
+; 001A 0036 //    char viGenDataElem[60] = {
+; 001A 0037 //         0x2A,0x06,0x11,0x04,0xCD,0xCC,0xC7,0x42,
+; 001A 0038 //         0x2A,0x06,0x12,0x04,0x00,0x00,0x00,0x00,
+; 001A 0039 //         0x2A,0x06,0x13,0x04,0x00,0x00,0xE0,0x41,
+; 001A 003A //         0x5A,0x07,0x31,0x0c,0x0d,0x00,0x00,0x00,0x00,
+; 001A 003B //         0x5A,0x07,0x32,0x0d,0x0d,0x01,0x0f,0xf0,0x3b,
+; 001A 003C //         0x5A,0x07,0x41,0x0a,0x09,0x00,0x0f,0xe0,0x41,
+; 001A 003D //         0x5A,0x07,0x42,0x0a,0x0b,0x00,0x0f,0x08,0x42
+; 001A 003E //    } ;
 ; 001A 003F      char mti[2] = {0x02,0x00};
 ; 001A 0040      char tid[8] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
 ; 001A 0041      TIMER   viDelay_s;
@@ -97,9 +97,7 @@
 ; 001A 0044      iUChar_t modeOperate = REALTIME_MODE;
 ; 001A 0045      iUChar_t deviceStatus = DEVICE_ENABLE;
 ; 001A 0046 
-; 001A 0047 
-; 001A 0048 
-; 001A 0049     TIMER_setTimer(&viTEver1min, 60);
+; 001A 0047     tid[0] =  (viDVConfigUpdate.viProperties.viDeviceID[0]<<4);
 ;PCODE: $0000000F VOL: 0
 ;PCODE: $00000010 VOL: 0
 ;PCODE: $00000011 VOL: 0
@@ -107,16 +105,15 @@
 ;PCODE: $00000013 VOL: 0
 ;PCODE: $00000014 VOL: 0
 ;PCODE: $00000015 VOL: 0
-;	*pviParameter -> Y+698
+;	*pviParameter -> Y+638
 ;	i -> R16,R17
-;	viTXDataBuff -> Y+396
-;	viRXDataBuff -> Y+94
+;	viTXDataBuff -> Y+336
+;	viRXDataBuff -> Y+34
 ;	viHostRetransmit -> R19
 ;	*pviDatAndStatBuff -> R20,R21
-;	viDatAndStatLength -> Y+92
-;	viUniTime -> Y+88
-;	viRecordID -> Y+86
-;	viGenDataElem -> Y+26
+;	viDatAndStatLength -> Y+32
+;	viUniTime -> Y+28
+;	viRecordID -> Y+26
 ;	mti -> Y+24
 ;	tid -> Y+16
 ;	viDelay_s -> Y+12
@@ -132,74 +129,39 @@
 ;PCODE: $0000001B VOL: 0
 ;PCODE: $0000001C VOL: 0
 ;PCODE: $0000001D VOL: 0
-; 001A 004A     //TIMER_setTimer(&viTEver1min, 30);
-; 001A 004B     while(!TIMER_checkTimerExceed(viTEver1min)){
 ;PCODE: $0000001E VOL: 0
+; 001A 0048     tid[0] |=  (viDVConfigUpdate.viProperties.viDeviceID[1])&0x0f;
 ;PCODE: $0000001F VOL: 0
 ;PCODE: $00000020 VOL: 0
 ;PCODE: $00000021 VOL: 0
 ;PCODE: $00000022 VOL: 0
-; 001A 004C        #asm("wdr")
 ;PCODE: $00000023 VOL: 0
-	wdr
 ;PCODE: $00000024 VOL: 0
-; 001A 004D     }
 ;PCODE: $00000025 VOL: 0
+; 001A 0049     tid[1] =  (viDVConfigUpdate.viProperties.viDeviceID[2]<<4);
 ;PCODE: $00000026 VOL: 0
-; 001A 004E 
-; 001A 004F     #asm("wdr")
 ;PCODE: $00000027 VOL: 0
-	wdr
 ;PCODE: $00000028 VOL: 0
-; 001A 0050 
-; 001A 0051      printDebug("[managerTask]Task Running...\r\n");
 ;PCODE: $00000029 VOL: 0
 ;PCODE: $0000002A VOL: 0
+; 001A 004A     tid[1] |=  (viDVConfigUpdate.viProperties.viDeviceID[3])&0x0f;
 ;PCODE: $0000002B VOL: 0
 ;PCODE: $0000002C VOL: 0
 ;PCODE: $0000002D VOL: 0
 ;PCODE: $0000002E VOL: 0
 ;PCODE: $0000002F VOL: 0
-; 001A 0052 
-; 001A 0053 
-; 001A 0054 //    if(iQueueReceive(pviQueueSensorToMang,&pviRXReceiveSensor)==1){
-; 001A 0055 //        printDebug("<managerTask>ACD");
-; 001A 0056 //        for(i=0;i<SENSER_ADC_MAX_SIZE;i++){
-; 001A 0057 //            printDebug("[%d]:%d | ",(i+1),pviRXReceiveSensor.adc[i]);
-; 001A 0058 //        }
-; 001A 0059 //        printDebug("\r\n");
-; 001A 005A //        printDebug("<managerTask>DHT11 Temp-c(%f), Humidity(%f)\r\n",pviRXReceiveSensor.dht11Temp,pviRXReceiveSensor.dht11Humi);
-; 001A 005B //	}else{
-; 001A 005C //		printDebug("<managerTask>data can not sent a data to pviQueueSensorToMang.\r\n");
-; 001A 005D //	}
-; 001A 005E 
-; 001A 005F //
-; 001A 0060 //    if(iQueueReceive(pviQueueDeviceToMang,&pviRXReceiveSensor)==1){
-; 001A 0061 //        printDebug("<managerTask>ACD");
-; 001A 0062 //        for(i=0;i<SENSER_ADC_MAX_SIZE;i++){
-; 001A 0063 //            printDebug("[%d]:%d | ",(i+1),pviRXReceiveSensor.adc[i]);
-; 001A 0064 //        }
-; 001A 0065 //        printDebug("\r\n");
-; 001A 0066 //        printDebug("<managerTask>DHT11 Temp-c(%f), Humidity(%f)\r\n",pviRXReceiveSensor.dht11Temp,pviRXReceiveSensor.dht11Humi);
-; 001A 0067 //	}else{
-; 001A 0068 //		printDebug("<managerTask>data can not sent a data to pviQueueSensorToMang.\r\n");
-; 001A 0069 //	}
-; 001A 006A     iDataSelect('N');
 ;PCODE: $00000030 VOL: 0
 ;PCODE: $00000031 VOL: 0
-; 001A 006B     //Terminal frist initial//
-; 001A 006C     if(viFlagTerInit==0){
 ;PCODE: $00000032 VOL: 0
 ;PCODE: $00000033 VOL: 0
 ;PCODE: $00000034 VOL: 0
+; 001A 004B     tid[2] =  (viDVConfigUpdate.viProperties.viDeviceID[4]<<4);
 ;PCODE: $00000035 VOL: 0
-; 001A 006D         mti[0] = 0x08;
 ;PCODE: $00000036 VOL: 0
 ;PCODE: $00000037 VOL: 0
-; 001A 006E         mti[1] = 0x00;
 ;PCODE: $00000038 VOL: 0
 ;PCODE: $00000039 VOL: 0
-; 001A 006F         iPTCPack(&viTXDataBuff,(char *)"",0,mti,tid);
+; 001A 004C     tid[2] |=  (viDVConfigUpdate.viProperties.viDeviceID[5])&0x0f;
 ;PCODE: $0000003A VOL: 0
 ;PCODE: $0000003B VOL: 0
 ;PCODE: $0000003C VOL: 0
@@ -210,187 +172,186 @@
 ;PCODE: $00000041 VOL: 0
 ;PCODE: $00000042 VOL: 0
 ;PCODE: $00000043 VOL: 0
+; 001A 004D     tid[3] =  (viDVConfigUpdate.viProperties.viDeviceID[6]<<4);
 ;PCODE: $00000044 VOL: 0
-; 001A 0070         if(iLanWriteData(&viTXDataBuff)){
 ;PCODE: $00000045 VOL: 0
 ;PCODE: $00000046 VOL: 0
 ;PCODE: $00000047 VOL: 0
 ;PCODE: $00000048 VOL: 0
-; 001A 0071             if(iLanReadData(&viRXDataBuff)){
+; 001A 004E     tid[3] |=  (viDVConfigUpdate.viProperties.viDeviceID[7])&0x0f;
 ;PCODE: $00000049 VOL: 0
 ;PCODE: $0000004A VOL: 0
 ;PCODE: $0000004B VOL: 0
 ;PCODE: $0000004C VOL: 0
-; 001A 0072                 memcpy(&viUniTime,&viRXDataBuff.value[13],4);
 ;PCODE: $0000004D VOL: 0
 ;PCODE: $0000004E VOL: 0
 ;PCODE: $0000004F VOL: 0
 ;PCODE: $00000050 VOL: 0
 ;PCODE: $00000051 VOL: 0
 ;PCODE: $00000052 VOL: 0
+; 001A 004F     tid[4] =  (viDVConfigUpdate.viProperties.viDeviceID[8]<<4);
 ;PCODE: $00000053 VOL: 0
 ;PCODE: $00000054 VOL: 0
-; 001A 0073                 iSyncUniTime(&viUniTime);
 ;PCODE: $00000055 VOL: 0
 ;PCODE: $00000056 VOL: 0
-; 001A 0074                 if(iPTCParser(&viRXDataBuff)){
 ;PCODE: $00000057 VOL: 0
+; 001A 0050     tid[4] |=  (viDVConfigUpdate.viProperties.viDeviceID[9])&0x0f;
 ;PCODE: $00000058 VOL: 0
 ;PCODE: $00000059 VOL: 0
 ;PCODE: $0000005A VOL: 0
-; 001A 0075                     viFlagTerInit = 1;
 ;PCODE: $0000005B VOL: 0
 ;PCODE: $0000005C VOL: 0
 ;PCODE: $0000005D VOL: 0
-; 001A 0076                     iTagParser(&viRXDataBuff);      //tag process  othor do..
 ;PCODE: $0000005E VOL: 0
 ;PCODE: $0000005F VOL: 0
-; 001A 0077                     if(iPTCCheckHostReq(&viRXDataBuff)){
 ;PCODE: $00000060 VOL: 0
 ;PCODE: $00000061 VOL: 0
+; 001A 0051     tid[5] =  (viDVConfigUpdate.viProperties.viDeviceID[10]<<4);
 ;PCODE: $00000062 VOL: 0
 ;PCODE: $00000063 VOL: 0
-; 001A 0078 
-; 001A 0079                     }
-; 001A 007A                 }
 ;PCODE: $00000064 VOL: 0
-; 001A 007B                 //iHostReqProcess(&viTXDataBuff,&viRXDataBuff);
-; 001A 007C             }
 ;PCODE: $00000065 VOL: 0
-; 001A 007D         }
 ;PCODE: $00000066 VOL: 0
-; 001A 007E     }else{
+; 001A 0052     tid[5] |=  (viDVConfigUpdate.viProperties.viDeviceID[11])&0x0f;
 ;PCODE: $00000067 VOL: 0
 ;PCODE: $00000068 VOL: 0
 ;PCODE: $00000069 VOL: 0
-; 001A 007F 
-; 001A 0080         //deviceStatus = DEVICE_DISABLE;
-; 001A 0081         deviceStatus = DEVICE_ENABLE;
 ;PCODE: $0000006A VOL: 0
 ;PCODE: $0000006B VOL: 0
-; 001A 0082 
-; 001A 0083         if(deviceStatus == DEVICE_ENABLE){
 ;PCODE: $0000006C VOL: 0
 ;PCODE: $0000006D VOL: 0
 ;PCODE: $0000006E VOL: 0
-; 001A 0084             TIMER_setTimer(&viDelay_s, 5);
 ;PCODE: $0000006F VOL: 0
 ;PCODE: $00000070 VOL: 0
+; 001A 0053     tid[6] =  (viDVConfigUpdate.viProperties.viDeviceID[12]<<4);
 ;PCODE: $00000071 VOL: 0
 ;PCODE: $00000072 VOL: 0
-; 001A 0085             while(!TIMER_checkTimerExceed(viDelay_s)){
 ;PCODE: $00000073 VOL: 0
 ;PCODE: $00000074 VOL: 0
 ;PCODE: $00000075 VOL: 0
+; 001A 0054     tid[6] |=  (viDVConfigUpdate.viProperties.viDeviceID[13])&0x0f;
 ;PCODE: $00000076 VOL: 0
 ;PCODE: $00000077 VOL: 0
-; 001A 0086                #asm("wdr")
 ;PCODE: $00000078 VOL: 0
-	wdr
 ;PCODE: $00000079 VOL: 0
-; 001A 0087             }
 ;PCODE: $0000007A VOL: 0
 ;PCODE: $0000007B VOL: 0
-; 001A 0088 
-; 001A 0089             viDatAndStatLength = (viDataReport.length + viStatusReport.length);
 ;PCODE: $0000007C VOL: 0
 ;PCODE: $0000007D VOL: 0
 ;PCODE: $0000007E VOL: 0
 ;PCODE: $0000007F VOL: 0
-; 001A 008A             if(viDatAndStatLength<=0){
+; 001A 0055     tid[7] =  (viDVConfigUpdate.viProperties.viDeviceID[14]<<4);
 ;PCODE: $00000080 VOL: 0
 ;PCODE: $00000081 VOL: 0
 ;PCODE: $00000082 VOL: 0
-; 001A 008B                modeOperate = LOGGER_MODE;
 ;PCODE: $00000083 VOL: 0
 ;PCODE: $00000084 VOL: 0
-; 001A 008C                if(1){   //if SD record file empty then to return
-; 001A 008D                   return;
+; 001A 0056     tid[7] |=  (viDVConfigUpdate.viProperties.viDeviceID[15])&0x0f;
 ;PCODE: $00000085 VOL: 0
 ;PCODE: $00000086 VOL: 0
 ;PCODE: $00000087 VOL: 0
-; 001A 008E                }
-; 001A 008F             }else{
 ;PCODE: $00000088 VOL: 0
 ;PCODE: $00000089 VOL: 0
 ;PCODE: $0000008A VOL: 0
-; 001A 0090                pviDatAndStatBuff = (iChar_t*)malloc(viDatAndStatLength);
 ;PCODE: $0000008B VOL: 0
 ;PCODE: $0000008C VOL: 0
 ;PCODE: $0000008D VOL: 0
-; 001A 0091                if(pviDatAndStatBuff!=NULL){
 ;PCODE: $0000008E VOL: 0
+; 001A 0057 
+; 001A 0058     //TIMER_setTimer(&viTEver1min, 60);
+; 001A 0059     TIMER_setTimer(&viTEver1min, 20);
 ;PCODE: $0000008F VOL: 0
-; 001A 0092                   memcpy(&pviDatAndStatBuff[0],viDataReport.value,viDataReport.length);
 ;PCODE: $00000090 VOL: 0
 ;PCODE: $00000091 VOL: 0
 ;PCODE: $00000092 VOL: 0
+; 001A 005A     while(!TIMER_checkTimerExceed(viTEver1min)){
 ;PCODE: $00000093 VOL: 0
 ;PCODE: $00000094 VOL: 0
 ;PCODE: $00000095 VOL: 0
-; 001A 0093                   memcpy(&pviDatAndStatBuff[viDataReport.length],viStatusReport.value,viStatusReport.length);
 ;PCODE: $00000096 VOL: 0
 ;PCODE: $00000097 VOL: 0
+; 001A 005B        #asm("wdr")
 ;PCODE: $00000098 VOL: 0
+	wdr
 ;PCODE: $00000099 VOL: 0
+; 001A 005C     }
 ;PCODE: $0000009A VOL: 0
 ;PCODE: $0000009B VOL: 0
+; 001A 005D 
+; 001A 005E     #asm("wdr")
 ;PCODE: $0000009C VOL: 0
+	wdr
 ;PCODE: $0000009D VOL: 0
-; 001A 0094                }else{
+; 001A 005F 
+; 001A 0060      printDebug("[managerTask]Task Running...\r\n");
 ;PCODE: $0000009E VOL: 0
 ;PCODE: $0000009F VOL: 0
-; 001A 0095                   free(pviDatAndStatBuff);
 ;PCODE: $000000A0 VOL: 0
 ;PCODE: $000000A1 VOL: 0
-; 001A 0096                   printDebug("[managerTask]data and ststus can't allocate mem.\r\n");
 ;PCODE: $000000A2 VOL: 0
 ;PCODE: $000000A3 VOL: 0
 ;PCODE: $000000A4 VOL: 0
+; 001A 0061 
+; 001A 0062 
+; 001A 0063 //    if(iQueueReceive(pviQueueSensorToMang,&pviRXReceiveSensor)==1){
+; 001A 0064 //        printDebug("<managerTask>ACD");
+; 001A 0065 //        for(i=0;i<SENSER_ADC_MAX_SIZE;i++){
+; 001A 0066 //            printDebug("[%d]:%d | ",(i+1),pviRXReceiveSensor.adc[i]);
+; 001A 0067 //        }
+; 001A 0068 //        printDebug("\r\n");
+; 001A 0069 //        printDebug("<managerTask>DHT11 Temp-c(%f), Humidity(%f)\r\n",pviRXReceiveSensor.dht11Temp,pviRXReceiveSensor.dht11Humi);
+; 001A 006A //	}else{
+; 001A 006B //		printDebug("<managerTask>data can not sent a data to pviQueueSensorToMang.\r\n");
+; 001A 006C //	}
+; 001A 006D 
+; 001A 006E //
+; 001A 006F //    if(iQueueReceive(pviQueueDeviceToMang,&pviRXReceiveSensor)==1){
+; 001A 0070 //        printDebug("<managerTask>ACD");
+; 001A 0071 //        for(i=0;i<SENSER_ADC_MAX_SIZE;i++){
+; 001A 0072 //            printDebug("[%d]:%d | ",(i+1),pviRXReceiveSensor.adc[i]);
+; 001A 0073 //        }
+; 001A 0074 //        printDebug("\r\n");
+; 001A 0075 //        printDebug("<managerTask>DHT11 Temp-c(%f), Humidity(%f)\r\n",pviRXReceiveSensor.dht11Temp,pviRXReceiveSensor.dht11Humi);
+; 001A 0076 //	}else{
+; 001A 0077 //		printDebug("<managerTask>data can not sent a data to pviQueueSensorToMang.\r\n");
+; 001A 0078 //	}
+; 001A 0079     //iDataSelect('N');
+; 001A 007A     //Terminal frist initial//
+; 001A 007B     if(viFlagTerInit==0){
 ;PCODE: $000000A5 VOL: 0
 ;PCODE: $000000A6 VOL: 0
 ;PCODE: $000000A7 VOL: 0
 ;PCODE: $000000A8 VOL: 0
-; 001A 0097                   return;
+; 001A 007C         mti[0] = 0x08;
 ;PCODE: $000000A9 VOL: 0
 ;PCODE: $000000AA VOL: 0
+; 001A 007D         mti[1] = 0x00;
 ;PCODE: $000000AB VOL: 0
-; 001A 0098                }
 ;PCODE: $000000AC VOL: 0
-; 001A 0099                modeOperate = REALTIME_MODE;
+; 001A 007E         iPTCPack(&viTXDataBuff,(char *)"",0,mti,tid);
 ;PCODE: $000000AD VOL: 0
 ;PCODE: $000000AE VOL: 0
-; 001A 009A             }
 ;PCODE: $000000AF VOL: 0
-; 001A 009B 
-; 001A 009C 
-; 001A 009D             if(modeOperate == REALTIME_MODE){
 ;PCODE: $000000B0 VOL: 0
 ;PCODE: $000000B1 VOL: 0
 ;PCODE: $000000B2 VOL: 0
-; 001A 009E                  mti[0] = 0x02;
 ;PCODE: $000000B3 VOL: 0
 ;PCODE: $000000B4 VOL: 0
-; 001A 009F                  mti[1] = 0x00;
 ;PCODE: $000000B5 VOL: 0
 ;PCODE: $000000B6 VOL: 0
-; 001A 00A0             }else if(modeOperate == LOGGER_MODE){
 ;PCODE: $000000B7 VOL: 0
+; 001A 007F         viRecordID = iDataInsert(viTXDataBuff.value,viTXDataBuff.length);
 ;PCODE: $000000B8 VOL: 0
 ;PCODE: $000000B9 VOL: 0
 ;PCODE: $000000BA VOL: 0
 ;PCODE: $000000BB VOL: 0
-; 001A 00A1                  mti[0] = 0x03;
 ;PCODE: $000000BC VOL: 0
 ;PCODE: $000000BD VOL: 0
-; 001A 00A2                  mti[1] = 0x00;
+; 001A 0080         if(viRecordID>0){
 ;PCODE: $000000BE VOL: 0
 ;PCODE: $000000BF VOL: 0
-; 001A 00A3             }
-; 001A 00A4 
-; 001A 00A5             //iPTCPack(&viTXDataBuff,viGenDataElem,sizeof(viGenDataElem),mti,tid);
-; 001A 00A6             iPTCPack(&viTXDataBuff,(const char*) pviDatAndStatBuff,viDatAndStatLength,mti,tid);
 ;PCODE: $000000C0 VOL: 0
+; 001A 0081             printDebug("[managerTask]Record ID(%04ld)\r\n",viRecordID);
 ;PCODE: $000000C1 VOL: 0
 ;PCODE: $000000C2 VOL: 0
 ;PCODE: $000000C3 VOL: 0
@@ -401,24 +362,25 @@
 ;PCODE: $000000C8 VOL: 0
 ;PCODE: $000000C9 VOL: 0
 ;PCODE: $000000CA VOL: 0
-; 001A 00A7             free(pviDatAndStatBuff);
+; 001A 0082         }
+; 001A 0083         iDataSelect(viRecordID,'N');
 ;PCODE: $000000CB VOL: 0
 ;PCODE: $000000CC VOL: 0
-; 001A 00A8 
-; 001A 00A9             viRecordID = iDataInsert(viTXDataBuff.value,viTXDataBuff.length);
 ;PCODE: $000000CD VOL: 0
 ;PCODE: $000000CE VOL: 0
 ;PCODE: $000000CF VOL: 0
+; 001A 0084 
+; 001A 0085         if(iLanWriteData(&viTXDataBuff)){
 ;PCODE: $000000D0 VOL: 0
 ;PCODE: $000000D1 VOL: 0
 ;PCODE: $000000D2 VOL: 0
-; 001A 00AA             if(viRecordID>0){
 ;PCODE: $000000D3 VOL: 0
+; 001A 0086             if(iLanReadData(&viRXDataBuff)){
 ;PCODE: $000000D4 VOL: 0
 ;PCODE: $000000D5 VOL: 0
-; 001A 00AB                 printDebug("[managerTask]Record ID(%04ld)\r\n",viRecordID);
 ;PCODE: $000000D6 VOL: 0
 ;PCODE: $000000D7 VOL: 0
+; 001A 0087                 memcpy(&viUniTime,&viRXDataBuff.value[13],4);
 ;PCODE: $000000D8 VOL: 0
 ;PCODE: $000000D9 VOL: 0
 ;PCODE: $000000DA VOL: 0
@@ -426,111 +388,121 @@
 ;PCODE: $000000DC VOL: 0
 ;PCODE: $000000DD VOL: 0
 ;PCODE: $000000DE VOL: 0
+; 001A 0088                 iSyncUniTime(&viUniTime);
 ;PCODE: $000000DF VOL: 0
-; 001A 00AC             }
-; 001A 00AD 
-; 001A 00AE             iMangQueueAddItem(viRecordID,&viTXDataBuff,&viTXDataBuff.value[17]); //add protocol in mang queue
 ;PCODE: $000000E0 VOL: 0
+; 001A 0089                 if(iPTCParser(&viRXDataBuff)){
 ;PCODE: $000000E1 VOL: 0
 ;PCODE: $000000E2 VOL: 0
 ;PCODE: $000000E3 VOL: 0
 ;PCODE: $000000E4 VOL: 0
+; 001A 008A                     //iDataSelect(viRecordID,'N');
+; 001A 008B                     viFlagTerInit = 1;
 ;PCODE: $000000E5 VOL: 0
 ;PCODE: $000000E6 VOL: 0
 ;PCODE: $000000E7 VOL: 0
+; 001A 008C                     iTagParser(&viRXDataBuff);      //tag process  othor do..
 ;PCODE: $000000E8 VOL: 0
-; 001A 00AF             iMangQueueDisplay();//display mang queue
 ;PCODE: $000000E9 VOL: 0
-; 001A 00B0             delay_ms(1000);
+; 001A 008D                     if(iPTCCheckHostReq(&viRXDataBuff)){
 ;PCODE: $000000EA VOL: 0
 ;PCODE: $000000EB VOL: 0
-; 001A 00B1             //iDataInsert(viTXDataBuff.value,viTXDataBuff.length);
-; 001A 00B2             #asm("wdr")
 ;PCODE: $000000EC VOL: 0
-	wdr
 ;PCODE: $000000ED VOL: 0
-; 001A 00B3 
-; 001A 00B4             //print_payload(viTXDataBuff.value, (sizeof(viGenDataElem)+20));               //20 = header + check sum
-; 001A 00B5             while(iMangCheckRetransmit(&viTXDataBuff.value[17])!=0){
+; 001A 008E 
+; 001A 008F                     }
+; 001A 0090                 }
 ;PCODE: $000000EE VOL: 0
+; 001A 0091                 //iHostReqProcess(&viTXDataBuff,&viRXDataBuff);
+; 001A 0092             }
 ;PCODE: $000000EF VOL: 0
+; 001A 0093         }
 ;PCODE: $000000F0 VOL: 0
+; 001A 0094     }else{
 ;PCODE: $000000F1 VOL: 0
 ;PCODE: $000000F2 VOL: 0
 ;PCODE: $000000F3 VOL: 0
+; 001A 0095 
+; 001A 0096         //deviceStatus = DEVICE_DISABLE;
+; 001A 0097         deviceStatus = DEVICE_ENABLE;
 ;PCODE: $000000F4 VOL: 0
-; 001A 00B6                 if(iLanWriteData(&viTXDataBuff)){
 ;PCODE: $000000F5 VOL: 0
+; 001A 0098 
+; 001A 0099         if(deviceStatus == DEVICE_ENABLE){
 ;PCODE: $000000F6 VOL: 0
 ;PCODE: $000000F7 VOL: 0
 ;PCODE: $000000F8 VOL: 0
-; 001A 00B7                       if(iLanReadData(&viRXDataBuff)){
+; 001A 009A             TIMER_setTimer(&viDelay_s, 5);
 ;PCODE: $000000F9 VOL: 0
 ;PCODE: $000000FA VOL: 0
 ;PCODE: $000000FB VOL: 0
 ;PCODE: $000000FC VOL: 0
-; 001A 00B8                             memcpy(&viUniTime,&viRXDataBuff.value[13],4);
+; 001A 009B             while(!TIMER_checkTimerExceed(viDelay_s)){
 ;PCODE: $000000FD VOL: 0
 ;PCODE: $000000FE VOL: 0
 ;PCODE: $000000FF VOL: 0
 ;PCODE: $00000100 VOL: 0
 ;PCODE: $00000101 VOL: 0
+; 001A 009C                #asm("wdr")
 ;PCODE: $00000102 VOL: 0
+	wdr
 ;PCODE: $00000103 VOL: 0
+; 001A 009D             }
 ;PCODE: $00000104 VOL: 0
-; 001A 00B9                             iSyncUniTime(&viUniTime);
 ;PCODE: $00000105 VOL: 0
+; 001A 009E 
+; 001A 009F             viDatAndStatLength = (viDataReport.length + viStatusReport.length);
 ;PCODE: $00000106 VOL: 0
-; 001A 00BA                             iMangQueueDelItem(&viRXDataBuff.value[17]);       //del queue with fid
 ;PCODE: $00000107 VOL: 0
 ;PCODE: $00000108 VOL: 0
 ;PCODE: $00000109 VOL: 0
+; 001A 00A0             if(viDatAndStatLength<=0){
 ;PCODE: $0000010A VOL: 0
-; 001A 00BB                             if(iPTCParser(&viRXDataBuff)){    //report success
 ;PCODE: $0000010B VOL: 0
 ;PCODE: $0000010C VOL: 0
+; 001A 00A1                modeOperate = LOGGER_MODE;
 ;PCODE: $0000010D VOL: 0
 ;PCODE: $0000010E VOL: 0
-; 001A 00BC                                   printDebug("[managerTask]Print.[\r\n");
+; 001A 00A2                if(1){   //if SD record file empty then to return
+; 001A 00A3                   return;
 ;PCODE: $0000010F VOL: 0
 ;PCODE: $00000110 VOL: 0
 ;PCODE: $00000111 VOL: 0
+; 001A 00A4                }
+; 001A 00A5             }else{
 ;PCODE: $00000112 VOL: 0
 ;PCODE: $00000113 VOL: 0
 ;PCODE: $00000114 VOL: 0
+; 001A 00A6                pviDatAndStatBuff = (iChar_t*)malloc(viDatAndStatLength);
 ;PCODE: $00000115 VOL: 0
-; 001A 00BD                                   print_payload(viRXDataBuff.value,viRXDataBuff.length);
 ;PCODE: $00000116 VOL: 0
 ;PCODE: $00000117 VOL: 0
+; 001A 00A7                if(pviDatAndStatBuff!=NULL){
 ;PCODE: $00000118 VOL: 0
 ;PCODE: $00000119 VOL: 0
+; 001A 00A8                   memcpy(&pviDatAndStatBuff[0],viDataReport.value,viDataReport.length);
 ;PCODE: $0000011A VOL: 0
-; 001A 00BE                                   printDebug("]\r\n");
 ;PCODE: $0000011B VOL: 0
 ;PCODE: $0000011C VOL: 0
 ;PCODE: $0000011D VOL: 0
 ;PCODE: $0000011E VOL: 0
 ;PCODE: $0000011F VOL: 0
+; 001A 00A9                   memcpy(&pviDatAndStatBuff[viDataReport.length],viStatusReport.value,viStatusReport.length);
 ;PCODE: $00000120 VOL: 0
 ;PCODE: $00000121 VOL: 0
-; 001A 00BF 
-; 001A 00C0                                   iTagParser(&viRXDataBuff);      //tag process  othor do..
 ;PCODE: $00000122 VOL: 0
 ;PCODE: $00000123 VOL: 0
-; 001A 00C1 
-; 001A 00C2 
-; 001A 00C3                                   if(iPTCCheckHostReq(&viRXDataBuff)){
 ;PCODE: $00000124 VOL: 0
 ;PCODE: $00000125 VOL: 0
 ;PCODE: $00000126 VOL: 0
 ;PCODE: $00000127 VOL: 0
-; 001A 00C4                                      mti[0] = 0x08;
+; 001A 00AA                }else{
 ;PCODE: $00000128 VOL: 0
 ;PCODE: $00000129 VOL: 0
-; 001A 00C5                                      mti[1] = 0x00;
+; 001A 00AB                   free(pviDatAndStatBuff);
 ;PCODE: $0000012A VOL: 0
 ;PCODE: $0000012B VOL: 0
-; 001A 00C6                                      iPTCPack(&viTXDataBuff,(char *)"",0,mti,tid);
+; 001A 00AC                   printDebug("[managerTask]data and ststus can't allocate mem.\r\n");
 ;PCODE: $0000012C VOL: 0
 ;PCODE: $0000012D VOL: 0
 ;PCODE: $0000012E VOL: 0
@@ -538,118 +510,91 @@
 ;PCODE: $00000130 VOL: 0
 ;PCODE: $00000131 VOL: 0
 ;PCODE: $00000132 VOL: 0
+; 001A 00AD                   return;
 ;PCODE: $00000133 VOL: 0
 ;PCODE: $00000134 VOL: 0
 ;PCODE: $00000135 VOL: 0
+; 001A 00AE                }
 ;PCODE: $00000136 VOL: 0
-; 001A 00C7                                      while(viHostRetransmit!=0){
+; 001A 00AF                modeOperate = REALTIME_MODE;
 ;PCODE: $00000137 VOL: 0
 ;PCODE: $00000138 VOL: 0
+; 001A 00B0             }
 ;PCODE: $00000139 VOL: 0
-; 001A 00C8                                         if(iLanWriteData(&viTXDataBuff)){
+; 001A 00B1 
+; 001A 00B2 
+; 001A 00B3             if(modeOperate == REALTIME_MODE){
 ;PCODE: $0000013A VOL: 0
 ;PCODE: $0000013B VOL: 0
 ;PCODE: $0000013C VOL: 0
+; 001A 00B4                  mti[0] = 0x02;
 ;PCODE: $0000013D VOL: 0
-; 001A 00C9                                             if(iLanReadData(&viRXDataBuff)){
 ;PCODE: $0000013E VOL: 0
+; 001A 00B5                  mti[1] = 0x00;
 ;PCODE: $0000013F VOL: 0
 ;PCODE: $00000140 VOL: 0
+; 001A 00B6             }else if(modeOperate == LOGGER_MODE){
 ;PCODE: $00000141 VOL: 0
-; 001A 00CA                                                 iHostReqProcess(&viTXDataBuff,&viRXDataBuff);
 ;PCODE: $00000142 VOL: 0
 ;PCODE: $00000143 VOL: 0
 ;PCODE: $00000144 VOL: 0
 ;PCODE: $00000145 VOL: 0
-; 001A 00CB                                             }
-; 001A 00CC                                             break;
+; 001A 00B7                  mti[0] = 0x03;
 ;PCODE: $00000146 VOL: 0
 ;PCODE: $00000147 VOL: 0
-; 001A 00CD                                         }
-; 001A 00CE                                         viHostRetransmit--;
+; 001A 00B8                  mti[1] = 0x00;
 ;PCODE: $00000148 VOL: 0
 ;PCODE: $00000149 VOL: 0
+; 001A 00B9             }
+; 001A 00BA 
+; 001A 00BB             //iPTCPack(&viTXDataBuff,viGenDataElem,sizeof(viGenDataElem),mti,tid);
+; 001A 00BC             iPTCPack(&viTXDataBuff,(const char*) pviDatAndStatBuff,viDatAndStatLength,mti,tid);
 ;PCODE: $0000014A VOL: 0
-; 001A 00CF                                      }
 ;PCODE: $0000014B VOL: 0
 ;PCODE: $0000014C VOL: 0
-; 001A 00D0                                   }
-; 001A 00D1                             }
 ;PCODE: $0000014D VOL: 0
-; 001A 00D2                             break;
 ;PCODE: $0000014E VOL: 0
 ;PCODE: $0000014F VOL: 0
-; 001A 00D3                        }else{
 ;PCODE: $00000150 VOL: 0
 ;PCODE: $00000151 VOL: 0
-; 001A 00D4                             //iMangQueueDelItem(&viRXDataBuff.value[17]);       //del queue with fid
-; 001A 00D5                        }
 ;PCODE: $00000152 VOL: 0
-; 001A 00D6                 }
-; 001A 00D7                 if(iMangCheckRetransmit(&viTXDataBuff.value[17])==0){
 ;PCODE: $00000153 VOL: 0
 ;PCODE: $00000154 VOL: 0
+; 001A 00BD             free(pviDatAndStatBuff);
 ;PCODE: $00000155 VOL: 0
 ;PCODE: $00000156 VOL: 0
+; 001A 00BE 
+; 001A 00BF             viRecordID = iDataInsert(viTXDataBuff.value,viTXDataBuff.length);
 ;PCODE: $00000157 VOL: 0
 ;PCODE: $00000158 VOL: 0
 ;PCODE: $00000159 VOL: 0
-; 001A 00D8                      //iDataLogInsert(viTXDataBuff.value,viTXDataBuff.length);
-; 001A 00D9                      iMangQueueDelItem(&viTXDataBuff.value[17]);       //del queue with fid  due over retransmit
 ;PCODE: $0000015A VOL: 0
 ;PCODE: $0000015B VOL: 0
 ;PCODE: $0000015C VOL: 0
+; 001A 00C0             if(viRecordID>0){
 ;PCODE: $0000015D VOL: 0
-; 001A 00DA                 }
-; 001A 00DB             }
 ;PCODE: $0000015E VOL: 0
 ;PCODE: $0000015F VOL: 0
+; 001A 00C1                 printDebug("[managerTask]Record ID(%04ld)\r\n",viRecordID);
 ;PCODE: $00000160 VOL: 0
-; 001A 00DC 
-; 001A 00DD 
-; 001A 00DE         }
-; 001A 00DF 
-; 001A 00E0     }
 ;PCODE: $00000161 VOL: 0
 ;PCODE: $00000162 VOL: 0
-; 001A 00E1 
-; 001A 00E2 
-; 001A 00E3 
-; 001A 00E4 }
 ;PCODE: $00000163 VOL: 0
 ;PCODE: $00000164 VOL: 0
 ;PCODE: $00000165 VOL: 0
 ;PCODE: $00000166 VOL: 0
-;
-;iUInt_t iHostReqProcess(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
-; 001A 00E6 iUInt_t iHostReqProcess(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
 ;PCODE: $00000167 VOL: 0
 ;PCODE: $00000168 VOL: 0
-; 001A 00E7     char mti[2] = {0x08,0x00};
-; 001A 00E8     char tid[8] = {0x01,0x01,0x01,0x01,0x01,0x01,0x01,0x01};
-; 001A 00E9     iUInt_t viReturn = 0;
-; 001A 00EA     iUChar_t viRetransmit = 1;
-; 001A 00EB     iChar_t viHostNeedFlag = 0;
-; 001A 00EC 
-; 001A 00ED //    iPTCPack(pviTXDataBuff_arg,(char *)"",0,mti,tid);
-; 001A 00EE //    iMangQueueAddItem(pviTXDataBuff_arg,&pviTXDataBuff_arg->value[17]); //add protocol in mang queue
-; 001A 00EF //    iMangQueueDisplay();//display mang queue
-; 001A 00F0 //    iDataInsert(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
-; 001A 00F1     printDebug("[iHostReqProcess]TX Print 1.[\r\n");
 ;PCODE: $00000169 VOL: 0
+; 001A 00C2             }
+; 001A 00C3             iDataSelect(viRecordID,'N');
 ;PCODE: $0000016A VOL: 0
 ;PCODE: $0000016B VOL: 0
 ;PCODE: $0000016C VOL: 0
 ;PCODE: $0000016D VOL: 0
 ;PCODE: $0000016E VOL: 0
+; 001A 00C4             iMangQueueAddItem(viRecordID,&viTXDataBuff,&viTXDataBuff.value[17]); //add protocol in mang queue
 ;PCODE: $0000016F VOL: 0
-;	*pviTXDataBuff_arg -> Y+16
-;	*pviRXDataBuff_arg -> Y+14
-;	mti -> Y+12
-;	tid -> Y+4
-;	viReturn -> R16,R17
-;	viRetransmit -> R19
-;	viHostNeedFlag -> R18
 ;PCODE: $00000170 VOL: 0
 ;PCODE: $00000171 VOL: 0
 ;PCODE: $00000172 VOL: 0
@@ -657,30 +602,37 @@
 ;PCODE: $00000174 VOL: 0
 ;PCODE: $00000175 VOL: 0
 ;PCODE: $00000176 VOL: 0
+; 001A 00C5             iMangQueueDisplay();//display mang queue
 ;PCODE: $00000177 VOL: 0
+; 001A 00C6             delay_ms(1000);
 ;PCODE: $00000178 VOL: 0
 ;PCODE: $00000179 VOL: 0
+; 001A 00C7             //iDataInsert(viTXDataBuff.value,viTXDataBuff.length);
+; 001A 00C8             #asm("wdr")
 ;PCODE: $0000017A VOL: 0
+	wdr
 ;PCODE: $0000017B VOL: 0
+; 001A 00C9 
+; 001A 00CA             //print_payload(viTXDataBuff.value, (sizeof(viGenDataElem)+20));               //20 = header + check sum
+; 001A 00CB             while(iMangCheckRetransmit(&viTXDataBuff.value[17])!=0){
 ;PCODE: $0000017C VOL: 0
-; 001A 00F2     print_payload(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
 ;PCODE: $0000017D VOL: 0
 ;PCODE: $0000017E VOL: 0
 ;PCODE: $0000017F VOL: 0
 ;PCODE: $00000180 VOL: 0
 ;PCODE: $00000181 VOL: 0
 ;PCODE: $00000182 VOL: 0
+; 001A 00CC                 if(iLanWriteData(&viTXDataBuff)){
 ;PCODE: $00000183 VOL: 0
-; 001A 00F3     printDebug("]\r\n");
 ;PCODE: $00000184 VOL: 0
 ;PCODE: $00000185 VOL: 0
 ;PCODE: $00000186 VOL: 0
+; 001A 00CD                       if(iLanReadData(&viRXDataBuff)){
 ;PCODE: $00000187 VOL: 0
 ;PCODE: $00000188 VOL: 0
 ;PCODE: $00000189 VOL: 0
 ;PCODE: $0000018A VOL: 0
-; 001A 00F4 
-; 001A 00F5     printDebug("[iHostReqProcess]RX Print 2.[\r\n");
+; 001A 00CE                             memcpy(&viUniTime,&viRXDataBuff.value[13],4);
 ;PCODE: $0000018B VOL: 0
 ;PCODE: $0000018C VOL: 0
 ;PCODE: $0000018D VOL: 0
@@ -688,157 +640,112 @@
 ;PCODE: $0000018F VOL: 0
 ;PCODE: $00000190 VOL: 0
 ;PCODE: $00000191 VOL: 0
-; 001A 00F6     print_payload(pviRXDataBuff_arg->value,pviRXDataBuff_arg->length);
+; 001A 00CF                             iSyncUniTime(&viUniTime);
 ;PCODE: $00000192 VOL: 0
 ;PCODE: $00000193 VOL: 0
+; 001A 00D0                             iMangQueueDelItem(&viRXDataBuff.value[17]);       //del queue with fid
 ;PCODE: $00000194 VOL: 0
 ;PCODE: $00000195 VOL: 0
+; 001A 00D1                             if(iPTCParser(&viRXDataBuff)){    //report success
 ;PCODE: $00000196 VOL: 0
 ;PCODE: $00000197 VOL: 0
 ;PCODE: $00000198 VOL: 0
-; 001A 00F7     printDebug("]\r\n");
 ;PCODE: $00000199 VOL: 0
+; 001A 00D2                                   printDebug("[managerTask]Print.[\r\n");
 ;PCODE: $0000019A VOL: 0
 ;PCODE: $0000019B VOL: 0
 ;PCODE: $0000019C VOL: 0
 ;PCODE: $0000019D VOL: 0
 ;PCODE: $0000019E VOL: 0
 ;PCODE: $0000019F VOL: 0
-; 001A 00F8 
-; 001A 00F9     if(iPTCParser(pviRXDataBuff_arg)){    //report success
 ;PCODE: $000001A0 VOL: 0
+; 001A 00D3                                   print_payload(viRXDataBuff.value,viRXDataBuff.length);
 ;PCODE: $000001A1 VOL: 0
 ;PCODE: $000001A2 VOL: 0
 ;PCODE: $000001A3 VOL: 0
-; 001A 00FA         printDebug("[iHostReqProcess]Print.[\r\n");
 ;PCODE: $000001A4 VOL: 0
+; 001A 00D4                                   printDebug("]\r\n");
 ;PCODE: $000001A5 VOL: 0
 ;PCODE: $000001A6 VOL: 0
 ;PCODE: $000001A7 VOL: 0
 ;PCODE: $000001A8 VOL: 0
 ;PCODE: $000001A9 VOL: 0
 ;PCODE: $000001AA VOL: 0
-; 001A 00FB         print_payload(pviRXDataBuff_arg->value,pviRXDataBuff_arg->length);
 ;PCODE: $000001AB VOL: 0
+; 001A 00D5 
+; 001A 00D6                                   iTagParser(&viRXDataBuff);      //tag process  othor do..
 ;PCODE: $000001AC VOL: 0
 ;PCODE: $000001AD VOL: 0
+; 001A 00D7 
+; 001A 00D8 
+; 001A 00D9                                   if(iPTCCheckHostReq(&viRXDataBuff)){
 ;PCODE: $000001AE VOL: 0
 ;PCODE: $000001AF VOL: 0
 ;PCODE: $000001B0 VOL: 0
 ;PCODE: $000001B1 VOL: 0
-; 001A 00FC         printDebug("]\r\n");
+; 001A 00DA                                      mti[0] = 0x08;
 ;PCODE: $000001B2 VOL: 0
 ;PCODE: $000001B3 VOL: 0
+; 001A 00DB                                      mti[1] = 0x00;
 ;PCODE: $000001B4 VOL: 0
 ;PCODE: $000001B5 VOL: 0
+; 001A 00DC                                      iPTCPack(&viTXDataBuff,(char *)"",0,mti,tid);
 ;PCODE: $000001B6 VOL: 0
 ;PCODE: $000001B7 VOL: 0
 ;PCODE: $000001B8 VOL: 0
-; 001A 00FD 
-; 001A 00FE         iTagParser(pviRXDataBuff_arg);      //tag process  othor do..
 ;PCODE: $000001B9 VOL: 0
 ;PCODE: $000001BA VOL: 0
-; 001A 00FF     }
-; 001A 0100 //
-; 001A 0101 //    printDebug("[iHostReqProcess]FID(%02x%02x).\r\n",*(pviTXDataBuff_arg->value+17),*(pviTXDataBuff_arg->value+18));
-; 001A 0102 
-; 001A 0103 //        if(iLanReadData(pviRXDataBuff_arg)){
-; 001A 0104 //            iMangQueueDelItem((pviTXDataBuff_arg->value+17));       //del queue with fid
-; 001A 0105 //            if(iPTCParser(pviRXDataBuff_arg)){    report success
-; 001A 0106 //                printDebug("[iHostReqProcess]Print 1-1.[\r\n");
-; 001A 0107 //                print_payload(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
-; 001A 0108 //                printDebug("]\r\n");
-; 001A 0109 //            }
-; 001A 010A //        }
-; 001A 010B //
-; 001A 010C //    while(iMangCheckRetransmit((pviTXDataBuff_arg->value+17))!=0){
-; 001A 010D //        if(iLanWriteData(pviTXDataBuff_arg)){
-; 001A 010E //            if(iLanReadData(pviRXDataBuff_arg)){
-; 001A 010F //                iMangQueueDelItem((pviTXDataBuff_arg->value+17));       //del queue with fid
-; 001A 0110 //                if(iPTCParser(pviRXDataBuff_arg)){    report success
-; 001A 0111 //                    printDebug("[iHostReqProcess]Print 1-1.[\r\n");
-; 001A 0112 //                    print_payload(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
-; 001A 0113 //                    printDebug("]\r\n");
-; 001A 0114 //                }
-; 001A 0115 //            }
-; 001A 0116 //        }
-; 001A 0117 //        if(iMangCheckRetransmit((pviTXDataBuff_arg->value+17))==0){
-; 001A 0118 //             iDataLogInsert(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
-; 001A 0119 //             iMangQueueDelItem((pviTXDataBuff_arg->value+17));       //del queue with fid  due over retransmit
-; 001A 011A //        }
-; 001A 011B //    }
-; 001A 011C 
-; 001A 011D 
-; 001A 011E     return viReturn;
 ;PCODE: $000001BB VOL: 0
 ;PCODE: $000001BC VOL: 0
 ;PCODE: $000001BD VOL: 0
 ;PCODE: $000001BE VOL: 0
 ;PCODE: $000001BF VOL: 0
-; 001A 011F }
 ;PCODE: $000001C0 VOL: 0
-;
-;void iDataReportTX(){
-; 001A 0121 void iDataReportTX(){
+; 001A 00DD                                      while(viHostRetransmit!=0){
 ;PCODE: $000001C1 VOL: 0
 ;PCODE: $000001C2 VOL: 0
-; 001A 0122 
-; 001A 0123 }
 ;PCODE: $000001C3 VOL: 0
+; 001A 00DE                                         if(iLanWriteData(&viTXDataBuff)){
 ;PCODE: $000001C4 VOL: 0
-;
-;void iStatusReportTX(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
-; 001A 0125 void iStatusReportTX(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
 ;PCODE: $000001C5 VOL: 0
 ;PCODE: $000001C6 VOL: 0
-; 001A 0126 
-; 001A 0127 }
 ;PCODE: $000001C7 VOL: 0
+; 001A 00DF                                             if(iLanReadData(&viRXDataBuff)){
 ;PCODE: $000001C8 VOL: 0
 ;PCODE: $000001C9 VOL: 0
-;
-;void iEventReportTX(){
-; 001A 0129 void iEventReportTX(){
 ;PCODE: $000001CA VOL: 0
 ;PCODE: $000001CB VOL: 0
-; 001A 012A 
-; 001A 012B }
+; 001A 00E0                                                 iHostReqProcess(&viTXDataBuff,&viRXDataBuff);
 ;PCODE: $000001CC VOL: 0
 ;PCODE: $000001CD VOL: 0
-;
-;void iTerAckByTagB(iChar_t viTagName, iChar_t viPropNumber){              //host requst = A , terminal ack = B
-; 001A 012D void iTerAckByTagB(iChar_t viTagName, iChar_t viPropNumber){
 ;PCODE: $000001CE VOL: 0
 ;PCODE: $000001CF VOL: 0
-; 001A 012E      iChar_t viMTI[2] = {0x08,0x00};
-; 001A 012F      iChar_t viTID[8];
-; 001A 0130      iChar_t viAckData[4] = {0x4b,0x02,0x10,0x00};
-; 001A 0131      iData_t * pviDataTX;
-; 001A 0132      iData_t * pviDataRX;
-; 001A 0133 
-; 001A 0134      pviDataTX = (iData_t*)malloc(sizeof(iData_t));
+; 001A 00E1                                             }
+; 001A 00E2                                             break;
 ;PCODE: $000001D0 VOL: 0
 ;PCODE: $000001D1 VOL: 0
+; 001A 00E3                                         }
+; 001A 00E4                                         viHostRetransmit--;
 ;PCODE: $000001D2 VOL: 0
 ;PCODE: $000001D3 VOL: 0
 ;PCODE: $000001D4 VOL: 0
+; 001A 00E5                                      }
 ;PCODE: $000001D5 VOL: 0
 ;PCODE: $000001D6 VOL: 0
-;	viTagName -> Y+19
-;	viPropNumber -> Y+18
-;	viMTI -> Y+16
-;	viTID -> Y+8
-;	viAckData -> Y+4
-;	*pviDataTX -> R16,R17
-;	*pviDataRX -> R18,R19
+; 001A 00E6                                   }
+; 001A 00E7                             }
 ;PCODE: $000001D7 VOL: 0
+; 001A 00E8                             break;
 ;PCODE: $000001D8 VOL: 0
 ;PCODE: $000001D9 VOL: 0
-; 001A 0135      pviDataRX = (iData_t*)malloc(sizeof(iData_t));
+; 001A 00E9                        }else{
 ;PCODE: $000001DA VOL: 0
 ;PCODE: $000001DB VOL: 0
+; 001A 00EA                             //iMangQueueDelItem(&viRXDataBuff.value[17]);       //del queue with fid
+; 001A 00EB                        }
 ;PCODE: $000001DC VOL: 0
-; 001A 0136      if(pviDataTX!=NULL && pviDataRX!=NULL){
+; 001A 00EC                 }
+; 001A 00ED                 if(iMangCheckRetransmit(&viTXDataBuff.value[17])==0){
 ;PCODE: $000001DD VOL: 0
 ;PCODE: $000001DE VOL: 0
 ;PCODE: $000001DF VOL: 0
@@ -846,39 +753,67 @@
 ;PCODE: $000001E1 VOL: 0
 ;PCODE: $000001E2 VOL: 0
 ;PCODE: $000001E3 VOL: 0
+; 001A 00EE                      //iDataLogInsert(viTXDataBuff.value,viTXDataBuff.length);
+; 001A 00EF                      iMangQueueDelItem(&viTXDataBuff.value[17]);       //del queue with fid  due over retransmit
 ;PCODE: $000001E4 VOL: 0
-; 001A 0137          //memcpy(viTID,&viDVConfigUpdate.viProperties.viDeviceID[0],8);
-; 001A 0138          printConfig(&viDVConfigUpdate.viProperties.viDeviceID[0],sizeof(viDVConfigUpdate.viProperties.viDeviceID));
 ;PCODE: $000001E5 VOL: 0
 ;PCODE: $000001E6 VOL: 0
 ;PCODE: $000001E7 VOL: 0
+; 001A 00F0                 }
+; 001A 00F1             }
 ;PCODE: $000001E8 VOL: 0
 ;PCODE: $000001E9 VOL: 0
 ;PCODE: $000001EA VOL: 0
-; 001A 0139          memcpyd(viTID,(char eeprom  *)&viDVConfigUpdate.viProperties.viDeviceID[0],8);
+; 001A 00F2 
+; 001A 00F3 
+; 001A 00F4         }
+; 001A 00F5 
+; 001A 00F6     }
 ;PCODE: $000001EB VOL: 0
 ;PCODE: $000001EC VOL: 0
+; 001A 00F7 
+; 001A 00F8 
+; 001A 00F9 
+; 001A 00FA }
 ;PCODE: $000001ED VOL: 0
 ;PCODE: $000001EE VOL: 0
 ;PCODE: $000001EF VOL: 0
 ;PCODE: $000001F0 VOL: 0
+;
+;iUInt_t iHostReqProcess(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
+; 001A 00FC iUInt_t iHostReqProcess(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
 ;PCODE: $000001F1 VOL: 0
 ;PCODE: $000001F2 VOL: 0
-; 001A 013A          print_payload(viTID,8);
+; 001A 00FD     char mti[2] = {0x08,0x00};
+; 001A 00FE     char tid[8] = {0x01,0x01,0x01,0x01,0x01,0x01,0x01,0x01};
+; 001A 00FF     iUInt_t viReturn = 0;
+; 001A 0100     iUChar_t viRetransmit = 1;
+; 001A 0101     iChar_t viHostNeedFlag = 0;
+; 001A 0102 
+; 001A 0103 
+; 001A 0104 //    iPTCPack(pviTXDataBuff_arg,(char *)"",0,mti,tid);
+; 001A 0105 //    iMangQueueAddItem(pviTXDataBuff_arg,&pviTXDataBuff_arg->value[17]); //add protocol in mang queue
+; 001A 0106 //    iMangQueueDisplay();//display mang queue
+; 001A 0107 //    iDataInsert(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
+; 001A 0108     printDebug("[iHostReqProcess]TX Print 1.[\r\n");
 ;PCODE: $000001F3 VOL: 0
 ;PCODE: $000001F4 VOL: 0
 ;PCODE: $000001F5 VOL: 0
 ;PCODE: $000001F6 VOL: 0
 ;PCODE: $000001F7 VOL: 0
-; 001A 013B          if(viTagName==TAG_4A){
 ;PCODE: $000001F8 VOL: 0
 ;PCODE: $000001F9 VOL: 0
+;	*pviTXDataBuff_arg -> Y+16
+;	*pviRXDataBuff_arg -> Y+14
+;	mti -> Y+12
+;	tid -> Y+4
+;	viReturn -> R16,R17
+;	viRetransmit -> R19
+;	viHostNeedFlag -> R18
 ;PCODE: $000001FA VOL: 0
-; 001A 013C             if(viPropNumber==CONF_PROPERTIES){
 ;PCODE: $000001FB VOL: 0
 ;PCODE: $000001FC VOL: 0
 ;PCODE: $000001FD VOL: 0
-; 001A 013D                 iPTCPack(pviDataTX,viAckData,sizeof(viAckData),viMTI,viTID);
 ;PCODE: $000001FE VOL: 0
 ;PCODE: $000001FF VOL: 0
 ;PCODE: $00000200 VOL: 0
@@ -888,142 +823,182 @@
 ;PCODE: $00000204 VOL: 0
 ;PCODE: $00000205 VOL: 0
 ;PCODE: $00000206 VOL: 0
-; 001A 013E                 if(iLanWriteData(pviDataTX)){
+; 001A 0109     print_payload(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
 ;PCODE: $00000207 VOL: 0
 ;PCODE: $00000208 VOL: 0
 ;PCODE: $00000209 VOL: 0
 ;PCODE: $0000020A VOL: 0
-; 001A 013F                     if(iLanReadData(pviDataRX)){
 ;PCODE: $0000020B VOL: 0
 ;PCODE: $0000020C VOL: 0
 ;PCODE: $0000020D VOL: 0
+; 001A 010A     printDebug("]\r\n");
 ;PCODE: $0000020E VOL: 0
-; 001A 0140                         if(iPTCParser(pviDataRX)){
 ;PCODE: $0000020F VOL: 0
 ;PCODE: $00000210 VOL: 0
 ;PCODE: $00000211 VOL: 0
 ;PCODE: $00000212 VOL: 0
-; 001A 0141                             viFlagTerInit = 1;
 ;PCODE: $00000213 VOL: 0
 ;PCODE: $00000214 VOL: 0
+; 001A 010B 
+; 001A 010C     printDebug("[iHostReqProcess]RX Print 2.[\r\n");
 ;PCODE: $00000215 VOL: 0
-; 001A 0142                             iTagParser(pviDataRX);      //tag process  othor do..
 ;PCODE: $00000216 VOL: 0
 ;PCODE: $00000217 VOL: 0
-; 001A 0143                             if(iPTCCheckHostReq(pviDataRX)){
 ;PCODE: $00000218 VOL: 0
 ;PCODE: $00000219 VOL: 0
 ;PCODE: $0000021A VOL: 0
 ;PCODE: $0000021B VOL: 0
-; 001A 0144 
-; 001A 0145                             }
-; 001A 0146                         }
+; 001A 010D     print_payload(pviRXDataBuff_arg->value,pviRXDataBuff_arg->length);
 ;PCODE: $0000021C VOL: 0
-; 001A 0147                     }
 ;PCODE: $0000021D VOL: 0
-; 001A 0148                 }
 ;PCODE: $0000021E VOL: 0
-; 001A 0149             }
 ;PCODE: $0000021F VOL: 0
-; 001A 014A 
-; 001A 014B          }
 ;PCODE: $00000220 VOL: 0
-; 001A 014C          free(pviDataTX);
 ;PCODE: $00000221 VOL: 0
 ;PCODE: $00000222 VOL: 0
+; 001A 010E     printDebug("]\r\n");
 ;PCODE: $00000223 VOL: 0
-; 001A 014D          free(pviDataRX);
 ;PCODE: $00000224 VOL: 0
 ;PCODE: $00000225 VOL: 0
-; 001A 014E      }else{
 ;PCODE: $00000226 VOL: 0
 ;PCODE: $00000227 VOL: 0
-; 001A 014F         printDebug("[iTerAckByTagB]Not allocate memory.\r\n");
 ;PCODE: $00000228 VOL: 0
 ;PCODE: $00000229 VOL: 0
+; 001A 010F 
+; 001A 0110     if(iPTCParser(pviRXDataBuff_arg)){    //report success
 ;PCODE: $0000022A VOL: 0
 ;PCODE: $0000022B VOL: 0
 ;PCODE: $0000022C VOL: 0
 ;PCODE: $0000022D VOL: 0
+; 001A 0111         printDebug("[iHostReqProcess]Print.[\r\n");
 ;PCODE: $0000022E VOL: 0
-; 001A 0150      }
 ;PCODE: $0000022F VOL: 0
-; 001A 0151 }
 ;PCODE: $00000230 VOL: 0
 ;PCODE: $00000231 VOL: 0
 ;PCODE: $00000232 VOL: 0
 ;PCODE: $00000233 VOL: 0
-;
-;void iTagParser(iData_t *pviData_arg){
-; 001A 0153 void iTagParser(iData_t *pviData_arg){
 ;PCODE: $00000234 VOL: 0
+; 001A 0112         print_payload(pviRXDataBuff_arg->value,pviRXDataBuff_arg->length);
 ;PCODE: $00000235 VOL: 0
-; 001A 0154     int i,j;
-; 001A 0155     iUInt_t viDataLen = 0;
-; 001A 0156 
-; 001A 0157     printDebug("[iTagParser]Host response\r\n");
 ;PCODE: $00000236 VOL: 0
 ;PCODE: $00000237 VOL: 0
-;	*pviData_arg -> Y+6
-;	i -> R16,R17
-;	j -> R18,R19
-;	viDataLen -> R20,R21
 ;PCODE: $00000238 VOL: 0
 ;PCODE: $00000239 VOL: 0
 ;PCODE: $0000023A VOL: 0
 ;PCODE: $0000023B VOL: 0
+; 001A 0113         printDebug("]\r\n");
 ;PCODE: $0000023C VOL: 0
 ;PCODE: $0000023D VOL: 0
 ;PCODE: $0000023E VOL: 0
 ;PCODE: $0000023F VOL: 0
 ;PCODE: $00000240 VOL: 0
-; 001A 0158     viDataLen = pviData_arg->value[1];
 ;PCODE: $00000241 VOL: 0
 ;PCODE: $00000242 VOL: 0
+; 001A 0114 
+; 001A 0115         iTagParser(pviRXDataBuff_arg);      //tag process  othor do..
 ;PCODE: $00000243 VOL: 0
 ;PCODE: $00000244 VOL: 0
-; 001A 0159     printDebug("[iTagParser]Len(%d)\r\n",viDataLen);
+; 001A 0116     }
+; 001A 0117 //
+; 001A 0118 //    printDebug("[iHostReqProcess]FID(%02x%02x).\r\n",*(pviTXDataBuff_arg->value+17),*(pviTXDataBuff_arg->value+18));
+; 001A 0119 
+; 001A 011A //        if(iLanReadData(pviRXDataBuff_arg)){
+; 001A 011B //            iMangQueueDelItem((pviTXDataBuff_arg->value+17));       //del queue with fid
+; 001A 011C //            if(iPTCParser(pviRXDataBuff_arg)){    report success
+; 001A 011D //                printDebug("[iHostReqProcess]Print 1-1.[\r\n");
+; 001A 011E //                print_payload(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
+; 001A 011F //                printDebug("]\r\n");
+; 001A 0120 //            }
+; 001A 0121 //        }
+; 001A 0122 //
+; 001A 0123 //    while(iMangCheckRetransmit((pviTXDataBuff_arg->value+17))!=0){
+; 001A 0124 //        if(iLanWriteData(pviTXDataBuff_arg)){
+; 001A 0125 //            if(iLanReadData(pviRXDataBuff_arg)){
+; 001A 0126 //                iMangQueueDelItem((pviTXDataBuff_arg->value+17));       //del queue with fid
+; 001A 0127 //                if(iPTCParser(pviRXDataBuff_arg)){    report success
+; 001A 0128 //                    printDebug("[iHostReqProcess]Print 1-1.[\r\n");
+; 001A 0129 //                    print_payload(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
+; 001A 012A //                    printDebug("]\r\n");
+; 001A 012B //                }
+; 001A 012C //            }
+; 001A 012D //        }
+; 001A 012E //        if(iMangCheckRetransmit((pviTXDataBuff_arg->value+17))==0){
+; 001A 012F //             iDataLogInsert(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
+; 001A 0130 //             iMangQueueDelItem((pviTXDataBuff_arg->value+17));       //del queue with fid  due over retransmit
+; 001A 0131 //        }
+; 001A 0132 //    }
+; 001A 0133 
+; 001A 0134 
+; 001A 0135     return viReturn;
 ;PCODE: $00000245 VOL: 0
 ;PCODE: $00000246 VOL: 0
 ;PCODE: $00000247 VOL: 0
 ;PCODE: $00000248 VOL: 0
 ;PCODE: $00000249 VOL: 0
+; 001A 0136 }
 ;PCODE: $0000024A VOL: 0
+;
+;void iDataReportTX(){
+; 001A 0138 void iDataReportTX(){
 ;PCODE: $0000024B VOL: 0
 ;PCODE: $0000024C VOL: 0
+; 001A 0139 
+; 001A 013A }
 ;PCODE: $0000024D VOL: 0
 ;PCODE: $0000024E VOL: 0
-; 001A 015A 
-; 001A 015B     if(pviData_arg->value[0] == 0x00){
+;
+;void iStatusReportTX(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
+; 001A 013C void iStatusReportTX(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
 ;PCODE: $0000024F VOL: 0
 ;PCODE: $00000250 VOL: 0
+; 001A 013D 
+; 001A 013E }
 ;PCODE: $00000251 VOL: 0
 ;PCODE: $00000252 VOL: 0
-; 001A 015C         for(i=2;i<(viDataLen);i+=2){
 ;PCODE: $00000253 VOL: 0
+;
+;void iEventReportTX(){
+; 001A 0140 void iEventReportTX(){
 ;PCODE: $00000254 VOL: 0
 ;PCODE: $00000255 VOL: 0
+; 001A 0141 
+; 001A 0142 }
 ;PCODE: $00000256 VOL: 0
 ;PCODE: $00000257 VOL: 0
+;
+;void iTerAckByTagB(iChar_t viTagName, iChar_t viPropNumber){              //host requst = A , terminal ack = B
+; 001A 0144 void iTerAckByTagB(iChar_t viTagName, iChar_t viPropNumber){
 ;PCODE: $00000258 VOL: 0
 ;PCODE: $00000259 VOL: 0
+; 001A 0145      iChar_t viMTI[2] = {0x08,0x00};
+; 001A 0146      iChar_t viTID[8];
+; 001A 0147      iChar_t viAckData[4] = {0x4b,0x02,0x10,0x00};
+; 001A 0148      iData_t * pviDataTX;
+; 001A 0149      iData_t * pviDataRX;
+; 001A 014A 
+; 001A 014B      pviDataTX = (iData_t*)malloc(sizeof(iData_t));
 ;PCODE: $0000025A VOL: 0
 ;PCODE: $0000025B VOL: 0
-; 001A 015D              //printDebug("[iTagParser]Loop:%02x(%d)",iPTC_RX.dat.value[i],iPTC_RX.dat.value[(i+1)]);
-; 001A 015E              switch(pviData_arg->value[i]){
 ;PCODE: $0000025C VOL: 0
 ;PCODE: $0000025D VOL: 0
 ;PCODE: $0000025E VOL: 0
 ;PCODE: $0000025F VOL: 0
 ;PCODE: $00000260 VOL: 0
-; 001A 015F                 case TAG_2A:{
+;	viTagName -> Y+19
+;	viPropNumber -> Y+18
+;	viMTI -> Y+16
+;	viTID -> Y+8
+;	viAckData -> Y+4
+;	*pviDataTX -> R16,R17
+;	*pviDataRX -> R18,R19
 ;PCODE: $00000261 VOL: 0
 ;PCODE: $00000262 VOL: 0
-; 001A 0160                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 ;PCODE: $00000263 VOL: 0
+; 001A 014C      pviDataRX = (iData_t*)malloc(sizeof(iData_t));
 ;PCODE: $00000264 VOL: 0
 ;PCODE: $00000265 VOL: 0
 ;PCODE: $00000266 VOL: 0
+; 001A 014D      if(pviDataTX!=NULL && pviDataRX!=NULL){
 ;PCODE: $00000267 VOL: 0
 ;PCODE: $00000268 VOL: 0
 ;PCODE: $00000269 VOL: 0
@@ -1032,35 +1007,38 @@
 ;PCODE: $0000026C VOL: 0
 ;PCODE: $0000026D VOL: 0
 ;PCODE: $0000026E VOL: 0
+; 001A 014E          //memcpy(viTID,&viDVConfigUpdate.viProperties.viDeviceID[0],8);
+; 001A 014F          printConfig(&viDVConfigUpdate.viProperties.viDeviceID[0],sizeof(viDVConfigUpdate.viProperties.viDeviceID));
 ;PCODE: $0000026F VOL: 0
 ;PCODE: $00000270 VOL: 0
 ;PCODE: $00000271 VOL: 0
 ;PCODE: $00000272 VOL: 0
 ;PCODE: $00000273 VOL: 0
 ;PCODE: $00000274 VOL: 0
+; 001A 0150          memcpyd(viTID,(char eeprom  *)&viDVConfigUpdate.viProperties.viDeviceID[0],8);
 ;PCODE: $00000275 VOL: 0
 ;PCODE: $00000276 VOL: 0
 ;PCODE: $00000277 VOL: 0
-; 001A 0161                    break;
 ;PCODE: $00000278 VOL: 0
-; 001A 0162                 }
-; 001A 0163                 case TAG_3A:{
 ;PCODE: $00000279 VOL: 0
 ;PCODE: $0000027A VOL: 0
 ;PCODE: $0000027B VOL: 0
-; 001A 0164                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 ;PCODE: $0000027C VOL: 0
+; 001A 0151          print_payload(viTID,8);
 ;PCODE: $0000027D VOL: 0
 ;PCODE: $0000027E VOL: 0
 ;PCODE: $0000027F VOL: 0
 ;PCODE: $00000280 VOL: 0
 ;PCODE: $00000281 VOL: 0
+; 001A 0152          if(viTagName==TAG_4A){
 ;PCODE: $00000282 VOL: 0
 ;PCODE: $00000283 VOL: 0
 ;PCODE: $00000284 VOL: 0
+; 001A 0153             if(viPropNumber==CONF_PROPERTIES){
 ;PCODE: $00000285 VOL: 0
 ;PCODE: $00000286 VOL: 0
 ;PCODE: $00000287 VOL: 0
+; 001A 0154                 iPTCPack(pviDataTX,viAckData,sizeof(viAckData),viMTI,viTID);
 ;PCODE: $00000288 VOL: 0
 ;PCODE: $00000289 VOL: 0
 ;PCODE: $0000028A VOL: 0
@@ -1070,47 +1048,57 @@
 ;PCODE: $0000028E VOL: 0
 ;PCODE: $0000028F VOL: 0
 ;PCODE: $00000290 VOL: 0
-; 001A 0165                    break;
+; 001A 0155                 if(iLanWriteData(pviDataTX)){
 ;PCODE: $00000291 VOL: 0
-; 001A 0166                 }
-; 001A 0167                 case TAG_4A:{
 ;PCODE: $00000292 VOL: 0
 ;PCODE: $00000293 VOL: 0
 ;PCODE: $00000294 VOL: 0
-; 001A 0168                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
+; 001A 0156                     if(iLanReadData(pviDataRX)){
 ;PCODE: $00000295 VOL: 0
 ;PCODE: $00000296 VOL: 0
 ;PCODE: $00000297 VOL: 0
 ;PCODE: $00000298 VOL: 0
+; 001A 0157                         if(iPTCParser(pviDataRX)){
 ;PCODE: $00000299 VOL: 0
 ;PCODE: $0000029A VOL: 0
 ;PCODE: $0000029B VOL: 0
 ;PCODE: $0000029C VOL: 0
+; 001A 0158                             viFlagTerInit = 1;
 ;PCODE: $0000029D VOL: 0
 ;PCODE: $0000029E VOL: 0
 ;PCODE: $0000029F VOL: 0
+; 001A 0159                             iTagParser(pviDataRX);      //tag process  othor do..
 ;PCODE: $000002A0 VOL: 0
 ;PCODE: $000002A1 VOL: 0
+; 001A 015A                             if(iPTCCheckHostReq(pviDataRX)){
 ;PCODE: $000002A2 VOL: 0
 ;PCODE: $000002A3 VOL: 0
 ;PCODE: $000002A4 VOL: 0
 ;PCODE: $000002A5 VOL: 0
+; 001A 015B 
+; 001A 015C                             }
+; 001A 015D                         }
 ;PCODE: $000002A6 VOL: 0
+; 001A 015E                     }
 ;PCODE: $000002A7 VOL: 0
+; 001A 015F                 }
 ;PCODE: $000002A8 VOL: 0
+; 001A 0160             }
 ;PCODE: $000002A9 VOL: 0
-; 001A 0169                    break;
+; 001A 0161 
+; 001A 0162          }
 ;PCODE: $000002AA VOL: 0
-; 001A 016A                 }
-; 001A 016B                 case TAG_5A:{
+; 001A 0163          free(pviDataTX);
 ;PCODE: $000002AB VOL: 0
 ;PCODE: $000002AC VOL: 0
 ;PCODE: $000002AD VOL: 0
-; 001A 016C                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
+; 001A 0164          free(pviDataRX);
 ;PCODE: $000002AE VOL: 0
 ;PCODE: $000002AF VOL: 0
+; 001A 0165      }else{
 ;PCODE: $000002B0 VOL: 0
 ;PCODE: $000002B1 VOL: 0
+; 001A 0166         printDebug("[iTerAckByTagB]Not allocate memory.\r\n");
 ;PCODE: $000002B2 VOL: 0
 ;PCODE: $000002B3 VOL: 0
 ;PCODE: $000002B4 VOL: 0
@@ -1118,32 +1106,43 @@
 ;PCODE: $000002B6 VOL: 0
 ;PCODE: $000002B7 VOL: 0
 ;PCODE: $000002B8 VOL: 0
+; 001A 0167      }
 ;PCODE: $000002B9 VOL: 0
+; 001A 0168 }
 ;PCODE: $000002BA VOL: 0
 ;PCODE: $000002BB VOL: 0
 ;PCODE: $000002BC VOL: 0
 ;PCODE: $000002BD VOL: 0
+;
+;void iTagParser(iData_t *pviData_arg){
+; 001A 016A void iTagParser(iData_t *pviData_arg){
 ;PCODE: $000002BE VOL: 0
 ;PCODE: $000002BF VOL: 0
+; 001A 016B     int i,j;
+; 001A 016C     iUInt_t viDataLen = 0;
+; 001A 016D 
+; 001A 016E     printDebug("[iTagParser]Host response\r\n");
 ;PCODE: $000002C0 VOL: 0
 ;PCODE: $000002C1 VOL: 0
+;	*pviData_arg -> Y+6
+;	i -> R16,R17
+;	j -> R18,R19
+;	viDataLen -> R20,R21
 ;PCODE: $000002C2 VOL: 0
-; 001A 016D                    break;
 ;PCODE: $000002C3 VOL: 0
-; 001A 016E                 }
-; 001A 016F                 case TAG_6A:{
 ;PCODE: $000002C4 VOL: 0
 ;PCODE: $000002C5 VOL: 0
 ;PCODE: $000002C6 VOL: 0
-; 001A 0170                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 ;PCODE: $000002C7 VOL: 0
 ;PCODE: $000002C8 VOL: 0
 ;PCODE: $000002C9 VOL: 0
 ;PCODE: $000002CA VOL: 0
+; 001A 016F     viDataLen = pviData_arg->value[1];
 ;PCODE: $000002CB VOL: 0
 ;PCODE: $000002CC VOL: 0
 ;PCODE: $000002CD VOL: 0
 ;PCODE: $000002CE VOL: 0
+; 001A 0170     printDebug("[iTagParser]Len(%d)\r\n",viDataLen);
 ;PCODE: $000002CF VOL: 0
 ;PCODE: $000002D0 VOL: 0
 ;PCODE: $000002D1 VOL: 0
@@ -1154,30 +1153,33 @@
 ;PCODE: $000002D6 VOL: 0
 ;PCODE: $000002D7 VOL: 0
 ;PCODE: $000002D8 VOL: 0
+; 001A 0171 
+; 001A 0172     if(pviData_arg->value[0] == 0x00){
 ;PCODE: $000002D9 VOL: 0
 ;PCODE: $000002DA VOL: 0
 ;PCODE: $000002DB VOL: 0
-; 001A 0171                    break;
 ;PCODE: $000002DC VOL: 0
-; 001A 0172                 }
-; 001A 0173                 case TAG_7A:{
+; 001A 0173         for(i=2;i<(viDataLen);i+=2){
 ;PCODE: $000002DD VOL: 0
 ;PCODE: $000002DE VOL: 0
 ;PCODE: $000002DF VOL: 0
-; 001A 0174                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 ;PCODE: $000002E0 VOL: 0
 ;PCODE: $000002E1 VOL: 0
 ;PCODE: $000002E2 VOL: 0
 ;PCODE: $000002E3 VOL: 0
 ;PCODE: $000002E4 VOL: 0
 ;PCODE: $000002E5 VOL: 0
+; 001A 0174              //printDebug("[iTagParser]Loop:%02x(%d)",iPTC_RX.dat.value[i],iPTC_RX.dat.value[(i+1)]);
+; 001A 0175              switch(pviData_arg->value[i]){
 ;PCODE: $000002E6 VOL: 0
 ;PCODE: $000002E7 VOL: 0
 ;PCODE: $000002E8 VOL: 0
 ;PCODE: $000002E9 VOL: 0
 ;PCODE: $000002EA VOL: 0
+; 001A 0176                 case TAG_2A:{
 ;PCODE: $000002EB VOL: 0
 ;PCODE: $000002EC VOL: 0
+; 001A 0177                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 ;PCODE: $000002ED VOL: 0
 ;PCODE: $000002EE VOL: 0
 ;PCODE: $000002EF VOL: 0
@@ -1186,14 +1188,10 @@
 ;PCODE: $000002F2 VOL: 0
 ;PCODE: $000002F3 VOL: 0
 ;PCODE: $000002F4 VOL: 0
-; 001A 0175                    break;
 ;PCODE: $000002F5 VOL: 0
-; 001A 0176                 }
-; 001A 0177                 case TAG_8A:{
 ;PCODE: $000002F6 VOL: 0
 ;PCODE: $000002F7 VOL: 0
 ;PCODE: $000002F8 VOL: 0
-; 001A 0178                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 ;PCODE: $000002F9 VOL: 0
 ;PCODE: $000002FA VOL: 0
 ;PCODE: $000002FB VOL: 0
@@ -1203,10 +1201,14 @@
 ;PCODE: $000002FF VOL: 0
 ;PCODE: $00000300 VOL: 0
 ;PCODE: $00000301 VOL: 0
+; 001A 0178                    break;
 ;PCODE: $00000302 VOL: 0
+; 001A 0179                 }
+; 001A 017A                 case TAG_3A:{
 ;PCODE: $00000303 VOL: 0
 ;PCODE: $00000304 VOL: 0
 ;PCODE: $00000305 VOL: 0
+; 001A 017B                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 ;PCODE: $00000306 VOL: 0
 ;PCODE: $00000307 VOL: 0
 ;PCODE: $00000308 VOL: 0
@@ -1215,14 +1217,10 @@
 ;PCODE: $0000030B VOL: 0
 ;PCODE: $0000030C VOL: 0
 ;PCODE: $0000030D VOL: 0
-; 001A 0179                    break;
 ;PCODE: $0000030E VOL: 0
-; 001A 017A                 }
-; 001A 017B                 case TAG_9A:{
 ;PCODE: $0000030F VOL: 0
 ;PCODE: $00000310 VOL: 0
 ;PCODE: $00000311 VOL: 0
-; 001A 017C                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",&pviData_arg->value[i],&pviData_arg->value[(i+1)]);
 ;PCODE: $00000312 VOL: 0
 ;PCODE: $00000313 VOL: 0
 ;PCODE: $00000314 VOL: 0
@@ -1232,50 +1230,49 @@
 ;PCODE: $00000318 VOL: 0
 ;PCODE: $00000319 VOL: 0
 ;PCODE: $0000031A VOL: 0
+; 001A 017C                    break;
 ;PCODE: $0000031B VOL: 0
+; 001A 017D                 }
+; 001A 017E                 case TAG_4A:{
 ;PCODE: $0000031C VOL: 0
 ;PCODE: $0000031D VOL: 0
 ;PCODE: $0000031E VOL: 0
+; 001A 017F                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 ;PCODE: $0000031F VOL: 0
 ;PCODE: $00000320 VOL: 0
 ;PCODE: $00000321 VOL: 0
 ;PCODE: $00000322 VOL: 0
 ;PCODE: $00000323 VOL: 0
 ;PCODE: $00000324 VOL: 0
-; 001A 017D                    break;
 ;PCODE: $00000325 VOL: 0
-; 001A 017E                 }
-; 001A 017F              }
 ;PCODE: $00000326 VOL: 0
-; 001A 0180         }
 ;PCODE: $00000327 VOL: 0
 ;PCODE: $00000328 VOL: 0
 ;PCODE: $00000329 VOL: 0
 ;PCODE: $0000032A VOL: 0
 ;PCODE: $0000032B VOL: 0
-; 001A 0181     }else if(pviData_arg->value[0] == TAG_4A){
 ;PCODE: $0000032C VOL: 0
 ;PCODE: $0000032D VOL: 0
 ;PCODE: $0000032E VOL: 0
 ;PCODE: $0000032F VOL: 0
 ;PCODE: $00000330 VOL: 0
 ;PCODE: $00000331 VOL: 0
-; 001A 0182         switch(pviData_arg->value[2]){
 ;PCODE: $00000332 VOL: 0
 ;PCODE: $00000333 VOL: 0
+; 001A 0180                    break;
 ;PCODE: $00000334 VOL: 0
-; 001A 0183              case CONF_PROPERTIES:{      //config properties
+; 001A 0181                 }
+; 001A 0182                 case TAG_5A:{
 ;PCODE: $00000335 VOL: 0
 ;PCODE: $00000336 VOL: 0
-; 001A 0184                 printDebug("[iTagParser]Host need to config(Properties)\r\n");
 ;PCODE: $00000337 VOL: 0
+; 001A 0183                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 ;PCODE: $00000338 VOL: 0
 ;PCODE: $00000339 VOL: 0
 ;PCODE: $0000033A VOL: 0
 ;PCODE: $0000033B VOL: 0
 ;PCODE: $0000033C VOL: 0
 ;PCODE: $0000033D VOL: 0
-; 001A 0185                 memcpye((char eeprom *)&viDVConfigUpdate.viProperties,&pviData_arg->value[3],viDataLen);
 ;PCODE: $0000033E VOL: 0
 ;PCODE: $0000033F VOL: 0
 ;PCODE: $00000340 VOL: 0
@@ -1283,25 +1280,23 @@
 ;PCODE: $00000342 VOL: 0
 ;PCODE: $00000343 VOL: 0
 ;PCODE: $00000344 VOL: 0
-; 001A 0186                 printConfig((char eeprom *)&viDVConfigUpdate.viProperties,sizeof(viDVConfigUpdate.viProperties));
 ;PCODE: $00000345 VOL: 0
 ;PCODE: $00000346 VOL: 0
 ;PCODE: $00000347 VOL: 0
 ;PCODE: $00000348 VOL: 0
 ;PCODE: $00000349 VOL: 0
-; 001A 0187                 iTerAckByTagB(TAG_4A,CONF_PROPERTIES);
 ;PCODE: $0000034A VOL: 0
 ;PCODE: $0000034B VOL: 0
 ;PCODE: $0000034C VOL: 0
+; 001A 0184                    break;
 ;PCODE: $0000034D VOL: 0
-; 001A 0188                 break;
+; 001A 0185                 }
+; 001A 0186                 case TAG_6A:{
 ;PCODE: $0000034E VOL: 0
-; 001A 0189              }
-; 001A 018A              case CONF_OPERATEING:{      //config properties
 ;PCODE: $0000034F VOL: 0
 ;PCODE: $00000350 VOL: 0
+; 001A 0187                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 ;PCODE: $00000351 VOL: 0
-; 001A 018B                 printDebug("[iTagParser]Host need to config(Operating)\r\n");
 ;PCODE: $00000352 VOL: 0
 ;PCODE: $00000353 VOL: 0
 ;PCODE: $00000354 VOL: 0
@@ -1309,7 +1304,6 @@
 ;PCODE: $00000356 VOL: 0
 ;PCODE: $00000357 VOL: 0
 ;PCODE: $00000358 VOL: 0
-; 001A 018C                 memcpye((char eeprom *)&viDVConfigUpdate.viOperate,&pviData_arg->value[3],viDataLen);
 ;PCODE: $00000359 VOL: 0
 ;PCODE: $0000035A VOL: 0
 ;PCODE: $0000035B VOL: 0
@@ -1318,21 +1312,20 @@
 ;PCODE: $0000035E VOL: 0
 ;PCODE: $0000035F VOL: 0
 ;PCODE: $00000360 VOL: 0
-; 001A 018D                 printConfig((char eeprom *)&viDVConfigUpdate.viOperate,sizeof(viDVConfigUpdate.viOperate));
 ;PCODE: $00000361 VOL: 0
 ;PCODE: $00000362 VOL: 0
 ;PCODE: $00000363 VOL: 0
 ;PCODE: $00000364 VOL: 0
 ;PCODE: $00000365 VOL: 0
+; 001A 0188                    break;
 ;PCODE: $00000366 VOL: 0
-; 001A 018E                 break;
+; 001A 0189                 }
+; 001A 018A                 case TAG_7A:{
 ;PCODE: $00000367 VOL: 0
-; 001A 018F              }
-; 001A 0190              case CONF_BUZZER:{      //config properties
 ;PCODE: $00000368 VOL: 0
 ;PCODE: $00000369 VOL: 0
+; 001A 018B                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 ;PCODE: $0000036A VOL: 0
-; 001A 0191                 printDebug("[iTagParser]Host need to config(Buzzer)\r\n");
 ;PCODE: $0000036B VOL: 0
 ;PCODE: $0000036C VOL: 0
 ;PCODE: $0000036D VOL: 0
@@ -1340,14 +1333,10 @@
 ;PCODE: $0000036F VOL: 0
 ;PCODE: $00000370 VOL: 0
 ;PCODE: $00000371 VOL: 0
-; 001A 0192                 break;
 ;PCODE: $00000372 VOL: 0
-; 001A 0193              }
-; 001A 0194              case CONF_ENVIRON_COND:{      //config properties
 ;PCODE: $00000373 VOL: 0
 ;PCODE: $00000374 VOL: 0
 ;PCODE: $00000375 VOL: 0
-; 001A 0195                 printDebug("[iTagParser]Host need to config(Environment Alarm Condition)\r\n");
 ;PCODE: $00000376 VOL: 0
 ;PCODE: $00000377 VOL: 0
 ;PCODE: $00000378 VOL: 0
@@ -1355,19 +1344,17 @@
 ;PCODE: $0000037A VOL: 0
 ;PCODE: $0000037B VOL: 0
 ;PCODE: $0000037C VOL: 0
-; 001A 0196                 break;
 ;PCODE: $0000037D VOL: 0
-; 001A 0197              }
-; 001A 0198         }
 ;PCODE: $0000037E VOL: 0
-; 001A 0199 
-; 001A 019A         if((pviData_arg->value[2]&0xf0) == CONF_DIGI_IN){
+; 001A 018C                    break;
 ;PCODE: $0000037F VOL: 0
+; 001A 018D                 }
+; 001A 018E                 case TAG_8A:{
 ;PCODE: $00000380 VOL: 0
 ;PCODE: $00000381 VOL: 0
 ;PCODE: $00000382 VOL: 0
+; 001A 018F                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 ;PCODE: $00000383 VOL: 0
-; 001A 019B              printDebug("[iTagParser]Host need to config(Digital Input)\r\n");
 ;PCODE: $00000384 VOL: 0
 ;PCODE: $00000385 VOL: 0
 ;PCODE: $00000386 VOL: 0
@@ -1375,7 +1362,6 @@
 ;PCODE: $00000388 VOL: 0
 ;PCODE: $00000389 VOL: 0
 ;PCODE: $0000038A VOL: 0
-; 001A 019C         }else if((pviData_arg->value[2]&0xf0) == CONF_DIGI_OUT){
 ;PCODE: $0000038B VOL: 0
 ;PCODE: $0000038C VOL: 0
 ;PCODE: $0000038D VOL: 0
@@ -1383,23 +1369,24 @@
 ;PCODE: $0000038F VOL: 0
 ;PCODE: $00000390 VOL: 0
 ;PCODE: $00000391 VOL: 0
-; 001A 019D              printDebug("[iTagParser]Host need to config(Digital Output)\r\n");
 ;PCODE: $00000392 VOL: 0
 ;PCODE: $00000393 VOL: 0
 ;PCODE: $00000394 VOL: 0
 ;PCODE: $00000395 VOL: 0
 ;PCODE: $00000396 VOL: 0
 ;PCODE: $00000397 VOL: 0
+; 001A 0190                    break;
 ;PCODE: $00000398 VOL: 0
-; 001A 019E         }else if((pviData_arg->value[2]&0xf0) == CONF_ANA_IN){
+; 001A 0191                 }
+; 001A 0192                 case TAG_9A:{
 ;PCODE: $00000399 VOL: 0
 ;PCODE: $0000039A VOL: 0
 ;PCODE: $0000039B VOL: 0
+; 001A 0193                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",&pviData_arg->value[i],&pviData_arg->value[(i+1)]);
 ;PCODE: $0000039C VOL: 0
 ;PCODE: $0000039D VOL: 0
 ;PCODE: $0000039E VOL: 0
 ;PCODE: $0000039F VOL: 0
-; 001A 019F              printDebug("[iTagParser]Host need to config(Analog Input)\r\n");
 ;PCODE: $000003A0 VOL: 0
 ;PCODE: $000003A1 VOL: 0
 ;PCODE: $000003A2 VOL: 0
@@ -1407,7 +1394,6 @@
 ;PCODE: $000003A4 VOL: 0
 ;PCODE: $000003A5 VOL: 0
 ;PCODE: $000003A6 VOL: 0
-; 001A 01A0         }else if((pviData_arg->value[2]&0xf0) == CONF_ANA_OUT){
 ;PCODE: $000003A7 VOL: 0
 ;PCODE: $000003A8 VOL: 0
 ;PCODE: $000003A9 VOL: 0
@@ -1415,77 +1401,67 @@
 ;PCODE: $000003AB VOL: 0
 ;PCODE: $000003AC VOL: 0
 ;PCODE: $000003AD VOL: 0
-; 001A 01A1              printDebug("[iTagParser]Host need to config(Analog Output)\r\n");
 ;PCODE: $000003AE VOL: 0
+; 001A 0194                    break;
 ;PCODE: $000003AF VOL: 0
+; 001A 0195                 }
+; 001A 0196              }
 ;PCODE: $000003B0 VOL: 0
+; 001A 0197         }
 ;PCODE: $000003B1 VOL: 0
 ;PCODE: $000003B2 VOL: 0
 ;PCODE: $000003B3 VOL: 0
 ;PCODE: $000003B4 VOL: 0
-; 001A 01A2         }
-; 001A 01A3 
-; 001A 01A4     }else{
 ;PCODE: $000003B5 VOL: 0
+; 001A 0198     }else if(pviData_arg->value[0] == TAG_4A){
 ;PCODE: $000003B6 VOL: 0
 ;PCODE: $000003B7 VOL: 0
 ;PCODE: $000003B8 VOL: 0
 ;PCODE: $000003B9 VOL: 0
 ;PCODE: $000003BA VOL: 0
-; 001A 01A5        printDebug("[iTagParser]Host response unknow(%02x).\r\n",pviData_arg->value[0]);
 ;PCODE: $000003BB VOL: 0
+; 001A 0199         switch(pviData_arg->value[2]){
 ;PCODE: $000003BC VOL: 0
 ;PCODE: $000003BD VOL: 0
 ;PCODE: $000003BE VOL: 0
+; 001A 019A              case CONF_PROPERTIES:{      //config properties
 ;PCODE: $000003BF VOL: 0
 ;PCODE: $000003C0 VOL: 0
+; 001A 019B                 printDebug("[iTagParser]Host need to config(Properties)\r\n");
 ;PCODE: $000003C1 VOL: 0
 ;PCODE: $000003C2 VOL: 0
 ;PCODE: $000003C3 VOL: 0
 ;PCODE: $000003C4 VOL: 0
 ;PCODE: $000003C5 VOL: 0
-; 001A 01A6     }
 ;PCODE: $000003C6 VOL: 0
 ;PCODE: $000003C7 VOL: 0
-; 001A 01A7 
-; 001A 01A8 
-; 001A 01A9 }
+; 001A 019C                 memcpye((char eeprom *)&viDVConfigUpdate.viProperties,&pviData_arg->value[3],viDataLen);
 ;PCODE: $000003C8 VOL: 0
 ;PCODE: $000003C9 VOL: 0
 ;PCODE: $000003CA VOL: 0
 ;PCODE: $000003CB VOL: 0
-;
-;
-;iInt_t iMangQueueAddItem(iUInt_t viRecordID_arg,iData_t *pviDataItem_arg,iChar_t *pviFid_arg){
-; 001A 01AC iInt_t iMangQueueAddItem(iUInt_t viRecordID_arg,iData_t *pviDataItem_arg,iChar_t *pviFid_arg){
 ;PCODE: $000003CC VOL: 0
 ;PCODE: $000003CD VOL: 0
-; 001A 01AD     iInt_t viReturn = -1;
-; 001A 01AE     iInt_t i;
-; 001A 01AF     iChar_t viFid[2];
-; 001A 01B0 
-; 001A 01B1     memcpy(viFid,&pviFid_arg[0],2);
 ;PCODE: $000003CE VOL: 0
+; 001A 019D                 printConfig((char eeprom *)&viDVConfigUpdate.viProperties,sizeof(viDVConfigUpdate.viProperties));
 ;PCODE: $000003CF VOL: 0
 ;PCODE: $000003D0 VOL: 0
-;	viRecordID_arg -> Y+10
-;	*pviDataItem_arg -> Y+8
-;	*pviFid_arg -> Y+6
-;	viReturn -> R16,R17
-;	i -> R18,R19
-;	viFid -> Y+4
 ;PCODE: $000003D1 VOL: 0
 ;PCODE: $000003D2 VOL: 0
 ;PCODE: $000003D3 VOL: 0
+; 001A 019E                 iTerAckByTagB(TAG_4A,CONF_PROPERTIES);
 ;PCODE: $000003D4 VOL: 0
 ;PCODE: $000003D5 VOL: 0
 ;PCODE: $000003D6 VOL: 0
 ;PCODE: $000003D7 VOL: 0
+; 001A 019F                 break;
 ;PCODE: $000003D8 VOL: 0
+; 001A 01A0              }
+; 001A 01A1              case CONF_OPERATEING:{      //config properties
 ;PCODE: $000003D9 VOL: 0
-; 001A 01B2     for(i=0;i<MANG_QUEUE_MAX;i++){
 ;PCODE: $000003DA VOL: 0
 ;PCODE: $000003DB VOL: 0
+; 001A 01A2                 printDebug("[iTagParser]Host need to config(Operating)\r\n");
 ;PCODE: $000003DC VOL: 0
 ;PCODE: $000003DD VOL: 0
 ;PCODE: $000003DE VOL: 0
@@ -1493,7 +1469,7 @@
 ;PCODE: $000003E0 VOL: 0
 ;PCODE: $000003E1 VOL: 0
 ;PCODE: $000003E2 VOL: 0
-; 001A 01B3         if(viMangQueue[i].value == NULL){
+; 001A 01A3                 memcpye((char eeprom *)&viDVConfigUpdate.viOperate,&pviData_arg->value[3],viDataLen);
 ;PCODE: $000003E3 VOL: 0
 ;PCODE: $000003E4 VOL: 0
 ;PCODE: $000003E5 VOL: 0
@@ -1502,30 +1478,36 @@
 ;PCODE: $000003E8 VOL: 0
 ;PCODE: $000003E9 VOL: 0
 ;PCODE: $000003EA VOL: 0
-; 001A 01B4             viMangQueue[i].value = (iChar_t * const)malloc(pviDataItem_arg->length);
+; 001A 01A4                 printConfig((char eeprom *)&viDVConfigUpdate.viOperate,sizeof(viDVConfigUpdate.viOperate));
 ;PCODE: $000003EB VOL: 0
 ;PCODE: $000003EC VOL: 0
 ;PCODE: $000003ED VOL: 0
 ;PCODE: $000003EE VOL: 0
 ;PCODE: $000003EF VOL: 0
 ;PCODE: $000003F0 VOL: 0
+; 001A 01A5                 break;
 ;PCODE: $000003F1 VOL: 0
+; 001A 01A6              }
+; 001A 01A7              case CONF_BUZZER:{      //config properties
 ;PCODE: $000003F2 VOL: 0
 ;PCODE: $000003F3 VOL: 0
 ;PCODE: $000003F4 VOL: 0
+; 001A 01A8                 printDebug("[iTagParser]Host need to config(Buzzer)\r\n");
 ;PCODE: $000003F5 VOL: 0
-; 001A 01B5             if(viMangQueue[i].value != NULL){
 ;PCODE: $000003F6 VOL: 0
 ;PCODE: $000003F7 VOL: 0
 ;PCODE: $000003F8 VOL: 0
 ;PCODE: $000003F9 VOL: 0
 ;PCODE: $000003FA VOL: 0
 ;PCODE: $000003FB VOL: 0
+; 001A 01A9                 break;
 ;PCODE: $000003FC VOL: 0
+; 001A 01AA              }
+; 001A 01AB              case CONF_ENVIRON_COND:{      //config properties
 ;PCODE: $000003FD VOL: 0
-; 001A 01B6                 viMangQueue[i].length = pviDataItem_arg->length;
 ;PCODE: $000003FE VOL: 0
 ;PCODE: $000003FF VOL: 0
+; 001A 01AC                 printDebug("[iTagParser]Host need to config(Environment Alarm Condition)\r\n");
 ;PCODE: $00000400 VOL: 0
 ;PCODE: $00000401 VOL: 0
 ;PCODE: $00000402 VOL: 0
@@ -1533,15 +1515,19 @@
 ;PCODE: $00000404 VOL: 0
 ;PCODE: $00000405 VOL: 0
 ;PCODE: $00000406 VOL: 0
-; 001A 01B7                 viMangQueue[i].recordID = viRecordID_arg;
+; 001A 01AD                 break;
 ;PCODE: $00000407 VOL: 0
+; 001A 01AE              }
+; 001A 01AF         }
 ;PCODE: $00000408 VOL: 0
+; 001A 01B0 
+; 001A 01B1         if((pviData_arg->value[2]&0xf0) == CONF_DIGI_IN){
 ;PCODE: $00000409 VOL: 0
 ;PCODE: $0000040A VOL: 0
 ;PCODE: $0000040B VOL: 0
-; 001A 01B8                 memcpy(viMangQueue[i].value,&pviDataItem_arg->value[0],pviDataItem_arg->length);
 ;PCODE: $0000040C VOL: 0
 ;PCODE: $0000040D VOL: 0
+; 001A 01B2              printDebug("[iTagParser]Host need to config(Digital Input)\r\n");
 ;PCODE: $0000040E VOL: 0
 ;PCODE: $0000040F VOL: 0
 ;PCODE: $00000410 VOL: 0
@@ -1549,14 +1535,15 @@
 ;PCODE: $00000412 VOL: 0
 ;PCODE: $00000413 VOL: 0
 ;PCODE: $00000414 VOL: 0
+; 001A 01B3         }else if((pviData_arg->value[2]&0xf0) == CONF_DIGI_OUT){
 ;PCODE: $00000415 VOL: 0
 ;PCODE: $00000416 VOL: 0
 ;PCODE: $00000417 VOL: 0
 ;PCODE: $00000418 VOL: 0
 ;PCODE: $00000419 VOL: 0
-; 001A 01B9                 memcpy(&viMangQueue[i].fid[0],&viFid[0],2);
 ;PCODE: $0000041A VOL: 0
 ;PCODE: $0000041B VOL: 0
+; 001A 01B4              printDebug("[iTagParser]Host need to config(Digital Output)\r\n");
 ;PCODE: $0000041C VOL: 0
 ;PCODE: $0000041D VOL: 0
 ;PCODE: $0000041E VOL: 0
@@ -1564,15 +1551,15 @@
 ;PCODE: $00000420 VOL: 0
 ;PCODE: $00000421 VOL: 0
 ;PCODE: $00000422 VOL: 0
+; 001A 01B5         }else if((pviData_arg->value[2]&0xf0) == CONF_ANA_IN){
 ;PCODE: $00000423 VOL: 0
-; 001A 01BA                 viMangQueue[i].reTransmit = MANG_RETRANSMIT;
 ;PCODE: $00000424 VOL: 0
 ;PCODE: $00000425 VOL: 0
 ;PCODE: $00000426 VOL: 0
 ;PCODE: $00000427 VOL: 0
 ;PCODE: $00000428 VOL: 0
 ;PCODE: $00000429 VOL: 0
-; 001A 01BB                 printDebug("[iMangQueueAddItem]Add by FID(%02x%02x).\r\n",viFid[0],viFid[1]);
+; 001A 01B6              printDebug("[iTagParser]Host need to config(Analog Input)\r\n");
 ;PCODE: $0000042A VOL: 0
 ;PCODE: $0000042B VOL: 0
 ;PCODE: $0000042C VOL: 0
@@ -1580,83 +1567,83 @@
 ;PCODE: $0000042E VOL: 0
 ;PCODE: $0000042F VOL: 0
 ;PCODE: $00000430 VOL: 0
+; 001A 01B7         }else if((pviData_arg->value[2]&0xf0) == CONF_ANA_OUT){
 ;PCODE: $00000431 VOL: 0
 ;PCODE: $00000432 VOL: 0
 ;PCODE: $00000433 VOL: 0
 ;PCODE: $00000434 VOL: 0
 ;PCODE: $00000435 VOL: 0
 ;PCODE: $00000436 VOL: 0
-; 001A 01BC                 viReturn = 1;
 ;PCODE: $00000437 VOL: 0
+; 001A 01B8              printDebug("[iTagParser]Host need to config(Analog Output)\r\n");
 ;PCODE: $00000438 VOL: 0
-; 001A 01BD                 break;
 ;PCODE: $00000439 VOL: 0
-; 001A 01BE             }else{
 ;PCODE: $0000043A VOL: 0
 ;PCODE: $0000043B VOL: 0
-; 001A 01BF                printDebug("[iMangQueueAddItem]can't allocate mem.\r\n");
 ;PCODE: $0000043C VOL: 0
 ;PCODE: $0000043D VOL: 0
 ;PCODE: $0000043E VOL: 0
+; 001A 01B9         }
+; 001A 01BA 
+; 001A 01BB     }else{
 ;PCODE: $0000043F VOL: 0
 ;PCODE: $00000440 VOL: 0
 ;PCODE: $00000441 VOL: 0
 ;PCODE: $00000442 VOL: 0
-; 001A 01C0                viReturn = -1;
 ;PCODE: $00000443 VOL: 0
 ;PCODE: $00000444 VOL: 0
-; 001A 01C1             }
+; 001A 01BC        printDebug("[iTagParser]Host response unknow(%02x).\r\n",pviData_arg->value[0]);
 ;PCODE: $00000445 VOL: 0
-; 001A 01C2         }else{
 ;PCODE: $00000446 VOL: 0
 ;PCODE: $00000447 VOL: 0
-; 001A 01C3            viReturn = 0;
 ;PCODE: $00000448 VOL: 0
 ;PCODE: $00000449 VOL: 0
-; 001A 01C4         }
 ;PCODE: $0000044A VOL: 0
-; 001A 01C5     }
 ;PCODE: $0000044B VOL: 0
 ;PCODE: $0000044C VOL: 0
 ;PCODE: $0000044D VOL: 0
 ;PCODE: $0000044E VOL: 0
 ;PCODE: $0000044F VOL: 0
-; 001A 01C6     if(viReturn == 0){
+; 001A 01BD     }
 ;PCODE: $00000450 VOL: 0
 ;PCODE: $00000451 VOL: 0
-; 001A 01C7         printDebug("[iMangQueueAddItem]MangQueue Full.\r\n");
+; 001A 01BE 
+; 001A 01BF 
+; 001A 01C0 }
 ;PCODE: $00000452 VOL: 0
 ;PCODE: $00000453 VOL: 0
 ;PCODE: $00000454 VOL: 0
 ;PCODE: $00000455 VOL: 0
+;
+;
+;iInt_t iMangQueueAddItem(iUInt_t viRecordID_arg,iData_t *pviDataItem_arg,iChar_t *pviFid_arg){
+; 001A 01C3 iInt_t iMangQueueAddItem(iUInt_t viRecordID_arg,iData_t *pviDataItem_arg,iChar_t *pviFid_arg){
 ;PCODE: $00000456 VOL: 0
 ;PCODE: $00000457 VOL: 0
+; 001A 01C4     iInt_t viReturn = -1;
+; 001A 01C5     iInt_t i;
+; 001A 01C6     iChar_t viFid[2];
+; 001A 01C7 
+; 001A 01C8     memcpy(viFid,&pviFid_arg[0],2);
 ;PCODE: $00000458 VOL: 0
-; 001A 01C8     }
-; 001A 01C9     return viReturn;
 ;PCODE: $00000459 VOL: 0
 ;PCODE: $0000045A VOL: 0
-;PCODE: $0000045B VOL: 0
-;PCODE: $0000045C VOL: 0
-;PCODE: $0000045D VOL: 0
-; 001A 01CA }
-;PCODE: $0000045E VOL: 0
-;iInt_t iMangQueueDelItem(iChar_t *pviFid_arg){
-; 001A 01CB iInt_t iMangQueueDelItem(iChar_t *pviFid_arg){
-;PCODE: $0000045F VOL: 0
-;PCODE: $00000460 VOL: 0
-; 001A 01CC     iInt_t viReturn = -1;
-; 001A 01CD     iInt_t i;
-; 001A 01CE     iChar_t viFid[2];
-; 001A 01CF 
-; 001A 01D0     memcpy(viFid,&pviFid_arg[0],2);
-;PCODE: $00000461 VOL: 0
-;PCODE: $00000462 VOL: 0
-;PCODE: $00000463 VOL: 0
+;	viRecordID_arg -> Y+10
+;	*pviDataItem_arg -> Y+8
 ;	*pviFid_arg -> Y+6
 ;	viReturn -> R16,R17
 ;	i -> R18,R19
 ;	viFid -> Y+4
+;PCODE: $0000045B VOL: 0
+;PCODE: $0000045C VOL: 0
+;PCODE: $0000045D VOL: 0
+;PCODE: $0000045E VOL: 0
+;PCODE: $0000045F VOL: 0
+;PCODE: $00000460 VOL: 0
+;PCODE: $00000461 VOL: 0
+;PCODE: $00000462 VOL: 0
+;PCODE: $00000463 VOL: 0
+; 001A 01C9     for(i=0;i<MANG_QUEUE_MAX;i++){
 ;PCODE: $00000464 VOL: 0
 ;PCODE: $00000465 VOL: 0
 ;PCODE: $00000466 VOL: 0
@@ -1666,7 +1653,7 @@
 ;PCODE: $0000046A VOL: 0
 ;PCODE: $0000046B VOL: 0
 ;PCODE: $0000046C VOL: 0
-; 001A 01D1     printDebug("[iMangQueueDelItem]Del by FID(%02x%02x).\r\n",viFid[0],viFid[1]);
+; 001A 01CA         if(viMangQueue[i].value == NULL){
 ;PCODE: $0000046D VOL: 0
 ;PCODE: $0000046E VOL: 0
 ;PCODE: $0000046F VOL: 0
@@ -1675,44 +1662,45 @@
 ;PCODE: $00000472 VOL: 0
 ;PCODE: $00000473 VOL: 0
 ;PCODE: $00000474 VOL: 0
+; 001A 01CB             viMangQueue[i].value = (iChar_t * const)malloc(pviDataItem_arg->length);
 ;PCODE: $00000475 VOL: 0
 ;PCODE: $00000476 VOL: 0
 ;PCODE: $00000477 VOL: 0
 ;PCODE: $00000478 VOL: 0
 ;PCODE: $00000479 VOL: 0
-; 001A 01D2     for(i=0;i<MANG_QUEUE_MAX;i++){
 ;PCODE: $0000047A VOL: 0
 ;PCODE: $0000047B VOL: 0
 ;PCODE: $0000047C VOL: 0
 ;PCODE: $0000047D VOL: 0
 ;PCODE: $0000047E VOL: 0
 ;PCODE: $0000047F VOL: 0
+; 001A 01CC             if(viMangQueue[i].value != NULL){
 ;PCODE: $00000480 VOL: 0
 ;PCODE: $00000481 VOL: 0
 ;PCODE: $00000482 VOL: 0
-; 001A 01D3         if(viMangQueue[i].value != NULL){
 ;PCODE: $00000483 VOL: 0
 ;PCODE: $00000484 VOL: 0
 ;PCODE: $00000485 VOL: 0
 ;PCODE: $00000486 VOL: 0
 ;PCODE: $00000487 VOL: 0
+; 001A 01CD                 viMangQueue[i].length = pviDataItem_arg->length;
 ;PCODE: $00000488 VOL: 0
 ;PCODE: $00000489 VOL: 0
 ;PCODE: $0000048A VOL: 0
-; 001A 01D4             if(memcmp(viMangQueue[i].fid,&viFid[0],2)==0){
 ;PCODE: $0000048B VOL: 0
 ;PCODE: $0000048C VOL: 0
 ;PCODE: $0000048D VOL: 0
 ;PCODE: $0000048E VOL: 0
 ;PCODE: $0000048F VOL: 0
 ;PCODE: $00000490 VOL: 0
+; 001A 01CE                 viMangQueue[i].recordID = viRecordID_arg;
 ;PCODE: $00000491 VOL: 0
 ;PCODE: $00000492 VOL: 0
 ;PCODE: $00000493 VOL: 0
 ;PCODE: $00000494 VOL: 0
 ;PCODE: $00000495 VOL: 0
+; 001A 01CF                 memcpy(viMangQueue[i].value,&pviDataItem_arg->value[0],pviDataItem_arg->length);
 ;PCODE: $00000496 VOL: 0
-; 001A 01D5                 free(viMangQueue[i].value);
 ;PCODE: $00000497 VOL: 0
 ;PCODE: $00000498 VOL: 0
 ;PCODE: $00000499 VOL: 0
@@ -1721,14 +1709,13 @@
 ;PCODE: $0000049C VOL: 0
 ;PCODE: $0000049D VOL: 0
 ;PCODE: $0000049E VOL: 0
-; 001A 01D6                 viMangQueue[i].value = NULL;
 ;PCODE: $0000049F VOL: 0
 ;PCODE: $000004A0 VOL: 0
 ;PCODE: $000004A1 VOL: 0
 ;PCODE: $000004A2 VOL: 0
 ;PCODE: $000004A3 VOL: 0
+; 001A 01D0                 memcpy(&viMangQueue[i].fid[0],&viFid[0],2);
 ;PCODE: $000004A4 VOL: 0
-; 001A 01D7                 memset(viMangQueue[i].fid,0,2);
 ;PCODE: $000004A5 VOL: 0
 ;PCODE: $000004A6 VOL: 0
 ;PCODE: $000004A7 VOL: 0
@@ -1738,112 +1725,113 @@
 ;PCODE: $000004AB VOL: 0
 ;PCODE: $000004AC VOL: 0
 ;PCODE: $000004AD VOL: 0
+; 001A 01D1                 viMangQueue[i].reTransmit = MANG_RETRANSMIT;
 ;PCODE: $000004AE VOL: 0
-; 001A 01D8                 viMangQueue[i].length = 0;
 ;PCODE: $000004AF VOL: 0
 ;PCODE: $000004B0 VOL: 0
 ;PCODE: $000004B1 VOL: 0
 ;PCODE: $000004B2 VOL: 0
 ;PCODE: $000004B3 VOL: 0
+; 001A 01D2                 printDebug("[iMangQueueAddItem]Add by FID(%02x%02x).\r\n",viFid[0],viFid[1]);
 ;PCODE: $000004B4 VOL: 0
-; 001A 01D9                 viReturn = 1;
 ;PCODE: $000004B5 VOL: 0
 ;PCODE: $000004B6 VOL: 0
-; 001A 01DA                 break;
 ;PCODE: $000004B7 VOL: 0
-; 001A 01DB             }else{
 ;PCODE: $000004B8 VOL: 0
 ;PCODE: $000004B9 VOL: 0
-; 001A 01DC                 viReturn = -1;
 ;PCODE: $000004BA VOL: 0
 ;PCODE: $000004BB VOL: 0
-; 001A 01DD             }
 ;PCODE: $000004BC VOL: 0
-; 001A 01DE         }else{
 ;PCODE: $000004BD VOL: 0
 ;PCODE: $000004BE VOL: 0
-; 001A 01DF             viReturn = 0;
 ;PCODE: $000004BF VOL: 0
 ;PCODE: $000004C0 VOL: 0
-; 001A 01E0         }
+; 001A 01D3                 viReturn = 1;
 ;PCODE: $000004C1 VOL: 0
-; 001A 01E1     }
 ;PCODE: $000004C2 VOL: 0
+; 001A 01D4                 break;
 ;PCODE: $000004C3 VOL: 0
+; 001A 01D5             }else{
 ;PCODE: $000004C4 VOL: 0
 ;PCODE: $000004C5 VOL: 0
+; 001A 01D6                printDebug("[iMangQueueAddItem]can't allocate mem.\r\n");
 ;PCODE: $000004C6 VOL: 0
-; 001A 01E2     if(viReturn == 0){
 ;PCODE: $000004C7 VOL: 0
 ;PCODE: $000004C8 VOL: 0
-; 001A 01E3         printDebug("[iMangQueueDelItem]Queue is empty.\r\n");
 ;PCODE: $000004C9 VOL: 0
 ;PCODE: $000004CA VOL: 0
 ;PCODE: $000004CB VOL: 0
 ;PCODE: $000004CC VOL: 0
+; 001A 01D7                viReturn = -1;
 ;PCODE: $000004CD VOL: 0
 ;PCODE: $000004CE VOL: 0
+; 001A 01D8             }
 ;PCODE: $000004CF VOL: 0
-; 001A 01E4     }else if(viReturn == -1){
+; 001A 01D9         }else{
 ;PCODE: $000004D0 VOL: 0
 ;PCODE: $000004D1 VOL: 0
+; 001A 01DA            viReturn = 0;
 ;PCODE: $000004D2 VOL: 0
 ;PCODE: $000004D3 VOL: 0
+; 001A 01DB         }
 ;PCODE: $000004D4 VOL: 0
-; 001A 01E5         printDebug("[iMangQueueDelItem]FID invalid.\r\n");
+; 001A 01DC     }
 ;PCODE: $000004D5 VOL: 0
 ;PCODE: $000004D6 VOL: 0
 ;PCODE: $000004D7 VOL: 0
 ;PCODE: $000004D8 VOL: 0
 ;PCODE: $000004D9 VOL: 0
+; 001A 01DD     if(viReturn == 0){
 ;PCODE: $000004DA VOL: 0
 ;PCODE: $000004DB VOL: 0
-; 001A 01E6     }
-; 001A 01E7     return viReturn;
+; 001A 01DE         printDebug("[iMangQueueAddItem]MangQueue Full.\r\n");
 ;PCODE: $000004DC VOL: 0
 ;PCODE: $000004DD VOL: 0
 ;PCODE: $000004DE VOL: 0
 ;PCODE: $000004DF VOL: 0
 ;PCODE: $000004E0 VOL: 0
 ;PCODE: $000004E1 VOL: 0
-; 001A 01E8 }
 ;PCODE: $000004E2 VOL: 0
-;
-;void iMangQueueDisplay(){
-; 001A 01EA void iMangQueueDisplay(){
+; 001A 01DF     }
+; 001A 01E0     return viReturn;
 ;PCODE: $000004E3 VOL: 0
 ;PCODE: $000004E4 VOL: 0
-; 001A 01EB     iInt_t viReturn = -1;
-; 001A 01EC     iInt_t i;
-; 001A 01ED 
-; 001A 01EE     for(i=0;i<MANG_QUEUE_MAX;i++){
 ;PCODE: $000004E5 VOL: 0
-;	viReturn -> R16,R17
-;	i -> R18,R19
 ;PCODE: $000004E6 VOL: 0
 ;PCODE: $000004E7 VOL: 0
+; 001A 01E1 }
 ;PCODE: $000004E8 VOL: 0
+;iInt_t iMangQueueDelItem(iChar_t *pviFid_arg){
+; 001A 01E2 iInt_t iMangQueueDelItem(iChar_t *pviFid_arg){
 ;PCODE: $000004E9 VOL: 0
 ;PCODE: $000004EA VOL: 0
+; 001A 01E3     iInt_t viReturn = -1;
+; 001A 01E4     iInt_t i;
+; 001A 01E5     iChar_t viFid[2];
+; 001A 01E6 
+; 001A 01E7     memcpy(viFid,&pviFid_arg[0],2);
 ;PCODE: $000004EB VOL: 0
 ;PCODE: $000004EC VOL: 0
 ;PCODE: $000004ED VOL: 0
+;	*pviFid_arg -> Y+6
+;	viReturn -> R16,R17
+;	i -> R18,R19
+;	viFid -> Y+4
 ;PCODE: $000004EE VOL: 0
 ;PCODE: $000004EF VOL: 0
 ;PCODE: $000004F0 VOL: 0
-; 001A 01EF         printDebug("[iMangQueueDisplay]Queue %d.[\r\n",i+1);
 ;PCODE: $000004F1 VOL: 0
 ;PCODE: $000004F2 VOL: 0
 ;PCODE: $000004F3 VOL: 0
 ;PCODE: $000004F4 VOL: 0
 ;PCODE: $000004F5 VOL: 0
 ;PCODE: $000004F6 VOL: 0
+; 001A 01E8     printDebug("[iMangQueueDelItem]Del by FID(%02x%02x).\r\n",viFid[0],viFid[1]);
 ;PCODE: $000004F7 VOL: 0
 ;PCODE: $000004F8 VOL: 0
 ;PCODE: $000004F9 VOL: 0
 ;PCODE: $000004FA VOL: 0
 ;PCODE: $000004FB VOL: 0
-; 001A 01F0         if(viMangQueue[i].value != NULL){
 ;PCODE: $000004FC VOL: 0
 ;PCODE: $000004FD VOL: 0
 ;PCODE: $000004FE VOL: 0
@@ -1852,7 +1840,7 @@
 ;PCODE: $00000501 VOL: 0
 ;PCODE: $00000502 VOL: 0
 ;PCODE: $00000503 VOL: 0
-; 001A 01F1            print_payload(viMangQueue[i].value,viMangQueue[i].length);
+; 001A 01E9     for(i=0;i<MANG_QUEUE_MAX;i++){
 ;PCODE: $00000504 VOL: 0
 ;PCODE: $00000505 VOL: 0
 ;PCODE: $00000506 VOL: 0
@@ -1862,16 +1850,16 @@
 ;PCODE: $0000050A VOL: 0
 ;PCODE: $0000050B VOL: 0
 ;PCODE: $0000050C VOL: 0
+; 001A 01EA         if(viMangQueue[i].value != NULL){
 ;PCODE: $0000050D VOL: 0
 ;PCODE: $0000050E VOL: 0
 ;PCODE: $0000050F VOL: 0
 ;PCODE: $00000510 VOL: 0
 ;PCODE: $00000511 VOL: 0
 ;PCODE: $00000512 VOL: 0
-; 001A 01F2         }else{
 ;PCODE: $00000513 VOL: 0
 ;PCODE: $00000514 VOL: 0
-; 001A 01F3            printDebug("Empty\r\n");
+; 001A 01EB             if(memcmp(viMangQueue[i].fid,&viFid[0],2)==0){
 ;PCODE: $00000515 VOL: 0
 ;PCODE: $00000516 VOL: 0
 ;PCODE: $00000517 VOL: 0
@@ -1879,44 +1867,31 @@
 ;PCODE: $00000519 VOL: 0
 ;PCODE: $0000051A VOL: 0
 ;PCODE: $0000051B VOL: 0
-; 001A 01F4         }
 ;PCODE: $0000051C VOL: 0
-; 001A 01F5         printDebug("]\r\n");
 ;PCODE: $0000051D VOL: 0
 ;PCODE: $0000051E VOL: 0
 ;PCODE: $0000051F VOL: 0
 ;PCODE: $00000520 VOL: 0
+; 001A 01EC                 free(viMangQueue[i].value);
 ;PCODE: $00000521 VOL: 0
 ;PCODE: $00000522 VOL: 0
 ;PCODE: $00000523 VOL: 0
-; 001A 01F6     }
 ;PCODE: $00000524 VOL: 0
 ;PCODE: $00000525 VOL: 0
 ;PCODE: $00000526 VOL: 0
 ;PCODE: $00000527 VOL: 0
 ;PCODE: $00000528 VOL: 0
-; 001A 01F7 }
+; 001A 01ED                 viMangQueue[i].value = NULL;
 ;PCODE: $00000529 VOL: 0
 ;PCODE: $0000052A VOL: 0
 ;PCODE: $0000052B VOL: 0
 ;PCODE: $0000052C VOL: 0
-;
-;iChar_t iMangCheckRetransmit(iChar_t *pviFid_arg){
-; 001A 01F9 iChar_t iMangCheckRetransmit(iChar_t *pviFid_arg){
 ;PCODE: $0000052D VOL: 0
 ;PCODE: $0000052E VOL: 0
-; 001A 01FA     iInt_t viReturn = -1;
-; 001A 01FB     iInt_t i;
-; 001A 01FC     iChar_t viFid[2];
-; 001A 01FD 
-; 001A 01FE     memcpy(viFid,&pviFid_arg[0],2);
+; 001A 01EE                 memset(viMangQueue[i].fid,0,2);
 ;PCODE: $0000052F VOL: 0
 ;PCODE: $00000530 VOL: 0
 ;PCODE: $00000531 VOL: 0
-;	*pviFid_arg -> Y+6
-;	viReturn -> R16,R17
-;	i -> R18,R19
-;	viFid -> Y+4
 ;PCODE: $00000532 VOL: 0
 ;PCODE: $00000533 VOL: 0
 ;PCODE: $00000534 VOL: 0
@@ -1924,48 +1899,58 @@
 ;PCODE: $00000536 VOL: 0
 ;PCODE: $00000537 VOL: 0
 ;PCODE: $00000538 VOL: 0
+; 001A 01EF                 viMangQueue[i].length = 0;
 ;PCODE: $00000539 VOL: 0
 ;PCODE: $0000053A VOL: 0
-; 001A 01FF     for(i=0;i<MANG_QUEUE_MAX;i++){
 ;PCODE: $0000053B VOL: 0
 ;PCODE: $0000053C VOL: 0
 ;PCODE: $0000053D VOL: 0
 ;PCODE: $0000053E VOL: 0
+; 001A 01F0                 viReturn = 1;
 ;PCODE: $0000053F VOL: 0
 ;PCODE: $00000540 VOL: 0
+; 001A 01F1                 break;
 ;PCODE: $00000541 VOL: 0
+; 001A 01F2             }else{
 ;PCODE: $00000542 VOL: 0
 ;PCODE: $00000543 VOL: 0
-; 001A 0200         if(viMangQueue[i].value != NULL){
+; 001A 01F3                 viReturn = -1;
 ;PCODE: $00000544 VOL: 0
 ;PCODE: $00000545 VOL: 0
+; 001A 01F4             }
 ;PCODE: $00000546 VOL: 0
+; 001A 01F5         }else{
 ;PCODE: $00000547 VOL: 0
 ;PCODE: $00000548 VOL: 0
+; 001A 01F6             viReturn = 0;
 ;PCODE: $00000549 VOL: 0
 ;PCODE: $0000054A VOL: 0
+; 001A 01F7         }
 ;PCODE: $0000054B VOL: 0
-; 001A 0201            if(memcmp(viMangQueue[i].fid,&viFid[0],2)==0){
+; 001A 01F8     }
 ;PCODE: $0000054C VOL: 0
 ;PCODE: $0000054D VOL: 0
 ;PCODE: $0000054E VOL: 0
 ;PCODE: $0000054F VOL: 0
 ;PCODE: $00000550 VOL: 0
+; 001A 01F9     if(viReturn == 0){
 ;PCODE: $00000551 VOL: 0
 ;PCODE: $00000552 VOL: 0
+; 001A 01FA         printDebug("[iMangQueueDelItem]Queue is empty.\r\n");
 ;PCODE: $00000553 VOL: 0
 ;PCODE: $00000554 VOL: 0
 ;PCODE: $00000555 VOL: 0
 ;PCODE: $00000556 VOL: 0
 ;PCODE: $00000557 VOL: 0
-; 001A 0202                 printDebug("[iMangCheckRetransmit]Retransmit remain %d.\r\n",viMangQueue[i].reTransmit);
 ;PCODE: $00000558 VOL: 0
 ;PCODE: $00000559 VOL: 0
+; 001A 01FB     }else if(viReturn == -1){
 ;PCODE: $0000055A VOL: 0
 ;PCODE: $0000055B VOL: 0
 ;PCODE: $0000055C VOL: 0
 ;PCODE: $0000055D VOL: 0
 ;PCODE: $0000055E VOL: 0
+; 001A 01FC         printDebug("[iMangQueueDelItem]FID invalid.\r\n");
 ;PCODE: $0000055F VOL: 0
 ;PCODE: $00000560 VOL: 0
 ;PCODE: $00000561 VOL: 0
@@ -1973,49 +1958,52 @@
 ;PCODE: $00000563 VOL: 0
 ;PCODE: $00000564 VOL: 0
 ;PCODE: $00000565 VOL: 0
-; 001A 0203                 viMangQueue[i].reTransmit--;
+; 001A 01FD     }
+; 001A 01FE     return viReturn;
 ;PCODE: $00000566 VOL: 0
 ;PCODE: $00000567 VOL: 0
 ;PCODE: $00000568 VOL: 0
 ;PCODE: $00000569 VOL: 0
 ;PCODE: $0000056A VOL: 0
 ;PCODE: $0000056B VOL: 0
+; 001A 01FF }
 ;PCODE: $0000056C VOL: 0
+;
+;void iMangQueueDisplay(){
+; 001A 0201 void iMangQueueDisplay(){
 ;PCODE: $0000056D VOL: 0
-; 001A 0204                 viReturn = viMangQueue[i].reTransmit;
 ;PCODE: $0000056E VOL: 0
+; 001A 0202     iInt_t viReturn = -1;
+; 001A 0203     iInt_t i;
+; 001A 0204 
+; 001A 0205     for(i=0;i<MANG_QUEUE_MAX;i++){
 ;PCODE: $0000056F VOL: 0
+;	viReturn -> R16,R17
+;	i -> R18,R19
 ;PCODE: $00000570 VOL: 0
 ;PCODE: $00000571 VOL: 0
 ;PCODE: $00000572 VOL: 0
 ;PCODE: $00000573 VOL: 0
-; 001A 0205                 if(viReturn<0){
 ;PCODE: $00000574 VOL: 0
 ;PCODE: $00000575 VOL: 0
-; 001A 0206                    viReturn = 0;
 ;PCODE: $00000576 VOL: 0
 ;PCODE: $00000577 VOL: 0
-; 001A 0207                 }
-; 001A 0208                 break;
 ;PCODE: $00000578 VOL: 0
 ;PCODE: $00000579 VOL: 0
-; 001A 0209             }else{
 ;PCODE: $0000057A VOL: 0
+; 001A 0206         printDebug("[iMangQueueDisplay]Queue %d.[\r\n",i+1);
 ;PCODE: $0000057B VOL: 0
-; 001A 020A                 viReturn = -1;
 ;PCODE: $0000057C VOL: 0
 ;PCODE: $0000057D VOL: 0
-; 001A 020B             }
 ;PCODE: $0000057E VOL: 0
-; 001A 020C         }else{
 ;PCODE: $0000057F VOL: 0
 ;PCODE: $00000580 VOL: 0
-; 001A 020D            printDebug("There is no FID(%02x%02x) in queue.\r\n",viFid[0],viFid[1]);
 ;PCODE: $00000581 VOL: 0
 ;PCODE: $00000582 VOL: 0
 ;PCODE: $00000583 VOL: 0
 ;PCODE: $00000584 VOL: 0
 ;PCODE: $00000585 VOL: 0
+; 001A 0207         if(viMangQueue[i].value != NULL){
 ;PCODE: $00000586 VOL: 0
 ;PCODE: $00000587 VOL: 0
 ;PCODE: $00000588 VOL: 0
@@ -2024,9 +2012,8 @@
 ;PCODE: $0000058B VOL: 0
 ;PCODE: $0000058C VOL: 0
 ;PCODE: $0000058D VOL: 0
-; 001A 020E         }
+; 001A 0208            print_payload(viMangQueue[i].value,viMangQueue[i].length);
 ;PCODE: $0000058E VOL: 0
-; 001A 020F         printDebug("]\r\n");
 ;PCODE: $0000058F VOL: 0
 ;PCODE: $00000590 VOL: 0
 ;PCODE: $00000591 VOL: 0
@@ -2034,171 +2021,157 @@
 ;PCODE: $00000593 VOL: 0
 ;PCODE: $00000594 VOL: 0
 ;PCODE: $00000595 VOL: 0
-; 001A 0210     }
 ;PCODE: $00000596 VOL: 0
 ;PCODE: $00000597 VOL: 0
 ;PCODE: $00000598 VOL: 0
 ;PCODE: $00000599 VOL: 0
 ;PCODE: $0000059A VOL: 0
-; 001A 0211     return viReturn;
 ;PCODE: $0000059B VOL: 0
 ;PCODE: $0000059C VOL: 0
+; 001A 0209         }else{
 ;PCODE: $0000059D VOL: 0
 ;PCODE: $0000059E VOL: 0
-; 001A 0212 }
+; 001A 020A            printDebug("Empty\r\n");
 ;PCODE: $0000059F VOL: 0
-;
-;iChar_t mangInitDevice(){
-; 001A 0214 iChar_t mangInitDevice(){
 ;PCODE: $000005A0 VOL: 0
 ;PCODE: $000005A1 VOL: 0
-; 001A 0215 
-; 001A 0216 }
 ;PCODE: $000005A2 VOL: 0
 ;PCODE: $000005A3 VOL: 0
-;
-;void memcpye(char eeprom *eptr, char *dptr, int len)
-; 001A 0219 {
 ;PCODE: $000005A4 VOL: 0
 ;PCODE: $000005A5 VOL: 0
-; 001A 021A    int i=0;
-; 001A 021B    for(i=0;i<len;i++) {
+; 001A 020B         }
 ;PCODE: $000005A6 VOL: 0
+; 001A 020C         printDebug("]\r\n");
 ;PCODE: $000005A7 VOL: 0
 ;PCODE: $000005A8 VOL: 0
-;	*eptr -> Y+6
-;	*dptr -> Y+4
-;	len -> Y+2
-;	i -> R16,R17
 ;PCODE: $000005A9 VOL: 0
 ;PCODE: $000005AA VOL: 0
 ;PCODE: $000005AB VOL: 0
 ;PCODE: $000005AC VOL: 0
 ;PCODE: $000005AD VOL: 0
+; 001A 020D     }
 ;PCODE: $000005AE VOL: 0
 ;PCODE: $000005AF VOL: 0
 ;PCODE: $000005B0 VOL: 0
 ;PCODE: $000005B1 VOL: 0
 ;PCODE: $000005B2 VOL: 0
+; 001A 020E }
 ;PCODE: $000005B3 VOL: 0
-; 001A 021C       *eptr++ = *dptr;
 ;PCODE: $000005B4 VOL: 0
 ;PCODE: $000005B5 VOL: 0
 ;PCODE: $000005B6 VOL: 0
+;
+;iChar_t iMangCheckRetransmit(iChar_t *pviFid_arg){
+; 001A 0210 iChar_t iMangCheckRetransmit(iChar_t *pviFid_arg){
 ;PCODE: $000005B7 VOL: 0
 ;PCODE: $000005B8 VOL: 0
+; 001A 0211     iInt_t viReturn = -1;
+; 001A 0212     iInt_t i;
+; 001A 0213     iChar_t viFid[2];
+; 001A 0214 
+; 001A 0215     memcpy(viFid,&pviFid_arg[0],2);
 ;PCODE: $000005B9 VOL: 0
 ;PCODE: $000005BA VOL: 0
 ;PCODE: $000005BB VOL: 0
+;	*pviFid_arg -> Y+6
+;	viReturn -> R16,R17
+;	i -> R18,R19
+;	viFid -> Y+4
 ;PCODE: $000005BC VOL: 0
-; 001A 021D       dptr++;
 ;PCODE: $000005BD VOL: 0
 ;PCODE: $000005BE VOL: 0
 ;PCODE: $000005BF VOL: 0
-; 001A 021E    }
 ;PCODE: $000005C0 VOL: 0
 ;PCODE: $000005C1 VOL: 0
 ;PCODE: $000005C2 VOL: 0
 ;PCODE: $000005C3 VOL: 0
 ;PCODE: $000005C4 VOL: 0
-; 001A 021F    return;
+; 001A 0216     for(i=0;i<MANG_QUEUE_MAX;i++){
 ;PCODE: $000005C5 VOL: 0
 ;PCODE: $000005C6 VOL: 0
 ;PCODE: $000005C7 VOL: 0
 ;PCODE: $000005C8 VOL: 0
 ;PCODE: $000005C9 VOL: 0
 ;PCODE: $000005CA VOL: 0
-; 001A 0220 }
 ;PCODE: $000005CB VOL: 0
-;
-;void memcpyd(char *dptr, char eeprom *eptr,  int len)
-; 001A 0223 {
 ;PCODE: $000005CC VOL: 0
 ;PCODE: $000005CD VOL: 0
-; 001A 0224    int i=0;
-; 001A 0225    for(i=0;i<len;i++) {
+; 001A 0217         if(viMangQueue[i].value != NULL){
 ;PCODE: $000005CE VOL: 0
 ;PCODE: $000005CF VOL: 0
 ;PCODE: $000005D0 VOL: 0
-;	*dptr -> Y+6
-;	*eptr -> Y+4
-;	len -> Y+2
-;	i -> R16,R17
 ;PCODE: $000005D1 VOL: 0
 ;PCODE: $000005D2 VOL: 0
 ;PCODE: $000005D3 VOL: 0
 ;PCODE: $000005D4 VOL: 0
 ;PCODE: $000005D5 VOL: 0
+; 001A 0218            if(memcmp(viMangQueue[i].fid,&viFid[0],2)==0){
 ;PCODE: $000005D6 VOL: 0
 ;PCODE: $000005D7 VOL: 0
 ;PCODE: $000005D8 VOL: 0
 ;PCODE: $000005D9 VOL: 0
 ;PCODE: $000005DA VOL: 0
 ;PCODE: $000005DB VOL: 0
-; 001A 0226       *dptr++ = *eptr;
 ;PCODE: $000005DC VOL: 0
 ;PCODE: $000005DD VOL: 0
 ;PCODE: $000005DE VOL: 0
 ;PCODE: $000005DF VOL: 0
 ;PCODE: $000005E0 VOL: 0
 ;PCODE: $000005E1 VOL: 0
+; 001A 0219                 printDebug("[iMangCheckRetransmit]Retransmit remain %d.\r\n",viMangQueue[i].reTransmit);
 ;PCODE: $000005E2 VOL: 0
 ;PCODE: $000005E3 VOL: 0
 ;PCODE: $000005E4 VOL: 0
-; 001A 0227       eptr++;
 ;PCODE: $000005E5 VOL: 0
 ;PCODE: $000005E6 VOL: 0
 ;PCODE: $000005E7 VOL: 0
-; 001A 0228    }
 ;PCODE: $000005E8 VOL: 0
 ;PCODE: $000005E9 VOL: 0
 ;PCODE: $000005EA VOL: 0
 ;PCODE: $000005EB VOL: 0
 ;PCODE: $000005EC VOL: 0
-; 001A 0229    return;
 ;PCODE: $000005ED VOL: 0
 ;PCODE: $000005EE VOL: 0
 ;PCODE: $000005EF VOL: 0
+; 001A 021A                 viMangQueue[i].reTransmit--;
 ;PCODE: $000005F0 VOL: 0
 ;PCODE: $000005F1 VOL: 0
 ;PCODE: $000005F2 VOL: 0
-; 001A 022A }
 ;PCODE: $000005F3 VOL: 0
-;
-;void printConfig(char eeprom *eptr,unsigned int len)
-; 001A 022D {
 ;PCODE: $000005F4 VOL: 0
 ;PCODE: $000005F5 VOL: 0
-; 001A 022E    int i=0,j=0;
-; 001A 022F    printDebug("[printConfig]Data:[\r\n");
 ;PCODE: $000005F6 VOL: 0
 ;PCODE: $000005F7 VOL: 0
-;	*eptr -> Y+6
-;	len -> Y+4
-;	i -> R16,R17
-;	j -> R18,R19
+; 001A 021B                 viReturn = viMangQueue[i].reTransmit;
 ;PCODE: $000005F8 VOL: 0
 ;PCODE: $000005F9 VOL: 0
 ;PCODE: $000005FA VOL: 0
 ;PCODE: $000005FB VOL: 0
 ;PCODE: $000005FC VOL: 0
 ;PCODE: $000005FD VOL: 0
+; 001A 021C                 if(viReturn<0){
 ;PCODE: $000005FE VOL: 0
 ;PCODE: $000005FF VOL: 0
+; 001A 021D                    viReturn = 0;
 ;PCODE: $00000600 VOL: 0
 ;PCODE: $00000601 VOL: 0
+; 001A 021E                 }
+; 001A 021F                 break;
 ;PCODE: $00000602 VOL: 0
-; 001A 0230    printDebug("%04d\t\t",0);
 ;PCODE: $00000603 VOL: 0
+; 001A 0220             }else{
 ;PCODE: $00000604 VOL: 0
 ;PCODE: $00000605 VOL: 0
+; 001A 0221                 viReturn = -1;
 ;PCODE: $00000606 VOL: 0
 ;PCODE: $00000607 VOL: 0
+; 001A 0222             }
 ;PCODE: $00000608 VOL: 0
+; 001A 0223         }else{
 ;PCODE: $00000609 VOL: 0
 ;PCODE: $0000060A VOL: 0
+; 001A 0224            printDebug("There is no FID(%02x%02x) in queue.\r\n",viFid[0],viFid[1]);
 ;PCODE: $0000060B VOL: 0
-; 001A 0231    for(i=0,j=1;i<len;i++,j++) {
 ;PCODE: $0000060C VOL: 0
 ;PCODE: $0000060D VOL: 0
 ;PCODE: $0000060E VOL: 0
@@ -2211,8 +2184,9 @@
 ;PCODE: $00000615 VOL: 0
 ;PCODE: $00000616 VOL: 0
 ;PCODE: $00000617 VOL: 0
+; 001A 0225         }
 ;PCODE: $00000618 VOL: 0
-; 001A 0232       printDebug("%02x",*(eptr++));
+; 001A 0226         printDebug("]\r\n");
 ;PCODE: $00000619 VOL: 0
 ;PCODE: $0000061A VOL: 0
 ;PCODE: $0000061B VOL: 0
@@ -2220,32 +2194,45 @@
 ;PCODE: $0000061D VOL: 0
 ;PCODE: $0000061E VOL: 0
 ;PCODE: $0000061F VOL: 0
+; 001A 0227     }
 ;PCODE: $00000620 VOL: 0
 ;PCODE: $00000621 VOL: 0
 ;PCODE: $00000622 VOL: 0
 ;PCODE: $00000623 VOL: 0
 ;PCODE: $00000624 VOL: 0
+; 001A 0228     return viReturn;
 ;PCODE: $00000625 VOL: 0
 ;PCODE: $00000626 VOL: 0
-; 001A 0233       if(j==8){
 ;PCODE: $00000627 VOL: 0
 ;PCODE: $00000628 VOL: 0
+; 001A 0229 }
 ;PCODE: $00000629 VOL: 0
-; 001A 0234          printDebug("\t\t");
+;
+;iChar_t mangInitDevice(){
+; 001A 022B iChar_t mangInitDevice(){
 ;PCODE: $0000062A VOL: 0
 ;PCODE: $0000062B VOL: 0
+; 001A 022C 
+; 001A 022D }
 ;PCODE: $0000062C VOL: 0
 ;PCODE: $0000062D VOL: 0
+;
+;void memcpye(char eeprom *eptr, char *dptr, int len)
+; 001A 0230 {
 ;PCODE: $0000062E VOL: 0
 ;PCODE: $0000062F VOL: 0
+; 001A 0231    int i=0;
+; 001A 0232    for(i=0;i<len;i++) {
 ;PCODE: $00000630 VOL: 0
-; 001A 0235       }else if(j==16){
 ;PCODE: $00000631 VOL: 0
 ;PCODE: $00000632 VOL: 0
+;	*eptr -> Y+6
+;	*dptr -> Y+4
+;	len -> Y+2
+;	i -> R16,R17
 ;PCODE: $00000633 VOL: 0
 ;PCODE: $00000634 VOL: 0
 ;PCODE: $00000635 VOL: 0
-; 001A 0236          printDebug("\r\n");
 ;PCODE: $00000636 VOL: 0
 ;PCODE: $00000637 VOL: 0
 ;PCODE: $00000638 VOL: 0
@@ -2253,8 +2240,8 @@
 ;PCODE: $0000063A VOL: 0
 ;PCODE: $0000063B VOL: 0
 ;PCODE: $0000063C VOL: 0
-; 001A 0237          printDebug("%04d\t\t",i+1);
 ;PCODE: $0000063D VOL: 0
+; 001A 0233       *eptr++ = *dptr;
 ;PCODE: $0000063E VOL: 0
 ;PCODE: $0000063F VOL: 0
 ;PCODE: $00000640 VOL: 0
@@ -2264,99 +2251,274 @@
 ;PCODE: $00000644 VOL: 0
 ;PCODE: $00000645 VOL: 0
 ;PCODE: $00000646 VOL: 0
+; 001A 0234       dptr++;
 ;PCODE: $00000647 VOL: 0
-; 001A 0238          j=0;
 ;PCODE: $00000648 VOL: 0
 ;PCODE: $00000649 VOL: 0
-; 001A 0239       }
-; 001A 023A    }
+; 001A 0235    }
 ;PCODE: $0000064A VOL: 0
 ;PCODE: $0000064B VOL: 0
 ;PCODE: $0000064C VOL: 0
 ;PCODE: $0000064D VOL: 0
 ;PCODE: $0000064E VOL: 0
+; 001A 0236    return;
 ;PCODE: $0000064F VOL: 0
 ;PCODE: $00000650 VOL: 0
 ;PCODE: $00000651 VOL: 0
 ;PCODE: $00000652 VOL: 0
-; 001A 023B    printDebug("\r\n]\r\n");
 ;PCODE: $00000653 VOL: 0
 ;PCODE: $00000654 VOL: 0
+; 001A 0237 }
 ;PCODE: $00000655 VOL: 0
+;
+;void memcpyd(char *dptr, char eeprom *eptr,  int len)
+; 001A 023A {
 ;PCODE: $00000656 VOL: 0
 ;PCODE: $00000657 VOL: 0
+; 001A 023B    int i=0;
+; 001A 023C    for(i=0;i<len;i++) {
 ;PCODE: $00000658 VOL: 0
 ;PCODE: $00000659 VOL: 0
-; 001A 023C    return;
 ;PCODE: $0000065A VOL: 0
+;	*dptr -> Y+6
+;	*eptr -> Y+4
+;	len -> Y+2
+;	i -> R16,R17
 ;PCODE: $0000065B VOL: 0
 ;PCODE: $0000065C VOL: 0
-; 001A 023D }
 ;PCODE: $0000065D VOL: 0
-;
-;void iSyncUniTime(unsigned long int *viUniTime_arg){
-; 001A 023F void iSyncUniTime(unsigned long int *viUniTime_arg){
 ;PCODE: $0000065E VOL: 0
 ;PCODE: $0000065F VOL: 0
-; 001A 0240      unsigned long int viUniTimeTerminal;
-; 001A 0241      unsigned long int viUniTimeServer;
-; 001A 0242      struct rtc_structure rtcTest;
-; 001A 0243 
-; 001A 0244      //tim
-; 001A 0245      viUniTimeTerminal = DS1672_read();
 ;PCODE: $00000660 VOL: 0
 ;PCODE: $00000661 VOL: 0
-;	*viUniTime_arg -> Y+34
-;	viUniTimeTerminal -> Y+30
-;	viUniTimeServer -> Y+26
-;	rtcTest -> Y+0
 ;PCODE: $00000662 VOL: 0
 ;PCODE: $00000663 VOL: 0
-; 001A 0246      viUniTimeServer = *viUniTime_arg;
 ;PCODE: $00000664 VOL: 0
 ;PCODE: $00000665 VOL: 0
+; 001A 023D       *dptr++ = *eptr;
 ;PCODE: $00000666 VOL: 0
-; 001A 0247 
-; 001A 0248      if((viUniTimeServer-viUniTimeTerminal)>40){
 ;PCODE: $00000667 VOL: 0
 ;PCODE: $00000668 VOL: 0
 ;PCODE: $00000669 VOL: 0
 ;PCODE: $0000066A VOL: 0
 ;PCODE: $0000066B VOL: 0
-; 001A 0249 //         printDebug("[iSyncUniTime]Terminal %ld\r\n",viUniTimeTerminal);
-; 001A 024A //         printDebug("[iSyncUniTime]Server %ld\r\n",viUniTimeServer);
-; 001A 024B //         printDebug("[iSyncUniTime]Time Diff %ld\r\n",(viUniTimeServer-viUniTimeTerminal));
-; 001A 024C //
-; 001A 024D //         printDebug("[iSyncUniTime]Update Time.\r\n");
-; 001A 024E          RTC_setBinary(viUniTimeServer);
 ;PCODE: $0000066C VOL: 0
 ;PCODE: $0000066D VOL: 0
-; 001A 024F //         RTC_getDateTime(&rtcTest,0);
-; 001A 0250 //         printRTC(rtcTest);
-; 001A 0251      }else if((viUniTimeServer-viUniTimeTerminal)>(-40)){
 ;PCODE: $0000066E VOL: 0
+; 001A 023E       eptr++;
 ;PCODE: $0000066F VOL: 0
 ;PCODE: $00000670 VOL: 0
 ;PCODE: $00000671 VOL: 0
+; 001A 023F    }
 ;PCODE: $00000672 VOL: 0
 ;PCODE: $00000673 VOL: 0
 ;PCODE: $00000674 VOL: 0
-; 001A 0252 //         printDebug("[iSyncUniTime]Terminal %ld\r\n",viUniTimeTerminal);
-; 001A 0253 //         printDebug("[iSyncUniTime]Server %ld\r\n",viUniTimeServer);
-; 001A 0254 //         printDebug("[iSyncUniTime]Time Diff %ld\r\n",(viUniTimeServer-viUniTimeTerminal));
-; 001A 0255 //
-; 001A 0256 //         printDebug("[iSyncUniTime]Update Time.\r\n");
-; 001A 0257          RTC_setBinary(viUniTimeServer);
 ;PCODE: $00000675 VOL: 0
 ;PCODE: $00000676 VOL: 0
-; 001A 0258 //         RTC_getDateTime(&rtcTest,0);
-; 001A 0259 //         printRTC(rtcTest);
-; 001A 025A      }
-; 001A 025B 
-; 001A 025C 
-; 001A 025D }
+; 001A 0240    return;
 ;PCODE: $00000677 VOL: 0
 ;PCODE: $00000678 VOL: 0
 ;PCODE: $00000679 VOL: 0
 ;PCODE: $0000067A VOL: 0
 ;PCODE: $0000067B VOL: 0
+;PCODE: $0000067C VOL: 0
+; 001A 0241 }
+;PCODE: $0000067D VOL: 0
+;
+;void printConfig(char eeprom *eptr,unsigned int len)
+; 001A 0244 {
+;PCODE: $0000067E VOL: 0
+;PCODE: $0000067F VOL: 0
+; 001A 0245    int i=0,j=0;
+; 001A 0246    printDebug("[printConfig]Data:[\r\n");
+;PCODE: $00000680 VOL: 0
+;PCODE: $00000681 VOL: 0
+;	*eptr -> Y+6
+;	len -> Y+4
+;	i -> R16,R17
+;	j -> R18,R19
+;PCODE: $00000682 VOL: 0
+;PCODE: $00000683 VOL: 0
+;PCODE: $00000684 VOL: 0
+;PCODE: $00000685 VOL: 0
+;PCODE: $00000686 VOL: 0
+;PCODE: $00000687 VOL: 0
+;PCODE: $00000688 VOL: 0
+;PCODE: $00000689 VOL: 0
+;PCODE: $0000068A VOL: 0
+;PCODE: $0000068B VOL: 0
+;PCODE: $0000068C VOL: 0
+; 001A 0247    printDebug("%04d\t\t",0);
+;PCODE: $0000068D VOL: 0
+;PCODE: $0000068E VOL: 0
+;PCODE: $0000068F VOL: 0
+;PCODE: $00000690 VOL: 0
+;PCODE: $00000691 VOL: 0
+;PCODE: $00000692 VOL: 0
+;PCODE: $00000693 VOL: 0
+;PCODE: $00000694 VOL: 0
+;PCODE: $00000695 VOL: 0
+; 001A 0248    for(i=0,j=1;i<len;i++,j++) {
+;PCODE: $00000696 VOL: 0
+;PCODE: $00000697 VOL: 0
+;PCODE: $00000698 VOL: 0
+;PCODE: $00000699 VOL: 0
+;PCODE: $0000069A VOL: 0
+;PCODE: $0000069B VOL: 0
+;PCODE: $0000069C VOL: 0
+;PCODE: $0000069D VOL: 0
+;PCODE: $0000069E VOL: 0
+;PCODE: $0000069F VOL: 0
+;PCODE: $000006A0 VOL: 0
+;PCODE: $000006A1 VOL: 0
+;PCODE: $000006A2 VOL: 0
+; 001A 0249       printDebug("%02x",*(eptr++));
+;PCODE: $000006A3 VOL: 0
+;PCODE: $000006A4 VOL: 0
+;PCODE: $000006A5 VOL: 0
+;PCODE: $000006A6 VOL: 0
+;PCODE: $000006A7 VOL: 0
+;PCODE: $000006A8 VOL: 0
+;PCODE: $000006A9 VOL: 0
+;PCODE: $000006AA VOL: 0
+;PCODE: $000006AB VOL: 0
+;PCODE: $000006AC VOL: 0
+;PCODE: $000006AD VOL: 0
+;PCODE: $000006AE VOL: 0
+;PCODE: $000006AF VOL: 0
+;PCODE: $000006B0 VOL: 0
+; 001A 024A       if(j==8){
+;PCODE: $000006B1 VOL: 0
+;PCODE: $000006B2 VOL: 0
+;PCODE: $000006B3 VOL: 0
+; 001A 024B          printDebug("\t\t");
+;PCODE: $000006B4 VOL: 0
+;PCODE: $000006B5 VOL: 0
+;PCODE: $000006B6 VOL: 0
+;PCODE: $000006B7 VOL: 0
+;PCODE: $000006B8 VOL: 0
+;PCODE: $000006B9 VOL: 0
+;PCODE: $000006BA VOL: 0
+; 001A 024C       }else if(j==16){
+;PCODE: $000006BB VOL: 0
+;PCODE: $000006BC VOL: 0
+;PCODE: $000006BD VOL: 0
+;PCODE: $000006BE VOL: 0
+;PCODE: $000006BF VOL: 0
+; 001A 024D          printDebug("\r\n");
+;PCODE: $000006C0 VOL: 0
+;PCODE: $000006C1 VOL: 0
+;PCODE: $000006C2 VOL: 0
+;PCODE: $000006C3 VOL: 0
+;PCODE: $000006C4 VOL: 0
+;PCODE: $000006C5 VOL: 0
+;PCODE: $000006C6 VOL: 0
+; 001A 024E          printDebug("%04d\t\t",i+1);
+;PCODE: $000006C7 VOL: 0
+;PCODE: $000006C8 VOL: 0
+;PCODE: $000006C9 VOL: 0
+;PCODE: $000006CA VOL: 0
+;PCODE: $000006CB VOL: 0
+;PCODE: $000006CC VOL: 0
+;PCODE: $000006CD VOL: 0
+;PCODE: $000006CE VOL: 0
+;PCODE: $000006CF VOL: 0
+;PCODE: $000006D0 VOL: 0
+;PCODE: $000006D1 VOL: 0
+; 001A 024F          j=0;
+;PCODE: $000006D2 VOL: 0
+;PCODE: $000006D3 VOL: 0
+; 001A 0250       }
+; 001A 0251    }
+;PCODE: $000006D4 VOL: 0
+;PCODE: $000006D5 VOL: 0
+;PCODE: $000006D6 VOL: 0
+;PCODE: $000006D7 VOL: 0
+;PCODE: $000006D8 VOL: 0
+;PCODE: $000006D9 VOL: 0
+;PCODE: $000006DA VOL: 0
+;PCODE: $000006DB VOL: 0
+;PCODE: $000006DC VOL: 0
+; 001A 0252    printDebug("\r\n]\r\n");
+;PCODE: $000006DD VOL: 0
+;PCODE: $000006DE VOL: 0
+;PCODE: $000006DF VOL: 0
+;PCODE: $000006E0 VOL: 0
+;PCODE: $000006E1 VOL: 0
+;PCODE: $000006E2 VOL: 0
+;PCODE: $000006E3 VOL: 0
+; 001A 0253    return;
+;PCODE: $000006E4 VOL: 0
+;PCODE: $000006E5 VOL: 0
+;PCODE: $000006E6 VOL: 0
+; 001A 0254 }
+;PCODE: $000006E7 VOL: 0
+;
+;void iSyncUniTime(unsigned long int *viUniTime_arg){
+; 001A 0256 void iSyncUniTime(unsigned long int *viUniTime_arg){
+;PCODE: $000006E8 VOL: 0
+;PCODE: $000006E9 VOL: 0
+; 001A 0257      unsigned long int viUniTimeTerminal;
+; 001A 0258      unsigned long int viUniTimeServer;
+; 001A 0259      struct rtc_structure rtcTest;
+; 001A 025A 
+; 001A 025B      //tim
+; 001A 025C      viUniTimeTerminal = DS1672_read();
+;PCODE: $000006EA VOL: 0
+;PCODE: $000006EB VOL: 0
+;	*viUniTime_arg -> Y+34
+;	viUniTimeTerminal -> Y+30
+;	viUniTimeServer -> Y+26
+;	rtcTest -> Y+0
+;PCODE: $000006EC VOL: 0
+;PCODE: $000006ED VOL: 0
+; 001A 025D      viUniTimeServer = *viUniTime_arg;
+;PCODE: $000006EE VOL: 0
+;PCODE: $000006EF VOL: 0
+;PCODE: $000006F0 VOL: 0
+; 001A 025E 
+; 001A 025F      if((viUniTimeServer-viUniTimeTerminal)>40){
+;PCODE: $000006F1 VOL: 0
+;PCODE: $000006F2 VOL: 0
+;PCODE: $000006F3 VOL: 0
+;PCODE: $000006F4 VOL: 0
+;PCODE: $000006F5 VOL: 0
+; 001A 0260 //         printDebug("[iSyncUniTime]Terminal %ld\r\n",viUniTimeTerminal);
+; 001A 0261 //         printDebug("[iSyncUniTime]Server %ld\r\n",viUniTimeServer);
+; 001A 0262 //         printDebug("[iSyncUniTime]Time Diff %ld\r\n",(viUniTimeServer-viUniTimeTerminal));
+; 001A 0263 //
+; 001A 0264 //         printDebug("[iSyncUniTime]Update Time.\r\n");
+; 001A 0265          RTC_setBinary(viUniTimeServer);
+;PCODE: $000006F6 VOL: 0
+;PCODE: $000006F7 VOL: 0
+; 001A 0266 //         RTC_getDateTime(&rtcTest,0);
+; 001A 0267 //         printRTC(rtcTest);
+; 001A 0268      }else if((viUniTimeServer-viUniTimeTerminal)>(-40)){
+;PCODE: $000006F8 VOL: 0
+;PCODE: $000006F9 VOL: 0
+;PCODE: $000006FA VOL: 0
+;PCODE: $000006FB VOL: 0
+;PCODE: $000006FC VOL: 0
+;PCODE: $000006FD VOL: 0
+;PCODE: $000006FE VOL: 0
+; 001A 0269 //         printDebug("[iSyncUniTime]Terminal %ld\r\n",viUniTimeTerminal);
+; 001A 026A //         printDebug("[iSyncUniTime]Server %ld\r\n",viUniTimeServer);
+; 001A 026B //         printDebug("[iSyncUniTime]Time Diff %ld\r\n",(viUniTimeServer-viUniTimeTerminal));
+; 001A 026C //
+; 001A 026D //         printDebug("[iSyncUniTime]Update Time.\r\n");
+; 001A 026E          RTC_setBinary(viUniTimeServer);
+;PCODE: $000006FF VOL: 0
+;PCODE: $00000700 VOL: 0
+; 001A 026F //         RTC_getDateTime(&rtcTest,0);
+; 001A 0270 //         printRTC(rtcTest);
+; 001A 0271      }
+; 001A 0272 
+; 001A 0273 
+; 001A 0274 }
+;PCODE: $00000701 VOL: 0
+;PCODE: $00000702 VOL: 0
+;PCODE: $00000703 VOL: 0
+;PCODE: $00000704 VOL: 0
+;PCODE: $00000705 VOL: 0
+;
+;//void iConvert

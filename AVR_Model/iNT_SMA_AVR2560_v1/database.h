@@ -12,6 +12,9 @@
 #define DB_ID_MAX_RECORD_def        3000
 #define DB_DELIMITER_def            '|'
 
+#define DB_MODE_INSERT              1
+#define DB_MODE_UPDATE              2
+
 #define DB_PRINT_DEBUG            0
 
 typedef void* piDataBaseHandle_t;
@@ -33,6 +36,6 @@ extern eeprom unsigned int viLineID;
 
 //iChar_t iDataLogInsert(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg);
 iUInt_t iDataInsert(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg);
-iChar_t iDataSelect(iUChar_t viStatus_arg);
+iChar_t iDataSelect(iUInt_t viRecordID_arg,iUChar_t viStatus_arg);
 
 #endif 

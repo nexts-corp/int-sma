@@ -284,7 +284,7 @@ void iFCreate(FIL *pviOutFilePtr_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilenam
     }
 }
 
-void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,iUInt_t viBlockSize_arg){
+void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long const * const pviWritePtr_arg){
     FIL *viFilePtr;
     FRESULT viFReturn;
     unsigned int nbytes;
@@ -302,7 +302,7 @@ void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pvi
                /* Move to end of the file to append data */ 
                printDebug("[iFRwite]File size(%ld).\r\n",viFilePtr->fsize);
                if((viFReturn=f_lseek(viFilePtr, viFilePtr->fsize))==FR_OK){        //seek end of file in order append 
-                   printDebug("[iFRwite]Pointer(seek) of File moved.\r\n"); 
+                   printDebug("[iFRwite]Pointer(seek) of File moved(%ld).\r\n",viFilePtr->fsize); 
                    //print_payload((const iChar_t *)pviDataBuff,ivLength_arg);
                    print_payload(pviDataBuffRef,ivLength_arg);
                    if((viFReturn=f_write(viFilePtr,(const iChar_t *)pviDataBuff,ivLength_arg,&nbytes))==FR_OK){    //viFReturn=f_write(viFilePtr,&pviDataBuff[0],strlen(pviDataBuff),&nbytes)
@@ -421,7 +421,7 @@ void iFCreateFileDaily(iChar_t *pviFilename_arg){
     }
 }
 
-iChar_t iFRead(iChar_t * pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long *pviReadPtr_arg){
+iChar_t iFRead(iChar_t * pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long const * const pviReadPtr_arg){
     FIL *viFilePtr;
     FRESULT viFReturn;
     unsigned int nbytes; 
@@ -438,7 +438,7 @@ iChar_t iFRead(iChar_t * pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_ar
                /* Move to end of the file to append data */ 
                //printDebug("[iFRead]File size(%ld).\r\n",viFilePtr->fsize);
                if((viFReturn=f_lseek(viFilePtr, *pviReadPtr_arg))==FR_OK){        //seek end of file in order append 
-                   printDebug("[iFRead]Pointer(seek) of File moved(%ld).\r\n",pviReadPtr_arg); 
+                   printDebug("[iFRead]Pointer(seek) of File moved(%ld).\r\n",*pviReadPtr_arg); 
                    //print_payload((const iChar_t *)pviDataBuff,ivLength_arg);
                   // print_payload(pviDataBuffRef,ivLength_arg);
                    if((viFReturn=f_read(viFilePtr,pviDataBuff,ivLength_arg,&nbytes))==FR_OK){    //viFReturn=f_write(viFilePtr,&pviDataBuff[0],strlen(pviDataBuff),&nbytes)

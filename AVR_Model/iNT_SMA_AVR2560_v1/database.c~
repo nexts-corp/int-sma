@@ -31,33 +31,84 @@ eeprom unsigned int viLineID=0;
 
 iChar_t iDataUpdate(iUInt_t viRecordID_arg,iUChar_t viStatus_arg){             //'N' log and not send data , 'Y' sent data ,'S' settlemented
     iDB_t *pviDBLogger;
-    iChar_t viReturn = 0;
+    iUInt_t viReturnID = 0;
     iChar_t *pviDataBuffInsert;
+    const iChar_t viStatusField = 'Y'; 
     iChar_t viDataBuff[255];  
-    unsigned int viRecordID = 0;   
-    unsigned long indexRead = 0;
-    unsigned int viLenOfData = 0;
+    unsigned int viRecordID = 0; 
+    unsigned long indexWriteArr = 0;  
+    unsigned long indexWrite = 0;
     unsigned long viFileSize = 0;
+    unsigned long indexRead = 0;
+    unsigned long viRecordIDBuff = 0;
     
+    if(viRecordID_arg <= 0){    //reserv a all select 
+        return -1;
+    }else if(viRecordID_arg == 1){
+        indexRead = 0;
+    }else if(viRecordID_arg > 1){
+        indexRead = (255*(viRecordID_arg-1));
+    }
     pviDBLogger = (iDB_t * const)malloc(sizeof(iDB_t));       
     if(pviDBLogger!=NULL){ 
         memset(viDataBuff,0,sizeof(viDataBuff));  
-        if(iFSize((char const * const)viDirDataPath,(char const * const)viDataFName,&viFileSize)==1){ 
+        if(iFSize((char const * const)viDirDataPath,(char const * const)viDataFName,&viFileSize)){ 
            if(viFileSize == 0){
-              printDebug("[iDataSelect]File is empty.\r\n");
-           }else{
-              printDebug("[iDataSelect]File size(%ld).\r\n",viFileSize); 
+              viLineID = 0;
+           }else{  //read last record id 
+              printDebug("[iDataUpdate]File size(%ld),Read RecordID(%ld),Index read(%ld).\r\n",viFileSize,viRecordID_arg,indexRead); 
               iFRead(viDataBuff,(iUInt_t)DB_BLOCK_READ_def,(char const * const)viDirDataPath,(char const * const)viDataFName,&indexRead);
               print_payload(viDataBuff,255); 
+              memcpy(&viRecordIDBuff,viDataBuff,2); 
+              if(viRecordIDBuff!=viRecordID_arg){
+                 printDebug("[iDataUpdate]mem diff allocate.\r\n");
+              }else{
+                 printDebug("[iDataUpdate]Record id(%ld),status send(%c).\r\n",viRecordID_arg,viDataBuff[2]);
+              }
            } 
         } 
+        
+        if(viRecordID_arg <= 0){    //reserv a all select 
+            return -1;
+        }else if(viRecordID_arg == 1){
+            indexWrite = 0;
+        }else if(viRecordID_arg > 1){
+            indexWrite = (255*(viRecordID_arg-1));
+        }
+        
+        indexWriteArr = 0;
+        memcpy(&viDataBuff[indexWriteArr],&viStatusField,1); 
+        indexWriteArr += 1;
+//        memcpy(&viDataBuff[indexWrite],&viStatusField,1); 
+//        indexWrite += 1;
+//        memcpy(&viDataBuff[indexWrite],&viLength_arg,2);
+//        indexWrite += 2; 
+//        memcpy(&viDataBuff[indexWrite],&pviDataBuffer_arg[0],viLength_arg);
+//        indexWrite += viLength_arg;
+        
+        pviDBLogger->viTable.length = indexWriteArr;  
+        pviDBLogger->viTable.value = viDataBuff;  
+        indexWrite += 2;
+        iFRwite(pviDBLogger->viTable.value,sizeof(viDataBuff),(const char*)viDirDataPath,(const char*)viDataFName,indexWrite);
+              
+        printDebug("[iDataUpdate]File size(%ld),Read RecordID(%ld),Index write(%ld).\r\n",viFileSize,viRecordID_arg,(indexWrite));  
+        iFRead(viDataBuff,(iUInt_t)DB_BLOCK_READ_def,(char const * const)viDirDataPath,(char const * const)viDataFName,&indexRead);
+        print_payload(viDataBuff,255); 
+        memcpy(&viRecordIDBuff,viDataBuff,2); 
+        if(viRecordIDBuff!=viRecordID_arg){
+           printDebug("[iDataUpdate]mem diff allocate.\r\n");
+        }else{
+          printDebug("[iDataUpdate]Record id(%ld),status send(%c).\r\n",viRecordID_arg,viDataBuff[2]);
+        }   
+        
         free(pviDBLogger);
-        printDebug("[iDataSelect]iDataSelect is success.\r\n"); 
-        viReturn = 1;
+        
+        printDebug("[iDataUpdate]Insert is success.\r\n");     
+        viReturnID = viRecordID;
     }else{
-        printDebug("[iDataSelect]Databuff_arg can't allocate mem.\r\n");
+        printDebug("[iDataUpdate]Databuff_arg can't allocate mem.\r\n");
     } 
-    return viReturn;
+    return viReturnID;
 }
 
 iUInt_t iDataInsert(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
@@ -67,20 +118,41 @@ iUInt_t iDataInsert(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg
     const iChar_t viStatusField = 'N'; 
     iChar_t viDataBuff[255];  
     unsigned int viRecordID = 0;   
-    unsigned int indexWrite = 0;
+    unsigned long indexWrite = 0;
     unsigned long viFileSize = 0;
+    unsigned long indexRead = 0;
     
     pviDBLogger = (iDB_t * const)malloc(sizeof(iDB_t));       
     if(pviDBLogger!=NULL){ 
         memset(viDataBuff,0,sizeof(viDataBuff));  
         if(iFSize((char const * const)viDirDataPath,(char const * const)viDataFName,&viFileSize)){ 
            if(viFileSize == 0){
-              viLineID = 0;
+              viLineID = 0; 
+              indexWrite = 0;
+           }else{  //read last record id 
+              if((viFileSize/255)==1){
+                 indexRead = 0;
+              }else if((viFileSize/255)>1){
+                 indexRead = (255*((viFileSize/255)-1));
+              }
+              iFRead(viDataBuff,(iUInt_t)DB_BLOCK_READ_def,(char const * const)viDirDataPath,(char const * const)viDataFName,&indexRead);
+              memcpy(&viRecordID,&viDataBuff[0],2);
+              printDebug("[iDataInsert]Last record id(%ld).\r\n",viRecordID); 
+              viLineID = viRecordID;
            } 
-        } 
-        viRecordID = ++viLineID;
+        }
+         
+        viRecordID = ++viLineID; 
+        if(viRecordID <= 0){    //reserv a all select 
+            return -1;
+        }else if(viRecordID == 1){
+            indexWrite = 0;
+        }else if(viRecordID > 1){
+            indexWrite = (255*(viRecordID-1));
+        }
+                
         indexWrite = 0;
-        memcpy(&viDataBuff[indexWrite],&viRecordID,2);
+        memcpy(&viDataBuff[indexWrite],&viRecordID,2); 
         indexWrite += 2;
         memcpy(&viDataBuff[indexWrite],&viStatusField,1); 
         indexWrite += 1;
@@ -91,7 +163,7 @@ iUInt_t iDataInsert(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg
         
         pviDBLogger->viTable.length = indexWrite;  
         pviDBLogger->viTable.value = viDataBuff; 
-        iFRwite(pviDBLogger->viTable.value,sizeof(viDataBuff),(const char*)viDirDataPath,(const char*)viDataFName,DB_BLOCK_WRITE_def);      
+        iFRwite(pviDBLogger->viTable.value,sizeof(viDataBuff),(const char*)viDirDataPath,(const char*)viDataFName,&indexWrite);      
         
         free(pviDBLogger);
         
@@ -103,7 +175,7 @@ iUInt_t iDataInsert(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg
     return viReturnID;
 }
 
-iChar_t iDataSelect(iUChar_t viStatus_arg){             //'N' log and not send data , 'Y' sent data ,'S' settlemented
+iChar_t iDataSelect(iUInt_t viRecordID_arg,iUChar_t viStatus_arg){             //'N' log and not send data , 'Y' sent data ,'S' settlemented
     iDB_t *pviDBLogger;
     iChar_t viReturn = 0;
     iChar_t *pviDataBuffInsert;
@@ -112,7 +184,15 @@ iChar_t iDataSelect(iUChar_t viStatus_arg){             //'N' log and not send d
     unsigned long indexRead = 0;
     unsigned int viLenOfData = 0;
     unsigned long viFileSize = 0;
+    unsigned long viRecordIDBuff = 0;
     
+    if(viRecordID_arg <= 0){    //reserv a all select 
+        return -1;
+    }else if(viRecordID_arg == 1){
+        indexRead = 0;
+    }else if(viRecordID_arg > 1){
+        indexRead = (255*(viRecordID_arg-1));
+    }
     pviDBLogger = (iDB_t * const)malloc(sizeof(iDB_t));       
     if(pviDBLogger!=NULL){ 
         memset(viDataBuff,0,sizeof(viDataBuff));  
@@ -120,9 +200,15 @@ iChar_t iDataSelect(iUChar_t viStatus_arg){             //'N' log and not send d
            if(viFileSize == 0){
               printDebug("[iDataSelect]File is empty.\r\n");
            }else{
-              printDebug("[iDataSelect]File size(%ld).\r\n",viFileSize); 
+              printDebug("[iDataSelect]File size(%ld),Read RecordID(%ld),Index read(%ld).\r\n",viFileSize,viRecordID_arg,indexRead); 
               iFRead(viDataBuff,(iUInt_t)DB_BLOCK_READ_def,(char const * const)viDirDataPath,(char const * const)viDataFName,&indexRead);
               print_payload(viDataBuff,255); 
+              memcpy(&viRecordIDBuff,viDataBuff,2); 
+              if(viRecordIDBuff!=viRecordID_arg){
+                 printDebug("[iDataSelect]mem diff allocate.\r\n");
+              }else{
+                 printDebug("[iDataSelect]Record id(%ld),status send(%c).\r\n",viRecordID_arg,viDataBuff[2]);
+              }
            } 
         } 
         free(pviDBLogger);
