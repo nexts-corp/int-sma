@@ -78,7 +78,9 @@ void iSensorReadByType(iDataReport_t *pviInOutData_arg){
     switch(pviInOutData_arg->viSensorID){
         case SEN_ADC_TYPE:{
             pviInOutData_arg->viData = read_adc(8+pviInOutData_arg->viChannelID); 
-            printDebug("[iSensorReadByType]Channel[%d] data : %f\r\n",pviInOutData_arg->viChannelID,pviInOutData_arg->viData);
+            #if (0)
+            printDebug("[iSensorReadByType]Channel[%d] data : %f\r\n",pviInOutData_arg->viChannelID,pviInOutData_arg->viData);  
+            #endif 
             break;
         }
     }

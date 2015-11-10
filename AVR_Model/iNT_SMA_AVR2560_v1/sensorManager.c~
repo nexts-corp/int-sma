@@ -59,7 +59,7 @@ iChar_t iSensorRead(iDataMini_t *pviOutData_arg){
            viDataReportBuff[i].viChannelID = viDVConfigUpdate.viSensorConfig[i].viChannelID;
            viDataReportBuff[i].viSensorID = viDVConfigUpdate.viSensorConfig[i].viSensorID;
            viDataReportBuff[i].viUnitID =   viDVConfigUpdate.viSensorConfig[i].viUnitID; 
-           iSensorReadByType(&viDataReportBuff);
+           iSensorReadByType(&viDataReportBuff[i]);
            memcpy(&pviOutData_arg->value[viIndexWrite],viCMD,2);
            viIndexWrite += 2;
            memcpy(&pviOutData_arg->value[viIndexWrite],&viDataReportBuff[i],sizeof(viDataReportBuff[i]));

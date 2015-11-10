@@ -22,12 +22,12 @@ iChar_t viDirErrorPath[] = "0:/ERROR";
 iChar_t viDirConfigPath[] = "0:/CONFIG";
 
 //iChar_t viDataFName[] = "0:./data1.nc";
-iChar_t viDataFName[] = "0:./00000000.nc";
-iChar_t viDataLogFName[] = "0:./dataLog1.nc";
-iChar_t viEventFName[] = "0:./event1.nc";
-iChar_t viStatusFName[] = "0:./status1.nc";
-iChar_t viErrorFName[] = "0:./error1.nc";
-iChar_t viConfigFName[] = "0:./config1.nc";
+iChar_t viDataFName[] = "0:./00000000.nx";
+iChar_t viDataLogFName[] = "0:./dataLog1.nx";
+iChar_t viEventFName[] = "0:./event1.nx";
+iChar_t viStatusFName[] = "0:./status1.nx";
+iChar_t viErrorFName[] = "0:./error1.nx";
+iChar_t viConfigFName[] = "0:./config1.nx";
 
 /* will hold file/directory information returned by f_readdir*/
 FILINFO file_info;
@@ -291,7 +291,7 @@ void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pvi
     const iChar_t * pviDataBuffRef = (iChar_t * const )pviDataBuff;
 
     //print_payload((const iChar_t *)pviDataBuff,ivLength_arg);  
-    print_payload(pviDataBuffRef,ivLength_arg);
+    //print_payload(pviDataBuffRef,ivLength_arg);
     viFilePtr = (FIL * const)malloc(sizeof(FIL));
     if(viFilePtr!=NULL){
         if((viFReturn=f_chdir(pviDirPath_arg))==FR_OK){
@@ -300,9 +300,11 @@ void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pvi
                printDebug("[iFRwite]File %s is openned.\r\n",pviFilename_arg);
                
                /* Move to end of the file to append data */ 
-               printDebug("[iFRwite]File size(%ld).\r\n",viFilePtr->fsize);
-               if((viFReturn=f_lseek(viFilePtr, viFilePtr->fsize))==FR_OK){        //seek end of file in order append 
-                   printDebug("[iFRwite]Pointer(seek) of File moved(%ld).\r\n",viFilePtr->fsize); 
+               printDebug("[iFRwite]File size(%ld).\r\n",viFilePtr->fsize); 
+               //if((viFReturn=f_lseek(viFilePtr, viFilePtr->fsize))==FR_OK){        //seek end of file in order append
+               if((viFReturn=f_lseek(viFilePtr, *pviWritePtr_arg))==FR_OK){        //seek to start write
+                   //printDebug("[iFRwite]Pointer(seek) of File moved(%ld).\r\n",viFilePtr->fsize); 
+                   printDebug("[iFRwite]Pointer(seek) of File moved(%ld).\r\n",*pviWritePtr_arg); 
                    //print_payload((const iChar_t *)pviDataBuff,ivLength_arg);
                    print_payload(pviDataBuffRef,ivLength_arg);
                    if((viFReturn=f_write(viFilePtr,(const iChar_t *)pviDataBuff,ivLength_arg,&nbytes))==FR_OK){    //viFReturn=f_write(viFilePtr,&pviDataBuff[0],strlen(pviDataBuff),&nbytes)

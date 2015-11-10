@@ -115,7 +115,21 @@ void iAckHostReq(){
 //    viFrameID = iGenFID();  
 //    iPTCPack(iData_t *pviOutData_arg, iChar_t *pviData_arg, iUInt_t viLength_arg, iChar_t *pviMTI_arg, iChar_t *pviTID_arg)
 }
-
+void iPTCMtiRepack(iData_t *pviOutData_arg,iChar_t *pviMTI_arg){
+     iUInt_t viFrameCSLen = 0;
+     iUInt_t viCheckSum;  
+     
+     
+     viFrameCSLen = (pviOutData_arg->length - 3);     //2(mti) + 8(tid) + 4(tim) + 2(fid) + ?(data) +1(cs)
+     //mti
+     memcpy(&pviOutData_arg->value[3],&pviMTI_arg[0],2);        //0x0300  => Log
+       
+     //cs 
+     viCheckSum = iCheckSum(&pviOutData_arg->value[3],viFrameCSLen); 
+     memcpy(&pviOutData_arg->value[(pviOutData_arg->length-1)],&viCheckSum,1);  
+     
+     
+}
 void iPTCPack(iData_t *pviOutData_arg, iChar_t *pviData_arg, iUInt_t viLength_arg, iChar_t *pviMTI_arg, iChar_t *pviTID_arg){
     //iChar_t * pviPTCData;
     iUInt_t viIndexWrite = 0;

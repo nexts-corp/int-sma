@@ -1,10 +1,10 @@
 /*****************************************************
 Project : SMA_AVR2560_V1 : 1
-Date    : 17/7/2012
-Author  : Nexs-Crop Team
-Company : Nexs-Crop Co.,Ltd.
+Date    : 01/6/2015
+Author  : Next-Corp Team
+Company : Next-Corp Co.,Ltd.
 Comments: 
-Version Format : 1Major.2Minor.1Edition
+Version Format : 
 
 
 Chip type               : ATmega2560
@@ -67,27 +67,7 @@ iDataMini_t viEventReport;
 
 /*============================================================*/
 void main(void){
-    //int a = 6;  
-    //int b; 
-    //unsigned int viLenData = 0;   
-    //char *pviBufferU0;
-    //char *pviPointBufferU0;  
-    //int indexReadUart0 = 0;  
-    //char * pch; 
-    //int viConnect = 0;
-    //char *b2; 
-    
-//    unsigned char fileNameCreate[20]; 
-//    //char fileNameCreate1[] = "FileFF";  
-//    int retFile = 0;           
-//    char viPath[20]="0:/";
-//    DIR pviDir; 
-//    FIL pviFilePtr;
-//    iChar_t viDirectoryPath[] = "0:/DATA";   
-//    iChar_t viFileName[] = "0:./data7.txt"; 
-//    iChar_t viCurrentDirect[50];  
-//    iChar_t viDataBuffTest[100] = "Data Test 11111119999999999999999999999999999";               //N=not send 
-    //FRESULT 
+
     
     
     int err,i=0,k=0,res,last_status;   

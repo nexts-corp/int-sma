@@ -23,7 +23,7 @@
 #define TAG_2A      0x2a
 #define TAG_3A      0x3a
 #define TAG_4A      0x4a           //Config
-#define TAG_5A      0x5a
+#define TAG_5A      0x5a           //Data
 #define TAG_6A      0x6a
 #define TAG_7A      0x7a
 #define TAG_8A      0x8a
@@ -105,7 +105,7 @@ void tag5A();
 
 void protocolManagement();
 
-
+void iPTCMtiRepack(iChar_t *pviData_arg, iUInt_t viLength_arg,iChar_t *pviMTI_arg);
 iChar_t iPTCParser(iData_t *pviOutData_arg);
 iInt_t iCheckSum(iChar_t buf_ags[], iInt_t len_ags);
 

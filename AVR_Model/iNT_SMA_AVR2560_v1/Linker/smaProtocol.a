@@ -473,34 +473,98 @@
 ; 0019 0075 }
 ;PCODE: $00000141 VOL: 0
 ;PCODE: $00000142 VOL: 0
-;
-;void iPTCPack(iData_t *pviOutData_arg, iChar_t *pviData_arg, iUInt_t viLength_arg, iChar_t *pviMTI_arg, iChar_t *pviTID_arg){
-; 0019 0077 void iPTCPack(iData_t *pviOutData_arg, iChar_t *pviData_arg, iUInt_t viLength_arg, iChar_t *pviMTI_arg, iChar_t *pviTID_arg){
+;void iPTCMtiRepack(iData_t *pviOutData_arg,iChar_t *pviMTI_arg){
+; 0019 0076 void iPTCMtiRepack(iData_t *pviOutData_arg,iChar_t *pviMTI_arg){
 ;PCODE: $00000143 VOL: 0
 ;PCODE: $00000144 VOL: 0
-; 0019 0078     //iChar_t * pviPTCData;
-; 0019 0079     iUInt_t viIndexWrite = 0;
-; 0019 007A     iUInt_t viLength = 0;
-; 0019 007B     iUChar_t viCharLength[2];
-; 0019 007C     iChar_t viCharMTI[2];
-; 0019 007D     iChar_t viSD = 0x7e;
-; 0019 007E     iUInt_t viCheckSum;
-; 0019 007F     iUInt_t viFrameCSLen = 0;
-; 0019 0080     iInt_t viFrameID = 0;
-; 0019 0081     unsigned long int timestamp;
-; 0019 0082 
-; 0019 0083     viFrameCSLen = 2 + 8 + 4 + 2 + viLength_arg + 1;     //2(mti) + 8(tid) + 4(tim) + 2(fid) + ?(data) +1(cs)
+; 0019 0077      iUInt_t viFrameCSLen = 0;
+; 0019 0078      iUInt_t viCheckSum;
+; 0019 0079 
+; 0019 007A 
+; 0019 007B      viFrameCSLen = (pviOutData_arg->length - 3);     //2(mti) + 8(tid) + 4(tim) + 2(fid) + ?(data) +1(cs)
 ;PCODE: $00000145 VOL: 0
 ;PCODE: $00000146 VOL: 0
+;	*pviOutData_arg -> Y+6
+;	*pviMTI_arg -> Y+4
+;	viFrameCSLen -> R16,R17
+;	viCheckSum -> R18,R19
 ;PCODE: $00000147 VOL: 0
 ;PCODE: $00000148 VOL: 0
 ;PCODE: $00000149 VOL: 0
 ;PCODE: $0000014A VOL: 0
 ;PCODE: $0000014B VOL: 0
 ;PCODE: $0000014C VOL: 0
+; 0019 007C      //mti
+; 0019 007D      memcpy(&pviOutData_arg->value[3],&pviMTI_arg[0],2);        //0x0300  => Log
 ;PCODE: $0000014D VOL: 0
 ;PCODE: $0000014E VOL: 0
 ;PCODE: $0000014F VOL: 0
+;PCODE: $00000150 VOL: 0
+;PCODE: $00000151 VOL: 0
+;PCODE: $00000152 VOL: 0
+;PCODE: $00000153 VOL: 0
+;PCODE: $00000154 VOL: 0
+; 0019 007E 
+; 0019 007F      //cs
+; 0019 0080      viCheckSum = iCheckSum(&pviOutData_arg->value[3],viFrameCSLen);
+;PCODE: $00000155 VOL: 0
+;PCODE: $00000156 VOL: 0
+;PCODE: $00000157 VOL: 0
+;PCODE: $00000158 VOL: 0
+;PCODE: $00000159 VOL: 0
+;PCODE: $0000015A VOL: 0
+; 0019 0081      memcpy(&pviOutData_arg->value[(pviOutData_arg->length-1)],&viCheckSum,1);
+;PCODE: $0000015B VOL: 0
+;PCODE: $0000015C VOL: 0
+;PCODE: $0000015D VOL: 0
+;PCODE: $0000015E VOL: 0
+;PCODE: $0000015F VOL: 0
+;PCODE: $00000160 VOL: 0
+;PCODE: $00000161 VOL: 0
+;PCODE: $00000162 VOL: 0
+;PCODE: $00000163 VOL: 0
+;PCODE: $00000164 VOL: 0
+;PCODE: $00000165 VOL: 0
+;PCODE: $00000166 VOL: 0
+;PCODE: $00000167 VOL: 0
+;PCODE: $00000168 VOL: 0
+;PCODE: $00000169 VOL: 0
+;PCODE: $0000016A VOL: 0
+;PCODE: $0000016B VOL: 0
+; 0019 0082 
+; 0019 0083 
+; 0019 0084 }
+;PCODE: $0000016C VOL: 0
+;PCODE: $0000016D VOL: 0
+;PCODE: $0000016E VOL: 0
+;PCODE: $0000016F VOL: 0
+;void iPTCPack(iData_t *pviOutData_arg, iChar_t *pviData_arg, iUInt_t viLength_arg, iChar_t *pviMTI_arg, iChar_t *pviTID_arg){
+; 0019 0085 void iPTCPack(iData_t *pviOutData_arg, iChar_t *pviData_arg, iUInt_t viLength_arg, iChar_t *pviMTI_arg, iChar_t *pviTID_arg){
+;PCODE: $00000170 VOL: 0
+;PCODE: $00000171 VOL: 0
+; 0019 0086     //iChar_t * pviPTCData;
+; 0019 0087     iUInt_t viIndexWrite = 0;
+; 0019 0088     iUInt_t viLength = 0;
+; 0019 0089     iUChar_t viCharLength[2];
+; 0019 008A     iChar_t viCharMTI[2];
+; 0019 008B     iChar_t viSD = 0x7e;
+; 0019 008C     iUInt_t viCheckSum;
+; 0019 008D     iUInt_t viFrameCSLen = 0;
+; 0019 008E     iInt_t viFrameID = 0;
+; 0019 008F     unsigned long int timestamp;
+; 0019 0090 
+; 0019 0091     viFrameCSLen = 2 + 8 + 4 + 2 + viLength_arg + 1;     //2(mti) + 8(tid) + 4(tim) + 2(fid) + ?(data) +1(cs)
+;PCODE: $00000172 VOL: 0
+;PCODE: $00000173 VOL: 0
+;PCODE: $00000174 VOL: 0
+;PCODE: $00000175 VOL: 0
+;PCODE: $00000176 VOL: 0
+;PCODE: $00000177 VOL: 0
+;PCODE: $00000178 VOL: 0
+;PCODE: $00000179 VOL: 0
+;PCODE: $0000017A VOL: 0
+;PCODE: $0000017B VOL: 0
+;PCODE: $0000017C VOL: 0
 ;	*pviOutData_arg -> Y+28
 ;	*pviData_arg -> Y+26
 ;	viLength_arg -> Y+24
@@ -515,80 +579,20 @@
 ;	viFrameCSLen -> Y+12
 ;	viFrameID -> Y+10
 ;	timestamp -> Y+6
-;PCODE: $00000150 VOL: 0
-;PCODE: $00000151 VOL: 0
-;PCODE: $00000152 VOL: 0
-;PCODE: $00000153 VOL: 0
-;PCODE: $00000154 VOL: 0
-;PCODE: $00000155 VOL: 0
-;PCODE: $00000156 VOL: 0
-;PCODE: $00000157 VOL: 0
-;PCODE: $00000158 VOL: 0
-; 0019 0084     //pviPTCData = (iChar_t *)malloc((viLength+20)); //sd(1),len(2),mti(2),tid(8),tim(4),fid(2),cs(1)
-; 0019 0085 
-; 0019 0086     //if(pviPTCData != NULL){
-; 0019 0087         //sd
-; 0019 0088         memcpy(&pviOutData_arg->value[viIndexWrite],&viSD,1);
-;PCODE: $00000159 VOL: 0
-;PCODE: $0000015A VOL: 0
-;PCODE: $0000015B VOL: 0
-;PCODE: $0000015C VOL: 0
-;PCODE: $0000015D VOL: 0
-;PCODE: $0000015E VOL: 0
-;PCODE: $0000015F VOL: 0
-;PCODE: $00000160 VOL: 0
-;PCODE: $00000161 VOL: 0
-;PCODE: $00000162 VOL: 0
-;PCODE: $00000163 VOL: 0
-; 0019 0089         viIndexWrite += 1;
-;PCODE: $00000164 VOL: 0
-;PCODE: $00000165 VOL: 0
-; 0019 008A 
-; 0019 008B         //len
-; 0019 008C         viLength = viLength_arg+16;
-;PCODE: $00000166 VOL: 0
-;PCODE: $00000167 VOL: 0
-;PCODE: $00000168 VOL: 0
-; 0019 008D         viCharLength[0] = (viLength<<8);
-;PCODE: $00000169 VOL: 0
-;PCODE: $0000016A VOL: 0
-;PCODE: $0000016B VOL: 0
-;PCODE: $0000016C VOL: 0
-; 0019 008E         viCharLength[1] = viLength;
-;PCODE: $0000016D VOL: 0
-;PCODE: $0000016E VOL: 0
-; 0019 008F         memcpy(&pviOutData_arg->value[viIndexWrite],&viCharLength[0],2);
-;PCODE: $0000016F VOL: 0
-;PCODE: $00000170 VOL: 0
-;PCODE: $00000171 VOL: 0
-;PCODE: $00000172 VOL: 0
-;PCODE: $00000173 VOL: 0
-;PCODE: $00000174 VOL: 0
-;PCODE: $00000175 VOL: 0
-;PCODE: $00000176 VOL: 0
-;PCODE: $00000177 VOL: 0
-; 0019 0090         viIndexWrite += 2;
-;PCODE: $00000178 VOL: 0
-;PCODE: $00000179 VOL: 0
-; 0019 0091 
-; 0019 0092         //mti
-; 0019 0093         memcpy(&pviOutData_arg->value[viIndexWrite],&pviMTI_arg[0],2);
-;PCODE: $0000017A VOL: 0
-;PCODE: $0000017B VOL: 0
-;PCODE: $0000017C VOL: 0
 ;PCODE: $0000017D VOL: 0
 ;PCODE: $0000017E VOL: 0
 ;PCODE: $0000017F VOL: 0
 ;PCODE: $00000180 VOL: 0
 ;PCODE: $00000181 VOL: 0
 ;PCODE: $00000182 VOL: 0
-; 0019 0094         viIndexWrite += 2;
 ;PCODE: $00000183 VOL: 0
 ;PCODE: $00000184 VOL: 0
-; 0019 0095 
-; 0019 0096         //tid
-; 0019 0097         memcpy(&pviOutData_arg->value[viIndexWrite],&pviTID_arg[0],8);
 ;PCODE: $00000185 VOL: 0
+; 0019 0092     //pviPTCData = (iChar_t *)malloc((viLength+20)); //sd(1),len(2),mti(2),tid(8),tim(4),fid(2),cs(1)
+; 0019 0093 
+; 0019 0094     //if(pviPTCData != NULL){
+; 0019 0095         //sd
+; 0019 0096         memcpy(&pviOutData_arg->value[viIndexWrite],&viSD,1);
 ;PCODE: $00000186 VOL: 0
 ;PCODE: $00000187 VOL: 0
 ;PCODE: $00000188 VOL: 0
@@ -597,29 +601,28 @@
 ;PCODE: $0000018B VOL: 0
 ;PCODE: $0000018C VOL: 0
 ;PCODE: $0000018D VOL: 0
-; 0019 0098         viIndexWrite += 8;
 ;PCODE: $0000018E VOL: 0
 ;PCODE: $0000018F VOL: 0
-; 0019 0099 
-; 0019 009A         //tim
-; 0019 009B         timestamp = DS1672_read();
 ;PCODE: $00000190 VOL: 0
+; 0019 0097         viIndexWrite += 1;
 ;PCODE: $00000191 VOL: 0
-; 0019 009C         memcpy(&pviOutData_arg->value[viIndexWrite],&timestamp,sizeof(timestamp));
 ;PCODE: $00000192 VOL: 0
+; 0019 0098 
+; 0019 0099         //len
+; 0019 009A         viLength = viLength_arg+16;
 ;PCODE: $00000193 VOL: 0
 ;PCODE: $00000194 VOL: 0
 ;PCODE: $00000195 VOL: 0
+; 0019 009B         viCharLength[0] = (viLength<<8);
 ;PCODE: $00000196 VOL: 0
 ;PCODE: $00000197 VOL: 0
 ;PCODE: $00000198 VOL: 0
 ;PCODE: $00000199 VOL: 0
+; 0019 009C         viCharLength[1] = viLength;
 ;PCODE: $0000019A VOL: 0
-; 0019 009D         viIndexWrite += sizeof(timestamp);
 ;PCODE: $0000019B VOL: 0
+; 0019 009D         memcpy(&pviOutData_arg->value[viIndexWrite],&viCharLength[0],2);
 ;PCODE: $0000019C VOL: 0
-; 0019 009E 
-; 0019 009F         memcpy(&viCharMTI[0],&pviMTI_arg[0],2);
 ;PCODE: $0000019D VOL: 0
 ;PCODE: $0000019E VOL: 0
 ;PCODE: $0000019F VOL: 0
@@ -627,10 +630,13 @@
 ;PCODE: $000001A1 VOL: 0
 ;PCODE: $000001A2 VOL: 0
 ;PCODE: $000001A3 VOL: 0
-; 0019 00A0         if((viCharMTI[0] == 0x08) && (viCharMTI[1] == 0x00)){
 ;PCODE: $000001A4 VOL: 0
+; 0019 009E         viIndexWrite += 2;
 ;PCODE: $000001A5 VOL: 0
 ;PCODE: $000001A6 VOL: 0
+; 0019 009F 
+; 0019 00A0         //mti
+; 0019 00A1         memcpy(&pviOutData_arg->value[viIndexWrite],&pviMTI_arg[0],2);
 ;PCODE: $000001A7 VOL: 0
 ;PCODE: $000001A8 VOL: 0
 ;PCODE: $000001A9 VOL: 0
@@ -638,15 +644,15 @@
 ;PCODE: $000001AB VOL: 0
 ;PCODE: $000001AC VOL: 0
 ;PCODE: $000001AD VOL: 0
-; 0019 00A1             //fid
-; 0019 00A2             if(viLength_arg==0){
 ;PCODE: $000001AE VOL: 0
 ;PCODE: $000001AF VOL: 0
+; 0019 00A2         viIndexWrite += 2;
 ;PCODE: $000001B0 VOL: 0
-; 0019 00A3                 viFrameID = 0;
 ;PCODE: $000001B1 VOL: 0
+; 0019 00A3 
+; 0019 00A4         //tid
+; 0019 00A5         memcpy(&pviOutData_arg->value[viIndexWrite],&pviTID_arg[0],8);
 ;PCODE: $000001B2 VOL: 0
-; 0019 00A4                 memcpy(&pviOutData_arg->value[viIndexWrite],&viFrameID,2);
 ;PCODE: $000001B3 VOL: 0
 ;PCODE: $000001B4 VOL: 0
 ;PCODE: $000001B5 VOL: 0
@@ -655,40 +661,38 @@
 ;PCODE: $000001B8 VOL: 0
 ;PCODE: $000001B9 VOL: 0
 ;PCODE: $000001BA VOL: 0
+; 0019 00A6         viIndexWrite += 8;
 ;PCODE: $000001BB VOL: 0
-; 0019 00A5                 viIndexWrite += 2;
 ;PCODE: $000001BC VOL: 0
+; 0019 00A7 
+; 0019 00A8         //tim
+; 0019 00A9         timestamp = DS1672_read();
 ;PCODE: $000001BD VOL: 0
-; 0019 00A6             }else{
 ;PCODE: $000001BE VOL: 0
+; 0019 00AA         memcpy(&pviOutData_arg->value[viIndexWrite],&timestamp,sizeof(timestamp));
 ;PCODE: $000001BF VOL: 0
-; 0019 00A7                 //fid
-; 0019 00A8                 viFrameID = iGenFID();
 ;PCODE: $000001C0 VOL: 0
 ;PCODE: $000001C1 VOL: 0
-; 0019 00A9                 memcpy(&pviOutData_arg->value[viIndexWrite],&viFrameID,2);
 ;PCODE: $000001C2 VOL: 0
 ;PCODE: $000001C3 VOL: 0
 ;PCODE: $000001C4 VOL: 0
 ;PCODE: $000001C5 VOL: 0
 ;PCODE: $000001C6 VOL: 0
 ;PCODE: $000001C7 VOL: 0
+; 0019 00AB         viIndexWrite += sizeof(timestamp);
 ;PCODE: $000001C8 VOL: 0
 ;PCODE: $000001C9 VOL: 0
+; 0019 00AC 
+; 0019 00AD         memcpy(&viCharMTI[0],&pviMTI_arg[0],2);
 ;PCODE: $000001CA VOL: 0
-; 0019 00AA                 viIndexWrite += 2;
 ;PCODE: $000001CB VOL: 0
 ;PCODE: $000001CC VOL: 0
-; 0019 00AB             }
 ;PCODE: $000001CD VOL: 0
-; 0019 00AC         }else{
 ;PCODE: $000001CE VOL: 0
 ;PCODE: $000001CF VOL: 0
-; 0019 00AD             //fid
-; 0019 00AE             viFrameID = iGenFID();
 ;PCODE: $000001D0 VOL: 0
+; 0019 00AE         if((viCharMTI[0] == 0x08) && (viCharMTI[1] == 0x00)){
 ;PCODE: $000001D1 VOL: 0
-; 0019 00AF             memcpy(&pviOutData_arg->value[viIndexWrite],&viFrameID,2);
 ;PCODE: $000001D2 VOL: 0
 ;PCODE: $000001D3 VOL: 0
 ;PCODE: $000001D4 VOL: 0
@@ -698,20 +702,16 @@
 ;PCODE: $000001D8 VOL: 0
 ;PCODE: $000001D9 VOL: 0
 ;PCODE: $000001DA VOL: 0
-; 0019 00B0             viIndexWrite += 2;
+; 0019 00AF             //fid
+; 0019 00B0             if(viLength_arg==0){
 ;PCODE: $000001DB VOL: 0
 ;PCODE: $000001DC VOL: 0
-; 0019 00B1         }
 ;PCODE: $000001DD VOL: 0
-; 0019 00B2 
-; 0019 00B3 
-; 0019 00B4 
-; 0019 00B5         if(viLength_arg != 0 ){
+; 0019 00B1                 viFrameID = 0;
 ;PCODE: $000001DE VOL: 0
 ;PCODE: $000001DF VOL: 0
+; 0019 00B2                 memcpy(&pviOutData_arg->value[viIndexWrite],&viFrameID,2);
 ;PCODE: $000001E0 VOL: 0
-; 0019 00B6             //data
-; 0019 00B7             memcpy(&pviOutData_arg->value[viIndexWrite],&pviData_arg[0],viLength_arg);
 ;PCODE: $000001E1 VOL: 0
 ;PCODE: $000001E2 VOL: 0
 ;PCODE: $000001E3 VOL: 0
@@ -720,56 +720,120 @@
 ;PCODE: $000001E6 VOL: 0
 ;PCODE: $000001E7 VOL: 0
 ;PCODE: $000001E8 VOL: 0
-; 0019 00B8             viIndexWrite += viLength_arg;
+; 0019 00B3                 viIndexWrite += 2;
 ;PCODE: $000001E9 VOL: 0
 ;PCODE: $000001EA VOL: 0
+; 0019 00B4             }else{
 ;PCODE: $000001EB VOL: 0
-; 0019 00B9         }
-; 0019 00BA 
-; 0019 00BB 
-; 0019 00BC         //cs
-; 0019 00BD         viCheckSum = iCheckSum(&pviOutData_arg->value[3],viFrameCSLen);
 ;PCODE: $000001EC VOL: 0
+; 0019 00B5                 //fid
+; 0019 00B6                 viFrameID = iGenFID();
 ;PCODE: $000001ED VOL: 0
 ;PCODE: $000001EE VOL: 0
+; 0019 00B7                 memcpy(&pviOutData_arg->value[viIndexWrite],&viFrameID,2);
 ;PCODE: $000001EF VOL: 0
 ;PCODE: $000001F0 VOL: 0
 ;PCODE: $000001F1 VOL: 0
 ;PCODE: $000001F2 VOL: 0
-; 0019 00BE         memcpy(&pviOutData_arg->value[viIndexWrite],&viCheckSum,1);
 ;PCODE: $000001F3 VOL: 0
 ;PCODE: $000001F4 VOL: 0
 ;PCODE: $000001F5 VOL: 0
 ;PCODE: $000001F6 VOL: 0
 ;PCODE: $000001F7 VOL: 0
+; 0019 00B8                 viIndexWrite += 2;
 ;PCODE: $000001F8 VOL: 0
 ;PCODE: $000001F9 VOL: 0
+; 0019 00B9             }
 ;PCODE: $000001FA VOL: 0
+; 0019 00BA         }else{
 ;PCODE: $000001FB VOL: 0
-; 0019 00BF         viIndexWrite += 1;
 ;PCODE: $000001FC VOL: 0
+; 0019 00BB             //fid
+; 0019 00BC             viFrameID = iGenFID();
 ;PCODE: $000001FD VOL: 0
-; 0019 00C0 
-; 0019 00C1         pviOutData_arg->length = viLength_arg+20;
 ;PCODE: $000001FE VOL: 0
+; 0019 00BD             memcpy(&pviOutData_arg->value[viIndexWrite],&viFrameID,2);
 ;PCODE: $000001FF VOL: 0
 ;PCODE: $00000200 VOL: 0
 ;PCODE: $00000201 VOL: 0
-; 0019 00C2 
-; 0019 00C3         //printDebug("[iPTCPack]Print:\r\n");
-; 0019 00C4         //print_payload(pviOutData_arg->value, (viLength_arg+20));
-; 0019 00C5 
-; 0019 00C6 //    }else{
-; 0019 00C7 //        printDebug("[iPTCPack]can 't allocate mem.\r\n");
-; 0019 00C8 //        //pviPTCData = 0;
-; 0019 00C9 //    }
-; 0019 00CA     //free(pviPTCData);
-; 0019 00CB     //return pviPTCData;
-; 0019 00CC }
 ;PCODE: $00000202 VOL: 0
 ;PCODE: $00000203 VOL: 0
 ;PCODE: $00000204 VOL: 0
 ;PCODE: $00000205 VOL: 0
+;PCODE: $00000206 VOL: 0
+;PCODE: $00000207 VOL: 0
+; 0019 00BE             viIndexWrite += 2;
+;PCODE: $00000208 VOL: 0
+;PCODE: $00000209 VOL: 0
+; 0019 00BF         }
+;PCODE: $0000020A VOL: 0
+; 0019 00C0 
+; 0019 00C1 
+; 0019 00C2 
+; 0019 00C3         if(viLength_arg != 0 ){
+;PCODE: $0000020B VOL: 0
+;PCODE: $0000020C VOL: 0
+;PCODE: $0000020D VOL: 0
+; 0019 00C4             //data
+; 0019 00C5             memcpy(&pviOutData_arg->value[viIndexWrite],&pviData_arg[0],viLength_arg);
+;PCODE: $0000020E VOL: 0
+;PCODE: $0000020F VOL: 0
+;PCODE: $00000210 VOL: 0
+;PCODE: $00000211 VOL: 0
+;PCODE: $00000212 VOL: 0
+;PCODE: $00000213 VOL: 0
+;PCODE: $00000214 VOL: 0
+;PCODE: $00000215 VOL: 0
+; 0019 00C6             viIndexWrite += viLength_arg;
+;PCODE: $00000216 VOL: 0
+;PCODE: $00000217 VOL: 0
+;PCODE: $00000218 VOL: 0
+; 0019 00C7         }
+; 0019 00C8 
+; 0019 00C9 
+; 0019 00CA         //cs
+; 0019 00CB         viCheckSum = iCheckSum(&pviOutData_arg->value[3],viFrameCSLen);
+;PCODE: $00000219 VOL: 0
+;PCODE: $0000021A VOL: 0
+;PCODE: $0000021B VOL: 0
+;PCODE: $0000021C VOL: 0
+;PCODE: $0000021D VOL: 0
+;PCODE: $0000021E VOL: 0
+;PCODE: $0000021F VOL: 0
+; 0019 00CC         memcpy(&pviOutData_arg->value[viIndexWrite],&viCheckSum,1);
+;PCODE: $00000220 VOL: 0
+;PCODE: $00000221 VOL: 0
+;PCODE: $00000222 VOL: 0
+;PCODE: $00000223 VOL: 0
+;PCODE: $00000224 VOL: 0
+;PCODE: $00000225 VOL: 0
+;PCODE: $00000226 VOL: 0
+;PCODE: $00000227 VOL: 0
+;PCODE: $00000228 VOL: 0
+; 0019 00CD         viIndexWrite += 1;
+;PCODE: $00000229 VOL: 0
+;PCODE: $0000022A VOL: 0
+; 0019 00CE 
+; 0019 00CF         pviOutData_arg->length = viLength_arg+20;
+;PCODE: $0000022B VOL: 0
+;PCODE: $0000022C VOL: 0
+;PCODE: $0000022D VOL: 0
+;PCODE: $0000022E VOL: 0
+; 0019 00D0 
+; 0019 00D1         //printDebug("[iPTCPack]Print:\r\n");
+; 0019 00D2         //print_payload(pviOutData_arg->value, (viLength_arg+20));
+; 0019 00D3 
+; 0019 00D4 //    }else{
+; 0019 00D5 //        printDebug("[iPTCPack]can 't allocate mem.\r\n");
+; 0019 00D6 //        //pviPTCData = 0;
+; 0019 00D7 //    }
+; 0019 00D8     //free(pviPTCData);
+; 0019 00D9     //return pviPTCData;
+; 0019 00DA }
+;PCODE: $0000022F VOL: 0
+;PCODE: $00000230 VOL: 0
+;PCODE: $00000231 VOL: 0
+;PCODE: $00000232 VOL: 0
 ;
 ;//iChar_t * iPTCPack(iData_t *pviData_arg, iChar_t *pviData_arg, iUInt_t viLength_arg, iChar_t *pviMTI_arg, iChar_t *pviTID_arg){
 ;//    //iChar_t * pviPTCData;
