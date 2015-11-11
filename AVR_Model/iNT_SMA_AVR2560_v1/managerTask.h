@@ -17,6 +17,9 @@
 #define MANG_QUEUE_MAX  2
 #define MANG_RETRANSMIT 3
 
+#define MANG_TASK_PRINT_DEBUG            0
+#define MANG_SETTLEMENT_PRINT_DEBUG      0
+
 typedef struct{
     iUInt_t recordID;
     iChar_t fid[2];
@@ -38,6 +41,7 @@ void memcpye(char eeprom *eptr, char *dptr, int len);
 void printConfig(char eeprom *eptr,unsigned int len);
 void iTerAckByTagB(iChar_t viTagName, iChar_t viPropNumber);
 void iSyncUniTime(unsigned long int *viUniTime_arg);
+iChar_t iSettlement(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg);
 
 
 #endif 

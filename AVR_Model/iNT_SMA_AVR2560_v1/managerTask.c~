@@ -19,10 +19,6 @@ extern iDataMini_t viStatusReport;
 iMangQueue_t viMangQueue[MANG_QUEUE_MAX];
 
 iSensorData_t pviRXReceiveSensor;
-//iUChar_t de
-
-//iData_t viTXDataBuff;
-//iData_t viRXDataBuff;
 
 void managerTask(void *pviParameter){
      int i; 
@@ -33,33 +29,7 @@ void managerTask(void *pviParameter){
      iUInt_t    viDatAndStatLength = 0;    
      unsigned long int viUniTime = 0;
      iUInt_t viRecordID = 0;
-     
-//     char viGenDataElem[80] = {
-//         0x7e,
-//         0x00,0x4c,
-//         0x02,0x00,
-//         0x01,0x01,0x01,0x01,0x01,0x01,0x01,0x01,
-//         0x50,0x72,0xC9,0x55,
-//         0x00,0x01,
-//         0x2A,0x06,0x11,0x04,0xCD,0xCC,0xC7,0x42,
-//         0x2A,0x06,0x12,0x04,0x00,0x00,0x00,0x00,
-//         0x2A,0x06,0x13,0x04,0x00,0x00,0xE0,0x41,
-//         0x5A,0x07,0x31,0x0c,0x0d,0x00,0x00,0x00,0x00, 
-//         0x5A,0x07,0x32,0x0d,0x0d,0x01,0x0f,0xf0,0x3b, 
-//         0x5A,0x07,0x41,0x0a,0x09,0x00,0x0f,0xe0,0x41,
-//         0x5A,0x07,0x42,0x0a,0x0b,0x00,0x0f,0x08,0x42,
-//         0x70
-//    } ;
-    
-//    char viGenDataElem[60] = {
-//         0x2A,0x06,0x11,0x04,0xCD,0xCC,0xC7,0x42,
-//         0x2A,0x06,0x12,0x04,0x00,0x00,0x00,0x00,
-//         0x2A,0x06,0x13,0x04,0x00,0x00,0xE0,0x41,
-//         0x5A,0x07,0x31,0x0c,0x0d,0x00,0x00,0x00,0x00, 
-//         0x5A,0x07,0x32,0x0d,0x0d,0x01,0x0f,0xf0,0x3b, 
-//         0x5A,0x07,0x41,0x0a,0x09,0x00,0x0f,0xe0,0x41,
-//         0x5A,0x07,0x42,0x0a,0x0b,0x00,0x0f,0x08,0x42
-//    } ; 
+
      char mti[2] = {0x02,0x00}; 
      char tid[8] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}; 
      TIMER   viDelay_s; 
@@ -85,8 +55,8 @@ void managerTask(void *pviParameter){
     tid[7] =  (viDVConfigUpdate.viProperties.viDeviceID[14]<<4);
     tid[7] |=  (viDVConfigUpdate.viProperties.viDeviceID[15])&0x0f;
      
-    //TIMER_setTimer(&viTEver1min, 60);  
-    TIMER_setTimer(&viTEver1min, 20);
+    TIMER_setTimer(&viTEver1min, 60);  
+    //TIMER_setTimer(&viTEver1min, 20);
     while(!TIMER_checkTimerExceed(viTEver1min)){
        #asm("wdr")
     }
@@ -95,30 +65,7 @@ void managerTask(void *pviParameter){
     
      printDebug("[managerTask]Task Running...\r\n");    
      
-     
-//    if(iQueueReceive(pviQueueSensorToMang,&pviRXReceiveSensor)==1){
-//        printDebug("<managerTask>ACD");
-//        for(i=0;i<SENSER_ADC_MAX_SIZE;i++){
-//            printDebug("[%d]:%d | ",(i+1),pviRXReceiveSensor.adc[i]);
-//        } 
-//        printDebug("\r\n");
-//        printDebug("<managerTask>DHT11 Temp-c(%f), Humidity(%f)\r\n",pviRXReceiveSensor.dht11Temp,pviRXReceiveSensor.dht11Humi);
-//	}else{
-//		printDebug("<managerTask>data can not sent a data to pviQueueSensorToMang.\r\n");
-//	}  
-    
-//
-//    if(iQueueReceive(pviQueueDeviceToMang,&pviRXReceiveSensor)==1){
-//        printDebug("<managerTask>ACD");
-//        for(i=0;i<SENSER_ADC_MAX_SIZE;i++){
-//            printDebug("[%d]:%d | ",(i+1),pviRXReceiveSensor.adc[i]);
-//        } 
-//        printDebug("\r\n");
-//        printDebug("<managerTask>DHT11 Temp-c(%f), Humidity(%f)\r\n",pviRXReceiveSensor.dht11Temp,pviRXReceiveSensor.dht11Humi);
-//	}else{
-//		printDebug("<managerTask>data can not sent a data to pviQueueSensorToMang.\r\n");
-//	} 
-    //iDataSelect('N');
+ 
     //Terminal frist initial//
     if(viFlagTerInit==0){
         mti[0] = 0x08;
@@ -128,7 +75,7 @@ void managerTask(void *pviParameter){
         if(viRecordID>0){
             printDebug("[managerTask]Record ID(%04ld)\r\n",viRecordID);
         }
-        iDataSelect(viRecordID,'N');    
+        iDataSelect(viRecordID,&viTXDataBuff);    
         
         if(iLanWriteData(&viTXDataBuff)){
             if(iLanReadData(&viRXDataBuff)){
@@ -194,7 +141,8 @@ void managerTask(void *pviParameter){
             if(viRecordID>0){
                 printDebug("[managerTask]Record ID(%04ld)\r\n",viRecordID);
             }
-            iDataSelect(viRecordID,'N'); 
+            //iDataSelect(viRecordID); 
+            iDataSelect(viRecordID,&viTXDataBuff);
             iMangQueueAddItem(viRecordID,&viTXDataBuff,&viTXDataBuff.value[17]); //add protocol in mang queue
             iMangQueueDisplay();//display mang queue
             delay_ms(1000);
@@ -250,7 +198,9 @@ void managerTask(void *pviParameter){
                 }
             }
             
-            
+            //show statment
+            //iDataSelectToSettlement((unsigned int *)0,(unsigned int *)0,20);
+            iSettlement(&viTXDataBuff,&viRXDataBuff);
         }
     
     }
@@ -259,10 +209,14 @@ void managerTask(void *pviParameter){
     
 }
 
-iChar_t iSettlement(iUInt_t viRecordID_arg){
+iChar_t iSettlement(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
     iChar_t viReturn = -1; 
-    char mti[2] = {0x06,0x00}; 
-    char tid[8] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};   
+    char mti[2] = {0x05,0x00}; 
+    char tid[8] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};  
+    iUInt_t viRIDBuff[30];
+    iUInt_t viRIDLength = 0; 
+    iUChar_t viLimitQuery = 10;
+    iUInt_t viCount = 0;
     
     tid[0] =  (viDVConfigUpdate.viProperties.viDeviceID[0]<<4);
     tid[0] |=  (viDVConfigUpdate.viProperties.viDeviceID[1])&0x0f; 
@@ -281,7 +235,44 @@ iChar_t iSettlement(iUInt_t viRecordID_arg){
     tid[7] =  (viDVConfigUpdate.viProperties.viDeviceID[14]<<4);
     tid[7] |=  (viDVConfigUpdate.viProperties.viDeviceID[15])&0x0f;  
     
-    iPTCPack(&viTXDataBuff,(char *)"",0,mti,tid);
+    
+    //show statment
+    iDataSelectToSettlement(viRIDBuff,&viRIDLength,viLimitQuery); 
+    printDebug("[iSettlement]RID count(%d).\r\n",viRIDLength); 
+    for(viCount=0;viCount<viRIDLength;viCount++){   
+        delay_ms(10);
+        #asm("wdr") 
+#if (MANG_SETTLEMENT_PRINT_DEBUG == 1)
+        printDebug("[iSettlement]No %d. RID feed(%d).\r\n",(viCount+1),viRIDBuff[viCount]);
+#endif
+        iDataSelect(viRIDBuff[viCount],pviTXDataBuff_arg);
+#if (MANG_SETTLEMENT_PRINT_DEBUG == 1)
+        printDebug("[iSettlement]Data:[\r\n");
+        print_payload(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
+        printDebug("]\r\n");
+#endif
+        iPTCMtiRepack(pviTXDataBuff_arg,mti); 
+        
+#if (MANG_SETTLEMENT_PRINT_DEBUG == 1)
+        printDebug("[iSettlement]MTI change to settlement(0x0500).[\r\n");
+        print_payload(&pviTXDataBuff_arg->value[0],pviTXDataBuff_arg->length);
+        printDebug("]\r\n"); 
+#endif 
+        
+        //send settlement data
+        if(iLanWriteData((iData_t const * const)pviTXDataBuff_arg)){
+            if(iLanReadData(pviRXDataBuff_arg)){ 
+                iDataUpdate(viRIDBuff[viCount],'S',(iChar_t const * const)pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);  //Y=> //no update date   ,only update status
+                if(iPTCParser(pviRXDataBuff_arg)){ 
+                    //iDataUpdate(viRIDBuff[viCount],'S',(iChar_t const * const)pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);  //Y=> //no update date   ,only update status
+                    iTagParser(pviRXDataBuff_arg); 
+                }
+            }else{
+                printDebug("[iSettlement]Host is not response or data invalid.\r\n");
+            }
+        }
+        
+    } 
     
     return viReturn;
 }
@@ -643,7 +634,7 @@ void iSyncUniTime(unsigned long int *viUniTime_arg){
      viUniTimeTerminal = DS1672_read(); 
      viUniTimeServer = *viUniTime_arg; 
       
-     if((viUniTimeServer-viUniTimeTerminal)>40){
+     if((viUniTimeServer-viUniTimeTerminal)>20){
 //         printDebug("[iSyncUniTime]Terminal %ld\r\n",viUniTimeTerminal);
 //         printDebug("[iSyncUniTime]Server %ld\r\n",viUniTimeServer);  
 //         printDebug("[iSyncUniTime]Time Diff %ld\r\n",(viUniTimeServer-viUniTimeTerminal)); 
@@ -652,7 +643,7 @@ void iSyncUniTime(unsigned long int *viUniTime_arg){
          RTC_setBinary(viUniTimeServer);
 //         RTC_getDateTime(&rtcTest,0);
 //         printRTC(rtcTest);
-     }else if((viUniTimeServer-viUniTimeTerminal)>(-40)){ 
+     }else if((viUniTimeServer-viUniTimeTerminal)>(-20)){ 
 //         printDebug("[iSyncUniTime]Terminal %ld\r\n",viUniTimeTerminal);
 //         printDebug("[iSyncUniTime]Server %ld\r\n",viUniTimeServer);  
 //         printDebug("[iSyncUniTime]Time Diff %ld\r\n",(viUniTimeServer-viUniTimeTerminal)); 

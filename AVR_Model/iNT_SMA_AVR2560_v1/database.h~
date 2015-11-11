@@ -11,6 +11,7 @@
 #define DB_BLOCK_READ_def           256
 #define DB_BLOCK_BUFFER_def         256
 #define DB_ID_MAX_RECORD_def        2048
+#define DB_ID_LIMIT_RECORD_def      20
 #define DB_DELIMITER_def            '|'
 
 #define DB_MODE_INSERT              1
@@ -35,8 +36,9 @@ typedef struct{
 
 extern eeprom unsigned int viLineID;
 
-iChar_t iDataUpdate(iUInt_t viRecordID_arg,iUChar_t viStatus_arg);
+iChar_t iDataUpdate(const iUInt_t viRecordID_arg,iUChar_t viStatus_arg,iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg);
 iUInt_t iDataInsert(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg);
-iChar_t iDataSelect(iUInt_t viRecordID_arg,iUChar_t viStatus_arg);
+iChar_t iDataSelect(const iUInt_t viRecordID_arg);
+iChar_t iDataSelectToSettlement(iUInt_t *pviOutData_arg,iUInt_t *pviOutLength_arg,iUChar_t viLimitRecord_arg);
 
 #endif 

@@ -61,7 +61,7 @@ void iWizRXTimeOut(){
      rxBeginCount = 0; 
      pviUart0TimeOut = -1;
      wiz100srSetTimer = -1;
-     printDebug("<iWizRXTimeOut>\r\n");
+     printDebug("[iWizRXTimeOut]\r\n");
 }
 
 int iWizCBCheckHTTPResCode(char *const data_p,unsigned int const len_p){
@@ -701,26 +701,6 @@ iChar_t iWizConfigIPParser(iChar_t *pviOutData_arg,iChar_t *pviInData_arg){
     return viReturn;
 }
 
-//iChar_t iWizConfigMACParser(iUChar_t *pviOutData_arg,iChar_t *pviInData_arg){
-//    iChar_t *ptrCh;
-//    iChar_t viMAC[6];
-//    iInt_t viNumber;
-//    iChar_t viReturn = 0;
-//    iChar_t viI=0;
-//    
-//    ptrCh = strtok((pviInData_arg+2),".");    //2= <S
-//	viI=0;
-//	while(ptrCh != NULL){
-//		viMAC[viI] = iMapAsciiHexToChar(ptrCh);
-//		ptrCh = strtok(NULL,".");
-//		viI++; 
-//	}
-//    memcpy(pviOutData_arg,viMAC,6); 
-//    //printDebug("[iWizConfigMACParser]MAC:%02x:%02x:%02x:%02x:%02x:%02x\r\n",*pviOutData_arg,*(pviOutData_arg+1),*(pviOutData_arg+2),*(pviOutData_arg+3),*(pviOutData_arg+4),*(pviOutData_arg+5));
-//    
-//    viReturn = 1;
-//    return viReturn; 
-//}
 iChar_t iWizConfigMACParser(iUChar_t *pviOutData_arg,iChar_t *pviInData_arg){
     iChar_t *ptrCh;
     iChar_t viMAC[12];

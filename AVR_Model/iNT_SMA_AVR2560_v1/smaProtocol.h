@@ -19,6 +19,8 @@
 #define PTC_HOST_NOT_REQ    0x00
 #define PTC_HOST_REQ        0x01
 
+#define PTC_PRINT_DEBUG            0
+
 ///////////////////Tag define/////////////
 #define TAG_2A      0x2a
 #define TAG_3A      0x3a

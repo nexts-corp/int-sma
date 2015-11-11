@@ -11,7 +11,7 @@ int flagConnect = 0;
 
 iWiz100srConfig_t iWiz100srConfig;
 //char httpPostHeader[] = "POST /smasmartdevice HTTP/1.1\r\nHost: smasmartdevice.appspot.com\r\nUser-Agent: AVR2560-LAN\r\nConnection: close\r\nContent-Length: ";
-c//har httpPostHeader[] = "POST /smasmartdevice HTTP/1.1\r\nHost: smasmartdevice.appspot.com\r\nX-CLIENT-UUID: 001100110011\r\nUser-Agent: AVR2560-LAN\r\nConnection: close\r\nContent-Length: ";
+//char httpPostHeader[] = "POST /smasmartdevice HTTP/1.1\r\nHost: smasmartdevice.appspot.com\r\nX-CLIENT-UUID: 001100110011\r\nUser-Agent: AVR2560-LAN\r\nConnection: close\r\nContent-Length: ";
 
 
 //iWiz100srData_t iWiz100srData;
@@ -701,26 +701,6 @@ iChar_t iWizConfigIPParser(iChar_t *pviOutData_arg,iChar_t *pviInData_arg){
     return viReturn;
 }
 
-//iChar_t iWizConfigMACParser(iUChar_t *pviOutData_arg,iChar_t *pviInData_arg){
-//    iChar_t *ptrCh;
-//    iChar_t viMAC[6];
-//    iInt_t viNumber;
-//    iChar_t viReturn = 0;
-//    iChar_t viI=0;
-//    
-//    ptrCh = strtok((pviInData_arg+2),".");    //2= <S
-//	viI=0;
-//	while(ptrCh != NULL){
-//		viMAC[viI] = iMapAsciiHexToChar(ptrCh);
-//		ptrCh = strtok(NULL,".");
-//		viI++; 
-//	}
-//    memcpy(pviOutData_arg,viMAC,6); 
-//    //printDebug("[iWizConfigMACParser]MAC:%02x:%02x:%02x:%02x:%02x:%02x\r\n",*pviOutData_arg,*(pviOutData_arg+1),*(pviOutData_arg+2),*(pviOutData_arg+3),*(pviOutData_arg+4),*(pviOutData_arg+5));
-//    
-//    viReturn = 1;
-//    return viReturn; 
-//}
 iChar_t iWizConfigMACParser(iUChar_t *pviOutData_arg,iChar_t *pviInData_arg){
     iChar_t *ptrCh;
     iChar_t viMAC[12];

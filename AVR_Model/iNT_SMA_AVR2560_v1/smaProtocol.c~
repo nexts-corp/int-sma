@@ -125,7 +125,7 @@ void iPTCMtiRepack(iData_t *pviOutData_arg,iChar_t *pviMTI_arg){
      memcpy(&pviOutData_arg->value[3],&pviMTI_arg[0],2);        //0x0300  => Log
        
      //cs 
-     viCheckSum = iCheckSum(&pviData_arg[3],viFrameCSLen); 
+     viCheckSum = iCheckSum(&pviOutData_arg->value[3],viFrameCSLen); 
      memcpy(&pviOutData_arg->value[(pviOutData_arg->length-1)],&viCheckSum,1);  
      
      

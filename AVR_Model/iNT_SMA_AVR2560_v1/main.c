@@ -103,6 +103,7 @@ void main(void){
         printDebug("[main]Lan Connected.\r\n");
     }else{
         printDebug("[main]Lan Fail.\r\n");
+        iWizReadConfig();
         iLanInit();
     }
     

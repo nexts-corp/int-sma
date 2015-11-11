@@ -19,6 +19,8 @@
 #define PTC_HOST_NOT_REQ    0x00
 #define PTC_HOST_REQ        0x01
 
+#define PTC_TASK_PRINT_DEBUG            0
+
 ///////////////////Tag define/////////////
 #define TAG_2A      0x2a
 #define TAG_3A      0x3a
@@ -105,7 +107,7 @@ void tag5A();
 
 void protocolManagement();
 
-void iPTCMtiRepack(iChar_t *pviData_arg, iUInt_t viLength_arg,iChar_t *pviMTI_arg);
+void iPTCMtiRepack(iData_t *pviOutData_arg,iChar_t *pviMTI_arg);
 iChar_t iPTCParser(iData_t *pviOutData_arg);
 iInt_t iCheckSum(iChar_t buf_ags[], iInt_t len_ags);
 
