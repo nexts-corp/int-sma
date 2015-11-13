@@ -707,7 +707,7 @@
 ;PCODE: $000001F2 VOL: 0
 ;PCODE: $000001F3 VOL: 0
 ;PCODE: $000001F4 VOL: 0
-; 0027 00B0             indexWriteFile = (DB_BLOCK_BUFFER_def*(viRecordID-1));
+; 0027 00B0             indexWriteFile = (unsigned long)(DB_BLOCK_BUFFER_def*(viRecordID-1));
 ;PCODE: $000001F5 VOL: 0
 ;PCODE: $000001F6 VOL: 0
 ;PCODE: $000001F7 VOL: 0
@@ -1098,20 +1098,21 @@
 ;PCODE: $0000031A VOL: 0
 ;PCODE: $0000031B VOL: 0
 ; 0027 0101     iDB_t *pviDBLogger;
-; 0027 0102     iChar_t viReturn = 0;
+; 0027 0102     iChar_t viReturn = -1;
 ; 0027 0103     iChar_t *pviDataBuffInsert;
-; 0027 0104     iChar_t viDataBuff[DB_BLOCK_BUFFER_def];
-; 0027 0105     unsigned int viRecordID = 0;
-; 0027 0106     unsigned long indexReadFile = 0;
-; 0027 0107     unsigned int viLenOfData = 0;
-; 0027 0108     unsigned long viFileSize = 0;
-; 0027 0109     unsigned long viRecordIDBuff = 0;
-; 0027 010A     iUInt_t i = 0,j=0;
-; 0027 010B     iUInt_t viRIDBuff[30];
-; 0027 010C     iUInt_t viRIDLength = 0;
-; 0027 010D     iUInt_t viIndexWrite = 0;
-; 0027 010E 
-; 0027 010F     #asm("wdr")
+; 0027 0104     //iChar_t viDataBuff[DB_BLOCK_BUFFER_def];
+; 0027 0105     iChar_t viDataBuff[6];
+; 0027 0106     unsigned int viRecordID = 0;
+; 0027 0107     unsigned long indexReadFile = 0;
+; 0027 0108     unsigned int viLenOfData = 0;
+; 0027 0109     unsigned long viFileSize = 0;
+; 0027 010A     unsigned int viRecordIDBuff = 0;
+; 0027 010B     iUInt_t i = 0,j=0;
+; 0027 010C     unsigned int viRIDBuff[30];
+; 0027 010D     iUInt_t viRIDLength = 0;
+; 0027 010E     iUInt_t viIndexWrite = 0;
+; 0027 010F 
+; 0027 0110     #asm("wdr")
 ;PCODE: $0000031C VOL: 0
 ;PCODE: $0000031D VOL: 0
 ;PCODE: $0000031E VOL: 0
@@ -1119,17 +1120,17 @@
 ;PCODE: $00000320 VOL: 0
 ;PCODE: $00000321 VOL: 0
 ;PCODE: $00000322 VOL: 0
-;	*pviOutData_arg -> Y+349
-;	*pviOutLength_arg -> Y+347
-;	viLimitRecord_arg -> Y+346
+;	*pviOutData_arg -> Y+97
+;	*pviOutLength_arg -> Y+95
+;	viLimitRecord_arg -> Y+94
 ;	*pviDBLogger -> R16,R17
 ;	viReturn -> R19
 ;	*pviDataBuffInsert -> R20,R21
-;	viDataBuff -> Y+90
-;	viRecordID -> Y+88
-;	indexReadFile -> Y+84
-;	viLenOfData -> Y+82
-;	viFileSize -> Y+78
+;	viDataBuff -> Y+88
+;	viRecordID -> Y+86
+;	indexReadFile -> Y+82
+;	viLenOfData -> Y+80
+;	viFileSize -> Y+76
 ;	viRecordIDBuff -> Y+74
 ;	i -> Y+72
 ;	j -> Y+70
@@ -1141,15 +1142,15 @@
 ;PCODE: $00000325 VOL: 0
 	wdr
 ;PCODE: $00000326 VOL: 0
-; 0027 0110     memset(viDataBuff,0,sizeof(viDataBuff));
+; 0027 0111     memset(viDataBuff,0,sizeof(viDataBuff));
 ;PCODE: $00000327 VOL: 0
 ;PCODE: $00000328 VOL: 0
 ;PCODE: $00000329 VOL: 0
 ;PCODE: $0000032A VOL: 0
 ;PCODE: $0000032B VOL: 0
 ;PCODE: $0000032C VOL: 0
-; 0027 0111     if(iFSize((char const * const)viDirDataPath,(char const * const)viDataFName,&viFileSize)==1){
 ;PCODE: $0000032D VOL: 0
+; 0027 0112     if(iFSize((char const * const)viDirDataPath,(char const * const)viDataFName,&viFileSize)==1){
 ;PCODE: $0000032E VOL: 0
 ;PCODE: $0000032F VOL: 0
 ;PCODE: $00000330 VOL: 0
@@ -1157,54 +1158,59 @@
 ;PCODE: $00000332 VOL: 0
 ;PCODE: $00000333 VOL: 0
 ;PCODE: $00000334 VOL: 0
-; 0027 0112        if(viFileSize == 0){
 ;PCODE: $00000335 VOL: 0
+; 0027 0113        if(viFileSize == 0){
 ;PCODE: $00000336 VOL: 0
 ;PCODE: $00000337 VOL: 0
-; 0027 0113           printDebug("[iDataSelectToSettlement]File is empty.\r\n");
 ;PCODE: $00000338 VOL: 0
+; 0027 0114           printDebug("[iDataSelectToSettlement]File is empty.\r\n");
 ;PCODE: $00000339 VOL: 0
 ;PCODE: $0000033A VOL: 0
 ;PCODE: $0000033B VOL: 0
 ;PCODE: $0000033C VOL: 0
 ;PCODE: $0000033D VOL: 0
 ;PCODE: $0000033E VOL: 0
-; 0027 0114           viReturn = -1;
 ;PCODE: $0000033F VOL: 0
+; 0027 0115           viReturn = -1;
 ;PCODE: $00000340 VOL: 0
-; 0027 0115        }else{
 ;PCODE: $00000341 VOL: 0
+; 0027 0116        }else{
 ;PCODE: $00000342 VOL: 0
-; 0027 0116           if(viLimitRecord_arg<viLineID){
 ;PCODE: $00000343 VOL: 0
+; 0027 0117           if(viLimitRecord_arg<viLineID){
 ;PCODE: $00000344 VOL: 0
 ;PCODE: $00000345 VOL: 0
 ;PCODE: $00000346 VOL: 0
 ;PCODE: $00000347 VOL: 0
 ;PCODE: $00000348 VOL: 0
-; 0027 0117               for(i=0,j=0;j<viLimitRecord_arg;i++){
 ;PCODE: $00000349 VOL: 0
+; 0027 0118               i=0;
 ;PCODE: $0000034A VOL: 0
 ;PCODE: $0000034B VOL: 0
+; 0027 0119               j=0;
 ;PCODE: $0000034C VOL: 0
 ;PCODE: $0000034D VOL: 0
+; 0027 011A               do{
 ;PCODE: $0000034E VOL: 0
+; 0027 011B                   #asm("wdr")
 ;PCODE: $0000034F VOL: 0
+	wdr
 ;PCODE: $00000350 VOL: 0
+; 0027 011C                   delay_us(4);
 ;PCODE: $00000351 VOL: 0
+; 0027 011D                   iFRead(viDataBuff,(iUInt_t)4,(char const * const)viDirDataPath,(char const * const)viDataFName,&indexReadFile);
 ;PCODE: $00000352 VOL: 0
 ;PCODE: $00000353 VOL: 0
 ;PCODE: $00000354 VOL: 0
 ;PCODE: $00000355 VOL: 0
 ;PCODE: $00000356 VOL: 0
 ;PCODE: $00000357 VOL: 0
-; 0027 0118                   #asm("wdr")
 ;PCODE: $00000358 VOL: 0
-	wdr
 ;PCODE: $00000359 VOL: 0
-; 0027 0119                   iFRead(viDataBuff,(iUInt_t)4,(char const * const)viDirDataPath,(char const * const)viDataFName,&indexReadFile);
 ;PCODE: $0000035A VOL: 0
 ;PCODE: $0000035B VOL: 0
+; 0027 011E                   //print_payload(viDataBuff,4);
+; 0027 011F                   memcpy(&viRecordIDBuff,&viDataBuff[0],2);
 ;PCODE: $0000035C VOL: 0
 ;PCODE: $0000035D VOL: 0
 ;PCODE: $0000035E VOL: 0
@@ -1212,27 +1218,32 @@
 ;PCODE: $00000360 VOL: 0
 ;PCODE: $00000361 VOL: 0
 ;PCODE: $00000362 VOL: 0
+; 0027 0120                   if(viRecordIDBuff==NULL){
 ;PCODE: $00000363 VOL: 0
-; 0027 011A                   //print_payload(viDataBuff,4);
-; 0027 011B                   memcpy(&viRecordIDBuff,viDataBuff,2);
 ;PCODE: $00000364 VOL: 0
 ;PCODE: $00000365 VOL: 0
+; 0027 0121                      break;
 ;PCODE: $00000366 VOL: 0
+; 0027 0122                   }
+; 0027 0123 
+; 0027 0124                   indexReadFile = (unsigned long)(DB_BLOCK_BUFFER_def*(++j));
 ;PCODE: $00000367 VOL: 0
 ;PCODE: $00000368 VOL: 0
 ;PCODE: $00000369 VOL: 0
 ;PCODE: $0000036A VOL: 0
-; 0027 011C                   if(viDataBuff[2] == 'S'){
 ;PCODE: $0000036B VOL: 0
 ;PCODE: $0000036C VOL: 0
 ;PCODE: $0000036D VOL: 0
-; 0027 011D                      //continue;
-; 0027 011E                   }else if((viDataBuff[2] == 'N') || (viDataBuff[2] == 'Y') || (viDataBuff[2] == 'L')){
 ;PCODE: $0000036E VOL: 0
+; 0027 0125                   if(indexReadFile>((unsigned long)(DB_BLOCK_BUFFER_def*DB_ID_MAX_RECORD_def))){
 ;PCODE: $0000036F VOL: 0
 ;PCODE: $00000370 VOL: 0
 ;PCODE: $00000371 VOL: 0
+; 0027 0126                        break;
 ;PCODE: $00000372 VOL: 0
+; 0027 0127                   }
+; 0027 0128 
+; 0027 0129                   if((viDataBuff[2] == 'N') || (viDataBuff[2] == 'Y') || (viDataBuff[2] == 'L')){
 ;PCODE: $00000373 VOL: 0
 ;PCODE: $00000374 VOL: 0
 ;PCODE: $00000375 VOL: 0
@@ -1241,35 +1252,28 @@
 ;PCODE: $00000378 VOL: 0
 ;PCODE: $00000379 VOL: 0
 ;PCODE: $0000037A VOL: 0
-; 0027 011F                      //printDebug("[iDataSelectAll]Record id(%ld),status send(%c).\r\n",viRecordIDBuff,viDataBuff[2]);
-; 0027 0120 //                     pviOutData_arg[i] = viRecordIDBuff;
-; 0027 0121 //                     *pviOutLength_arg += 1;
-; 0027 0122                        viRIDBuff[j] = viRecordIDBuff;
 ;PCODE: $0000037B VOL: 0
 ;PCODE: $0000037C VOL: 0
 ;PCODE: $0000037D VOL: 0
 ;PCODE: $0000037E VOL: 0
+; 0027 012A                        printDebug("[iDataSelectToSettlement]RID (%d),Status (%c).\r\n",viRecordIDBuff,viDataBuff[2]);
 ;PCODE: $0000037F VOL: 0
 ;PCODE: $00000380 VOL: 0
-; 0027 0123                        viRIDLength += 1;
 ;PCODE: $00000381 VOL: 0
 ;PCODE: $00000382 VOL: 0
 ;PCODE: $00000383 VOL: 0
-; 0027 0124                        j++;
 ;PCODE: $00000384 VOL: 0
 ;PCODE: $00000385 VOL: 0
 ;PCODE: $00000386 VOL: 0
 ;PCODE: $00000387 VOL: 0
-; 0027 0125                   }
-; 0027 0126                   indexReadFile = (DB_BLOCK_BUFFER_def*(i+1));
 ;PCODE: $00000388 VOL: 0
 ;PCODE: $00000389 VOL: 0
 ;PCODE: $0000038A VOL: 0
 ;PCODE: $0000038B VOL: 0
+; 0027 012B                        viRIDBuff[i++] = viRecordIDBuff;
 ;PCODE: $0000038C VOL: 0
 ;PCODE: $0000038D VOL: 0
 ;PCODE: $0000038E VOL: 0
-; 0027 0127               }
 ;PCODE: $0000038F VOL: 0
 ;PCODE: $00000390 VOL: 0
 ;PCODE: $00000391 VOL: 0
@@ -1277,31 +1281,33 @@
 ;PCODE: $00000393 VOL: 0
 ;PCODE: $00000394 VOL: 0
 ;PCODE: $00000395 VOL: 0
-; 0027 0128 //              printDebug("[iDataSelectAll]RID count(%ld).\r\n",*pviOutLength_arg);
-; 0027 0129 //              printDebug("[iDataSelectAll]Data:[\r\n");
-; 0027 012A               printDebug("[iDataSelectToSettlement]RID count(%ld).\r\n",viRIDLength);
+; 0027 012C                        viRIDLength = i;
 ;PCODE: $00000396 VOL: 0
 ;PCODE: $00000397 VOL: 0
+; 0027 012D                        if(viRIDLength==viLimitRecord_arg){
 ;PCODE: $00000398 VOL: 0
 ;PCODE: $00000399 VOL: 0
 ;PCODE: $0000039A VOL: 0
 ;PCODE: $0000039B VOL: 0
 ;PCODE: $0000039C VOL: 0
+; 0027 012E                           break;
 ;PCODE: $0000039D VOL: 0
+; 0027 012F                        }
+; 0027 0130                   }else if(viDataBuff[2] == 'S'){
 ;PCODE: $0000039E VOL: 0
 ;PCODE: $0000039F VOL: 0
-; 0027 012B               printDebug("[iDataSelectToSettlement]Data:[\r\n");
 ;PCODE: $000003A0 VOL: 0
 ;PCODE: $000003A1 VOL: 0
 ;PCODE: $000003A2 VOL: 0
 ;PCODE: $000003A3 VOL: 0
+; 0027 0131                        continue;
 ;PCODE: $000003A4 VOL: 0
+; 0027 0132                   }else{
 ;PCODE: $000003A5 VOL: 0
 ;PCODE: $000003A6 VOL: 0
-; 0027 012C               viIndexWrite = 0;
+; 0027 0133                        printDebug("[iDataSelectToSettlement]Status unknow(%c).\r\n",viDataBuff[2]);
 ;PCODE: $000003A7 VOL: 0
 ;PCODE: $000003A8 VOL: 0
-; 0027 012D               for(i=0;i<viRIDLength;i++){
 ;PCODE: $000003A9 VOL: 0
 ;PCODE: $000003AA VOL: 0
 ;PCODE: $000003AB VOL: 0
@@ -1310,26 +1316,27 @@
 ;PCODE: $000003AE VOL: 0
 ;PCODE: $000003AF VOL: 0
 ;PCODE: $000003B0 VOL: 0
+; 0027 0134                   }
 ;PCODE: $000003B1 VOL: 0
 ;PCODE: $000003B2 VOL: 0
+; 0027 0135 
+; 0027 0136               }while(viRecordIDBuff<viLineID);
 ;PCODE: $000003B3 VOL: 0
 ;PCODE: $000003B4 VOL: 0
-; 0027 012E //                 memcpy(&pviOutData_arg[viIndexWrite],&viRIDBuff[viIndexWrite],2);
-; 0027 012F //                 viIndexWrite += 2;
-; 0027 0130 
-; 0027 0131                  if(i==(viRIDLength-1)){
 ;PCODE: $000003B5 VOL: 0
 ;PCODE: $000003B6 VOL: 0
 ;PCODE: $000003B7 VOL: 0
 ;PCODE: $000003B8 VOL: 0
 ;PCODE: $000003B9 VOL: 0
-; 0027 0132                     printDebug("%d",viRIDBuff[i]);
 ;PCODE: $000003BA VOL: 0
+; 0027 0137 
+; 0027 0138               if(viRIDLength==viLimitRecord_arg){
 ;PCODE: $000003BB VOL: 0
 ;PCODE: $000003BC VOL: 0
 ;PCODE: $000003BD VOL: 0
 ;PCODE: $000003BE VOL: 0
 ;PCODE: $000003BF VOL: 0
+; 0027 0139                   printDebug("[iDataSelectToSettlement]RID count(%ld).\r\n",viRIDLength);
 ;PCODE: $000003C0 VOL: 0
 ;PCODE: $000003C1 VOL: 0
 ;PCODE: $000003C2 VOL: 0
@@ -1338,10 +1345,9 @@
 ;PCODE: $000003C5 VOL: 0
 ;PCODE: $000003C6 VOL: 0
 ;PCODE: $000003C7 VOL: 0
-; 0027 0133                  }else{
 ;PCODE: $000003C8 VOL: 0
 ;PCODE: $000003C9 VOL: 0
-; 0027 0134                     printDebug("%d,",viRIDBuff[i]);
+; 0027 013A                   printDebug("[iDataSelectToSettlement]Data:[\r\n");
 ;PCODE: $000003CA VOL: 0
 ;PCODE: $000003CB VOL: 0
 ;PCODE: $000003CC VOL: 0
@@ -1349,6 +1355,7 @@
 ;PCODE: $000003CE VOL: 0
 ;PCODE: $000003CF VOL: 0
 ;PCODE: $000003D0 VOL: 0
+; 0027 013B                   for(i=0;i<viRIDLength;i++){
 ;PCODE: $000003D1 VOL: 0
 ;PCODE: $000003D2 VOL: 0
 ;PCODE: $000003D3 VOL: 0
@@ -1356,19 +1363,18 @@
 ;PCODE: $000003D5 VOL: 0
 ;PCODE: $000003D6 VOL: 0
 ;PCODE: $000003D7 VOL: 0
-; 0027 0135                  }
 ;PCODE: $000003D8 VOL: 0
-; 0027 0136               }
 ;PCODE: $000003D9 VOL: 0
 ;PCODE: $000003DA VOL: 0
 ;PCODE: $000003DB VOL: 0
 ;PCODE: $000003DC VOL: 0
+; 0027 013C                      if(i==(viRIDLength-1)){
 ;PCODE: $000003DD VOL: 0
 ;PCODE: $000003DE VOL: 0
 ;PCODE: $000003DF VOL: 0
-; 0027 0137               memcpy(&pviOutData_arg[0],&viRIDBuff[0],(viRIDLength*2));
 ;PCODE: $000003E0 VOL: 0
 ;PCODE: $000003E1 VOL: 0
+; 0027 013D                         printDebug("%d",viRIDBuff[i]);
 ;PCODE: $000003E2 VOL: 0
 ;PCODE: $000003E3 VOL: 0
 ;PCODE: $000003E4 VOL: 0
@@ -1376,39 +1382,86 @@
 ;PCODE: $000003E6 VOL: 0
 ;PCODE: $000003E7 VOL: 0
 ;PCODE: $000003E8 VOL: 0
-; 0027 0138               *pviOutLength_arg = viRIDLength;
 ;PCODE: $000003E9 VOL: 0
 ;PCODE: $000003EA VOL: 0
 ;PCODE: $000003EB VOL: 0
-; 0027 0139               printDebug("]\r\n");
 ;PCODE: $000003EC VOL: 0
 ;PCODE: $000003ED VOL: 0
 ;PCODE: $000003EE VOL: 0
 ;PCODE: $000003EF VOL: 0
+; 0027 013E                      }else{
 ;PCODE: $000003F0 VOL: 0
 ;PCODE: $000003F1 VOL: 0
+; 0027 013F                         printDebug("%d,",viRIDBuff[i]);
 ;PCODE: $000003F2 VOL: 0
-; 0027 013A               viReturn = 1;
 ;PCODE: $000003F3 VOL: 0
 ;PCODE: $000003F4 VOL: 0
-; 0027 013B           }else{
 ;PCODE: $000003F5 VOL: 0
 ;PCODE: $000003F6 VOL: 0
-; 0027 013C             viReturn = -1;
 ;PCODE: $000003F7 VOL: 0
 ;PCODE: $000003F8 VOL: 0
-; 0027 013D           }
 ;PCODE: $000003F9 VOL: 0
-; 0027 013E        }
 ;PCODE: $000003FA VOL: 0
-; 0027 013F     }
-; 0027 0140 
-; 0027 0141 
-; 0027 0142     return viReturn;
 ;PCODE: $000003FB VOL: 0
 ;PCODE: $000003FC VOL: 0
 ;PCODE: $000003FD VOL: 0
 ;PCODE: $000003FE VOL: 0
 ;PCODE: $000003FF VOL: 0
-; 0027 0143 }
+; 0027 0140                      }
 ;PCODE: $00000400 VOL: 0
+; 0027 0141                   }
+;PCODE: $00000401 VOL: 0
+;PCODE: $00000402 VOL: 0
+;PCODE: $00000403 VOL: 0
+;PCODE: $00000404 VOL: 0
+;PCODE: $00000405 VOL: 0
+;PCODE: $00000406 VOL: 0
+;PCODE: $00000407 VOL: 0
+; 0027 0142                   memcpy(&pviOutData_arg[0],&viRIDBuff[0],(viRIDLength*2));
+;PCODE: $00000408 VOL: 0
+;PCODE: $00000409 VOL: 0
+;PCODE: $0000040A VOL: 0
+;PCODE: $0000040B VOL: 0
+;PCODE: $0000040C VOL: 0
+;PCODE: $0000040D VOL: 0
+;PCODE: $0000040E VOL: 0
+;PCODE: $0000040F VOL: 0
+;PCODE: $00000410 VOL: 0
+; 0027 0143                   *pviOutLength_arg = viRIDLength;
+;PCODE: $00000411 VOL: 0
+;PCODE: $00000412 VOL: 0
+;PCODE: $00000413 VOL: 0
+; 0027 0144                   printDebug("]\r\n");
+;PCODE: $00000414 VOL: 0
+;PCODE: $00000415 VOL: 0
+;PCODE: $00000416 VOL: 0
+;PCODE: $00000417 VOL: 0
+;PCODE: $00000418 VOL: 0
+;PCODE: $00000419 VOL: 0
+;PCODE: $0000041A VOL: 0
+; 0027 0145                   viReturn = 1;
+;PCODE: $0000041B VOL: 0
+;PCODE: $0000041C VOL: 0
+; 0027 0146               }
+; 0027 0147           }else{
+;PCODE: $0000041D VOL: 0
+;PCODE: $0000041E VOL: 0
+;PCODE: $0000041F VOL: 0
+; 0027 0148             viReturn = -1;
+;PCODE: $00000420 VOL: 0
+;PCODE: $00000421 VOL: 0
+; 0027 0149           }
+;PCODE: $00000422 VOL: 0
+; 0027 014A        }
+;PCODE: $00000423 VOL: 0
+; 0027 014B     }
+; 0027 014C 
+; 0027 014D 
+; 0027 014E     return viReturn;
+;PCODE: $00000424 VOL: 0
+;PCODE: $00000425 VOL: 0
+;PCODE: $00000426 VOL: 0
+;PCODE: $00000427 VOL: 0
+;PCODE: $00000428 VOL: 0
+; 0027 014F }
+;PCODE: $00000429 VOL: 0

@@ -4,6 +4,8 @@
 #include "main.h"
 #include "memcard.h"
 
+#define SD_MANG_PRINT_DEBUG            0
+
 extern iChar_t viFolderDataName[];
 extern iChar_t viFolderDataLogName[];
 extern iChar_t viFolderEventName[];

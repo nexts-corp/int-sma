@@ -128,6 +128,7 @@ iChar_t iWizConfigSend(iChar_t * pviCmd_arg,iChar_t *pviDataBuff_arg);
 iChar_t iWizConfigIPParser(iChar_t *pviOutData_arg,iChar_t *pviInData_arg);
 iChar_t iWizConfigMACParser(iChar_t *pviOutData_arg,iChar_t *pviInData_arg);
 iChar_t iMapAsciiHexToChar(iChar_t *chIn_arg);
+void iWizReActiveDataMode();
 
 /*
     Serial.println("connected");

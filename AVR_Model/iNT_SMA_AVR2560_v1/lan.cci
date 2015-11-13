@@ -1,4 +1,4 @@
-VERSION:3 SOURCE_TIMESTAMP:475351D1
+VERSION:3 SOURCE_TIMESTAMP:476DB20F
 NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\lan.h"
 NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\timer.h"
 NODE:I LEVEL:0 LINE:3 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\io.h"
@@ -7,3 +7,5 @@ NODE:V LEVEL:0 LINE:10 "AckHostData -> RAM:????"
 NODE:F LEVEL:0 LINE:20 "iLanReadData(struct iData_t * pviData_agr)"
 NODE:F LEVEL:0 LINE:79 "iLanWriteData(struct iData_t * pviData_agr)"
 NODE:F LEVEL:0 LINE:109 "iLanInit(void)"
+NODE:F LEVEL:0 LINE:124 "iLanRestart(void)"
+NODE:F LEVEL:0 LINE:128 "iLanStatus(void)"

@@ -19,7 +19,8 @@ char AckHostData[20] = {
 
 iUChar_t iLanReadData(iData_t * pviData_agr){
     iUChar_t viReturn;
-    TIMER   timeout;
+    TIMER   timeout; 
+    iUChar_t viModeConnect = 0;     //0= no check connect  ,1 == check connect
     
    viReturn = LEN_DATA_EMPTY;
    TIMER_setTimer(&timeout, 7);
@@ -107,8 +108,7 @@ iUChar_t iLanWriteData(iData_t * pviData_agr){
 
 iChar_t iLanInit(){
        iChar_t viReturn;
-       iUChar_t viModeConnect = 0;     //0= no check connect  ,1 == check connect
-       
+       //iWizReActiveDataMode();
        iWizRXMode = WIZ_RX_STAT_MODE; 
        if(iWizConnected()){
             printDebug("[iLanInit]Status:Connected.\r\n");
@@ -118,10 +118,25 @@ iChar_t iLanInit(){
             viReturn = LEN_DATA_WRITE_FAIL;
             printDebug("[iLanInit]Status:Close.\r\n");
        }  
-       
-       if(viModeConnect==0){
-       
-       }
-       
        return viReturn;
 }
+
+void iLanRestart(){
+     iWizReActiveDataMode();
+}
+
+iChar_t iLanStattus(){
+       iChar_t viReturn;
+       //iWizReActiveDataMode();
+       iWizRXMode = WIZ_RX_STAT_MODE; 
+       if(iWizConnected()){
+            printDebug("[iLanInit]Status:Connected.\r\n");
+            iWizRXMode = WIZ_RX_DATA_MODE;
+            viReturn = LEN_DATA_WRITE_SUCCESS;
+       } else{
+            viReturn = LEN_DATA_WRITE_FAIL;
+            printDebug("[iLanInit]Status:Close.\r\n");
+       }  
+       return viReturn;
+}
+

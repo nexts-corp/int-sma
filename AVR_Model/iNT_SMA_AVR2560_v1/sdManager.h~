@@ -4,6 +4,8 @@
 #include "main.h"
 #include "memcard.h"
 
+#define WIZ100SR_PRINT_DEBUG            0
+
 extern iChar_t viFolderDataName[];
 extern iChar_t viFolderDataLogName[];
 extern iChar_t viFolderEventName[];
@@ -32,7 +34,7 @@ FRESULT directory_scan(char *path);
 iInt_t iInitSDCard();
 void iFDisplayReturn(FRESULT viFResulyt_arg);
 void iFCreate(FIL *pviOutFilePtr_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg);
-void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,iUInt_t viBlockSize_arg,iChar_t viModeWrite_arg);
+void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long const * const pviWritePtr_arg);
 void iFDelete(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg);
 void iFCreateFileDaily(iChar_t *pviFilename_arg);
 iChar_t iFSize(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long *pviOutFileSize_arg);

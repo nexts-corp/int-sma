@@ -15,5 +15,7 @@ iUChar_t iLanReadData(iData_t * pviData_agr);
 //iUChar_t iLanWriteData();
 iUChar_t iLanWriteData(iData_t * pviData_agr);
 iChar_t iLanInit();
+void iLanRestart();
+iChar_t iLanStatus();
 
 #endif 

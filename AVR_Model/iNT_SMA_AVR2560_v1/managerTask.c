@@ -55,8 +55,8 @@ void managerTask(void *pviParameter){
     tid[7] =  (viDVConfigUpdate.viProperties.viDeviceID[14]<<4);
     tid[7] |=  (viDVConfigUpdate.viProperties.viDeviceID[15])&0x0f;
      
-    TIMER_setTimer(&viTEver1min, 60);  
-    //TIMER_setTimer(&viTEver1min, 20);
+    //TIMER_setTimer(&viTEver1min, 60);  
+    TIMER_setTimer(&viTEver1min, 20);
     while(!TIMER_checkTimerExceed(viTEver1min)){
        #asm("wdr")
     }
@@ -65,7 +65,7 @@ void managerTask(void *pviParameter){
     
      printDebug("[managerTask]Task Running...\r\n");    
      
- 
+    
     //Terminal frist initial//
     if(viFlagTerInit==0){
         mti[0] = 0x08;
@@ -77,6 +77,8 @@ void managerTask(void *pviParameter){
         }
         iDataSelect(viRecordID,&viTXDataBuff);    
         
+        //iLanRestart();
+        delay_ms(100);
         if(iLanWriteData(&viTXDataBuff)){
             if(iLanReadData(&viRXDataBuff)){
                 memcpy(&viUniTime,&viRXDataBuff.value[13],4); 
@@ -145,7 +147,9 @@ void managerTask(void *pviParameter){
             iDataSelect(viRecordID,&viTXDataBuff);
             iMangQueueAddItem(viRecordID,&viTXDataBuff,&viTXDataBuff.value[17]); //add protocol in mang queue
             iMangQueueDisplay();//display mang queue
-            delay_ms(1000);
+            
+            //iLanRestart();
+            delay_ms(100);
             //iDataInsert(viTXDataBuff.value,viTXDataBuff.length);
             #asm("wdr")
             
@@ -220,6 +224,12 @@ iChar_t iSettlement(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
     iUInt_t viRIDLength = 0; 
     iUChar_t viLimitQuery = 10;
     iUInt_t viCount = 0;
+    iUInt_t viRetransmit = 2;  
+    
+    TIMER   timeout;
+    
+    TIMER_setTimer(&timeout, 1); 
+    
     
     tid[0] =  (viDVConfigUpdate.viProperties.viDeviceID[0]<<4);
     tid[0] |=  (viDVConfigUpdate.viProperties.viDeviceID[1])&0x0f; 
@@ -240,43 +250,55 @@ iChar_t iSettlement(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
     
     
     //show statment
-    iDataSelectToSettlement(viRIDBuff,&viRIDLength,viLimitQuery); 
-    printDebug("[iSettlement]RID count(%d).\r\n",viRIDLength); 
-    for(viCount=0;viCount<viRIDLength;viCount++){   
-        delay_ms(10);
-        #asm("wdr") 
-#if (MANG_SETTLEMENT_PRINT_DEBUG == 1)
-        printDebug("[iSettlement]No %d. RID feed(%d).\r\n",(viCount+1),viRIDBuff[viCount]);
-#endif
-        iDataSelect(viRIDBuff[viCount],pviTXDataBuff_arg);
-#if (MANG_SETTLEMENT_PRINT_DEBUG == 1)
-        printDebug("[iSettlement]Data:[\r\n");
-        print_payload(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
-        printDebug("]\r\n");
-#endif
-        iPTCMtiRepack(pviTXDataBuff_arg,mti); 
-        
-#if (MANG_SETTLEMENT_PRINT_DEBUG == 1)
-        printDebug("[iSettlement]MTI change to settlement(0x0500).[\r\n");
-        print_payload(&pviTXDataBuff_arg->value[0],pviTXDataBuff_arg->length);
-        printDebug("]\r\n"); 
-#endif 
-        
-        //send settlement data
-        if(iLanWriteData((iData_t const * const)pviTXDataBuff_arg)){
-            if(iLanReadData(pviRXDataBuff_arg)){ 
-                iDataUpdate(viRIDBuff[viCount],'S',(iChar_t const * const)pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);  //Y=> //no update date   ,only update status
-                if(iPTCParser(pviRXDataBuff_arg)){ 
-                    //iDataUpdate(viRIDBuff[viCount],'S',(iChar_t const * const)pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);  //Y=> //no update date   ,only update status
-                    iTagParser(pviRXDataBuff_arg); 
+    if(iDataSelectToSettlement(viRIDBuff,&viRIDLength,viLimitQuery)==1){
+        printDebug("[iSettlement]RID count(%d).\r\n",viRIDLength); 
+        for(viCount=0;viCount<viRIDLength;viCount++){   
+            delay_ms(10);
+            #asm("wdr") 
+    #if (MANG_SETTLEMENT_PRINT_DEBUG == 1)
+            printDebug("[iSettlement]No %d. RID feed(%d).\r\n",(viCount+1),viRIDBuff[viCount]);
+    #endif
+            iDataSelect(viRIDBuff[viCount],pviTXDataBuff_arg);
+    #if (MANG_SETTLEMENT_PRINT_DEBUG == 1)
+            printDebug("[iSettlement]Data:[\r\n");
+            print_payload(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
+            printDebug("]\r\n");
+    #endif
+            iPTCMtiRepack(pviTXDataBuff_arg,mti); 
+            
+    #if (MANG_SETTLEMENT_PRINT_DEBUG == 1)
+            printDebug("[iSettlement]MTI change to settlement(0x0500).[\r\n");
+            print_payload(&pviTXDataBuff_arg->value[0],pviTXDataBuff_arg->length);
+            printDebug("]\r\n"); 
+    #endif 
+            //send settlement data 
+//            while(!TIMER_checkTimerExceed(timeout)){
+//               if(iLanWriteData((iData_t const * const){"",})){
+//               
+//               }
+//            }
+////            #asm("wdr")
+////            delay_ms(200);
+////            #asm("wdr")
+            viRetransmit = 2;
+            do{
+                if(iLanWriteData((iData_t const * const)pviTXDataBuff_arg)){
+                    if(iLanReadData(pviRXDataBuff_arg)){ 
+                        iDataUpdate(viRIDBuff[viCount],'S',(iChar_t const * const)pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);  //Y=> //no update date   ,only update status
+                        if(iPTCParser(pviRXDataBuff_arg)){ 
+                            //iDataUpdate(viRIDBuff[viCount],'S',(iChar_t const * const)pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);  //Y=> //no update date   ,only update status
+                            iTagParser(pviRXDataBuff_arg); 
+                        }
+                        break;
+                    }else{
+                        printDebug("[iSettlement]Host is not response or data invalid.\r\n");
+                    }
                 }
-            }else{
-                printDebug("[iSettlement]Host is not response or data invalid.\r\n");
-            }
-        }
-        
+                --viRetransmit;
+            }while(viRetransmit>0);
+            
+        } 
     } 
-    
     return viReturn;
 }
 

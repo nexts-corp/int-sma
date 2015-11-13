@@ -123,50 +123,50 @@ iInt_t iInitSDCard(){
         }
     } 
     
-    viFReturn = f_opendir(&viOutDir, viDirDataLogPath);
-    if(viFReturn == FR_OK){
-        printDebug("[iInitSDCard]DataLog dir is exist.\r\n");
-    }else{
-        iFDisplayReturn(viFReturn);
-        if(viFReturn == FR_NO_PATH){
-            viFReturn = f_mkdir(viFolderDataLogName);
-            if(viFReturn == FR_OK){
-               printDebug("[iInitSDCard]mkdir DataLog success.\r\n");
-            }else{
-               printDebug("[iInitSDCard]mkdir DataLog error.\r\n");
-            } 
-        }
-    }
+//    viFReturn = f_opendir(&viOutDir, viDirDataLogPath);
+//    if(viFReturn == FR_OK){
+//        printDebug("[iInitSDCard]DataLog dir is exist.\r\n");
+//    }else{
+//        iFDisplayReturn(viFReturn);
+//        if(viFReturn == FR_NO_PATH){
+//            viFReturn = f_mkdir(viFolderDataLogName);
+//            if(viFReturn == FR_OK){
+//               printDebug("[iInitSDCard]mkdir DataLog success.\r\n");
+//            }else{
+//               printDebug("[iInitSDCard]mkdir DataLog error.\r\n");
+//            } 
+//        }
+//    }
     
-    viFReturn = f_opendir(&viOutDir, viDirEventPath);
-    if(viFReturn == FR_OK){
-        printDebug("[iInitSDCard]Event dir is exist.\r\n");
-    }else{
-        iFDisplayReturn(viFReturn);
-        if(viFReturn == FR_NO_PATH){
-            viFReturn = f_mkdir(viFolderEventName);
-            if(viFReturn == FR_OK){
-               printDebug("[iInitSDCard]mkdir Event success.\r\n");
-            }else{
-               printDebug("[iInitSDCard]mkdir Event error.\r\n");
-            } 
-        }
-    }
+//    viFReturn = f_opendir(&viOutDir, viDirEventPath);
+//    if(viFReturn == FR_OK){
+//        printDebug("[iInitSDCard]Event dir is exist.\r\n");
+//    }else{
+//        iFDisplayReturn(viFReturn);
+//        if(viFReturn == FR_NO_PATH){
+//            viFReturn = f_mkdir(viFolderEventName);
+//            if(viFReturn == FR_OK){
+//               printDebug("[iInitSDCard]mkdir Event success.\r\n");
+//            }else{
+//               printDebug("[iInitSDCard]mkdir Event error.\r\n");
+//            } 
+//        }
+//    }
     
-    viFReturn = f_opendir(&viOutDir, viDirStatusPath);
-    if(viFReturn == FR_OK){
-        printDebug("[iInitSDCard]Status dir is exist.\r\n");
-    }else{
-        iFDisplayReturn(viFReturn);
-        if(viFReturn == FR_NO_PATH){
-            viFReturn = f_mkdir(viFolderStatusName);
-            if(viFReturn == FR_OK){
-               printDebug("[iInitSDCard]mkdir Status success.\r\n");
-            }else{
-               printDebug("[iInitSDCard]mkdir Status error.\r\n");
-            } 
-        }
-    }
+//    viFReturn = f_opendir(&viOutDir, viDirStatusPath);
+//    if(viFReturn == FR_OK){
+//        printDebug("[iInitSDCard]Status dir is exist.\r\n");
+//    }else{
+//        iFDisplayReturn(viFReturn);
+//        if(viFReturn == FR_NO_PATH){
+//            viFReturn = f_mkdir(viFolderStatusName);
+//            if(viFReturn == FR_OK){
+//               printDebug("[iInitSDCard]mkdir Status success.\r\n");
+//            }else{
+//               printDebug("[iInitSDCard]mkdir Status error.\r\n");
+//            } 
+//        }
+//    }
     
     viFReturn = f_opendir(&viOutDir, viDirErrorPath);
     if(viFReturn == FR_OK){
@@ -291,7 +291,7 @@ void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pvi
     const iChar_t * pviDataBuffRef = (iChar_t * const )pviDataBuff;
 
     //print_payload((const iChar_t *)pviDataBuff,ivLength_arg);  
-    print_payload(pviDataBuffRef,ivLength_arg);
+    //print_payload(pviDataBuffRef,ivLength_arg);
     viFilePtr = (FIL * const)malloc(sizeof(FIL));
     if(viFilePtr!=NULL){
         if((viFReturn=f_chdir(pviDirPath_arg))==FR_OK){
@@ -300,7 +300,7 @@ void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pvi
                printDebug("[iFRwite]File %s is openned.\r\n",pviFilename_arg);
                
                /* Move to end of the file to append data */ 
-               printDebug("[iFRwite]File size(%ld).\r\n",viFilePtr->fsize); 
+               //printDebug("[iFRwite]File size(%ld).\r\n",viFilePtr->fsize); 
                //if((viFReturn=f_lseek(viFilePtr, viFilePtr->fsize))==FR_OK){        //seek end of file in order append
                if((viFReturn=f_lseek(viFilePtr, *pviWritePtr_arg))==FR_OK){        //seek to start write
                    //printDebug("[iFRwite]Pointer(seek) of File moved(%ld).\r\n",viFilePtr->fsize); 
@@ -432,19 +432,26 @@ iChar_t iFRead(iChar_t * pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_ar
     //print_payload(pviDataBuffRef,ivLength_arg);
     viFilePtr = (FIL * const)malloc(sizeof(FIL));
     if(viFilePtr!=NULL){
-        if((viFReturn=f_chdir(pviDirPath_arg))==FR_OK){
-           printDebug("[iFRead]Current directory : %s.\r\n",pviDirPath_arg);  
+        if((viFReturn=f_chdir(pviDirPath_arg))==FR_OK){ 
+#if (SD_MANG_PRINT_DEBUG == 1)          
+           printDebug("[iFRead]Current directory : %s.\r\n",pviDirPath_arg);
+#endif              
            if((viFReturn=f_open(viFilePtr,pviFilename_arg,FA_READ))==FR_OK){
+#if (SD_MANG_PRINT_DEBUG == 1)            
                printDebug("[iFRead]File %s is openned.\r\n",pviFilename_arg);
-               
+#endif                
                /* Move to end of the file to append data */ 
                //printDebug("[iFRead]File size(%ld).\r\n",viFilePtr->fsize);
-               if((viFReturn=f_lseek(viFilePtr, *pviReadPtr_arg))==FR_OK){        //seek end of file in order append 
+               if((viFReturn=f_lseek(viFilePtr, *pviReadPtr_arg))==FR_OK){        //seek end of file in order append
+#if (SD_MANG_PRINT_DEBUG == 1)                 
                    printDebug("[iFRead]Pointer(seek) of File moved(%ld).\r\n",*pviReadPtr_arg); 
+#endif                   
                    //print_payload((const iChar_t *)pviDataBuff,ivLength_arg);
                   // print_payload(pviDataBuffRef,ivLength_arg);
-                   if((viFReturn=f_read(viFilePtr,pviDataBuff,ivLength_arg,&nbytes))==FR_OK){    //viFReturn=f_write(viFilePtr,&pviDataBuff[0],strlen(pviDataBuff),&nbytes)
+                   if((viFReturn=f_read(viFilePtr,pviDataBuff,ivLength_arg,&nbytes))==FR_OK){    //viFReturn=f_write(viFilePtr,&pviDataBuff[0],strlen(pviDataBuff),&nbytes) 
+#if (SD_MANG_PRINT_DEBUG == 0)                   
                        printDebug("[iFRead]%d bytes Reading of %d\r\n",nbytes,ivLength_arg);   
+#endif                        
                        viReturn = 1;
                    }else{
                        printDebug("[iFRead]Read error(%d)\r\n",viFReturn);
