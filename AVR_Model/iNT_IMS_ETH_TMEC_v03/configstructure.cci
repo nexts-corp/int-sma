@@ -1,6 +1,6 @@
 VERSION:3 SOURCE_TIMESTAMP:46356281
 NODE:I LEVEL:0 LINE:1 "C:\cvavr2\inc\stdlib.h"
-NODE:I LEVEL:0 LINE:2 "C:\Data\Projects\AVR\IMS-ETH\iNT_ETH_CLOUD_TMEC_v02\configstructure.h"
+NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TMEC_v03\configstructure.h"
 NODE:V LEVEL:0 LINE:8 "config_prop -> EEPROM:????"
 LEVEL:1 LINE:22 ICON:M "deviceType"
 LEVEL:1 LINE:23 ICON:M "firmwareVersion"

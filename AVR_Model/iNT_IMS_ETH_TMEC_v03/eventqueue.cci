@@ -1,8 +1,8 @@
 VERSION:3 SOURCE_TIMESTAMP:449EAC21
 NODE:I LEVEL:0 LINE:1 "C:\cvavr2\inc\stdlib.h"
 NODE:I LEVEL:0 LINE:2 "C:\cvavr2\inc\stdio.h"
-NODE:I LEVEL:0 LINE:3 "C:\Data\Projects\AVR\IMS-ETH\iNT_ETH_CLOUD_TMEC_v02\eventqueue.h"
-NODE:I LEVEL:0 LINE:4 "C:\Data\Projects\AVR\IMS-ETH\iNT_ETH_CLOUD_TMEC_v02\debug.h"
+NODE:I LEVEL:0 LINE:3 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TMEC_v03\eventqueue.h"
+NODE:I LEVEL:0 LINE:4 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TMEC_v03\debug.h"
 NODE:V LEVEL:0 LINE:6 "eventQ -> RAM:????"
 NODE:V LEVEL:0 LINE:7 "last_wr_eventQ -> RAM:????"
 NODE:V LEVEL:0 LINE:8 "last_rd_eventQ -> RAM:????"

@@ -10199,87 +10199,88 @@ _0xA0020:
 ; 0005 001F     }
 ; 0005 0020 
 ; 0005 0021     // Delay needed for the stabilization of the ADC input voltage
-; 0005 0022     delay_us(20);
-	__DELAY_USB 53
-; 0005 0023 
-; 0005 0024     // Start the AD conversion
-; 0005 0025     ADCSRA  |= 0x80; //ENABLE ADC
+; 0005 0022     //delay_us(20);
+; 0005 0023     delay_us(4);     //bongkot edit
+	__DELAY_USB 11
+; 0005 0024 
+; 0005 0025     // Start the AD conversion
+; 0005 0026     ADCSRA  |= 0x80; //ENABLE ADC
 	LDS  R30,122
 	ORI  R30,0x80
 	STS  122,R30
-; 0005 0026     ADCSRA  |= 0x40;
+; 0005 0027     ADCSRA  |= 0x40;
 	LDS  R30,122
 	ORI  R30,0x40
 	STS  122,R30
-; 0005 0027 
-; 0005 0028     // Wait for the AD conversion to complete
-; 0005 0029     //while ( ((ADCSRA & 0x10)==0) || ((ADCSRA & 0x40) == 0x40));
-; 0005 002A     while ( (ADCSRA & 0x10)==0);
+; 0005 0028 
+; 0005 0029     // Wait for the AD conversion to complete
+; 0005 002A     //while ( ((ADCSRA & 0x10)==0) || ((ADCSRA & 0x40) == 0x40));
+; 0005 002B     while ( (ADCSRA & 0x10)==0);
 _0xA0005:
 	LDS  R30,122
 	ANDI R30,LOW(0x10)
 	BREQ _0xA0005
-; 0005 002B     adc_data = ADCL;
+; 0005 002C     adc_data = ADCL;
 	LDS  R16,120
 	CLR  R17
-; 0005 002C     adc_data |= (ADCH & 0x00ff) << 8;
+; 0005 002D     adc_data |= (ADCH & 0x00ff) << 8;
 	LDS  R30,121
 	CALL SUBOPT_0x9D
 	MOV  R31,R30
 	LDI  R30,0
 	__ORWRR 16,17,30,31
-; 0005 002D 
-; 0005 002E     ADCSRA  |=0x10;
+; 0005 002E 
+; 0005 002F     ADCSRA  |=0x10;
 	LDS  R30,122
 	ORI  R30,0x10
 	STS  122,R30
-; 0005 002F 
-; 0005 0030     delay_us(50);
-	__DELAY_USB 133
-; 0005 0031 
-; 0005 0032     return adc_data;
+; 0005 0030 
+; 0005 0031     //delay_us(50);
+; 0005 0032     //delay_us(4);     //bongkot edit
+; 0005 0033 
+; 0005 0034     return adc_data;
 	MOVW R30,R16
 	LDD  R17,Y+1
 	LDD  R16,Y+0
 _0x20E0097:
 	ADIW R28,3
 	RET
-; 0005 0033 }
+; 0005 0035 }
 ;/*============================================================*/
 ;unsigned char adc_sampling(void)
-; 0005 0036 {
-; 0005 0037     static int      i = 0;
-; 0005 0038     static char     batt_read_flag = 0;
-; 0005 0039 
-; 0005 003A     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
-; 0005 003B         /*
-; 0005 003C         printDebug("<%d>",i);
-; 0005 003D         SENSOR_SELECT(i);
-; 0005 003E         delay_ms(20);
-; 0005 003F         adcData[i] = (float)((adcData[i] * 9.0) + (float)(read_adc(8) * 1.0))/10;           // Temp Sensor Low-Pass Filter
-; 0005 0040         if(++i >= 5){   i = 0;  }
-; 0005 0041         */
-; 0005 0042     }
-; 0005 0043     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
-; 0005 0044 //        for( i=0 ; i<5 ; i++ ){
-; 0005 0045 //            adcData[i] = (float)((adcData[i] * 9.9) + (float)(read_adc(8+i) * 0.1))/10;     // Temp Sensor Low-Pass Filter
-; 0005 0046 //        }
-; 0005 0047     }
-; 0005 0048 
-; 0005 0049 //    if(++batt_read_flag > 25){
-; 0005 004A //        adcBatt = (float)((adcBatt * 9.9) + (float)(read_adc(14) * 0.1))/10;                // Battery Read
-; 0005 004B //        batt_read_flag = 0;
-; 0005 004C //    }
-; 0005 004D 
-; 0005 004E     return 0;
-; 0005 004F }
+; 0005 0038 {
+; 0005 0039     static int      i = 0;
+; 0005 003A     static char     batt_read_flag = 0;
+; 0005 003B 
+; 0005 003C     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+; 0005 003D         /*
+; 0005 003E         printDebug("<%d>",i);
+; 0005 003F         SENSOR_SELECT(i);
+; 0005 0040         delay_ms(20);
+; 0005 0041         adcData[i] = (float)((adcData[i] * 9.0) + (float)(read_adc(8) * 1.0))/10;           // Temp Sensor Low-Pass Filter
+; 0005 0042         if(++i >= 5){   i = 0;  }
+; 0005 0043         */
+; 0005 0044     }
+; 0005 0045     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
+; 0005 0046 //        for( i=0 ; i<5 ; i++ ){
+; 0005 0047 //            adcData[i] = (float)((adcData[i] * 9.9) + (float)(read_adc(8+i) * 0.1))/10;     // Temp Sensor Low-Pass Filter
+; 0005 0048 //        }
+; 0005 0049     }
+; 0005 004A 
+; 0005 004B //    if(++batt_read_flag > 25){
+; 0005 004C //        adcBatt = (float)((adcBatt * 9.9) + (float)(read_adc(14) * 0.1))/10;                // Battery Read
+; 0005 004D //        batt_read_flag = 0;
+; 0005 004E //    }
+; 0005 004F 
+; 0005 0050     return 0;
+; 0005 0051 }
 ;/*============================================================*/
 ;float readBattery(void)
-; 0005 0052 {
+; 0005 0054 {
 _readBattery:
-; 0005 0053     float   vBATT;
-; 0005 0054 
-; 0005 0055     adcBatt = (float)((adcBatt * 9.9) + (float)(read_adc(14) * 0.1))/10;                // Battery Read
+; 0005 0055     float   vBATT;
+; 0005 0056 
+; 0005 0057     adcBatt = (float)((adcBatt * 9.9) + (float)(read_adc(14) * 0.1))/10;                // Battery Read
 	SBIW R28,4
 ;	vBATT -> Y+0
 	CALL SUBOPT_0x9E
@@ -10302,41 +10303,41 @@ _readBattery:
 	STS  _adcBatt+1,R31
 	STS  _adcBatt+2,R22
 	STS  _adcBatt+3,R23
-; 0005 0056     vBATT   = adcBatt*ADC_CONV_FAC*1.8;                                // from voltage divider 120k & 150k
+; 0005 0058     vBATT   = adcBatt*ADC_CONV_FAC*1.8;                                // from voltage divider 120k & 150k
 	CALL SUBOPT_0x32
 	CALL SUBOPT_0x9E
 	CALL __MULF12
 	__GETD2N 0x3FE66666
 	CALL SUBOPT_0xA2
-; 0005 0057     //printDebug("                                                     -- volt[%f]\r\n", vBATT);    // padding line
-; 0005 0058 
-; 0005 0059     return vBATT;
+; 0005 0059     //printDebug("                                                     -- volt[%f]\r\n", vBATT);    // padding line
+; 0005 005A 
+; 0005 005B     return vBATT;
 	CALL SUBOPT_0x87
 _0x20E0096:
 	ADIW R28,4
 	RET
-; 0005 005A }
+; 0005 005C }
 ;/*============================================================*/
 ;void adc_init_read(void)
-; 0005 005D {
+; 0005 005F {
 _adc_init_read:
-; 0005 005E     int i;
-; 0005 005F     printDebug("Initializing ADC.. ");
+; 0005 0060     int i;
+; 0005 0061     printDebug("Initializing ADC.. ");
 	ST   -Y,R17
 	ST   -Y,R16
 ;	i -> R16,R17
 	__POINTD1FN _0xA0000,0
 	CALL SUBOPT_0x3
-; 0005 0060 
-; 0005 0061     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+; 0005 0062 
+; 0005 0063     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 	CALL SUBOPT_0x2E
 	BREQ _0xA0010
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
 	BRNE _0xA000F
 _0xA0010:
-; 0005 0062         for(i=0;i<5;i++){ \
-; 0005 0063             SENSOR_SELECT(i);
+; 0005 0064         for(i=0;i<5;i++){ \
+; 0005 0065             SENSOR_SELECT(i);
 	__GETWRN 16,17,0
 _0xA0013:
 	__CPWRN 16,17,5
@@ -10344,8 +10345,8 @@ _0xA0013:
 	CALL SUBOPT_0xA3
 	MOV  R30,R16
 	CALL SUBOPT_0xA4
-; 0005 0064             delay_ms(20);
-; 0005 0065             adcData[i] = read_adc(8);
+; 0005 0066             delay_ms(20);
+; 0005 0067             adcData[i] = read_adc(8);
 	MOVW R30,R16
 	CALL SUBOPT_0xA5
 	PUSH R31
@@ -10355,12 +10356,12 @@ _0xA0013:
 	POP  R26
 	POP  R27
 	CALL SUBOPT_0xA6
-; 0005 0066         }
+; 0005 0068         }
 	__ADDWRN 16,17,1
 	RJMP _0xA0013
 _0xA0014:
-; 0005 0067     }
-; 0005 0068     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
+; 0005 0069     }
+; 0005 006A     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
 	RJMP _0xA0015
 _0xA000F:
 	CALL SUBOPT_0x96
@@ -10369,35 +10370,35 @@ _0xA000F:
 	CPI  R30,LOW(0x2)
 	BRNE _0xA0016
 _0xA0017:
-; 0005 0069         adcData[0] = read_adc(8);
+; 0005 006B         adcData[0] = read_adc(8);
 	LDI  R26,LOW(8)
 	RCALL _read_adc
 	LDI  R26,LOW(_adcData)
 	LDI  R27,HIGH(_adcData)
 	CALL SUBOPT_0xA6
-; 0005 006A         adcData[1] = read_adc(9);
+; 0005 006C         adcData[1] = read_adc(9);
 	LDI  R26,LOW(9)
 	RCALL _read_adc
 	__POINTW2MN _adcData,4
 	CALL SUBOPT_0xA6
-; 0005 006B         adcData[2] = read_adc(10);
+; 0005 006D         adcData[2] = read_adc(10);
 	LDI  R26,LOW(10)
 	RCALL _read_adc
 	__POINTW2MN _adcData,8
 	CALL SUBOPT_0xA6
-; 0005 006C         adcData[3] = read_adc(11);
+; 0005 006E         adcData[3] = read_adc(11);
 	LDI  R26,LOW(11)
 	RCALL _read_adc
 	__POINTW2MN _adcData,12
 	CALL SUBOPT_0xA6
-; 0005 006D         adcData[4] = read_adc(12);
+; 0005 006F         adcData[4] = read_adc(12);
 	LDI  R26,LOW(12)
 	RCALL _read_adc
 	__POINTW2MN _adcData,16
 	CALL SUBOPT_0xA6
-; 0005 006E     }
-; 0005 006F 
-; 0005 0070     adcBatt = read_adc(14);
+; 0005 0070     }
+; 0005 0071 
+; 0005 0072     adcBatt = read_adc(14);
 _0xA0016:
 _0xA0015:
 	LDI  R26,LOW(14)
@@ -10405,43 +10406,43 @@ _0xA0015:
 	LDI  R26,LOW(_adcBatt)
 	LDI  R27,HIGH(_adcBatt)
 	CALL SUBOPT_0xA6
-; 0005 0071 
-; 0005 0072     printDebug("OK\r\n");
+; 0005 0073 
+; 0005 0074     printDebug("OK\r\n");
 	__POINTD1FN _0xA0000,20
 	CALL SUBOPT_0x3
-; 0005 0073 }
+; 0005 0075 }
 	LD   R16,Y+
 	LD   R17,Y+
 	RET
 ;/*============================================================*/
 ;void init_adc(void)
-; 0005 0076 {
+; 0005 0078 {
 _init_adc:
-; 0005 0077     // ADC initialization
-; 0005 0078     // ADC Clock frequency: 1000.000 kHz
-; 0005 0079     // ADC Voltage Reference: 2.56V, cap. on AREF
-; 0005 007A     // ADC Auto Trigger Source: Free Running
-; 0005 007B     // Digital input buffers on ADC0: On, ADC1: On, ADC2: On, ADC3: On
-; 0005 007C     // ADC4: On, ADC5: On, ADC6: On, ADC7: On
-; 0005 007D     DIDR0=0x00;
+; 0005 0079     // ADC initialization
+; 0005 007A     // ADC Clock frequency: 1000.000 kHz
+; 0005 007B     // ADC Voltage Reference: 2.56V, cap. on AREF
+; 0005 007C     // ADC Auto Trigger Source: Free Running
+; 0005 007D     // Digital input buffers on ADC0: On, ADC1: On, ADC2: On, ADC3: On
+; 0005 007E     // ADC4: On, ADC5: On, ADC6: On, ADC7: On
+; 0005 007F     DIDR0=0x00;
 	LDI  R30,LOW(0)
 	STS  126,R30
-; 0005 007E 
-; 0005 007F 
-; 0005 0080     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+; 0005 0080 
+; 0005 0081 
+; 0005 0082     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 	CALL SUBOPT_0x2E
 	BREQ _0xA001A
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
 	BRNE _0xA0019
 _0xA001A:
-; 0005 0081         // Digital input buffers on ADC8: Off, ADC9: On, ADC10: On, ADC11: On
-; 0005 0082         // ADC12: On, ADC13: Off, ADC14: Off, ADC15: On
-; 0005 0083         DIDR2=0x61;
+; 0005 0083         // Digital input buffers on ADC8: Off, ADC9: On, ADC10: On, ADC11: On
+; 0005 0084         // ADC12: On, ADC13: Off, ADC14: Off, ADC15: On
+; 0005 0085         DIDR2=0x61;
 	LDI  R30,LOW(97)
 	RJMP _0xA0021
-; 0005 0084     }
-; 0005 0085     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
+; 0005 0086     }
+; 0005 0087     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
 _0xA0019:
 	CALL SUBOPT_0x96
 	BREQ _0xA001E
@@ -10449,35 +10450,35 @@ _0xA0019:
 	CPI  R30,LOW(0x2)
 	BRNE _0xA001D
 _0xA001E:
-; 0005 0086         // Digital input buffers on ADC8: Off, ADC9: Off, ADC10: Off, ADC11: Off
-; 0005 0087         // ADC12: Off, ADC13: Off, ADC14: Off, ADC15: On
-; 0005 0088         DIDR2=0x7F;
+; 0005 0088         // Digital input buffers on ADC8: Off, ADC9: Off, ADC10: Off, ADC11: Off
+; 0005 0089         // ADC12: Off, ADC13: Off, ADC14: Off, ADC15: On
+; 0005 008A         DIDR2=0x7F;
 	LDI  R30,LOW(127)
 _0xA0021:
 	STS  125,R30
-; 0005 0089     }
-; 0005 008A 
-; 0005 008B     ADMUX   = ADC_VREF_TYPE;
+; 0005 008B     }
+; 0005 008C 
+; 0005 008D     ADMUX   = ADC_VREF_TYPE;
 _0xA001D:
 	LDI  R30,LOW(192)
 	STS  124,R30
-; 0005 008C     ADCSRA  = (1<<7) |          // ADEN:    ADC enable
-; 0005 008D               (0<<6) |          // ADSC:    ADC Start Conversion
-; 0005 008E               (0<<5) |          // ADATE:   ADC Auto Trigger Enable
-; 0005 008F               (0<<4) |          // ADIF:    ADC Interrupt Flag
-; 0005 0090               (0<<3) |          // ADIE:    ADC Interrupt
-; 0005 0091               (1<<2) |          //-----
-; 0005 0092               (1<<1) |          //- ADPS2-0: ADC Prescaler Select Bits      (011 = clk/8) (110 = clk/64)
-; 0005 0093               (0<<0);           //-----
+; 0005 008E     ADCSRA  = (1<<7) |          // ADEN:    ADC enable
+; 0005 008F               (0<<6) |          // ADSC:    ADC Start Conversion
+; 0005 0090               (0<<5) |          // ADATE:   ADC Auto Trigger Enable
+; 0005 0091               (0<<4) |          // ADIF:    ADC Interrupt Flag
+; 0005 0092               (0<<3) |          // ADIE:    ADC Interrupt
+; 0005 0093               (1<<2) |          //-----
+; 0005 0094               (1<<1) |          //- ADPS2-0: ADC Prescaler Select Bits      (011 = clk/8) (110 = clk/64)
+; 0005 0095               (0<<0);           //-----
 	LDI  R30,LOW(134)
 	STS  122,R30
-; 0005 0094 
-; 0005 0095     ADCSRB  = 0;
+; 0005 0096 
+; 0005 0097     ADCSRB  = 0;
 	LDI  R30,LOW(0)
 	STS  123,R30
-; 0005 0096 
-; 0005 0097     //adc_init_read();
-; 0005 0098 }
+; 0005 0098 
+; 0005 0099     //adc_init_read();
+; 0005 009A }
 	RET
 ;/*============================================================*/
 ;#include <i2c.h>
