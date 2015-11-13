@@ -1,0 +1,200 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "logqueue.h"
+#include "debug.h"
+                                              
+struct event_log_st     eventLogQueue[MAX_EVENT_QUEUE];
+char                    eventLogQCount  = 0;         
+            
+struct data_log_st      dataLogQueue[MAX_DATA_QUEUE];
+char                    dataLogQCount   = 0;         
+/*============================================================*/
+/* Data Log Queue */
+/*============================================================*/
+int addDataLogQueue(unsigned char id, unsigned long int timestamp, unsigned int channel, float value)
+{
+    int slot;
+    
+    slot = findFreeSlotDataLogQueue();
+    if(slot < 0)
+    {                         
+        printDebug("\r\n\r\n<addDataLogQueue> WARNING : dataLogQueue FULL\r\n\r\n");
+        return -1;
+    }                                                              
+    
+    dataLogQueue[slot].id                    = id;
+    dataLogQueue[slot].data.timestamp        = timestamp;    
+    dataLogQueue[slot].data.channel          = channel;    
+    dataLogQueue[slot].data.value            = value; 
+    
+    dataLogQCount++;                              
+    printDebug("\r\n<addDataLogQueue>                           Added (%02X) to dataLogQueue[%d] Count = %d\r\n",id,slot,dataLogQCount);     
+    return dataLogQCount;
+}
+/*============================================================*/
+int readDataLogQueue(unsigned char id, unsigned long int *timestamp, unsigned int *channel, float *value)
+{                
+    int i;
+    
+    if(dataLogQCount == 0){             
+        printDebug("<readDataLogQueue> WARN: dataLogQueue empty!!\r\n");             
+        return -1;
+    }                                
+    
+    for(i=0;i<MAX_DATA_QUEUE;i++)
+    {
+        if(id == dataLogQueue[i].id)                       // -- scan id in dataLogQueue
+        {                          
+            *timestamp      =   dataLogQueue[i].data.timestamp;
+            *channel        =   dataLogQueue[i].data.channel;
+            *value          =   dataLogQueue[i].data.value;           
+            
+            return i;
+        }
+    }            
+                 
+    printDebug("<readDataLogQueue> WARN: not found id[0x%02X] in dataLogQueue\r\n", id);
+    return -1;
+}
+/*============================================================*/
+int removeDataLogQueue(unsigned char id)
+{ 
+    char i;                             
+    for(i=0;i<MAX_DATA_QUEUE;i++)
+    {
+        if(id == dataLogQueue[i].id)                       // -- scan id in dataLogQueue
+        {                          
+            dataLogQueue[i].id                  = 0x00;
+            dataLogQueue[i].data.timestamp      = 0;    
+            dataLogQueue[i].data.channel        = 0;    
+            dataLogQueue[i].data.value          = 0; 
+            dataLogQCount--;                                       
+            
+            printDebug("\r\n<removeDataLogQueue>                        Removed (%02X) from dataLogQueue[%d]\r\n", id, i);  
+            return dataLogQCount;                  
+        }
+    }                 
+    printDebug("<removeDataLogQueue> WARN: not found id[0x%02X] in dataLogQueue\r\n", id);
+    return -1;
+}
+/*============================================================*/
+char findFreeSlotDataLogQueue(void)
+{
+    char i;
+    for(i=0;i<MAX_DATA_QUEUE;i++){
+        if(dataLogQueue[i].id == 0x00){
+            return i;    
+        }
+    }                 
+    return -1;
+}
+/*============================================================*/
+void initDataLogQueue(void)
+{ 
+    char i;      
+                                  
+    for(i=0;i<MAX_DATA_QUEUE;i++){           
+        dataLogQueue[i].id                  = 0x00;
+        dataLogQueue[i].data.timestamp      = 0;    
+        dataLogQueue[i].data.channel        = 0;    
+        dataLogQueue[i].data.value          = 0; 
+    }                                  
+    return;                      
+}             
+/*============================================================*/
+
+/*============================================================*/
+/* Event Log Queue */
+/*============================================================*/
+int addEventLogQueue(unsigned char id, unsigned long int timestamp, unsigned char eventID, unsigned char eventStatus)
+{
+    int slot;
+    
+    slot = findFreeSlotEventLogQueue();
+    if(slot < 0)
+    {                         
+        printDebug("\r\n\r\n<addEventLogQueue> WARNING : eventLogQueue FULL\r\n\r\n");
+        return -1;
+    }                                                              
+    
+    eventLogQueue[slot].id                  = id;
+    eventLogQueue[slot].event.timestamp     = timestamp;    
+    eventLogQueue[slot].event.eventID       = eventID;    
+    eventLogQueue[slot].event.eventStatus   = eventStatus; 
+    
+    eventLogQCount++;                              
+    printDebug("\r\n                                     Added (%02X) to eventLogQueue[%d] Count = %d\r\n",id,slot,eventLogQCount);     
+    return eventLogQCount;
+}
+/*============================================================*/
+int readEventLogQueue(unsigned char id, unsigned long int *timestamp, unsigned char *eventID, unsigned char *eventStatus)
+{                
+    int i;
+    
+    if(eventLogQCount == 0){             
+        printDebug("<readEventLogQueue> WARN: eventLogQueue empty!!\r\n");             
+        return -1;
+    }                                
+    
+    for(i=0;i<MAX_EVENT_QUEUE;i++)
+    {
+        if(id == eventLogQueue[i].id)                       // -- scan id in eventLogQueue
+        {                          
+            *timestamp      =   eventLogQueue[i].event.timestamp;
+            *eventID        =   eventLogQueue[i].event.eventID;
+            *eventStatus    =   eventLogQueue[i].event.eventStatus;           
+            
+            return i;
+        }
+    }            
+                 
+    printDebug("<readEventLogQueue> WARN: not found id[0x%02X] in eventLogQueue\r\n", id);
+    return -1;
+}
+/*============================================================*/
+int removeEventLogQueue(unsigned char id)
+{ 
+    char i;                             
+    for(i=0;i<MAX_EVENT_QUEUE;i++)
+    {
+        if(id == eventLogQueue[i].id)                       // -- scan id in eventLogQueue
+        {                          
+            eventLogQueue[i].id                  = 0x00;
+            eventLogQueue[i].event.timestamp     = 0;    
+            eventLogQueue[i].event.eventID       = 0;    
+            eventLogQueue[i].event.eventStatus   = 0; 
+            eventLogQCount--;                                       
+            
+            printDebug("\r\n                                     Removed (%02X) to eventLogQueue[%d]\r\n", id, i);  
+            return eventLogQCount;                  
+        }
+    }                 
+    printDebug("<removeEventLogQueue> WARN: not found id[0x%02X] in eventLogQueue\r\n", id);
+    return -1;
+}
+/*============================================================*/
+char findFreeSlotEventLogQueue(void)
+{
+    char i;
+    for(i=0;i<MAX_EVENT_QUEUE;i++){
+        if(eventLogQueue[i].id == 0x00){
+            return i;    
+        }
+    }                 
+    return -1;
+}
+/*============================================================*/
+void initEventLogQueue(void)
+{ 
+    char i;      
+                                  
+    for(i=0;i<MAX_EVENT_QUEUE;i++){           
+        eventLogQueue[i].id                  = 0x00;
+        eventLogQueue[i].event.timestamp     = 0;    
+        eventLogQueue[i].event.eventID       = 0;    
+        eventLogQueue[i].event.eventStatus   = 0; 
+    }                                  
+    return;                      
+}             
+/*============================================================*/

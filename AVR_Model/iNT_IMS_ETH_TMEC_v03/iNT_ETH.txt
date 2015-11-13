@@ -1,0 +1,26 @@
+
+ChangeLog
+
+Version : iNT-ETH-0.21b
+Date    : 08/05/2014
+Edit    : 1.LowerExtremeAlarm is alarm up wrong condition & Temp Alarm on OLED screen is hangs
+            - change data storage of "dataStatus[]" from EEPROM is FLASH (status.c, status.h) 
+            - change data storage of "dataAlarm[]" from EEPROM is FLASH (alarm.c, alarm.h) 
+          2.LowerDelayAlarm is not alarm
+            - add condition in updateDataStatus() (status.c)
+
+Version : iNT-ETH-0.22b            
+Date    : 14/05/2014
+Edit    : 1.Sensor alarm (PROBE 1 CONNECT!) is hangs
+            - change data storage of "sensorStatus[]" from EEPROM is FLASH (status.c, status.h) 
+            - change data storage of "sensorAlarm[]" from EEPROM is FLASH (alarm.c, alarm.h)      
+            
+Version : iNT-ETH-0.23b            
+Date    : 04/06/2014
+Edit    : 1.Change condition of data sensor alarm -> Assume temperature arrive UPPER_LIMIT and wait for UPPER_DELAY_TIME for ALARM_UPPER_LIMIT! ,
+            Alarm UPPER_DELAY_TIME and LOWER_DELAY_TIME eliminated      
+            - Change condition in updateDataStatus() (status.c)
+            
+Version : iNT-ETH-0.24b            
+Date    : 04/06/2014
+Edit    : 1. Add firmware reset at 05.00 in every day

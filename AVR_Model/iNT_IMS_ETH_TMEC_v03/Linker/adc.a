@@ -1,0 +1,526 @@
+;#include <mega2560.h>
+;PCODE: $00000000 VOL: 0
+	#ifndef __SLEEP_DEFINED__
+;PCODE: $00000001 VOL: 0
+	#define __SLEEP_DEFINED__
+;PCODE: $00000002 VOL: 0
+	.EQU __se_bit=0x01
+;PCODE: $00000003 VOL: 0
+	.EQU __sm_mask=0x0E
+;PCODE: $00000004 VOL: 0
+	.EQU __sm_powerdown=0x04
+;PCODE: $00000005 VOL: 0
+	.EQU __sm_powersave=0x06
+;PCODE: $00000006 VOL: 0
+	.EQU __sm_standby=0x0C
+;PCODE: $00000007 VOL: 0
+	.EQU __sm_ext_standby=0x0E
+;PCODE: $00000008 VOL: 0
+	.EQU __sm_adc_noise_red=0x02
+;PCODE: $00000009 VOL: 0
+	.SET power_ctrl_reg=smcr
+;PCODE: $0000000A VOL: 0
+	#endif
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;#include <delay.h>
+;#include <stdio.h>
+;#include <stdlib.h>
+;#include <string.h>
+;#include "adc.h"
+;#include "debug.h"
+;
+;float           adcData[5];
+;float           adcBatt;
+;
+;eeprom float    eep_vref_val = 2.56;
+;
+;/*============================================================*/
+;unsigned int read_adc(unsigned char adc_input)
+; 0005 0010 {
+
+	.CSEG
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+; 0005 0011     unsigned int adc_data = 0x0000;
+; 0005 0012 
+; 0005 0013     ADMUX  &= ADC_VREF_TYPE;
+;PCODE: $0000000F VOL: 0
+;PCODE: $00000010 VOL: 0
+;PCODE: $00000011 VOL: 0
+;	adc_input -> Y+2
+;	adc_data -> R16,R17
+;PCODE: $00000012 VOL: 0
+;PCODE: $00000013 VOL: 0
+;PCODE: $00000014 VOL: 0
+;PCODE: $00000015 VOL: 0
+;PCODE: $00000016 VOL: 0
+; 0005 0014     ADCSRB &= 0xf7;
+;PCODE: $00000017 VOL: 0
+;PCODE: $00000018 VOL: 0
+;PCODE: $00000019 VOL: 0
+; 0005 0015 
+; 0005 0016     ADMUX  |= (adc_input & 0x07) | (ADC_VREF_TYPE & 0xff);
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+;PCODE: $0000001C VOL: 0
+;PCODE: $0000001D VOL: 0
+;PCODE: $0000001E VOL: 0
+;PCODE: $0000001F VOL: 0
+;PCODE: $00000020 VOL: 0
+;PCODE: $00000021 VOL: 0
+;PCODE: $00000022 VOL: 0
+; 0005 0017 
+; 0005 0018     if(adc_input > 7)
+;PCODE: $00000023 VOL: 0
+;PCODE: $00000024 VOL: 0
+;PCODE: $00000025 VOL: 0
+; 0005 0019     {
+; 0005 001A         ADCSRB |= 0x08;
+;PCODE: $00000026 VOL: 0
+;PCODE: $00000027 VOL: 0
+;PCODE: $00000028 VOL: 0
+; 0005 001B     }
+; 0005 001C     else
+;PCODE: $00000029 VOL: 0
+;PCODE: $0000002A VOL: 0
+; 0005 001D     {
+; 0005 001E         ADCSRB &= 0xf7;
+;PCODE: $0000002B VOL: 0
+;PCODE: $0000002C VOL: 0
+;PCODE: $0000002D VOL: 0
+; 0005 001F     }
+;PCODE: $0000002E VOL: 0
+; 0005 0020 
+; 0005 0021     // Delay needed for the stabilization of the ADC input voltage
+; 0005 0022     delay_us(20);
+;PCODE: $0000002F VOL: 0
+; 0005 0023 
+; 0005 0024     // Start the AD conversion
+; 0005 0025     ADCSRA  |= 0x80; //ENABLE ADC
+;PCODE: $00000030 VOL: 0
+;PCODE: $00000031 VOL: 0
+;PCODE: $00000032 VOL: 0
+; 0005 0026     ADCSRA  |= 0x40;
+;PCODE: $00000033 VOL: 0
+;PCODE: $00000034 VOL: 0
+;PCODE: $00000035 VOL: 0
+; 0005 0027 
+; 0005 0028     // Wait for the AD conversion to complete
+; 0005 0029     //while ( ((ADCSRA & 0x10)==0) || ((ADCSRA & 0x40) == 0x40));
+; 0005 002A     while ( (ADCSRA & 0x10)==0);
+;PCODE: $00000036 VOL: 0
+;PCODE: $00000037 VOL: 0
+;PCODE: $00000038 VOL: 0
+;PCODE: $00000039 VOL: 0
+;PCODE: $0000003A VOL: 0
+;PCODE: $0000003B VOL: 0
+; 0005 002B     adc_data = ADCL;
+;PCODE: $0000003C VOL: 0
+;PCODE: $0000003D VOL: 0
+;PCODE: $0000003E VOL: 0
+; 0005 002C     adc_data |= (ADCH & 0x00ff) << 8;
+;PCODE: $0000003F VOL: 0
+;PCODE: $00000040 VOL: 0
+;PCODE: $00000041 VOL: 0
+;PCODE: $00000042 VOL: 0
+;PCODE: $00000043 VOL: 0
+;PCODE: $00000044 VOL: 0
+; 0005 002D 
+; 0005 002E     ADCSRA  |=0x10;
+;PCODE: $00000045 VOL: 0
+;PCODE: $00000046 VOL: 0
+;PCODE: $00000047 VOL: 0
+; 0005 002F 
+; 0005 0030     delay_us(50);
+;PCODE: $00000048 VOL: 0
+; 0005 0031 
+; 0005 0032     return adc_data;
+;PCODE: $00000049 VOL: 0
+;PCODE: $0000004A VOL: 0
+;PCODE: $0000004B VOL: 0
+;PCODE: $0000004C VOL: 0
+;PCODE: $0000004D VOL: 0
+;PCODE: $0000004E VOL: 0
+;PCODE: $0000004F VOL: 0
+; 0005 0033 }
+;PCODE: $00000050 VOL: 0
+;/*============================================================*/
+;unsigned char adc_sampling(void)
+; 0005 0036 {
+;PCODE: $00000051 VOL: 0
+;PCODE: $00000052 VOL: 0
+; 0005 0037     static int      i = 0;
+; 0005 0038     static char     batt_read_flag = 0;
+; 0005 0039 
+; 0005 003A     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+;PCODE: $00000053 VOL: 0
+;PCODE: $00000054 VOL: 0
+;PCODE: $00000055 VOL: 0
+;PCODE: $00000056 VOL: 0
+;PCODE: $00000057 VOL: 0
+;PCODE: $00000058 VOL: 0
+;PCODE: $00000059 VOL: 0
+;PCODE: $0000005A VOL: 0
+;PCODE: $0000005B VOL: 0
+;PCODE: $0000005C VOL: 0
+;PCODE: $0000005D VOL: 0
+;PCODE: $0000005E VOL: 0
+;PCODE: $0000005F VOL: 0
+;PCODE: $00000060 VOL: 0
+;PCODE: $00000061 VOL: 0
+;PCODE: $00000062 VOL: 0
+;PCODE: $00000063 VOL: 0
+;PCODE: $00000064 VOL: 0
+;PCODE: $00000065 VOL: 0
+; 0005 003B         /*
+; 0005 003C         printDebug("<%d>",i);
+; 0005 003D         SENSOR_SELECT(i);
+; 0005 003E         delay_ms(20);
+; 0005 003F         adcData[i] = (float)((adcData[i] * 9.0) + (float)(read_adc(8) * 1.0))/10;           // Temp Sensor Low-Pass Filter
+; 0005 0040         if(++i >= 5){   i = 0;  }
+; 0005 0041         */
+; 0005 0042     }
+; 0005 0043     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
+;PCODE: $00000066 VOL: 0
+;PCODE: $00000067 VOL: 0
+;PCODE: $00000068 VOL: 0
+;PCODE: $00000069 VOL: 0
+;PCODE: $0000006A VOL: 0
+;PCODE: $0000006B VOL: 0
+;PCODE: $0000006C VOL: 0
+;PCODE: $0000006D VOL: 0
+;PCODE: $0000006E VOL: 0
+;PCODE: $0000006F VOL: 0
+;PCODE: $00000070 VOL: 0
+;PCODE: $00000071 VOL: 0
+;PCODE: $00000072 VOL: 0
+;PCODE: $00000073 VOL: 0
+;PCODE: $00000074 VOL: 0
+;PCODE: $00000075 VOL: 0
+;PCODE: $00000076 VOL: 0
+;PCODE: $00000077 VOL: 0
+;PCODE: $00000078 VOL: 0
+;PCODE: $00000079 VOL: 0
+;PCODE: $0000007A VOL: 0
+;PCODE: $0000007B VOL: 0
+; 0005 0044 //        for( i=0 ; i<5 ; i++ ){
+; 0005 0045 //            adcData[i] = (float)((adcData[i] * 9.9) + (float)(read_adc(8+i) * 0.1))/10;     // Temp Sensor Low-Pass Filter
+; 0005 0046 //        }
+; 0005 0047     }
+; 0005 0048 
+; 0005 0049 //    if(++batt_read_flag > 25){
+; 0005 004A //        adcBatt = (float)((adcBatt * 9.9) + (float)(read_adc(14) * 0.1))/10;                // Battery Read
+; 0005 004B //        batt_read_flag = 0;
+; 0005 004C //    }
+; 0005 004D 
+; 0005 004E     return 0;
+;PCODE: $0000007C VOL: 0
+;PCODE: $0000007D VOL: 0
+;PCODE: $0000007E VOL: 0
+;PCODE: $0000007F VOL: 0
+; 0005 004F }
+;PCODE: $00000080 VOL: 0
+;/*============================================================*/
+;float readBattery(void)
+; 0005 0052 {
+;PCODE: $00000081 VOL: 0
+;PCODE: $00000082 VOL: 0
+; 0005 0053     float   vBATT;
+; 0005 0054 
+; 0005 0055     adcBatt = (float)((adcBatt * 9.9) + (float)(read_adc(14) * 0.1))/10;                // Battery Read
+;PCODE: $00000083 VOL: 0
+;	vBATT -> Y+0
+;PCODE: $00000084 VOL: 0
+;PCODE: $00000085 VOL: 0
+;PCODE: $00000086 VOL: 0
+;PCODE: $00000087 VOL: 0
+;PCODE: $00000088 VOL: 0
+;PCODE: $00000089 VOL: 0
+;PCODE: $0000008A VOL: 0
+;PCODE: $0000008B VOL: 0
+;PCODE: $0000008C VOL: 0
+;PCODE: $0000008D VOL: 0
+;PCODE: $0000008E VOL: 0
+;PCODE: $0000008F VOL: 0
+;PCODE: $00000090 VOL: 0
+;PCODE: $00000091 VOL: 0
+;PCODE: $00000092 VOL: 0
+; 0005 0056     vBATT   = adcBatt*ADC_CONV_FAC*1.8;                                // from voltage divider 120k & 150k
+;PCODE: $00000093 VOL: 0
+;PCODE: $00000094 VOL: 0
+;PCODE: $00000095 VOL: 0
+;PCODE: $00000096 VOL: 0
+;PCODE: $00000097 VOL: 0
+;PCODE: $00000098 VOL: 0
+;PCODE: $00000099 VOL: 0
+;PCODE: $0000009A VOL: 0
+;PCODE: $0000009B VOL: 0
+;PCODE: $0000009C VOL: 0
+; 0005 0057     //printDebug("                                                     -- volt[%f]\r\n", vBATT);    // padding line
+; 0005 0058 
+; 0005 0059     return vBATT;
+;PCODE: $0000009D VOL: 0
+;PCODE: $0000009E VOL: 0
+;PCODE: $0000009F VOL: 0
+; 0005 005A }
+;PCODE: $000000A0 VOL: 0
+;/*============================================================*/
+;void adc_init_read(void)
+; 0005 005D {
+;PCODE: $000000A1 VOL: 0
+;PCODE: $000000A2 VOL: 0
+; 0005 005E     int i;
+; 0005 005F     printDebug("Initializing ADC.. ");
+;PCODE: $000000A3 VOL: 0
+;PCODE: $000000A4 VOL: 0
+;	i -> R16,R17
+;PCODE: $000000A5 VOL: 0
+;PCODE: $000000A6 VOL: 0
+;PCODE: $000000A7 VOL: 0
+;PCODE: $000000A8 VOL: 0
+;PCODE: $000000A9 VOL: 0
+;PCODE: $000000AA VOL: 0
+;PCODE: $000000AB VOL: 0
+; 0005 0060 
+; 0005 0061     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+;PCODE: $000000AC VOL: 0
+;PCODE: $000000AD VOL: 0
+;PCODE: $000000AE VOL: 0
+;PCODE: $000000AF VOL: 0
+;PCODE: $000000B0 VOL: 0
+;PCODE: $000000B1 VOL: 0
+;PCODE: $000000B2 VOL: 0
+;PCODE: $000000B3 VOL: 0
+;PCODE: $000000B4 VOL: 0
+;PCODE: $000000B5 VOL: 0
+;PCODE: $000000B6 VOL: 0
+;PCODE: $000000B7 VOL: 0
+;PCODE: $000000B8 VOL: 0
+;PCODE: $000000B9 VOL: 0
+;PCODE: $000000BA VOL: 0
+;PCODE: $000000BB VOL: 0
+;PCODE: $000000BC VOL: 0
+;PCODE: $000000BD VOL: 0
+;PCODE: $000000BE VOL: 0
+; 0005 0062         for(i=0;i<5;i++){ \
+; 0005 0063             SENSOR_SELECT(i);
+;PCODE: $000000BF VOL: 0
+;PCODE: $000000C0 VOL: 0
+;PCODE: $000000C1 VOL: 0
+;PCODE: $000000C2 VOL: 0
+;PCODE: $000000C3 VOL: 0
+;PCODE: $000000C4 VOL: 0
+;PCODE: $000000C5 VOL: 0
+;PCODE: $000000C6 VOL: 0
+;PCODE: $000000C7 VOL: 0
+;PCODE: $000000C8 VOL: 0
+;PCODE: $000000C9 VOL: 0
+;PCODE: $000000CA VOL: 0
+;PCODE: $000000CB VOL: 0
+;PCODE: $000000CC VOL: 0
+;PCODE: $000000CD VOL: 0
+;PCODE: $000000CE VOL: 0
+;PCODE: $000000CF VOL: 0
+;PCODE: $000000D0 VOL: 0
+;PCODE: $000000D1 VOL: 0
+;PCODE: $000000D2 VOL: 0
+; 0005 0064             delay_ms(20);
+;PCODE: $000000D3 VOL: 0
+;PCODE: $000000D4 VOL: 0
+;PCODE: $000000D5 VOL: 0
+; 0005 0065             adcData[i] = read_adc(8);
+;PCODE: $000000D6 VOL: 0
+;PCODE: $000000D7 VOL: 0
+;PCODE: $000000D8 VOL: 0
+;PCODE: $000000D9 VOL: 0
+;PCODE: $000000DA VOL: 0
+;PCODE: $000000DB VOL: 0
+;PCODE: $000000DC VOL: 0
+;PCODE: $000000DD VOL: 0
+;PCODE: $000000DE VOL: 0
+;PCODE: $000000DF VOL: 0
+; 0005 0066         }
+;PCODE: $000000E0 VOL: 0
+;PCODE: $000000E1 VOL: 0
+;PCODE: $000000E2 VOL: 0
+;PCODE: $000000E3 VOL: 0
+;PCODE: $000000E4 VOL: 0
+; 0005 0067     }
+; 0005 0068     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
+;PCODE: $000000E5 VOL: 0
+;PCODE: $000000E6 VOL: 0
+;PCODE: $000000E7 VOL: 0
+;PCODE: $000000E8 VOL: 0
+;PCODE: $000000E9 VOL: 0
+;PCODE: $000000EA VOL: 0
+;PCODE: $000000EB VOL: 0
+;PCODE: $000000EC VOL: 0
+;PCODE: $000000ED VOL: 0
+;PCODE: $000000EE VOL: 0
+;PCODE: $000000EF VOL: 0
+;PCODE: $000000F0 VOL: 0
+;PCODE: $000000F1 VOL: 0
+;PCODE: $000000F2 VOL: 0
+;PCODE: $000000F3 VOL: 0
+;PCODE: $000000F4 VOL: 0
+;PCODE: $000000F5 VOL: 0
+;PCODE: $000000F6 VOL: 0
+;PCODE: $000000F7 VOL: 0
+;PCODE: $000000F8 VOL: 0
+;PCODE: $000000F9 VOL: 0
+;PCODE: $000000FA VOL: 0
+; 0005 0069         adcData[0] = read_adc(8);
+;PCODE: $000000FB VOL: 0
+;PCODE: $000000FC VOL: 0
+;PCODE: $000000FD VOL: 0
+;PCODE: $000000FE VOL: 0
+;PCODE: $000000FF VOL: 0
+; 0005 006A         adcData[1] = read_adc(9);
+;PCODE: $00000100 VOL: 0
+;PCODE: $00000101 VOL: 0
+;PCODE: $00000102 VOL: 0
+;PCODE: $00000103 VOL: 0
+;PCODE: $00000104 VOL: 0
+;PCODE: $00000105 VOL: 0
+; 0005 006B         adcData[2] = read_adc(10);
+;PCODE: $00000106 VOL: 0
+;PCODE: $00000107 VOL: 0
+;PCODE: $00000108 VOL: 0
+;PCODE: $00000109 VOL: 0
+;PCODE: $0000010A VOL: 0
+;PCODE: $0000010B VOL: 0
+; 0005 006C         adcData[3] = read_adc(11);
+;PCODE: $0000010C VOL: 0
+;PCODE: $0000010D VOL: 0
+;PCODE: $0000010E VOL: 0
+;PCODE: $0000010F VOL: 0
+;PCODE: $00000110 VOL: 0
+;PCODE: $00000111 VOL: 0
+; 0005 006D         adcData[4] = read_adc(12);
+;PCODE: $00000112 VOL: 0
+;PCODE: $00000113 VOL: 0
+;PCODE: $00000114 VOL: 0
+;PCODE: $00000115 VOL: 0
+;PCODE: $00000116 VOL: 0
+;PCODE: $00000117 VOL: 0
+; 0005 006E     }
+; 0005 006F 
+; 0005 0070     adcBatt = read_adc(14);
+;PCODE: $00000118 VOL: 0
+;PCODE: $00000119 VOL: 0
+;PCODE: $0000011A VOL: 0
+;PCODE: $0000011B VOL: 0
+;PCODE: $0000011C VOL: 0
+;PCODE: $0000011D VOL: 0
+;PCODE: $0000011E VOL: 0
+; 0005 0071 
+; 0005 0072     printDebug("OK\r\n");
+;PCODE: $0000011F VOL: 0
+;PCODE: $00000120 VOL: 0
+;PCODE: $00000121 VOL: 0
+;PCODE: $00000122 VOL: 0
+;PCODE: $00000123 VOL: 0
+;PCODE: $00000124 VOL: 0
+;PCODE: $00000125 VOL: 0
+; 0005 0073 }
+;PCODE: $00000126 VOL: 0
+;PCODE: $00000127 VOL: 0
+;PCODE: $00000128 VOL: 0
+;/*============================================================*/
+;void init_adc(void)
+; 0005 0076 {
+;PCODE: $00000129 VOL: 0
+;PCODE: $0000012A VOL: 0
+; 0005 0077     // ADC initialization
+; 0005 0078     // ADC Clock frequency: 1000.000 kHz
+; 0005 0079     // ADC Voltage Reference: 2.56V, cap. on AREF
+; 0005 007A     // ADC Auto Trigger Source: Free Running
+; 0005 007B     // Digital input buffers on ADC0: On, ADC1: On, ADC2: On, ADC3: On
+; 0005 007C     // ADC4: On, ADC5: On, ADC6: On, ADC7: On
+; 0005 007D     DIDR0=0x00;
+;PCODE: $0000012B VOL: 0
+;PCODE: $0000012C VOL: 0
+; 0005 007E 
+; 0005 007F 
+; 0005 0080     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+;PCODE: $0000012D VOL: 0
+;PCODE: $0000012E VOL: 0
+;PCODE: $0000012F VOL: 0
+;PCODE: $00000130 VOL: 0
+;PCODE: $00000131 VOL: 0
+;PCODE: $00000132 VOL: 0
+;PCODE: $00000133 VOL: 0
+;PCODE: $00000134 VOL: 0
+;PCODE: $00000135 VOL: 0
+;PCODE: $00000136 VOL: 0
+;PCODE: $00000137 VOL: 0
+;PCODE: $00000138 VOL: 0
+;PCODE: $00000139 VOL: 0
+;PCODE: $0000013A VOL: 0
+;PCODE: $0000013B VOL: 0
+;PCODE: $0000013C VOL: 0
+;PCODE: $0000013D VOL: 0
+;PCODE: $0000013E VOL: 0
+;PCODE: $0000013F VOL: 0
+; 0005 0081         // Digital input buffers on ADC8: Off, ADC9: On, ADC10: On, ADC11: On
+; 0005 0082         // ADC12: On, ADC13: Off, ADC14: Off, ADC15: On
+; 0005 0083         DIDR2=0x61;
+;PCODE: $00000140 VOL: 0
+;PCODE: $00000141 VOL: 0
+; 0005 0084     }
+; 0005 0085     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
+;PCODE: $00000142 VOL: 0
+;PCODE: $00000143 VOL: 0
+;PCODE: $00000144 VOL: 0
+;PCODE: $00000145 VOL: 0
+;PCODE: $00000146 VOL: 0
+;PCODE: $00000147 VOL: 0
+;PCODE: $00000148 VOL: 0
+;PCODE: $00000149 VOL: 0
+;PCODE: $0000014A VOL: 0
+;PCODE: $0000014B VOL: 0
+;PCODE: $0000014C VOL: 0
+;PCODE: $0000014D VOL: 0
+;PCODE: $0000014E VOL: 0
+;PCODE: $0000014F VOL: 0
+;PCODE: $00000150 VOL: 0
+;PCODE: $00000151 VOL: 0
+;PCODE: $00000152 VOL: 0
+;PCODE: $00000153 VOL: 0
+;PCODE: $00000154 VOL: 0
+;PCODE: $00000155 VOL: 0
+;PCODE: $00000156 VOL: 0
+;PCODE: $00000157 VOL: 0
+; 0005 0086         // Digital input buffers on ADC8: Off, ADC9: Off, ADC10: Off, ADC11: Off
+; 0005 0087         // ADC12: Off, ADC13: Off, ADC14: Off, ADC15: On
+; 0005 0088         DIDR2=0x7F;
+;PCODE: $00000158 VOL: 0
+;PCODE: $00000159 VOL: 0
+; 0005 0089     }
+; 0005 008A 
+; 0005 008B     ADMUX   = ADC_VREF_TYPE;
+;PCODE: $0000015A VOL: 0
+;PCODE: $0000015B VOL: 0
+;PCODE: $0000015C VOL: 0
+;PCODE: $0000015D VOL: 0
+; 0005 008C     ADCSRA  = (1<<7) |          // ADEN:    ADC enable
+; 0005 008D               (0<<6) |          // ADSC:    ADC Start Conversion
+; 0005 008E               (0<<5) |          // ADATE:   ADC Auto Trigger Enable
+; 0005 008F               (0<<4) |          // ADIF:    ADC Interrupt Flag
+; 0005 0090               (0<<3) |          // ADIE:    ADC Interrupt
+; 0005 0091               (1<<2) |          //-----
+; 0005 0092               (1<<1) |          //- ADPS2-0: ADC Prescaler Select Bits      (011 = clk/8) (110 = clk/64)
+; 0005 0093               (0<<0);           //-----
+;PCODE: $0000015E VOL: 0
+;PCODE: $0000015F VOL: 0
+; 0005 0094 
+; 0005 0095     ADCSRB  = 0;
+;PCODE: $00000160 VOL: 0
+;PCODE: $00000161 VOL: 0
+; 0005 0096 
+; 0005 0097     //adc_init_read();
+; 0005 0098 }
+;PCODE: $00000162 VOL: 0
+;PCODE: $00000163 VOL: 0
+;/*============================================================*/

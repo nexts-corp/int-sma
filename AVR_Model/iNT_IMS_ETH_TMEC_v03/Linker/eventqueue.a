@@ -1,0 +1,142 @@
+;#include <stdlib.h>
+;#include <stdio.h>
+;#include "eventqueue.h"
+;#include "debug.h"
+;
+;struct event_record_st eventQ[MAX_EVENT_QUEUE];
+;int last_wr_eventQ = 0;
+;int last_rd_eventQ = 0;
+;int eventQ_len = 0;
+;
+;/*============================================================*/
+;int addEventQueue(unsigned long int timestamp, unsigned char eventID, unsigned char eventStatus)
+; 0010 000D {
+
+	.CSEG
+;PCODE: $00000000 VOL: 0
+;PCODE: $00000001 VOL: 0
+; 0010 000E     if(eventQ_len == MAX_EVENT_QUEUE){
+;PCODE: $00000002 VOL: 0
+;	timestamp -> Y+2
+;	eventID -> Y+1
+;	eventStatus -> Y+0
+;PCODE: $00000003 VOL: 0
+;PCODE: $00000004 VOL: 0
+;PCODE: $00000005 VOL: 0
+; 0010 000F         return -1;
+;PCODE: $00000006 VOL: 0
+;PCODE: $00000007 VOL: 0
+;PCODE: $00000008 VOL: 0
+; 0010 0010     }
+; 0010 0011 
+; 0010 0012     eventQ[last_wr_eventQ].timestamp        = timestamp;
+;PCODE: $00000009 VOL: 0
+;PCODE: $0000000A VOL: 0
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+;PCODE: $0000000F VOL: 0
+; 0010 0013     eventQ[last_wr_eventQ].eventID          = eventID;
+;PCODE: $00000010 VOL: 0
+;PCODE: $00000011 VOL: 0
+;PCODE: $00000012 VOL: 0
+;PCODE: $00000013 VOL: 0
+;PCODE: $00000014 VOL: 0
+;PCODE: $00000015 VOL: 0
+;PCODE: $00000016 VOL: 0
+; 0010 0014     eventQ[last_wr_eventQ].eventStatus      = eventStatus;
+;PCODE: $00000017 VOL: 0
+;PCODE: $00000018 VOL: 0
+;PCODE: $00000019 VOL: 0
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+;PCODE: $0000001C VOL: 0
+;PCODE: $0000001D VOL: 0
+; 0010 0015 
+; 0010 0016     last_wr_eventQ = (last_wr_eventQ + 1) % MAX_EVENT_QUEUE;
+;PCODE: $0000001E VOL: 0
+;PCODE: $0000001F VOL: 0
+;PCODE: $00000020 VOL: 0
+;PCODE: $00000021 VOL: 0
+;PCODE: $00000022 VOL: 0
+; 0010 0017 
+; 0010 0018     eventQ_len++;
+;PCODE: $00000023 VOL: 0
+;PCODE: $00000024 VOL: 0
+;PCODE: $00000025 VOL: 0
+;PCODE: $00000026 VOL: 0
+; 0010 0019 
+; 0010 001A     return 0;
+;PCODE: $00000027 VOL: 0
+;PCODE: $00000028 VOL: 0
+;PCODE: $00000029 VOL: 0
+; 0010 001B }
+;PCODE: $0000002A VOL: 0
+;/*============================================================*/
+;int fetchEventQueue(unsigned long int *timestamp, unsigned char *eventID, unsigned char *eventStatus)
+; 0010 001E {
+;PCODE: $0000002B VOL: 0
+;PCODE: $0000002C VOL: 0
+; 0010 001F     if(eventQ_len == 0){
+;PCODE: $0000002D VOL: 0
+;	*timestamp -> Y+4
+;	*eventID -> Y+2
+;	*eventStatus -> Y+0
+;PCODE: $0000002E VOL: 0
+;PCODE: $0000002F VOL: 0
+;PCODE: $00000030 VOL: 0
+; 0010 0020         return -1;
+;PCODE: $00000031 VOL: 0
+;PCODE: $00000032 VOL: 0
+;PCODE: $00000033 VOL: 0
+; 0010 0021     }
+; 0010 0022 
+; 0010 0023     *timestamp      =   eventQ[last_rd_eventQ].timestamp;
+;PCODE: $00000034 VOL: 0
+;PCODE: $00000035 VOL: 0
+;PCODE: $00000036 VOL: 0
+;PCODE: $00000037 VOL: 0
+;PCODE: $00000038 VOL: 0
+;PCODE: $00000039 VOL: 0
+;PCODE: $0000003A VOL: 0
+;PCODE: $0000003B VOL: 0
+;PCODE: $0000003C VOL: 0
+; 0010 0024     *eventID        =   eventQ[last_rd_eventQ].eventID;
+;PCODE: $0000003D VOL: 0
+;PCODE: $0000003E VOL: 0
+;PCODE: $0000003F VOL: 0
+;PCODE: $00000040 VOL: 0
+;PCODE: $00000041 VOL: 0
+;PCODE: $00000042 VOL: 0
+;PCODE: $00000043 VOL: 0
+;PCODE: $00000044 VOL: 0
+; 0010 0025     *eventStatus    =   eventQ[last_rd_eventQ].eventStatus;
+;PCODE: $00000045 VOL: 0
+;PCODE: $00000046 VOL: 0
+;PCODE: $00000047 VOL: 0
+;PCODE: $00000048 VOL: 0
+;PCODE: $00000049 VOL: 0
+;PCODE: $0000004A VOL: 0
+;PCODE: $0000004B VOL: 0
+;PCODE: $0000004C VOL: 0
+; 0010 0026 
+; 0010 0027     last_rd_eventQ  = (last_rd_eventQ + 1) % MAX_EVENT_QUEUE;
+;PCODE: $0000004D VOL: 0
+;PCODE: $0000004E VOL: 0
+;PCODE: $0000004F VOL: 0
+;PCODE: $00000050 VOL: 0
+;PCODE: $00000051 VOL: 0
+; 0010 0028 
+; 0010 0029     eventQ_len--;
+;PCODE: $00000052 VOL: 0
+;PCODE: $00000053 VOL: 0
+;PCODE: $00000054 VOL: 0
+;PCODE: $00000055 VOL: 0
+; 0010 002A     return 0;
+;PCODE: $00000056 VOL: 0
+;PCODE: $00000057 VOL: 0
+;PCODE: $00000058 VOL: 0
+; 0010 002B }
+;PCODE: $00000059 VOL: 0
+;/*============================================================*/
