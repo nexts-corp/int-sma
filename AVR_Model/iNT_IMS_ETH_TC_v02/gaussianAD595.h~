@@ -1,0 +1,6 @@
+#ifndef GUASSIAN_AD595_H
+#define GUASSIAN_AD595_H
+
+void gaussianAD595(float factor1, float factor2, float factor3, float ref1, float ref2, float ref3, float *resA, float *resB, float *resC);
+
+#endif 

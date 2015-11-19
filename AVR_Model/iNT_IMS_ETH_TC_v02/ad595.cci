@@ -1,0 +1,6 @@
+VERSION:3 SOURCE_TIMESTAMP:474F5D5B
+NODE:I LEVEL:0 LINE:1 "C:\Data\Projects\AVR\IMS-ETH\iNT_ETH_CLOUD_Thermocouple_v01\ad595.h"
+NODE:I LEVEL:0 LINE:2 "C:\Data\Projects\AVR\IMS-ETH\iNT_ETH_CLOUD_Thermocouple_v01\debug.h"
+NODE:I LEVEL:0 LINE:3 "C:\Data\Projects\AVR\IMS-ETH\iNT_ETH_CLOUD_Thermocouple_v01\gaussian.h"
+NODE:F LEVEL:0 LINE:5 "iAD595ADCToTemp(long viADC_p,int viADCLoop_p)"
+NODE:F LEVEL:0 LINE:159 "iAD595ADCToVolt(long viADC_p,int viADCLoop_p)"
