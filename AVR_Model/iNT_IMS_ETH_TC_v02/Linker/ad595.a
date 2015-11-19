@@ -512,32 +512,33 @@
 ; 001A 009D }
 ;PCODE: $00000148 VOL: 0
 ;
-;float iAD595ADCToVolt(long viADC_p,int viADCLoop_p){            //Volt Uplevel
-; 001A 009F float iAD595ADCToVolt(long viADC_p,int viADCLoop_p){
+;float iAD595ADCToVolt(unsigned long viADC_p,float viADCLoop_p){            //Volt Uplevel
+; 001A 009F float iAD595ADCToVolt(unsigned long viADC_p,float viADCLoop_p){
 ;PCODE: $00000149 VOL: 0
 ;PCODE: $0000014A VOL: 0
-; 001A 00A0      int    viADCSmooth =  (int)(viADC_p/viADCLoop_p);           ////(float)(viADCbuffer/30.0);
+; 001A 00A0      float    viADCSmooth =  (float)(viADC_p/viADCLoop_p);           ////(float)(viADCbuffer/30.0);
 ; 001A 00A1      float  viADCToVolt = 0.0;
-; 001A 00A2      const float  viZeroSet   = 1.68;
-; 001A 00A3      float viVoltUpLevel = 0.0;
-; 001A 00A4      float ivVoltValue = 0.0;
-; 001A 00A5 
-; 001A 00A6      viADCToVolt = (float)(viADCSmooth/1024.0)*3.30;          //- 0  +
+; 001A 00A2      //const float  viZeroSet   = 1.68;
+; 001A 00A3      const float  viZeroSet   = 1.667;
+; 001A 00A4      float viVoltUpLevel = 0.0;
+; 001A 00A5      float ivVoltValue = 0.0;
+; 001A 00A6 
+; 001A 00A7      viADCToVolt = (float)((viADCSmooth/1024.0)*3.30);          //- 0  +
 ;PCODE: $0000014B VOL: 0
 ;PCODE: $0000014C VOL: 0
 ;PCODE: $0000014D VOL: 0
 ;PCODE: $0000014E VOL: 0
 ;PCODE: $0000014F VOL: 0
 ;PCODE: $00000150 VOL: 0
+;	viADC_p -> Y+24
+;	viADCLoop_p -> Y+20
+;	viADCSmooth -> Y+16
+;	viADCToVolt -> Y+12
+;	viZeroSet -> Y+8
+;	viVoltUpLevel -> Y+4
+;	ivVoltValue -> Y+0
 ;PCODE: $00000151 VOL: 0
 ;PCODE: $00000152 VOL: 0
-;	viADC_p -> Y+20
-;	viADCLoop_p -> Y+18
-;	viADCSmooth -> R16,R17
-;	viADCToVolt -> Y+14
-;	viZeroSet -> Y+10
-;	viVoltUpLevel -> Y+6
-;	ivVoltValue -> Y+2
 ;PCODE: $00000153 VOL: 0
 ;PCODE: $00000154 VOL: 0
 ;PCODE: $00000155 VOL: 0
@@ -547,24 +548,436 @@
 ;PCODE: $00000159 VOL: 0
 ;PCODE: $0000015A VOL: 0
 ;PCODE: $0000015B VOL: 0
+; 001A 00A8      viVoltUpLevel = viADCToVolt;
 ;PCODE: $0000015C VOL: 0
 ;PCODE: $0000015D VOL: 0
+; 001A 00A9      //viVoltUpLevel = viADCToVolt - viZeroSet;
+; 001A 00AA 
+; 001A 00AB 
+; 001A 00AC      return viVoltUpLevel;
 ;PCODE: $0000015E VOL: 0
 ;PCODE: $0000015F VOL: 0
-; 001A 00A7      viVoltUpLevel = viADCToVolt - viZeroSet;
 ;PCODE: $00000160 VOL: 0
+; 001A 00AD }
 ;PCODE: $00000161 VOL: 0
+;
+;float iAD595VoltToTemp(float viVolt_arg){
+; 001A 00AF float iAD595VoltToTemp(float viVolt_arg){
 ;PCODE: $00000162 VOL: 0
 ;PCODE: $00000163 VOL: 0
-; 001A 00A8 
-; 001A 00A9 
-; 001A 00AA      return viVoltUpLevel;
+; 001A 00B0      //int    viADCSmooth =  (int)(viADC_p/viADCLoop_p);           ////(float)(viADCbuffer/30.0);
+; 001A 00B1      float  viADCToVolt = 0.0;
+; 001A 00B2      //const float  viZeroSet   = 1.68;
+; 001A 00B3      const float  viZeroSet   = 1.667;
+; 001A 00B4      float viVoltUpLevel = 0.0;
+; 001A 00B5      float ivTempValue = 0.0;
+; 001A 00B6      float factorA = 0.0;
+; 001A 00B7      float factorB = 0.0;
+; 001A 00B8      float factorC = 0.0;
+; 001A 00B9 
+; 001A 00BA      /////////range 1 Temp C(-10 to -100)
+; 001A 00BB      float viVoltPoint1_1 = -0.094;
+; 001A 00BC      float viVoltPoint2_1 = -0.552;
+; 001A 00BD      float viVoltPoint3_1 = -0.876;
+; 001A 00BE      float viTempOutPoint1_1 = -10.0;
+; 001A 00BF      float viTempOutPoint2_1 = -60.0;
+; 001A 00C0      float viTempOutPoint3_1 = -100.0;
+; 001A 00C1 
+; 001A 00C2      /////////range 2 Temp C(-100 to -200)
+; 001A 00C3      float viVoltPoint1_2 = -0.876;
+; 001A 00C4      float viVoltPoint2_2 = -1.269;
+; 001A 00C5      float viVoltPoint3_2 = -1.454;
+; 001A 00C6      float viTempOutPoint1_2 = -100.0;
+; 001A 00C7      float viTempOutPoint2_2 = -160.0;
+; 001A 00C8      float viTempOutPoint3_2 = -200.0;
+; 001A 00C9 
+; 001A 00CA      const float viVoltPointTable[5][3]  = {
+; 001A 00CB             {-0.094,-0.189,-0.375},           //-10 to -40
+; 001A 00CC             {-0.375,-0.552,-0.719},           //-40 to -80
+; 001A 00CD             {-0.719,-0.876,-1.021},           //-80 to -120
+; 001A 00CE             {-1.021,-1.152,-1.269},           //-120 to -160
+; 001A 00CF             {-1.269,-1.370,-1.454}            //-160 to -200
+; 001A 00D0      };
+; 001A 00D1 
+; 001A 00D2      const float viTempOutPointTable[5][3]  = {
+; 001A 00D3             {-10.0,-20.0,-40.0},           //-10 to -40
+; 001A 00D4             {-40.0,-60.0,-80.0},           //-40 to -80
+; 001A 00D5             {-80.0,-100.0,-120.0},           //-80 to -120
+; 001A 00D6             {-120.0,-140.0,-160.0},           //-120 to -160
+; 001A 00D7             {-160.0,-180.0,-200.0}            //-160 to -200
+; 001A 00D8      };
+; 001A 00D9 
+; 001A 00DA      //viADCToVolt = (float)(viADCSmooth/1024.0)*3.30;          //- 0  +
+; 001A 00DB      viVoltUpLevel = viVolt_arg;
 ;PCODE: $00000164 VOL: 0
 ;PCODE: $00000165 VOL: 0
 ;PCODE: $00000166 VOL: 0
 ;PCODE: $00000167 VOL: 0
 ;PCODE: $00000168 VOL: 0
 ;PCODE: $00000169 VOL: 0
+;	viVolt_arg -> Y+196
+;	viADCToVolt -> Y+192
+;	viZeroSet -> Y+188
+;	viVoltUpLevel -> Y+184
+;	ivTempValue -> Y+180
+;	factorA -> Y+176
+;	factorB -> Y+172
+;	factorC -> Y+168
+;	viVoltPoint1_1 -> Y+164
+;	viVoltPoint2_1 -> Y+160
+;	viVoltPoint3_1 -> Y+156
+;	viTempOutPoint1_1 -> Y+152
+;	viTempOutPoint2_1 -> Y+148
+;	viTempOutPoint3_1 -> Y+144
+;	viVoltPoint1_2 -> Y+140
+;	viVoltPoint2_2 -> Y+136
+;	viVoltPoint3_2 -> Y+132
+;	viTempOutPoint1_2 -> Y+128
+;	viTempOutPoint2_2 -> Y+124
+;	viTempOutPoint3_2 -> Y+120
+;	viVoltPointTable -> Y+60
+;	viTempOutPointTable -> Y+0
 ;PCODE: $0000016A VOL: 0
-; 001A 00AB }
 ;PCODE: $0000016B VOL: 0
+; 001A 00DC 
+; 001A 00DD 
+; 001A 00DE      if(viVoltUpLevel >= (-0.094)){
+;PCODE: $0000016C VOL: 0
+;PCODE: $0000016D VOL: 0
+;PCODE: $0000016E VOL: 0
+;PCODE: $0000016F VOL: 0
+; 001A 00DF           ivTempValue = (viVoltUpLevel*1000) / 10.0;
+;PCODE: $00000170 VOL: 0
+;PCODE: $00000171 VOL: 0
+;PCODE: $00000172 VOL: 0
+;PCODE: $00000173 VOL: 0
+;PCODE: $00000174 VOL: 0
+;PCODE: $00000175 VOL: 0
+;PCODE: $00000176 VOL: 0
+; 001A 00E0         //  printDebug("ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
+; 001A 00E1      }else if((viVoltUpLevel < (-0.094)) && (viVoltUpLevel >= (-0.375)) ){
+;PCODE: $00000177 VOL: 0
+;PCODE: $00000178 VOL: 0
+;PCODE: $00000179 VOL: 0
+;PCODE: $0000017A VOL: 0
+;PCODE: $0000017B VOL: 0
+;PCODE: $0000017C VOL: 0
+;PCODE: $0000017D VOL: 0
+;PCODE: $0000017E VOL: 0
+;PCODE: $0000017F VOL: 0
+;PCODE: $00000180 VOL: 0
+;PCODE: $00000181 VOL: 0
+;PCODE: $00000182 VOL: 0
+;PCODE: $00000183 VOL: 0
+;PCODE: $00000184 VOL: 0
+; 001A 00E2 
+; 001A 00E3         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
+; 001A 00E4         gaussian(viVoltPointTable[0][0],  viVoltPointTable[0][1],  viVoltPointTable[0][2], viTempOutPointTable[0][0], viTempOutPointTable[0][1], viTempOutPointTable[0][2], &factorA, &factorB, &factorC);
+;PCODE: $00000185 VOL: 0
+;PCODE: $00000186 VOL: 0
+;PCODE: $00000187 VOL: 0
+;PCODE: $00000188 VOL: 0
+;PCODE: $00000189 VOL: 0
+;PCODE: $0000018A VOL: 0
+;PCODE: $0000018B VOL: 0
+;PCODE: $0000018C VOL: 0
+;PCODE: $0000018D VOL: 0
+;PCODE: $0000018E VOL: 0
+;PCODE: $0000018F VOL: 0
+;PCODE: $00000190 VOL: 0
+;PCODE: $00000191 VOL: 0
+;PCODE: $00000192 VOL: 0
+;PCODE: $00000193 VOL: 0
+;PCODE: $00000194 VOL: 0
+;PCODE: $00000195 VOL: 0
+;PCODE: $00000196 VOL: 0
+; 001A 00E5         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
+;PCODE: $00000197 VOL: 0
+;PCODE: $00000198 VOL: 0
+;PCODE: $00000199 VOL: 0
+;PCODE: $0000019A VOL: 0
+;PCODE: $0000019B VOL: 0
+;PCODE: $0000019C VOL: 0
+;PCODE: $0000019D VOL: 0
+;PCODE: $0000019E VOL: 0
+;PCODE: $0000019F VOL: 0
+;PCODE: $000001A0 VOL: 0
+;PCODE: $000001A1 VOL: 0
+;PCODE: $000001A2 VOL: 0
+;PCODE: $000001A3 VOL: 0
+;PCODE: $000001A4 VOL: 0
+; 001A 00E6 
+; 001A 00E7         // printDebug("-L1 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
+; 001A 00E8      }else if((viVoltUpLevel < (-0.375)) && (viVoltUpLevel >= (-0.719)) ){
+;PCODE: $000001A5 VOL: 0
+;PCODE: $000001A6 VOL: 0
+;PCODE: $000001A7 VOL: 0
+;PCODE: $000001A8 VOL: 0
+;PCODE: $000001A9 VOL: 0
+;PCODE: $000001AA VOL: 0
+;PCODE: $000001AB VOL: 0
+;PCODE: $000001AC VOL: 0
+;PCODE: $000001AD VOL: 0
+;PCODE: $000001AE VOL: 0
+;PCODE: $000001AF VOL: 0
+;PCODE: $000001B0 VOL: 0
+;PCODE: $000001B1 VOL: 0
+;PCODE: $000001B2 VOL: 0
+; 001A 00E9         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
+; 001A 00EA         gaussian(viVoltPointTable[1][0],  viVoltPointTable[1][1],  viVoltPointTable[1][2], viTempOutPointTable[1][0], viTempOutPointTable[1][1], viTempOutPointTable[1][2], &factorA, &factorB, &factorC);
+;PCODE: $000001B3 VOL: 0
+;PCODE: $000001B4 VOL: 0
+;PCODE: $000001B5 VOL: 0
+;PCODE: $000001B6 VOL: 0
+;PCODE: $000001B7 VOL: 0
+;PCODE: $000001B8 VOL: 0
+;PCODE: $000001B9 VOL: 0
+;PCODE: $000001BA VOL: 0
+;PCODE: $000001BB VOL: 0
+;PCODE: $000001BC VOL: 0
+;PCODE: $000001BD VOL: 0
+;PCODE: $000001BE VOL: 0
+;PCODE: $000001BF VOL: 0
+;PCODE: $000001C0 VOL: 0
+;PCODE: $000001C1 VOL: 0
+;PCODE: $000001C2 VOL: 0
+;PCODE: $000001C3 VOL: 0
+;PCODE: $000001C4 VOL: 0
+;PCODE: $000001C5 VOL: 0
+;PCODE: $000001C6 VOL: 0
+;PCODE: $000001C7 VOL: 0
+;PCODE: $000001C8 VOL: 0
+;PCODE: $000001C9 VOL: 0
+;PCODE: $000001CA VOL: 0
+; 001A 00EB         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
+;PCODE: $000001CB VOL: 0
+;PCODE: $000001CC VOL: 0
+;PCODE: $000001CD VOL: 0
+;PCODE: $000001CE VOL: 0
+;PCODE: $000001CF VOL: 0
+;PCODE: $000001D0 VOL: 0
+;PCODE: $000001D1 VOL: 0
+;PCODE: $000001D2 VOL: 0
+;PCODE: $000001D3 VOL: 0
+;PCODE: $000001D4 VOL: 0
+;PCODE: $000001D5 VOL: 0
+;PCODE: $000001D6 VOL: 0
+;PCODE: $000001D7 VOL: 0
+;PCODE: $000001D8 VOL: 0
+; 001A 00EC 
+; 001A 00ED         // printDebug("-L2 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
+; 001A 00EE      }else if((viVoltUpLevel < (-0.719)) && (viVoltUpLevel >= (-1.021)) ){
+;PCODE: $000001D9 VOL: 0
+;PCODE: $000001DA VOL: 0
+;PCODE: $000001DB VOL: 0
+;PCODE: $000001DC VOL: 0
+;PCODE: $000001DD VOL: 0
+;PCODE: $000001DE VOL: 0
+;PCODE: $000001DF VOL: 0
+;PCODE: $000001E0 VOL: 0
+;PCODE: $000001E1 VOL: 0
+;PCODE: $000001E2 VOL: 0
+;PCODE: $000001E3 VOL: 0
+;PCODE: $000001E4 VOL: 0
+;PCODE: $000001E5 VOL: 0
+;PCODE: $000001E6 VOL: 0
+; 001A 00EF         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
+; 001A 00F0         gaussian(viVoltPointTable[2][0],  viVoltPointTable[2][1],  viVoltPointTable[2][2], viTempOutPointTable[2][0], viTempOutPointTable[2][1], viTempOutPointTable[2][2], &factorA, &factorB, &factorC);
+;PCODE: $000001E7 VOL: 0
+;PCODE: $000001E8 VOL: 0
+;PCODE: $000001E9 VOL: 0
+;PCODE: $000001EA VOL: 0
+;PCODE: $000001EB VOL: 0
+;PCODE: $000001EC VOL: 0
+;PCODE: $000001ED VOL: 0
+;PCODE: $000001EE VOL: 0
+;PCODE: $000001EF VOL: 0
+;PCODE: $000001F0 VOL: 0
+;PCODE: $000001F1 VOL: 0
+;PCODE: $000001F2 VOL: 0
+;PCODE: $000001F3 VOL: 0
+;PCODE: $000001F4 VOL: 0
+;PCODE: $000001F5 VOL: 0
+;PCODE: $000001F6 VOL: 0
+;PCODE: $000001F7 VOL: 0
+;PCODE: $000001F8 VOL: 0
+;PCODE: $000001F9 VOL: 0
+;PCODE: $000001FA VOL: 0
+;PCODE: $000001FB VOL: 0
+;PCODE: $000001FC VOL: 0
+;PCODE: $000001FD VOL: 0
+;PCODE: $000001FE VOL: 0
+; 001A 00F1         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
+;PCODE: $000001FF VOL: 0
+;PCODE: $00000200 VOL: 0
+;PCODE: $00000201 VOL: 0
+;PCODE: $00000202 VOL: 0
+;PCODE: $00000203 VOL: 0
+;PCODE: $00000204 VOL: 0
+;PCODE: $00000205 VOL: 0
+;PCODE: $00000206 VOL: 0
+;PCODE: $00000207 VOL: 0
+;PCODE: $00000208 VOL: 0
+;PCODE: $00000209 VOL: 0
+;PCODE: $0000020A VOL: 0
+;PCODE: $0000020B VOL: 0
+;PCODE: $0000020C VOL: 0
+; 001A 00F2 
+; 001A 00F3         // printDebug("-L3 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
+; 001A 00F4      }else if((viVoltUpLevel < (-1.021)) && (viVoltUpLevel >= (-1.269)) ){
+;PCODE: $0000020D VOL: 0
+;PCODE: $0000020E VOL: 0
+;PCODE: $0000020F VOL: 0
+;PCODE: $00000210 VOL: 0
+;PCODE: $00000211 VOL: 0
+;PCODE: $00000212 VOL: 0
+;PCODE: $00000213 VOL: 0
+;PCODE: $00000214 VOL: 0
+;PCODE: $00000215 VOL: 0
+;PCODE: $00000216 VOL: 0
+;PCODE: $00000217 VOL: 0
+;PCODE: $00000218 VOL: 0
+;PCODE: $00000219 VOL: 0
+;PCODE: $0000021A VOL: 0
+; 001A 00F5         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
+; 001A 00F6         gaussian(viVoltPointTable[3][0],  viVoltPointTable[3][1],  viVoltPointTable[3][2], viTempOutPointTable[3][0], viTempOutPointTable[3][1], viTempOutPointTable[3][2], &factorA, &factorB, &factorC);
+;PCODE: $0000021B VOL: 0
+;PCODE: $0000021C VOL: 0
+;PCODE: $0000021D VOL: 0
+;PCODE: $0000021E VOL: 0
+;PCODE: $0000021F VOL: 0
+;PCODE: $00000220 VOL: 0
+;PCODE: $00000221 VOL: 0
+;PCODE: $00000222 VOL: 0
+;PCODE: $00000223 VOL: 0
+;PCODE: $00000224 VOL: 0
+;PCODE: $00000225 VOL: 0
+;PCODE: $00000226 VOL: 0
+;PCODE: $00000227 VOL: 0
+;PCODE: $00000228 VOL: 0
+;PCODE: $00000229 VOL: 0
+;PCODE: $0000022A VOL: 0
+;PCODE: $0000022B VOL: 0
+;PCODE: $0000022C VOL: 0
+;PCODE: $0000022D VOL: 0
+;PCODE: $0000022E VOL: 0
+;PCODE: $0000022F VOL: 0
+;PCODE: $00000230 VOL: 0
+;PCODE: $00000231 VOL: 0
+;PCODE: $00000232 VOL: 0
+;PCODE: $00000233 VOL: 0
+;PCODE: $00000234 VOL: 0
+;PCODE: $00000235 VOL: 0
+; 001A 00F7         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
+;PCODE: $00000236 VOL: 0
+;PCODE: $00000237 VOL: 0
+;PCODE: $00000238 VOL: 0
+;PCODE: $00000239 VOL: 0
+;PCODE: $0000023A VOL: 0
+;PCODE: $0000023B VOL: 0
+;PCODE: $0000023C VOL: 0
+;PCODE: $0000023D VOL: 0
+;PCODE: $0000023E VOL: 0
+;PCODE: $0000023F VOL: 0
+;PCODE: $00000240 VOL: 0
+;PCODE: $00000241 VOL: 0
+;PCODE: $00000242 VOL: 0
+;PCODE: $00000243 VOL: 0
+; 001A 00F8 
+; 001A 00F9         // printDebug("-L4 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
+; 001A 00FA      }else if((viVoltUpLevel < (-1.269)) && (viVoltUpLevel >= (-1.504)) ){        //-1.454 + 50.0   | 50 = +compencess
+;PCODE: $00000244 VOL: 0
+;PCODE: $00000245 VOL: 0
+;PCODE: $00000246 VOL: 0
+;PCODE: $00000247 VOL: 0
+;PCODE: $00000248 VOL: 0
+;PCODE: $00000249 VOL: 0
+;PCODE: $0000024A VOL: 0
+;PCODE: $0000024B VOL: 0
+;PCODE: $0000024C VOL: 0
+;PCODE: $0000024D VOL: 0
+;PCODE: $0000024E VOL: 0
+;PCODE: $0000024F VOL: 0
+;PCODE: $00000250 VOL: 0
+;PCODE: $00000251 VOL: 0
+; 001A 00FB         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
+; 001A 00FC         gaussian(viVoltPointTable[4][0],  viVoltPointTable[4][1],  viVoltPointTable[4][2], viTempOutPointTable[4][0], viTempOutPointTable[4][1], viTempOutPointTable[4][2], &factorA, &factorB, &factorC);
+;PCODE: $00000252 VOL: 0
+;PCODE: $00000253 VOL: 0
+;PCODE: $00000254 VOL: 0
+;PCODE: $00000255 VOL: 0
+;PCODE: $00000256 VOL: 0
+;PCODE: $00000257 VOL: 0
+;PCODE: $00000258 VOL: 0
+;PCODE: $00000259 VOL: 0
+;PCODE: $0000025A VOL: 0
+;PCODE: $0000025B VOL: 0
+;PCODE: $0000025C VOL: 0
+;PCODE: $0000025D VOL: 0
+;PCODE: $0000025E VOL: 0
+;PCODE: $0000025F VOL: 0
+;PCODE: $00000260 VOL: 0
+;PCODE: $00000261 VOL: 0
+;PCODE: $00000262 VOL: 0
+;PCODE: $00000263 VOL: 0
+;PCODE: $00000264 VOL: 0
+;PCODE: $00000265 VOL: 0
+;PCODE: $00000266 VOL: 0
+;PCODE: $00000267 VOL: 0
+;PCODE: $00000268 VOL: 0
+;PCODE: $00000269 VOL: 0
+;PCODE: $0000026A VOL: 0
+;PCODE: $0000026B VOL: 0
+;PCODE: $0000026C VOL: 0
+;PCODE: $0000026D VOL: 0
+;PCODE: $0000026E VOL: 0
+;PCODE: $0000026F VOL: 0
+; 001A 00FD         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
+;PCODE: $00000270 VOL: 0
+;PCODE: $00000271 VOL: 0
+;PCODE: $00000272 VOL: 0
+;PCODE: $00000273 VOL: 0
+;PCODE: $00000274 VOL: 0
+;PCODE: $00000275 VOL: 0
+;PCODE: $00000276 VOL: 0
+;PCODE: $00000277 VOL: 0
+;PCODE: $00000278 VOL: 0
+;PCODE: $00000279 VOL: 0
+;PCODE: $0000027A VOL: 0
+;PCODE: $0000027B VOL: 0
+;PCODE: $0000027C VOL: 0
+;PCODE: $0000027D VOL: 0
+; 001A 00FE 
+; 001A 00FF          //printDebug("-L5 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
+; 001A 0100      }
+; 001A 0101      else if(viVoltUpLevel < (-1.504)){
+;PCODE: $0000027E VOL: 0
+;PCODE: $0000027F VOL: 0
+;PCODE: $00000280 VOL: 0
+;PCODE: $00000281 VOL: 0
+;PCODE: $00000282 VOL: 0
+;PCODE: $00000283 VOL: 0
+; 001A 0102         ivTempValue = (viVoltUpLevel*1000) / 10.0;
+;PCODE: $00000284 VOL: 0
+;PCODE: $00000285 VOL: 0
+;PCODE: $00000286 VOL: 0
+;PCODE: $00000287 VOL: 0
+;PCODE: $00000288 VOL: 0
+;PCODE: $00000289 VOL: 0
+;PCODE: $0000028A VOL: 0
+; 001A 0103          //printDebug("-L6 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp Error\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel);
+; 001A 0104      }
+; 001A 0105      //printDebug("%f,%f\r\n",viVoltUpLevel,ivTempValue);
+; 001A 0106      return ivTempValue;
+;PCODE: $0000028B VOL: 0
+;PCODE: $0000028C VOL: 0
+;PCODE: $0000028D VOL: 0
+;PCODE: $0000028E VOL: 0
+;PCODE: $0000028F VOL: 0
+;PCODE: $00000290 VOL: 0
+;PCODE: $00000291 VOL: 0
+;PCODE: $00000292 VOL: 0
+;PCODE: $00000293 VOL: 0
+;PCODE: $00000294 VOL: 0
+; 001A 0107 }
+;PCODE: $00000295 VOL: 0

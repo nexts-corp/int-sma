@@ -51,6 +51,9 @@ bit 7   6   5   4       3   2   1   0
 //#define TMCP_OPEN_LIMIT         1.620 //Over range +160  
 //#define TMCP_SHORT_LIMIT       -1.464 //Over range -200
 
+//#define TMCP_OPEN_LIMIT         1.470 //Over range +160  
+//#define TMCP_SHORT_LIMIT       -1.504 //Over range -200
+
 #define TMCP_OPEN_LIMIT         1.470 //Over range +160  
 #define TMCP_SHORT_LIMIT       -1.504 //Over range -200
 

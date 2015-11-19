@@ -1,6 +1,6 @@
-VERSION:3 SOURCE_TIMESTAMP:473C5D85
+VERSION:3 SOURCE_TIMESTAMP:47739159
 NODE:M LEVEL:0 LINE:2 "AD595_H"
 NODE:I LEVEL:0 LINE:3 "C:\cvavr2\inc\stdio.h"
 NODE:I LEVEL:0 LINE:4 "C:\cvavr2\inc\stdlib.h"
 NODE:I LEVEL:0 LINE:5 "C:\cvavr2\inc\string.h"
-NODE:I LEVEL:0 LINE:6 "C:\Data\Projects\AVR\IMS-ETH\iNT_ETH_CLOUD_Thermocouple_v01\ad595.h"
+NODE:I LEVEL:0 LINE:6 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\ad595.h"

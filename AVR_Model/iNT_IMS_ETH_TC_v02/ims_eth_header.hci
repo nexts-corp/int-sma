@@ -1,5 +1,5 @@
 VERSION:3 SOURCE_TIMESTAMP:449EAC35
 NODE:M LEVEL:0 LINE:2 "IMS_ETH_HEADER_H"
-NODE:I LEVEL:0 LINE:4 "C:\Data\Projects\AVR\IMS-ETH\iNT_ETH_CLOUD_Thermocouple_v01\debug.h"
-NODE:I LEVEL:0 LINE:6 "C:\Data\Projects\AVR\IMS-ETH\iNT_ETH_CLOUD_Thermocouple_v01\initial_sys.h"
-NODE:I LEVEL:0 LINE:9 "C:\Data\Projects\AVR\IMS-ETH\iNT_ETH_CLOUD_Thermocouple_v01\ethcomm.h"
+NODE:I LEVEL:0 LINE:4 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\debug.h"
+NODE:I LEVEL:0 LINE:6 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\initial_sys.h"
+NODE:I LEVEL:0 LINE:9 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\ethcomm.h"

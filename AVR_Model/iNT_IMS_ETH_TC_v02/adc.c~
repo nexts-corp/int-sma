@@ -124,6 +124,7 @@ void adc_init_read(void)
 /*============================================================*/
 void init_adc(void)
 {
+    char refADC;
     // ADC initialization
     // ADC Clock frequency: 1000.000 kHz
     // ADC Voltage Reference: 2.56V, cap. on AREF
@@ -139,18 +140,21 @@ void init_adc(void)
         DIDR2=0x61; 
         
         /*bongkot edit resigter*/
-        DIDR2=0x7F;  
-        ADMUX   = 0x40;     //3.3v reference     
+        DIDR2=0x7F;
+        refADC = ADC_VREF3_3_TYPE;  
+        //ADMUX   = 0x40;     //3.3v reference     
     }                
     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
         // Digital input buffers on ADC8: Off, ADC9: Off, ADC10: Off, ADC11: Off
         // ADC12: Off, ADC13: Off, ADC14: Off, ADC15: On
         DIDR2=0x7F;
-        ADMUX   = ADC_VREF_TYPE;         
+       // ADMUX   = ADC_VREF_TYPE;  
+        refADC = ADC_VREF_TYPE;       
     }
     
     
     //ADMUX   = ADC_VREF_TYPE;
+    ADMUX   = refADC;
     ADCSRA  = (1<<7) |          // ADEN:    ADC enable
               (0<<6) |          // ADSC:    ADC Start Conversion
               (0<<5) |          // ADATE:   ADC Auto Trigger Enable

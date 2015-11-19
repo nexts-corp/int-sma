@@ -1,4 +1,4 @@
 VERSION:3 SOURCE_TIMESTAMP:473B749A
 NODE:I LEVEL:0 LINE:1 "C:\cvavr2\inc\stdlib.h"
-NODE:I LEVEL:0 LINE:2 "C:\Data\Projects\AVR\IMS-ETH\iNT_ETH_CLOUD_Thermocouple_v01\gaussianAD595.h"
-NODE:I LEVEL:0 LINE:3 "C:\Data\Projects\AVR\IMS-ETH\iNT_ETH_CLOUD_Thermocouple_v01\debug.h"
+NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\gaussianAD595.h"
+NODE:I LEVEL:0 LINE:3 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\debug.h"

@@ -54,7 +54,8 @@ flash float             tempTable[15]           = {-80.0, -70.0, -60.0, -50.0, -
 flash float             adcTable[15]            = {290.7750, 309.0467, 326.7189, 343.8240, 360.3923, 376.4502, 392.0239, 
                                                     407.1367, 421.8099, 436.0630, 449.9139, 463.3793, 476.4748, 489.2156, 501.6149};
 
-    
+float iTCVoltData[5] = {0.0,0.0,0.0,0.0,0.0};
+float iTCADCData[5] = {0.0,0.0,0.0,0.0,0.0};    
 /*============================================================*/
 void iSensorGetADCValue(){
     long viADCbuffer = 0;
@@ -64,6 +65,7 @@ void iSensorGetADCValue(){
     printDebug("[iSensorGetValue]data[");
     for(i=0;i<5;i++){
         #asm("wdr")
+        viADCbuffer = 0;
         for(j=0;j<30;j++){
             viADCbuffer += read_adc(8+i);
         }
@@ -123,9 +125,11 @@ int sensorRead(int ch, struct sens_val_st *sensor)
     float x_1 = 0.0;   
     float x_2 = 0.0; 
     float y_1 = 0.0; 
-    float y_2 = 0.0;    
+    float y_2 = 0.0; 
     
-    long viADCbuffer = 0;   
+    const float  viZeroSet   = 1.667;   
+    
+    unsigned long viADCbuffer;   
     int i = 0; 
     float offset = 0.0;
     float sensorRef1 = 0.0,sensorRef2 = 0.0,sensorRef3 = 0.0;
@@ -133,7 +137,9 @@ int sensorRead(int ch, struct sens_val_st *sensor)
     float lowRange = 0.0;  
     float stdMeterRange = 0.0; 
     float factorAA = 0.0,factorBB = 0.0,factorCC = 0.0;      
-    float viSensorTempValue = 0.0;
+    float viSensorTempValue = 0.0; 
+    float viRawVoltValue = 0.0;   
+    float viRiaseUpVoltValue = 0.0;
 
     if( (ch<0) || (ch>=MAX_SENS_CHANNEL) ){
         printDebug("<sensorRead> ERR: ch value out of range\r\n");
@@ -155,14 +161,33 @@ int sensorRead(int ch, struct sens_val_st *sensor)
 //            channelConnect  = SENS_NORMAL;
 //        } 
          viADCbuffer = 0;  
-         for(i=0;i<30;i++){
-            viADCbuffer += read_adc(8+ch);
-         }   
-         viSensorTempValue = iAD595ADCToVolt(viADCbuffer,30);
-         if(viSensorTempValue < TMCP_SHORT_LIMIT){
+         for(i=0;i<20;i++){
+            viADCbuffer += (unsigned long)(read_adc(8+ch));
+         }
+         viRawVoltValue = iAD595ADCToVolt(viADCbuffer,20.0);    
+         //viSensorTempValue = iAD595ADCToVolt(viADCbuffer,20.0);  
+         iTCVoltData[ch] = (float)(viRawVoltValue+0.213);
+         iTCADCData[ch]  = (float)(viADCbuffer/20.0);
+         
+         printDebug("[sensorRead1]ch1[%04.2f|%0.2f],ch2[%04.2f|%0.2f],ch3[%04.2f|%0.2f],ch4[%04.2f|%0.2f],ch5[%04.2f|%0.2f]\r\n",iTCADCData[0],iTCVoltData[0],iTCADCData[1],iTCVoltData[1],iTCADCData[2],iTCVoltData[2],iTCADCData[3],iTCVoltData[3],iTCADCData[4],iTCVoltData[4]);
+        
+         
+//         if(viSensorTempValue < TMCP_SHORT_LIMIT){
+//             //channelConnect  = SENS_ERR_SHORT;  
+//             channelConnect  = SENS_ERR_DISCONNECT;
+//         }else if(viSensorTempValue > TMCP_OPEN_LIMIT){
+//             channelConnect  = SENS_ERR_DISCONNECT;
+//         }else{
+//             channelConnect  = SENS_NORMAL;
+//         }  
+
+         viRiaseUpVoltValue = (float)(iTCVoltData[ch]-viZeroSet);
+         iTCVoltData[ch] = viRiaseUpVoltValue; 
+         printDebug("[sensorRead2]ch1[%04.2f|%0.2f],ch2[%04.2f|%0.2f],ch3[%04.2f|%0.2f],ch4[%04.2f|%0.2f],ch5[%04.2f|%0.2f]\r\n",iTCADCData[0],iTCVoltData[0],iTCADCData[1],iTCVoltData[1],iTCADCData[2],iTCVoltData[2],iTCADCData[3],iTCVoltData[3],iTCADCData[4],iTCVoltData[4]);
+         if(viRiaseUpVoltValue < TMCP_SHORT_LIMIT){
              //channelConnect  = SENS_ERR_SHORT;  
              channelConnect  = SENS_ERR_DISCONNECT;
-         }else if(viSensorTempValue > TMCP_OPEN_LIMIT){
+         }else if(viRiaseUpVoltValue > TMCP_OPEN_LIMIT){
              channelConnect  = SENS_ERR_DISCONNECT;
          }else{
              channelConnect  = SENS_NORMAL;
@@ -338,13 +363,13 @@ int sensorRead(int ch, struct sens_val_st *sensor)
                                     }     
         default                 :   if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){ 
                                         //sensor->value   =   (ADC_CONV_FAC*100 * adcData[ch]);    
-                                        viADCbuffer = 0;
-                                        for(i=0;i<30;i++){
-                                            viADCbuffer += read_adc(8+ch);
+                                         viADCbuffer = 0;  
+                                         for(i=0;i<20;i++){
+                                            viADCbuffer += (unsigned long)(read_adc(8+ch));
                                          }
-                                         //offset =  epTempRef1[ch] - iAD595ADCToTemp(viADCbuffer,30);
-                                         sensor->value = iAD595ADCToTemp(viADCbuffer,30);// + offset;   
-                                         //printDebug("ADC[%d] Temp C : %f\r\n",ch,iAD595ADCToTemp(viADCbuffer,30));
+                                         viRawVoltValue = iAD595ADCToVolt(viADCbuffer,20.0);  
+                                         
+                                         sensor->value = iAD595VoltToTemp((float)((viRawVoltValue+0.426)-viZeroSet));        //0.213 *2 = 0.426
                                     }                
                                     else if(TEMP_SEL == TEMP_TMEC){                 
                                         sensor->value   =   (epTMECTempSlope  * adcData[ch]) + epTMECTempOffset;        

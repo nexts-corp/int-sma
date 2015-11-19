@@ -7,6 +7,7 @@
 
 
 float iAD595ADCToTemp(long viADC_p,int viADCLoop_p);
-float iAD595ADCToVolt(long viADC_p,int viADCLoop_p);
+float iAD595VoltToTemp(float viVolt_arg);
+float iAD595ADCToVolt(unsigned long viADC_p,float viADCLoop_p);
 
 #endif 
