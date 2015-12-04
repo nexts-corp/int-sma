@@ -32,7 +32,7 @@ unsigned int read_adc(unsigned char adc_input)
     
     // Delay needed for the stabilization of the ADC input voltage
     //delay_us(20);
-    delay_us(4);     //bongkot edit
+    delay_us(2);     //bongkot edit
     
     // Start the AD conversion
     ADCSRA  |= 0x80; //ENABLE ADC 

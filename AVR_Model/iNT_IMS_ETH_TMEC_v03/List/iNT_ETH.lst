@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.30  C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TMEC_v03\List\iNT_ETH.asm Fri Nov 13 14:43:45 2015
+AVRASM ver. 2.1.30  C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TMEC_v03\List\iNT_ETH.asm Thu Dec 03 17:47:33 2015
 
 C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TMEC_v03\List\iNT_ETH.asm(1110): warning: Register r5 already defined by the .DEF directive
 C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TMEC_v03\List\iNT_ETH.asm(1111): warning: Register r4 already defined by the .DEF directive
@@ -20834,13 +20834,13 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TMEC_v03\List\iNT_ETH
                  ; 0005 0020 
                  ; 0005 0021     // Delay needed for the stabilization of the ADC input voltage
                  ; 0005 0022     //delay_us(20);
-                 ; 0005 0023     delay_us(4);     //bongkot edit
+                 ; 0005 0023     delay_us(2);     //bongkot edit
                 +
-0042ef e08b     +LDI R24 , LOW ( 11 )
+0042ef e085     +LDI R24 , LOW ( 5 )
                 +__DELAY_USB_LOOP :
 0042f0 958a     +DEC R24
 0042f1 f7f1     +BRNE __DELAY_USB_LOOP
-                 	__DELAY_USB 11
+                 	__DELAY_USB 5
                  ; 0005 0024 
                  ; 0005 0025     // Start the AD conversion
                  ; 0005 0026     ADCSRA  |= 0x80; //ENABLE ADC

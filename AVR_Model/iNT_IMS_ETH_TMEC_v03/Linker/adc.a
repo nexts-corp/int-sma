@@ -94,7 +94,7 @@
 ; 0005 0020 
 ; 0005 0021     // Delay needed for the stabilization of the ADC input voltage
 ; 0005 0022     //delay_us(20);
-; 0005 0023     delay_us(4);     //bongkot edit
+; 0005 0023     delay_us(2);     //bongkot edit
 ;PCODE: $0000002F VOL: 0
 ; 0005 0024 
 ; 0005 0025     // Start the AD conversion

@@ -10200,8 +10200,8 @@ _0xA0020:
 ; 0005 0020 
 ; 0005 0021     // Delay needed for the stabilization of the ADC input voltage
 ; 0005 0022     //delay_us(20);
-; 0005 0023     delay_us(4);     //bongkot edit
-	__DELAY_USB 11
+; 0005 0023     delay_us(2);     //bongkot edit
+	__DELAY_USB 5
 ; 0005 0024 
 ; 0005 0025     // Start the AD conversion
 ; 0005 0026     ADCSRA  |= 0x80; //ENABLE ADC
