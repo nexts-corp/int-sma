@@ -130,7 +130,7 @@
 ; 0005 0027 
 ; 0005 0028     // Delay needed for the stabilization of the ADC input voltage
 ; 0005 0029     //delay_us(20);
-; 0005 002A     delay_us(4);
+; 0005 002A     delay_us(1);
 ;PCODE: $0000004B VOL: 0
 ; 0005 002B 
 ; 0005 002C     // Start the AD conversion

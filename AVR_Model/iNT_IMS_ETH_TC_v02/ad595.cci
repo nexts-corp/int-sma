@@ -1,7 +1,8 @@
-VERSION:3 SOURCE_TIMESTAMP:4773924E
+VERSION:3 SOURCE_TIMESTAMP:47795440
 NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\ad595.h"
 NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\debug.h"
 NODE:I LEVEL:0 LINE:3 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\gaussian.h"
 NODE:F LEVEL:0 LINE:5 "iAD595ADCToTemp(long viADC_p,int viADCLoop_p)"
 NODE:F LEVEL:0 LINE:159 "iAD595ADCToVolt(unsigned long viADC_p,float viADCLoop_p)"
-NODE:F LEVEL:0 LINE:175 "iAD595VoltToTemp(float viVolt_arg)"
+NODE:F LEVEL:0 LINE:175 "iAD595ADCToVoltage(float viADC_arg)"
+NODE:F LEVEL:0 LINE:189 "iAD595VoltToTemp(float viVolt_arg)"

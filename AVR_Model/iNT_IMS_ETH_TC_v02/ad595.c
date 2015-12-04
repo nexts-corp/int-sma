@@ -157,18 +157,32 @@ float iAD595ADCToTemp(long viADC_p,int viADCLoop_p){
 }
 
 float iAD595ADCToVolt(unsigned long viADC_p,float viADCLoop_p){            //Volt Uplevel
-     float    viADCSmooth =  (float)(viADC_p/viADCLoop_p);           ////(float)(viADCbuffer/30.0); 
+     float    viADCSmooth =  (float)(viADC_p/viADCLoop_p);           //(float)(viADCbuffer/30.0); 
      float  viADCToVolt = 0.0;   
      //const float  viZeroSet   = 1.68;  
      const float  viZeroSet   = 1.667;
      float viVoltUpLevel = 0.0; 
      float ivVoltValue = 0.0;
      
-     viADCToVolt = (float)((viADCSmooth/1024.0)*3.30);          //- 0  +    
+     viADCToVolt = (float)((viADCSmooth/1024.0)*3.30);      //    - 0  +    
      viVoltUpLevel = viADCToVolt; 
      //viVoltUpLevel = viADCToVolt - viZeroSet;         
     
       
+     return viVoltUpLevel;
+}
+
+float iAD595ADCToVoltage(float viADC_arg){ 
+     float    viADCSmooth =  viADC_arg;  
+     float  viADCToVolt = 0.0;   
+     const float  viZeroSet = 1.667;
+     const float  viOffset = 0.213;
+     float viVoltUpLevel = 0.0; 
+     float ivVoltValue = 0.0;
+     
+     viADCToVolt = (float)((viADCSmooth/1024.0)*3.30);    //      - 0  +    
+     viVoltUpLevel = (viADCToVolt+viOffset) - viZeroSet; 
+     
      return viVoltUpLevel;
 }
 

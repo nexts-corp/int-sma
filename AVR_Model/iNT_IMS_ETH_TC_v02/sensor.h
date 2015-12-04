@@ -62,6 +62,10 @@ struct sens_val_st
     float           value;              // -- sensor value -- //
     unsigned char   status;             // -- sensor status -- //
 };
+
+//typedef struct{
+//
+//}iSensor_t;
                                   
 extern struct sens_val_st       sensor[];
 
@@ -72,5 +76,6 @@ int sensorGetCurrentSetPoint(int ch,int pnt,unsigned char *buf);
 int sensorSetCurrentSetPoint(int ch,int pnt,unsigned char *buf);
 void getInterval(float adcRaw, float *x1, float *x2, float *y1, float *y2);
 void iSensorGetADCValue();
+float iUpdateSmoothlyADC(int ch);
 
 #endif

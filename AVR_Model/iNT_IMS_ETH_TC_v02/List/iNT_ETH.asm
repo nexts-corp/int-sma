@@ -3396,9 +3396,12 @@ _0x180000:
 	.DB  0x32,0x58,0x29,0x20,0x6E,0x6F,0x74,0x20
 	.DB  0x66,0x6F,0x75,0x6E,0x64,0x21,0x21,0xD
 	.DB  0xA,0xD,0xA,0x0
-_0x1A001A:
+_0x1A001D:
+	.DB  0x0,0x0,0xA0,0x41,0x0,0x0,0x0,0x0
+	.DB  0x0,0x0,0x0,0x0
+_0x1A0021:
 	.DB  0xFF,0xFF,0xFF,0xFF,0xFF
-_0x1A001B:
+_0x1A0022:
 	.DB  0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 	.DB  0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 	.DB  0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0
@@ -3407,6 +3410,10 @@ _0x1A001B:
 	.DB  0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 	.DB  0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 	.DB  0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0
+	.DB  0x0,0x0,0x0,0x0,0x42,0x60,0xD5,0x3F
+	.DB  0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0
+	.DB  0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0
+_0x1A00A6:
 	.DB  0x42,0x60,0xD5,0x3F,0x0,0x0,0x0,0x0
 	.DB  0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 	.DB  0x0,0x0,0x0,0x0
@@ -3422,182 +3429,155 @@ _0x1A0000:
 	.DB  0x20,0x45,0x52,0x52,0x3A,0x20,0x63,0x68
 	.DB  0x20,0x76,0x61,0x6C,0x75,0x65,0x20,0x6F
 	.DB  0x75,0x74,0x20,0x6F,0x66,0x20,0x72,0x61
-	.DB  0x6E,0x67,0x65,0xD,0xA,0x0,0x5B,0x73
-	.DB  0x65,0x6E,0x73,0x6F,0x72,0x52,0x65,0x61
-	.DB  0x64,0x31,0x5D,0x63,0x68,0x31,0x5B,0x25
-	.DB  0x30,0x34,0x2E,0x32,0x66,0x7C,0x25,0x30
-	.DB  0x2E,0x32,0x66,0x5D,0x2C,0x63,0x68,0x32
-	.DB  0x5B,0x25,0x30,0x34,0x2E,0x32,0x66,0x7C
-	.DB  0x25,0x30,0x2E,0x32,0x66,0x5D,0x2C,0x63
-	.DB  0x68,0x33,0x5B,0x25,0x30,0x34,0x2E,0x32
-	.DB  0x66,0x7C,0x25,0x30,0x2E,0x32,0x66,0x5D
-	.DB  0x2C,0x63,0x68,0x34,0x5B,0x25,0x30,0x34
-	.DB  0x2E,0x32,0x66,0x7C,0x25,0x30,0x2E,0x32
-	.DB  0x66,0x5D,0x2C,0x63,0x68,0x35,0x5B,0x25
-	.DB  0x30,0x34,0x2E,0x32,0x66,0x7C,0x25,0x30
-	.DB  0x2E,0x32,0x66,0x5D,0xD,0xA,0x0,0x5B
-	.DB  0x73,0x65,0x6E,0x73,0x6F,0x72,0x52,0x65
-	.DB  0x61,0x64,0x32,0x5D,0x63,0x68,0x31,0x5B
-	.DB  0x25,0x30,0x34,0x2E,0x32,0x66,0x7C,0x25
-	.DB  0x30,0x2E,0x32,0x66,0x5D,0x2C,0x63,0x68
-	.DB  0x32,0x5B,0x25,0x30,0x34,0x2E,0x32,0x66
-	.DB  0x7C,0x25,0x30,0x2E,0x32,0x66,0x5D,0x2C
-	.DB  0x63,0x68,0x33,0x5B,0x25,0x30,0x34,0x2E
-	.DB  0x32,0x66,0x7C,0x25,0x30,0x2E,0x32,0x66
-	.DB  0x5D,0x2C,0x63,0x68,0x34,0x5B,0x25,0x30
-	.DB  0x34,0x2E,0x32,0x66,0x7C,0x25,0x30,0x2E
-	.DB  0x32,0x66,0x5D,0x2C,0x63,0x68,0x35,0x5B
-	.DB  0x25,0x30,0x34,0x2E,0x32,0x66,0x7C,0x25
-	.DB  0x30,0x2E,0x32,0x66,0x5D,0xD,0xA,0x0
-	.DB  0x54,0x65,0x6D,0x70,0x52,0x61,0x77,0x28
-	.DB  0x25,0x66,0x29,0x2C,0x20,0x54,0x65,0x6D
-	.DB  0x70,0x52,0x65,0x66,0x28,0x25,0x66,0x29
-	.DB  0x2C,0x20,0x4F,0x66,0x66,0x73,0x65,0x74
-	.DB  0x28,0x25,0x66,0x29,0xD,0xA,0x0,0x3C
-	.DB  0x73,0x65,0x6E,0x73,0x6F,0x72,0x43,0x61
-	.DB  0x6C,0x69,0x62,0x72,0x61,0x74,0x65,0x31
-	.DB  0x3E,0x20,0x41,0x42,0x4F,0x52,0x54,0x3A
-	.DB  0x20,0x73,0x65,0x6E,0x73,0x6F,0x72,0x20
-	.DB  0x63,0x68,0x20,0x25,0x64,0x20,0x69,0x73
-	.DB  0x20,0x64,0x69,0x73,0x61,0x62,0x6C,0x65
-	.DB  0xD,0xA,0x0,0x3C,0x73,0x65,0x6E,0x73
-	.DB  0x6F,0x72,0x43,0x61,0x6C,0x69,0x62,0x72
-	.DB  0x61,0x74,0x65,0x31,0x3E,0x20,0x41,0x42
-	.DB  0x4F,0x52,0x54,0x3A,0x20,0x73,0x65,0x6E
-	.DB  0x73,0x6F,0x72,0x20,0x63,0x68,0x20,0x25
-	.DB  0x64,0x20,0x65,0x72,0x72,0x6F,0x72,0x28
-	.DB  0x30,0x78,0x25,0x30,0x32,0x58,0x29,0xD
-	.DB  0xA,0x0,0x3C,0x73,0x65,0x6E,0x73,0x6F
-	.DB  0x72,0x43,0x61,0x6C,0x69,0x62,0x72,0x61
-	.DB  0x74,0x65,0x32,0x3E,0x20,0x41,0x42,0x4F
-	.DB  0x52,0x54,0x3A,0x20,0x73,0x65,0x6E,0x73
-	.DB  0x6F,0x72,0x20,0x63,0x68,0x20,0x25,0x64
-	.DB  0x20,0x4E,0x6F,0x20,0x73,0x65,0x74,0x20
-	.DB  0x70,0x6F,0x69,0x6E,0x74,0x20,0x66,0x6F
-	.DB  0x75,0x6E,0x64,0xD,0xA,0x0,0x3C,0x73
-	.DB  0x65,0x6E,0x73,0x6F,0x72,0x43,0x61,0x6C
-	.DB  0x69,0x62,0x72,0x61,0x74,0x65,0x32,0x3E
-	.DB  0x20,0x2D,0x2D,0x20,0x43,0x41,0x4C,0x5F
-	.DB  0x45,0x58,0x54,0x4F,0x46,0x46,0x53,0x45
-	.DB  0x54,0x20,0x2D,0x2D,0xD,0xA,0x0,0x3C
-	.DB  0x73,0x65,0x6E,0x73,0x6F,0x72,0x43,0x61
-	.DB  0x6C,0x69,0x62,0x72,0x61,0x74,0x65,0x32
-	.DB  0x3E,0x20,0x2D,0x2D,0x43,0x2D,0x2D,0x3E
-	.DB  0x20,0x25,0x66,0xD,0xA,0x0,0x3C,0x73
-	.DB  0x65,0x6E,0x73,0x6F,0x72,0x43,0x61,0x6C
-	.DB  0x69,0x62,0x72,0x61,0x74,0x65,0x32,0x3E
-	.DB  0x20,0x2D,0x2D,0x20,0x43,0x41,0x4C,0x5F
-	.DB  0x45,0x58,0x54,0x4C,0x49,0x4E,0x45,0x41
-	.DB  0x52,0x20,0x2D,0x2D,0xD,0xA,0x0,0x3C
-	.DB  0x73,0x65,0x6E,0x73,0x6F,0x72,0x43,0x61
-	.DB  0x6C,0x69,0x62,0x72,0x61,0x74,0x65,0x32
-	.DB  0x3E,0x20,0x2D,0x2D,0x42,0x2D,0x2D,0x3E
-	.DB  0x20,0x25,0x66,0xD,0xA,0x0,0x3C,0x73
-	.DB  0x65,0x6E,0x73,0x6F,0x72,0x43,0x61,0x6C
-	.DB  0x69,0x62,0x72,0x61,0x74,0x65,0x32,0x3E
-	.DB  0x20,0x2D,0x2D,0x20,0x43,0x41,0x4C,0x5F
-	.DB  0x45,0x58,0x54,0x50,0x4F,0x4C,0x59,0x4E
-	.DB  0x4F,0x4D,0x49,0x41,0x4C,0x20,0x2D,0x2D
-	.DB  0xD,0xA,0x0,0x3C,0x73,0x65,0x6E,0x73
-	.DB  0x6F,0x72,0x43,0x61,0x6C,0x69,0x62,0x72
-	.DB  0x61,0x74,0x65,0x32,0x3E,0x20,0x2D,0x2D
-	.DB  0x41,0x2D,0x2D,0x3E,0x20,0x25,0x66,0xD
-	.DB  0xA,0x0,0x3C,0x73,0x65,0x6E,0x73,0x6F
-	.DB  0x72,0x47,0x65,0x74,0x43,0x75,0x72,0x72
-	.DB  0x65,0x6E,0x74,0x53,0x65,0x74,0x50,0x6F
-	.DB  0x69,0x6E,0x74,0x3E,0x20,0x74,0x65,0x6D
-	.DB  0x70,0x52,0x65,0x66,0x31,0x20,0x3D,0x20
-	.DB  0x5B,0x25,0x66,0x5D,0x5B,0x25,0x66,0x5D
-	.DB  0xD,0xA,0x0,0x3C,0x73,0x65,0x6E,0x73
-	.DB  0x6F,0x72,0x47,0x65,0x74,0x43,0x75,0x72
-	.DB  0x72,0x65,0x6E,0x74,0x53,0x65,0x74,0x50
-	.DB  0x6F,0x69,0x6E,0x74,0x3E,0x20,0x74,0x65
-	.DB  0x6D,0x70,0x52,0x65,0x66,0x31,0x20,0x6E
-	.DB  0x6F,0x74,0x20,0x73,0x65,0x74,0x20,0x5B
-	.DB  0x30,0x2E,0x30,0x30,0x5D,0xD,0xA,0x0
-	.DB  0x30,0x2E,0x30,0x30,0x0,0x3C,0x73,0x65
-	.DB  0x6E,0x73,0x6F,0x72,0x47,0x65,0x74,0x43
-	.DB  0x75,0x72,0x72,0x65,0x6E,0x74,0x53,0x65
-	.DB  0x74,0x50,0x6F,0x69,0x6E,0x74,0x3E,0x20
-	.DB  0x74,0x65,0x6D,0x70,0x52,0x65,0x66,0x32
-	.DB  0x20,0x3D,0x20,0x5B,0x25,0x66,0x5D,0x5B
-	.DB  0x25,0x66,0x5D,0xD,0xA,0x0,0x3C,0x73
-	.DB  0x65,0x6E,0x73,0x6F,0x72,0x47,0x65,0x74
-	.DB  0x43,0x75,0x72,0x72,0x65,0x6E,0x74,0x53
-	.DB  0x65,0x74,0x50,0x6F,0x69,0x6E,0x74,0x3E
-	.DB  0x20,0x74,0x65,0x6D,0x70,0x52,0x65,0x66
-	.DB  0x32,0x20,0x6E,0x6F,0x74,0x20,0x73,0x65
-	.DB  0x74,0x20,0x5B,0x30,0x2E,0x30,0x30,0x5D
-	.DB  0xD,0xA,0x0,0x3C,0x73,0x65,0x6E,0x73
-	.DB  0x6F,0x72,0x47,0x65,0x74,0x43,0x75,0x72
-	.DB  0x72,0x65,0x6E,0x74,0x53,0x65,0x74,0x50
-	.DB  0x6F,0x69,0x6E,0x74,0x3E,0x20,0x74,0x65
-	.DB  0x6D,0x70,0x52,0x65,0x66,0x33,0x20,0x3D
-	.DB  0x20,0x5B,0x25,0x66,0x5D,0x5B,0x25,0x66
-	.DB  0x5D,0xD,0xA,0x0,0x3C,0x73,0x65,0x6E
-	.DB  0x73,0x6F,0x72,0x47,0x65,0x74,0x43,0x75
-	.DB  0x72,0x72,0x65,0x6E,0x74,0x53,0x65,0x74
-	.DB  0x50,0x6F,0x69,0x6E,0x74,0x3E,0x20,0x74
-	.DB  0x65,0x6D,0x70,0x52,0x65,0x66,0x33,0x20
-	.DB  0x6E,0x6F,0x74,0x20,0x73,0x65,0x74,0x20
-	.DB  0x5B,0x30,0x2E,0x30,0x30,0x5D,0xD,0xA
-	.DB  0x0,0x3C,0x73,0x65,0x6E,0x73,0x6F,0x72
-	.DB  0x47,0x65,0x74,0x43,0x75,0x72,0x72,0x65
-	.DB  0x6E,0x74,0x53,0x65,0x74,0x50,0x6F,0x69
-	.DB  0x6E,0x74,0x3E,0x20,0x69,0x6E,0x76,0x61
-	.DB  0x6C,0x69,0x64,0x20,0x70,0x61,0x72,0x61
-	.DB  0x6D,0x74,0x65,0x72,0x20,0x70,0x6E,0x74
-	.DB  0x2D,0x3E,0x5B,0x25,0x64,0x5D,0xD,0xA
-	.DB  0x0,0x3C,0x73,0x65,0x6E,0x73,0x6F,0x72
-	.DB  0x47,0x65,0x74,0x43,0x75,0x72,0x72,0x65
-	.DB  0x6E,0x74,0x53,0x65,0x74,0x50,0x6F,0x69
-	.DB  0x6E,0x74,0x3E,0x20,0x72,0x65,0x61,0x64
-	.DB  0x20,0x76,0x61,0x6C,0x28,0x25,0x64,0x29
-	.DB  0x20,0x3D,0x20,0x5B,0x25,0x73,0x5D,0xD
-	.DB  0xA,0x0,0x3C,0x73,0x65,0x6E,0x73,0x6F
-	.DB  0x72,0x47,0x65,0x74,0x43,0x75,0x72,0x72
-	.DB  0x65,0x6E,0x74,0x53,0x65,0x74,0x50,0x6F
-	.DB  0x69,0x6E,0x74,0x3E,0x20,0x6F,0x75,0x74
-	.DB  0x20,0x6F,0x66,0x20,0x63,0x6F,0x6E,0x64
-	.DB  0x69,0x74,0x69,0x6F,0x6E,0x20,0x76,0x61
-	.DB  0x6C,0x53,0x74,0x72,0x20,0x3D,0x20,0x27
-	.DB  0x25,0x73,0x27,0x0,0x3C,0x73,0x65,0x6E
-	.DB  0x73,0x6F,0x72,0x47,0x65,0x74,0x43,0x75
-	.DB  0x72,0x72,0x65,0x6E,0x74,0x53,0x65,0x74
-	.DB  0x50,0x6F,0x69,0x6E,0x74,0x3E,0x20,0x62
-	.DB  0x75,0x66,0x20,0x72,0x65,0x61,0x64,0x0
-	.DB  0x5B,0x25,0x64,0x5D,0x0,0x3C,0x73,0x65
-	.DB  0x6E,0x73,0x6F,0x72,0x53,0x65,0x74,0x43
-	.DB  0x75,0x72,0x72,0x65,0x6E,0x74,0x53,0x65
-	.DB  0x74,0x50,0x6F,0x69,0x6E,0x74,0x3E,0x20
+	.DB  0x6E,0x67,0x65,0xD,0xA,0x0,0x54,0x65
+	.DB  0x6D,0x70,0x52,0x61,0x77,0x28,0x25,0x66
+	.DB  0x29,0x2C,0x20,0x54,0x65,0x6D,0x70,0x52
+	.DB  0x65,0x66,0x28,0x25,0x66,0x29,0x2C,0x20
+	.DB  0x4F,0x66,0x66,0x73,0x65,0x74,0x28,0x25
+	.DB  0x66,0x29,0xD,0xA,0x0,0x3C,0x73,0x65
+	.DB  0x6E,0x73,0x6F,0x72,0x43,0x61,0x6C,0x69
+	.DB  0x62,0x72,0x61,0x74,0x65,0x31,0x3E,0x20
 	.DB  0x41,0x42,0x4F,0x52,0x54,0x3A,0x20,0x73
 	.DB  0x65,0x6E,0x73,0x6F,0x72,0x20,0x63,0x68
 	.DB  0x20,0x25,0x64,0x20,0x69,0x73,0x20,0x64
 	.DB  0x69,0x73,0x61,0x62,0x6C,0x65,0xD,0xA
 	.DB  0x0,0x3C,0x73,0x65,0x6E,0x73,0x6F,0x72
-	.DB  0x53,0x65,0x74,0x43,0x75,0x72,0x72,0x65
-	.DB  0x6E,0x74,0x53,0x65,0x74,0x50,0x6F,0x69
-	.DB  0x6E,0x74,0x3E,0x20,0x41,0x42,0x4F,0x52
+	.DB  0x43,0x61,0x6C,0x69,0x62,0x72,0x61,0x74
+	.DB  0x65,0x31,0x3E,0x20,0x41,0x42,0x4F,0x52
 	.DB  0x54,0x3A,0x20,0x73,0x65,0x6E,0x73,0x6F
 	.DB  0x72,0x20,0x63,0x68,0x20,0x25,0x64,0x20
 	.DB  0x65,0x72,0x72,0x6F,0x72,0x28,0x30,0x78
 	.DB  0x25,0x30,0x32,0x58,0x29,0xD,0xA,0x0
-	.DB  0x3C,0x73,0x65,0x6E,0x73,0x6F,0x72,0x53
+	.DB  0x3C,0x73,0x65,0x6E,0x73,0x6F,0x72,0x43
+	.DB  0x61,0x6C,0x69,0x62,0x72,0x61,0x74,0x65
+	.DB  0x32,0x3E,0x20,0x41,0x42,0x4F,0x52,0x54
+	.DB  0x3A,0x20,0x73,0x65,0x6E,0x73,0x6F,0x72
+	.DB  0x20,0x63,0x68,0x20,0x25,0x64,0x20,0x4E
+	.DB  0x6F,0x20,0x73,0x65,0x74,0x20,0x70,0x6F
+	.DB  0x69,0x6E,0x74,0x20,0x66,0x6F,0x75,0x6E
+	.DB  0x64,0xD,0xA,0x0,0x3C,0x73,0x65,0x6E
+	.DB  0x73,0x6F,0x72,0x43,0x61,0x6C,0x69,0x62
+	.DB  0x72,0x61,0x74,0x65,0x32,0x3E,0x20,0x2D
+	.DB  0x2D,0x20,0x43,0x41,0x4C,0x5F,0x45,0x58
+	.DB  0x54,0x4F,0x46,0x46,0x53,0x45,0x54,0x20
+	.DB  0x2D,0x2D,0xD,0xA,0x0,0x3C,0x73,0x65
+	.DB  0x6E,0x73,0x6F,0x72,0x43,0x61,0x6C,0x69
+	.DB  0x62,0x72,0x61,0x74,0x65,0x32,0x3E,0x20
+	.DB  0x2D,0x2D,0x43,0x2D,0x2D,0x3E,0x20,0x25
+	.DB  0x66,0xD,0xA,0x0,0x3C,0x73,0x65,0x6E
+	.DB  0x73,0x6F,0x72,0x43,0x61,0x6C,0x69,0x62
+	.DB  0x72,0x61,0x74,0x65,0x32,0x3E,0x20,0x2D
+	.DB  0x2D,0x20,0x43,0x41,0x4C,0x5F,0x45,0x58
+	.DB  0x54,0x4C,0x49,0x4E,0x45,0x41,0x52,0x20
+	.DB  0x2D,0x2D,0xD,0xA,0x0,0x3C,0x73,0x65
+	.DB  0x6E,0x73,0x6F,0x72,0x43,0x61,0x6C,0x69
+	.DB  0x62,0x72,0x61,0x74,0x65,0x32,0x3E,0x20
+	.DB  0x2D,0x2D,0x42,0x2D,0x2D,0x3E,0x20,0x25
+	.DB  0x66,0xD,0xA,0x0,0x3C,0x73,0x65,0x6E
+	.DB  0x73,0x6F,0x72,0x43,0x61,0x6C,0x69,0x62
+	.DB  0x72,0x61,0x74,0x65,0x32,0x3E,0x20,0x2D
+	.DB  0x2D,0x20,0x43,0x41,0x4C,0x5F,0x45,0x58
+	.DB  0x54,0x50,0x4F,0x4C,0x59,0x4E,0x4F,0x4D
+	.DB  0x49,0x41,0x4C,0x20,0x2D,0x2D,0xD,0xA
+	.DB  0x0,0x3C,0x73,0x65,0x6E,0x73,0x6F,0x72
+	.DB  0x43,0x61,0x6C,0x69,0x62,0x72,0x61,0x74
+	.DB  0x65,0x32,0x3E,0x20,0x2D,0x2D,0x41,0x2D
+	.DB  0x2D,0x3E,0x20,0x25,0x66,0xD,0xA,0x0
+	.DB  0x3C,0x73,0x65,0x6E,0x73,0x6F,0x72,0x47
 	.DB  0x65,0x74,0x43,0x75,0x72,0x72,0x65,0x6E
 	.DB  0x74,0x53,0x65,0x74,0x50,0x6F,0x69,0x6E
-	.DB  0x74,0x3E,0x20,0x62,0x75,0x66,0x3A,0x20
-	.DB  0x5B,0x25,0x64,0x5D,0x2F,0x5B,0x25,0x64
-	.DB  0x5D,0x5B,0x25,0x64,0x5D,0x5B,0x25,0x64
-	.DB  0x5D,0x5B,0x25,0x64,0x5D,0x5B,0x25,0x64
+	.DB  0x74,0x3E,0x20,0x74,0x65,0x6D,0x70,0x52
+	.DB  0x65,0x66,0x31,0x20,0x3D,0x20,0x5B,0x25
+	.DB  0x66,0x5D,0x5B,0x25,0x66,0x5D,0xD,0xA
+	.DB  0x0,0x3C,0x73,0x65,0x6E,0x73,0x6F,0x72
+	.DB  0x47,0x65,0x74,0x43,0x75,0x72,0x72,0x65
+	.DB  0x6E,0x74,0x53,0x65,0x74,0x50,0x6F,0x69
+	.DB  0x6E,0x74,0x3E,0x20,0x74,0x65,0x6D,0x70
+	.DB  0x52,0x65,0x66,0x31,0x20,0x6E,0x6F,0x74
+	.DB  0x20,0x73,0x65,0x74,0x20,0x5B,0x30,0x2E
+	.DB  0x30,0x30,0x5D,0xD,0xA,0x0,0x30,0x2E
+	.DB  0x30,0x30,0x0,0x3C,0x73,0x65,0x6E,0x73
+	.DB  0x6F,0x72,0x47,0x65,0x74,0x43,0x75,0x72
+	.DB  0x72,0x65,0x6E,0x74,0x53,0x65,0x74,0x50
+	.DB  0x6F,0x69,0x6E,0x74,0x3E,0x20,0x74,0x65
+	.DB  0x6D,0x70,0x52,0x65,0x66,0x32,0x20,0x3D
+	.DB  0x20,0x5B,0x25,0x66,0x5D,0x5B,0x25,0x66
 	.DB  0x5D,0xD,0xA,0x0,0x3C,0x73,0x65,0x6E
-	.DB  0x73,0x6F,0x72,0x53,0x65,0x74,0x43,0x75
+	.DB  0x73,0x6F,0x72,0x47,0x65,0x74,0x43,0x75
 	.DB  0x72,0x72,0x65,0x6E,0x74,0x53,0x65,0x74
-	.DB  0x50,0x6F,0x69,0x6E,0x74,0x3E,0x20,0x73
-	.DB  0x65,0x6E,0x73,0x6F,0x72,0x20,0x25,0x31
-	.DB  0x64,0x2C,0x20,0x70,0x6F,0x69,0x6E,0x74
-	.DB  0x20,0x25,0x31,0x64,0x2C,0x20,0x73,0x65
-	.DB  0x74,0x20,0x74,0x6F,0x20,0x5B,0x25,0x66
-	.DB  0x5D,0x0
+	.DB  0x50,0x6F,0x69,0x6E,0x74,0x3E,0x20,0x74
+	.DB  0x65,0x6D,0x70,0x52,0x65,0x66,0x32,0x20
+	.DB  0x6E,0x6F,0x74,0x20,0x73,0x65,0x74,0x20
+	.DB  0x5B,0x30,0x2E,0x30,0x30,0x5D,0xD,0xA
+	.DB  0x0,0x3C,0x73,0x65,0x6E,0x73,0x6F,0x72
+	.DB  0x47,0x65,0x74,0x43,0x75,0x72,0x72,0x65
+	.DB  0x6E,0x74,0x53,0x65,0x74,0x50,0x6F,0x69
+	.DB  0x6E,0x74,0x3E,0x20,0x74,0x65,0x6D,0x70
+	.DB  0x52,0x65,0x66,0x33,0x20,0x3D,0x20,0x5B
+	.DB  0x25,0x66,0x5D,0x5B,0x25,0x66,0x5D,0xD
+	.DB  0xA,0x0,0x3C,0x73,0x65,0x6E,0x73,0x6F
+	.DB  0x72,0x47,0x65,0x74,0x43,0x75,0x72,0x72
+	.DB  0x65,0x6E,0x74,0x53,0x65,0x74,0x50,0x6F
+	.DB  0x69,0x6E,0x74,0x3E,0x20,0x74,0x65,0x6D
+	.DB  0x70,0x52,0x65,0x66,0x33,0x20,0x6E,0x6F
+	.DB  0x74,0x20,0x73,0x65,0x74,0x20,0x5B,0x30
+	.DB  0x2E,0x30,0x30,0x5D,0xD,0xA,0x0,0x3C
+	.DB  0x73,0x65,0x6E,0x73,0x6F,0x72,0x47,0x65
+	.DB  0x74,0x43,0x75,0x72,0x72,0x65,0x6E,0x74
+	.DB  0x53,0x65,0x74,0x50,0x6F,0x69,0x6E,0x74
+	.DB  0x3E,0x20,0x69,0x6E,0x76,0x61,0x6C,0x69
+	.DB  0x64,0x20,0x70,0x61,0x72,0x61,0x6D,0x74
+	.DB  0x65,0x72,0x20,0x70,0x6E,0x74,0x2D,0x3E
+	.DB  0x5B,0x25,0x64,0x5D,0xD,0xA,0x0,0x3C
+	.DB  0x73,0x65,0x6E,0x73,0x6F,0x72,0x47,0x65
+	.DB  0x74,0x43,0x75,0x72,0x72,0x65,0x6E,0x74
+	.DB  0x53,0x65,0x74,0x50,0x6F,0x69,0x6E,0x74
+	.DB  0x3E,0x20,0x72,0x65,0x61,0x64,0x20,0x76
+	.DB  0x61,0x6C,0x28,0x25,0x64,0x29,0x20,0x3D
+	.DB  0x20,0x5B,0x25,0x73,0x5D,0xD,0xA,0x0
+	.DB  0x3C,0x73,0x65,0x6E,0x73,0x6F,0x72,0x47
+	.DB  0x65,0x74,0x43,0x75,0x72,0x72,0x65,0x6E
+	.DB  0x74,0x53,0x65,0x74,0x50,0x6F,0x69,0x6E
+	.DB  0x74,0x3E,0x20,0x6F,0x75,0x74,0x20,0x6F
+	.DB  0x66,0x20,0x63,0x6F,0x6E,0x64,0x69,0x74
+	.DB  0x69,0x6F,0x6E,0x20,0x76,0x61,0x6C,0x53
+	.DB  0x74,0x72,0x20,0x3D,0x20,0x27,0x25,0x73
+	.DB  0x27,0x0,0x3C,0x73,0x65,0x6E,0x73,0x6F
+	.DB  0x72,0x47,0x65,0x74,0x43,0x75,0x72,0x72
+	.DB  0x65,0x6E,0x74,0x53,0x65,0x74,0x50,0x6F
+	.DB  0x69,0x6E,0x74,0x3E,0x20,0x62,0x75,0x66
+	.DB  0x20,0x72,0x65,0x61,0x64,0x0,0x5B,0x25
+	.DB  0x64,0x5D,0x0,0x3C,0x73,0x65,0x6E,0x73
+	.DB  0x6F,0x72,0x53,0x65,0x74,0x43,0x75,0x72
+	.DB  0x72,0x65,0x6E,0x74,0x53,0x65,0x74,0x50
+	.DB  0x6F,0x69,0x6E,0x74,0x3E,0x20,0x41,0x42
+	.DB  0x4F,0x52,0x54,0x3A,0x20,0x73,0x65,0x6E
+	.DB  0x73,0x6F,0x72,0x20,0x63,0x68,0x20,0x25
+	.DB  0x64,0x20,0x69,0x73,0x20,0x64,0x69,0x73
+	.DB  0x61,0x62,0x6C,0x65,0xD,0xA,0x0,0x3C
+	.DB  0x73,0x65,0x6E,0x73,0x6F,0x72,0x53,0x65
+	.DB  0x74,0x43,0x75,0x72,0x72,0x65,0x6E,0x74
+	.DB  0x53,0x65,0x74,0x50,0x6F,0x69,0x6E,0x74
+	.DB  0x3E,0x20,0x41,0x42,0x4F,0x52,0x54,0x3A
+	.DB  0x20,0x73,0x65,0x6E,0x73,0x6F,0x72,0x20
+	.DB  0x63,0x68,0x20,0x25,0x64,0x20,0x65,0x72
+	.DB  0x72,0x6F,0x72,0x28,0x30,0x78,0x25,0x30
+	.DB  0x32,0x58,0x29,0xD,0xA,0x0,0x3C,0x73
+	.DB  0x65,0x6E,0x73,0x6F,0x72,0x53,0x65,0x74
+	.DB  0x43,0x75,0x72,0x72,0x65,0x6E,0x74,0x53
+	.DB  0x65,0x74,0x50,0x6F,0x69,0x6E,0x74,0x3E
+	.DB  0x20,0x62,0x75,0x66,0x3A,0x20,0x5B,0x25
+	.DB  0x64,0x5D,0x2F,0x5B,0x25,0x64,0x5D,0x5B
+	.DB  0x25,0x64,0x5D,0x5B,0x25,0x64,0x5D,0x5B
+	.DB  0x25,0x64,0x5D,0x5B,0x25,0x64,0x5D,0xD
+	.DB  0xA,0x0,0x3C,0x73,0x65,0x6E,0x73,0x6F
+	.DB  0x72,0x53,0x65,0x74,0x43,0x75,0x72,0x72
+	.DB  0x65,0x6E,0x74,0x53,0x65,0x74,0x50,0x6F
+	.DB  0x69,0x6E,0x74,0x3E,0x20,0x73,0x65,0x6E
+	.DB  0x73,0x6F,0x72,0x20,0x25,0x31,0x64,0x2C
+	.DB  0x20,0x70,0x6F,0x69,0x6E,0x74,0x20,0x25
+	.DB  0x31,0x64,0x2C,0x20,0x73,0x65,0x74,0x20
+	.DB  0x74,0x6F,0x20,0x5B,0x25,0x66,0x5D,0x0
 _0x1C0005:
 	.DB  0x0,0x0,0x0,0x0
 _0x1E0003:
@@ -4653,6 +4633,10 @@ _0x34001B:
 	.DB  0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0
 	.DB  0x42,0x60,0xD5,0x3F,0x0,0x0,0x0,0x0
 _0x34001C:
+	.DB  0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0
+	.DB  0xAC,0x1C,0x5A,0x3E,0x42,0x60,0xD5,0x3F
+	.DB  0x0,0x0,0x0,0x0
+_0x34001D:
 	.DB  0x0,0x0,0x20,0xC1,0x0,0x0,0xA0,0xC1
 	.DB  0x0,0x0,0x20,0xC2,0x0,0x0,0x20,0xC2
 	.DB  0x0,0x0,0x70,0xC2,0x0,0x0,0xA0,0xC2
@@ -4754,8 +4738,8 @@ __GLOBAL_INI_TBL:
 	.DD  _0x18001D*2
 
 	.DW  0x05
-	.DW  _lastCheck_S00D0002000
-	.DD  _0x1A001A*2
+	.DW  _lastCheck_S00D0004000
+	.DD  _0x1A0021*2
 
 	.DW  0x04
 	.DW  0x0A
@@ -9295,12 +9279,11 @@ _0x60008:
 	CALL SUBOPT_0x8B
 	CALL SUBOPT_0x8D
 	CALL SUBOPT_0x8D
-	CALL __PUTPARD1
-	CALL SUBOPT_0x66
+	CALL SUBOPT_0x8E
 ; 0003 0039         *keeper = 0;
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
-	CALL SUBOPT_0x8E
+	CALL SUBOPT_0x8F
 ; 0003 003A         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
@@ -9326,7 +9309,7 @@ _0x20E0098:
 ;interrupt [WDT] void wdt_timeout_isr(void)
 ; 0003 0048 {
 _wdt_timeout_isr:
-	CALL SUBOPT_0x8F
+	CALL SUBOPT_0x90
 ; 0003 0049     // Place your code here
 ; 0003 004A     printDebug("<WDT> WatchDog Timer Reset!!\r\n");
 	__POINTD1FN _0x60000,102
@@ -9358,7 +9341,7 @@ _timer1_ovf_isr:
 ; 0003 005B //    TCNT1H=0xFF64 >> 8;
 ; 0003 005C //    TCNT1L=0xFF64 & 0xff;
 ; 0003 005D     TCNT1H=0xFE79 >> 8;
-	CALL SUBOPT_0x90
+	CALL SUBOPT_0x91
 ; 0003 005E     TCNT1L=0xFE79 & 0xff;
 ; 0003 005F 
 ; 0003 0060     //adc_sampling();
@@ -9369,7 +9352,7 @@ _timer1_ovf_isr:
 ;interrupt [TIM2_OVF] void timer2_ovf_isr(void)
 ; 0003 0065 {
 _timer2_ovf_isr:
-	CALL SUBOPT_0x8F
+	CALL SUBOPT_0x90
 ; 0003 0066     // Reinitialize Timer2 value
 ; 0003 0067     TCNT2=0xb2;
 	LDI  R30,LOW(178)
@@ -9414,7 +9397,7 @@ _timer3_ovf_isr:
 	ST   -Y,R30
 ; 0003 0071     // Reinitialize Timer1 value
 ; 0003 0072     TCNT3H=0x85ED >> 8;
-	CALL SUBOPT_0x91
+	CALL SUBOPT_0x92
 ; 0003 0073     TCNT3L=0x85ED & 0xff;
 ; 0003 0074 
 ; 0003 0075     // Place your code here
@@ -9424,12 +9407,12 @@ _timer3_ovf_isr:
 ; 0003 0078     baseCounter++;
 	LDI  R26,LOW(_baseCounter)
 	LDI  R27,HIGH(_baseCounter)
-	CALL SUBOPT_0x92
+	CALL SUBOPT_0x93
 ; 0003 0079 
 ; 0003 007A     raw_rtc++;                          // -- update backup RTC
 	LDI  R26,LOW(_raw_rtc)
 	LDI  R27,HIGH(_raw_rtc)
-	CALL SUBOPT_0x92
+	CALL SUBOPT_0x93
 ; 0003 007B 
 ; 0003 007C     //printDebug("<%d>\r\n",baseCounter);
 ; 0003 007D }
@@ -9451,7 +9434,7 @@ _timer4_ovf_isr:
 ; 0003 0082     static bit toggle = 0;
 ; 0003 0083     // Reinitialize Timer4 value
 ; 0003 0084     TCNT4H=0x85ED >> 8;
-	CALL SUBOPT_0x93
+	CALL SUBOPT_0x94
 ; 0003 0085     TCNT4L=0x85ED & 0xff;
 ; 0003 0086 
 ; 0003 0087     // Place your code here
@@ -9537,7 +9520,7 @@ _init_timer:
 ; 0003 00B3     //TCNT1H=0xFF;
 ; 0003 00B4     //TCNT1L=0x64;
 ; 0003 00B5     TCNT1H=0xFE;
-	CALL SUBOPT_0x90
+	CALL SUBOPT_0x91
 ; 0003 00B6     TCNT1L=0x79;
 ; 0003 00B7     ICR1H=0x00;
 	LDI  R30,LOW(0)
@@ -9599,7 +9582,7 @@ _init_timer:
 	LDI  R30,LOW(4)
 	STS  145,R30
 ; 0003 00DD     TCNT3H=0x85;
-	CALL SUBOPT_0x91
+	CALL SUBOPT_0x92
 ; 0003 00DE     TCNT3L=0xED;
 ; 0003 00DF     ICR3H=0x00;
 	LDI  R30,LOW(0)
@@ -9639,7 +9622,7 @@ _init_timer:
 	LDI  R30,LOW(3)
 	STS  161,R30
 ; 0003 00F8     TCNT4H=0x85;
-	CALL SUBOPT_0x93
+	CALL SUBOPT_0x94
 ; 0003 00F9     TCNT4L=0xED;
 ; 0003 00FA     ICR4H=0x00;
 	LDI  R30,LOW(0)
@@ -9750,7 +9733,7 @@ _enable_interrupt:
 ; 0003 0141     // -------------- enable timer ---------------  //
 ; 0003 0142 
 ; 0003 0143     switch(ch){
-	CALL SUBOPT_0x94
+	CALL SUBOPT_0x95
 ;	ch -> Y+0
 ; 0003 0144         case 0: // Timer/Counter 0 Interrupt(s) initialization
 	SBIW R30,0
@@ -9983,7 +9966,7 @@ _0x80005:
 ; 0004 005B     }
 ; 0004 005C     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
 _0x80004:
-	CALL SUBOPT_0x95
+	CALL SUBOPT_0x96
 	BREQ _0x80009
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x2)
@@ -10076,7 +10059,7 @@ _IO_keyCheck:
 ; 0004 0080     static char flag_hold_OK     = 0;
 ; 0004 0081 
 ; 0004 0082     if( KEY_PRESS_CHK_MODE && !flag_hold_MODE )
-	CALL SUBOPT_0x96
+	CALL SUBOPT_0x97
 	BRNE _0x80016
 	LDS  R30,_flag_hold_MODE_S0040002000
 	CPI  R30,0
@@ -10086,10 +10069,10 @@ _0x80016:
 _0x80017:
 ; 0004 0083     {
 ; 0004 0084         delay_ms(KEY_DELAY);
-	CALL SUBOPT_0x97
+	CALL SUBOPT_0x98
 ; 0004 0085 
 ; 0004 0086         if( KEY_PRESS_CHK_MODE && !flag_hold_MODE )
-	CALL SUBOPT_0x96
+	CALL SUBOPT_0x97
 	BRNE _0x80019
 	LDS  R30,_flag_hold_MODE_S0040002000
 	CPI  R30,0
@@ -10109,7 +10092,7 @@ _0x80018:
 ; 0004 008C     else if( KEY_RELEASE_CHK_MODE && flag_hold_MODE)
 	RJMP _0x8001B
 _0x80015:
-	CALL SUBOPT_0x96
+	CALL SUBOPT_0x97
 	BREQ _0x8001D
 	LDS  R30,_flag_hold_MODE_S0040002000
 	CPI  R30,0
@@ -10132,7 +10115,7 @@ _0x8001E:
 ; 0004 0093     if( KEY_PRESS_CHK_UP && !flag_hold_UP )
 _0x8001C:
 _0x8001B:
-	CALL SUBOPT_0x98
+	CALL SUBOPT_0x99
 	BRNE _0x80020
 	LDS  R30,_flag_hold_UP_S0040002000
 	CPI  R30,0
@@ -10142,10 +10125,10 @@ _0x80020:
 _0x80021:
 ; 0004 0094     {
 ; 0004 0095         delay_ms(KEY_DELAY);
-	CALL SUBOPT_0x97
+	CALL SUBOPT_0x98
 ; 0004 0096 
 ; 0004 0097         if( KEY_PRESS_CHK_UP && !flag_hold_UP )
-	CALL SUBOPT_0x98
+	CALL SUBOPT_0x99
 	BRNE _0x80023
 	LDS  R30,_flag_hold_UP_S0040002000
 	CPI  R30,0
@@ -10165,7 +10148,7 @@ _0x80022:
 ; 0004 009D     else if( KEY_RELEASE_CHK_UP && flag_hold_UP)
 	RJMP _0x80025
 _0x8001F:
-	CALL SUBOPT_0x98
+	CALL SUBOPT_0x99
 	BREQ _0x80027
 	LDS  R30,_flag_hold_UP_S0040002000
 	CPI  R30,0
@@ -10188,7 +10171,7 @@ _0x80028:
 ; 0004 00A4     if( KEY_PRESS_CHK_DOWN && !flag_hold_DOWN )
 _0x80026:
 _0x80025:
-	CALL SUBOPT_0x99
+	CALL SUBOPT_0x9A
 	BRNE _0x8002A
 	LDS  R30,_flag_hold_DOWN_S0040002000
 	CPI  R30,0
@@ -10198,10 +10181,10 @@ _0x8002A:
 _0x8002B:
 ; 0004 00A5     {
 ; 0004 00A6         delay_ms(KEY_DELAY);
-	CALL SUBOPT_0x97
+	CALL SUBOPT_0x98
 ; 0004 00A7 
 ; 0004 00A8         if( KEY_PRESS_CHK_DOWN && !flag_hold_DOWN )
-	CALL SUBOPT_0x99
+	CALL SUBOPT_0x9A
 	BRNE _0x8002D
 	LDS  R30,_flag_hold_DOWN_S0040002000
 	CPI  R30,0
@@ -10221,7 +10204,7 @@ _0x8002C:
 ; 0004 00AE     else if( KEY_RELEASE_CHK_DOWN && flag_hold_DOWN)
 	RJMP _0x8002F
 _0x80029:
-	CALL SUBOPT_0x99
+	CALL SUBOPT_0x9A
 	BREQ _0x80031
 	LDS  R30,_flag_hold_DOWN_S0040002000
 	CPI  R30,0
@@ -10244,7 +10227,7 @@ _0x80032:
 ; 0004 00B5     if( KEY_PRESS_CHK_OK && !flag_hold_OK )
 _0x80030:
 _0x8002F:
-	CALL SUBOPT_0x9A
+	CALL SUBOPT_0x9B
 	BRNE _0x80034
 	LDS  R30,_flag_hold_OK_S0040002000
 	CPI  R30,0
@@ -10254,10 +10237,10 @@ _0x80034:
 _0x80035:
 ; 0004 00B6     {
 ; 0004 00B7         delay_ms(KEY_DELAY);
-	CALL SUBOPT_0x97
+	CALL SUBOPT_0x98
 ; 0004 00B8 
 ; 0004 00B9         if( KEY_PRESS_CHK_OK && !flag_hold_OK )
-	CALL SUBOPT_0x9A
+	CALL SUBOPT_0x9B
 	BRNE _0x80037
 	LDS  R30,_flag_hold_OK_S0040002000
 	CPI  R30,0
@@ -10277,7 +10260,7 @@ _0x80036:
 ; 0004 00BF     else if( KEY_RELEASE_CHK_OK && flag_hold_OK)
 	RJMP _0x80039
 _0x80033:
-	CALL SUBOPT_0x9A
+	CALL SUBOPT_0x9B
 	BREQ _0x8003B
 	LDS  R30,_flag_hold_OK_S0040002000
 	CPI  R30,0
@@ -10406,8 +10389,8 @@ _0xA0023:
 ; 0005 0027 
 ; 0005 0028     // Delay needed for the stabilization of the ADC input voltage
 ; 0005 0029     //delay_us(20);
-; 0005 002A     delay_us(4);
-	__DELAY_USB 11
+; 0005 002A     delay_us(1);
+	__DELAY_USB 3
 ; 0005 002B 
 ; 0005 002C     // Start the AD conversion
 ; 0005 002D     ADCSRA  |= 0x80; //ENABLE ADC
@@ -10431,7 +10414,7 @@ _0xA0008:
 	CLR  R19
 ; 0005 0034     adc_data |= (ADCH & 0x00ff) << 8;
 	LDS  R30,121
-	CALL SUBOPT_0x9B
+	CALL SUBOPT_0x9C
 	MOV  R31,R30
 	LDI  R30,0
 	__ORWRR 18,19,30,31
@@ -10486,7 +10469,7 @@ _readBattery:
 ; 0005 005D     adcBatt = (float)((adcBatt * 9.9) + (float)(read_adc(14) * 0.1))/10;                // Battery Read
 	SBIW R28,4
 ;	vBATT -> Y+0
-	CALL SUBOPT_0x9C
+	CALL SUBOPT_0x9D
 	__GETD1N 0x411E6666
 	CALL __MULF12
 	PUSH R23
@@ -10495,13 +10478,13 @@ _readBattery:
 	PUSH R30
 	LDI  R26,LOW(14)
 	RCALL _read_adc
-	CALL SUBOPT_0x9D
 	CALL SUBOPT_0x9E
+	CALL SUBOPT_0x9F
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x9F
+	CALL SUBOPT_0xA0
 	STS  _adcBatt,R30
 	STS  _adcBatt+1,R31
 	STS  _adcBatt+2,R22
@@ -10509,11 +10492,11 @@ _readBattery:
 ; 0005 005E 
 ; 0005 005F     vBATT   = adcBatt*ADC_CONV_FAC*1.8;                                // from voltage divider 120k & 150k
 	CALL SUBOPT_0x32
-	CALL SUBOPT_0x9C
+	CALL SUBOPT_0x9D
 	CALL __MULF12
 	__GETD2N 0x3FE66666
 	CALL __MULF12
-	CALL SUBOPT_0xA0
+	CALL SUBOPT_0xA1
 ; 0005 0060     //printDebug("                                                     -- volt[%f]\r\n", vBATT);    // padding line
 ; 0005 0061 
 ; 0005 0062     return vBATT;
@@ -10547,9 +10530,9 @@ _0xA0013:
 _0xA0016:
 	__CPWRN 16,17,5
 	BRGE _0xA0017
-	CALL SUBOPT_0xA1
-	MOV  R30,R16
 	CALL SUBOPT_0xA2
+	MOV  R30,R16
+	CALL SUBOPT_0xA3
 ; 0005 006D             delay_ms(20);
 ; 0005 006E             adcData[i] = read_adc(8);
 	MOVW R30,R16
@@ -10562,7 +10545,7 @@ _0xA0016:
 	RCALL _read_adc
 	POP  R26
 	POP  R27
-	CALL SUBOPT_0xA3
+	CALL SUBOPT_0xA4
 ; 0005 006F         }
 	__ADDWRN 16,17,1
 	RJMP _0xA0016
@@ -10571,7 +10554,7 @@ _0xA0017:
 ; 0005 0071     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
 	RJMP _0xA0018
 _0xA0012:
-	CALL SUBOPT_0x95
+	CALL SUBOPT_0x96
 	BREQ _0xA001A
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x2)
@@ -10582,27 +10565,27 @@ _0xA001A:
 	RCALL _read_adc
 	LDI  R26,LOW(_adcData)
 	LDI  R27,HIGH(_adcData)
-	CALL SUBOPT_0xA3
+	CALL SUBOPT_0xA4
 ; 0005 0073         adcData[1] = read_adc(9);
 	LDI  R26,LOW(9)
 	RCALL _read_adc
 	__POINTW2MN _adcData,4
-	CALL SUBOPT_0xA3
+	CALL SUBOPT_0xA4
 ; 0005 0074         adcData[2] = read_adc(10);
 	LDI  R26,LOW(10)
 	RCALL _read_adc
 	__POINTW2MN _adcData,8
-	CALL SUBOPT_0xA3
+	CALL SUBOPT_0xA4
 ; 0005 0075         adcData[3] = read_adc(11);
 	LDI  R26,LOW(11)
 	RCALL _read_adc
 	__POINTW2MN _adcData,12
-	CALL SUBOPT_0xA3
+	CALL SUBOPT_0xA4
 ; 0005 0076         adcData[4] = read_adc(12);
 	LDI  R26,LOW(12)
 	RCALL _read_adc
 	__POINTW2MN _adcData,16
-	CALL SUBOPT_0xA3
+	CALL SUBOPT_0xA4
 ; 0005 0077     }
 ; 0005 0078 
 ; 0005 0079     adcBatt = read_adc(14);
@@ -10612,7 +10595,7 @@ _0xA0018:
 	RCALL _read_adc
 	LDI  R26,LOW(_adcBatt)
 	LDI  R27,HIGH(_adcBatt)
-	CALL SUBOPT_0xA3
+	CALL SUBOPT_0xA4
 ; 0005 007A 
 ; 0005 007B     printDebug("OK\r\n");
 	__POINTD1FN _0xA0000,20
@@ -10663,7 +10646,7 @@ _0xA001D:
 ; 0005 0094     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
 	RJMP _0xA001F
 _0xA001C:
-	CALL SUBOPT_0x95
+	CALL SUBOPT_0x96
 	BREQ _0xA0021
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x2)
@@ -10723,21 +10706,21 @@ _DS1672_trickerChargeEnable:
 ; 0006 000D     #asm("cli")
 	cli
 ; 0006 000E     i2c_start();
-	CALL SUBOPT_0xA4
+	CALL SUBOPT_0xA5
 ; 0006 000F     i2c_write(ADDRTC);
 ; 0006 0010     i2c_write(5);
 	LDI  R26,LOW(5)
 	CALL _i2c_write
 ; 0006 0011     i2c_write(0xA6);            /* enable the trickle-charger : No diode, 2k ohm resistor */
 	LDI  R26,LOW(166)
-	CALL SUBOPT_0xA5
+	CALL SUBOPT_0xA6
 ; 0006 0012     i2c_stop();
 ; 0006 0013     #asm("sei")
 	sei
 ; 0006 0014 
 ; 0006 0015     /* 10ms delay to complete the write operation */
 ; 0006 0016     delay_ms(10);
-	CALL SUBOPT_0xA6
+	CALL SUBOPT_0xA7
 ; 0006 0017 
 ; 0006 0018     return 0;
 	RET
@@ -10759,7 +10742,7 @@ _DS1672_read:
 ;	rtc_reg4 -> R18
 	cli
 ; 0006 0021     i2c_start();
-	CALL SUBOPT_0xA4
+	CALL SUBOPT_0xA5
 ; 0006 0022     i2c_write(ADDRTC);                      /* write slave address, write 1672 */
 ; 0006 0023     i2c_write(0x00);                        /* write register address, 1st clock register */
 	LDI  R26,LOW(0)
@@ -10795,23 +10778,23 @@ _DS1672_read:
 	CLR  R31
 	CLR  R22
 	CLR  R23
-	CALL SUBOPT_0xA7
-; 0006 002E     z <<= 8;
 	CALL SUBOPT_0xA8
+; 0006 002E     z <<= 8;
 	CALL SUBOPT_0xA9
+	CALL SUBOPT_0xAA
 ; 0006 002F     z += rtc_reg3;
 	MOV  R30,R19
-	CALL SUBOPT_0xAA
+	CALL SUBOPT_0xAB
 ; 0006 0030     z <<= 8;
 ; 0006 0031     z += rtc_reg2;
 	MOV  R30,R16
-	CALL SUBOPT_0xAA
+	CALL SUBOPT_0xAB
 ; 0006 0032     z <<= 8;
 ; 0006 0033     z += rtc_reg1;
-	CALL SUBOPT_0xAB
-	CALL SUBOPT_0xA8
 	CALL SUBOPT_0xAC
+	CALL SUBOPT_0xA9
 	CALL SUBOPT_0xAD
+	CALL SUBOPT_0xAE
 ; 0006 0034 
 ; 0006 0035     //printDebug("\r\nDS1672_read -> 0x%02X%02X%02X%02X\r\n",rtc_reg4,rtc_reg3,rtc_reg2,rtc_reg1);
 ; 0006 0036     //printDebug("rawtime [%ld]\r\n", z);
@@ -10855,12 +10838,12 @@ _binary_to_date:
 ;	j -> Y+6
 ;	n -> Y+2
 ;	dow -> R16,R17
-	CALL SUBOPT_0xAE
+	__GETD2S 44
 	CALL SUBOPT_0xAF
 	CALL SUBOPT_0xB0
 ; 0006 0042     sec = x - (60 * j);                     /* leftover seconds */
 	CALL SUBOPT_0xB1
-	CALL SUBOPT_0xAE
+	__GETD2S 44
 	CALL __SUBD21
 	__PUTD2S 10
 ; 0006 0043     n = j / 60;
@@ -11127,7 +11110,7 @@ _date_to_binary:
 	CALL SUBOPT_0x89
 	__SUBD1N 1970
 	CALL SUBOPT_0xBF
-	CALL SUBOPT_0xA0
+	CALL SUBOPT_0xA1
 ; 0006 0089     x += ((rtcSrc.year - 1969) >> 2);                       /* add a day for each leap year */
 	CALL SUBOPT_0x89
 	__SUBD1N 1969
@@ -11147,7 +11130,7 @@ _0xC0020:
 ; 0006 008B         x++;
 	CALL SUBOPT_0x87
 	CALL SUBOPT_0xBC
-	CALL SUBOPT_0xA0
+	CALL SUBOPT_0xA1
 ; 0006 008C 
 ; 0006 008D     switch(rtcSrc.month)
 _0xC001E:
@@ -11259,7 +11242,7 @@ _0xC0023:
 	CALL SUBOPT_0x87
 	__GETD2N 0x15180
 	CALL __MULD12U
-	CALL SUBOPT_0xA0
+	CALL SUBOPT_0xA1
 ; 0006 00AB     x += (unsigned long)rtcSrc.hour * 1800;     /* add the number of seconds in the hours */
 	CALL SUBOPT_0xDB
 ; 0006 00AC     x += (unsigned long)rtcSrc.hour * 1800;     /* add the number of seconds in the hours */
@@ -11325,7 +11308,7 @@ _0xC0033:
 _0xC0031:
 ; 0006 00C6 
 ; 0006 00C7     if((rtc_diff >= 0) && (rtc_diff < 10)){
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0xA9
 	CALL __CPD20
 	BRLO _0xC0035
 	CALL SUBOPT_0xE2
@@ -11356,7 +11339,7 @@ _0xC0034:
 ; 0006 00D4     #asm("cli")
 	cli
 ; 0006 00D5     i2c_start();
-	CALL SUBOPT_0xA4
+	CALL SUBOPT_0xA5
 ; 0006 00D6     i2c_write(ADDRTC);          /* write slave address, write 1672 */
 ; 0006 00D7     i2c_write(0x00);            /* write register address, 1st clock register */
 	CALL SUBOPT_0xE6
@@ -11374,7 +11357,7 @@ _0xC0034:
 ; 0006 00E0 
 ; 0006 00E1     /* 10ms delay to complete the write operation */
 ; 0006 00E2     delay_ms(10);
-	CALL SUBOPT_0xA6
+	CALL SUBOPT_0xA7
 ; 0006 00E3 
 ; 0006 00E4     return 0;
 _0x20E0095:
@@ -11441,7 +11424,7 @@ _0xC0037:
 	LDI  R27,HIGH(65535)
 	CALL __MULW12
 	CALL SUBOPT_0xB
-	CALL SUBOPT_0xAC
+	CALL SUBOPT_0xAD
 	CALL SUBOPT_0xEC
 ; 0006 00F6 
 ; 0006 00F7     raw_rtc = rtc_bin;
@@ -11476,7 +11459,7 @@ _0xC003D:
 _0xC003B:
 ; 0006 0105 
 ; 0006 0106     if((rtc_diff >= 0) && (rtc_diff < 10)){
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0xA9
 	CALL __CPD20
 	BRLO _0xC003F
 	CALL SUBOPT_0xE2
@@ -11506,7 +11489,7 @@ _0xC003E:
 ; 0006 0112     #asm("cli")
 	cli
 ; 0006 0113     i2c_start();
-	CALL SUBOPT_0xA4
+	CALL SUBOPT_0xA5
 ; 0006 0114     i2c_write(ADDRTC);          /* write slave address, write 1672 */
 ; 0006 0115     i2c_write(0x00);            /* write register address, 1st clock register */
 	CALL SUBOPT_0xE6
@@ -11520,7 +11503,7 @@ _0xC003E:
 ; 0006 011C 
 ; 0006 011D     /* 10ms delay to complete the write operation */
 ; 0006 011E     delay_ms(10);
-	CALL SUBOPT_0xA6
+	CALL SUBOPT_0xA7
 ; 0006 011F 
 ; 0006 0120     return 0;
 _0x20E0094:
@@ -11573,11 +11556,11 @@ _0xC0042:
 	CALL SUBOPT_0xEB
 	CALL SUBOPT_0xEB
 	CALL SUBOPT_0xB4
-	CALL SUBOPT_0xAC
-	CALL SUBOPT_0xB2
+	CALL SUBOPT_0xAD
+	CALL SUBOPT_0xF0
 ; 0006 0133 
 ; 0006 0134     binary_to_date(r_rtc,rtcPtr);
-	CALL SUBOPT_0xF0
+	CALL __PUTPARD1
 	LDD  R26,Y+12
 	LDD  R27,Y+12+1
 	RCALL _binary_to_date
@@ -11675,7 +11658,6 @@ _0xC0045:
 	CALL SUBOPT_0xF2
 	CALL SUBOPT_0xF3
 	CALL SUBOPT_0xF4
-	CALL SUBOPT_0xF5
 	LDI  R24,28
 	CALL _printDebug
 	ADIW R28,32
@@ -11700,14 +11682,14 @@ _init_RTC:
 ; 0006 0158     #asm("cli")
 	cli
 ; 0006 0159     i2c_start();
-	CALL SUBOPT_0xA4
+	CALL SUBOPT_0xA5
 ; 0006 015A     i2c_write(ADDRTC);
 ; 0006 015B     i2c_write(0x04);
 	LDI  R26,LOW(4)
 	CALL _i2c_write
 ; 0006 015C     i2c_write(0x00);         /* enable the oscillator */
 	LDI  R26,LOW(0)
-	CALL SUBOPT_0xA5
+	CALL SUBOPT_0xA6
 ; 0006 015D     i2c_stop();
 ; 0006 015E     #asm("sei")
 	sei
@@ -11717,7 +11699,7 @@ _init_RTC:
 ; 0006 0161 
 ; 0006 0162     RTC_getDateTime(&rtcTest,0);
 	CALL SUBOPT_0x9
-	CALL SUBOPT_0xF6
+	CALL SUBOPT_0xF5
 	RCALL _RTC_getDateTime
 ; 0006 0163 
 ; 0006 0164     printDebug("Running with System Clock @ ");
@@ -11790,8 +11772,8 @@ _getPropertiesConfig:
 ; 0007 0028         memset(readConfig,0x00,sizeof(struct prop_cnfg_st));
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
+	CALL SUBOPT_0xF6
 	CALL SUBOPT_0xF7
-	CALL SUBOPT_0xF8
 	CALL _memset
 ; 0007 0029         readConfig->timeZone   = 7;
 	LDD  R26,Y+2
@@ -11820,7 +11802,7 @@ _0xE000E:
 	MOVW R0,R30
 	LDI  R26,LOW(_config_prop)
 	LDI  R27,HIGH(_config_prop)
-	CALL SUBOPT_0xF9
+	CALL SUBOPT_0xF8
 	MOVW R26,R0
 	ST   X,R30
 ; 0007 0030         }
@@ -11864,7 +11846,7 @@ _0xE0011:
 	ADC  R31,R17
 	MOVW R0,R30
 	__POINTW1MN _config_prop,40
-	CALL SUBOPT_0xFA
+	CALL SUBOPT_0xF9
 ; 0007 003E         }
 	__ADDWRN 16,17,1
 	RJMP _0xE0011
@@ -11877,10 +11859,10 @@ _0xE0014:
 	BRGE _0xE0015
 ; 0007 0041         {
 ; 0007 0042             readConfig->deviceID[i]   = config_prop.deviceID[i];
-	CALL SUBOPT_0xFB
+	CALL SUBOPT_0xFA
 	MOVW R0,R30
 	__POINTW1MN _config_prop,80
-	CALL SUBOPT_0xFA
+	CALL SUBOPT_0xF9
 ; 0007 0043         }
 	__ADDWRN 16,17,1
 	RJMP _0xE0014
@@ -11893,10 +11875,10 @@ _0xE0017:
 	BRGE _0xE0018
 ; 0007 0046         {
 ; 0007 0047             readConfig->hostName[i]   = config_prop.hostName[i];
-	CALL SUBOPT_0xFC
+	CALL SUBOPT_0xFB
 	MOVW R0,R30
 	__POINTW1MN _config_prop,100
-	CALL SUBOPT_0xFA
+	CALL SUBOPT_0xF9
 ; 0007 0048         }
 	__ADDWRN 16,17,1
 	RJMP _0xE0017
@@ -11909,10 +11891,10 @@ _0xE001A:
 	BRGE _0xE001B
 ; 0007 004B         {
 ; 0007 004C             readConfig->hostID[i]   = config_prop.hostID[i];
-	CALL SUBOPT_0xFD
+	CALL SUBOPT_0xFC
 	MOVW R0,R30
 	__POINTW1MN _config_prop,140
-	CALL SUBOPT_0xFA
+	CALL SUBOPT_0xF9
 ; 0007 004D         }
 	__ADDWRN 16,17,1
 	RJMP _0xE001A
@@ -11952,10 +11934,10 @@ _getOperatingConfig:
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
 	LDI  R30,LOW(32)
-	CALL SUBOPT_0xFE
+	CALL SUBOPT_0xFD
 ; 0007 005C         readConfig->deviceEnable            =   0x00;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0xFF
+	CALL SUBOPT_0xFE
 ; 0007 005D         readConfig->alarmEnable             =   0x00;
 ; 0007 005E 
 ; 0007 005F         for(i=0;i<MAX_SENS_CHANNEL;i++)
@@ -11964,7 +11946,7 @@ _0xE001E:
 	BRGE _0xE001F
 ; 0007 0060         {
 ; 0007 0061             readConfig->sensorEnable[i]     =   0x00;
-	CALL SUBOPT_0x100
+	CALL SUBOPT_0xFF
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0007 0062         }
@@ -11994,13 +11976,13 @@ _0xE001C:
 ; 0007 0075         readConfig->mode                    =   config_oper.mode;
 	LDI  R26,LOW(_config_oper)
 	LDI  R27,HIGH(_config_oper)
-	CALL SUBOPT_0x101
+	CALL SUBOPT_0x100
 ; 0007 0076         readConfig->deviceEnable            =   config_oper.deviceEnable;
 	__POINTW2MN _config_oper,1
-	CALL SUBOPT_0x102
+	CALL SUBOPT_0x101
 ; 0007 0077         readConfig->alarmEnable             =   config_oper.alarmEnable;
 	__POINTW2MN _config_oper,2
-	CALL SUBOPT_0x103
+	CALL SUBOPT_0x102
 ; 0007 0078 
 ; 0007 0079         for(i=0;i<MAX_SENS_CHANNEL;i++)
 	__GETWRN 16,17,0
@@ -12009,10 +11991,10 @@ _0xE0022:
 	BRGE _0xE0023
 ; 0007 007A         {
 ; 0007 007B             readConfig->sensorEnable[i]     =   config_oper.sensorEnable[i];
-	CALL SUBOPT_0x100
+	CALL SUBOPT_0xFF
 	MOVW R0,R30
 	__POINTW1MN _config_oper,3
-	CALL SUBOPT_0xFA
+	CALL SUBOPT_0xF9
 ; 0007 007C         }
 	__ADDWRN 16,17,1
 	RJMP _0xE0022
@@ -12023,15 +12005,15 @@ _0xE0020:
 ; 0007 007F 
 ; 0007 0080     printDebug("<getOperatingConfig> mode            >> 0x%02X\r\n",readConfig->mode);
 	__POINTD1FN _0xE0000,107
-	CALL SUBOPT_0x104
+	CALL SUBOPT_0x103
 ; 0007 0081     printDebug("<getOperatingConfig> deviceEnable    >> 0x%02X\r\n",readConfig->deviceEnable);
 	__POINTD1FN _0xE0000,156
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x104
 	LDD  R30,Z+1
 	CALL SUBOPT_0x29
 ; 0007 0082     printDebug("<getOperatingConfig> alarmEnable     >> 0x%02X\r\n",readConfig->alarmEnable);
 	__POINTD1FN _0xE0000,205
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x104
 	LDD  R30,Z+2
 	CALL SUBOPT_0x29
 ; 0007 0083     printDebug("<getOperatingConfig> sensorEnable    >> ");
@@ -12045,14 +12027,14 @@ _0xE0025:
 	BRGE _0xE0026
 ; 0007 0086     {
 ; 0007 0087         printDebug("[0x%02X]",readConfig->sensorEnable[i]);
+	CALL SUBOPT_0x105
 	CALL SUBOPT_0x106
-	CALL SUBOPT_0x107
 ; 0007 0088     }
 	__ADDWRN 16,17,1
 	RJMP _0xE0025
 _0xE0026:
 ; 0007 0089     printDebug("\r\n");
-	CALL SUBOPT_0x108
+	CALL SUBOPT_0x107
 ; 0007 008A 
 ; 0007 008B     return 0;
 	CALL SUBOPT_0xD6
@@ -12063,7 +12045,7 @@ _0xE0026:
 ; 0007 008F {
 _getSensorConfig:
 ; 0007 0090     if((ch < 0) || (ch >= MAX_SENS_CHANNEL)){
-	CALL SUBOPT_0x109
+	CALL SUBOPT_0x108
 ;	ch -> Y+2
 ;	*readConfig -> Y+0
 	BRMI _0xE0028
@@ -12074,7 +12056,7 @@ _getSensorConfig:
 _0xE0028:
 ; 0007 0091         printDebug("<getSensorConfig> sensor channel out of range (%d)\r\n",ch);
 	__POINTD1FN _0xE0000,304
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x104
 	CALL SUBOPT_0xE9
 ; 0007 0092         return -1;
 	RJMP _0x20E008F
@@ -12098,31 +12080,31 @@ _0xE0027:
 	LDD  R27,Y+1
 	LDI  R30,LOW(300)
 	LDI  R31,HIGH(300)
-	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x109
 ; 0007 0098         readConfig->reOccurrence        =   0x8000;
 	ADIW R26,2
 	LDI  R30,LOW(32768)
 	LDI  R31,HIGH(32768)
-	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x109
 ; 0007 0099         readConfig->timeStartHour       =   0;
 	ADIW R26,4
-	CALL SUBOPT_0x10B
+	CALL SUBOPT_0x10A
 ; 0007 009A         readConfig->timeStartMin        =   0;
 	ADIW R26,5
-	CALL SUBOPT_0x10B
+	CALL SUBOPT_0x10A
 ; 0007 009B         readConfig->timeStopHour        =   0;
 	ADIW R26,6
-	CALL SUBOPT_0x10B
+	CALL SUBOPT_0x10A
 ; 0007 009C         readConfig->timeStopMin         =   0;
 	ADIW R26,7
-	CALL SUBOPT_0x10B
+	CALL SUBOPT_0x10A
 ; 0007 009D 
 ; 0007 009E         readConfig->alarmEnable         =   0x00;
 	ADIW R26,8
-	CALL SUBOPT_0x10B
+	CALL SUBOPT_0x10A
 ; 0007 009F         readConfig->lowerLimit          =   10.0;
 	ADIW R26,9
-	CALL SUBOPT_0x10C
+	CALL SUBOPT_0x10B
 	CALL __PUTDP1
 ; 0007 00A0         readConfig->lowerDelay          =   20;
 	LD   R26,Y
@@ -12130,10 +12112,10 @@ _0xE0027:
 	ADIW R26,13
 	LDI  R30,LOW(20)
 	LDI  R31,HIGH(20)
-	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x109
 ; 0007 00A1         readConfig->lowerExtreme        =   0.0;
 	ADIW R26,15
-	CALL SUBOPT_0x8E
+	CALL SUBOPT_0x8F
 ; 0007 00A2         readConfig->upperLimit          =   180.0;
 	LD   R26,Y
 	LDD  R27,Y+1
@@ -12146,7 +12128,7 @@ _0xE0027:
 	ADIW R26,23
 	LDI  R30,LOW(20)
 	LDI  R31,HIGH(20)
-	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x109
 ; 0007 00A4         readConfig->upperExtreme        =   200.0;
 	ADIW R26,25
 	__GETD1N 0x43480000
@@ -12165,7 +12147,7 @@ _0xE0027:
 	RJMP _0xE002B
 _0xE002A:
 ; 0007 00B0         readConfig->samplingRate        =   config_sens[ch].samplingRate;
-	CALL SUBOPT_0x10D
+	CALL SUBOPT_0x10C
 	SUBI R30,LOW(-_config_sens)
 	SBCI R31,HIGH(-_config_sens)
 	MOVW R26,R30
@@ -12175,65 +12157,65 @@ _0xE002A:
 	ST   X+,R30
 	ST   X,R31
 ; 0007 00B1         readConfig->reOccurrence        =   config_sens[ch].reOccurrence;
-	CALL SUBOPT_0x10D
+	CALL SUBOPT_0x10C
 	__ADDW1MN _config_sens,2
 	MOVW R26,R30
 	CALL __EEPROMRDW
 	__PUTW1SNS 0,2
 ; 0007 00B2         readConfig->timeStartHour       =   config_sens[ch].timeStartHour;
-	CALL SUBOPT_0x10D
+	CALL SUBOPT_0x10C
 	__ADDW1MN _config_sens,4
 	MOVW R26,R30
 	CALL __EEPROMRDB
 	__PUTB1SNS 0,4
 ; 0007 00B3         readConfig->timeStartMin        =   config_sens[ch].timeStartMin;
-	CALL SUBOPT_0x10D
+	CALL SUBOPT_0x10C
 	__ADDW1MN _config_sens,5
 	MOVW R26,R30
 	CALL __EEPROMRDB
 	__PUTB1SNS 0,5
 ; 0007 00B4         readConfig->timeStopHour        =   config_sens[ch].timeStopHour;
-	CALL SUBOPT_0x10D
+	CALL SUBOPT_0x10C
 	__ADDW1MN _config_sens,6
 	MOVW R26,R30
 	CALL __EEPROMRDB
 	__PUTB1SNS 0,6
 ; 0007 00B5         readConfig->timeStopMin         =   config_sens[ch].timeStopMin;
-	CALL SUBOPT_0x10D
+	CALL SUBOPT_0x10C
 	__ADDW1MN _config_sens,7
 	MOVW R26,R30
 	CALL __EEPROMRDB
 	__PUTB1SNS 0,7
 ; 0007 00B6 
 ; 0007 00B7         readConfig->alarmEnable         =   config_sens[ch].alarmEnable;
-	CALL SUBOPT_0x10D
+	CALL SUBOPT_0x10C
 	__ADDW1MN _config_sens,8
 	MOVW R26,R30
 	CALL __EEPROMRDB
 	__PUTB1SNS 0,8
 ; 0007 00B8         readConfig->lowerLimit          =   config_sens[ch].lowerLimit;
+	CALL SUBOPT_0x10C
 	CALL SUBOPT_0x10D
-	CALL SUBOPT_0x10E
 	__PUTD1SNS 0,9
 ; 0007 00B9         readConfig->lowerDelay          =   config_sens[ch].lowerDelay;
-	CALL SUBOPT_0x10D
-	CALL SUBOPT_0x10F
+	CALL SUBOPT_0x10C
+	CALL SUBOPT_0x10E
 	__PUTW1SNS 0,13
 ; 0007 00BA         readConfig->lowerExtreme        =   config_sens[ch].lowerExtreme;
-	CALL SUBOPT_0x10D
-	CALL SUBOPT_0x110
+	CALL SUBOPT_0x10C
+	CALL SUBOPT_0x10F
 	__PUTD1SNS 0,15
 ; 0007 00BB         readConfig->upperLimit          =   config_sens[ch].upperLimit;
-	CALL SUBOPT_0x10D
-	CALL SUBOPT_0x111
+	CALL SUBOPT_0x10C
+	CALL SUBOPT_0x110
 	__PUTD1SNS 0,19
 ; 0007 00BC         readConfig->upperDelay          =   config_sens[ch].upperDelay;
-	CALL SUBOPT_0x10D
-	CALL SUBOPT_0x112
+	CALL SUBOPT_0x10C
+	CALL SUBOPT_0x111
 	__PUTW1SNS 0,23
 ; 0007 00BD         readConfig->upperExtreme        =   config_sens[ch].upperExtreme;
-	CALL SUBOPT_0x10D
-	CALL SUBOPT_0x113
+	CALL SUBOPT_0x10C
+	CALL SUBOPT_0x112
 	__PUTD1SNS 0,25
 ; 0007 00BE     }
 _0xE002B:
@@ -12247,7 +12229,7 @@ _0xE002B:
 ; 0007 00C3 {
 _getAuxDinConfig:
 ; 0007 00C4     if((ch < 0) || (ch >= MAX_DI_CHANNEL)){
-	CALL SUBOPT_0x109
+	CALL SUBOPT_0x108
 ;	ch -> Y+2
 ;	*readConfig -> Y+0
 	BRMI _0xE002D
@@ -12258,7 +12240,7 @@ _getAuxDinConfig:
 _0xE002D:
 ; 0007 00C5         printDebug("<getAuxDinConfig> digital input channel out of range (%d)\r\n",ch);
 	__POINTD1FN _0xE0000,407
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x104
 	CALL SUBOPT_0xE9
 ; 0007 00C6         return -1;
 	RJMP _0x20E008F
@@ -12280,10 +12262,10 @@ _0xE002C:
 ; 0007 00CC         readConfig->channelEnable       =   0x00;
 	LD   R26,Y
 	LDD  R27,Y+1
-	CALL SUBOPT_0x10B
+	CALL SUBOPT_0x10A
 ; 0007 00CD         readConfig->alarmDelay          =   0;
 	ADIW R26,1
-	CALL SUBOPT_0x114
+	CALL SUBOPT_0x113
 ; 0007 00CE 
 ; 0007 00CF         /* // -- for test -- //
 ; 0007 00D0         if(ch < 2)  readConfig->channelEnable       =   0x01;
@@ -12296,15 +12278,15 @@ _0xE002C:
 	RJMP _0xE0030
 _0xE002F:
 ; 0007 00D7         readConfig->channelEnable       =   config_din[ch].channelEnable;
-	CALL SUBOPT_0x115
+	CALL SUBOPT_0x114
 	SUBI R30,LOW(-_config_din)
 	SBCI R31,HIGH(-_config_din)
-	CALL SUBOPT_0x116
-; 0007 00D8         readConfig->alarmDelay          =   config_din[ch].alarmDelay;
 	CALL SUBOPT_0x115
+; 0007 00D8         readConfig->alarmDelay          =   config_din[ch].alarmDelay;
+	CALL SUBOPT_0x114
 	__ADDW1MN _config_din,1
 	MOVW R26,R30
-	CALL SUBOPT_0x117
+	CALL SUBOPT_0x116
 ; 0007 00D9     }
 _0xE0030:
 ; 0007 00DA     return 0;
@@ -12333,7 +12315,7 @@ _getAuxDoutConfig:
 _0xE0032:
 ; 0007 00E2         printDebug("<getAuxDoutConfig> digital output channel out of range (%d)\r\n",ch);
 	__POINTD1FN _0xE0000,517
-	CALL SUBOPT_0x118
+	CALL SUBOPT_0x117
 ; 0007 00E3         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
@@ -12356,10 +12338,10 @@ _0xE0031:
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0xFE
+	CALL SUBOPT_0xFD
 ; 0007 00E9         readConfig->stateOnEvent        =   0x01;
 	LDI  R30,LOW(1)
-	CALL SUBOPT_0xFF
+	CALL SUBOPT_0xFE
 ; 0007 00EA         readConfig->eventSourceNumber   =   0;
 ; 0007 00EB 
 ; 0007 00EC         for(i=0;i<MAX_EVENT_SOURCE;i++){
@@ -12367,7 +12349,7 @@ _0xE0036:
 	__CPWRN 16,17,35
 	BRGE _0xE0037
 ; 0007 00ED             readConfig->eventSource[i]  =   0x00;
-	CALL SUBOPT_0x100
+	CALL SUBOPT_0xFF
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0007 00EE         }
@@ -12379,70 +12361,70 @@ _0xE0037:
 	RJMP _0xE0038
 _0xE0034:
 ; 0007 00F1         readConfig->channelEnable       =   config_dout[ch].channelEnable;
-	CALL SUBOPT_0x119
+	CALL SUBOPT_0x118
 	SUBI R30,LOW(-_config_dout)
 	SBCI R31,HIGH(-_config_dout)
 	MOVW R26,R30
-	CALL SUBOPT_0x101
+	CALL SUBOPT_0x100
 ; 0007 00F2         readConfig->stateOnEvent        =   config_dout[ch].stateOnEvent;
-	CALL SUBOPT_0x119
+	CALL SUBOPT_0x118
 	__ADDW1MN _config_dout,1
 	MOVW R26,R30
-	CALL SUBOPT_0x102
+	CALL SUBOPT_0x101
 ; 0007 00F3         readConfig->eventSourceNumber   =   config_dout[ch].eventSourceNumber;
-	CALL SUBOPT_0x119
+	CALL SUBOPT_0x118
 	__ADDW1MN _config_dout,2
 	MOVW R26,R30
-	CALL SUBOPT_0x103
+	CALL SUBOPT_0x102
 ; 0007 00F4 
 ; 0007 00F5         printDebug("<getAuxDoutConfig> -- CH %d -- \r\n",ch);
 	__POINTD1FN _0xE0000,630
-	CALL SUBOPT_0x118
+	CALL SUBOPT_0x117
 ; 0007 00F6         printDebug("<getAuxDoutConfig> enable         [0x%02X]\r\n",config_dout[ch].channelEnable);
 	__POINTD1FN _0xE0000,664
+	CALL SUBOPT_0x119
 	CALL SUBOPT_0x11A
-	CALL SUBOPT_0x11B
 ; 0007 00F7         printDebug("<getAuxDoutConfig> stateOnEvent   [0x%02X]\r\n",config_dout[ch].stateOnEvent);
 	__POINTD1FN _0xE0000,709
-	CALL SUBOPT_0x11A
-	CALL SUBOPT_0x11C
+	CALL SUBOPT_0x119
+	CALL SUBOPT_0x11B
 ; 0007 00F8         printDebug("<getAuxDoutConfig> numberEvSrc    [%d]->",config_dout[ch].eventSourceNumber);
 	__POINTD1FN _0xE0000,754
-	CALL SUBOPT_0x11A
-	CALL SUBOPT_0x11D
+	CALL SUBOPT_0x119
+	CALL SUBOPT_0x11C
 	CALL SUBOPT_0x29
 ; 0007 00F9         for(i=0;i<config_dout[ch].eventSourceNumber;i++){
 	__GETWRN 16,17,0
 _0xE003A:
-	CALL SUBOPT_0x119
+	CALL SUBOPT_0x118
+	CALL SUBOPT_0x11C
 	CALL SUBOPT_0x11D
-	CALL SUBOPT_0x11E
 	BRGE _0xE003B
 ; 0007 00FA             readConfig->eventSource[i]  =   config_dout[ch].eventSource[i];
-	CALL SUBOPT_0x100
+	CALL SUBOPT_0xFF
 	__PUTW1R 23,24
-	CALL SUBOPT_0x119
-	CALL SUBOPT_0x11F
+	CALL SUBOPT_0x118
+	CALL SUBOPT_0x11E
 	CALL __EEPROMRDB
 	__GETW2R 23,24
 	ST   X,R30
 ; 0007 00FB             printDebug("[0x%02X]",readConfig->eventSource[i]);
+	CALL SUBOPT_0x105
 	CALL SUBOPT_0x106
-	CALL SUBOPT_0x107
 ; 0007 00FC         }
 	__ADDWRN 16,17,1
 	RJMP _0xE003A
 _0xE003B:
 ; 0007 00FD         for(i=config_dout[ch].eventSourceNumber;i<MAX_EVENT_SOURCE;i++){
-	CALL SUBOPT_0x119
-	CALL SUBOPT_0x11D
+	CALL SUBOPT_0x118
+	CALL SUBOPT_0x11C
 	MOV  R16,R30
 	CLR  R17
 _0xE003D:
 	__CPWRN 16,17,35
 	BRGE _0xE003E
 ; 0007 00FE             readConfig->eventSource[i]  =   0x00;
-	CALL SUBOPT_0x100
+	CALL SUBOPT_0xFF
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0007 00FF             //printDebug("[0x%02X]",readConfig->eventSource[i]);
@@ -12451,7 +12433,7 @@ _0xE003D:
 	RJMP _0xE003D
 _0xE003E:
 ; 0007 0101         printDebug("\r\n");
-	CALL SUBOPT_0x108
+	CALL SUBOPT_0x107
 ; 0007 0102 
 ; 0007 0103     }
 _0xE0038:
@@ -12463,7 +12445,7 @@ _0xE0038:
 ; 0007 0108 {
 _getAuxAinConfig:
 ; 0007 0109     if((ch < 0) || (ch >= MAX_AI_CHANNEL)){
-	CALL SUBOPT_0x109
+	CALL SUBOPT_0x108
 ;	ch -> Y+2
 ;	*readConfig -> Y+0
 	BRMI _0xE0040
@@ -12474,7 +12456,7 @@ _getAuxAinConfig:
 _0xE0040:
 ; 0007 010A         printDebug("<getAuxAinConfig> analog input channel out of range (%d)\r\n",ch);
 	__POINTD1FN _0xE0000,795
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x104
 	CALL SUBOPT_0xE9
 ; 0007 010B         return -1;
 	RJMP _0x20E008F
@@ -12495,21 +12477,21 @@ _0xE003F:
 ; 0007 0110         readConfig->channelEnable       =   0x00;
 	LD   R26,Y
 	LDD  R27,Y+1
-	CALL SUBOPT_0x10B
+	CALL SUBOPT_0x10A
 ; 0007 0111         readConfig->alarmLevel          =   0;
 	ADIW R26,1
-	CALL SUBOPT_0x8E
+	CALL SUBOPT_0x8F
 ; 0007 0112     }
 ; 0007 0113     else{
 	RJMP _0xE0043
 _0xE0042:
 ; 0007 0114         readConfig->channelEnable       =   config_ain[ch].channelEnable;
-	CALL SUBOPT_0x120
+	CALL SUBOPT_0x11F
 	SUBI R30,LOW(-_config_ain)
 	SBCI R31,HIGH(-_config_ain)
-	CALL SUBOPT_0x116
+	CALL SUBOPT_0x115
 ; 0007 0115         readConfig->alarmLevel          =   config_ain[ch].alarmLevel;
-	CALL SUBOPT_0x120
+	CALL SUBOPT_0x11F
 	__ADDW1MN _config_ain,1
 	MOVW R26,R30
 	CALL __EEPROMRDD
@@ -12542,7 +12524,7 @@ _getAuxAoutConfig:
 _0xE0045:
 ; 0007 011F         printDebug("<getAuxAoutConfig> analog output channel out of range (%d)\r\n",ch);
 	__POINTD1FN _0xE0000,904
-	CALL SUBOPT_0x118
+	CALL SUBOPT_0x117
 ; 0007 0120         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
@@ -12565,9 +12547,9 @@ _0xE0044:
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0xFE
+	CALL SUBOPT_0xFD
 ; 0007 0126         readConfig->levelOnEvent        =   0.0;
-	CALL SUBOPT_0x8E
+	CALL SUBOPT_0x8F
 ; 0007 0127         readConfig->eventSourceNumber   =   0;
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
@@ -12581,7 +12563,7 @@ _0xE0049:
 	__CPWRN 16,17,35
 	BRGE _0xE004A
 ; 0007 012A             readConfig->eventSource[i]  =   0x00;
-	CALL SUBOPT_0x121
+	CALL SUBOPT_0x120
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0007 012B         }
@@ -12593,34 +12575,34 @@ _0xE004A:
 	RJMP _0xE004B
 _0xE0047:
 ; 0007 012E         readConfig->channelEnable       =   config_aout[ch].channelEnable;
-	CALL SUBOPT_0x122
+	CALL SUBOPT_0x121
 	SUBI R30,LOW(-_config_aout)
 	SBCI R31,HIGH(-_config_aout)
 	MOVW R26,R30
-	CALL SUBOPT_0x101
+	CALL SUBOPT_0x100
 ; 0007 012F         readConfig->levelOnEvent        =   config_aout[ch].levelOnEvent;
-	CALL SUBOPT_0x122
+	CALL SUBOPT_0x121
 	__ADDW1MN _config_aout,1
 	MOVW R26,R30
 	CALL __EEPROMRDD
 	__PUTD1SNS 2,1
 ; 0007 0130         readConfig->eventSourceNumber   =   config_aout[ch].eventSourceNumber;
+	CALL SUBOPT_0x121
 	CALL SUBOPT_0x122
-	CALL SUBOPT_0x123
 	__PUTB1SNS 2,5
 ; 0007 0131 
 ; 0007 0132         for(i=0;i<config_aout[ch].eventSourceNumber;i++){
 	__GETWRN 16,17,0
 _0xE004D:
+	CALL SUBOPT_0x121
 	CALL SUBOPT_0x122
-	CALL SUBOPT_0x123
-	CALL SUBOPT_0x11E
+	CALL SUBOPT_0x11D
 	BRGE _0xE004E
 ; 0007 0133             readConfig->eventSource[i]  =   config_aout[ch].eventSource[i];
-	CALL SUBOPT_0x121
+	CALL SUBOPT_0x120
 	__PUTW1R 23,24
-	CALL SUBOPT_0x122
-	CALL SUBOPT_0x124
+	CALL SUBOPT_0x121
+	CALL SUBOPT_0x123
 	CALL __EEPROMRDB
 	__GETW2R 23,24
 	ST   X,R30
@@ -12629,15 +12611,15 @@ _0xE004D:
 	RJMP _0xE004D
 _0xE004E:
 ; 0007 0135         for(i=config_aout[ch].eventSourceNumber;i<MAX_EVENT_SOURCE;i++){
+	CALL SUBOPT_0x121
 	CALL SUBOPT_0x122
-	CALL SUBOPT_0x123
 	MOV  R16,R30
 	CLR  R17
 _0xE0050:
 	__CPWRN 16,17,35
 	BRGE _0xE0051
 ; 0007 0136             readConfig->eventSource[i]  =   0x00;
-	CALL SUBOPT_0x121
+	CALL SUBOPT_0x120
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0007 0137         }
@@ -12708,9 +12690,9 @@ _0xE0054:
 	__CPWRN 16,17,4
 	BRGE _0xE0056
 ; 0007 0149                 readConfig->eventSource[i]  =   errSrc[i];
-	CALL SUBOPT_0x125
+	CALL SUBOPT_0x124
 	MOVW R0,R30
-	CALL SUBOPT_0x126
+	CALL SUBOPT_0x125
 	LD   R30,X
 	MOVW R26,R0
 	ST   X,R30
@@ -12720,7 +12702,7 @@ _0xE0054:
 	RJMP _0xE0057
 _0xE0056:
 ; 0007 014D                 readConfig->eventSource[i]  =   0x00;
-	CALL SUBOPT_0x125
+	CALL SUBOPT_0x124
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0007 014E             }
@@ -12742,33 +12724,33 @@ _0xE0052:
 	LDD  R27,Y+6+1
 	ST   X,R30
 ; 0007 0154         readConfig->eventSourceNumber   =   config_buzz.eventSourceNumber;
-	CALL SUBOPT_0x127
+	CALL SUBOPT_0x126
 	__PUTB1SNS 6,1
 ; 0007 0155 
 ; 0007 0156         for(i=0;i<config_buzz.eventSourceNumber;i++){
 	__GETWRN 16,17,0
 _0xE005A:
-	CALL SUBOPT_0x127
-	CALL SUBOPT_0x11E
+	CALL SUBOPT_0x126
+	CALL SUBOPT_0x11D
 	BRGE _0xE005B
 ; 0007 0157             readConfig->eventSource[i]  =   config_buzz.eventSource[i];
-	CALL SUBOPT_0x125
+	CALL SUBOPT_0x124
 	MOVW R0,R30
 	__POINTW1MN _config_buzz,2
-	CALL SUBOPT_0xFA
+	CALL SUBOPT_0xF9
 ; 0007 0158         }
 	__ADDWRN 16,17,1
 	RJMP _0xE005A
 _0xE005B:
 ; 0007 0159         for(i=config_buzz.eventSourceNumber;i<MAX_EVENT_SOURCE;i++){
-	CALL SUBOPT_0x127
+	CALL SUBOPT_0x126
 	MOV  R16,R30
 	CLR  R17
 _0xE005D:
 	__CPWRN 16,17,35
 	BRGE _0xE005E
 ; 0007 015A             readConfig->eventSource[i]  =   0x00;
-	CALL SUBOPT_0x125
+	CALL SUBOPT_0x124
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0007 015B         }
@@ -12780,12 +12762,12 @@ _0xE0058:
 ; 0007 015D 
 ; 0007 015E     printDebug("<getBuzzerConfig> enable            >>[0x%02X]\r\n",    readConfig->enable);
 	__POINTD1FN _0xE0000,1066
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x127
 	LD   R30,X
 	CALL SUBOPT_0x29
 ; 0007 015F     printDebug("<getBuzzerConfig> eventSourceNumber >>[%d]\r\n",         readConfig->eventSourceNumber);
 	__POINTD1FN _0xE0000,1115
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x128
 	LDD  R30,Z+1
 	CALL SUBOPT_0x29
 ; 0007 0160     printDebug("<getBuzzerConfig> eventSource       >>");
@@ -12797,16 +12779,16 @@ _0xE0060:
 	__CPWRN 16,17,35
 	BRGE _0xE0061
 ; 0007 0162         printDebug("[0x%02X]",readConfig->eventSource[i]);
-	CALL SUBOPT_0x12A
 	CALL SUBOPT_0x129
-	CALL SUBOPT_0x12B
+	CALL SUBOPT_0x128
+	CALL SUBOPT_0x12A
 	CALL SUBOPT_0x29
 ; 0007 0163     }
 	__ADDWRN 16,17,1
 	RJMP _0xE0060
 _0xE0061:
 ; 0007 0164     printDebug("\r\n");
-	CALL SUBOPT_0x108
+	CALL SUBOPT_0x107
 ; 0007 0165 
 ; 0007 0166     return 0;
 	CALL SUBOPT_0xD6
@@ -12832,32 +12814,32 @@ _getEnvAlarmConfig:
 ; 0007 016D         readConfig->gsmRSSILevel         =   0;
 	LD   R26,Y
 	LDD  R27,Y+1
-	CALL SUBOPT_0x8E
+	CALL SUBOPT_0x8F
 ; 0007 016E         readConfig->gsmCreditBalance     =   0;
 	LD   R26,Y
 	LDD  R27,Y+1
 	ADIW R26,4
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
-	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x109
 ; 0007 016F         readConfig->batteryLevel         =   0;
 	ADIW R26,6
-	CALL SUBOPT_0x8E
+	CALL SUBOPT_0x8F
 ; 0007 0170         readConfig->commSignalLevel      =   0;
 	LD   R26,Y
 	LDD  R27,Y+1
 	ADIW R26,10
-	CALL SUBOPT_0x8E
+	CALL SUBOPT_0x8F
 ; 0007 0171         readConfig->commLostDelay        =   0;
 	LD   R26,Y
 	LDD  R27,Y+1
 	ADIW R26,14
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
-	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x109
 ; 0007 0172         readConfig->memoryMin            =   0;
 	ADIW R26,16
-	CALL SUBOPT_0x114
+	CALL SUBOPT_0x113
 ; 0007 0173     }
 ; 0007 0174     else{
 	RJMP _0xE0063
@@ -12894,29 +12876,29 @@ _0xE0063:
 ; 0007 017C 
 ; 0007 017D     printDebug("<getEnvAlarmConfig> gsmRSSILevel         [%f]\r\n",readConfig->gsmRSSILevel);
 	__POINTD1FN _0xE0000,1251
+	CALL SUBOPT_0x12B
 	CALL SUBOPT_0x12C
-	CALL SUBOPT_0x12D
 ; 0007 017E     printDebug("<getEnvAlarmConfig> gsmCreditBalance     [%d]\r\n",readConfig->gsmCreditBalance);
 	__POINTD1FN _0xE0000,1299
-	CALL SUBOPT_0x12C
+	CALL SUBOPT_0x12B
 	ADIW R26,4
-	CALL SUBOPT_0x12E
+	CALL SUBOPT_0x12D
 ; 0007 017F     printDebug("<getEnvAlarmConfig> batteryLevel         [%f]\r\n",readConfig->batteryLevel);
 	__POINTD1FN _0xE0000,1347
+	CALL SUBOPT_0x12E
 	CALL SUBOPT_0x12F
-	CALL SUBOPT_0x130
 ; 0007 0180     printDebug("<getEnvAlarmConfig> commSignalLevel      [%f]\r\n",readConfig->commSignalLevel);
 	__POINTD1FN _0xE0000,1395
-	CALL SUBOPT_0x12F
-	CALL SUBOPT_0x131
+	CALL SUBOPT_0x12E
+	CALL SUBOPT_0x130
 ; 0007 0181     printDebug("<getEnvAlarmConfig> commLostDelay        [%d]\r\n",readConfig->commLostDelay);
 	__POINTD1FN _0xE0000,1443
-	CALL SUBOPT_0x12C
+	CALL SUBOPT_0x12B
 	ADIW R26,14
-	CALL SUBOPT_0x12E
+	CALL SUBOPT_0x12D
 ; 0007 0182     printDebug("<getEnvAlarmConfig> memoryMin            [%u]\r\n",readConfig->memoryMin,);
 	__POINTD1FN _0xE0000,1491
-	CALL SUBOPT_0x12C
+	CALL SUBOPT_0x12B
 	ADIW R26,16
 	RJMP _0x20E0090
 ; 0007 0183 
@@ -12962,18 +12944,18 @@ _0xE0064:
 	ST   X,R30
 ; 0007 0190         readConfig->intv                =   config_stat.intv;
 	__POINTW2MN _config_stat,1
-	CALL SUBOPT_0x117
+	CALL SUBOPT_0x116
 ; 0007 0191     }
 _0xE0065:
 ; 0007 0192 
 ; 0007 0193     printDebug("<getStatusReportConfig> accm        [0x%02X]\r\n",readConfig->accm);
 	__POINTD1FN _0xE0000,1595
-	CALL SUBOPT_0x12C
+	CALL SUBOPT_0x12B
 	LD   R30,X
 	CALL SUBOPT_0x29
 ; 0007 0194     printDebug("<getStatusReportConfig> intv        [%d]\r\n",readConfig->intv);
 	__POINTD1FN _0xE0000,1642
-	CALL SUBOPT_0x12C
+	CALL SUBOPT_0x12B
 	ADIW R26,1
 _0x20E0090:
 	CALL __GETW1P
@@ -13014,7 +12996,7 @@ _0xE0067:
 	MOVW R30,R16
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
-	CALL SUBOPT_0x132
+	CALL SUBOPT_0x131
 	CALL __EEPROMWRB
 ; 0007 01A5     }
 	__ADDWRN 16,17,1
@@ -13062,7 +13044,7 @@ _0xE006D:
 	ADD  R30,R16
 	ADC  R31,R17
 	MOVW R26,R30
-	CALL SUBOPT_0xFB
+	CALL SUBOPT_0xFA
 	LD   R30,Z
 	CALL __EEPROMWRB
 ; 0007 01B6     }
@@ -13081,7 +13063,7 @@ _0xE0070:
 	ADD  R30,R16
 	ADC  R31,R17
 	MOVW R26,R30
-	CALL SUBOPT_0xFC
+	CALL SUBOPT_0xFB
 	LD   R30,Z
 	CALL __EEPROMWRB
 ; 0007 01BB     }
@@ -13100,7 +13082,7 @@ _0xE0073:
 	ADD  R30,R16
 	ADC  R31,R17
 	MOVW R26,R30
-	CALL SUBOPT_0xFD
+	CALL SUBOPT_0xFC
 	LD   R30,Z
 	CALL __EEPROMWRB
 ; 0007 01C0     }
@@ -13115,12 +13097,12 @@ _0xE0074:
 	LDD  R27,Y+2+1
 	SUBI R26,LOW(-160)
 	SBCI R27,HIGH(-160)
-	CALL SUBOPT_0x133
+	CALL SUBOPT_0x132
 ; 0007 01C3 
 ; 0007 01C4     config_prop_flag                    = 0x01;
 	LDI  R26,LOW(_config_prop_flag)
 	LDI  R27,HIGH(_config_prop_flag)
-	CALL SUBOPT_0x134
+	CALL SUBOPT_0x133
 ; 0007 01C5 
 ; 0007 01C6     is_properties_config_update          = 1;
 	STS  _is_properties_config_update,R30
@@ -13154,7 +13136,7 @@ _0xE0076:
 _0xE0077:
 ; 0007 01D0         printDebug("<setOperatingConfig> Error: operating mode invalid [0x%02X]\r\n", newConfig->mode);
 	__POINTD1FN _0xE0000,1685
-	CALL SUBOPT_0x104
+	CALL SUBOPT_0x103
 ; 0007 01D1         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
@@ -13189,16 +13171,16 @@ _0xE0075:
 	CALL __PUTPARD1
 	LDI  R26,LOW(_config_oper)
 	LDI  R27,HIGH(_config_oper)
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x134
 ; 0007 01D9     printDebug("\r\n deviceEnable    >> 0x%02X",config_oper.deviceEnable);
 	__POINTD1FN _0xE0000,1776
 	CALL __PUTPARD1
 	__POINTW2MN _config_oper,1
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x134
 ; 0007 01DA     printDebug("\r\n alarmEnable     >> 0x%02X",config_oper.alarmEnable);
-	CALL SUBOPT_0x136
-	__POINTW2MN _config_oper,2
 	CALL SUBOPT_0x135
+	__POINTW2MN _config_oper,2
+	CALL SUBOPT_0x134
 ; 0007 01DB     printDebug("\r\n sensorEnable    >> ");
 	__POINTD1FN _0xE0000,1834
 	CALL SUBOPT_0x3
@@ -13214,28 +13196,28 @@ _0xE0079:
 	ADD  R30,R16
 	ADC  R31,R17
 	MOVW R26,R30
-	CALL SUBOPT_0x100
+	CALL SUBOPT_0xFF
 	LD   R30,Z
 	CALL __EEPROMWRB
 ; 0007 01E0         printDebug("[0x%02X]",config_oper.sensorEnable[i]);
-	CALL SUBOPT_0x12A
+	CALL SUBOPT_0x129
 	CALL __PUTPARD1
 	__POINTW1MN _config_oper,3
 	ADD  R30,R16
 	ADC  R31,R17
 	MOVW R26,R30
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x134
 ; 0007 01E1     }
 	__ADDWRN 16,17,1
 	RJMP _0xE0079
 _0xE007A:
 ; 0007 01E2     printDebug("\r\n");
-	CALL SUBOPT_0x108
+	CALL SUBOPT_0x107
 ; 0007 01E3 
 ; 0007 01E4     config_oper_flag                    =   0x01;
 	LDI  R26,LOW(_config_oper_flag)
 	LDI  R27,HIGH(_config_oper_flag)
-	CALL SUBOPT_0x134
+	CALL SUBOPT_0x133
 ; 0007 01E5 
 ; 0007 01E6     is_operating_config_update          =   1;
 	STS  _is_operating_config_update,R30
@@ -13249,7 +13231,7 @@ _0xE007A:
 ; 0007 01EC {
 _setSensorConfig:
 ; 0007 01ED     if((ch < 0) || (ch >= MAX_SENS_CHANNEL)){
-	CALL SUBOPT_0x109
+	CALL SUBOPT_0x108
 ;	ch -> Y+2
 ;	*newConfig -> Y+0
 	BRMI _0xE007C
@@ -13265,7 +13247,7 @@ _0xE007C:
 ; 0007 01F0     }
 ; 0007 01F1     if(newConfig->samplingRate == 0){
 _0xE007B:
-	CALL SUBOPT_0x137
+	CALL SUBOPT_0x136
 	SBIW R30,0
 	BRNE _0xE007E
 ; 0007 01F2         printDebug("<setSensorConfig> ERR: samplingRate couldn't be set to 0\r\n");
@@ -13284,7 +13266,7 @@ _0x20E008E:
 ; 0007 01F5 
 ; 0007 01F6     if(newConfig->samplingRate < 60){
 _0xE007E:
-	CALL SUBOPT_0x137
+	CALL SUBOPT_0x136
 	SBIW R30,60
 	BRSH _0xE007F
 ; 0007 01F7         newConfig->samplingRate         =   60;
@@ -13298,47 +13280,47 @@ _0xE007E:
 ; 0007 01F9 
 ; 0007 01FA     config_sens[ch].samplingRate        =   newConfig->samplingRate;
 _0xE007F:
-	CALL SUBOPT_0x10D
+	CALL SUBOPT_0x10C
 	SUBI R30,LOW(-_config_sens)
 	SBCI R31,HIGH(-_config_sens)
 	MOVW R0,R30
+	CALL SUBOPT_0x136
 	CALL SUBOPT_0x137
-	CALL SUBOPT_0x138
 ; 0007 01FB     config_sens[ch].reOccurrence        =   newConfig->reOccurrence;
 	__ADDW1MN _config_sens,2
 	MOVW R0,R30
 	LD   R26,Y
 	LDD  R27,Y+1
 	ADIW R26,2
-	CALL SUBOPT_0x139
+	CALL SUBOPT_0x138
 ; 0007 01FC     config_sens[ch].timeStartHour       =   newConfig->timeStartHour;
 	__ADDW1MN _config_sens,4
 	MOVW R26,R30
 	LD   R30,Y
 	LDD  R31,Y+1
 	LDD  R30,Z+4
-	CALL SUBOPT_0x13A
+	CALL SUBOPT_0x139
 ; 0007 01FD     config_sens[ch].timeStartMin        =   newConfig->timeStartMin;
 	__ADDW1MN _config_sens,5
 	MOVW R26,R30
 	LD   R30,Y
 	LDD  R31,Y+1
 	LDD  R30,Z+5
-	CALL SUBOPT_0x13A
+	CALL SUBOPT_0x139
 ; 0007 01FE     config_sens[ch].timeStopHour        =   newConfig->timeStopHour;
 	__ADDW1MN _config_sens,6
 	MOVW R26,R30
 	LD   R30,Y
 	LDD  R31,Y+1
 	LDD  R30,Z+6
-	CALL SUBOPT_0x13A
+	CALL SUBOPT_0x139
 ; 0007 01FF     config_sens[ch].timeStopMin         =   newConfig->timeStopMin;
 	__ADDW1MN _config_sens,7
 	MOVW R26,R30
 	LD   R30,Y
 	LDD  R31,Y+1
 	LDD  R30,Z+7
-	CALL SUBOPT_0x13A
+	CALL SUBOPT_0x139
 ; 0007 0200 
 ; 0007 0201     config_sens[ch].alarmEnable         =   newConfig->alarmEnable;
 	__ADDW1MN _config_sens,8
@@ -13346,157 +13328,157 @@ _0xE007F:
 	LD   R30,Y
 	LDD  R31,Y+1
 	LDD  R30,Z+8
-	CALL SUBOPT_0x13A
+	CALL SUBOPT_0x139
 ; 0007 0202     config_sens[ch].lowerLimit          =   newConfig->lowerLimit;
 	__ADDW1MN _config_sens,9
 	MOVW R0,R30
 	LD   R26,Y
 	LDD  R27,Y+1
 	ADIW R26,9
-	CALL SUBOPT_0x13B
+	CALL SUBOPT_0x13A
 ; 0007 0203     config_sens[ch].lowerDelay          =   newConfig->lowerDelay;
 	__ADDW1MN _config_sens,13
 	MOVW R0,R30
 	LD   R26,Y
 	LDD  R27,Y+1
 	ADIW R26,13
-	CALL SUBOPT_0x139
+	CALL SUBOPT_0x138
 ; 0007 0204     config_sens[ch].lowerExtreme        =   newConfig->lowerExtreme;
 	__ADDW1MN _config_sens,15
 	MOVW R0,R30
 	LD   R26,Y
 	LDD  R27,Y+1
 	ADIW R26,15
-	CALL SUBOPT_0x13B
+	CALL SUBOPT_0x13A
 ; 0007 0205     config_sens[ch].upperLimit          =   newConfig->upperLimit;
 	__ADDW1MN _config_sens,19
 	MOVW R0,R30
 	LD   R26,Y
 	LDD  R27,Y+1
 	ADIW R26,19
-	CALL SUBOPT_0x13B
+	CALL SUBOPT_0x13A
 ; 0007 0206     config_sens[ch].upperDelay          =   newConfig->upperDelay;
 	__ADDW1MN _config_sens,23
 	MOVW R0,R30
 	LD   R26,Y
 	LDD  R27,Y+1
 	ADIW R26,23
-	CALL SUBOPT_0x139
+	CALL SUBOPT_0x138
 ; 0007 0207     config_sens[ch].upperExtreme        =   newConfig->upperExtreme;
 	__ADDW1MN _config_sens,25
 	MOVW R0,R30
 	LD   R26,Y
 	LDD  R27,Y+1
 	ADIW R26,25
-	CALL SUBOPT_0x13C
+	CALL SUBOPT_0x13B
 ; 0007 0208 
 ; 0007 0209     printDebug("\r\n samplingRate    >> 0x%04X",config_sens[ch].samplingRate);
 	__POINTD1FN _0xE0000,1962
-	CALL SUBOPT_0x13D
+	CALL SUBOPT_0x13C
 	SUBI R30,LOW(-_config_sens)
 	SBCI R31,HIGH(-_config_sens)
-	CALL SUBOPT_0x13E
+	CALL SUBOPT_0x13D
 	CALL SUBOPT_0x12
 ; 0007 020A     printDebug("\r\n reOccurrence    >> 0x%04X",config_sens[ch].reOccurrence);
 	__POINTD1FN _0xE0000,1991
-	CALL SUBOPT_0x13D
+	CALL SUBOPT_0x13C
 	__ADDW1MN _config_sens,2
-	CALL SUBOPT_0x13E
+	CALL SUBOPT_0x13D
 	CALL SUBOPT_0x12
 ; 0007 020B     printDebug("\r\n timeStartHour   >> 0x%02X",config_sens[ch].timeStartHour);
 	__POINTD1FN _0xE0000,2020
-	CALL SUBOPT_0x13D
+	CALL SUBOPT_0x13C
 	__ADDW1MN _config_sens,4
 	MOVW R26,R30
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x134
 ; 0007 020C     printDebug("\r\n timeStartMin    >> 0x%02X",config_sens[ch].timeStartMin);
 	__POINTD1FN _0xE0000,2049
-	CALL SUBOPT_0x13D
+	CALL SUBOPT_0x13C
 	__ADDW1MN _config_sens,5
 	MOVW R26,R30
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x134
 ; 0007 020D     printDebug("\r\n timeStopHour    >> 0x%02X",config_sens[ch].timeStopHour);
 	__POINTD1FN _0xE0000,2078
-	CALL SUBOPT_0x13D
+	CALL SUBOPT_0x13C
 	__ADDW1MN _config_sens,6
 	MOVW R26,R30
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x134
 ; 0007 020E     printDebug("\r\n timeStopMin     >> 0x%02X",config_sens[ch].timeStopMin);
 	__POINTD1FN _0xE0000,2107
-	CALL SUBOPT_0x13D
+	CALL SUBOPT_0x13C
 	__ADDW1MN _config_sens,7
 	MOVW R26,R30
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x134
 ; 0007 020F 
 ; 0007 0210     printDebug("\r\n alarmEnable     >> 0x%02X",        config_sens[ch].alarmEnable);
-	CALL SUBOPT_0x136
+	CALL SUBOPT_0x135
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	LDI  R30,LOW(29)
 	CALL __MULB1W2U
 	__ADDW1MN _config_sens,8
 	MOVW R26,R30
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x134
 ; 0007 0211     printDebug("\r\n lowerLimit      >> %f [%04lX]",     config_sens[ch].lowerLimit,config_sens[ch].lowerLimit);
 	__POINTD1FN _0xE0000,2136
-	CALL SUBOPT_0x13D
-	CALL SUBOPT_0x10E
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x13C
+	CALL SUBOPT_0x10D
+	CALL SUBOPT_0x127
 	LDI  R30,LOW(29)
 	CALL __MULB1W2U
-	CALL SUBOPT_0x10E
+	CALL SUBOPT_0x10D
 	CALL SUBOPT_0x21
 ; 0007 0212     printDebug("\r\n lowerDelay      >> %d [%02X]",     config_sens[ch].lowerDelay,config_sens[ch].lowerDelay);
 	__POINTD1FN _0xE0000,2169
-	CALL SUBOPT_0x13D
-	CALL SUBOPT_0x10F
+	CALL SUBOPT_0x13C
+	CALL SUBOPT_0x10E
 	CALL SUBOPT_0x34
 	LDD  R26,Y+10
 	LDD  R27,Y+10+1
 	LDI  R30,LOW(29)
 	CALL __MULB1W2U
-	CALL SUBOPT_0x10F
-	CALL SUBOPT_0x13F
+	CALL SUBOPT_0x10E
+	CALL SUBOPT_0x13E
 ; 0007 0213     printDebug("\r\n lowerExtreme    >> %f [%04lX]",     config_sens[ch].lowerExtreme,config_sens[ch].lowerExtreme);
 	__POINTD1FN _0xE0000,2201
-	CALL SUBOPT_0x13D
-	CALL SUBOPT_0x110
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x13C
+	CALL SUBOPT_0x10F
+	CALL SUBOPT_0x127
 	LDI  R30,LOW(29)
 	CALL __MULB1W2U
-	CALL SUBOPT_0x110
+	CALL SUBOPT_0x10F
 	CALL SUBOPT_0x21
 ; 0007 0214     printDebug("\r\n upperLimit      >> %f [%04lX]",     config_sens[ch].upperLimit,config_sens[ch].upperLimit);
 	__POINTD1FN _0xE0000,2234
-	CALL SUBOPT_0x13D
-	CALL SUBOPT_0x111
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x13C
+	CALL SUBOPT_0x110
+	CALL SUBOPT_0x127
 	LDI  R30,LOW(29)
 	CALL __MULB1W2U
-	CALL SUBOPT_0x111
+	CALL SUBOPT_0x110
 	CALL SUBOPT_0x21
 ; 0007 0215     printDebug("\r\n upperDelay      >> %d [%02X]",     config_sens[ch].upperDelay,config_sens[ch].upperDelay);
 	__POINTD1FN _0xE0000,2267
-	CALL SUBOPT_0x13D
-	CALL SUBOPT_0x112
+	CALL SUBOPT_0x13C
+	CALL SUBOPT_0x111
 	CALL SUBOPT_0x34
 	LDD  R26,Y+10
 	LDD  R27,Y+10+1
 	LDI  R30,LOW(29)
 	CALL __MULB1W2U
-	CALL SUBOPT_0x112
-	CALL SUBOPT_0x13F
+	CALL SUBOPT_0x111
+	CALL SUBOPT_0x13E
 ; 0007 0216     printDebug("\r\n upperExtreme    >> %f [%04lX]",     config_sens[ch].upperExtreme,config_sens[ch].upperExtreme);
 	__POINTD1FN _0xE0000,2299
-	CALL SUBOPT_0x13D
-	CALL SUBOPT_0x113
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x13C
+	CALL SUBOPT_0x112
+	CALL SUBOPT_0x127
 	LDI  R30,LOW(29)
 	CALL __MULB1W2U
-	CALL SUBOPT_0x113
+	CALL SUBOPT_0x112
 	CALL SUBOPT_0x21
 ; 0007 0217     printDebug("\r\n");
-	CALL SUBOPT_0x108
+	CALL SUBOPT_0x107
 ; 0007 0218 
 ; 0007 0219     config_sens_flag[ch]                = 0x01;
 	LDD  R26,Y+2
@@ -13523,7 +13505,7 @@ _0xE007F:
 ; 0007 0220 {
 _setAuxDinConfig:
 ; 0007 0221     if((ch < 0) || (ch > MAX_DI_CHANNEL)){
-	CALL SUBOPT_0x109
+	CALL SUBOPT_0x108
 ;	ch -> Y+2
 ;	*newConfig -> Y+0
 	BRMI _0xE0081
@@ -13540,37 +13522,37 @@ _0xE0081:
 ; 0007 0224 
 ; 0007 0225     config_din[ch].channelEnable        =   newConfig->channelEnable;
 _0xE0080:
-	CALL SUBOPT_0x115
+	CALL SUBOPT_0x114
 	SUBI R30,LOW(-_config_din)
 	SBCI R31,HIGH(-_config_din)
 	MOVW R0,R30
 	LD   R26,Y
 	LDD  R27,Y+1
-	CALL SUBOPT_0x133
+	CALL SUBOPT_0x132
 ; 0007 0226     config_din[ch].alarmDelay           =   newConfig->alarmDelay;
-	CALL SUBOPT_0x115
+	CALL SUBOPT_0x114
 	__ADDW1MN _config_din,1
+	CALL SUBOPT_0x13F
 	CALL SUBOPT_0x140
-	CALL SUBOPT_0x141
 ; 0007 0227 
 ; 0007 0228     printDebug("\r\n channel         >> [%d]",      ch);
-	CALL SUBOPT_0x142
+	CALL SUBOPT_0x141
 	CALL SUBOPT_0xE9
 ; 0007 0229     printDebug("\r\n channelEnable   >> 0x%02X",    config_din[ch].channelEnable);
-	CALL SUBOPT_0x143
+	CALL SUBOPT_0x142
 	LDI  R30,LOW(3)
 	CALL __MULB1W2U
 	SUBI R30,LOW(-_config_din)
 	SBCI R31,HIGH(-_config_din)
 	MOVW R26,R30
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x134
 ; 0007 022A     printDebug("\r\n alarmDelay      >> %d",        config_din[ch].alarmDelay);
 	__POINTD1FN _0xE0000,2388
-	CALL SUBOPT_0x144
+	CALL SUBOPT_0x143
 	LDI  R30,LOW(3)
 	CALL __MULB1W2U
 	__ADDW1MN _config_din,1
-	CALL SUBOPT_0x13E
+	CALL SUBOPT_0x13D
 	CALL SUBOPT_0x12
 ; 0007 022B 
 ; 0007 022C     config_din_flag[ch]                 =   0x01;
@@ -13629,7 +13611,7 @@ _0xE0083:
 	BRLO _0xE0086
 ; 0007 023B         printDebug("\r\n<setAuxDoutConfig> eventSourceNumber is too long (%d)!!\r\n",(newConfig->eventSourceNumber));
 	__POINTD1FN _0xE0000,2452
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x104
 	LDD  R30,Z+2
 	CALL SUBOPT_0x29
 ; 0007 023C         return -1;
@@ -13640,67 +13622,67 @@ _0xE0083:
 ; 0007 023E 
 ; 0007 023F     config_dout[ch].channelEnable       =   0x01; //newConfig->channelEnable;      // Edit bug from software
 _0xE0086:
-	CALL SUBOPT_0x119
+	CALL SUBOPT_0x118
 	SUBI R30,LOW(-_config_dout)
 	SBCI R31,HIGH(-_config_dout)
 	MOVW R26,R30
 	LDI  R30,LOW(1)
-	CALL SUBOPT_0x145
+	CALL SUBOPT_0x144
 ; 0007 0240     config_dout[ch].stateOnEvent        =   0x00; //newConfig->stateOnEvent;
 	__ADDW1MN _config_dout,1
 	MOVW R26,R30
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x145
+	CALL SUBOPT_0x144
 ; 0007 0241     config_dout[ch].eventSourceNumber   =   newConfig->eventSourceNumber;
 	__ADDW1MN _config_dout,2
 	MOVW R26,R30
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	LDD  R30,Z+2
-	CALL SUBOPT_0x146
+	CALL SUBOPT_0x145
 ; 0007 0242 
 ; 0007 0243     printDebug("\r\n channel           >> [%d]",    ch);
 ; 0007 0244     printDebug("\r\n channelEnable     >> 0x%02X",  config_dout[ch].channelEnable);
 	__POINTD1FN _0xE0000,2541
+	CALL SUBOPT_0x119
 	CALL SUBOPT_0x11A
-	CALL SUBOPT_0x11B
 ; 0007 0245     printDebug("\r\n stateOnEvent      >> 0x%02X",  config_dout[ch].stateOnEvent);
 	__POINTD1FN _0xE0000,2572
-	CALL SUBOPT_0x11A
-	CALL SUBOPT_0x11C
+	CALL SUBOPT_0x119
+	CALL SUBOPT_0x11B
 ; 0007 0246     printDebug("\r\n eventSourceNumber >> %d",      config_dout[ch].eventSourceNumber);
-	CALL SUBOPT_0x147
-	CALL SUBOPT_0x11A
-	CALL SUBOPT_0x11D
+	CALL SUBOPT_0x146
+	CALL SUBOPT_0x119
+	CALL SUBOPT_0x11C
 	CALL SUBOPT_0x29
 ; 0007 0247     printDebug("\r\n eventSource       >> ");
-	CALL SUBOPT_0x148
+	CALL SUBOPT_0x147
 ; 0007 0248 
 ; 0007 0249     for(i=0;i<config_dout[ch].eventSourceNumber;i++){
 	__GETWRN 16,17,0
 _0xE0088:
-	CALL SUBOPT_0x119
+	CALL SUBOPT_0x118
+	CALL SUBOPT_0x11C
 	CALL SUBOPT_0x11D
-	CALL SUBOPT_0x11E
 	BRGE _0xE0089
 ; 0007 024A 
 ; 0007 024B         config_dout[ch].eventSource[i]  =   newConfig->eventSource[i];
-	CALL SUBOPT_0x119
-	CALL SUBOPT_0x11F
-	CALL SUBOPT_0x100
+	CALL SUBOPT_0x118
+	CALL SUBOPT_0x11E
+	CALL SUBOPT_0xFF
 	LD   R30,Z
-	CALL SUBOPT_0x145
+	CALL SUBOPT_0x144
 ; 0007 024C 
 ; 0007 024D         if( config_dout[ch].eventSource[i] != 0x00 ){
-	CALL SUBOPT_0x11F
+	CALL SUBOPT_0x11E
 	CALL __EEPROMRDB
 	CPI  R30,0
 	BREQ _0xE008A
 ; 0007 024E             printDebug("[0x%02X]",config_dout[ch].eventSource[i]);
-	CALL SUBOPT_0x12A
-	CALL SUBOPT_0x11A
-	CALL SUBOPT_0x11F
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x129
+	CALL SUBOPT_0x119
+	CALL SUBOPT_0x11E
+	CALL SUBOPT_0x134
 ; 0007 024F         }
 ; 0007 0250     }
 _0xE008A:
@@ -13708,7 +13690,7 @@ _0xE008A:
 	RJMP _0xE0088
 _0xE0089:
 ; 0007 0251     printDebug("\r\n");
-	CALL SUBOPT_0x108
+	CALL SUBOPT_0x107
 ; 0007 0252 
 ; 0007 0253     config_dout_flag[ch]                =   0x01;
 	LDD  R26,Y+4
@@ -13733,7 +13715,7 @@ _0xE0089:
 ; 0007 025A {
 _setAuxAinConfig:
 ; 0007 025B     if((ch < 0) || (ch > MAX_AI_CHANNEL)){
-	CALL SUBOPT_0x109
+	CALL SUBOPT_0x108
 ;	ch -> Y+2
 ;	*newConfig -> Y+0
 	BRMI _0xE008C
@@ -13750,37 +13732,37 @@ _0xE008C:
 ; 0007 025E 
 ; 0007 025F     config_ain[ch].channelEnable        =   newConfig->channelEnable;
 _0xE008B:
-	CALL SUBOPT_0x120
+	CALL SUBOPT_0x11F
 	SUBI R30,LOW(-_config_ain)
 	SBCI R31,HIGH(-_config_ain)
 	MOVW R0,R30
 	LD   R26,Y
 	LDD  R27,Y+1
-	CALL SUBOPT_0x133
+	CALL SUBOPT_0x132
 ; 0007 0260     config_ain[ch].alarmLevel           =   newConfig->alarmLevel;
-	CALL SUBOPT_0x120
+	CALL SUBOPT_0x11F
 	__ADDW1MN _config_ain,1
-	CALL SUBOPT_0x140
-	CALL SUBOPT_0x13C
+	CALL SUBOPT_0x13F
+	CALL SUBOPT_0x13B
 ; 0007 0261 
 ; 0007 0262     printDebug("\r\n channel         >> [%d]",      ch);
-	CALL SUBOPT_0x142
+	CALL SUBOPT_0x141
 	CALL SUBOPT_0xE9
 ; 0007 0263     printDebug("\r\n channelEnable   >> 0x%02X",    config_ain[ch].channelEnable);
-	CALL SUBOPT_0x143
+	CALL SUBOPT_0x142
 	LDI  R30,LOW(5)
 	CALL __MULB1W2U
 	SUBI R30,LOW(-_config_ain)
 	SBCI R31,HIGH(-_config_ain)
 	MOVW R26,R30
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x134
 ; 0007 0264     printDebug("\r\n alarmLevel      >> %d",        config_ain[ch].alarmLevel);
 	__POINTD1FN _0xE0000,2655
-	CALL SUBOPT_0x144
+	CALL SUBOPT_0x143
 	LDI  R30,LOW(5)
 	CALL __MULB1W2U
 	__ADDW1MN _config_ain,1
-	CALL SUBOPT_0x149
+	CALL SUBOPT_0x148
 ; 0007 0265 
 ; 0007 0266     config_ain_flag[ch]                 = 0x01;
 	LDD  R26,Y+2
@@ -13832,7 +13814,7 @@ _0xE008E:
 	BRLO _0xE0091
 ; 0007 0275         printDebug("\r\n<setAuxAoutConfig> eventSourceNumber is too long (%d)!!\r\n",(newConfig->eventSourceNumber));
 	__POINTD1FN _0xE0000,2719
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x104
 	LDD  R30,Z+5
 	CALL SUBOPT_0x29
 ; 0007 0276         return -1;
@@ -13843,77 +13825,77 @@ _0xE008E:
 ; 0007 0278 
 ; 0007 0279     config_aout[ch].channelEnable       =   newConfig->channelEnable;
 _0xE0091:
-	CALL SUBOPT_0x122
+	CALL SUBOPT_0x121
 	SUBI R30,LOW(-_config_aout)
 	SBCI R31,HIGH(-_config_aout)
 	MOVW R0,R30
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
-	CALL SUBOPT_0x133
+	CALL SUBOPT_0x132
 ; 0007 027A     config_aout[ch].levelOnEvent        =   newConfig->levelOnEvent;
-	CALL SUBOPT_0x122
+	CALL SUBOPT_0x121
 	__ADDW1MN _config_aout,1
 	MOVW R0,R30
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
 	ADIW R26,1
-	CALL SUBOPT_0x13C
+	CALL SUBOPT_0x13B
 ; 0007 027B     config_aout[ch].eventSourceNumber   =   newConfig->eventSourceNumber;
-	CALL SUBOPT_0x122
+	CALL SUBOPT_0x121
 	__ADDW1MN _config_aout,5
 	MOVW R26,R30
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	LDD  R30,Z+5
-	CALL SUBOPT_0x146
+	CALL SUBOPT_0x145
 ; 0007 027C 
 ; 0007 027D     printDebug("\r\n channel           >> [%d]",    ch);
 ; 0007 027E     printDebug("\r\n channelEnable     >> 0x%02X",  config_aout[ch].channelEnable);
 	__POINTD1FN _0xE0000,2541
-	CALL SUBOPT_0x14A
+	CALL SUBOPT_0x149
 	SUBI R30,LOW(-_config_aout)
 	SBCI R31,HIGH(-_config_aout)
 	MOVW R26,R30
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x134
 ; 0007 027F     printDebug("\r\n levelOnEvent      >> %f",      config_aout[ch].levelOnEvent);
 	__POINTD1FN _0xE0000,2779
-	CALL SUBOPT_0x14A
-	__ADDW1MN _config_aout,1
 	CALL SUBOPT_0x149
+	__ADDW1MN _config_aout,1
+	CALL SUBOPT_0x148
 ; 0007 0280     printDebug("\r\n eventSourceNumber >> %d",      config_aout[ch].eventSourceNumber);
-	CALL SUBOPT_0x147
-	CALL SUBOPT_0x14A
-	CALL SUBOPT_0x123
+	CALL SUBOPT_0x146
+	CALL SUBOPT_0x149
+	CALL SUBOPT_0x122
 	CALL SUBOPT_0x29
 ; 0007 0281     printDebug("\r\n eventSource       >> ");
-	CALL SUBOPT_0x148
+	CALL SUBOPT_0x147
 ; 0007 0282 
 ; 0007 0283     for(i=0;i<config_aout[ch].eventSourceNumber;i++){
 	__GETWRN 16,17,0
 _0xE0093:
+	CALL SUBOPT_0x121
 	CALL SUBOPT_0x122
-	CALL SUBOPT_0x123
-	CALL SUBOPT_0x11E
+	CALL SUBOPT_0x11D
 	BRGE _0xE0094
 ; 0007 0284 
 ; 0007 0285         config_aout[ch].eventSource[i]  =   newConfig->eventSource[i];
-	CALL SUBOPT_0x122
-	CALL SUBOPT_0x124
 	CALL SUBOPT_0x121
+	CALL SUBOPT_0x123
+	CALL SUBOPT_0x120
 	LD   R30,Z
 	CALL __EEPROMWRB
 ; 0007 0286 
 ; 0007 0287         if( config_aout[ch].eventSource[i] != 0x00 ){
-	CALL SUBOPT_0x122
-	CALL SUBOPT_0x124
+	CALL SUBOPT_0x121
+	CALL SUBOPT_0x123
 	CALL __EEPROMRDB
 	CPI  R30,0
 	BREQ _0xE0095
 ; 0007 0288             printDebug("[0x%02X]",config_aout[ch].eventSource[i]);
-	CALL SUBOPT_0x12A
-	CALL SUBOPT_0x14A
-	CALL SUBOPT_0x124
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x129
+	CALL SUBOPT_0x149
+	CALL SUBOPT_0x123
+	CALL SUBOPT_0x134
 ; 0007 0289         }
 ; 0007 028A     }
 _0xE0095:
@@ -13921,7 +13903,7 @@ _0xE0095:
 	RJMP _0xE0093
 _0xE0094:
 ; 0007 028B     printDebug("\r\n");
-	CALL SUBOPT_0x108
+	CALL SUBOPT_0x107
 ; 0007 028C 
 ; 0007 028D     config_aout_flag[ch]                =   0x01;
 	LDD  R26,Y+4
@@ -13958,7 +13940,7 @@ _setBuzzerConfig:
 	BRLO _0xE0096
 ; 0007 0297         printDebug("\r\n<setBuzzerConfig> eventSourceNumber is too long (%d)!!\r\n",(newConfig->eventSourceNumber));
 	__POINTD1FN _0xE0000,2806
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x104
 	LDD  R30,Z+1
 	CALL SUBOPT_0x29
 ; 0007 0298         return -1;
@@ -13989,11 +13971,11 @@ _0xE0096:
 	CALL __PUTPARD1
 	LDI  R26,LOW(_config_buzz)
 	LDI  R27,HIGH(_config_buzz)
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x134
 ; 0007 029F     printDebug("\r\n eventSourceNumber >> %d",      config_buzz.eventSourceNumber);
-	CALL SUBOPT_0x147
+	CALL SUBOPT_0x146
 	CALL __PUTPARD1
-	CALL SUBOPT_0x127
+	CALL SUBOPT_0x126
 	CALL SUBOPT_0x29
 ; 0007 02A0     printDebug("\r\n eventSource       >>");
 	__POINTD1FN _0xE0000,2896
@@ -14002,27 +13984,27 @@ _0xE0096:
 ; 0007 02A2     for(i=0;i<config_buzz.eventSourceNumber;i++){
 	__GETWRN 16,17,0
 _0xE0098:
-	CALL SUBOPT_0x127
-	CALL SUBOPT_0x11E
+	CALL SUBOPT_0x126
+	CALL SUBOPT_0x11D
 	BRGE _0xE0099
 ; 0007 02A3 
 ; 0007 02A4         config_buzz.eventSource[i]      =   newConfig->eventSource[i];
-	CALL SUBOPT_0x14B
+	CALL SUBOPT_0x14A
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
-	CALL SUBOPT_0x12B
+	CALL SUBOPT_0x12A
 	CALL __EEPROMWRB
 ; 0007 02A5 
 ; 0007 02A6         if( config_buzz.eventSource[i] != 0x00 ){
-	CALL SUBOPT_0x14B
+	CALL SUBOPT_0x14A
 	CALL __EEPROMRDB
 	CPI  R30,0
 	BREQ _0xE009A
 ; 0007 02A7             printDebug("[0x%02X]",config_buzz.eventSource[i]);
-	CALL SUBOPT_0x12A
+	CALL SUBOPT_0x129
 	CALL __PUTPARD1
-	CALL SUBOPT_0x14B
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x14A
+	CALL SUBOPT_0x134
 ; 0007 02A8         }
 ; 0007 02A9 
 ; 0007 02AA     }
@@ -14031,12 +14013,12 @@ _0xE009A:
 	RJMP _0xE0098
 _0xE0099:
 ; 0007 02AB     printDebug("\r\n");
-	CALL SUBOPT_0x108
+	CALL SUBOPT_0x107
 ; 0007 02AC 
 ; 0007 02AD     config_buzz_flag                    =   0x01;
 	LDI  R26,LOW(_config_buzz_flag)
 	LDI  R27,HIGH(_config_buzz_flag)
-	CALL SUBOPT_0x134
+	CALL SUBOPT_0x133
 ; 0007 02AE 
 ; 0007 02AF     is_buzzer_config_update             =   1;
 	STS  _is_buzzer_config_update,R30
@@ -14065,42 +14047,42 @@ _setEnvAlarmConfig:
 	LD   R26,Y
 	LDD  R27,Y+1
 	ADIW R26,4
-	CALL SUBOPT_0x141
+	CALL SUBOPT_0x140
 ; 0007 02B8     config_alm.batteryLevel             =   newConfig->batteryLevel;
 	__POINTW1MN _config_alm,6
 	MOVW R0,R30
 	LD   R26,Y
 	LDD  R27,Y+1
 	ADIW R26,6
-	CALL SUBOPT_0x13C
+	CALL SUBOPT_0x13B
 ; 0007 02B9     config_alm.commSignalLevel          =   newConfig->commSignalLevel;
 	__POINTW1MN _config_alm,10
 	MOVW R0,R30
 	LD   R26,Y
 	LDD  R27,Y+1
 	ADIW R26,10
-	CALL SUBOPT_0x13C
+	CALL SUBOPT_0x13B
 ; 0007 02BA     config_alm.commLostDelay            =   newConfig->commLostDelay;
 	__POINTW1MN _config_alm,14
 	MOVW R0,R30
 	LD   R26,Y
 	LDD  R27,Y+1
 	ADIW R26,14
-	CALL SUBOPT_0x141
+	CALL SUBOPT_0x140
 ; 0007 02BB     config_alm.memoryMin                =   newConfig->memoryMin;
 	__POINTW1MN _config_alm,16
 	MOVW R0,R30
 	LD   R26,Y
 	LDD  R27,Y+1
 	ADIW R26,16
-	CALL SUBOPT_0x141
+	CALL SUBOPT_0x140
 ; 0007 02BC 
 ; 0007 02BD     printDebug("\r\n gsmRSSILevel     >> %f dB",    config_alm.gsmRSSILevel);
 	__POINTD1FN _0xE0000,2920
 	CALL __PUTPARD1
 	LDI  R26,LOW(_config_alm)
 	LDI  R27,HIGH(_config_alm)
-	CALL SUBOPT_0x14C
+	CALL SUBOPT_0x14B
 ; 0007 02BE     printDebug("\r\n gsmCreditBalance >> %d Baht",  config_alm.gsmCreditBalance);
 	__POINTD1FN _0xE0000,2949
 	CALL __PUTPARD1
@@ -14111,12 +14093,12 @@ _setEnvAlarmConfig:
 	__POINTD1FN _0xE0000,2980
 	CALL __PUTPARD1
 	__POINTW2MN _config_alm,6
-	CALL SUBOPT_0x14C
+	CALL SUBOPT_0x14B
 ; 0007 02C0     printDebug("\r\n commSignalLevel  >> %f dB",    config_alm.commSignalLevel);
 	__POINTD1FN _0xE0000,3012
 	CALL __PUTPARD1
 	__POINTW2MN _config_alm,10
-	CALL SUBOPT_0x14C
+	CALL SUBOPT_0x14B
 ; 0007 02C1     printDebug("\r\n commLostDelay    >> %d sec",   config_alm.commLostDelay);
 	__POINTD1FN _0xE0000,3041
 	CALL __PUTPARD1
@@ -14134,7 +14116,7 @@ _setEnvAlarmConfig:
 ; 0007 02C4     config_alm_flag                 = 0x01;
 	LDI  R26,LOW(_config_alm_flag)
 	LDI  R27,HIGH(_config_alm_flag)
-	CALL SUBOPT_0x134
+	CALL SUBOPT_0x133
 ; 0007 02C5     is_env_config_update            = 1;
 	STS  _is_env_config_update,R30
 ; 0007 02C6     return 0;
@@ -14156,15 +14138,15 @@ _setStatusReportConfig:
 	CALL __EEPROMWRB
 ; 0007 02CC     config_stat.intv                    =   newConfig->intv;
 	__POINTW1MN _config_stat,1
+	CALL SUBOPT_0x13F
 	CALL SUBOPT_0x140
-	CALL SUBOPT_0x141
 ; 0007 02CD 
 ; 0007 02CE     printDebug("\r\n accm     >> %f dB",    config_stat.accm);
 	__POINTD1FN _0xE0000,3101
 	CALL __PUTPARD1
 	LDI  R26,LOW(_config_stat)
 	LDI  R27,HIGH(_config_stat)
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x134
 ; 0007 02CF     printDebug("\r\n intv     >> %d Baht",  config_stat.intv);
 	__POINTD1FN _0xE0000,3122
 	CALL __PUTPARD1
@@ -14176,7 +14158,7 @@ _setStatusReportConfig:
 ; 0007 02D1     config_stat_flag                    = 0x01;
 	LDI  R26,LOW(_config_stat_flag)
 	LDI  R27,HIGH(_config_stat_flag)
-	CALL SUBOPT_0x134
+	CALL SUBOPT_0x133
 ; 0007 02D2     is_status_config_update             = 1;
 	STS  _is_status_config_update,R30
 ; 0007 02D3     return 0;
@@ -14233,7 +14215,7 @@ _isDeviceConfig:
 ; 0007 02FF     int i   = 0;
 ; 0007 0300 
 ; 0007 0301     if( config_prop_flag || config_oper_flag || config_buzz_flag || config_alm_flag || config_stat_flag ){
-	CALL SUBOPT_0x14D
+	CALL SUBOPT_0x14C
 ;	i -> R16,R17
 	LDI  R26,LOW(_config_prop_flag)
 	LDI  R27,HIGH(_config_prop_flag)
@@ -14276,7 +14258,7 @@ _0xE00AE:
 ; 0007 0306         if(config_sens_flag[i]){
 	LDI  R26,LOW(_config_sens_flag)
 	LDI  R27,HIGH(_config_sens_flag)
-	CALL SUBOPT_0xF9
+	CALL SUBOPT_0xF8
 	CPI  R30,0
 	BREQ _0xE00B0
 ; 0007 0307             return 1;
@@ -14299,7 +14281,7 @@ _0xE00B2:
 ; 0007 030D         if(config_din_flag[i]){
 	LDI  R26,LOW(_config_din_flag)
 	LDI  R27,HIGH(_config_din_flag)
-	CALL SUBOPT_0xF9
+	CALL SUBOPT_0xF8
 	CPI  R30,0
 	BREQ _0xE00B4
 ; 0007 030E             return 1;
@@ -14322,7 +14304,7 @@ _0xE00B6:
 ; 0007 0314         if(config_dout_flag[i]){
 	LDI  R26,LOW(_config_dout_flag)
 	LDI  R27,HIGH(_config_dout_flag)
-	CALL SUBOPT_0xF9
+	CALL SUBOPT_0xF8
 	CPI  R30,0
 	BREQ _0xE00B8
 ; 0007 0315             return 1;
@@ -14390,7 +14372,7 @@ _0xE00BA:
 _0xE00BC:
 	LDI  R26,LOW(_is_sensor_config_update)
 	LDI  R27,HIGH(_is_sensor_config_update)
-	CALL SUBOPT_0x14E
+	CALL SUBOPT_0x14D
 ; 0007 032D     }
 _0xE00B9:
 	__ADDWRN 16,17,1
@@ -14417,7 +14399,7 @@ _0xE00BE:
 ; 0007 0334         is_din_config_update[i] = 0;
 	LDI  R26,LOW(_is_din_config_update)
 	LDI  R27,HIGH(_is_din_config_update)
-	CALL SUBOPT_0x14E
+	CALL SUBOPT_0x14D
 ; 0007 0335     }
 	__ADDWRN 16,17,1
 	RJMP _0xE00BE
@@ -14434,7 +14416,7 @@ _0xE00C1:
 	__MULBNWRU 16,17,38
 	CALL SUBOPT_0x16
 ; 0007 0339         is_dout_config_update[i] = 0;
-	CALL SUBOPT_0x14E
+	CALL SUBOPT_0x14D
 ; 0007 033A     }
 	__ADDWRN 16,17,1
 	RJMP _0xE00C1
@@ -14449,7 +14431,7 @@ _0xE00C2:
 ; 0007 0340     is_env_config_update = 0;
 ; 0007 0341 
 ; 0007 0342     return 0;
-	CALL SUBOPT_0x14F
+	CALL SUBOPT_0x14E
 _0x20E0088:
 	ADIW R28,4
 	RET
@@ -14732,7 +14714,7 @@ _ETH_sendNack:
 ; 0009 001B 
 ; 0009 001C     frameData[i++]      = PROTOERROR;
 	ST   -Y,R26
-	CALL SUBOPT_0x150
+	CALL SUBOPT_0x14F
 ;	frameID -> Y+15
 ;	errCode -> Y+14
 ;	i -> R16,R17
@@ -14747,15 +14729,15 @@ _0x120004:
 	__CPWRN 18,19,8
 	BRGE _0x120005
 ; 0009 001F         frameData[i++]  = DEVICE_SERIAL[k];
+	CALL SUBOPT_0x150
 	CALL SUBOPT_0x151
-	CALL SUBOPT_0x152
 ; 0009 0020     }
 	__ADDWRN 18,19,1
 	RJMP _0x120004
 _0x120005:
 ; 0009 0021 
 ; 0009 0022     frameData[i++]      = errCode;
-	CALL SUBOPT_0x151
+	CALL SUBOPT_0x150
 	LDD  R26,Y+14
 	STD  Z+0,R26
 ; 0009 0023 
@@ -14764,11 +14746,11 @@ _0x120005:
 	CALL SUBOPT_0x3
 ; 0009 0025     //print_payload(frameData,i);
 ; 0009 0026     ETH_send(frameData,i,frameID,0);
-	CALL SUBOPT_0x153
+	CALL SUBOPT_0x152
 	LDD  R30,Y+19
 	ST   -Y,R30
-	CALL SUBOPT_0xF6
-	CALL SUBOPT_0x154
+	CALL SUBOPT_0xF5
+	CALL SUBOPT_0x153
 ; 0009 0027 
 ; 0009 0028     return 0;
 	RJMP _0x20E0085
@@ -14783,7 +14765,7 @@ _ETH_sendStatusRequestAck:
 ; 0009 0030     frameData[i++]      = STATREQA;
 	ST   -Y,R26
 	SBIW R28,15
-	CALL SUBOPT_0x155
+	CALL SUBOPT_0x154
 ;	frameID -> Y+21
 ;	accm -> Y+20
 ;	status -> Y+19
@@ -14799,19 +14781,19 @@ _0x120007:
 	__CPWRN 18,19,8
 	BRGE _0x120008
 ; 0009 0033         frameData[i++]  = DEVICE_SERIAL[k];
+	CALL SUBOPT_0x150
 	CALL SUBOPT_0x151
-	CALL SUBOPT_0x152
 ; 0009 0034     }
 	__ADDWRN 18,19,1
 	RJMP _0x120007
 _0x120008:
 ; 0009 0035 
 ; 0009 0036     frameData[i++]      = accm;
-	CALL SUBOPT_0x151
+	CALL SUBOPT_0x150
 	LDD  R26,Y+20
 	STD  Z+0,R26
 ; 0009 0037     frameData[i++]      = status;
-	CALL SUBOPT_0x151
+	CALL SUBOPT_0x150
 	LDD  R26,Y+19
 	STD  Z+0,R26
 ; 0009 0038 
@@ -14821,11 +14803,11 @@ _0x120008:
 ; 0009 003A     //print_payload(frameData,i);
 ; 0009 003B 
 ; 0009 003C     ETH_send(frameData,i,frameID,0);
-	CALL SUBOPT_0x153
+	CALL SUBOPT_0x152
 	LDD  R30,Y+25
 	ST   -Y,R30
-	CALL SUBOPT_0xF6
-	CALL SUBOPT_0x154
+	CALL SUBOPT_0xF5
+	CALL SUBOPT_0x153
 ; 0009 003D 
 ; 0009 003E     return 0;
 	ADIW R28,22
@@ -14853,7 +14835,7 @@ _ETH_sendStatusReportCmd:
 ;	k -> R18,R19
 ;	frameLen -> R20,R21
 ;	*frameData -> Y+6
-	CALL SUBOPT_0x156
+	CALL SUBOPT_0x155
 ; 0009 0049     if(frameLen > 250){
 	BRLT _0x120009
 ; 0009 004A         printDebug("<ETH_sendStatusReportCmd> frameLen too long (%d bytes)\r\n",frameLen);
@@ -14867,7 +14849,7 @@ _ETH_sendStatusReportCmd:
 ; 0009 004D 
 ; 0009 004E     frameData           = (char *) malloc (frameLen);
 _0x120009:
-	CALL SUBOPT_0x157
+	CALL SUBOPT_0x156
 ; 0009 004F     if(frameData == NULL){
 	BRNE _0x12000A
 ; 0009 0050         printDebug("<ETH_sendStatusReportCmd> malloc failed (%d bytes)\r\n",frameLen);
@@ -14881,7 +14863,7 @@ _0x120009:
 ; 0009 0053 
 ; 0009 0054     frameData[i++]      = STATREPC;
 _0x12000A:
-	CALL SUBOPT_0x158
+	CALL SUBOPT_0x157
 	ADD  R26,R30
 	ADC  R27,R31
 	LDI  R30,LOW(42)
@@ -14893,15 +14875,15 @@ _0x12000C:
 	__CPWRN 18,19,8
 	BRGE _0x12000D
 ; 0009 0057         frameData[i++]  = DEVICE_SERIAL[k];
+	CALL SUBOPT_0x157
 	CALL SUBOPT_0x158
-	CALL SUBOPT_0x159
 ; 0009 0058     }
 	__ADDWRN 18,19,1
 	RJMP _0x12000C
 _0x12000D:
 ; 0009 0059 
 ; 0009 005A     memcpy(&frameData[i],&timestamp,sizeof(timestamp));
-	CALL SUBOPT_0x15A
+	CALL SUBOPT_0x159
 	MOVW R30,R28
 	ADIW R30,15
 	CALL SUBOPT_0x4D
@@ -14909,25 +14891,25 @@ _0x12000D:
 	__ADDWRN 16,17,4
 ; 0009 005C 
 ; 0009 005D     frameData[i++]      = accm;
-	CALL SUBOPT_0x158
+	CALL SUBOPT_0x157
 	ADD  R30,R26
 	ADC  R31,R27
 	LDD  R26,Y+12
 	STD  Z+0,R26
 ; 0009 005E 
 ; 0009 005F     memcpy(&frameData[i],paraResp,paraLen);
+	CALL SUBOPT_0x159
 	CALL SUBOPT_0x15A
-	CALL SUBOPT_0x15B
 ; 0009 0060     i += paraLen;
 ; 0009 0061 
 ; 0009 0062     ETH_send(frameData,i,0x00,CMD_TIMEOUT);
-	CALL SUBOPT_0x15C
+	CALL SUBOPT_0x15B
 	ST   -Y,R17
 	ST   -Y,R16
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x15D
+	CALL SUBOPT_0x15C
 ; 0009 0063     free( frameData );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 0009 0064 }
 _0x20E0087:
 	CALL __LOADLOCR6
@@ -14978,7 +14960,7 @@ _0x120010:
 ; 0009 0071 
 ; 0009 0072     frameData[i++]      =   EVENREPC;
 _0x12000E:
-	CALL SUBOPT_0x15F
+	CALL SUBOPT_0x15E
 	ADD  R26,R30
 	ADC  R27,R31
 	LDI  R30,LOW(58)
@@ -14990,8 +14972,8 @@ _0x120012:
 	__CPWRN 18,19,8
 	BRGE _0x120013
 ; 0009 0075         frameData[i++]  = DEVICE_SERIAL[k];
-	CALL SUBOPT_0x15F
-	CALL SUBOPT_0x159
+	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x158
 ; 0009 0076     }
 	__ADDWRN 18,19,1
 	RJMP _0x120012
@@ -15009,19 +14991,19 @@ _0x120013:
 	__ADDWRN 16,17,4
 ; 0009 007A 
 ; 0009 007B     frameData[i++]      =   eventType;
-	CALL SUBOPT_0x15F
+	CALL SUBOPT_0x15E
 	ADD  R30,R26
 	ADC  R31,R27
 	LDD  R26,Y+29
 	STD  Z+0,R26
 ; 0009 007C     frameData[i++]      =   eventID;
-	CALL SUBOPT_0x15F
+	CALL SUBOPT_0x15E
 	ADD  R30,R26
 	ADC  R31,R27
 	LDD  R26,Y+24
 	STD  Z+0,R26
 ; 0009 007D     frameData[i++]      =   statusCode;
-	CALL SUBOPT_0x15F
+	CALL SUBOPT_0x15E
 	ADD  R30,R26
 	ADC  R31,R27
 	LDD  R26,Y+23
@@ -15056,12 +15038,12 @@ _0x120013:
 	CALL __PUTPARD1
 	LDD  R30,Y+26
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x160
+	CALL SUBOPT_0x15F
 	LDD  R30,Y+36
 	CALL SUBOPT_0x65
 	LDD  R30,Y+39
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x161
+	CALL SUBOPT_0x160
 ; 0009 0088         }
 ; 0009 0089     }
 _0x120015:
@@ -15092,7 +15074,7 @@ _0x120016:
 	ST   -Y,R17
 	ST   -Y,R16
 	LDD  R30,Y+26
-	CALL SUBOPT_0x15D
+	CALL SUBOPT_0x15C
 	MOVW R20,R30
 ; 0009 0093     if(res < 0){
 	TST  R21
@@ -15123,7 +15105,7 @@ _ETH_sendConfigManageNack:
 ; 0009 00A0     frameData[i++]      = CONFMANA;
 	ST   -Y,R26
 	SBIW R28,12
-	CALL SUBOPT_0x155
+	CALL SUBOPT_0x154
 ;	frameID -> Y+19
 ;	accd -> Y+18
 ;	cnfg -> Y+17
@@ -15140,23 +15122,23 @@ _0x12001B:
 	__CPWRN 18,19,8
 	BRGE _0x12001C
 ; 0009 00A3         frameData[i++]  = DEVICE_SERIAL[k];
+	CALL SUBOPT_0x150
 	CALL SUBOPT_0x151
-	CALL SUBOPT_0x152
 ; 0009 00A4     }
 	__ADDWRN 18,19,1
 	RJMP _0x12001B
 _0x12001C:
 ; 0009 00A5 
 ; 0009 00A6     frameData[i++]      = accd;
-	CALL SUBOPT_0x151
+	CALL SUBOPT_0x150
 	LDD  R26,Y+18
 	STD  Z+0,R26
 ; 0009 00A7     frameData[i++]      = cnfg;
-	CALL SUBOPT_0x151
+	CALL SUBOPT_0x150
 	LDD  R26,Y+17
 	STD  Z+0,R26
 ; 0009 00A8     frameData[i++]      = status;
-	CALL SUBOPT_0x151
+	CALL SUBOPT_0x150
 	LDD  R26,Y+16
 	STD  Z+0,R26
 ; 0009 00A9 
@@ -15166,11 +15148,11 @@ _0x12001C:
 ; 0009 00AB     //print_payload(frameData,i);
 ; 0009 00AC 
 ; 0009 00AD     ETH_send(frameData,i,frameID,0);
-	CALL SUBOPT_0x153
+	CALL SUBOPT_0x152
 	LDD  R30,Y+23
 	ST   -Y,R30
-	CALL SUBOPT_0xF6
-	CALL SUBOPT_0x154
+	CALL SUBOPT_0xF5
+	CALL SUBOPT_0x153
 ; 0009 00AE 
 ; 0009 00AF     return 0;
 	ADIW R28,20
@@ -15200,35 +15182,35 @@ _ETH_sendConfigManageAck:
 ;	k -> R18,R19
 ;	frameLen -> R20,R21
 ;	*frameData -> Y+6
-	CALL SUBOPT_0x156
+	CALL SUBOPT_0x155
 ; 0009 00BA     if(frameLen > 250){
 	BRLT _0x12001D
 ; 0009 00BB         printDebug("<ETH_sendConfigManageAck> frameLen too long (%d bytes)\r\n",frameLen);
 	__POINTD1FN _0x120000,379
 	CALL SUBOPT_0x49
 ; 0009 00BC         ETH_sendConfigManageNack(frameID,accd,cnfg,ERROR);
-	CALL SUBOPT_0x162
+	CALL SUBOPT_0x161
 ; 0009 00BD         return -1;
 	RJMP _0x20E0084
 ; 0009 00BE     }
 ; 0009 00BF 
 ; 0009 00C0     frameData           = (char *) malloc (frameLen);
 _0x12001D:
-	CALL SUBOPT_0x157
+	CALL SUBOPT_0x156
 ; 0009 00C1     if(frameData == NULL){
 	BRNE _0x12001E
 ; 0009 00C2         printDebug("<ETH_sendConfigManageAck> malloc failed (%d bytes)\r\n",frameLen);
 	__POINTD1FN _0x120000,436
 	CALL SUBOPT_0x49
 ; 0009 00C3         ETH_sendConfigManageNack(frameID,accd,cnfg,ERROR);
-	CALL SUBOPT_0x162
+	CALL SUBOPT_0x161
 ; 0009 00C4         return -1;
 	RJMP _0x20E0084
 ; 0009 00C5     }
 ; 0009 00C6 
 ; 0009 00C7     frameData[i++]      = CONFMANA;
 _0x12001E:
-	CALL SUBOPT_0x158
+	CALL SUBOPT_0x157
 	ADD  R26,R30
 	ADC  R27,R31
 	LDI  R30,LOW(75)
@@ -15240,27 +15222,27 @@ _0x120020:
 	__CPWRN 18,19,8
 	BRGE _0x120021
 ; 0009 00CA         frameData[i++]  = DEVICE_SERIAL[k];
+	CALL SUBOPT_0x157
 	CALL SUBOPT_0x158
-	CALL SUBOPT_0x159
 ; 0009 00CB     }
 	__ADDWRN 18,19,1
 	RJMP _0x120020
 _0x120021:
 ; 0009 00CC 
 ; 0009 00CD     frameData[i++]      = accd;
-	CALL SUBOPT_0x158
+	CALL SUBOPT_0x157
 	ADD  R30,R26
 	ADC  R31,R27
 	LDD  R26,Y+14
 	STD  Z+0,R26
 ; 0009 00CE     frameData[i++]      = cnfg;
-	CALL SUBOPT_0x158
+	CALL SUBOPT_0x157
 	ADD  R30,R26
 	ADC  R31,R27
 	LDD  R26,Y+13
 	STD  Z+0,R26
 ; 0009 00CF     frameData[i++]      = status;
-	CALL SUBOPT_0x158
+	CALL SUBOPT_0x157
 	ADD  R30,R26
 	ADC  R31,R27
 	LDD  R26,Y+12
@@ -15271,8 +15253,8 @@ _0x120021:
 	CALL __CPW02
 	BRGE _0x120022
 ; 0009 00D1         memcpy(&frameData[i],cnfgData,cnfgLen);
+	CALL SUBOPT_0x159
 	CALL SUBOPT_0x15A
-	CALL SUBOPT_0x15B
 ; 0009 00D2         i += cnfgLen;
 ; 0009 00D3     }
 ; 0009 00D4 
@@ -15281,20 +15263,20 @@ _0x120022:
 	__POINTD1FN _0x120000,489
 	CALL SUBOPT_0x3
 ; 0009 00D6     print_payload(frameData,i);
-	CALL SUBOPT_0x15C
+	CALL SUBOPT_0x15B
 	MOVW R26,R16
-	CALL SUBOPT_0x163
+	CALL SUBOPT_0x162
 ; 0009 00D7 
 ; 0009 00D8     ETH_send(frameData,i,frameID,0);
 	ST   -Y,R17
 	ST   -Y,R16
 	LDD  R30,Y+19
 	ST   -Y,R30
-	CALL SUBOPT_0xF6
+	CALL SUBOPT_0xF5
 	CALL _ETH_send
 ; 0009 00D9 
 ; 0009 00DA     free( frameData );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 0009 00DB 
 ; 0009 00DC     return 0;
 	LDI  R30,LOW(0)
@@ -15367,7 +15349,7 @@ _0x120023:
 	STD  Y+6,R30
 ; 0009 00EE 
 ; 0009 00EF     frameData[i++]      =   DATAREPC;
-	CALL SUBOPT_0x164
+	CALL SUBOPT_0x163
 	ADD  R26,R30
 	ADC  R27,R31
 	LDI  R30,LOW(90)
@@ -15379,8 +15361,8 @@ _0x120027:
 	__CPWRN 18,19,8
 	BRGE _0x120028
 ; 0009 00F2         frameData[i++]  = DEVICE_SERIAL[k];
-	CALL SUBOPT_0x164
-	CALL SUBOPT_0x159
+	CALL SUBOPT_0x163
+	CALL SUBOPT_0x158
 ; 0009 00F3     }
 	__ADDWRN 18,19,1
 	RJMP _0x120027
@@ -15398,7 +15380,7 @@ _0x120028:
 	__ADDWRN 16,17,4
 ; 0009 00F7 
 ; 0009 00F8     frameData[i++]      =   did;
-	CALL SUBOPT_0x164
+	CALL SUBOPT_0x163
 	ADD  R30,R26
 	ADC  R31,R27
 	LDD  R26,Y+6
@@ -15427,7 +15409,7 @@ _0x120028:
 ; 0009 0101         res = addDataLogQueue(frameID,timestamp,sensorID,value);
 	LDD  R30,Y+25
 	ST   -Y,R30
-	CALL SUBOPT_0x160
+	CALL SUBOPT_0x15F
 	LDD  R30,Y+35
 	LDD  R31,Y+35+1
 	ST   -Y,R31
@@ -15449,8 +15431,8 @@ _0x120028:
 	LDD  R30,Y+42
 	LDD  R31,Y+42+1
 	CALL SUBOPT_0x34
-	CALL SUBOPT_0x165
-	CALL SUBOPT_0x161
+	CALL SUBOPT_0x164
+	CALL SUBOPT_0x160
 ; 0009 0105         }
 ; 0009 0106     }
 _0x12002A:
@@ -15478,7 +15460,7 @@ _0x12002B:
 	ST   -Y,R17
 	ST   -Y,R16
 	LDD  R30,Y+29
-	CALL SUBOPT_0x15D
+	CALL SUBOPT_0x15C
 	MOVW R20,R30
 ; 0009 0110     if(res < 0){
 	TST  R21
@@ -15507,7 +15489,7 @@ _ETH_sendLogManipulationAck:
 ; 0009 011B     char    frameData[3 + sizeof(DEVICE_SERIAL)];
 ; 0009 011C 
 ; 0009 011D     frameData[i++]      = LOGMANIA;
-	CALL SUBOPT_0x166
+	CALL SUBOPT_0x165
 ;	frameID -> Y+17
 ;	accd -> Y+16
 ;	status -> Y+15
@@ -15523,16 +15505,16 @@ _0x120030:
 	__CPWRN 18,19,8
 	BRGE _0x120031
 ; 0009 0120         frameData[i++]  = DEVICE_SERIAL[k];
+	CALL SUBOPT_0x150
 	CALL SUBOPT_0x151
-	CALL SUBOPT_0x152
 ; 0009 0121     }
 	__ADDWRN 18,19,1
 	RJMP _0x120030
 _0x120031:
 ; 0009 0122 
 ; 0009 0123     frameData[i++]      = accd;
-	CALL SUBOPT_0x151
-	CALL SUBOPT_0x167
+	CALL SUBOPT_0x150
+	CALL SUBOPT_0x166
 ; 0009 0124     frameData[i++]      = status;
 	LDD  R26,Y+15
 	STD  Z+0,R26
@@ -15553,7 +15535,7 @@ _ETH_sendNetworkMaintenanceAck:
 ; 0009 0130     char    frameData[3 + sizeof(DEVICE_SERIAL)];
 ; 0009 0131 
 ; 0009 0132     frameData[i++]      = NETMAINA;
-	CALL SUBOPT_0x166
+	CALL SUBOPT_0x165
 ;	frameID -> Y+17
 ;	cmd -> Y+16
 ;	status -> Y+15
@@ -15569,16 +15551,16 @@ _0x120033:
 	__CPWRN 18,19,8
 	BRGE _0x120034
 ; 0009 0135         frameData[i++]  = DEVICE_SERIAL[k];
+	CALL SUBOPT_0x150
 	CALL SUBOPT_0x151
-	CALL SUBOPT_0x152
 ; 0009 0136     }
 	__ADDWRN 18,19,1
 	RJMP _0x120033
 _0x120034:
 ; 0009 0137 
 ; 0009 0138     frameData[i++]      = cmd;
-	CALL SUBOPT_0x151
-	CALL SUBOPT_0x167
+	CALL SUBOPT_0x150
+	CALL SUBOPT_0x166
 ; 0009 0139     frameData[i++]      = status;
 	LDD  R26,Y+15
 	STD  Z+0,R26
@@ -15598,7 +15580,7 @@ _ETH_remoteDeviceControlAck:
 ; 0009 0144     char    frameData[3 + sizeof(DEVICE_SERIAL)];
 ; 0009 0145 
 ; 0009 0146     frameData[i++]      = RMDCTRLA;
-	CALL SUBOPT_0x166
+	CALL SUBOPT_0x165
 ;	frameID -> Y+17
 ;	cmd -> Y+16
 ;	status -> Y+15
@@ -15614,16 +15596,16 @@ _0x120036:
 	__CPWRN 18,19,8
 	BRGE _0x120037
 ; 0009 0149         frameData[i++]  = DEVICE_SERIAL[k];
+	CALL SUBOPT_0x150
 	CALL SUBOPT_0x151
-	CALL SUBOPT_0x152
 ; 0009 014A     }
 	__ADDWRN 18,19,1
 	RJMP _0x120036
 _0x120037:
 ; 0009 014B 
 ; 0009 014C     frameData[i++]      = cmd;
-	CALL SUBOPT_0x151
-	CALL SUBOPT_0x167
+	CALL SUBOPT_0x150
+	CALL SUBOPT_0x166
 ; 0009 014D     frameData[i++]      = status;
 	LDD  R26,Y+15
 	STD  Z+0,R26
@@ -15634,11 +15616,11 @@ _0x20E0082:
 	CALL __PUTPARD1
 	CALL SUBOPT_0x36
 ; 0009 0150     ETH_send(frameData,i,frameID,0);
-	CALL SUBOPT_0x153
+	CALL SUBOPT_0x152
 	LDD  R30,Y+21
 	ST   -Y,R30
-	CALL SUBOPT_0xF6
-	CALL SUBOPT_0x154
+	CALL SUBOPT_0xF5
+	CALL SUBOPT_0x153
 ; 0009 0151 
 ; 0009 0152     return 0;
 	ADIW R28,18
@@ -15652,7 +15634,7 @@ _ETH_clearDuplicateRequestCmd:
 ; 0009 0158     char    frameData[2 + sizeof(DEVICE_SERIAL)];
 ; 0009 0159 
 ; 0009 015A     frameData[i++]  = CLRLISTC;
-	CALL SUBOPT_0x150
+	CALL SUBOPT_0x14F
 ;	i -> R16,R17
 ;	k -> R18,R19
 ;	frameData -> Y+4
@@ -15665,8 +15647,8 @@ _0x120039:
 	__CPWRN 18,19,8
 	BRGE _0x12003A
 ; 0009 015D         frameData[i++]  = DEVICE_SERIAL[k];
+	CALL SUBOPT_0x150
 	CALL SUBOPT_0x151
-	CALL SUBOPT_0x152
 ; 0009 015E     }
 	__ADDWRN 18,19,1
 	RJMP _0x120039
@@ -15675,7 +15657,7 @@ _0x12003A:
 ; 0009 0160     frameData[i++]  = CLR_DUPLIST;
 	MOVW R30,R16
 	__ADDWRN 16,17,1
-	CALL SUBOPT_0x168
+	CALL SUBOPT_0x167
 	LDI  R30,LOW(1)
 	ST   X,R30
 ; 0009 0161 
@@ -15683,11 +15665,11 @@ _0x12003A:
 	__POINTD1FN _0x120000,806
 	CALL SUBOPT_0x3
 ; 0009 0163     ETH_send(frameData,i,0xFF,0);
-	CALL SUBOPT_0x153
+	CALL SUBOPT_0x152
 	LDI  R30,LOW(255)
 	ST   -Y,R30
-	CALL SUBOPT_0xF6
-	CALL SUBOPT_0x154
+	CALL SUBOPT_0xF5
+	CALL SUBOPT_0x153
 ; 0009 0164 
 ; 0009 0165     return 0;
 	ADIW R28,14
@@ -15719,7 +15701,7 @@ _ETH_checkPushLog:
 ;	value -> Y+6
 ;	eventID -> R21
 ;	eventStatus -> R20
-	CALL SUBOPT_0x169
+	CALL SUBOPT_0x168
 	IN   R30,SPL
 	IN   R31,SPH
 	SBIW R30,1
@@ -15765,7 +15747,7 @@ _0x12003C:
 	CALL SUBOPT_0x34
 	CALL SUBOPT_0x51
 ; 0009 017E             res = LOG_openFile(&file,LOGFILE_DATA);
-	CALL SUBOPT_0x16A
+	CALL SUBOPT_0x169
 	CALL SUBOPT_0x5E
 	MOVW R16,R30
 ; 0009 017F             if(res < 0)
@@ -15782,8 +15764,8 @@ _0x12003C:
 _0x120040:
 ; 0009 0184             {
 ; 0009 0185                 res = LOG_insertData(&file,timestamp,channel,value);
+	CALL SUBOPT_0x169
 	CALL SUBOPT_0x16A
-	CALL SUBOPT_0x16B
 	ST   -Y,R19
 	ST   -Y,R18
 	CALL SUBOPT_0x61
@@ -15793,17 +15775,17 @@ _0x120040:
 	BRPL _0x120042
 ; 0009 0187                 {
 ; 0009 0188                     printDebug("<ETH_checkPushLog> LOG_insertData() failed\r\n");
-	CALL SUBOPT_0x16C
+	CALL SUBOPT_0x16B
 ; 0009 0189                 }
 ; 0009 018A 
 ; 0009 018B                 res = LOG_closeFile(&file);
 _0x120042:
-	CALL SUBOPT_0x16D
+	CALL SUBOPT_0x16C
 ; 0009 018C                 if(res < 0)
 	BRPL _0x120043
 ; 0009 018D                 {
 ; 0009 018E                     printDebug("<ETH_checkPushLog> LOG_closeFile() failed\r\n");
-	CALL SUBOPT_0x16E
+	CALL SUBOPT_0x16D
 ; 0009 018F                 }
 ; 0009 0190 
 ; 0009 0191                 printDebug("<ETH_checkPushLog> Inserted Data Log\r\n");
@@ -15825,7 +15807,7 @@ _0x120041:
 ; 0009 0199     // -- check if id is in eventLogQueue -- //
 ; 0009 019A     res = readEventLogQueue(id,&timestamp,&eventID,&eventStatus);
 _0x12003B:
-	CALL SUBOPT_0x169
+	CALL SUBOPT_0x168
 	IN   R30,SPL
 	IN   R31,SPH
 	ST   -Y,R31
@@ -15862,7 +15844,7 @@ _0x120046:
 _0x120045:
 ; 0009 01A3 
 ; 0009 01A4             res = LOG_openFile(&file,LOGFILE_EVENT);
-	CALL SUBOPT_0x16A
+	CALL SUBOPT_0x169
 	CALL SUBOPT_0x69
 	MOVW R16,R30
 ; 0009 01A5             if(res < 0)
@@ -15883,8 +15865,8 @@ _0x120049:
 	CALL SUBOPT_0x50
 	CALL SUBOPT_0x58
 ; 0009 01AC                 res = LOG_insertEvent(&file,timestamp,eventID,eventStatus);
+	CALL SUBOPT_0x169
 	CALL SUBOPT_0x16A
-	CALL SUBOPT_0x16B
 	ST   -Y,R21
 	MOV  R26,R20
 	CALL _LOG_insertEvent
@@ -15894,17 +15876,17 @@ _0x120049:
 	BRPL _0x12004B
 ; 0009 01AE                 {
 ; 0009 01AF                     printDebug("<ETH_checkPushLog> LOG_insertData() failed\r\n");
-	CALL SUBOPT_0x16C
+	CALL SUBOPT_0x16B
 ; 0009 01B0                 }
 ; 0009 01B1 
 ; 0009 01B2                 res = LOG_closeFile(&file);
 _0x12004B:
-	CALL SUBOPT_0x16D
+	CALL SUBOPT_0x16C
 ; 0009 01B3                 if(res < 0)
 	BRPL _0x12004C
 ; 0009 01B4                 {
 ; 0009 01B5                     printDebug("<ETH_checkPushLog> LOG_closeFile() failed\r\n");
-	CALL SUBOPT_0x16E
+	CALL SUBOPT_0x16D
 ; 0009 01B6                 }
 ; 0009 01B7 
 ; 0009 01B8                 printDebug("<ETH_checkPushLog> Inserted Event Log\r\n");
@@ -15938,7 +15920,7 @@ _ETH_retransmit:
 ; 0009 01C6     int i;
 ; 0009 01C7 
 ; 0009 01C8     for(i=0;i<ETH_MAX_WAIT_QUEUE;i++)
-	CALL SUBOPT_0x14D
+	CALL SUBOPT_0x14C
 ;	i -> R16,R17
 _0x12004E:
 	__CPWRN 16,17,15
@@ -15947,13 +15929,13 @@ _0x12004E:
 ; 0009 01C9     {
 ; 0009 01CA         if( TIMER_checkTimerExceed(eth_waitQueue[i].retryTime) &&
 ; 0009 01CB             (eth_waitQueue[i].packetID != 0))
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _eth_waitQueue,1
 	MOVW R26,R30
 	CALL __GETD1P
 	CALL SUBOPT_0x1C
 	BREQ _0x120051
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _eth_waitQueue,8
 	LD   R26,Z
 	CPI  R26,LOW(0x0)
@@ -15963,7 +15945,7 @@ _0x120051:
 _0x120052:
 ; 0009 01CC         {
 ; 0009 01CD             if(eth_waitQueue[i].retryCount >= ETH_MAX_RETRY)
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	SUBI R30,LOW(-_eth_waitQueue)
 	SBCI R31,HIGH(-_eth_waitQueue)
 	LD   R26,Z
@@ -15974,13 +15956,13 @@ _0x120052:
 ; 0009 01CF                 printDebug("<ETH_retransmit> packet [0x%02X] Expired\r\n",eth_waitQueue[i].packetID);
 	__POINTD1FN _0x120000,1334
 	CALL __PUTPARD1
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _eth_waitQueue,8
 	LD   R30,Z
 	CALL SUBOPT_0x29
 ; 0009 01D0 
 ; 0009 01D1                 if(eth_waitQueue[i].packetID == logDataWait.frameID){
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _eth_waitQueue,8
 	LD   R26,Z
 	LDS  R30,_logDataWait
@@ -15996,7 +15978,7 @@ _0x120052:
 ; 0009 01D5                 else if(eth_waitQueue[i].packetID == logEventWait.frameID){
 	RJMP _0x120055
 _0x120054:
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _eth_waitQueue,8
 	LD   R26,Z
 	LDS  R30,_logEventWait
@@ -16014,7 +15996,7 @@ _0x120054:
 _0x120056:
 ; 0009 01DA                     // ---- Push in log here ---- //
 ; 0009 01DB                     ETH_checkPushLog(eth_waitQueue[i].packetID);
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _eth_waitQueue,8
 	LD   R26,Z
 	RCALL _ETH_checkPushLog
@@ -16024,33 +16006,33 @@ _0x120057:
 _0x120055:
 ; 0009 01DE 
 ; 0009 01DF                 ETH_removeWaitQueue(eth_waitQueue[i].packetID);
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _eth_waitQueue,8
 	LD   R26,Z
 	CALL _ETH_removeWaitQueue
 ; 0009 01E0 
 ; 0009 01E1                 printDebug("<ETH_retransmit> commLostTimer = %ld(%lX)\r\n",commLostTimer,commLostTimer);
 	__POINTD1FN _0x120000,1462
-	CALL SUBOPT_0x170
-	CALL SUBOPT_0x170
+	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16F
 	CALL SUBOPT_0x21
 ; 0009 01E2                 if((commLostTimer == 0xFFFFFFFF) || (commLostTimer == 0)){
-	CALL SUBOPT_0x171
+	CALL SUBOPT_0x170
 	CALL SUBOPT_0x3A
 	BREQ _0x120059
-	CALL SUBOPT_0x171
+	CALL SUBOPT_0x170
 	CALL __CPD02
 	BRNE _0x120058
 _0x120059:
 ; 0009 01E3                     TIMER_setTimer(&commLostTimer,30);
 	LDI  R30,LOW(_commLostTimer)
 	LDI  R31,HIGH(_commLostTimer)
-	CALL SUBOPT_0x172
+	CALL SUBOPT_0x171
 	CALL _TIMER_setTimer
 ; 0009 01E4                     printDebug("<ETH_retransmit> LostTimer time left = %ld(%lX)\r\n",(commLostTimer-baseCounter),(commLostTimer-baseCounter));
 	__POINTD1FN _0x120000,1506
-	CALL SUBOPT_0x173
-	CALL SUBOPT_0x173
+	CALL SUBOPT_0x172
+	CALL SUBOPT_0x172
 	CALL SUBOPT_0x21
 ; 0009 01E5                 }
 ; 0009 01E6             }
@@ -16060,11 +16042,11 @@ _0x120058:
 _0x120053:
 ; 0009 01E8             {
 ; 0009 01E9                 TIMER_setTimer(&(eth_waitQueue[i].retryTime), eth_waitQueue[i].timeout);
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
+	CALL SUBOPT_0x173
 	CALL SUBOPT_0x174
-	CALL SUBOPT_0x175
 ; 0009 01EA                 eth_waitQueue[i].retryCount++;      // increase retry counter
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	SUBI R30,LOW(-_eth_waitQueue)
 	SBCI R31,HIGH(-_eth_waitQueue)
 	MOVW R26,R30
@@ -16075,18 +16057,18 @@ _0x120053:
 ; 0009 01EC                 printDebug("\r\n<ETH_retransmit> --Retransmitting-- [0x%02X]\r\n",eth_waitQueue[i].packetID);
 	__POINTD1FN _0x120000,1556
 	CALL __PUTPARD1
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _eth_waitQueue,8
 	LD   R30,Z
 	CALL SUBOPT_0x29
 ; 0009 01ED 
 ; 0009 01EE                 write_uart0(    eth_waitQueue[i].packetData,
 ; 0009 01EF                                 eth_waitQueue[i].packetLen);
-	CALL SUBOPT_0x16F
-	CALL SUBOPT_0x176
+	CALL SUBOPT_0x16E
+	CALL SUBOPT_0x175
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _eth_waitQueue,7
 	LD   R26,Z
 	LDI  R27,0
@@ -16139,10 +16121,10 @@ _ETH_processPacket:
 ;	*cnfgWr -> Y+8
 ;	i -> Y+6
 	__GETWRN 18,19,0
-	CALL SUBOPT_0x177
+	CALL SUBOPT_0x176
 	LD   R16,X
 ; 0009 0207     frameType       = ptr2frame[1];
-	CALL SUBOPT_0x177
+	CALL SUBOPT_0x176
 	ADIW R26,1
 	LD   R17,X
 ; 0009 0208 
@@ -16155,7 +16137,7 @@ _ETH_processPacket:
 ; 0009 020A     //commLostTimer   = 0;                            // -- re-initial -- //
 ; 0009 020B 
 ; 0009 020C     switch(frameType){
-	CALL SUBOPT_0xAB
+	CALL SUBOPT_0xAC
 ; 0009 020D         case STATREQC  :     // -- Status Request COMMAND
 	CPI  R30,LOW(0x1A)
 	LDI  R26,HIGH(0x1A)
@@ -16163,37 +16145,37 @@ _ETH_processPacket:
 	BREQ PC+3
 	JMP _0x12005F
 ; 0009 020E             if( len < (2 + sizeof(struct stat_req_st) - (sizeof(unsigned int) + sizeof(unsigned char *)) ) ){
-	CALL SUBOPT_0x178
+	CALL SUBOPT_0x177
 	SBIW R26,13
 	BRGE _0x120060
 ; 0009 020F                 printDebug("<ETH_processPacket> status request invalid length (%d)\r\n",len);
 	__POINTD1FN _0x120000,1605
-	CALL SUBOPT_0x179
+	CALL SUBOPT_0x178
 ; 0009 0210                 ETH_sendNack(frameID,INVALID_LENGTH);
-	CALL SUBOPT_0x17A
+	CALL SUBOPT_0x179
 ; 0009 0211                 return;
 	RJMP _0x20E0081
 ; 0009 0212             }
 ; 0009 0213 
 ; 0009 0214             payload = (int) malloc (len);
 _0x120060:
-	CALL SUBOPT_0x178
-	CALL SUBOPT_0x17B
+	CALL SUBOPT_0x177
+	CALL SUBOPT_0x17A
 ; 0009 0215             if(payload == NULL){
 	BRNE _0x120061
 ; 0009 0216                 printDebug("<ETH_processPacket> payload malloc() failed\r\n");
 	__POINTD1FN _0x120000,1662
 	CALL SUBOPT_0x3
 ; 0009 0217                 ETH_sendNack(frameID,NOT_READY);
-	CALL SUBOPT_0x17C
+	CALL SUBOPT_0x17B
 ; 0009 0218                 return;
 	RJMP _0x20E0081
 ; 0009 0219             }
 ; 0009 021A 
 ; 0009 021B             res = statusRequestParser(ptr2frame+2,len-2,(struct stat_req_st *)payload);
 _0x120061:
+	CALL SUBOPT_0x17C
 	CALL SUBOPT_0x17D
-	CALL SUBOPT_0x17E
 	CALL _statusRequestParser
 	MOVW R18,R30
 ; 0009 021C             if(res < 0){
@@ -16203,7 +16185,7 @@ _0x120061:
 	__POINTD1FN _0x120000,1708
 	CALL SUBOPT_0x3
 ; 0009 021E                 free( (void *) payload );
-	CALL SUBOPT_0x17F
+	CALL SUBOPT_0x17E
 ; 0009 021F                 ETH_sendNack(frameID,INVALID_PARAMETER);
 ; 0009 0220                 return;
 	RJMP _0x20E0081
@@ -16212,14 +16194,14 @@ _0x120061:
 ; 0009 0223             printDebug("\r\n--statusRequestParser-- CMD [0x%02X]\r\n",frameID);
 _0x120062:
 	__POINTD1FN _0x120000,1759
-	CALL SUBOPT_0x180
+	CALL SUBOPT_0x17F
 ; 0009 0224             printDebug("accessMethod    [0x%02X]\r\n",      ((struct stat_req_st *)payload)->accm);
 	__POINTD1FN _0x120000,1800
-	CALL SUBOPT_0x181
+	CALL SUBOPT_0x180
 ; 0009 0225             printDebug("interval        [0x%04X] = %d\r\n", ((struct stat_req_st *)payload)->intv,((struct stat_req_st *)payload)->intv);
 	__POINTD1FN _0x120000,1827
-	CALL SUBOPT_0x182
-	CALL SUBOPT_0x182
+	CALL SUBOPT_0x181
+	CALL SUBOPT_0x181
 	CALL SUBOPT_0x21
 ; 0009 0226             printDebug("statusList      |");
 	__POINTD1FN _0x120000,1859
@@ -16232,7 +16214,7 @@ _0x120062:
 _0x120064:
 	MOVW R26,R20
 	ADIW R26,11
-	CALL SUBOPT_0x183
+	CALL SUBOPT_0x182
 	BRSH _0x120065
 ; 0009 0229             {
 ; 0009 022A                 printDebug("%02X|",(((struct stat_req_st *)payload)->parlst)[i++]);
@@ -16247,7 +16229,7 @@ _0x120064:
 	STD  Y+10,R30
 	STD  Y+10+1,R31
 	SBIW R30,1
-	CALL SUBOPT_0x184
+	CALL SUBOPT_0x183
 ; 0009 022B             }
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
@@ -16261,7 +16243,7 @@ _0x120065:
 	CALL SUBOPT_0x3
 ; 0009 022D 
 ; 0009 022E             ETH_sendStatusRequestAck(frameID,((struct stat_req_st *)payload)->accm,0x00);
-	CALL SUBOPT_0x185
+	CALL SUBOPT_0x184
 	LDI  R26,LOW(0)
 	RCALL _ETH_sendStatusRequestAck
 ; 0009 022F 
@@ -16289,7 +16271,7 @@ _0x12005F:
 	BREQ PC+3
 	JMP _0x120067
 ; 0009 0237             if( len < (2 + sizeof(struct stat_rep_st)) ){
-	CALL SUBOPT_0x178
+	CALL SUBOPT_0x177
 	SBIW R26,14
 	BRGE _0x120068
 ; 0009 0238                 printDebug("<ETH_processPacket> status report invalid length (%d)\r\n",len);
@@ -16301,7 +16283,7 @@ _0x12005F:
 ; 0009 023C             printDebug("\r\n--statusReportParser-- ACK [0x%02X]\r\n",frameID);
 _0x120068:
 	__POINTD1FN _0x120000,1958
-	CALL SUBOPT_0x180
+	CALL SUBOPT_0x17F
 ; 0009 023D             printDebug("unixTime        [0x%02X][0x%02X][0x%02X][0x%02X]\r\n",
 ; 0009 023E                                     ptr2frame[10],ptr2frame[11],ptr2frame[12],ptr2frame[13]);
 	__POINTD1FN _0x120000,1998
@@ -16318,9 +16300,9 @@ _0x120068:
 	__GETW1SX 574
 	LDD  R30,Z+13
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x161
+	CALL SUBOPT_0x160
 ; 0009 023F             res = setTimeSyncSchema( &ptr2frame[10] );
-	CALL SUBOPT_0x177
+	CALL SUBOPT_0x176
 	ADIW R26,10
 	CALL _setTimeSyncSchema
 	MOVW R18,R30
@@ -16340,7 +16322,7 @@ _0x120067:
 	BREQ PC+3
 	JMP _0x12006A
 ; 0009 0246             if( len < (2 + sizeof(struct event_rep_st)) ){
-	CALL SUBOPT_0x178
+	CALL SUBOPT_0x177
 	SBIW R26,10
 	BRGE _0x12006B
 ; 0009 0247                 printDebug("<ETH_processPacket> event report invalid length (%d)\r\n",len);
@@ -16360,7 +16342,7 @@ _0x20E0081:
 ; 0009 024B             printDebug("\r\n--eventReportParser-- ACK [0x%02X]\r\n", frameID);
 _0x12006B:
 	__POINTD1FN _0x120000,2104
-	CALL SUBOPT_0x180
+	CALL SUBOPT_0x17F
 ; 0009 024C             if( (logEventWait.frameID != 0) && (frameID == logEventWait.frameID) )
 	LDS  R26,_logEventWait
 	CPI  R26,LOW(0x0)
@@ -16391,10 +16373,10 @@ _0x12006F:
 ; 0009 0254                     res = LOG_setLastSend(&file,logEventWait.logID + 1);
 	CALL SUBOPT_0x5A
 	CALL SUBOPT_0x72
-	CALL SUBOPT_0x186
+	CALL SUBOPT_0x185
 ; 0009 0255                     if(res < 0){    printDebug("<LOG_readData> LOG_setLastSend() failed\r\n");                      }
 	BRPL _0x120071
-	CALL SUBOPT_0x187
+	CALL SUBOPT_0x186
 ; 0009 0256                     else{           printDebug("<LOG_readData> LOG_setLastSend(%s,%ld)\r\n",LOGFILE_EVENT,logEventWait.logID + 1);   }
 	RJMP _0x120072
 _0x120071:
@@ -16406,7 +16388,7 @@ _0x120071:
 _0x120072:
 ; 0009 0257 
 ; 0009 0258                     res = LOG_closeFile(&file);
-	CALL SUBOPT_0x188
+	CALL SUBOPT_0x187
 ; 0009 0259                     if(res < 0){    printDebug("<logReport> LOG_closeFile(%s) failed\r\n",LOGFILE_EVENT);           }
 	BRPL _0x120073
 	__POINTD1FN _0x120000,2304
@@ -16443,21 +16425,21 @@ _0x12006A:
 	__POINTD1FN _0x120000,2343
 	CALL SUBOPT_0x3
 ; 0009 0264             print_payload(ptr2frame, len);
-	CALL SUBOPT_0x17D
+	CALL SUBOPT_0x17C
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0x177
+	CALL SUBOPT_0x176
 	CALL _print_payload
 ; 0009 0265 
 ; 0009 0266             if( len < (2 + sizeof(struct conf_man_st) - (sizeof(unsigned int) + sizeof(unsigned char *)) ) ){
-	CALL SUBOPT_0x178
+	CALL SUBOPT_0x177
 	SBIW R26,12
 	BRGE _0x120075
 ; 0009 0267                 printDebug("<ETH_processPacket> configuration management invalid length (%d)\r\n",len);
 	__POINTD1FN _0x120000,2379
-	CALL SUBOPT_0x179
+	CALL SUBOPT_0x178
 ; 0009 0268                 ETH_sendNack(frameID,INVALID_LENGTH);
-	CALL SUBOPT_0x17A
+	CALL SUBOPT_0x179
 ; 0009 0269                 return;
 	RJMP _0x20E007F
 ; 0009 026A             }
@@ -16465,22 +16447,22 @@ _0x12006A:
 ; 0009 026C             payload = (int) malloc (sizeof(struct conf_man_st));
 _0x120075:
 	LDI  R26,LOW(14)
-	CALL SUBOPT_0x189
+	CALL SUBOPT_0x188
 ; 0009 026D             if(payload == NULL){
 	BRNE _0x120076
 ; 0009 026E                 printDebug("<ETH_processPacket> payload malloc(%d) failed\r\n",sizeof(struct conf_man_st));
-	CALL SUBOPT_0x18A
+	CALL SUBOPT_0x189
 	__GETD1N 0xE
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 0009 026F                 ETH_sendNack(frameID,NOT_READY);
-	CALL SUBOPT_0x17C
+	CALL SUBOPT_0x17B
 ; 0009 0270                 return;
 	RJMP _0x20E007F
 ; 0009 0271             }
 ; 0009 0272 
 ; 0009 0273             res = configManageParser(ptr2frame+2,len-2,(struct conf_man_st *)payload);
 _0x120076:
-	CALL SUBOPT_0x18C
+	CALL SUBOPT_0x18B
 	CALL _configManageParser
 	MOVW R18,R30
 ; 0009 0274             if(res < 0){
@@ -16490,7 +16472,7 @@ _0x120076:
 	__POINTD1FN _0x120000,2494
 	CALL SUBOPT_0x3
 ; 0009 0276                 free( (void *) payload );
-	CALL SUBOPT_0x17F
+	CALL SUBOPT_0x17E
 ; 0009 0277                 ETH_sendNack(frameID,INVALID_PARAMETER);
 ; 0009 0278                 return;
 	RJMP _0x20E007F
@@ -16499,15 +16481,15 @@ _0x120076:
 ; 0009 027B             printDebug("\r\n--configManageParser-- CMD [0x%02X]\r\n",frameID);
 _0x120077:
 	__POINTD1FN _0x120000,2544
-	CALL SUBOPT_0x180
+	CALL SUBOPT_0x17F
 ; 0009 027C             printDebug("accd            [0x%02X]\r\n",       ((struct conf_man_st *)payload)->accd);
-	CALL SUBOPT_0x18D
+	CALL SUBOPT_0x18C
 ; 0009 027D             printDebug("cnfg            [0x%02X]\r\n",       ((struct conf_man_st *)payload)->cnfg);
 	__POINTD1FN _0x120000,2611
-	CALL SUBOPT_0x18E
+	CALL SUBOPT_0x18D
 ; 0009 027E 
 ; 0009 027F             switch( ((struct conf_man_st *)payload)->accd ){
-	CALL SUBOPT_0x18F
+	CALL SUBOPT_0x18E
 ; 0009 0280                 case CONF_RD_CMD    :   // -- Configration Read -- //
 	BREQ PC+3
 	JMP _0x12007B
@@ -16602,8 +16584,8 @@ _0x120081:
 ; 0009 029A                                                                             ((struct conf_man_st *)payload)->accd,
 ; 0009 029B                                                                             ((struct conf_man_st *)payload)->cnfg,
 ; 0009 029C                                                                             ERROR);
-	CALL SUBOPT_0x185
-	CALL SUBOPT_0x190
+	CALL SUBOPT_0x184
+	CALL SUBOPT_0x18F
 ; 0009 029D                                             }
 ; 0009 029E                                             else{
 	RJMP _0x120086
@@ -16631,14 +16613,14 @@ _0x12007E:
 ; 0009 02A9                                                                         SUCCESS,
 ; 0009 02AA                                                                         (char *)cnfgRd,
 ; 0009 02AB                                                                         res  );
-	CALL SUBOPT_0x185
-	CALL SUBOPT_0x191
+	CALL SUBOPT_0x184
+	CALL SUBOPT_0x190
 	LDD  R30,Y+14
 	LDD  R31,Y+14+1
 	ST   -Y,R31
 	ST   -Y,R30
 	MOVW R26,R18
-	CALL SUBOPT_0x192
+	CALL SUBOPT_0x191
 ; 0009 02AC                                         if(res < 0){
 	BRPL _0x120087
 ; 0009 02AD                                             printDebug("<ETH_processPacket> RD_CMD : ETH_sendConfigManageAck() failed\r\n");
@@ -16665,7 +16647,7 @@ _0x12007B:
 	LDD  R26,Z+10
 	LDD  R27,Z+11
 	CALL _malloc
-	CALL SUBOPT_0x193
+	CALL SUBOPT_0x192
 ; 0009 02B4                                         if(cnfgWr == NULL){
 	SBIW R30,0
 	BRNE _0x120089
@@ -16681,7 +16663,7 @@ _0x12007B:
 ; 0009 02B9 
 ; 0009 02BA                                         memcpy(cnfgWr,((struct conf_man_st *)payload)->confSpec,((struct conf_man_st *)payload)->confLen);
 _0x120089:
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x193
 	MOVW R30,R20
 	LDD  R26,Z+12
 	LDD  R27,Z+13
@@ -16697,7 +16679,7 @@ _0x120089:
 	MOVW R30,R20
 	LDD  R26,Z+9
 	ST   -Y,R26
-	CALL SUBOPT_0x195
+	CALL SUBOPT_0x194
 	MOVW R30,R20
 	LDD  R26,Z+10
 	LDD  R27,Z+11
@@ -16718,8 +16700,8 @@ _0x120089:
 ; 0009 02C4                                                                         ((struct conf_man_st *)payload)->accd,
 ; 0009 02C5                                                                         ((struct conf_man_st *)payload)->cnfg,
 ; 0009 02C6                                                                         ERROR);
-	CALL SUBOPT_0x185
-	CALL SUBOPT_0x190
+	CALL SUBOPT_0x184
+	CALL SUBOPT_0x18F
 ; 0009 02C7                                             break;
 	RJMP _0x12007A
 ; 0009 02C8                                         }
@@ -16732,14 +16714,14 @@ _0x12008A:
 ; 0009 02CE                                                                         SUCCESS,
 ; 0009 02CF                                                                         NULL,
 ; 0009 02D0                                                                         0  );
-	CALL SUBOPT_0x185
+	CALL SUBOPT_0x184
+	CALL SUBOPT_0x190
+	CALL SUBOPT_0x195
 	CALL SUBOPT_0x191
-	CALL SUBOPT_0x196
-	CALL SUBOPT_0x192
 ; 0009 02D1                                         if(res < 0){
 	BRPL _0x12008B
 ; 0009 02D2                                             printDebug("WARN : <ETH_processPacket> WR_CMD : ETH_sendConfigManageAck() failed\r\n");
-	CALL SUBOPT_0x197
+	CALL SUBOPT_0x196
 ; 0009 02D3                                         }
 ; 0009 02D4 
 ; 0009 02D5                                         break;
@@ -16764,8 +16746,8 @@ _0x120088:
 ; 0009 02DB                                                                         ((struct conf_man_st *)payload)->accd,
 ; 0009 02DC                                                                         ((struct conf_man_st *)payload)->cnfg,
 ; 0009 02DD                                                                         ERROR);
-	CALL SUBOPT_0x185
-	CALL SUBOPT_0x190
+	CALL SUBOPT_0x184
+	CALL SUBOPT_0x18F
 ; 0009 02DE                                             break;
 	RJMP _0x12007A
 ; 0009 02DF                                         }
@@ -16777,14 +16759,14 @@ _0x12008D:
 ; 0009 02E4                                                                         SUCCESS,
 ; 0009 02E5                                                                         NULL,
 ; 0009 02E6                                                                         0  );
-	CALL SUBOPT_0x185
+	CALL SUBOPT_0x184
+	CALL SUBOPT_0x190
+	CALL SUBOPT_0x195
 	CALL SUBOPT_0x191
-	CALL SUBOPT_0x196
-	CALL SUBOPT_0x192
 ; 0009 02E7                                         if(res < 0){
 	BRPL _0x12008E
 ; 0009 02E8                                             printDebug("WARN : <ETH_processPacket> WR_CMD : ETH_sendConfigManageAck() failed\r\n");
-	CALL SUBOPT_0x197
+	CALL SUBOPT_0x196
 ; 0009 02E9                                         }
 ; 0009 02EA 
 ; 0009 02EB                                         break;
@@ -16794,7 +16776,7 @@ _0x12008E:
 _0x12008F:
 ; 0009 02ED                                         printDebug("<ETH_processPacket> unknown type for config->accd [0x%02X]\r\n",
 ; 0009 02EE                                                         ((struct conf_man_st *)payload)->accd );
-	CALL SUBOPT_0x198
+	CALL SUBOPT_0x197
 ; 0009 02EF                                         ETH_sendNack(frameID,INVALID_PARAMETER);
 _0x120118:
 	ST   -Y,R16
@@ -16822,12 +16804,12 @@ _0x120074:
 	BREQ PC+3
 	JMP _0x120090
 ; 0009 02F8             if( len < (2 + sizeof(struct data_rep_st)) ){
-	CALL SUBOPT_0x178
+	CALL SUBOPT_0x177
 	SBIW R26,10
 	BRGE _0x120091
 ; 0009 02F9                 printDebug("<ETH_processPacket> Data report invalid length (%d)\r\n",len);
 	__POINTD1FN _0x120000,3098
-	CALL SUBOPT_0x179
+	CALL SUBOPT_0x178
 ; 0009 02FA                 return;
 	RJMP _0x20E007F
 ; 0009 02FB             }
@@ -16835,7 +16817,7 @@ _0x120074:
 ; 0009 02FD             printDebug("\r\n--dataReportParser-- ACK [0x%02X]\r\n",frameID);
 _0x120091:
 	__POINTD1FN _0x120000,3152
-	CALL SUBOPT_0x180
+	CALL SUBOPT_0x17F
 ; 0009 02FE             if( (logDataWait.frameID != 0) && (frameID == logDataWait.frameID) )
 	LDS  R26,_logDataWait
 	CPI  R26,LOW(0x0)
@@ -16866,10 +16848,10 @@ _0x120095:
 ; 0009 0306                     res = LOG_setLastSend(&file,logDataWait.logID + 1);
 	CALL SUBOPT_0x5A
 	CALL SUBOPT_0x6F
-	CALL SUBOPT_0x186
+	CALL SUBOPT_0x185
 ; 0009 0307                     if(res < 0){    printDebug("<LOG_readData> LOG_setLastSend() failed\r\n");                      }
 	BRPL _0x120097
-	CALL SUBOPT_0x187
+	CALL SUBOPT_0x186
 ; 0009 0308                     else{           printDebug("<LOG_readData> LOG_setLastSend(%s,%ld)\r\n",LOGFILE_DATA,logDataWait.logID + 1);    }
 	RJMP _0x120098
 _0x120097:
@@ -16881,7 +16863,7 @@ _0x120097:
 _0x120098:
 ; 0009 0309 
 ; 0009 030A                     res = LOG_closeFile(&file);
-	CALL SUBOPT_0x188
+	CALL SUBOPT_0x187
 ; 0009 030B                     if(res < 0){    printDebug("<logReport> LOG_closeFile(%s) failed\r\n",LOGFILE_DATA);            }
 	BRPL _0x120099
 	__POINTD1FN _0x120000,2304
@@ -16915,14 +16897,14 @@ _0x120090:
 	BREQ PC+3
 	JMP _0x12009A
 ; 0009 0315             if( len < (2 + sizeof(struct log_manic_st)) ){
-	CALL SUBOPT_0x178
+	CALL SUBOPT_0x177
 	SBIW R26,19
 	BRGE _0x12009B
 ; 0009 0316                 printDebug("<ETH_processPacket> log manipulation (CMD) invalid length (%d)\r\n",len);
 	__POINTD1FN _0x120000,3229
-	CALL SUBOPT_0x179
+	CALL SUBOPT_0x178
 ; 0009 0317                 ETH_sendNack(frameID,INVALID_LENGTH);
-	CALL SUBOPT_0x17A
+	CALL SUBOPT_0x179
 ; 0009 0318                 return;
 	RJMP _0x20E007F
 ; 0009 0319             }
@@ -16930,31 +16912,31 @@ _0x120090:
 ; 0009 031B             payload = (int) malloc (sizeof(struct log_manic_st));
 _0x12009B:
 	LDI  R26,LOW(17)
-	CALL SUBOPT_0x189
+	CALL SUBOPT_0x188
 ; 0009 031C             if(payload == NULL){
 	BRNE _0x12009C
 ; 0009 031D                 printDebug("<ETH_processPacket> payload malloc(%d) failed\r\n",sizeof(struct log_manic_st));
-	CALL SUBOPT_0x18A
+	CALL SUBOPT_0x189
 	__GETD1N 0x11
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 0009 031E                 ETH_sendNack(frameID,NOT_READY);
-	CALL SUBOPT_0x17C
+	CALL SUBOPT_0x17B
 ; 0009 031F                 return;
 	RJMP _0x20E007F
 ; 0009 0320             }
 ; 0009 0321 
 ; 0009 0322             res = logManipulationCmdParser(ptr2frame+2,len-2,(struct log_manic_st *)payload);
 _0x12009C:
-	CALL SUBOPT_0x18C
+	CALL SUBOPT_0x18B
 	CALL _logManipulationCmdParser
 	MOVW R18,R30
 ; 0009 0323             if(res < 0){
 	TST  R19
 	BRPL _0x12009D
 ; 0009 0324                 printDebug("<ETH_processPacket> logManipulationCmdParser() failed\r\n");
-	CALL SUBOPT_0x199
+	CALL SUBOPT_0x198
 ; 0009 0325                 free( (void *) payload );
-	CALL SUBOPT_0x17F
+	CALL SUBOPT_0x17E
 ; 0009 0326                 ETH_sendNack(frameID,INVALID_PARAMETER);
 ; 0009 0327                 return;
 	RJMP _0x20E007F
@@ -16963,18 +16945,18 @@ _0x12009C:
 ; 0009 032A             printDebug("\r\n--logManipulationCmdParser-- CMD [0x%02X]\r\n",frameID);
 _0x12009D:
 	__POINTD1FN _0x120000,3350
-	CALL SUBOPT_0x180
+	CALL SUBOPT_0x17F
 ; 0009 032B             printDebug("accd            [0x%02X]\r\n",  ((struct log_manic_st *)payload)->accd);
-	CALL SUBOPT_0x18D
+	CALL SUBOPT_0x18C
 ; 0009 032C             printDebug("tStart          [%ld]\r\n",     ((struct log_manic_st *)payload)->tStart);
 	__POINTD1FN _0x120000,3396
-	CALL SUBOPT_0x19A
+	CALL SUBOPT_0x199
 ; 0009 032D             printDebug("tStop           [%ld]\r\n",     ((struct log_manic_st *)payload)->tStop);
 	__POINTD1FN _0x120000,3420
 	CALL __PUTPARD1
 	MOVW R30,R20
 	__GETD2Z 13
-	CALL SUBOPT_0x19B
+	CALL SUBOPT_0x19A
 ; 0009 032E 
 ; 0009 032F             res = setLogManipulateSchema(   ((struct log_manic_st *)payload)->accd,
 ; 0009 0330                                             ((struct log_manic_st *)payload)->tStart,
@@ -16982,7 +16964,7 @@ _0x12009D:
 	MOVW R30,R20
 	LDD  R26,Z+8
 	ST   -Y,R26
-	CALL SUBOPT_0x19C
+	CALL SUBOPT_0x19B
 	CALL __PUTPARD2
 	MOVW R30,R20
 	__GETD2Z 13
@@ -16995,14 +16977,14 @@ _0x12009D:
 	__POINTD1FN _0x120000,3444
 	CALL SUBOPT_0x3
 ; 0009 0334                 ETH_sendLogManipulationAck(frameID,((struct log_manic_st *)payload)->accd,ERROR);
-	CALL SUBOPT_0x185
+	CALL SUBOPT_0x184
 	LDI  R26,LOW(1)
 	RCALL _ETH_sendLogManipulationAck
 ; 0009 0335             }
 ; 0009 0336 
 ; 0009 0337             ETH_sendLogManipulationAck(frameID,((struct log_manic_st *)payload)->accd,SUCCESS);
 _0x12009E:
-	CALL SUBOPT_0x185
+	CALL SUBOPT_0x184
 	LDI  R26,LOW(0)
 	RCALL _ETH_sendLogManipulationAck
 ; 0009 0338 
@@ -17019,12 +17001,12 @@ _0x12009A:
 	CPC  R31,R26
 	BRNE _0x12009F
 ; 0009 033D             if( len < (2 + sizeof(struct log_mania_st)) ){
-	CALL SUBOPT_0x178
+	CALL SUBOPT_0x177
 	SBIW R26,12
 	BRGE _0x1200A0
 ; 0009 033E                 printDebug("<ETH_processPacket> log manipulation (ACK) invalid length (%d)\r\n",len);
 	__POINTD1FN _0x120000,3498
-	CALL SUBOPT_0x179
+	CALL SUBOPT_0x178
 ; 0009 033F                 return;
 	RJMP _0x20E007F
 ; 0009 0340             }
@@ -17032,26 +17014,26 @@ _0x12009A:
 ; 0009 0342             payload = (int) malloc (sizeof(struct log_mania_st));
 _0x1200A0:
 	LDI  R26,LOW(10)
-	CALL SUBOPT_0x189
+	CALL SUBOPT_0x188
 ; 0009 0343             if(payload == NULL){
 	BRNE _0x1200A1
 ; 0009 0344                 printDebug("<ETH_processPacket> payload malloc(%d) failed\r\n",sizeof(struct log_mania_st));
-	CALL SUBOPT_0x18A
-	CALL SUBOPT_0x19D
+	CALL SUBOPT_0x189
+	CALL SUBOPT_0x19C
 ; 0009 0345                 return;
 	RJMP _0x20E007F
 ; 0009 0346             }
 ; 0009 0347 
 ; 0009 0348             res = logManipulationAckParser(ptr2frame+2,(struct log_mania_st *)payload);
 _0x1200A1:
-	CALL SUBOPT_0x19E
+	CALL SUBOPT_0x19D
 	CALL _logManipulationAckParser
 	MOVW R18,R30
 ; 0009 0349             if(res < 0){
 	TST  R19
 	BRPL _0x1200A2
 ; 0009 034A                 printDebug("<ETH_processPacket> logManipulationCmdParser() failed\r\n");
-	CALL SUBOPT_0x199
+	CALL SUBOPT_0x198
 ; 0009 034B                 free( (void *) payload );
 	MOVW R26,R20
 	CALL _free
@@ -17062,12 +17044,12 @@ _0x1200A1:
 ; 0009 034F             printDebug("\r\n--logManipulationAckParser-- ACK [0x%02X]\r\n",frameID);
 _0x1200A2:
 	__POINTD1FN _0x120000,3563
-	CALL SUBOPT_0x180
+	CALL SUBOPT_0x17F
 ; 0009 0350             printDebug("accd            [0x%02X]\r\n",  ((struct log_mania_st *)payload)->accd);
-	CALL SUBOPT_0x18D
+	CALL SUBOPT_0x18C
 ; 0009 0351             printDebug("status          [%ld]\r\n",     ((struct log_mania_st *)payload)->status);
 	__POINTD1FN _0x120000,3609
-	CALL SUBOPT_0x18E
+	CALL SUBOPT_0x18D
 ; 0009 0352 
 ; 0009 0353             free( (void *) payload );
 	MOVW R26,R20
@@ -17085,14 +17067,14 @@ _0x12009F:
 	BREQ PC+3
 	JMP _0x1200A3
 ; 0009 0357             if( len < (2 + sizeof(struct netw_man_st) - (sizeof(unsigned int) + sizeof(unsigned char *)) + 1 ) ){
-	CALL SUBOPT_0x178
+	CALL SUBOPT_0x177
 	SBIW R26,12
 	BRGE _0x1200A4
 ; 0009 0358                 printDebug("<ETH_processPacket> network maintenance invalid length (%d)\r\n",len);
 	__POINTD1FN _0x120000,3633
-	CALL SUBOPT_0x179
+	CALL SUBOPT_0x178
 ; 0009 0359                 ETH_sendNack(frameID,INVALID_LENGTH);
-	CALL SUBOPT_0x17A
+	CALL SUBOPT_0x179
 ; 0009 035A                 return;
 	RJMP _0x20E007F
 ; 0009 035B             }
@@ -17100,21 +17082,21 @@ _0x12009F:
 ; 0009 035D             payload = (int) malloc (sizeof(struct netw_man_st));
 _0x1200A4:
 	LDI  R26,LOW(13)
-	CALL SUBOPT_0x189
+	CALL SUBOPT_0x188
 ; 0009 035E             if(payload == NULL){
 	BRNE _0x1200A5
 ; 0009 035F                 printDebug("<ETH_processPacket> payload malloc(%d) failed\r\n",sizeof(struct netw_man_st));
-	CALL SUBOPT_0x18A
-	CALL SUBOPT_0x19F
+	CALL SUBOPT_0x189
+	CALL SUBOPT_0x19E
 ; 0009 0360                 ETH_sendNack(frameID,NOT_READY);
-	CALL SUBOPT_0x17C
+	CALL SUBOPT_0x17B
 ; 0009 0361                 return;
 	RJMP _0x20E007F
 ; 0009 0362             }
 ; 0009 0363 
 ; 0009 0364             res = networkMaintenanceParser(ptr2frame+2,len-2,(struct netw_man_st *)payload);
 _0x1200A5:
-	CALL SUBOPT_0x18C
+	CALL SUBOPT_0x18B
 	CALL _networkMaintenanceParser
 	MOVW R18,R30
 ; 0009 0365             if(res < 0){
@@ -17124,7 +17106,7 @@ _0x1200A5:
 	__POINTD1FN _0x120000,3695
 	CALL SUBOPT_0x3
 ; 0009 0367                 free( (void *) payload );
-	CALL SUBOPT_0x17F
+	CALL SUBOPT_0x17E
 ; 0009 0368                 ETH_sendNack(frameID,INVALID_PARAMETER);
 ; 0009 0369                 return;
 	RJMP _0x20E007F
@@ -17133,16 +17115,16 @@ _0x1200A5:
 ; 0009 036C             printDebug("\r\n--networkMaintenanceParser-- CMD [0x%02X]\r\n",frameID);
 _0x1200A6:
 	__POINTD1FN _0x120000,3751
-	CALL SUBOPT_0x180
+	CALL SUBOPT_0x17F
 ; 0009 036D             printDebug("cmd             [0x%02X]\r\n",  ((struct netw_man_st *)payload)->cmd);
-	CALL SUBOPT_0x1A0
+	CALL SUBOPT_0x19F
 ; 0009 036E             printDebug("dataLen         [%d]\r\n",      ((struct netw_man_st *)payload)->dataLen);
 	__POINTD1FN _0x120000,3824
-	CALL SUBOPT_0x182
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x181
+	CALL SUBOPT_0x18A
 ; 0009 036F             if( ((struct netw_man_st *)payload)->dataLen > 0 ){
 	MOVW R30,R20
-	CALL SUBOPT_0x1A1
+	CALL SUBOPT_0x1A0
 	BRSH _0x1200A7
 ; 0009 0370                 printDebug("data ---        \r\n");
 	__POINTD1FN _0x120000,3847
@@ -17163,7 +17145,7 @@ _0x1200A6:
 ; 0009 0374 
 ; 0009 0375             switch(((struct netw_man_st *)payload)->cmd){
 _0x1200A7:
-	CALL SUBOPT_0x18F
+	CALL SUBOPT_0x18E
 ; 0009 0376                 case NETW_TIME_SYNC :   res = setTimeSyncSchema( ((struct netw_man_st *)payload)->data );
 	BRNE _0x1200AE
 	MOVW R30,R20
@@ -17178,7 +17160,7 @@ _0x1200A7:
 	__POINTD1FN _0x120000,3877
 	CALL SUBOPT_0x3
 ; 0009 0379                                             ETH_sendNack(frameID,INVALID_PARAMETER);
-	CALL SUBOPT_0x1A2
+	CALL SUBOPT_0x1A1
 ; 0009 037A                                             free_networkMaintenance((struct netw_man_st *)payload);
 	MOVW R26,R20
 	CALL _free_networkMaintenance
@@ -17191,7 +17173,7 @@ _0x1200A7:
 ; 0009 037E 
 ; 0009 037F                                         res = ETH_sendNetworkMaintenanceAck(frameID,((struct netw_man_st *)payload)->cmd,SUCCESS);
 _0x1200AC:
-	CALL SUBOPT_0x185
+	CALL SUBOPT_0x184
 	LDI  R26,LOW(0)
 	RCALL _ETH_sendNetworkMaintenanceAck
 	MOVW R18,R30
@@ -17211,16 +17193,16 @@ _0x1200AD:
 _0x1200AE:
 ; 0009 0387                                         printDebug("<ETH_processPacket> unknown type for config->accd [0x%02X]\r\n",
 ; 0009 0388                                                         ((struct netw_man_st *)payload)->cmd );
-	CALL SUBOPT_0x198
+	CALL SUBOPT_0x197
 ; 0009 0389                                         ETH_sendNack(frameID,INVALID_PARAMETER);
-	CALL SUBOPT_0x1A2
+	CALL SUBOPT_0x1A1
 ; 0009 038A                                         break;
 ; 0009 038B             }
 _0x1200AA:
 ; 0009 038C 
 ; 0009 038D             if( ((struct netw_man_st *)payload)->dataLen > 0 ){
 	MOVW R30,R20
-	CALL SUBOPT_0x1A1
+	CALL SUBOPT_0x1A0
 	BRSH _0x1200AF
 ; 0009 038E                 free_networkMaintenance((struct netw_man_st *)payload);
 	MOVW R26,R20
@@ -17242,14 +17224,14 @@ _0x1200A3:
 	BREQ PC+3
 	JMP _0x1200B0
 ; 0009 0395             if( len < (2 + sizeof(struct rem_dev_ctrl_st)) ){
-	CALL SUBOPT_0x178
+	CALL SUBOPT_0x177
 	SBIW R26,15
 	BRGE _0x1200B1
 ; 0009 0396                 printDebug("<ETH_processPacket> remote device control invalid length (%d)\r\n",len);
 	__POINTD1FN _0x120000,4011
-	CALL SUBOPT_0x179
+	CALL SUBOPT_0x178
 ; 0009 0397                 ETH_sendNack(frameID,INVALID_LENGTH);
-	CALL SUBOPT_0x17A
+	CALL SUBOPT_0x179
 ; 0009 0398                 return;
 	RJMP _0x20E007F
 ; 0009 0399             }
@@ -17257,21 +17239,21 @@ _0x1200A3:
 ; 0009 039B             payload = (int) malloc (sizeof(struct rem_dev_ctrl_st));
 _0x1200B1:
 	LDI  R26,LOW(13)
-	CALL SUBOPT_0x189
+	CALL SUBOPT_0x188
 ; 0009 039C             if(payload == NULL){
 	BRNE _0x1200B2
 ; 0009 039D                 printDebug("<ETH_processPacket> payload malloc(%d) failed\r\n",sizeof(struct rem_dev_ctrl_st));
-	CALL SUBOPT_0x18A
-	CALL SUBOPT_0x19F
+	CALL SUBOPT_0x189
+	CALL SUBOPT_0x19E
 ; 0009 039E                 ETH_sendNack(frameID,NOT_READY);
-	CALL SUBOPT_0x17C
+	CALL SUBOPT_0x17B
 ; 0009 039F                 return;
 	RJMP _0x20E007F
 ; 0009 03A0             }
 ; 0009 03A1 
 ; 0009 03A2             res = remoteDeviceControlParser(ptr2frame+2,(struct rem_dev_ctrl_st *)payload);
 _0x1200B2:
-	CALL SUBOPT_0x19E
+	CALL SUBOPT_0x19D
 	CALL _remoteDeviceControlParser
 	MOVW R18,R30
 ; 0009 03A3             if(res < 0){
@@ -17281,7 +17263,7 @@ _0x1200B2:
 	__POINTD1FN _0x120000,4075
 	CALL SUBOPT_0x3
 ; 0009 03A5                 free( (void *) payload );
-	CALL SUBOPT_0x17F
+	CALL SUBOPT_0x17E
 ; 0009 03A6                 ETH_sendNack(frameID,INVALID_PARAMETER);
 ; 0009 03A7                 return;
 	RJMP _0x20E007F
@@ -17290,19 +17272,19 @@ _0x1200B2:
 ; 0009 03AA             printDebug("\r\n--remoteDeviceControlParser-- CMD [0x%02X]\r\n",frameID);
 _0x1200B3:
 	__POINTD1FN _0x120000,4132
-	CALL SUBOPT_0x180
+	CALL SUBOPT_0x17F
 ; 0009 03AB             printDebug("cmd             [0x%02X]\r\n",  ((struct rem_dev_ctrl_st *)payload)->cmd);
-	CALL SUBOPT_0x1A0
+	CALL SUBOPT_0x19F
 ; 0009 03AC             printDebug("value           [%ld]\r\n",      ((struct rem_dev_ctrl_st *)payload)->value);
 	__POINTD1FN _0x120000,4179
-	CALL SUBOPT_0x19A
+	CALL SUBOPT_0x199
 ; 0009 03AD 
 ; 0009 03AE             switch(((struct rem_dev_ctrl_st *)payload)->cmd){
-	CALL SUBOPT_0x18F
+	CALL SUBOPT_0x18E
 ; 0009 03AF                 case DEVCTRL_MUTE_ALARM :   res = setMuteAlarm( ((struct rem_dev_ctrl_st *)payload)->value );
 	BRNE _0x1200BA
 	MOVW R30,R20
-	CALL SUBOPT_0x19C
+	CALL SUBOPT_0x19B
 	CALL _setMuteAlarm
 	MOVW R18,R30
 ; 0009 03B0                                             if(res < 0){
@@ -17310,9 +17292,9 @@ _0x1200B3:
 	BRPL _0x1200B8
 ; 0009 03B1                                                 printDebug("<ETH_processPacket> setTimeSyncSchema(%ld) failed\r\n",((struct rem_dev_ctrl_st *)payload)->value);
 	__POINTD1FN _0x120000,4203
-	CALL SUBOPT_0x19A
+	CALL SUBOPT_0x199
 ; 0009 03B2                                                 ETH_sendNack(frameID,INVALID_PARAMETER);
-	CALL SUBOPT_0x1A2
+	CALL SUBOPT_0x1A1
 ; 0009 03B3                                                 free( (void *) payload );
 	MOVW R26,R20
 	CALL _free
@@ -17322,7 +17304,7 @@ _0x1200B3:
 ; 0009 03B6 
 ; 0009 03B7                                             res = ETH_remoteDeviceControlAck(frameID,((struct rem_dev_ctrl_st *)payload)->cmd,SUCCESS);
 _0x1200B8:
-	CALL SUBOPT_0x185
+	CALL SUBOPT_0x184
 	LDI  R26,LOW(0)
 	RCALL _ETH_remoteDeviceControlAck
 	MOVW R18,R30
@@ -17341,9 +17323,9 @@ _0x1200B9:
 _0x1200BA:
 ; 0009 03BE                                             printDebug("<ETH_processPacket> unknown type for config->accd [0x%02X]\r\n",
 ; 0009 03BF                                                             ((struct netw_man_st *)payload)->cmd );
-	CALL SUBOPT_0x198
+	CALL SUBOPT_0x197
 ; 0009 03C0                                             ETH_sendNack(frameID,INVALID_PARAMETER);
-	CALL SUBOPT_0x1A2
+	CALL SUBOPT_0x1A1
 ; 0009 03C1                                             break;
 ; 0009 03C2             }
 _0x1200B6:
@@ -17361,12 +17343,12 @@ _0x1200B0:
 	BREQ PC+3
 	JMP _0x1200BB
 ; 0009 03C7             if( len < (2 + sizeof(struct clr_lst_st)) ){
-	CALL SUBOPT_0x178
+	CALL SUBOPT_0x177
 	SBIW R26,12
 	BRGE _0x1200BC
 ; 0009 03C8                 printDebug("<ETH_processPacket> clear list ACK invalid length (%d)\r\n",len);
 	__POINTD1FN _0x120000,4341
-	CALL SUBOPT_0x179
+	CALL SUBOPT_0x178
 ; 0009 03C9                 return;
 	RJMP _0x20E007F
 ; 0009 03CA             }
@@ -17374,19 +17356,19 @@ _0x1200B0:
 ; 0009 03CC             payload = (int) malloc (sizeof(struct clr_lst_st));
 _0x1200BC:
 	LDI  R26,LOW(10)
-	CALL SUBOPT_0x189
+	CALL SUBOPT_0x188
 ; 0009 03CD             if(payload == NULL){
 	BRNE _0x1200BD
 ; 0009 03CE                 printDebug("<ETH_processPacket> payload malloc(%d) failed\r\n",sizeof(struct clr_lst_st));
-	CALL SUBOPT_0x18A
-	CALL SUBOPT_0x19D
+	CALL SUBOPT_0x189
+	CALL SUBOPT_0x19C
 ; 0009 03CF                 return;
 	RJMP _0x20E007F
 ; 0009 03D0             }
 ; 0009 03D1 
 ; 0009 03D2             res = clearListParser(ptr2frame+2,(struct clr_lst_st *)payload);
 _0x1200BD:
-	CALL SUBOPT_0x19E
+	CALL SUBOPT_0x19D
 	RCALL _clearListParser
 	MOVW R18,R30
 ; 0009 03D3             if(res < 0){
@@ -17405,16 +17387,16 @@ _0x1200BD:
 ; 0009 03D9             printDebug("\r\n--clearListParser-- ACK [0x%02X]\r\n",frameID);
 _0x1200BE:
 	__POINTD1FN _0x120000,4445
-	CALL SUBOPT_0x180
+	CALL SUBOPT_0x17F
 ; 0009 03DA             printDebug("cmd             [0x%02X]\r\n",  ((struct clr_lst_st *)payload)->cmd);
-	CALL SUBOPT_0x1A0
+	CALL SUBOPT_0x19F
 ; 0009 03DB             printDebug("status          [0x%02X]\r\n",  ((struct clr_lst_st *)payload)->status);
 	__POINTD1FN _0x120000,4482
-	CALL SUBOPT_0x18E
+	CALL SUBOPT_0x18D
 ; 0009 03DC 
 ; 0009 03DD             switch(((struct clr_lst_st *)payload)->cmd){
 	MOVW R30,R20
-	CALL SUBOPT_0x1A3
+	CALL SUBOPT_0x1A2
 ; 0009 03DE                 case CLR_DUPLIST :  if(((struct clr_lst_st *)payload)->status == 0x00)
 	CPI  R30,LOW(0x1)
 	LDI  R26,HIGH(0x1)
@@ -17443,7 +17425,7 @@ _0x1200C3:
 ; 0009 03E7                                         printDebug("<ETH_processPacket> clear duplicate request (ACK) FAILED[0x%02X]!!\r\n",
 ; 0009 03E8                                                     ((struct clr_lst_st *)payload)->status);
 	__POINTD1FN _0x120000,4571
-	CALL SUBOPT_0x18E
+	CALL SUBOPT_0x18D
 ; 0009 03E9                                     }
 ; 0009 03EA                                     break;
 	RJMP _0x1200C1
@@ -17452,7 +17434,7 @@ _0x1200C5:
 ; 0009 03EC                                     printDebug("<ETH_processPacket> unknown type for clr_lst_st->cmd [0x%02X]\r\n",
 ; 0009 03ED                                                     ((struct clr_lst_st *)payload)->cmd );
 	__POINTD1FN _0x120000,4640
-	CALL SUBOPT_0x181
+	CALL SUBOPT_0x180
 ; 0009 03EE                                     break;
 ; 0009 03EF             }
 _0x1200C1:
@@ -17510,7 +17492,7 @@ _ETH_receive:
 ; 0009 040C 
 ; 0009 040D     // --------------- Process Xbee Data ---------------- // UART0
 ; 0009 040E     do{
-	CALL SUBOPT_0x1A4
+	CALL SUBOPT_0x1A3
 	CALL __SAVELOCR6
 ;	*ptr -> R16,R17
 ;	size -> R18,R19
@@ -17568,7 +17550,7 @@ _0x1200CE:
 ; 0009 041F         //printDebug("<ETH_receive> ptr");
 ; 0009 0420         offset += strcspn(&ptr[offset],"\x7e");                                   // seach for header
 	MOVW R30,R20
-	CALL SUBOPT_0x1A5
+	CALL SUBOPT_0x1A4
 	__POINTW2MN _0x1200D0,0
 	CALL _strcspn
 	__ADDWRR 20,21,30,31
@@ -17593,17 +17575,17 @@ _0x1200D1:
 	STD  Y+8+1,R31
 ; 0009 0426         len |= ptr[offset+2];                                                   // check packet length (LSB)
 	MOVW R30,R20
-	CALL SUBOPT_0x12B
+	CALL SUBOPT_0x12A
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	LDI  R31,0
 	OR   R30,R26
 	OR   R31,R27
-	CALL SUBOPT_0x193
+	CALL SUBOPT_0x192
 ; 0009 0427 //        printDebug("len = [0x%04X](%d)\r\n",len,len);
 ; 0009 0428 
 ; 0009 0429         total += len;                                                           // update total analyse
-	CALL SUBOPT_0x1A6
+	CALL SUBOPT_0x1A5
 	STD  Y+6,R30
 	STD  Y+6+1,R31
 ; 0009 042A         if (total > size){                                                      //check length validation
@@ -17629,7 +17611,7 @@ _0x1200D1:
 _0x1200D2:
 	MOVW R30,R20
 	ADIW R30,3
-	CALL SUBOPT_0x1A5
+	CALL SUBOPT_0x1A4
 	LDD  R26,Y+10
 	LDD  R27,Y+10+1
 	RCALL _ETH_checksum
@@ -17643,7 +17625,7 @@ _0x1200D2:
 	ADD  R30,R16
 	ADC  R31,R17
 	LD   R30,Z
-	CALL SUBOPT_0x1A7
+	CALL SUBOPT_0x1A6
 	BREQ _0x1200D3
 ; 0009 0434             printDebug("<ETH_receive> checksum error\r\n");
 	__POINTD1FN _0x120000,4873
@@ -17663,7 +17645,7 @@ _0x1200D3:
 ; 0009 043D             ETH_processPacket(&ptr[offset+3],len);                              // analyse API-specific Structure
 	MOVW R30,R20
 	ADIW R30,3
-	CALL SUBOPT_0x1A5
+	CALL SUBOPT_0x1A4
 	LDD  R26,Y+10
 	LDD  R27,Y+10+1
 	RCALL _ETH_processPacket
@@ -17709,7 +17691,7 @@ _ETH_send:
 ; 0009 044B     int     packetLen   = 0;
 ; 0009 044C 
 ; 0009 044D     frameLen++;     // -- + frameID (1 Byte) -- //
-	CALL SUBOPT_0x1A8
+	CALL SUBOPT_0x1A7
 ;	*frameData -> Y+11
 ;	frameLen -> Y+9
 ;	frameID -> Y+8
@@ -17920,7 +17902,7 @@ _0x1200DD:
 	BRGE _0x1200DE
 ; 0009 048E         sum += buf[i];
 	MOVW R30,R16
-	CALL SUBOPT_0x1A9
+	CALL SUBOPT_0x1A8
 	ADD  R19,R30
 ; 0009 048F         //printDebug("<0x%02X> -> [0x%02X]\r\n",buf[i],sum);
 ; 0009 0490     }
@@ -17929,7 +17911,7 @@ _0x1200DD:
 _0x1200DE:
 ; 0009 0491     return (0xff - (sum & 0xff));
 	MOV  R30,R19
-	CALL SUBOPT_0x9B
+	CALL SUBOPT_0x9C
 	LDI  R26,LOW(255)
 	LDI  R27,HIGH(255)
 	CALL __SWAPW12
@@ -17977,14 +17959,14 @@ _0x12011C:
 ; 0009 04A4     }
 ; 0009 04A5 
 ; 0009 04A6     delay_ms(5);
-	CALL SUBOPT_0x97
+	CALL SUBOPT_0x98
 ; 0009 04A7 
 ; 0009 04A8     ETH_current_mode = mode;
 	LD   R30,Y
 	STS  _ETH_current_mode,R30
 ; 0009 04A9 
 ; 0009 04AA     delay_ms(5);
-	CALL SUBOPT_0x97
+	CALL SUBOPT_0x98
 ; 0009 04AB     ETH_OFF;
 	CBI  0x14,4
 ; 0009 04AC     delay_ms(1500);
@@ -18026,7 +18008,7 @@ _ETH_getConfig:
 	STD  Y+2,R30
 	LDI  R30,LOW(0)
 	STD  Y+3,R30
-	CALL SUBOPT_0x14D
+	CALL SUBOPT_0x14C
 ;	*ptr -> Y+12
 ;	*buflen -> Y+10
 ;	timeout -> Y+6
@@ -18047,7 +18029,7 @@ _0x1200E2:
 	__CPWRN 16,17,325
 	BRGE _0x1200E3
 ; 0009 04C3         configRd[i] = 0x00;
-	CALL SUBOPT_0x1AA
+	CALL SUBOPT_0x1A9
 ; 0009 04C4     }
 	__ADDWRN 16,17,1
 	RJMP _0x1200E2
@@ -18055,7 +18037,7 @@ _0x1200E3:
 ; 0009 04C5     configLen       = 0;
 	CALL SUBOPT_0x7E
 ; 0009 04C6     config_start    = 0;
-	CALL SUBOPT_0x1AB
+	CALL SUBOPT_0x1AA
 ; 0009 04C7     config_ready    = 0;
 ; 0009 04C8     config_end      = 0;
 ; 0009 04C9     config_response = 0;
@@ -18066,10 +18048,10 @@ _0x1200E3:
 ; 0009 04CC     for(i=0;i<strlen(getInfoCmd);i++){
 	__GETWRN 16,17,0
 _0x1200E5:
-	CALL SUBOPT_0x1AC
+	CALL SUBOPT_0x1AB
 	BRSH _0x1200E6
 ; 0009 04CD         putchar3(getInfoCmd[i]);
-	CALL SUBOPT_0x126
+	CALL SUBOPT_0x125
 	LD   R26,X
 	CALL _putchar3
 ; 0009 04CE     }
@@ -18077,15 +18059,15 @@ _0x1200E5:
 	RJMP _0x1200E5
 _0x1200E6:
 ; 0009 04CF     printDebug("\r\n");
-	CALL SUBOPT_0x1AD
+	CALL SUBOPT_0x1AC
 ; 0009 04D0 
 ; 0009 04D1     for(i=0;i<strlen(getInfoCmd);i++){
 	__GETWRN 16,17,0
 _0x1200E8:
-	CALL SUBOPT_0x1AC
+	CALL SUBOPT_0x1AB
 	BRSH _0x1200E9
 ; 0009 04D2         putchar0(getInfoCmd[i]);
-	CALL SUBOPT_0x126
+	CALL SUBOPT_0x125
 	LD   R26,X
 	CALL _putchar0
 ; 0009 04D3     }
@@ -18095,7 +18077,7 @@ _0x1200E9:
 ; 0009 04D4 
 ; 0009 04D5     TIMER_setTimer(&timeout, 7);
 	CALL SUBOPT_0x56
-	CALL SUBOPT_0x1AE
+	CALL SUBOPT_0x1AD
 ; 0009 04D6 
 ; 0009 04D7     while( (!config_ready) && !TIMER_checkTimerExceed(timeout)){
 _0x1200EA:
@@ -18118,8 +18100,8 @@ _0x1200EE:
 _0x1200EC:
 ; 0009 04DB 
 ; 0009 04DC     memcpy(ptr,&configRd[0],configLen);
+	CALL SUBOPT_0x1AE
 	CALL SUBOPT_0x1AF
-	CALL SUBOPT_0x1B0
 ; 0009 04DD 
 ; 0009 04DE     *buflen    = configLen;
 	LDS  R30,_configLen
@@ -18206,7 +18188,7 @@ _ETH_setConfig:
 	__GETWRN 18,19,0
 	LDI  R26,LOW(325)
 	LDI  R27,HIGH(325)
-	CALL SUBOPT_0x17B
+	CALL SUBOPT_0x17A
 ; 0009 04FC     if(ptr == NULL){
 	BRNE _0x1200F1
 ; 0009 04FD         printDebug("<ETH_setConfig> malloc(CONF_READ_BUFFER) failed\r\n");
@@ -18230,7 +18212,7 @@ _0x1200F3:
 	__CPWRN 16,17,325
 	BRGE _0x1200F4
 ; 0009 0505         configRd[i] = 0x00;
-	CALL SUBOPT_0x1AA
+	CALL SUBOPT_0x1A9
 ; 0009 0506     }
 	__ADDWRN 16,17,1
 	RJMP _0x1200F3
@@ -18238,7 +18220,7 @@ _0x1200F4:
 ; 0009 0507     configLen       = 0;
 	CALL SUBOPT_0x7E
 ; 0009 0508     config_start    = 0;
-	CALL SUBOPT_0x1AB
+	CALL SUBOPT_0x1AA
 ; 0009 0509     config_ready    = 0;
 ; 0009 050A     config_end      = 0;
 ; 0009 050B     config_response = 0;
@@ -18249,7 +18231,7 @@ _0x1200F4:
 ; 0009 050E     for(i=0;i<strlen(getInfoCmd);i++){
 	__GETWRN 16,17,0
 _0x1200F6:
-	CALL SUBOPT_0x1B1
+	CALL SUBOPT_0x1B0
 	BRSH _0x1200F7
 ; 0009 050F         putchar3(getInfoCmd[i]);
 	MOVW R26,R28
@@ -18263,12 +18245,12 @@ _0x1200F6:
 	RJMP _0x1200F6
 _0x1200F7:
 ; 0009 0511     printDebug("\r\n");
-	CALL SUBOPT_0x1AD
+	CALL SUBOPT_0x1AC
 ; 0009 0512 
 ; 0009 0513     for(i=0;i<strlen(getInfoCmd);i++){
 	__GETWRN 16,17,0
 _0x1200F9:
-	CALL SUBOPT_0x1B1
+	CALL SUBOPT_0x1B0
 	BRSH _0x1200FA
 ; 0009 0514         putchar0(getInfoCmd[i]);
 	MOVW R26,R28
@@ -18287,14 +18269,14 @@ _0x1200FA:
 	ADIW R30,43
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0x1AE
+	CALL SUBOPT_0x1AD
 ; 0009 0518 
 ; 0009 0519     while( (!config_ready) && !TIMER_checkTimerExceed(timeout)){
 _0x1200FB:
 	LDS  R30,_config_ready
 	CPI  R30,0
 	BRNE _0x1200FE
-	CALL SUBOPT_0x1B2
+	CALL SUBOPT_0x1B1
 	BREQ _0x1200FF
 _0x1200FE:
 	RJMP _0x1200FD
@@ -18310,7 +18292,7 @@ _0x1200FD:
 ; 0009 051E     memcpy(ptr,&configRd[0],configLen);
 	ST   -Y,R21
 	ST   -Y,R20
-	CALL SUBOPT_0x1B0
+	CALL SUBOPT_0x1AF
 ; 0009 051F     readLen = configLen;
 	__GETWRMN 18,19,0,_configLen
 ; 0009 0520 
@@ -18348,96 +18330,96 @@ _0x120100:
 	CALL __PUTPARD1
 	LDD  R26,Y+59
 	LDD  R27,Y+59+1
+	CALL SUBOPT_0x1B2
+	LDD  R30,Y+59
+	LDD  R31,Y+59+1
 	CALL SUBOPT_0x1B3
 	LDD  R30,Y+59
 	LDD  R31,Y+59+1
 	CALL SUBOPT_0x1B4
-	LDD  R30,Y+59
-	LDD  R31,Y+59+1
 	CALL SUBOPT_0x1B5
 	CALL SUBOPT_0x1B6
+	CALL SUBOPT_0x1B5
 	CALL SUBOPT_0x1B7
-	CALL SUBOPT_0x1B6
+	CALL SUBOPT_0x1B5
 	CALL SUBOPT_0x1B8
-	CALL SUBOPT_0x1B6
 	CALL SUBOPT_0x1B9
 	CALL SUBOPT_0x1BA
+	CALL SUBOPT_0x1B9
 	CALL SUBOPT_0x1BB
-	CALL SUBOPT_0x1BA
+	CALL SUBOPT_0x1B9
+	CALL SUBOPT_0x1A2
 	CALL SUBOPT_0x1BC
-	CALL SUBOPT_0x1BA
-	CALL SUBOPT_0x1A3
 	CALL SUBOPT_0x1BD
 	CALL SUBOPT_0x1BE
+	CALL SUBOPT_0x1BD
 	CALL SUBOPT_0x1BF
-	CALL SUBOPT_0x1BE
+	CALL SUBOPT_0x1BD
 	CALL SUBOPT_0x1C0
-	CALL SUBOPT_0x1BE
-	CALL SUBOPT_0x1C1
 	__GETW2SX 73
+	CALL SUBOPT_0x1B2
+	CALL SUBOPT_0x1C1
 	CALL SUBOPT_0x1B3
-	CALL SUBOPT_0x1C2
+	CALL SUBOPT_0x1C1
 	CALL SUBOPT_0x1B4
 	CALL SUBOPT_0x1C2
-	CALL SUBOPT_0x1B5
-	CALL SUBOPT_0x1C3
+	CALL SUBOPT_0x1B6
+	CALL SUBOPT_0x1C2
 	CALL SUBOPT_0x1B7
-	CALL SUBOPT_0x1C3
+	CALL SUBOPT_0x1C2
 	CALL SUBOPT_0x1B8
 	CALL SUBOPT_0x1C3
-	CALL SUBOPT_0x1B9
-	CALL SUBOPT_0x1C4
+	CALL SUBOPT_0x1BA
+	CALL SUBOPT_0x1C3
 	CALL SUBOPT_0x1BB
-	CALL SUBOPT_0x1C4
+	CALL SUBOPT_0x1C3
+	CALL SUBOPT_0x1A2
 	CALL SUBOPT_0x1BC
 	CALL SUBOPT_0x1C4
-	CALL SUBOPT_0x1A3
-	CALL SUBOPT_0x1BD
-	CALL SUBOPT_0x1C5
+	CALL SUBOPT_0x1BE
+	CALL SUBOPT_0x1C4
 	CALL SUBOPT_0x1BF
-	CALL SUBOPT_0x1C5
+	CALL SUBOPT_0x1C4
 	CALL SUBOPT_0x1C0
-	CALL SUBOPT_0x1C5
-	CALL SUBOPT_0x1C1
 	__GETW2SX 87
+	CALL SUBOPT_0x1B2
+	CALL SUBOPT_0x1C5
 	CALL SUBOPT_0x1B3
-	CALL SUBOPT_0x1C6
+	CALL SUBOPT_0x1C5
 	CALL SUBOPT_0x1B4
 	CALL SUBOPT_0x1C6
-	CALL SUBOPT_0x1B5
-	CALL SUBOPT_0x1C7
+	CALL SUBOPT_0x1B6
+	CALL SUBOPT_0x1C6
 	CALL SUBOPT_0x1B7
-	CALL SUBOPT_0x1C7
+	CALL SUBOPT_0x1C6
 	CALL SUBOPT_0x1B8
 	CALL SUBOPT_0x1C7
-	CALL SUBOPT_0x1B9
-	CALL SUBOPT_0x1C8
+	CALL SUBOPT_0x1BA
+	CALL SUBOPT_0x1C7
 	CALL SUBOPT_0x1BB
-	CALL SUBOPT_0x1C8
+	CALL SUBOPT_0x1C7
+	CALL SUBOPT_0x1A2
 	CALL SUBOPT_0x1BC
 	CALL SUBOPT_0x1C8
-	CALL SUBOPT_0x1A3
-	CALL SUBOPT_0x1BD
-	CALL SUBOPT_0x1C9
+	CALL SUBOPT_0x1BE
+	CALL SUBOPT_0x1C8
 	CALL SUBOPT_0x1BF
-	CALL SUBOPT_0x1C9
+	CALL SUBOPT_0x1C8
 	CALL SUBOPT_0x1C0
-	CALL SUBOPT_0x1C9
-	CALL SUBOPT_0x1C1
 	LDI  R24,48
 	CALL _sprintf
 	ADIW R28,54
 ; 0009 0535 
 ; 0009 0536     printDebug("<ETH_setConfig> Set String [%s]\r\n",setStr);
-	CALL SUBOPT_0x1CA
+	CALL SUBOPT_0x1C9
 	CALL SUBOPT_0x12
 ; 0009 0537 
 ; 0009 0538     memcpy((ptr+14),&setStr[0],24);
 	MOVW R30,R20
 	ADIW R30,14
-	CALL SUBOPT_0x1CB
+	CALL SUBOPT_0x1CA
 	LDI  R26,LOW(24)
-	CALL SUBOPT_0x1CC
+	CALL SUBOPT_0x1CB
 ; 0009 0539 
 ; 0009 053A     sprintf(setStr,"%02X%02X%02X%02X",
 ; 0009 053B                 (server[0]*100) + (server[1] *10) + server[2],
@@ -18449,52 +18431,52 @@ _0x120100:
 	CALL __PUTPARD1
 	LDD  R26,Y+53
 	LDD  R27,Y+53+1
+	CALL SUBOPT_0x1B2
+	LDD  R30,Y+53
+	LDD  R31,Y+53+1
 	CALL SUBOPT_0x1B3
 	LDD  R30,Y+53
 	LDD  R31,Y+53+1
 	CALL SUBOPT_0x1B4
-	LDD  R30,Y+53
-	LDD  R31,Y+53+1
-	CALL SUBOPT_0x1B5
+	LDD  R30,Y+57
+	LDD  R31,Y+57+1
+	CALL SUBOPT_0x1B6
 	LDD  R30,Y+57
 	LDD  R31,Y+57+1
 	CALL SUBOPT_0x1B7
 	LDD  R30,Y+57
 	LDD  R31,Y+57+1
 	CALL SUBOPT_0x1B8
-	LDD  R30,Y+57
-	LDD  R31,Y+57+1
-	CALL SUBOPT_0x1B9
+	LDD  R30,Y+61
+	LDD  R31,Y+61+1
+	CALL SUBOPT_0x1BA
 	LDD  R30,Y+61
 	LDD  R31,Y+61+1
 	CALL SUBOPT_0x1BB
 	LDD  R30,Y+61
 	LDD  R31,Y+61+1
+	CALL SUBOPT_0x1A2
 	CALL SUBOPT_0x1BC
-	LDD  R30,Y+61
-	LDD  R31,Y+61+1
-	CALL SUBOPT_0x1A3
-	CALL SUBOPT_0x1BD
-	CALL SUBOPT_0x1CD
+	CALL SUBOPT_0x1CC
+	CALL SUBOPT_0x1BE
+	CALL SUBOPT_0x1CC
 	CALL SUBOPT_0x1BF
-	CALL SUBOPT_0x1CD
+	CALL SUBOPT_0x1CC
 	CALL SUBOPT_0x1C0
-	CALL SUBOPT_0x1CD
-	CALL SUBOPT_0x1C1
 	LDI  R24,16
 	CALL _sprintf
 	ADIW R28,22
 ; 0009 053F 
 ; 0009 0540     printDebug("<ETH_setConfig> Set String [%s]\r\n",setStr);
-	CALL SUBOPT_0x1CA
+	CALL SUBOPT_0x1C9
 	CALL SUBOPT_0x12
 ; 0009 0541 
 ; 0009 0542     memcpy((ptr+42),&setStr[0],8);
 	MOVW R30,R20
 	ADIW R30,42
-	CALL SUBOPT_0x1CB
+	CALL SUBOPT_0x1CA
 	LDI  R26,LOW(8)
-	CALL SUBOPT_0x1CC
+	CALL SUBOPT_0x1CB
 ; 0009 0543 
 ; 0009 0544 //    printDebug("<ETH_setConfig> Modified setting msg ---\r\n");
 ; 0009 0545 //    for(i=0;i<configLen;i++){
@@ -18509,7 +18491,7 @@ _0x120102:
 	__CPWRN 16,17,325
 	BRGE _0x120103
 ; 0009 054C         configRd[i] = 0x00;
-	CALL SUBOPT_0x1AA
+	CALL SUBOPT_0x1A9
 ; 0009 054D     }
 	__ADDWRN 16,17,1
 	RJMP _0x120102
@@ -18517,7 +18499,7 @@ _0x120103:
 ; 0009 054E     configLen       = 0;
 	CALL SUBOPT_0x7E
 ; 0009 054F     config_start    = 0;
-	CALL SUBOPT_0x1AB
+	CALL SUBOPT_0x1AA
 ; 0009 0550     config_ready    = 0;
 ; 0009 0551     config_end      = 0;
 ; 0009 0552     config_response = 0;
@@ -18590,7 +18572,7 @@ _0x12010A:
 	LDS  R30,_config_ready
 	CPI  R30,0
 	BRNE _0x12010D
-	CALL SUBOPT_0x1B2
+	CALL SUBOPT_0x1B1
 	BREQ _0x12010E
 _0x12010D:
 	RJMP _0x12010C
@@ -18674,12 +18656,12 @@ _statusRequestParser:
 ;	*st -> Y+4
 ;	i -> R16,R17
 ;	k -> R18,R19
-	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1CD
 _0x140004:
 	__CPWRN 16,17,8
 	BRGE _0x140005
 ; 000A 000B         st->nid[0]  =   pkt[k++];
-	CALL SUBOPT_0x1CF
+	CALL SUBOPT_0x1CE
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	ST   X,R30
@@ -18689,20 +18671,20 @@ _0x140004:
 _0x140005:
 ; 000A 000D 
 ; 000A 000E     st->accm        =   pkt[k++];
+	CALL SUBOPT_0x1CE
 	CALL SUBOPT_0x1CF
-	CALL SUBOPT_0x1D0
 ; 000A 000F 
 ; 000A 0010     st->intv        =   ((pkt[k++] & 0x00ff) << 8) |
 ; 000A 0011                         ((pkt[k++] & 0x00ff));
-	CALL SUBOPT_0x9B
+	CALL SUBOPT_0x9C
 	MOV  R31,R30
 	LDI  R30,0
 	MOVW R0,R30
-	CALL SUBOPT_0x1CF
-	CALL SUBOPT_0x9B
+	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x9C
 	OR   R30,R0
 	OR   R31,R1
-	CALL SUBOPT_0x1D1
+	CALL SUBOPT_0x1D0
 ; 000A 0012 
 ; 000A 0013     if(st->accm >= 0x30){
 	LDD  R26,Z+8
@@ -18725,7 +18707,7 @@ _0x140006:
 	LDD  R31,Y+4+1
 	LDD  R26,Z+11
 	LDD  R27,Z+12
-	CALL SUBOPT_0x1D2
+	CALL SUBOPT_0x1D1
 	__PUTW1SNS 4,13
 ; 000A 001A     if(st->parlst == NULL)
 	LDD  R26,Y+4
@@ -18751,7 +18733,7 @@ _0x140009:
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	ADIW R26,11
-	CALL SUBOPT_0x1D3
+	CALL SUBOPT_0x1D2
 	BRSH _0x14000A
 ; 000A 0021     {
 ; 000A 0022         (st->parlst)[i]      = pkt[i+k];
@@ -18759,7 +18741,7 @@ _0x140009:
 	LDD  R31,Y+4+1
 	LDD  R26,Z+13
 	LDD  R27,Z+14
-	CALL SUBOPT_0x1D4
+	CALL SUBOPT_0x1D3
 	ST   X,R30
 ; 000A 0023     }
 	__ADDWRN 16,17,1
@@ -18804,7 +18786,7 @@ _configManageParser:
 	__POINTD1FN _0x140000,38
 	CALL SUBOPT_0x3
 ; 000A 003B     print_payload(pkt,len);
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x193
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	CALL _print_payload
@@ -18815,7 +18797,7 @@ _0x14000C:
 	__CPWRN 16,17,8
 	BRGE _0x14000D
 ; 000A 003E         st->nid[0]  =   pkt[k++];
-	CALL SUBOPT_0x1CF
+	CALL SUBOPT_0x1CE
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	ST   X,R30
@@ -18825,8 +18807,8 @@ _0x14000C:
 _0x14000D:
 ; 000A 0040 
 ; 000A 0041     st->accd        =   pkt[k++];
+	CALL SUBOPT_0x1CE
 	CALL SUBOPT_0x1CF
-	CALL SUBOPT_0x1D0
 ; 000A 0042 
 ; 000A 0043     st->cnfg        =   pkt[k++];
 	__PUTB1SNS 4,9
@@ -18844,12 +18826,12 @@ _0x14000D:
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	ADIW R26,10
-	CALL SUBOPT_0x114
+	CALL SUBOPT_0x113
 ; 000A 0048         st->confSpec    =   NULL;
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	ADIW R26,12
-	CALL SUBOPT_0x114
+	CALL SUBOPT_0x113
 ; 000A 0049         return 0;
 	RJMP _0x20E007A
 ; 000A 004A     }
@@ -18872,7 +18854,7 @@ _0x14000E:
 	LDD  R27,Y+8+1
 	ADIW R26,10
 	CALL SUBOPT_0x1E
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000A 0050 
 ; 000A 0051 
 ; 000A 0052     st->confSpec    =   malloc((st->confLen) * sizeof(char));
@@ -18880,7 +18862,7 @@ _0x14000E:
 	LDD  R31,Y+4+1
 	LDD  R26,Z+10
 	LDD  R27,Z+11
-	CALL SUBOPT_0x1D2
+	CALL SUBOPT_0x1D1
 	__PUTW1SNS 4,12
 ; 000A 0053     if(st->confSpec == NULL)
 	LDD  R26,Y+4
@@ -18906,7 +18888,7 @@ _0x140011:
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	ADIW R26,10
-	CALL SUBOPT_0x1D3
+	CALL SUBOPT_0x1D2
 	BRSH _0x140012
 ; 000A 005A     {
 ; 000A 005B         (st->confSpec)[i]      = pkt[i+k];
@@ -18914,7 +18896,7 @@ _0x140011:
 	LDD  R31,Y+4+1
 	LDD  R26,Z+12
 	LDD  R27,Z+13
-	CALL SUBOPT_0x1D4
+	CALL SUBOPT_0x1D3
 	ST   X,R30
 ; 000A 005C     }
 	__ADDWRN 16,17,1
@@ -18946,12 +18928,12 @@ _logManipulationCmdParser:
 ;	*st -> Y+4
 ;	i -> R16,R17
 ;	k -> R18,R19
-	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1CD
 _0x140014:
 	__CPWRN 16,17,8
 	BRGE _0x140015
 ; 000A 006F         st->nid[0]  =   pkt[k++];
-	CALL SUBOPT_0x1CF
+	CALL SUBOPT_0x1CE
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	ST   X,R30
@@ -18961,8 +18943,8 @@ _0x140014:
 _0x140015:
 ; 000A 0071 
 ; 000A 0072     st->accd        =   pkt[k++];
-	CALL SUBOPT_0x1CF
-	CALL SUBOPT_0x1D5
+	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1D4
 ; 000A 0073 
 ; 000A 0074     if(len > 6){
 	LDD  R26,Y+6
@@ -18974,15 +18956,15 @@ _0x140015:
 ; 000A 0076                         (((long)pkt[k++] & 0x000000FF) << 16) |
 ; 000A 0077                         (((long)pkt[k++] & 0x000000FF) << 8)  |
 ; 000A 0078                         (((long)pkt[k++] & 0x000000FF));
-	CALL SUBOPT_0x1CF
+	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1D5
 	CALL SUBOPT_0x1D6
-	CALL SUBOPT_0x1D7
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x1CF
-	CALL SUBOPT_0x1D6
+	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1D5
 	CALL __LSLD16
 	POP  R26
 	POP  R27
@@ -18993,9 +18975,9 @@ _0x140015:
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x1CF
-	CALL SUBOPT_0x1D6
-	CALL SUBOPT_0x1D8
+	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1D5
+	CALL SUBOPT_0x1D7
 	POP  R26
 	POP  R27
 	POP  R24
@@ -19005,27 +18987,27 @@ _0x140015:
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x1CF
-	CALL SUBOPT_0x1D6
+	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1D5
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x1D9
+	CALL SUBOPT_0x1D8
 ; 000A 0079 
 ; 000A 007A         st->tStop   =   (((long)pkt[k++] & 0x000000FF) << 24) |
 ; 000A 007B                         (((long)pkt[k++] & 0x000000FF) << 16) |
 ; 000A 007C                         (((long)pkt[k++] & 0x000000FF) << 8)  |
 ; 000A 007D                         (((long)pkt[k++] & 0x000000FF));
-	CALL SUBOPT_0x1CF
+	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1D5
 	CALL SUBOPT_0x1D6
-	CALL SUBOPT_0x1D7
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x1CF
-	CALL SUBOPT_0x1D6
+	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1D5
 	CALL __LSLD16
 	POP  R26
 	POP  R27
@@ -19036,9 +19018,9 @@ _0x140015:
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x1CF
-	CALL SUBOPT_0x1D6
-	CALL SUBOPT_0x1D8
+	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1D5
+	CALL SUBOPT_0x1D7
 	POP  R26
 	POP  R27
 	POP  R24
@@ -19048,8 +19030,8 @@ _0x140015:
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x1CF
-	CALL SUBOPT_0x1D6
+	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1D5
 	POP  R26
 	POP  R27
 	POP  R24
@@ -19074,12 +19056,12 @@ _logManipulationAckParser:
 ;	*st -> Y+4
 ;	i -> R16,R17
 ;	k -> R18,R19
-	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1CD
 _0x140018:
 	__CPWRN 16,17,8
 	BRGE _0x140019
 ; 000A 0088         st->nid[0]  =   pkt[k++];
-	CALL SUBOPT_0x1DA
+	CALL SUBOPT_0x1D9
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	ST   X,R30
@@ -19107,12 +19089,12 @@ _networkMaintenanceParser:
 ;	*st -> Y+4
 ;	i -> R16,R17
 ;	k -> R18,R19
-	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1CD
 _0x14001B:
 	__CPWRN 16,17,8
 	BRGE _0x14001C
 ; 000A 0096         st->nid[0]  =   pkt[k++];
-	CALL SUBOPT_0x1CF
+	CALL SUBOPT_0x1CE
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	ST   X,R30
@@ -19122,17 +19104,17 @@ _0x14001B:
 _0x14001C:
 ; 000A 0098 
 ; 000A 0099     st->cmd         =   pkt[k++];
-	CALL SUBOPT_0x1CF
-	CALL SUBOPT_0x1D5
+	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1D4
 ; 000A 009A 
 ; 000A 009B     st->dataLen     =   len - 2;
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
 	SBIW R30,2
-	CALL SUBOPT_0x1D1
+	CALL SUBOPT_0x1D0
 ; 000A 009C 
 ; 000A 009D     if( st->dataLen > 0 ){
-	CALL SUBOPT_0x1A1
+	CALL SUBOPT_0x1A0
 	BRSH _0x14001D
 ; 000A 009E 
 ; 000A 009F         st->data    =   malloc((st->dataLen) * sizeof(char));
@@ -19140,7 +19122,7 @@ _0x14001C:
 	LDD  R31,Y+4+1
 	LDD  R26,Z+9
 	LDD  R27,Z+10
-	CALL SUBOPT_0x1D2
+	CALL SUBOPT_0x1D1
 	__PUTW1SNS 4,11
 ; 000A 00A0         if(st->data == NULL)
 	LDD  R26,Y+4
@@ -19152,7 +19134,7 @@ _0x14001C:
 ; 000A 00A1         {
 ; 000A 00A2             printDebug("<networkMaintenanceParser> malloc failed (%d)\r\n",((st->dataLen) * sizeof(char)));
 	__POINTD1FN _0x140000,196
-	CALL SUBOPT_0x1DB
+	CALL SUBOPT_0x1DA
 	LDD  R26,Z+9
 	LDD  R27,Z+10
 	LDI  R30,LOW(1)
@@ -19173,7 +19155,7 @@ _0x140020:
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	ADIW R26,9
-	CALL SUBOPT_0x1D3
+	CALL SUBOPT_0x1D2
 	BRSH _0x140021
 ; 000A 00A7         {
 ; 000A 00A8             (st->data)[i]      = pkt[i+k];
@@ -19181,7 +19163,7 @@ _0x140020:
 	LDD  R31,Y+4+1
 	LDD  R26,Z+11
 	LDD  R27,Z+12
-	CALL SUBOPT_0x1D4
+	CALL SUBOPT_0x1D3
 	ST   X,R30
 ; 000A 00A9         }
 	__ADDWRN 16,17,1
@@ -19212,12 +19194,12 @@ _remoteDeviceControlParser:
 ;	*st -> Y+4
 ;	i -> R16,R17
 ;	k -> R18,R19
-	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1CD
 _0x140023:
 	__CPWRN 16,17,8
 	BRGE _0x140024
 ; 000A 00B5         st->nid[0]  =   pkt[k++];
-	CALL SUBOPT_0x1DA
+	CALL SUBOPT_0x1D9
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	ST   X,R30
@@ -19227,22 +19209,22 @@ _0x140023:
 _0x140024:
 ; 000A 00B7 
 ; 000A 00B8     st->cmd         =   pkt[k++];
-	CALL SUBOPT_0x1DA
-	CALL SUBOPT_0x1D5
+	CALL SUBOPT_0x1D9
+	CALL SUBOPT_0x1D4
 ; 000A 00B9 
 ; 000A 00BA     st->value       =   (((long)pkt[k++] & 0x000000FF) << 24) |
 ; 000A 00BB                         (((long)pkt[k++] & 0x000000FF) << 16) |
 ; 000A 00BC                         (((long)pkt[k++] & 0x000000FF) << 8)  |
 ; 000A 00BD                         (((long)pkt[k++] & 0x000000FF));
-	CALL SUBOPT_0x1DA
+	CALL SUBOPT_0x1D9
+	CALL SUBOPT_0x1D5
 	CALL SUBOPT_0x1D6
-	CALL SUBOPT_0x1D7
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x1DA
-	CALL SUBOPT_0x1D6
+	CALL SUBOPT_0x1D9
+	CALL SUBOPT_0x1D5
 	CALL __LSLD16
 	POP  R26
 	POP  R27
@@ -19253,9 +19235,9 @@ _0x140024:
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x1DA
-	CALL SUBOPT_0x1D6
-	CALL SUBOPT_0x1D8
+	CALL SUBOPT_0x1D9
+	CALL SUBOPT_0x1D5
+	CALL SUBOPT_0x1D7
 	POP  R26
 	POP  R27
 	POP  R24
@@ -19265,13 +19247,13 @@ _0x140024:
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x1DA
-	CALL SUBOPT_0x1D6
+	CALL SUBOPT_0x1D9
+	CALL SUBOPT_0x1D5
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x1D9
+	CALL SUBOPT_0x1D8
 ; 000A 00BE 
 ; 000A 00BF     return 0;
 	RJMP _0x20E0077
@@ -19288,12 +19270,12 @@ _clearListParser:
 ;	*st -> Y+4
 ;	i -> R16,R17
 ;	k -> R18,R19
-	CALL SUBOPT_0x1CE
+	CALL SUBOPT_0x1CD
 _0x140026:
 	__CPWRN 16,17,8
 	BRGE _0x140027
 ; 000A 00C7         st->nid[0]  =   pkt[k++];
-	CALL SUBOPT_0x1DA
+	CALL SUBOPT_0x1D9
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	ST   X,R30
@@ -19306,10 +19288,10 @@ _0x140027:
 _0x20E0078:
 	MOVW R30,R18
 	__ADDWRN 18,19,1
-	CALL SUBOPT_0x1A9
-	CALL SUBOPT_0x1D5
+	CALL SUBOPT_0x1A8
+	CALL SUBOPT_0x1D4
 ; 000A 00CB     st->status      =   pkt[k++];
-	CALL SUBOPT_0x1DA
+	CALL SUBOPT_0x1D9
 	__PUTB1SNS 4,9
 ; 000A 00CC 
 ; 000A 00CD     return 0;
@@ -19325,7 +19307,7 @@ _0x20E0077:
 ; 000A 00D1 {
 _free_statusRequest:
 ; 000A 00D2     free ( st->parlst );
-	CALL SUBOPT_0x94
+	CALL SUBOPT_0x95
 ;	*st -> Y+0
 	LDD  R26,Z+13
 	LDD  R27,Z+14
@@ -19337,7 +19319,7 @@ _free_statusRequest:
 ; 000A 00D6 {
 _free_configManage:
 ; 000A 00D7     free ( st->confSpec );
-	CALL SUBOPT_0x94
+	CALL SUBOPT_0x95
 ;	*st -> Y+0
 	LDD  R26,Z+12
 	LDD  R27,Z+13
@@ -19349,7 +19331,7 @@ _free_configManage:
 ; 000A 00DB {
 _free_networkMaintenance:
 ; 000A 00DC     free ( st->data );
-	CALL SUBOPT_0x94
+	CALL SUBOPT_0x95
 ;	*st -> Y+0
 	LDD  R26,Z+11
 	LDD  R27,Z+12
@@ -19498,7 +19480,7 @@ _configRead:
 ; 000B 0022     void            *cnfgStrc       = NULL;
 ; 000B 0023 
 ; 000B 0024     type    =   cnfg & 0xF0;
-	CALL SUBOPT_0x1DC
+	CALL SUBOPT_0x1DB
 	CALL SUBOPT_0x46
 ;	cnfg -> Y+12
 ;	*ptr -> Y+10
@@ -19520,15 +19502,15 @@ _configRead:
 ; 000B 0028         case CONF_PROPERTIES    :   cnfgStrc = malloc (sizeof(struct prop_cnfg_st));
 	BREQ PC+3
 	JMP _0x160013
-	CALL SUBOPT_0xF8
-	CALL SUBOPT_0x1DD
+	CALL SUBOPT_0xF7
+	CALL SUBOPT_0x1DC
 ; 000B 0029                                     if(cnfgStrc == NULL){
 	BRNE _0x160014
 ; 000B 002A                                         printDebug("<configRead> CONF_PROPERTIES malloc1 failed (%d bytes)\r\n",sizeof(struct prop_cnfg_st));
 	__POINTD1FN _0x160000,53
 	CALL __PUTPARD1
 	__GETD1N 0xA1
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 002B                                         return -2;
 	LDI  R30,LOW(65534)
 	LDI  R31,HIGH(65534)
@@ -19548,7 +19530,7 @@ _0x160014:
 	__POINTD1FN _0x160000,110
 	CALL SUBOPT_0x3
 ; 000B 0031                                         free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 0032                                         return -3;
 	LDI  R30,LOW(65533)
 	LDI  R31,HIGH(65533)
@@ -19560,53 +19542,53 @@ _0x160015:
 	__POINTD1FN _0x160000,154
 	CALL SUBOPT_0x3
 ; 000B 0036                                     printDebug("%s\r\n",((struct prop_cnfg_st *)cnfgStrc)->deviceType);
-	CALL SUBOPT_0x1DE
+	CALL SUBOPT_0x1DD
 	CALL SUBOPT_0x34
 	CALL SUBOPT_0x12
 ; 000B 0037                                     printDebug("%s\r\n",((struct prop_cnfg_st *)cnfgStrc)->firmwareVersion);
-	CALL SUBOPT_0x1DE
+	CALL SUBOPT_0x1DD
 	ADIW R30,20
 	CALL SUBOPT_0x34
 	CALL SUBOPT_0x12
 ; 000B 0038                                     printDebug("%s\r\n",((struct prop_cnfg_st *)cnfgStrc)->deviceName);
-	CALL SUBOPT_0x1DE
+	CALL SUBOPT_0x1DD
 	ADIW R30,40
 	CALL SUBOPT_0x34
 	CALL SUBOPT_0x12
 ; 000B 0039                                     printDebug("%s\r\n",((struct prop_cnfg_st *)cnfgStrc)->deviceID);
-	CALL SUBOPT_0x1DE
+	CALL SUBOPT_0x1DD
 	SUBI R30,LOW(-80)
 	SBCI R31,HIGH(-80)
 	CALL SUBOPT_0x34
 	CALL SUBOPT_0x12
 ; 000B 003A                                     printDebug("%s\r\n",((struct prop_cnfg_st *)cnfgStrc)->hostName);
-	CALL SUBOPT_0x1DE
+	CALL SUBOPT_0x1DD
 	SUBI R30,LOW(-100)
 	SBCI R31,HIGH(-100)
 	CALL SUBOPT_0x34
 	CALL SUBOPT_0x12
 ; 000B 003B                                     printDebug("%s\r\n",((struct prop_cnfg_st *)cnfgStrc)->hostID);
-	CALL SUBOPT_0x1DE
+	CALL SUBOPT_0x1DD
 	SUBI R30,LOW(-140)
 	SBCI R31,HIGH(-140)
 	CALL SUBOPT_0x34
 	CALL SUBOPT_0x12
 ; 000B 003C                                     printDebug("%d\r\n",(signed char) (((struct prop_cnfg_st *)cnfgStrc)->timeZone));
 	__POINTD1FN _0x160000,192
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x127
 	SUBI R26,LOW(-160)
 	SBCI R27,HIGH(-160)
 	LD   R30,X
 	CALL __CBD1
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 003D 
 ; 000B 003E //                                    printDebug("\r\n--- cnfgStrc ---\r\n");
 ; 000B 003F //                                    print_payload((char *)cnfgStrc, sizeof(struct prop_cnfg_st));
 ; 000B 0040 
 ; 000B 0041                                     memcpy(ptr,(char *) cnfgStrc,sizeof(struct prop_cnfg_st));
+	CALL SUBOPT_0x1DE
+	CALL SUBOPT_0xF7
 	CALL SUBOPT_0x1DF
-	CALL SUBOPT_0xF8
-	CALL SUBOPT_0x1E0
 ; 000B 0042 //                                    printDebug("\r\n--- ptr ---\r\n");
 ; 000B 0043 //                                    print_payload((char *)ptr, sizeof(struct prop_cnfg_st));
 ; 000B 0044 
@@ -19624,15 +19606,15 @@ _0x160013:
 	CPC  R31,R26
 	BREQ PC+3
 	JMP _0x160016
-	CALL SUBOPT_0x1E1
-	CALL SUBOPT_0x1DD
+	CALL SUBOPT_0x1E0
+	CALL SUBOPT_0x1DC
 ; 000B 004A                                     if(cnfgStrc == NULL){
 	BRNE _0x160017
 ; 000B 004B                                         printDebug("<configRead> CONF_OPERATE malloc1 failed (%d bytes)\r\n",sizeof(struct oper_cnfg_st));
 	__POINTD1FN _0x160000,197
 	CALL __PUTPARD1
 	__GETD1N 0x8
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 004C                                         return -2;
 	LDI  R30,LOW(65534)
 	LDI  R31,HIGH(65534)
@@ -19652,7 +19634,7 @@ _0x160017:
 	__POINTD1FN _0x160000,251
 	CALL SUBOPT_0x3
 ; 000B 0052                                         free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 0053                                         return -3;
 	LDI  R30,LOW(65533)
 	LDI  R31,HIGH(65533)
@@ -19665,16 +19647,16 @@ _0x160018:
 	CALL SUBOPT_0x3
 ; 000B 0057                                     printDebug("mode            [0x%02X]\r\n",((struct oper_cnfg_st *)cnfgStrc)->mode);
 	__POINTD1FN _0x160000,324
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x127
 	LD   R30,X
 	CALL SUBOPT_0x29
 ; 000B 0058                                     printDebug("deviceEnable    [0x%02X]\r\n",((struct oper_cnfg_st *)cnfgStrc)->deviceEnable);
 	__POINTD1FN _0x160000,351
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x128
 	LDD  R30,Z+1
 	CALL SUBOPT_0x29
 ; 000B 0059                                     printDebug("alarmEnable     [0x%02X]\r\n",((struct oper_cnfg_st *)cnfgStrc)->alarmEnable);
-	CALL SUBOPT_0x1E2
+	CALL SUBOPT_0x1E1
 	LDD  R30,Z+2
 	CALL SUBOPT_0x29
 ; 000B 005A                                     printDebug("sensorEnable    ");
@@ -19686,8 +19668,8 @@ _0x16001A:
 	__CPWRN 16,17,5
 	BRGE _0x16001B
 ; 000B 005C                                         printDebug("[0x%02X]",((struct oper_cnfg_st *)cnfgStrc)->sensorEnable[i]);
-	CALL SUBOPT_0x1E3
-	CALL SUBOPT_0x107
+	CALL SUBOPT_0x1E2
+	CALL SUBOPT_0x106
 ; 000B 005D                                         if(i == (MAX_SENS_CHANNEL-1)){
 	LDI  R30,LOW(4)
 	LDI  R31,HIGH(4)
@@ -19695,7 +19677,7 @@ _0x16001A:
 	CPC  R31,R17
 	BRNE _0x16001C
 ; 000B 005E                                             printDebug("\r\n");
-	CALL SUBOPT_0x1E4
+	CALL SUBOPT_0x1E3
 ; 000B 005F                                         }
 ; 000B 0060                                     }
 _0x16001C:
@@ -19707,14 +19689,14 @@ _0x16001B:
 ; 000B 0063 //                                    print_payload((char *)cnfgStrc, sizeof(struct oper_cnfg_st));
 ; 000B 0064 
 ; 000B 0065                                     memcpy(ptr,(char *) cnfgStrc,sizeof(struct oper_cnfg_st));
-	CALL SUBOPT_0x1DF
+	CALL SUBOPT_0x1DE
 	LDI  R26,LOW(8)
-	CALL SUBOPT_0x1CC
+	CALL SUBOPT_0x1CB
 ; 000B 0066 //                                    printDebug("\r\n--- ptr ---\r\n");
 ; 000B 0067 //                                    print_payload((char *)ptr, sizeof(struct oper_cnfg_st));
 ; 000B 0068 
 ; 000B 0069                                     free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 006A 
 ; 000B 006B                                     return sizeof(struct oper_cnfg_st);
 	LDI  R30,LOW(8)
@@ -19728,18 +19710,18 @@ _0x160016:
 	CPC  R31,R26
 	BREQ PC+3
 	JMP _0x16001D
-	CALL SUBOPT_0x1E5
+	CALL SUBOPT_0x1E4
 ; 000B 006E 
 ; 000B 006F                                     cnfgStrc = malloc (sizeof(struct sens_cnfg_st));
 	LDI  R26,LOW(29)
-	CALL SUBOPT_0x1E6
+	CALL SUBOPT_0x1E5
 ; 000B 0070                                     if(cnfgStrc == NULL){
 	BRNE _0x16001E
 ; 000B 0071                                         printDebug("<configRead> CONF_SENSOR malloc1 failed (%d bytes)\r\n",sizeof(struct sens_cnfg_st));
 	__POINTD1FN _0x160000,431
 	CALL __PUTPARD1
 	__GETD1N 0x1D
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 0072                                         return -2;
 	LDI  R30,LOW(65534)
 	LDI  R31,HIGH(65534)
@@ -19748,7 +19730,7 @@ _0x160016:
 ; 000B 0074 
 ; 000B 0075                                     res = getSensorConfig(channel, (struct sens_cnfg_st *) cnfgStrc);
 _0x16001E:
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x193
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	CALL _getSensorConfig
@@ -19760,7 +19742,7 @@ _0x16001E:
 	__POINTD1FN _0x160000,484
 	CALL SUBOPT_0x3
 ; 000B 0078                                         free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 0079                                         return -3;
 	LDI  R30,LOW(65533)
 	LDI  R31,HIGH(65533)
@@ -19770,87 +19752,87 @@ _0x16001E:
 ; 000B 007C                                     printDebug("\r\n--- READ CONF_SENSOR [%d]---\r\n",channel);
 _0x16001F:
 	__POINTD1FN _0x160000,524
-	CALL SUBOPT_0x1E7
+	CALL SUBOPT_0x1E6
 ; 000B 007D                                     printDebug("samplingRate    [%d]\r\n",      ((struct sens_cnfg_st *)cnfgStrc)->samplingRate);
 	__POINTD1FN _0x160000,557
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x127
 	CALL SUBOPT_0x1E
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 007E                                     printDebug("reOccurrence    [0x%04X]\r\n",  ((struct sens_cnfg_st *)cnfgStrc)->reOccurrence);
 	__POINTD1FN _0x160000,580
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x127
 	ADIW R26,2
 	CALL SUBOPT_0x1E
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 007F                                     printDebug("timeStartHour   [%d]\r\n",      ((struct sens_cnfg_st *)cnfgStrc)->timeStartHour);
 	__POINTD1FN _0x160000,607
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x128
 	LDD  R30,Z+4
 	CALL SUBOPT_0x29
 ; 000B 0080                                     printDebug("timeStartMin    [%d]\r\n",      ((struct sens_cnfg_st *)cnfgStrc)->timeStartMin);
 	__POINTD1FN _0x160000,630
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x128
 	LDD  R30,Z+5
 	CALL SUBOPT_0x29
 ; 000B 0081                                     printDebug("timeStopHour    [%d]\r\n",      ((struct sens_cnfg_st *)cnfgStrc)->timeStopHour);
 	__POINTD1FN _0x160000,653
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x128
 	LDD  R30,Z+6
 	CALL SUBOPT_0x29
 ; 000B 0082                                     printDebug("timeStopMin     [%d]\r\n",      ((struct sens_cnfg_st *)cnfgStrc)->timeStopMin);
 	__POINTD1FN _0x160000,676
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x128
 	LDD  R30,Z+7
 	CALL SUBOPT_0x29
 ; 000B 0083                                     printDebug("alarmEnable     [0x%02X]\r\n",  ((struct sens_cnfg_st *)cnfgStrc)->alarmEnable);
-	CALL SUBOPT_0x1E2
+	CALL SUBOPT_0x1E1
 	LDD  R30,Z+8
 	CALL SUBOPT_0x29
 ; 000B 0084                                     printDebug("lowerLimit      [%f]\r\n",      ((struct sens_cnfg_st *)cnfgStrc)->lowerLimit);
 	__POINTD1FN _0x160000,699
-	CALL SUBOPT_0x129
-	CALL SUBOPT_0x19C
+	CALL SUBOPT_0x128
 	CALL SUBOPT_0x19B
+	CALL SUBOPT_0x19A
 ; 000B 0085                                     printDebug("lowerDelay      [%d]\r\n",      ((struct sens_cnfg_st *)cnfgStrc)->lowerDelay);
 	__POINTD1FN _0x160000,722
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x127
 	ADIW R26,13
 	CALL SUBOPT_0x1E
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 0086                                     printDebug("lowerExtreme    [%f]\r\n",      ((struct sens_cnfg_st *)cnfgStrc)->lowerExtreme);
 	__POINTD1FN _0x160000,745
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x128
 	__GETD2Z 15
-	CALL SUBOPT_0x19B
+	CALL SUBOPT_0x19A
 ; 000B 0087                                     printDebug("upperLimit      [%f]\r\n",      ((struct sens_cnfg_st *)cnfgStrc)->upperLimit);
 	__POINTD1FN _0x160000,768
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x128
 	__GETD2Z 19
-	CALL SUBOPT_0x19B
+	CALL SUBOPT_0x19A
 ; 000B 0088                                     printDebug("upperDelay      [%d]\r\n",      ((struct sens_cnfg_st *)cnfgStrc)->upperDelay);
 	__POINTD1FN _0x160000,791
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x127
 	ADIW R26,23
 	CALL SUBOPT_0x1E
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 0089                                     printDebug("upperExtreme    [%f]\r\n",      ((struct sens_cnfg_st *)cnfgStrc)->upperExtreme);
 	__POINTD1FN _0x160000,814
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x128
 	__GETD2Z 25
-	CALL SUBOPT_0x19B
+	CALL SUBOPT_0x19A
 ; 000B 008A 
 ; 000B 008B //                                    printDebug("\r\n--- cnfgStrc ---\r\n");
 ; 000B 008C //                                    print_payload((char *)cnfgStrc, sizeof(struct sens_cnfg_st));
 ; 000B 008D 
 ; 000B 008E                                     memcpy(ptr,(char *) cnfgStrc,sizeof(struct sens_cnfg_st));
-	CALL SUBOPT_0x1DF
+	CALL SUBOPT_0x1DE
 	LDI  R26,LOW(29)
-	CALL SUBOPT_0x1CC
+	CALL SUBOPT_0x1CB
 ; 000B 008F //                                    printDebug("\r\n--- ptr ---\r\n");
 ; 000B 0090 //                                    print_payload((char *)ptr, sizeof(struct sens_cnfg_st));
 ; 000B 0091 
 ; 000B 0092                                     free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 0093 
 ; 000B 0094                                     return sizeof(struct sens_cnfg_st);
 	LDI  R30,LOW(29)
@@ -19864,16 +19846,16 @@ _0x16001D:
 	CPC  R31,R26
 	BREQ PC+3
 	JMP _0x160020
-	CALL SUBOPT_0x1E5
+	CALL SUBOPT_0x1E4
 ; 000B 0097 
 ; 000B 0098                                     cnfgStrc = malloc (sizeof(struct din_cnfg_st));
 	CALL SUBOPT_0x76
-	CALL SUBOPT_0x1DD
+	CALL SUBOPT_0x1DC
 ; 000B 0099                                     if(cnfgStrc == NULL){
 	BRNE _0x160021
 ; 000B 009A                                         printDebug("<configRead> CONF_AUXDI malloc1 failed (%d bytes)\r\n",sizeof(struct din_cnfg_st));
 	__POINTD1FN _0x160000,837
-	CALL SUBOPT_0x1E8
+	CALL SUBOPT_0x1E7
 ; 000B 009B                                         return -2;
 	LDI  R30,LOW(65534)
 	LDI  R31,HIGH(65534)
@@ -19882,7 +19864,7 @@ _0x16001D:
 ; 000B 009D 
 ; 000B 009E                                     res = getAuxDinConfig(channel, (struct din_cnfg_st *) cnfgStrc);
 _0x160021:
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x193
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	CALL _getAuxDinConfig
@@ -19894,7 +19876,7 @@ _0x160021:
 	__POINTD1FN _0x160000,889
 	CALL SUBOPT_0x3
 ; 000B 00A1                                         free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 00A2                                         return -3;
 	LDI  R30,LOW(65533)
 	LDI  R31,HIGH(65533)
@@ -19904,25 +19886,25 @@ _0x160021:
 ; 000B 00A5                                     printDebug("\r\n--- READ CONF_AUXDI [%d]---\r\n",channel);
 _0x160022:
 	__POINTD1FN _0x160000,929
-	CALL SUBOPT_0x1E7
+	CALL SUBOPT_0x1E6
 ; 000B 00A6                                     printDebug("channelEnable    [0x%02X]\r\n", ((struct din_cnfg_st *)cnfgStrc)->channelEnable);
-	CALL SUBOPT_0x1E9
+	CALL SUBOPT_0x1E8
 	LD   R30,X
 	CALL SUBOPT_0x29
 ; 000B 00A7                                     printDebug("alarmDelay       [%d]\r\n",     ((struct din_cnfg_st *)cnfgStrc)->alarmDelay);
 	__POINTD1FN _0x160000,989
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x127
 	ADIW R26,1
 	CALL SUBOPT_0x1E
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 00A8 
 ; 000B 00A9 //                                    printDebug("\r\n--- cnfgStrc ---\r\n");
 ; 000B 00AA //                                    print_payload((char *)cnfgStrc, sizeof(struct din_cnfg_st));
 ; 000B 00AB 
 ; 000B 00AC                                     memcpy(ptr,(char *) cnfgStrc,sizeof(struct din_cnfg_st));
-	CALL SUBOPT_0x1DF
+	CALL SUBOPT_0x1DE
 	CALL SUBOPT_0x76
-	CALL SUBOPT_0x1E0
+	CALL SUBOPT_0x1DF
 ; 000B 00AD //                                    printDebug("\r\n--- ptr ---\r\n");
 ; 000B 00AE //                                    print_payload((char *)ptr, sizeof(struct din_cnfg_st));
 ; 000B 00AF 
@@ -19940,18 +19922,18 @@ _0x160020:
 	CPC  R31,R26
 	BREQ PC+3
 	JMP _0x160023
-	CALL SUBOPT_0x1E5
+	CALL SUBOPT_0x1E4
 ; 000B 00B5 
 ; 000B 00B6                                     cnfgStrc = malloc (sizeof(struct dout_cnfg_st));
 	LDI  R26,LOW(38)
-	CALL SUBOPT_0x1E6
+	CALL SUBOPT_0x1E5
 ; 000B 00B7                                     if(cnfgStrc == NULL){
 	BRNE _0x160024
 ; 000B 00B8                                         printDebug("<configRead> CONF_AUXDO malloc1 failed (%d bytes)\r\n",sizeof(struct dout_cnfg_st));
 	__POINTD1FN _0x160000,1013
 	CALL __PUTPARD1
 	__GETD1N 0x26
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 00B9                                         return -2;
 	LDI  R30,LOW(65534)
 	LDI  R31,HIGH(65534)
@@ -19960,7 +19942,7 @@ _0x160020:
 ; 000B 00BB 
 ; 000B 00BC                                     res = getAuxDoutConfig(channel, (struct dout_cnfg_st *) cnfgStrc);
 _0x160024:
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x193
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	CALL _getAuxDoutConfig
@@ -19972,7 +19954,7 @@ _0x160024:
 	__POINTD1FN _0x160000,1065
 	CALL SUBOPT_0x3
 ; 000B 00BF                                         free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 00C0                                         return -3;
 	LDI  R30,LOW(65533)
 	LDI  R31,HIGH(65533)
@@ -19982,36 +19964,36 @@ _0x160024:
 ; 000B 00C3                                     printDebug("\r\n--- READ CONF_AUXDO [%d]---\r\n",channel);
 _0x160025:
 	__POINTD1FN _0x160000,1106
-	CALL SUBOPT_0x1E7
+	CALL SUBOPT_0x1E6
 ; 000B 00C4                                     printDebug("channelEnable     [0x%02X]\r\n",    ((struct dout_cnfg_st *)cnfgStrc)->channelEnable);
-	CALL SUBOPT_0x1EA
+	CALL SUBOPT_0x1E9
 	LD   R30,X
 	CALL SUBOPT_0x29
 ; 000B 00C5                                     printDebug("stateOnEvent      [%d]\r\n",        ((struct dout_cnfg_st *)cnfgStrc)->stateOnEvent);
 	__POINTD1FN _0x160000,1167
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x128
 	LDD  R30,Z+1
 	CALL SUBOPT_0x29
 ; 000B 00C6                                     printDebug("eventSourceNumber [%d]\r\n",        ((struct dout_cnfg_st *)cnfgStrc)->eventSourceNumber);
-	CALL SUBOPT_0x1EB
+	CALL SUBOPT_0x1EA
 	LDD  R30,Z+2
 	CALL SUBOPT_0x29
 ; 000B 00C7 
 ; 000B 00C8                                     printDebug("eventSource       ");
-	CALL SUBOPT_0x1EC
+	CALL SUBOPT_0x1EB
 ; 000B 00C9                                     for(i=0;i<MAX_EVENT_SOURCE;i++){
 	__GETWRN 16,17,0
 _0x160027:
 	__CPWRN 16,17,35
 	BRGE _0x160028
 ; 000B 00CA                                         printDebug("[0x%02X]",((struct dout_cnfg_st *)cnfgStrc)->eventSource[i]);
-	CALL SUBOPT_0x1E3
-	CALL SUBOPT_0x107
+	CALL SUBOPT_0x1E2
+	CALL SUBOPT_0x106
 ; 000B 00CB                                         if(i == (MAX_EVENT_SOURCE-1)){
-	CALL SUBOPT_0x1ED
+	CALL SUBOPT_0x1EC
 	BRNE _0x160029
 ; 000B 00CC                                             printDebug("\r\n");
-	CALL SUBOPT_0x1E4
+	CALL SUBOPT_0x1E3
 ; 000B 00CD                                         }
 ; 000B 00CE                                     }
 _0x160029:
@@ -20023,14 +20005,14 @@ _0x160028:
 ; 000B 00D1 //                                    print_payload((char *)cnfgStrc, sizeof(struct dout_cnfg_st));
 ; 000B 00D2 
 ; 000B 00D3                                     memcpy(ptr,(char *) cnfgStrc,sizeof(struct dout_cnfg_st));
-	CALL SUBOPT_0x1DF
+	CALL SUBOPT_0x1DE
 	LDI  R26,LOW(38)
-	CALL SUBOPT_0x1CC
+	CALL SUBOPT_0x1CB
 ; 000B 00D4 //                                    printDebug("\r\n--- ptr ---\r\n");
 ; 000B 00D5 //                                    print_payload((char *)ptr, sizeof(struct dout_cnfg_st));
 ; 000B 00D6 
 ; 000B 00D7                                     free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 00D8 
 ; 000B 00D9                                     return sizeof(struct dout_cnfg_st);
 	LDI  R30,LOW(38)
@@ -20044,18 +20026,18 @@ _0x160023:
 	CPC  R31,R26
 	BREQ PC+3
 	JMP _0x16002A
-	CALL SUBOPT_0x1E5
+	CALL SUBOPT_0x1E4
 ; 000B 00DC 
 ; 000B 00DD                                     cnfgStrc = malloc (sizeof(struct ain_cnfg_st));
 	LDI  R26,LOW(5)
-	CALL SUBOPT_0x1E6
+	CALL SUBOPT_0x1E5
 ; 000B 00DE                                     if(cnfgStrc == NULL){
 	BRNE _0x16002B
 ; 000B 00DF                                         printDebug("<configRead> CONF_AUXAI malloc1 failed (%d bytes)\r\n",sizeof(struct ain_cnfg_st));
 	__POINTD1FN _0x160000,1236
 	CALL __PUTPARD1
 	__GETD1N 0x5
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 00E0                                         return -2;
 	LDI  R30,LOW(65534)
 	LDI  R31,HIGH(65534)
@@ -20064,7 +20046,7 @@ _0x160023:
 ; 000B 00E2 
 ; 000B 00E3                                     res = getAuxAinConfig(channel, (struct ain_cnfg_st *) cnfgStrc);
 _0x16002B:
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x193
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	CALL _getAuxAinConfig
@@ -20076,7 +20058,7 @@ _0x16002B:
 	__POINTD1FN _0x160000,1288
 	CALL SUBOPT_0x3
 ; 000B 00E6                                         free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 00E7                                         return -3;
 	LDI  R30,LOW(65533)
 	LDI  R31,HIGH(65533)
@@ -20086,28 +20068,28 @@ _0x16002B:
 ; 000B 00EA                                     printDebug("\r\n--- READ CONF_AUXAI [%d]---\r\n",channel);
 _0x16002C:
 	__POINTD1FN _0x160000,1328
-	CALL SUBOPT_0x1E7
+	CALL SUBOPT_0x1E6
 ; 000B 00EB                                     printDebug("channelEnable    [0x%02X]\r\n", ((struct ain_cnfg_st *)cnfgStrc)->channelEnable);
-	CALL SUBOPT_0x1E9
+	CALL SUBOPT_0x1E8
 	LD   R30,X
 	CALL SUBOPT_0x29
 ; 000B 00EC                                     printDebug("alarmDelay       [%f]\r\n",     ((struct ain_cnfg_st *)cnfgStrc)->alarmLevel);
 	__POINTD1FN _0x160000,1360
-	CALL SUBOPT_0x129
-	CALL SUBOPT_0x1EE
+	CALL SUBOPT_0x128
+	CALL SUBOPT_0x1ED
 ; 000B 00ED 
 ; 000B 00EE //                                    printDebug("\r\n--- cnfgStrc ---\r\n");
 ; 000B 00EF //                                    print_payload((char *)cnfgStrc, sizeof(struct ain_cnfg_st));
 ; 000B 00F0 
 ; 000B 00F1                                     memcpy(ptr,(char *) cnfgStrc,sizeof(struct ain_cnfg_st));
-	CALL SUBOPT_0x1DF
+	CALL SUBOPT_0x1DE
 	LDI  R26,LOW(5)
-	CALL SUBOPT_0x1CC
+	CALL SUBOPT_0x1CB
 ; 000B 00F2 //                                    printDebug("\r\n--- ptr ---\r\n");
 ; 000B 00F3 //                                    print_payload((char *)ptr, sizeof(struct ain_cnfg_st));
 ; 000B 00F4 
 ; 000B 00F5                                     free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 00F6 
 ; 000B 00F7                                     return sizeof(struct ain_cnfg_st);
 	LDI  R30,LOW(5)
@@ -20121,18 +20103,18 @@ _0x16002A:
 	CPC  R31,R26
 	BREQ PC+3
 	JMP _0x16002D
-	CALL SUBOPT_0x1E5
+	CALL SUBOPT_0x1E4
 ; 000B 00FA 
 ; 000B 00FB                                     cnfgStrc = malloc (sizeof(struct aout_cnfg_st));
 	LDI  R26,LOW(41)
-	CALL SUBOPT_0x1E6
+	CALL SUBOPT_0x1E5
 ; 000B 00FC                                     if(cnfgStrc == NULL){
 	BRNE _0x16002E
 ; 000B 00FD                                         printDebug("<configRead> CONF_AUXAO malloc1 failed (%d bytes)\r\n",sizeof(struct aout_cnfg_st));
 	__POINTD1FN _0x160000,1384
 	CALL __PUTPARD1
 	__GETD1N 0x29
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 00FE                                         return -2;
 	LDI  R30,LOW(65534)
 	LDI  R31,HIGH(65534)
@@ -20141,7 +20123,7 @@ _0x16002A:
 ; 000B 0100 
 ; 000B 0101                                     res = getAuxAoutConfig(channel, (struct aout_cnfg_st *) cnfgStrc);
 _0x16002E:
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x193
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	CALL _getAuxAoutConfig
@@ -20153,7 +20135,7 @@ _0x16002E:
 	__POINTD1FN _0x160000,1436
 	CALL SUBOPT_0x3
 ; 000B 0104                                         free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 0105                                         return -3;
 	LDI  R30,LOW(65533)
 	LDI  R31,HIGH(65533)
@@ -20163,39 +20145,39 @@ _0x16002E:
 ; 000B 0108                                     printDebug("\r\n--- READ CONF_AUXAO [%d]---\r\n",channel);
 _0x16002F:
 	__POINTD1FN _0x160000,1477
-	CALL SUBOPT_0x1E7
+	CALL SUBOPT_0x1E6
 ; 000B 0109                                     printDebug("channelEnable     [0x%02X]\r\n",    ((struct aout_cnfg_st *)cnfgStrc)->channelEnable);
-	CALL SUBOPT_0x1EA
+	CALL SUBOPT_0x1E9
 	LD   R30,X
 	CALL SUBOPT_0x29
 ; 000B 010A                                     printDebug("levelOnEvent      [%f]\r\n",        ((struct aout_cnfg_st *)cnfgStrc)->levelOnEvent);
 	__POINTD1FN _0x160000,1509
-	CALL SUBOPT_0x129
-	CALL SUBOPT_0x1EE
+	CALL SUBOPT_0x128
+	CALL SUBOPT_0x1ED
 ; 000B 010B                                     printDebug("eventSourceNumber [%d]\r\n",        ((struct aout_cnfg_st *)cnfgStrc)->eventSourceNumber);
-	CALL SUBOPT_0x1EB
+	CALL SUBOPT_0x1EA
 	LDD  R30,Z+5
 	CALL SUBOPT_0x29
 ; 000B 010C 
 ; 000B 010D                                     printDebug("eventSource       ");
-	CALL SUBOPT_0x1EC
+	CALL SUBOPT_0x1EB
 ; 000B 010E                                     for(i=0;i<MAX_EVENT_SOURCE;i++){
 	__GETWRN 16,17,0
 _0x160031:
 	__CPWRN 16,17,35
 	BRGE _0x160032
 ; 000B 010F                                         printDebug("[0x%02X]",((struct aout_cnfg_st *)cnfgStrc)->eventSource[i]);
-	CALL SUBOPT_0x1E3
+	CALL SUBOPT_0x1E2
 	ADIW R30,6
 	ADD  R30,R16
 	ADC  R31,R17
 	LD   R30,Z
 	CALL SUBOPT_0x29
 ; 000B 0110                                         if(i == (MAX_EVENT_SOURCE-1)){
-	CALL SUBOPT_0x1ED
+	CALL SUBOPT_0x1EC
 	BRNE _0x160033
 ; 000B 0111                                             printDebug("\r\n");
-	CALL SUBOPT_0x1E4
+	CALL SUBOPT_0x1E3
 ; 000B 0112                                         }
 ; 000B 0113                                     }
 _0x160033:
@@ -20207,14 +20189,14 @@ _0x160032:
 ; 000B 0116 //                                    print_payload((char *)cnfgStrc, sizeof(struct aout_cnfg_st));
 ; 000B 0117 
 ; 000B 0118                                     memcpy(ptr,(char *) cnfgStrc,sizeof(struct aout_cnfg_st));
-	CALL SUBOPT_0x1DF
+	CALL SUBOPT_0x1DE
 	LDI  R26,LOW(41)
-	CALL SUBOPT_0x1CC
+	CALL SUBOPT_0x1CB
 ; 000B 0119 //                                    printDebug("\r\n--- ptr ---\r\n");
 ; 000B 011A //                                    print_payload((char *)ptr, sizeof(struct aout_cnfg_st));
 ; 000B 011B 
 ; 000B 011C                                     free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 011D 
 ; 000B 011E                                     return sizeof(struct aout_cnfg_st);
 	LDI  R30,LOW(41)
@@ -20229,14 +20211,14 @@ _0x16002D:
 	BREQ PC+3
 	JMP _0x160034
 	LDI  R26,LOW(37)
-	CALL SUBOPT_0x1E6
+	CALL SUBOPT_0x1E5
 ; 000B 0121                                     if(cnfgStrc == NULL){
 	BRNE _0x160035
 ; 000B 0122                                         printDebug("<configRead> CONF_BUZZER malloc1 failed (%d bytes)\r\n",sizeof(struct buzz_cnfg_st));
 	__POINTD1FN _0x160000,1534
 	CALL __PUTPARD1
 	__GETD1N 0x25
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 0123                                         return -2;
 	LDI  R30,LOW(65534)
 	LDI  R31,HIGH(65534)
@@ -20256,7 +20238,7 @@ _0x160035:
 	__POINTD1FN _0x160000,1587
 	CALL SUBOPT_0x3
 ; 000B 0129                                         free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 012A                                         return -3;
 	LDI  R30,LOW(65533)
 	LDI  R31,HIGH(65533)
@@ -20269,30 +20251,30 @@ _0x160036:
 	CALL SUBOPT_0x3
 ; 000B 012E                                     printDebug("enable            [0x%02X]\r\n",    ((struct buzz_cnfg_st *)cnfgStrc)->enable);
 	__POINTD1FN _0x160000,1656
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x127
 	LD   R30,X
 	CALL SUBOPT_0x29
 ; 000B 012F                                     printDebug("eventSourceNumber [%d]\r\n",        ((struct buzz_cnfg_st *)cnfgStrc)->eventSourceNumber);
-	CALL SUBOPT_0x1EB
+	CALL SUBOPT_0x1EA
 	LDD  R30,Z+1
 	CALL SUBOPT_0x29
 ; 000B 0130 
 ; 000B 0131                                     printDebug("eventSource       ");
-	CALL SUBOPT_0x1EC
+	CALL SUBOPT_0x1EB
 ; 000B 0132                                     for(i=0;i<MAX_EVENT_SOURCE;i++){
 	__GETWRN 16,17,0
 _0x160038:
 	__CPWRN 16,17,35
 	BRGE _0x160039
 ; 000B 0133                                         printDebug("[0x%02X]",((struct buzz_cnfg_st *)cnfgStrc)->eventSource[i]);
-	CALL SUBOPT_0x1E3
-	CALL SUBOPT_0x12B
+	CALL SUBOPT_0x1E2
+	CALL SUBOPT_0x12A
 	CALL SUBOPT_0x29
 ; 000B 0134                                         if(i == (MAX_EVENT_SOURCE - 1)){
-	CALL SUBOPT_0x1ED
+	CALL SUBOPT_0x1EC
 	BRNE _0x16003A
 ; 000B 0135                                             printDebug("\r\n");
-	CALL SUBOPT_0x1E4
+	CALL SUBOPT_0x1E3
 ; 000B 0136                                         }
 ; 000B 0137                                     }
 _0x16003A:
@@ -20304,14 +20286,14 @@ _0x160039:
 ; 000B 013A //                                    print_payload((char *)cnfgStrc, sizeof(struct buzz_cnfg_st));
 ; 000B 013B 
 ; 000B 013C                                     memcpy(ptr,(char *) cnfgStrc,sizeof(struct buzz_cnfg_st));
-	CALL SUBOPT_0x1DF
+	CALL SUBOPT_0x1DE
 	LDI  R26,LOW(37)
-	CALL SUBOPT_0x1CC
+	CALL SUBOPT_0x1CB
 ; 000B 013D //                                    printDebug("\r\n--- ptr ---\r\n");
 ; 000B 013E //                                    print_payload((char *)ptr, sizeof(struct buzz_cnfg_st));
 ; 000B 013F 
 ; 000B 0140                                     free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 0141 
 ; 000B 0142                                     return sizeof(struct buzz_cnfg_st);
 	LDI  R30,LOW(37)
@@ -20326,14 +20308,14 @@ _0x160034:
 	BREQ PC+3
 	JMP _0x16003B
 	LDI  R26,LOW(18)
-	CALL SUBOPT_0x1E6
+	CALL SUBOPT_0x1E5
 ; 000B 0145                                     if(cnfgStrc == NULL){
 	BRNE _0x16003C
 ; 000B 0146                                         printDebug("<configRead> CONF_ENVALARM malloc1 failed (%d bytes)\r\n",sizeof(struct alm_cnfg_st));
 	__POINTD1FN _0x160000,1685
 	CALL __PUTPARD1
 	__GETD1N 0x12
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 0147                                         return -2;
 	LDI  R30,LOW(65534)
 	LDI  R31,HIGH(65534)
@@ -20353,7 +20335,7 @@ _0x16003C:
 	__POINTD1FN _0x160000,1740
 	CALL SUBOPT_0x3
 ; 000B 014D                                         free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 014E                                         return -3;
 	LDI  R30,LOW(65533)
 	LDI  R31,HIGH(65533)
@@ -20366,45 +20348,45 @@ _0x16003D:
 	CALL SUBOPT_0x3
 ; 000B 0152                                     printDebug("gsmRSSILevel      [%f]\r\n",((struct alm_cnfg_st *)cnfgStrc)->gsmRSSILevel);
 	__POINTD1FN _0x160000,1813
-	CALL SUBOPT_0x128
-	CALL SUBOPT_0x12D
+	CALL SUBOPT_0x127
+	CALL SUBOPT_0x12C
 ; 000B 0153                                     printDebug("gsmCreditBalance  [%d]\r\n",((struct alm_cnfg_st *)cnfgStrc)->gsmCreditBalance);
 	__POINTD1FN _0x160000,1838
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x127
 	ADIW R26,4
-	CALL SUBOPT_0x12E
+	CALL SUBOPT_0x12D
 ; 000B 0154                                     printDebug("batteryLevel      [%f]\r\n",((struct alm_cnfg_st *)cnfgStrc)->batteryLevel);
 	__POINTD1FN _0x160000,1863
-	CALL SUBOPT_0x129
-	CALL SUBOPT_0x130
+	CALL SUBOPT_0x128
+	CALL SUBOPT_0x12F
 ; 000B 0155                                     printDebug("commSignalLevel   [%f]\r\n",((struct alm_cnfg_st *)cnfgStrc)->commSignalLevel);
 	__POINTD1FN _0x160000,1888
-	CALL SUBOPT_0x129
-	CALL SUBOPT_0x131
+	CALL SUBOPT_0x128
+	CALL SUBOPT_0x130
 ; 000B 0156                                     printDebug("commLostDelay     [%d]\r\n",((struct alm_cnfg_st *)cnfgStrc)->commLostDelay);
 	__POINTD1FN _0x160000,1913
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x127
 	ADIW R26,14
-	CALL SUBOPT_0x12E
+	CALL SUBOPT_0x12D
 ; 000B 0157                                     printDebug("memoryMin         [%d]\r\n",((struct alm_cnfg_st *)cnfgStrc)->memoryMin);
 	__POINTD1FN _0x160000,1938
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x127
 	ADIW R26,16
 	CALL SUBOPT_0x1E
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 0158 
 ; 000B 0159 //                                    printDebug("\r\n--- cnfgStrc ---\r\n");
 ; 000B 015A //                                    print_payload((char *)cnfgStrc, sizeof(struct alm_cnfg_st));
 ; 000B 015B 
 ; 000B 015C                                     memcpy(ptr,(char *) cnfgStrc,sizeof(struct alm_cnfg_st));
-	CALL SUBOPT_0x1DF
+	CALL SUBOPT_0x1DE
 	LDI  R26,LOW(18)
-	CALL SUBOPT_0x1CC
+	CALL SUBOPT_0x1CB
 ; 000B 015D //                                    printDebug("\r\n--- ptr ---\r\n");
 ; 000B 015E //                                    print_payload((char *)ptr, sizeof(struct alm_cnfg_st));
 ; 000B 015F 
 ; 000B 0160                                     free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 0161 
 ; 000B 0162                                     return sizeof(struct alm_cnfg_st);
 	LDI  R30,LOW(18)
@@ -20418,12 +20400,12 @@ _0x16003B:
 	BREQ PC+3
 	JMP _0x160041
 	CALL SUBOPT_0x76
-	CALL SUBOPT_0x1DD
+	CALL SUBOPT_0x1DC
 ; 000B 0164                                     if(cnfgStrc == NULL){
 	BRNE _0x16003F
 ; 000B 0165                                         printDebug("<configRead> CONF_STATREPORT malloc1 failed (%d bytes)\r\n",sizeof(struct stat_cnfg_st));
 	__POINTD1FN _0x160000,1963
-	CALL SUBOPT_0x1E8
+	CALL SUBOPT_0x1E7
 ; 000B 0166                                         return -2;
 	LDI  R30,LOW(65534)
 	LDI  R31,HIGH(65534)
@@ -20443,7 +20425,7 @@ _0x16003F:
 	__POINTD1FN _0x160000,2020
 	CALL SUBOPT_0x3
 ; 000B 016C                                         free ( cnfgStrc );
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15D
 ; 000B 016D                                         return -3;
 	LDI  R30,LOW(65533)
 	LDI  R31,HIGH(65533)
@@ -20456,30 +20438,30 @@ _0x160040:
 	CALL SUBOPT_0x3
 ; 000B 0171                                     printDebug("accm      [0x%02X]\r\n",((struct stat_cnfg_st *)cnfgStrc)->accm);
 	__POINTD1FN _0x160000,2099
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x127
 	LD   R30,X
 	CALL SUBOPT_0x29
 ; 000B 0172                                     printDebug("intv      [%d]\r\n",    ((struct stat_cnfg_st *)cnfgStrc)->intv);
 	__POINTD1FN _0x160000,2120
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x127
 	ADIW R26,1
 	CALL SUBOPT_0x1E
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000B 0173 
 ; 000B 0174 //                                    printDebug("\r\n--- cnfgStrc ---\r\n");
 ; 000B 0175 //                                    print_payload((char *)cnfgStrc, sizeof(struct stat_cnfg_st));
 ; 000B 0176 
 ; 000B 0177                                     memcpy(ptr,(char *) cnfgStrc,sizeof(struct stat_cnfg_st));
-	CALL SUBOPT_0x1DF
+	CALL SUBOPT_0x1DE
 	CALL SUBOPT_0x76
-	CALL SUBOPT_0x1E0
+	CALL SUBOPT_0x1DF
 ; 000B 0178 //                                    printDebug("\r\n--- ptr ---\r\n");
 ; 000B 0179 //                                    print_payload((char *)ptr, sizeof(struct stat_cnfg_st));
 ; 000B 017A 
 ; 000B 017B                                     free ( cnfgStrc );
 ; 000B 017C         default                 :   printDebug("<configRead> unknown configuration type [0x%02X]\r\n",type);
 _0x160041:
-	CALL SUBOPT_0x1EF
+	CALL SUBOPT_0x1EE
 	MOV  R30,R21
 	CALL SUBOPT_0x29
 ; 000B 017D                                     return -1;
@@ -20520,10 +20502,10 @@ _configWrite:
 ; 000B 018B 
 ; 000B 018C     printDebug("\r\n --- WRITE CONFIG packet (%d)--- \r\n",len);
 	__POINTD1FN _0x160000,2188
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x128
 	CALL SUBOPT_0xE9
 ; 000B 018D     print_payload(conf,len);
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x193
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	CALL _print_payload
@@ -20589,13 +20571,13 @@ _0x160047:
 	LDI  R26,HIGH(0x30)
 	CPC  R31,R26
 	BRNE _0x160049
-	CALL SUBOPT_0x1F0
+	CALL SUBOPT_0x1EF
 ; 000B 01A1                                     printDebug("\r\n--- Write CONF_SENSOR (%d) ---",channel);
 	__POINTD1FN _0x160000,2376
 	CALL SUBOPT_0x49
 ; 000B 01A2 
 ; 000B 01A3                                     res = setSensorConfig(channel,(struct sens_cnfg_st *)conf);
-	CALL SUBOPT_0x1F1
+	CALL SUBOPT_0x1F0
 	CALL _setSensorConfig
 	MOVW R16,R30
 ; 000B 01A4                                     if(res < 0){
@@ -20618,13 +20600,13 @@ _0x160049:
 	LDI  R26,HIGH(0x40)
 	CPC  R31,R26
 	BRNE _0x16004B
-	CALL SUBOPT_0x1F0
+	CALL SUBOPT_0x1EF
 ; 000B 01AA                                     printDebug("\r\n--- Write CONF_AUXDI (%d) ---",channel);
 	__POINTD1FN _0x160000,2450
 	CALL SUBOPT_0x49
 ; 000B 01AB 
 ; 000B 01AC                                     res = setAuxDinConfig(channel,(struct din_cnfg_st *)conf);
-	CALL SUBOPT_0x1F1
+	CALL SUBOPT_0x1F0
 	CALL _setAuxDinConfig
 	MOVW R16,R30
 ; 000B 01AD                                     if(res < 0){
@@ -20647,13 +20629,13 @@ _0x16004B:
 	LDI  R26,HIGH(0x50)
 	CPC  R31,R26
 	BRNE _0x16004D
-	CALL SUBOPT_0x1F0
+	CALL SUBOPT_0x1EF
 ; 000B 01B3                                     printDebug("\r\n--- Write CONF_AUXDO (%d) ---",channel);
 	__POINTD1FN _0x160000,2523
 	CALL SUBOPT_0x49
 ; 000B 01B4 
 ; 000B 01B5                                     res = setAuxDoutConfig(channel,(struct dout_cnfg_st *)conf);
-	CALL SUBOPT_0x1F1
+	CALL SUBOPT_0x1F0
 	CALL _setAuxDoutConfig
 	MOVW R16,R30
 ; 000B 01B6                                     if(res < 0){
@@ -20676,13 +20658,13 @@ _0x16004D:
 	LDI  R26,HIGH(0x60)
 	CPC  R31,R26
 	BRNE _0x16004F
-	CALL SUBOPT_0x1F0
+	CALL SUBOPT_0x1EF
 ; 000B 01BC                                     printDebug("\r\n--- Write CONF_AUXAI (%d) ---",channel);
 	__POINTD1FN _0x160000,2597
 	CALL SUBOPT_0x49
 ; 000B 01BD 
 ; 000B 01BE                                     res = setAuxAinConfig(channel,(struct ain_cnfg_st *)conf);
-	CALL SUBOPT_0x1F1
+	CALL SUBOPT_0x1F0
 	CALL _setAuxAinConfig
 	MOVW R16,R30
 ; 000B 01BF                                     if(res < 0){
@@ -20705,13 +20687,13 @@ _0x16004F:
 	LDI  R26,HIGH(0x70)
 	CPC  R31,R26
 	BRNE _0x160051
-	CALL SUBOPT_0x1F0
+	CALL SUBOPT_0x1EF
 ; 000B 01C5                                     printDebug("\r\n--- Write CONF_AUXAO (%d) ---",channel);
 	__POINTD1FN _0x160000,2670
 	CALL SUBOPT_0x49
 ; 000B 01C6 
 ; 000B 01C7                                     res = setAuxAoutConfig(channel,(struct aout_cnfg_st *)conf);
-	CALL SUBOPT_0x1F1
+	CALL SUBOPT_0x1F0
 	CALL _setAuxAoutConfig
 	MOVW R16,R30
 ; 000B 01C8                                     if(res < 0){
@@ -20813,7 +20795,7 @@ _0x160055:
 ; 000B 01E5         default                 :   printDebug("<configRead> unknown configuration type [0x%02X]\r\n",type);
 _0x160058:
 _0x160059:
-	CALL SUBOPT_0x1EF
+	CALL SUBOPT_0x1EE
 	MOV  R30,R19
 	CALL SUBOPT_0x29
 ; 000B 01E6                                     return -1;
@@ -20845,8 +20827,8 @@ _setLogManipulateSchema:
 	BRSH _0x16005A
 ; 000B 01EE         printDebug("<setLogManipulateSchema> time period error start[%ld] - stop[%ld]\r\n",tStart,tStop);
 	__POINTD1FN _0x160000,2965
-	CALL SUBOPT_0x1F2
-	CALL SUBOPT_0x1F2
+	CALL SUBOPT_0x1F1
+	CALL SUBOPT_0x1F1
 	CALL SUBOPT_0x21
 ; 000B 01EF         return -1;
 	LDI  R30,LOW(65535)
@@ -20868,19 +20850,19 @@ _setTimeSyncSchema:
 ; 000B 01F8     unsigned long int unixTime = 0x00000000;
 ; 000B 01F9 
 ; 000B 01FA     memcpy(&unixTime,timeData,sizeof(unixTime));
-	CALL SUBOPT_0x1DC
+	CALL SUBOPT_0x1DB
 	ST   -Y,R17
 	ST   -Y,R16
 ;	*timeData -> Y+6
 ;	res -> R16,R17
 ;	unixTime -> Y+2
-	CALL SUBOPT_0x1F3
+	CALL SUBOPT_0x1F2
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
 	CALL SUBOPT_0x4D
 ; 000B 01FB 
 ; 000B 01FC     if(unixTime == 0){
-	CALL SUBOPT_0x1F4
+	CALL SUBOPT_0x1F3
 	BRNE _0x16005B
 ; 000B 01FD         printDebug("<setTimeSyncSchema> Got 0 Unix time stamp\r\n");
 	__POINTD1FN _0x160000,3033
@@ -20894,7 +20876,7 @@ _setTimeSyncSchema:
 ; 000B 0201     printDebug("<setTimeSyncSchema> Received time sync. packet %ld\r\n",unixTime);
 _0x16005B:
 	__POINTD1FN _0x160000,3077
-	CALL SUBOPT_0x1F5
+	CALL SUBOPT_0x1F4
 ; 000B 0202 
 ; 000B 0203     res = RTC_setBinary( unixTime );
 	CALL SUBOPT_0xB4
@@ -20905,7 +20887,7 @@ _0x16005B:
 	BRPL _0x16005C
 ; 000B 0205         printDebug("<setTimeSyncSchema> RTC_setBinary(%ld) failed\r\n", unixTime);
 	__POINTD1FN _0x160000,3130
-	CALL SUBOPT_0x1F5
+	CALL SUBOPT_0x1F4
 ; 000B 0206         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
@@ -20929,10 +20911,10 @@ _setMuteAlarm:
 ; 000B 020E     int res;
 ; 000B 020F 
 ; 000B 0210     if(period == 0){
-	CALL SUBOPT_0x1F6
+	CALL SUBOPT_0x1F5
 ;	period -> Y+2
 ;	res -> R16,R17
-	CALL SUBOPT_0x1F4
+	CALL SUBOPT_0x1F3
 	BRNE _0x16005D
 ; 000B 0211         printDebug("<setMuteAlarm> permanent mute alarm\r\n");
 	__POINTD1FN _0x160000,3178
@@ -20950,7 +20932,7 @@ _0x16005D:
 _0x160060:
 ; 000B 0214         printDebug("<setMuteAlarm> invalid period (%ld)\r\n", period);
 	__POINTD1FN _0x160000,3216
-	CALL SUBOPT_0x1F5
+	CALL SUBOPT_0x1F4
 ; 000B 0215         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
@@ -20960,7 +20942,7 @@ _0x160060:
 _0x16005F:
 ; 000B 0218         printDebug("<setMuteAlarm> mute alarm for %ld second\r\n",period);
 	__POINTD1FN _0x160000,3254
-	CALL SUBOPT_0x1F5
+	CALL SUBOPT_0x1F4
 ; 000B 0219     }
 _0x16005E:
 ; 000B 021A 
@@ -20973,7 +20955,7 @@ _0x16005E:
 	BRPL _0x160063
 ; 000B 021D         printDebug("<setMuteAlarm> ALARM_mute(%ld) failed\r\n", period);
 	__POINTD1FN _0x160000,3297
-	CALL SUBOPT_0x1F5
+	CALL SUBOPT_0x1F4
 ; 000B 021E         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
@@ -21058,7 +21040,7 @@ _ETH_addWaitQueue:
 ; 000C 001A 
 ; 000C 001B     eth_waitQueue[slot].packetData = (char *) malloc(len);
 _0x180003:
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _eth_waitQueue,9
 	PUSH R31
 	PUSH R30
@@ -21070,14 +21052,14 @@ _0x180003:
 	ST   X+,R30
 	ST   X,R31
 ; 000C 001C     if(eth_waitQueue[slot].packetData == NULL)
-	CALL SUBOPT_0x16F
-	CALL SUBOPT_0x176
+	CALL SUBOPT_0x16E
+	CALL SUBOPT_0x175
 	SBIW R30,0
 	BRNE _0x180004
 ; 000C 001D     {
 ; 000C 001E         printDebug("<ETH_addWaitQueue> malloc(%d) failed\r\n",len);
 	__POINTD1FN _0x180000,53
-	CALL SUBOPT_0x118
+	CALL SUBOPT_0x117
 ; 000C 001F         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
@@ -21086,30 +21068,30 @@ _0x180003:
 ; 000C 0021 
 ; 000C 0022     memcpy( eth_waitQueue[slot].packetData, pktptr, len );
 _0x180004:
-	CALL SUBOPT_0x16F
-	CALL SUBOPT_0x176
+	CALL SUBOPT_0x16E
+	CALL SUBOPT_0x175
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x193
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	CALL _memcpy
 ; 000C 0023 
 ; 000C 0024     eth_waitQueue[slot].packetLen   = len;
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _eth_waitQueue,7
 	LDD  R26,Y+4
 	STD  Z+0,R26
 ; 000C 0025     eth_waitQueue[slot].packetID    = id;
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _eth_waitQueue,8
 	LDD  R26,Y+8
 	STD  Z+0,R26
 ; 000C 0026     eth_waitQueue[slot].retryCount  = 0;
-	CALL SUBOPT_0x16F
-	CALL SUBOPT_0x1F7
+	CALL SUBOPT_0x16E
+	CALL SUBOPT_0x1F6
 ; 000C 0027     eth_waitQueue[slot].timeout     = timeout;
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _eth_waitQueue,5
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
@@ -21118,15 +21100,15 @@ _0x180004:
 ; 000C 0028 
 ; 000C 0029     //eth_waitQueue[slot].retryTime   = 0;
 ; 000C 002A     TIMER_setTimer(&(eth_waitQueue[slot].retryTime), eth_waitQueue[slot].timeout);
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
+	CALL SUBOPT_0x173
 	CALL SUBOPT_0x174
-	CALL SUBOPT_0x175
 ; 000C 002B 
 ; 000C 002C     ETH_waitQCount++;
 	INC  R7
 ; 000C 002D     printDebug("\r\n                                     Added (%02X) to eth_waitQueue[%d]\r\n", id, slot);
 	__POINTD1FN _0x180000,92
-	CALL SUBOPT_0x1F8
+	CALL SUBOPT_0x1F7
 	MOVW R30,R16
 	CALL __CWD1
 	CALL SUBOPT_0x21
@@ -21156,7 +21138,7 @@ _0x180006:
 	CPI  R17,15
 	BRSH _0x180007
 ; 000C 0036         if(id == eth_waitQueue[i].packetID){        // scan id in eth_waitQueue
-	CALL SUBOPT_0x1F9
+	CALL SUBOPT_0x1F8
 	LD   R30,Z
 	LDD  R26,Y+1
 	CP   R30,R26
@@ -21168,23 +21150,23 @@ _0x180006:
 	LDI  R26,LOW(11)
 	MUL  R17,R26
 	MOVW R30,R0
-	CALL SUBOPT_0x176
-	CALL SUBOPT_0x1FA
+	CALL SUBOPT_0x175
+	CALL SUBOPT_0x1F9
 ; 000C 003B             eth_waitQueue[i].packetData  = NULL;
 ; 000C 003C             eth_waitQueue[i].packetLen   = 0;
 ; 000C 003D             eth_waitQueue[i].packetID    = 0;
-	CALL SUBOPT_0x1FB
+	CALL SUBOPT_0x1FA
 ; 000C 003E             eth_waitQueue[i].retryCount  = 0;
 ; 000C 003F             eth_waitQueue[i].timeout     = 0;
-	CALL SUBOPT_0x1FC
+	CALL SUBOPT_0x1FB
 ; 000C 0040             eth_waitQueue[i].retryTime   = 0;
 ; 000C 0041             ETH_waitQCount--;
 	DEC  R7
 ; 000C 0042             //printDebug("Removed\r\n");
 ; 000C 0043             printDebug("\r\n                                     Removed (%02X) to eth_waitQueue[%d]\r\n", id, i);
 	__POINTD1FN _0x180000,167
+	CALL SUBOPT_0x1FC
 	CALL SUBOPT_0x1FD
-	CALL SUBOPT_0x1FE
 ; 000C 0044             return ETH_waitQCount;
 	MOV  R30,R7
 	LDI  R31,0
@@ -21223,15 +21205,15 @@ _0x18000A:
 	LDI  R26,LOW(11)
 	MUL  R17,R26
 	MOVW R30,R0
-	CALL SUBOPT_0x176
-	CALL SUBOPT_0x1FA
+	CALL SUBOPT_0x175
+	CALL SUBOPT_0x1F9
 ; 000C 0052         eth_waitQueue[i].packetData  = NULL;
 ; 000C 0053         eth_waitQueue[i].packetLen   = 0;
 ; 000C 0054         eth_waitQueue[i].packetID    = 0;
-	CALL SUBOPT_0x1FB
+	CALL SUBOPT_0x1FA
 ; 000C 0055         eth_waitQueue[i].retryCount  = 0;
 ; 000C 0056         eth_waitQueue[i].timeout     = 0;
-	CALL SUBOPT_0x1FC
+	CALL SUBOPT_0x1FB
 ; 000C 0057         eth_waitQueue[i].retryTime   = 0;
 ; 000C 0058     }
 	SUBI R17,-1
@@ -21256,7 +21238,7 @@ _0x18000D:
 	CPI  R17,15
 	BRSH _0x18000E
 ; 000C 0061         if(id == eth_waitQueue[i].packetID){
-	CALL SUBOPT_0x1F9
+	CALL SUBOPT_0x1F8
 	LD   R30,Z
 	LDD  R26,Y+1
 	CP   R30,R26
@@ -21289,7 +21271,7 @@ _0x180011:
 	CPI  R17,100
 	BRSH _0x180012
 ; 000C 006D         if(id == sess_list[i]){
-	CALL SUBOPT_0xAB
+	CALL SUBOPT_0xAC
 	SUBI R30,LOW(-_sess_list)
 	SBCI R31,HIGH(-_sess_list)
 	LD   R30,Z
@@ -21380,7 +21362,7 @@ _0x18001A:
 ; 000C 0087     last_sess_id = (last_sess_id + 1) % MAX_SESS_LIST;
 	MOVW R26,R8
 	ADIW R26,1
-	CALL SUBOPT_0x1FF
+	CALL SUBOPT_0x1FE
 	MOVW R8,R30
 ; 000C 0088 
 ; 000C 0089     return id;
@@ -21470,13 +21452,13 @@ _iSensorGetADCValue:
 ; 000D 003E     unsigned int viADCSmoothValue = 0;
 ; 000D 003F     int i = 0,j = 0;
 ; 000D 0040     viADCbuffer = 0;
-	CALL SUBOPT_0x1A4
+	CALL SUBOPT_0x1A3
 	CALL SUBOPT_0x37
 ;	viADCbuffer -> Y+6
 ;	viADCSmoothValue -> R16,R17
 ;	i -> R18,R19
 ;	j -> R20,R21
-	CALL SUBOPT_0x200
+	CALL SUBOPT_0x1FF
 ; 000D 0041     printDebug("[iSensorGetValue]data[");
 	__POINTD1FN _0x1A0000,0
 	CALL SUBOPT_0x3
@@ -21488,7 +21470,7 @@ _0x1A0004:
 ; 000D 0043         #asm("wdr")
 	wdr
 ; 000D 0044         viADCbuffer = 0;
-	CALL SUBOPT_0x200
+	CALL SUBOPT_0x1FF
 ; 000D 0045         for(j=0;j<30;j++){
 	__GETWRN 20,21,0
 _0x1A0007:
@@ -21498,7 +21480,7 @@ _0x1A0007:
 	MOV  R26,R18
 	SUBI R26,-LOW(8)
 	CALL _read_adc
-	CALL SUBOPT_0x201
+	CALL SUBOPT_0x200
 	CALL __ADDD12
 	CALL SUBOPT_0xB6
 ; 000D 0047         }
@@ -21518,17 +21500,17 @@ _0x1A0008:
 	BRNE _0x1A0009
 ; 000D 004A            printDebug("ch%d: %04d ",i+1,viADCSmoothValue);
 	__POINTD1FN _0x1A0000,23
-	RJMP _0x1A00C3
+	RJMP _0x1A00C2
 ; 000D 004B         }else{
 _0x1A0009:
 ; 000D 004C            printDebug("ch%d: %04d, ",i+1,viADCSmoothValue);
 	__POINTD1FN _0x1A0000,35
-_0x1A00C3:
+_0x1A00C2:
 	CALL __PUTPARD1
 	MOVW R30,R18
-	CALL SUBOPT_0x202
+	CALL SUBOPT_0x201
 	MOVW R30,R16
-	CALL SUBOPT_0x13F
+	CALL SUBOPT_0x13E
 ; 000D 004D         }
 ; 000D 004E 
 ; 000D 004F     }
@@ -21562,11 +21544,11 @@ _updateSensorADC:
 _0x1A000C:
 ; 000D 0059         adc_raw     = read_adc(8);
 	LDI  R26,LOW(8)
-	RJMP _0x1A00C4
+	RJMP _0x1A00C3
 ; 000D 005A     }
 ; 000D 005B     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
 _0x1A000B:
-	CALL SUBOPT_0x95
+	CALL SUBOPT_0x96
 	BREQ _0x1A0010
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x2)
@@ -21575,26 +21557,26 @@ _0x1A0010:
 ; 000D 005C         adc_raw     = read_adc(8+ch);
 	LDD  R26,Y+2
 	SUBI R26,-LOW(8)
-_0x1A00C4:
+_0x1A00C3:
 	CALL _read_adc
 	MOVW R16,R30
 ; 000D 005D     }
 ; 000D 005E 
 ; 000D 005F     if( fabs(adcData[ch] - adc_raw) < 10){
 _0x1A000F:
-	CALL SUBOPT_0x203
+	CALL SUBOPT_0x202
 	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x204
-	CALL SUBOPT_0x10C
+	CALL SUBOPT_0x203
+	CALL SUBOPT_0x10B
 	CALL __CMPF12
 	BRSH _0x1A0012
 ; 000D 0060         adcData[ch] = (float)((adcData[ch] * 9.9) + (float)(adc_raw * 0.1))/10;           // Temp Sensor Low-Pass Filter
-	CALL SUBOPT_0x203
+	CALL SUBOPT_0x202
 	ADD  R30,R26
 	ADC  R31,R27
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x203
+	CALL SUBOPT_0x202
 	CALL SUBOPT_0x1B
 	__GETD2N 0x411E6666
 	CALL __MULF12
@@ -21602,33 +21584,33 @@ _0x1A000F:
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x205
-	CALL SUBOPT_0x9E
+	CALL SUBOPT_0x204
+	CALL SUBOPT_0x9F
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x9F
+	CALL SUBOPT_0xA0
 	POP  R26
 	POP  R27
-	RJMP _0x1A00C5
+	RJMP _0x1A00C4
 ; 000D 0061         //printDebug("<updateSensorADC>        < 10\r\n");
 ; 000D 0062     }
 ; 000D 0063     else if( fabs(adcData[ch] - adc_raw) < 30){
 _0x1A0012:
-	CALL SUBOPT_0x203
+	CALL SUBOPT_0x202
 	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x204
+	CALL SUBOPT_0x203
 	__GETD1N 0x41F00000
 	CALL __CMPF12
 	BRSH _0x1A0014
 ; 000D 0064         adcData[ch] = (float)((adcData[ch] * 9.5) + (float)(adc_raw * 0.5))/10;           // Temp Sensor Low-Pass Filter
-	CALL SUBOPT_0x203
+	CALL SUBOPT_0x202
 	ADD  R30,R26
 	ADC  R31,R27
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x203
+	CALL SUBOPT_0x202
 	CALL SUBOPT_0x1B
 	__GETD2N 0x41180000
 	CALL __MULF12
@@ -21636,34 +21618,34 @@ _0x1A0012:
 	PUSH R22
 	PUSH R31
 	PUSH R30
+	CALL SUBOPT_0x204
 	CALL SUBOPT_0x205
-	CALL SUBOPT_0x206
 	CALL __MULF12
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x9F
+	CALL SUBOPT_0xA0
 	POP  R26
 	POP  R27
-	RJMP _0x1A00C5
+	RJMP _0x1A00C4
 ; 000D 0065         //printDebug("<updateSensorADC>                < 30\r\n");
 ; 000D 0066     }
 ; 000D 0067     else if( fabs(adcData[ch] - adc_raw) < 50){
 _0x1A0014:
-	CALL SUBOPT_0x203
+	CALL SUBOPT_0x202
 	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x204
+	CALL SUBOPT_0x203
 	__GETD1N 0x42480000
 	CALL __CMPF12
 	BRSH _0x1A0016
 ; 000D 0068         adcData[ch] = (float)((adcData[ch] * 8.5) + (float)(adc_raw * 1.5))/10;           // Temp Sensor Low-Pass Filter
-	CALL SUBOPT_0x203
+	CALL SUBOPT_0x202
 	ADD  R30,R26
 	ADC  R31,R27
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x203
+	CALL SUBOPT_0x202
 	CALL SUBOPT_0x1B
 	__GETD2N 0x41080000
 	CALL __MULF12
@@ -21671,34 +21653,34 @@ _0x1A0014:
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x205
+	CALL SUBOPT_0x204
 	__GETD2N 0x3FC00000
 	CALL __MULF12
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x9F
+	CALL SUBOPT_0xA0
 	POP  R26
 	POP  R27
-	RJMP _0x1A00C5
+	RJMP _0x1A00C4
 ; 000D 0069         //printDebug("<updateSensorADC>                            < 50\r\n");
 ; 000D 006A     }
 ; 000D 006B     else if( fabs(adcData[ch] - adc_raw) < 100){
 _0x1A0016:
-	CALL SUBOPT_0x203
+	CALL SUBOPT_0x202
 	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x204
+	CALL SUBOPT_0x203
 	__GETD1N 0x42C80000
 	CALL __CMPF12
 	BRSH _0x1A0018
 ; 000D 006C         adcData[ch] = (float)((adcData[ch] * 7.0) + (float)(adc_raw * 3.0))/10;           // Temp Sensor Low-Pass Filter
-	CALL SUBOPT_0x203
+	CALL SUBOPT_0x202
 	ADD  R30,R26
 	ADC  R31,R27
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x203
+	CALL SUBOPT_0x202
 	CALL SUBOPT_0x1B
 	__GETD2N 0x40E00000
 	CALL __MULF12
@@ -21706,44 +21688,44 @@ _0x1A0016:
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x205
+	CALL SUBOPT_0x204
 	__GETD2N 0x40400000
 	CALL __MULF12
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x9F
+	CALL SUBOPT_0xA0
 	POP  R26
 	POP  R27
-	RJMP _0x1A00C5
+	RJMP _0x1A00C4
 ; 000D 006D         //printDebug("<updateSensorADC>                                    < 100\r\n");
 ; 000D 006E     }
 ; 000D 006F     else{
 _0x1A0018:
 ; 000D 0070         adcData[ch] = (float)((adcData[ch] * 5.0) + (float)(adc_raw * 5.0))/10;           // Temp Sensor Low-Pass Filter
-	CALL SUBOPT_0x203
+	CALL SUBOPT_0x202
 	ADD  R30,R26
 	ADC  R31,R27
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x203
+	CALL SUBOPT_0x202
 	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x207
+	CALL SUBOPT_0x206
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x205
-	CALL SUBOPT_0x207
+	CALL SUBOPT_0x204
+	CALL SUBOPT_0x206
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x9F
+	CALL SUBOPT_0xA0
 	POP  R26
 	POP  R27
-_0x1A00C5:
+_0x1A00C4:
 	CALL __PUTDP1
 ; 000D 0071         //printDebug("<updateSensorADC>                                            >= 100\r\n");
 ; 000D 0072     }
@@ -21755,255 +21737,287 @@ _0x1A00C5:
 	RET
 ; 000D 0075 }
 ;/*============================================================*/
+;
+;float iUpdateSmoothlyADC(int ch){
+; 000D 0078 float iUpdateSmoothlyADC(int ch){
+_iUpdateSmoothlyADC:
+; 000D 0079      unsigned long viADCbuffer = 0;
+; 000D 007A      float viRawVoltValue = 0.0;
+; 000D 007B      unsigned int i = 0;
+; 000D 007C      viADCbuffer = 0;
+	ST   -Y,R27
+	ST   -Y,R26
+	SBIW R28,8
+	CALL SUBOPT_0x207
+	LDI  R30,LOW(0)
+	STD  Y+3,R30
+	STD  Y+4,R30
+	STD  Y+5,R30
+	STD  Y+6,R30
+	STD  Y+7,R30
+	CALL SUBOPT_0x14C
+;	ch -> Y+10
+;	viADCbuffer -> Y+6
+;	viRawVoltValue -> Y+2
+;	i -> R16,R17
+	CALL SUBOPT_0x1FF
+; 000D 007D      for(i=0;i<20;i++){
+	__GETWRN 16,17,0
+_0x1A001B:
+	__CPWRN 16,17,20
+	BRSH _0x1A001C
+; 000D 007E         viADCbuffer += (unsigned long)(read_adc(8+ch));
+	LDD  R26,Y+10
+	SUBI R26,-LOW(8)
+	CALL _read_adc
+	CLR  R22
+	CLR  R23
+	CALL SUBOPT_0x59
+	CALL __ADDD12
+	CALL SUBOPT_0xB6
+; 000D 007F      }
+	__ADDWRN 16,17,1
+	RJMP _0x1A001B
+_0x1A001C:
+; 000D 0080      viRawVoltValue = iAD595ADCToVolt(viADCbuffer,20.0);
+	CALL SUBOPT_0x208
+	__GETD2N 0x41A00000
+	CALL _iAD595ADCToVolt
+	CALL SUBOPT_0xF0
+; 000D 0081 
+; 000D 0082      return viRawVoltValue;
+	LDD  R17,Y+1
+	LDD  R16,Y+0
+	ADIW R28,12
+	RET
+; 000D 0083 }
+;
+;float iReadSmoothlyADC(int ch){
+; 000D 0085 float iReadSmoothlyADC(int ch){
+; 000D 0086      unsigned long viADCbuffer = 0;
+; 000D 0087      float viRawVoltValue = 0.0;
+; 000D 0088      unsigned int i = 0;
+; 000D 0089      float viSmoothlyValue = 20.0;
+; 000D 008A 
+; 000D 008B      viADCbuffer = 0;
+;	ch -> Y+14
+;	viADCbuffer -> Y+10
+;	viRawVoltValue -> Y+6
+;	i -> R16,R17
+;	viSmoothlyValue -> Y+2
+; 000D 008C      for(i=0;i<20;i++){
+; 000D 008D         viADCbuffer += (unsigned long)(read_adc(8+ch));
+; 000D 008E      }
+; 000D 008F 
+; 000D 0090      return (float)(viADCbuffer/viSmoothlyValue);
+; 000D 0091 }
+;
+;//void iUpdateAD595Sensor(){
+;//    if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+;//        adc_raw     = read_adc(8);
+;//    }
+;//}
+;
 ;int sensorRead(int ch, struct sens_val_st *sensor)
-; 000D 0078 {
+; 000D 009A {
 _sensorRead:
-; 000D 0079     static TIMER t[MAX_SENS_CHANNEL]                = {0,0,0,0,0};
-; 000D 007A     static char lastCheck[MAX_SENS_CHANNEL]         = {0xFF,0xFF,0xFF,0xFF,0xFF};   // -- initial with unuse value -- //
+; 000D 009B     static TIMER t[MAX_SENS_CHANNEL]                = {0,0,0,0,0};
+; 000D 009C     static char lastCheck[MAX_SENS_CHANNEL]         = {0xFF,0xFF,0xFF,0xFF,0xFF};   // -- initial with unuse value -- //
 
 	.DSEG
 
 	.CSEG
-; 000D 007B     static char steadyState[MAX_SENS_CHANNEL]       = {0,0,0,0,0};
-; 000D 007C     char channelConnect                             = 0;
-; 000D 007D     float x_1 = 0.0;
-; 000D 007E     float x_2 = 0.0;
-; 000D 007F     float y_1 = 0.0;
-; 000D 0080     float y_2 = 0.0;
-; 000D 0081 
-; 000D 0082     const float  viZeroSet   = 1.667;
-; 000D 0083 
-; 000D 0084     unsigned long viADCbuffer;
-; 000D 0085     int i = 0;
-; 000D 0086     float offset = 0.0;
-; 000D 0087     float sensorRef1 = 0.0,sensorRef2 = 0.0,sensorRef3 = 0.0;
-; 000D 0088     float stdMeter1 = 0.0,stdMeter2 = 0.0,stdMeter3 = 0.0;        //standrad  meter
-; 000D 0089     float lowRange = 0.0;
-; 000D 008A     float stdMeterRange = 0.0;
-; 000D 008B     float factorAA = 0.0,factorBB = 0.0,factorCC = 0.0;
-; 000D 008C     float viSensorTempValue = 0.0;
-; 000D 008D     float viRawVoltValue = 0.0;
-; 000D 008E     float viRiaseUpVoltValue = 0.0;
-; 000D 008F 
-; 000D 0090     if( (ch<0) || (ch>=MAX_SENS_CHANNEL) ){
+; 000D 009D     static char steadyState[MAX_SENS_CHANNEL]       = {0,0,0,0,0};
+; 000D 009E     char channelConnect                             = 0;
+; 000D 009F     float x_1 = 0.0;
+; 000D 00A0     float x_2 = 0.0;
+; 000D 00A1     float y_1 = 0.0;
+; 000D 00A2     float y_2 = 0.0;
+; 000D 00A3 
+; 000D 00A4     const float  viZeroSet   = 1.667;
+; 000D 00A5 
+; 000D 00A6     unsigned long viADCbuffer;
+; 000D 00A7     int i = 0;
+; 000D 00A8     float offset = 0.0;
+; 000D 00A9     float sensorRef1 = 0.0,sensorRef2 = 0.0,sensorRef3 = 0.0;
+; 000D 00AA     float stdMeter1 = 0.0,stdMeter2 = 0.0,stdMeter3 = 0.0;        //standrad  meter
+; 000D 00AB     float lowRange = 0.0;
+; 000D 00AC     float stdMeterRange = 0.0;
+; 000D 00AD     float factorAA = 0.0,factorBB = 0.0,factorCC = 0.0;
+; 000D 00AE     float viSensorTempValue = 0.0;
+; 000D 00AF     float viRawVoltValue = 0.0;
+; 000D 00B0     float viRiaseUpVoltValue = 0.0;
+; 000D 00B1     float viVoltUseCaluate = 0.0;       // + to -
+; 000D 00B2 
+; 000D 00B3     if( (ch<0) || (ch>=MAX_SENS_CHANNEL) ){
 	ST   -Y,R27
 	ST   -Y,R26
 	SBIW R28,63
-	SBIW R28,21
-	LDI  R24,84
+	SBIW R28,25
+	LDI  R24,88
 	LDI  R26,LOW(0)
 	LDI  R27,HIGH(0)
-	LDI  R30,LOW(_0x1A001B*2)
-	LDI  R31,HIGH(_0x1A001B*2)
-	LDI  R22,BYTE3(_0x1A001B*2)
+	LDI  R30,LOW(_0x1A0022*2)
+	LDI  R31,HIGH(_0x1A0022*2)
+	LDI  R22,BYTE3(_0x1A0022*2)
 	CALL __INITLOCB
 	CALL __SAVELOCR4
-;	ch -> Y+90
-;	*sensor -> Y+88
+;	ch -> Y+94
+;	*sensor -> Y+92
 ;	channelConnect -> R17
-;	x_1 -> Y+84
-;	x_2 -> Y+80
-;	y_1 -> Y+76
-;	y_2 -> Y+72
-;	viZeroSet -> Y+68
-;	viADCbuffer -> Y+64
+;	x_1 -> Y+88
+;	x_2 -> Y+84
+;	y_1 -> Y+80
+;	y_2 -> Y+76
+;	viZeroSet -> Y+72
+;	viADCbuffer -> Y+68
 ;	i -> R18,R19
-;	offset -> Y+60
-;	sensorRef1 -> Y+56
-;	sensorRef2 -> Y+52
-;	sensorRef3 -> Y+48
-;	stdMeter1 -> Y+44
-;	stdMeter2 -> Y+40
-;	stdMeter3 -> Y+36
-;	lowRange -> Y+32
-;	stdMeterRange -> Y+28
-;	factorAA -> Y+24
-;	factorBB -> Y+20
-;	factorCC -> Y+16
-;	viSensorTempValue -> Y+12
-;	viRawVoltValue -> Y+8
-;	viRiaseUpVoltValue -> Y+4
+;	offset -> Y+64
+;	sensorRef1 -> Y+60
+;	sensorRef2 -> Y+56
+;	sensorRef3 -> Y+52
+;	stdMeter1 -> Y+48
+;	stdMeter2 -> Y+44
+;	stdMeter3 -> Y+40
+;	lowRange -> Y+36
+;	stdMeterRange -> Y+32
+;	factorAA -> Y+28
+;	factorBB -> Y+24
+;	factorCC -> Y+20
+;	viSensorTempValue -> Y+16
+;	viRawVoltValue -> Y+12
+;	viRiaseUpVoltValue -> Y+8
+;	viVoltUseCaluate -> Y+4
 	LDI  R17,0
 	__GETWRN 18,19,0
-	__GETB2SX 91
+	__GETB2SX 95
 	TST  R26
-	BRMI _0x1A001D
-	CALL SUBOPT_0x208
+	BRMI _0x1A0024
+	CALL SUBOPT_0x209
 	SBIW R26,5
-	BRLT _0x1A001C
-_0x1A001D:
-; 000D 0091         printDebug("<sensorRead> ERR: ch value out of range\r\n");
+	BRLT _0x1A0023
+_0x1A0024:
+; 000D 00B4         printDebug("<sensorRead> ERR: ch value out of range\r\n");
 	__POINTD1FN _0x1A0000,52
 	CALL SUBOPT_0x3
-; 000D 0092         return -3;
+; 000D 00B5         return -3;
 	LDI  R30,LOW(65533)
 	LDI  R31,HIGH(65533)
-	CALL __LOADLOCR4
-	ADIW R28,63
-	ADIW R28,29
-	RET
-; 000D 0093     }
-; 000D 0094 
-; 000D 0095     // ----- Check Sensor Status (Connected-Disconnected) ----- //
-; 000D 0096     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
-_0x1A001C:
+	RJMP _0x20E006A
+; 000D 00B6     }
+; 000D 00B7 
+; 000D 00B8     // ----- Check Sensor Status (Connected-Disconnected) ----- //
+; 000D 00B9     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+_0x1A0023:
 	CALL SUBOPT_0x2E
-	BREQ _0x1A0020
+	BREQ _0x1A0027
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
-	BREQ _0x1A0020
-	RJMP _0x1A001F
-_0x1A0020:
-; 000D 0097     /*bongkot comment*/
-; 000D 0098         SENSOR_SELECT(ch);
-	CALL SUBOPT_0xA1
-	__GETB1SX 90
+	BRNE _0x1A0026
+_0x1A0027:
+; 000D 00BA     /*bongkot comment*/
+; 000D 00BB         SENSOR_SELECT(ch);
 	CALL SUBOPT_0xA2
-; 000D 0099         delay_ms(20);                                               // -- for multiplex stable -- //
-; 000D 009A         channelConnect = SENSOR_CONNECT;
+	__GETB1SX 94
+	CALL SUBOPT_0xA3
+; 000D 00BC         delay_ms(20);                                               // -- for multiplex stable -- //
+; 000D 00BD         channelConnect = SENSOR_CONNECT;
 	CALL SUBOPT_0x2F
 	MOV  R17,R30
-; 000D 009B 
-; 000D 009C         //updateSensorADC(ch);
-; 000D 009D //        if(adcData[ch] < TMC_DISCON_LIMIT){
-; 000D 009E //            channelConnect  = SENS_ERR_DISCONNECT;
-; 000D 009F //        }
-; 000D 00A0 //        else{
-; 000D 00A1 //            channelConnect  = SENS_NORMAL;
-; 000D 00A2 //        }
-; 000D 00A3          viADCbuffer = 0;
-	CALL SUBOPT_0x209
-; 000D 00A4          for(i=0;i<20;i++){
-_0x1A0023:
-	__CPWRN 18,19,20
-	BRGE _0x1A0024
-; 000D 00A5             viADCbuffer += (unsigned long)(read_adc(8+ch));
+; 000D 00BE 
+; 000D 00BF         //updateSensorADC(ch);
+; 000D 00C0 //        if(adcData[ch] < TMC_DISCON_LIMIT){
+; 000D 00C1 //            channelConnect  = SENS_ERR_DISCONNECT;
+; 000D 00C2 //        }
+; 000D 00C3 //        else{
+; 000D 00C4 //            channelConnect  = SENS_NORMAL;
+; 000D 00C5 //        }
+; 000D 00C6 //         viADCbuffer = 0;
+; 000D 00C7 //         for(i=0;i<20;i++){
+; 000D 00C8 //            viADCbuffer += (unsigned long)(read_adc(8+ch));
+; 000D 00C9 //         }
+; 000D 00CA //         viRawVoltValue = iAD595ADCToVolt(viADCbuffer,20.0);
+; 000D 00CB //         //viSensorTempValue = iAD595ADCToVolt(viADCbuffer,20.0);
+; 000D 00CC //         iTCVoltData[ch] = (float)(viRawVoltValue+0.213);
+; 000D 00CD //         iTCADCData[ch]  = (float)(viADCbuffer/20.0);
+; 000D 00CE //
+; 000D 00CF //         printDebug("[sensorRead1]ch1[%04.2f|%0.2f],ch2[%04.2f|%0.2f],ch3[%04.2f|%0.2f],ch4[%04.2f|%0.2f],ch5[%04.2f|%0.2f]\r\n",iTCADCData[0],iTCVoltData[0],iTCADCData[1],iTCVoltData[1],iTCADCData[2],iTCVoltData[2],iTCADCData[3],iTCVoltData[3],iTCADCData[4],iTCVoltData[4]);
+; 000D 00D0 
+; 000D 00D1 
+; 000D 00D2 //         if(viSensorTempValue < TMCP_SHORT_LIMIT){
+; 000D 00D3 //             //channelConnect  = SENS_ERR_SHORT;
+; 000D 00D4 //             channelConnect  = SENS_ERR_DISCONNECT;
+; 000D 00D5 //         }else if(viSensorTempValue > TMCP_OPEN_LIMIT){
+; 000D 00D6 //             channelConnect  = SENS_ERR_DISCONNECT;
+; 000D 00D7 //         }else{
+; 000D 00D8 //             channelConnect  = SENS_NORMAL;
+; 000D 00D9 //         }
+; 000D 00DA //         viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch)+0.213)-viZeroSet);
+; 000D 00DB //         viRiaseUpVoltValue = (float)(iTCVoltData[ch]-viZeroSet);
+; 000D 00DC //         iTCVoltData[ch] = viRiaseUpVoltValue;
+; 000D 00DD          //printDebug("[sensorRead2]ch1[%04.2f|%0.2f],ch2[%04.2f|%0.2f],ch3[%04.2f|%0.2f],ch4[%04.2f|%0.2f],ch5[%04.2f|%0.2f]\r\n",iTCADCData[0],iTCVoltData[0],iTCADCData[1],iTCVoltData[1],iTCADCData[2],iTCVoltData[2],iTCADCData[3],iTCVoltData[3],iTCADCData[4],iTCVoltData[4]);
+; 000D 00DE 
+; 000D 00DF          viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
 	CALL SUBOPT_0x20A
+; 000D 00E0          viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
+; 000D 00E1          if(viVoltUseCaluate < TMCP_SHORT_LIMIT){
 	CALL SUBOPT_0x20B
-; 000D 00A6          }
-	__ADDWRN 18,19,1
-	RJMP _0x1A0023
-_0x1A0024:
-; 000D 00A7          viRawVoltValue = iAD595ADCToVolt(viADCbuffer,20.0);
-	CALL SUBOPT_0x20C
-	CALL SUBOPT_0x20D
-; 000D 00A8          //viSensorTempValue = iAD595ADCToVolt(viADCbuffer,20.0);
-; 000D 00A9          iTCVoltData[ch] = (float)(viRawVoltValue+0.213);
-	CALL SUBOPT_0x20E
-	CALL SUBOPT_0x20F
-	ADD  R30,R26
-	ADC  R31,R27
-	PUSH R31
-	PUSH R30
-	CALL SUBOPT_0x210
-	POP  R26
-	POP  R27
-	CALL __PUTDP1
-; 000D 00AA          iTCADCData[ch]  = (float)(viADCbuffer/20.0);
-	CALL SUBOPT_0x20E
-	LDI  R26,LOW(_iTCADCData)
-	LDI  R27,HIGH(_iTCADCData)
-	CALL SUBOPT_0x211
-	PUSH R31
-	PUSH R30
-	CALL SUBOPT_0x20C
-	CALL __CDF1U
-	MOVW R26,R30
-	MOVW R24,R22
-	__GETD1N 0x41A00000
-	CALL __DIVF21
-	POP  R26
-	POP  R27
-	CALL __PUTDP1
-; 000D 00AB 
-; 000D 00AC          printDebug("[sensorRead1]ch1[%04.2f|%0.2f],ch2[%04.2f|%0.2f],ch3[%04.2f|%0.2f],ch4[%04.2f|%0.2f],ch5[%04.2f|%0.2f]\r\n",iTCADCData[0],iTCVoltData[0],iTCADCData[1],iTCVoltData[1],iTCADCData[2],iTCVoltData[2],iTCADCData[3],iTCVoltData[3],iTCADCData[4],iTCVoltData[4]);
-	__POINTD1FN _0x1A0000,94
-	CALL SUBOPT_0x212
-; 000D 00AD 
-; 000D 00AE 
-; 000D 00AF //         if(viSensorTempValue < TMCP_SHORT_LIMIT){
-; 000D 00B0 //             //channelConnect  = SENS_ERR_SHORT;
-; 000D 00B1 //             channelConnect  = SENS_ERR_DISCONNECT;
-; 000D 00B2 //         }else if(viSensorTempValue > TMCP_OPEN_LIMIT){
-; 000D 00B3 //             channelConnect  = SENS_ERR_DISCONNECT;
-; 000D 00B4 //         }else{
-; 000D 00B5 //             channelConnect  = SENS_NORMAL;
-; 000D 00B6 //         }
-; 000D 00B7 
-; 000D 00B8          viRiaseUpVoltValue = (float)(iTCVoltData[ch]-viZeroSet);
-	CALL SUBOPT_0x20E
-	CALL SUBOPT_0x20F
-	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x213
-	CALL SUBOPT_0xA7
-; 000D 00B9          iTCVoltData[ch] = viRiaseUpVoltValue;
-	CALL SUBOPT_0x20E
-	CALL SUBOPT_0x20F
-	ADD  R30,R26
-	ADC  R31,R27
-	CALL SUBOPT_0x214
-; 000D 00BA          printDebug("[sensorRead2]ch1[%04.2f|%0.2f],ch2[%04.2f|%0.2f],ch3[%04.2f|%0.2f],ch4[%04.2f|%0.2f],ch5[%04.2f|%0.2f]\r\n",iTCADCData[0],iTCVoltData[0],iTCADCData[1],iTCVoltData[1],iTCADCData[2],iTCVoltData[2],iTCADCData[3],iTCVoltData[3],iTCADCData[4],iTCVoltData[4]);
-	__POINTD1FN _0x1A0000,199
-	CALL SUBOPT_0x212
-; 000D 00BB          if(viRiaseUpVoltValue < TMCP_SHORT_LIMIT){
-	CALL SUBOPT_0xA8
-	CALL SUBOPT_0x215
-	BRSH _0x1A0025
-; 000D 00BC              //channelConnect  = SENS_ERR_SHORT;
-; 000D 00BD              channelConnect  = SENS_ERR_DISCONNECT;
+	BRSH _0x1A0029
+; 000D 00E2              //channelConnect  = SENS_ERR_SHORT;
+; 000D 00E3              channelConnect  = SENS_ERR_DISCONNECT;
 	LDI  R17,LOW(132)
-; 000D 00BE          }else if(viRiaseUpVoltValue > TMCP_OPEN_LIMIT){
-	RJMP _0x1A0026
-_0x1A0025:
-	CALL SUBOPT_0xA8
+; 000D 00E4          }else if(viVoltUseCaluate > TMCP_OPEN_LIMIT){
+	RJMP _0x1A002A
+_0x1A0029:
+	CALL SUBOPT_0xA9
 	__GETD1N 0x3FBC28F6
 	CALL __CMPF12
 	BREQ PC+2
 	BRCC PC+3
-	JMP  _0x1A0027
-; 000D 00BF              channelConnect  = SENS_ERR_DISCONNECT;
+	JMP  _0x1A002B
+; 000D 00E5              channelConnect  = SENS_ERR_DISCONNECT;
 	LDI  R17,LOW(132)
-; 000D 00C0          }else{
-	RJMP _0x1A0028
-_0x1A0027:
-; 000D 00C1              channelConnect  = SENS_NORMAL;
+; 000D 00E6          }else{
+	RJMP _0x1A002C
+_0x1A002B:
+; 000D 00E7              channelConnect  = SENS_NORMAL;
 	LDI  R17,LOW(0)
-; 000D 00C2          }
-_0x1A0028:
+; 000D 00E8          }
+_0x1A002C:
+_0x1A002A:
+; 000D 00E9 
+; 000D 00EA 
+; 000D 00EB 
+; 000D 00EC         /*bongkot test*/
+; 000D 00ED         //channelConnect  = SENS_NORMAL;
+; 000D 00EE         //printDebug("SENSOR:NORMAL\r\n");
+; 000D 00EF 
+; 000D 00F0 
+; 000D 00F1     }
+; 000D 00F2     else if(TEMP_SEL == TEMP_TMEC){
+	RJMP _0x1A002D
 _0x1A0026:
-; 000D 00C3 
-; 000D 00C4 
-; 000D 00C5 
-; 000D 00C6         /*bongkot test*/
-; 000D 00C7         //channelConnect  = SENS_NORMAL;
-; 000D 00C8         //printDebug("SENSOR:NORMAL\r\n");
-; 000D 00C9 
-; 000D 00CA 
-; 000D 00CB     }
-; 000D 00CC     else if(TEMP_SEL == TEMP_TMEC){
-	RJMP _0x1A0029
-_0x1A001F:
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x1)
-	BRNE _0x1A002A
-; 000D 00CD 
-; 000D 00CE         updateSensorADC(ch);                    // -- update adcData[ch] -- //
-	CALL SUBOPT_0x216
-; 000D 00CF 
-; 000D 00D0         if(adcData[ch] < TMEC_SHORT_LIMIT){
+	BRNE _0x1A002E
+; 000D 00F3 
+; 000D 00F4         updateSensorADC(ch);                    // -- update adcData[ch] -- //
+	CALL SUBOPT_0x20C
+; 000D 00F5 
+; 000D 00F6         if(adcData[ch] < TMEC_SHORT_LIMIT){
 	CALL SUBOPT_0x1B
 	MOVW R26,R30
 	MOVW R24,R22
 	__GETD1N 0x40000000
 	CALL __CMPF12
-	BRSH _0x1A002B
-; 000D 00D1             channelConnect  = SENS_ERR_SHORT;
+	BRSH _0x1A002F
+; 000D 00F7             channelConnect  = SENS_ERR_SHORT;
 	LDI  R17,LOW(144)
-; 000D 00D2         }
-; 000D 00D3         else if(adcData[ch] > TMEC_OPEN_LIMIT){
-	RJMP _0x1A002C
-_0x1A002B:
-	CALL SUBOPT_0x217
+; 000D 00F8         }
+; 000D 00F9         else if(adcData[ch] > TMEC_OPEN_LIMIT){
+	RJMP _0x1A0030
+_0x1A002F:
+	CALL SUBOPT_0x20D
 	CALL SUBOPT_0x1B
 	MOVW R26,R30
 	MOVW R24,R22
@@ -22011,43 +22025,43 @@ _0x1A002B:
 	CALL __CMPF12
 	BREQ PC+2
 	BRCC PC+3
-	JMP  _0x1A002D
-; 000D 00D4             channelConnect  = SENS_ERR_DISCONNECT;
+	JMP  _0x1A0031
+; 000D 00FA             channelConnect  = SENS_ERR_DISCONNECT;
 	LDI  R17,LOW(132)
-; 000D 00D5         }
-; 000D 00D6         else{
-	RJMP _0x1A002E
-_0x1A002D:
-; 000D 00D7             channelConnect  = SENS_NORMAL;
+; 000D 00FB         }
+; 000D 00FC         else{
+	RJMP _0x1A0032
+_0x1A0031:
+; 000D 00FD             channelConnect  = SENS_NORMAL;
 	LDI  R17,LOW(0)
-; 000D 00D8         }
+; 000D 00FE         }
+_0x1A0032:
+_0x1A0030:
+; 000D 00FF     }
+; 000D 0100     else if(TEMP_SEL == TEMP_PT100){
+	RJMP _0x1A0033
 _0x1A002E:
-_0x1A002C:
-; 000D 00D9     }
-; 000D 00DA     else if(TEMP_SEL == TEMP_PT100){
-	RJMP _0x1A002F
-_0x1A002A:
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x2)
-	BRNE _0x1A0030
-; 000D 00DB 
-; 000D 00DC         updateSensorADC(ch);                    // -- update adcData[ch] -- //
-	CALL SUBOPT_0x216
-; 000D 00DD 
-; 000D 00DE         if(adcData[ch] < PT100_SHORT_LIMIT){
+	BRNE _0x1A0034
+; 000D 0101 
+; 000D 0102         updateSensorADC(ch);                    // -- update adcData[ch] -- //
+	CALL SUBOPT_0x20C
+; 000D 0103 
+; 000D 0104         if(adcData[ch] < PT100_SHORT_LIMIT){
 	CALL SUBOPT_0x1B
 	MOVW R26,R30
 	MOVW R24,R22
 	__GETD1N 0x41000000
 	CALL __CMPF12
-	BRSH _0x1A0031
-; 000D 00DF             channelConnect  = SENS_ERR_SHORT;
+	BRSH _0x1A0035
+; 000D 0105             channelConnect  = SENS_ERR_SHORT;
 	LDI  R17,LOW(144)
-; 000D 00E0         }
-; 000D 00E1         else if(adcData[ch] > PT100_OPEN_LIMIT){
-	RJMP _0x1A0032
-_0x1A0031:
-	CALL SUBOPT_0x217
+; 000D 0106         }
+; 000D 0107         else if(adcData[ch] > PT100_OPEN_LIMIT){
+	RJMP _0x1A0036
+_0x1A0035:
+	CALL SUBOPT_0x20D
 	CALL SUBOPT_0x1B
 	MOVW R26,R30
 	MOVW R24,R22
@@ -22055,252 +22069,252 @@ _0x1A0031:
 	CALL __CMPF12
 	BREQ PC+2
 	BRCC PC+3
-	JMP  _0x1A0033
-; 000D 00E2             channelConnect  = SENS_ERR_DISCONNECT;
+	JMP  _0x1A0037
+; 000D 0108             channelConnect  = SENS_ERR_DISCONNECT;
 	LDI  R17,LOW(132)
-; 000D 00E3         }
-; 000D 00E4         else{
-	RJMP _0x1A0034
-_0x1A0033:
-; 000D 00E5             channelConnect  = SENS_NORMAL;
+; 000D 0109         }
+; 000D 010A         else{
+	RJMP _0x1A0038
+_0x1A0037:
+; 000D 010B             channelConnect  = SENS_NORMAL;
 	LDI  R17,LOW(0)
-; 000D 00E6         }
+; 000D 010C         }
+_0x1A0038:
+_0x1A0036:
+; 000D 010D     }
+; 000D 010E 
+; 000D 010F     /*bongkot test*/
+; 000D 0110     //sensor->status  = SENS_NORMAL;
+; 000D 0111     //lastCheck[ch] = channelConnect;
+; 000D 0112 
+; 000D 0113     // ----- Confirm Sensor Status Stable ----- //
+; 000D 0114     if(channelConnect != lastCheck[ch])
 _0x1A0034:
-_0x1A0032:
-; 000D 00E7     }
-; 000D 00E8 
-; 000D 00E9     /*bongkot test*/
-; 000D 00EA     //sensor->status  = SENS_NORMAL;
-; 000D 00EB     //lastCheck[ch] = channelConnect;
-; 000D 00EC 
-; 000D 00ED     // ----- Confirm Sensor Status Stable ----- //
-; 000D 00EE     if(channelConnect != lastCheck[ch])
-_0x1A0030:
-_0x1A002F:
-_0x1A0029:
+_0x1A0033:
+_0x1A002D:
 	CALL SUBOPT_0x20E
-	SUBI R30,LOW(-_lastCheck_S00D0002000)
-	SBCI R31,HIGH(-_lastCheck_S00D0002000)
+	SUBI R30,LOW(-_lastCheck_S00D0004000)
+	SBCI R31,HIGH(-_lastCheck_S00D0004000)
 	LD   R30,Z
 	CP   R30,R17
-	BREQ _0x1A0035
-; 000D 00EF     {
-; 000D 00F0         TIMER_setTimer(&t[ch],5);
-	CALL SUBOPT_0x218
+	BREQ _0x1A0039
+; 000D 0115     {
+; 000D 0116         TIMER_setTimer(&t[ch],5);
+	CALL SUBOPT_0x20F
 	CALL SUBOPT_0x1D
-	CALL SUBOPT_0x219
-; 000D 00F1         lastCheck[ch]       = channelConnect;
+	CALL SUBOPT_0x210
+; 000D 0117         lastCheck[ch]       = channelConnect;
 	CALL SUBOPT_0x20E
-	SUBI R30,LOW(-_lastCheck_S00D0002000)
-	SBCI R31,HIGH(-_lastCheck_S00D0002000)
+	SUBI R30,LOW(-_lastCheck_S00D0004000)
+	SBCI R31,HIGH(-_lastCheck_S00D0004000)
 	ST   Z,R17
-; 000D 00F2         steadyState[ch]     = 0;
-	CALL SUBOPT_0x21A
+; 000D 0118         steadyState[ch]     = 0;
+	CALL SUBOPT_0x211
 	LDI  R26,LOW(0)
-	RJMP _0x1A00C6
-; 000D 00F3     }
-; 000D 00F4     else if(!steadyState[ch])
-_0x1A0035:
-	CALL SUBOPT_0x21A
+	RJMP _0x1A00C5
+; 000D 0119     }
+; 000D 011A     else if(!steadyState[ch])
+_0x1A0039:
+	CALL SUBOPT_0x211
 	LD   R30,Z
 	CPI  R30,0
-	BRNE _0x1A0037
-; 000D 00F5     {
-; 000D 00F6         if(TIMER_checkTimerExceed(t[ch])){
-	CALL SUBOPT_0x218
+	BRNE _0x1A003B
+; 000D 011B     {
+; 000D 011C         if(TIMER_checkTimerExceed(t[ch])){
+	CALL SUBOPT_0x20F
 	CALL SUBOPT_0x1B
 	CALL SUBOPT_0x1C
-	BREQ _0x1A0038
-; 000D 00F7             steadyState[ch] = 1;
-	CALL SUBOPT_0x21A
+	BREQ _0x1A003C
+; 000D 011D             steadyState[ch] = 1;
+	CALL SUBOPT_0x211
 	LDI  R26,LOW(1)
-_0x1A00C6:
+_0x1A00C5:
 	STD  Z+0,R26
-; 000D 00F8         }
-; 000D 00F9     }
-_0x1A0038:
-; 000D 00FA 
-; 000D 00FB     /*bongkot test*/
-; 000D 00FC     //printDebug("SENSOR:channelConnect Status Stable\r\n");
-; 000D 00FD     //steadyState[ch] = 1;
-; 000D 00FE 
-; 000D 00FF     if(!steadyState[ch])
-_0x1A0037:
-	CALL SUBOPT_0x21A
+; 000D 011E         }
+; 000D 011F     }
+_0x1A003C:
+; 000D 0120 
+; 000D 0121     /*bongkot test*/
+; 000D 0122     //printDebug("SENSOR:channelConnect Status Stable\r\n");
+; 000D 0123     //steadyState[ch] = 1;
+; 000D 0124 
+; 000D 0125     if(!steadyState[ch])
+_0x1A003B:
+	CALL SUBOPT_0x211
 	LD   R30,Z
 	CPI  R30,0
-	BRNE _0x1A0039
-; 000D 0100     {
-; 000D 0101         //printDebug("<sensorRead> sensor %d state unstable\r\n",ch+1);
-; 000D 0102         sensor->status  = SENS_ERR_UNKNOWN;
-	CALL SUBOPT_0x21B
+	BRNE _0x1A003D
+; 000D 0126     {
+; 000D 0127         //printDebug("<sensorRead> sensor %d state unstable\r\n",ch+1);
+; 000D 0128         sensor->status  = SENS_ERR_UNKNOWN;
+	CALL SUBOPT_0x212
 	ADIW R26,4
 	LDI  R30,LOW(255)
 	ST   X,R30
-; 000D 0103         return -9;
+; 000D 0129         return -9;
 	LDI  R30,LOW(65527)
 	LDI  R31,HIGH(65527)
 	RJMP _0x20E006A
-; 000D 0104     }
-; 000D 0105 
-; 000D 0106     /*bongkot test*/
-; 000D 0107     //printDebug("SENSOR:steadyState ok\r\n");
-; 000D 0108 
-; 000D 0109 
-; 000D 010A     // ----- Return if Sensor Data is not available ----- //
-; 000D 010B     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED))
-_0x1A0039:
+; 000D 012A     }
+; 000D 012B 
+; 000D 012C     /*bongkot test*/
+; 000D 012D     //printDebug("SENSOR:steadyState ok\r\n");
+; 000D 012E 
+; 000D 012F 
+; 000D 0130     // ----- Return if Sensor Data is not available ----- //
+; 000D 0131     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED))
+_0x1A003D:
 	CALL SUBOPT_0x2E
-	BREQ _0x1A003B
+	BREQ _0x1A003F
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
-	BRNE _0x1A003A
-_0x1A003B:
-; 000D 010C     {   /*bongkot comment*/
-; 000D 010D //        if(!channelConnect){
-; 000D 010E //            sensor->status  = SENS_ERR_DISCONNECT;
-; 000D 010F //            return -2;
-; 000D 0110 //        }
-; 000D 0111         if(channelConnect != SENS_NORMAL){
+	BRNE _0x1A003E
+_0x1A003F:
+; 000D 0132     {   /*bongkot comment*/
+; 000D 0133 //        if(!channelConnect){
+; 000D 0134 //            sensor->status  = SENS_ERR_DISCONNECT;
+; 000D 0135 //            return -2;
+; 000D 0136 //        }
+; 000D 0137         if(channelConnect != SENS_NORMAL){
 	CPI  R17,0
-	BREQ _0x1A003D
-; 000D 0112             sensor->status  = channelConnect;
-	CALL SUBOPT_0x21C
-; 000D 0113             return -2;
+	BREQ _0x1A0041
+; 000D 0138             sensor->status  = channelConnect;
+	CALL SUBOPT_0x213
+; 000D 0139             return -2;
 	RJMP _0x20E006A
-; 000D 0114         }
-; 000D 0115        // updateSensorADC(ch);                            // -- update adcData[ch] -- //
-; 000D 0116     }
-_0x1A003D:
-; 000D 0117     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
-	RJMP _0x1A003E
-_0x1A003A:
-	CALL SUBOPT_0x95
-	BREQ _0x1A0040
+; 000D 013A         }
+; 000D 013B        // updateSensorADC(ch);                            // -- update adcData[ch] -- //
+; 000D 013C     }
+_0x1A0041:
+; 000D 013D     else if((TEMP_SEL == TEMP_TMEC) || (TEMP_SEL == TEMP_PT100)){
+	RJMP _0x1A0042
+_0x1A003E:
+	CALL SUBOPT_0x96
+	BREQ _0x1A0044
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x2)
-	BRNE _0x1A003F
-_0x1A0040:
-; 000D 0118         if(channelConnect != SENS_NORMAL){
+	BRNE _0x1A0043
+_0x1A0044:
+; 000D 013E         if(channelConnect != SENS_NORMAL){
 	CPI  R17,0
-	BREQ _0x1A0042
-; 000D 0119             sensor->status  = channelConnect;
-	CALL SUBOPT_0x21C
-; 000D 011A             return -2;
+	BREQ _0x1A0046
+; 000D 013F             sensor->status  = channelConnect;
+	CALL SUBOPT_0x213
+; 000D 0140             return -2;
 	RJMP _0x20E006A
-; 000D 011B         }
-; 000D 011C 
-; 000D 011D         updateSensorADC(ch);                            // -- update adcData[ch] -- again ^_^ --- //
-_0x1A0042:
-	CALL SUBOPT_0x208
+; 000D 0141         }
+; 000D 0142 
+; 000D 0143         updateSensorADC(ch);                            // -- update adcData[ch] -- again ^_^ --- //
+_0x1A0046:
+	CALL SUBOPT_0x209
 	RCALL _updateSensorADC
-; 000D 011E     }
-; 000D 011F 
-; 000D 0120     switch(epCalType[ch]){
-_0x1A003F:
-_0x1A003E:
-	CALL SUBOPT_0x208
+; 000D 0144     }
+; 000D 0145 
+; 000D 0146     switch(epCalType[ch]){
+_0x1A0043:
+_0x1A0042:
+	CALL SUBOPT_0x209
 	SUBI R26,LOW(-_epCalType)
 	SBCI R27,HIGH(-_epCalType)
 	CALL __EEPROMRDB
-	CALL SUBOPT_0x21D
-; 000D 0121         case CAL_SELFCOMPARE    :   // --- Same as CAL_EXTOFFSET --- //
-	BREQ _0x1A0047
-; 000D 0122         case CAL_EXTOFFSET      :   if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+	CALL SUBOPT_0x214
+; 000D 0147         case CAL_SELFCOMPARE    :   // --- Same as CAL_EXTOFFSET --- //
+	BREQ _0x1A004B
+; 000D 0148         case CAL_EXTOFFSET      :   if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 	CPI  R30,LOW(0x2)
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BREQ PC+3
-	JMP _0x1A0048
-_0x1A0047:
+	JMP _0x1A004C
+_0x1A004B:
 	CALL SUBOPT_0x2E
-	BREQ _0x1A004A
+	BREQ _0x1A004E
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
-	BRNE _0x1A0049
-_0x1A004A:
-; 000D 0123                                         /*bongkot comment*/
-; 000D 0124                                         //sensor->value   =   (ADC_CONV_FAC*100 * adcData[ch]) + epFactor_C[ch];
-; 000D 0125                                          //sensor->value   +=    epFactor_C[ch];
-; 000D 0126                                          viADCbuffer = 0;
-	CALL SUBOPT_0x209
-; 000D 0127                                          for(i=0;i<30;i++){
-_0x1A004D:
-	__CPWRN 18,19,30
-	BRGE _0x1A004E
-; 000D 0128                                             viADCbuffer += read_adc(8+ch);
-	CALL SUBOPT_0x20A
-	CALL SUBOPT_0x21E
-; 000D 0129                                          }
-	__ADDWRN 18,19,1
+	BREQ _0x1A004E
 	RJMP _0x1A004D
 _0x1A004E:
-; 000D 012A 
-; 000D 012B                                          viSensorTempValue = iAD595ADCToTemp(viADCbuffer,30);
-	CALL SUBOPT_0x21F
-; 000D 012C                                          offset =  epTempRef1[ch] - epADCRef1[ch];
-	CALL SUBOPT_0x220
+; 000D 0149                                         /*bongkot comment*/
+; 000D 014A                                         //sensor->value   =   (ADC_CONV_FAC*100 * adcData[ch]) + epFactor_C[ch];
+; 000D 014B                                          //sensor->value   +=    epFactor_C[ch];
+; 000D 014C                                          viADCbuffer = 0;
+	CALL SUBOPT_0x215
+; 000D 014D                                          for(i=0;i<30;i++){
+_0x1A0051:
+	__CPWRN 18,19,30
+	BRGE _0x1A0052
+; 000D 014E                                             viADCbuffer += read_adc(8+ch);
+	CALL SUBOPT_0x216
+; 000D 014F                                          }
+	__ADDWRN 18,19,1
+	RJMP _0x1A0051
+_0x1A0052:
+; 000D 0150 
+; 000D 0151                                          viSensorTempValue = iAD595ADCToTemp(viADCbuffer,30);
+	CALL SUBOPT_0x217
+; 000D 0152                                          offset =  epTempRef1[ch] - epADCRef1[ch];
+	CALL SUBOPT_0x218
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x221
+	CALL SUBOPT_0x219
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x222
-	__PUTD1S 60
-; 000D 012D                                          printDebug("TempRaw(%f), TempRef(%f), Offset(%f)\r\n",viSensorTempValue,epTempRef1[ch],offset);
-	__POINTD1FN _0x1A0000,304
-	CALL SUBOPT_0x5B
-	__GETW1SX 98
-	CALL SUBOPT_0x223
+	CALL SUBOPT_0x21A
+	__PUTD1SX 64
+; 000D 0153                                          printDebug("TempRaw(%f), TempRef(%f), Offset(%f)\r\n",viSensorTempValue,epTempRef1[ch],offset);
+	__POINTD1FN _0x1A0000,94
+	CALL SUBOPT_0x21B
 	CALL __PUTPARD1
-	CALL SUBOPT_0x224
-	CALL SUBOPT_0x66
-; 000D 012E                                          sensor->value = viSensorTempValue + offset;
-	CALL SUBOPT_0x225
-	CALL SUBOPT_0xB
-	RJMP _0x1A00C7
-; 000D 012F                                     }
-; 000D 0130                                     else if(TEMP_SEL == TEMP_TMEC){
-_0x1A0049:
+	__GETW1SX 102
+	CALL SUBOPT_0x21C
+	CALL SUBOPT_0x21D
+	CALL SUBOPT_0x8E
+; 000D 0154                                          sensor->value = viSensorTempValue + offset;
+	__GETD1SX 64
+	CALL SUBOPT_0x21E
+	RJMP _0x1A00C6
+; 000D 0155                                     }
+; 000D 0156                                     else if(TEMP_SEL == TEMP_TMEC){
+_0x1A004D:
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x1)
-	BRNE _0x1A0050
-; 000D 0131 
-; 000D 0132                                         sensor->value   =   (epTMECTempSlope  * adcData[ch]) + epFactor_C[ch];
-	CALL SUBOPT_0x217
+	BRNE _0x1A0054
+; 000D 0157 
+; 000D 0158                                         sensor->value   =   (epTMECTempSlope  * adcData[ch]) + epFactor_C[ch];
+	CALL SUBOPT_0x20D
 	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x226
+	CALL SUBOPT_0x21F
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x227
+	CALL SUBOPT_0x220
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	RJMP _0x1A00C7
-; 000D 0133                                     }
-; 000D 0134                                     else if(TEMP_SEL == TEMP_PT100){
-_0x1A0050:
+	RJMP _0x1A00C6
+; 000D 0159                                     }
+; 000D 015A                                     else if(TEMP_SEL == TEMP_PT100){
+_0x1A0054:
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x2)
-	BRNE _0x1A0052
-; 000D 0135                                         sensor->value   =   (epPT100Temp_A    * adcData[ch] * adcData[ch]) +
-; 000D 0136                                                             (epPT100Temp_B    * adcData[ch]) +
-; 000D 0137                                                              epFactor_C[ch];
-	CALL SUBOPT_0x217
+	BRNE _0x1A0056
+; 000D 015B                                         sensor->value   =   (epPT100Temp_A    * adcData[ch] * adcData[ch]) +
+; 000D 015C                                                             (epPT100Temp_B    * adcData[ch]) +
+; 000D 015D                                                              epFactor_C[ch];
+	CALL SUBOPT_0x20D
 	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x228
+	CALL SUBOPT_0x221
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x217
+	CALL SUBOPT_0x20D
 	CALL SUBOPT_0x1B
 	POP  R26
 	POP  R27
@@ -22311,9 +22325,9 @@ _0x1A0050:
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x217
+	CALL SUBOPT_0x20D
 	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x229
+	CALL SUBOPT_0x222
 	POP  R26
 	POP  R27
 	POP  R24
@@ -22323,99 +22337,229 @@ _0x1A0050:
 	PUSH R22
 	PUSH R31
 	PUSH R30
+	CALL SUBOPT_0x220
+	POP  R26
+	POP  R27
+	POP  R24
+	POP  R25
+_0x1A00C6:
+	CALL __ADDF12
+	CALL SUBOPT_0x223
+; 000D 015E //                                        sensor->value = (epPT100TempSlope * adcData[ch]) + epFactor_C[ch];
+; 000D 015F                                     }
+; 000D 0160                                     break;
+_0x1A0056:
+	RJMP _0x1A0049
+; 000D 0161         case CAL_EXTLINEAR      :  {
+_0x1A004C:
+	CPI  R30,LOW(0x3)
+	LDI  R26,HIGH(0x3)
+	CPC  R31,R26
+	BREQ PC+3
+	JMP _0x1A0057
+; 000D 0162                                         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+	CALL SUBOPT_0x2E
+	BREQ _0x1A0059
+	CALL SUBOPT_0x2E
+	CPI  R30,LOW(0x3)
+	BREQ _0x1A0059
+	RJMP _0x1A0058
+_0x1A0059:
+; 000D 0163                                                //sensor->value   =   (epFactor_B[ch]   * adcData[ch]) + epFactor_C[ch];
+; 000D 0164 
+; 000D 0165                                                viADCbuffer = 0;
+	CALL SUBOPT_0x215
+; 000D 0166                                                  for(i=0;i<30;i++){
+_0x1A005C:
+	__CPWRN 18,19,30
+	BRGE _0x1A005D
+; 000D 0167                                                     viADCbuffer += read_adc(8+ch);
+	CALL SUBOPT_0x216
+; 000D 0168                                                  }
+	__ADDWRN 18,19,1
+	RJMP _0x1A005C
+_0x1A005D:
+; 000D 0169 
+; 000D 016A                                                 sensorRef1 = iAD595ADCToTemp(epADCRef1[ch],1);
+	CALL SUBOPT_0x219
+	CALL SUBOPT_0x224
+	CALL _iAD595ADCToTemp
+	CALL SUBOPT_0x225
+; 000D 016B                                                 sensorRef2 = iAD595ADCToTemp(epADCRef2[ch],1);
+	CALL SUBOPT_0x224
+	CALL _iAD595ADCToTemp
+	__PUTD1S 56
+; 000D 016C                                                 stdMeter1  = epTempRef1[ch];
+	CALL SUBOPT_0x218
+	CALL SUBOPT_0x226
+; 000D 016D                                                 stdMeter2  = epTempRef2[ch];
+; 000D 016E                                                 lowRange   =  sensorRef2 - sensorRef1;
+	__GETD2S 60
+	__GETD1S 56
+	CALL __SUBF12
+	__PUTD1S 36
+; 000D 016F                                                 stdMeterRange = stdMeter2 - stdMeter1;
+	__GETD2S 48
+	__GETD1S 44
+	CALL __SUBF12
+	__PUTD1S 32
+; 000D 0170                                                 viSensorTempValue = iAD595ADCToTemp(viADCbuffer,30);
+	CALL SUBOPT_0x217
+; 000D 0171                                                sensor->value = (((viSensorTempValue-sensorRef1)*stdMeterRange)/lowRange)+stdMeter1;
+	__GETD2S 60
+	CALL SUBOPT_0xC
+	CALL __SUBF12
+	__GETD2S 32
+	CALL __MULF12
+	MOVW R26,R30
+	MOVW R24,R22
+	__GETD1S 36
+	CALL __DIVF21
+	__GETD2S 48
+	RJMP _0x1A00C7
+; 000D 0172 
+; 000D 0173 
+; 000D 0174 
+; 000D 0175                                         }else{
+_0x1A0058:
+; 000D 0176                                                sensor->value   =   (epFactor_B[ch]   * adcData[ch]) + epFactor_C[ch];
 	CALL SUBOPT_0x227
+	PUSH R23
+	PUSH R22
+	PUSH R31
+	PUSH R30
+	CALL SUBOPT_0x20D
+	CALL SUBOPT_0x1B
+	POP  R26
+	POP  R27
+	POP  R24
+	POP  R25
+	CALL __MULF12
+	PUSH R23
+	PUSH R22
+	PUSH R31
+	PUSH R30
+	CALL SUBOPT_0x220
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
 _0x1A00C7:
 	CALL __ADDF12
-	CALL SUBOPT_0x22A
-; 000D 0138 //                                        sensor->value = (epPT100TempSlope * adcData[ch]) + epFactor_C[ch];
-; 000D 0139                                     }
-; 000D 013A                                     break;
-_0x1A0052:
-	RJMP _0x1A0045
-; 000D 013B         case CAL_EXTLINEAR      :  {
-_0x1A0048:
-	CPI  R30,LOW(0x3)
-	LDI  R26,HIGH(0x3)
+	CALL SUBOPT_0x223
+; 000D 0177                                         }
+; 000D 0178 
+; 000D 0179                                         break;
+	RJMP _0x1A0049
+; 000D 017A                                     }
+; 000D 017B         case CAL_EXTPOLYNOMIAL  :   {   if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+_0x1A0057:
+	CPI  R30,LOW(0x4)
+	LDI  R26,HIGH(0x4)
 	CPC  R31,R26
 	BREQ PC+3
-	JMP _0x1A0053
-; 000D 013C                                         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+	JMP _0x1A0067
 	CALL SUBOPT_0x2E
-	BREQ _0x1A0055
+	BREQ _0x1A0061
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
-	BREQ _0x1A0055
-	RJMP _0x1A0054
-_0x1A0055:
-; 000D 013D                                                //sensor->value   =   (epFactor_B[ch]   * adcData[ch]) + epFactor_C[ch];
-; 000D 013E 
-; 000D 013F                                                viADCbuffer = 0;
-	CALL SUBOPT_0x209
-; 000D 0140                                                  for(i=0;i<30;i++){
-_0x1A0058:
+	BREQ _0x1A0061
+	RJMP _0x1A0060
+_0x1A0061:
+; 000D 017C                                             viADCbuffer = 0;
+	CALL SUBOPT_0x215
+; 000D 017D                                             for(i=0;i<30;i++){
+_0x1A0064:
 	__CPWRN 18,19,30
-	BRGE _0x1A0059
-; 000D 0141                                                     viADCbuffer += read_adc(8+ch);
-	CALL SUBOPT_0x20A
-	CALL SUBOPT_0x21E
-; 000D 0142                                                  }
+	BRGE _0x1A0065
+; 000D 017E                                                 viADCbuffer += read_adc(8+ch);
+	CALL SUBOPT_0x216
+; 000D 017F                                             }
 	__ADDWRN 18,19,1
-	RJMP _0x1A0058
-_0x1A0059:
-; 000D 0143 
-; 000D 0144                                                 sensorRef1 = iAD595ADCToTemp(epADCRef1[ch],1);
-	CALL SUBOPT_0x221
-	CALL SUBOPT_0x22B
-	CALL _iAD595ADCToTemp
-	CALL SUBOPT_0x22C
-; 000D 0145                                                 sensorRef2 = iAD595ADCToTemp(epADCRef2[ch],1);
-	CALL SUBOPT_0x22B
-	CALL _iAD595ADCToTemp
+	RJMP _0x1A0064
+_0x1A0065:
+; 000D 0180                                             sensorRef1 = epADCRef1[ch];
+	CALL SUBOPT_0x219
+	CALL SUBOPT_0x225
+; 000D 0181                                             sensorRef2 = epADCRef2[ch];
+	__PUTD1S 56
+; 000D 0182                                             sensorRef3 = epADCRef3[ch];
+	CALL SUBOPT_0x20E
+	CALL SUBOPT_0x228
 	__PUTD1S 52
-; 000D 0146                                                 stdMeter1  = epTempRef1[ch];
-	CALL SUBOPT_0x220
-	CALL SUBOPT_0x22D
-; 000D 0147                                                 stdMeter2  = epTempRef2[ch];
-; 000D 0148                                                 lowRange   =  sensorRef2 - sensorRef1;
-	__GETD2S 56
-	__GETD1S 52
-	CALL __SUBF12
-	__PUTD1S 32
-; 000D 0149                                                 stdMeterRange = stdMeter2 - stdMeter1;
-	CALL SUBOPT_0xAE
-	__GETD1S 40
-	CALL __SUBF12
-	__PUTD1S 28
-; 000D 014A                                                 viSensorTempValue = iAD595ADCToTemp(viADCbuffer,30);
-	CALL SUBOPT_0x21F
-; 000D 014B                                                sensor->value = (((viSensorTempValue-sensorRef1)*stdMeterRange)/lowRange)+stdMeter1;
-	__GETD2S 56
-	CALL SUBOPT_0xD9
-	CALL __SUBF12
+; 000D 0183                                             stdMeter1 = epTempRef1[ch];
+	CALL SUBOPT_0x218
+	CALL SUBOPT_0x226
+; 000D 0184                                             stdMeter2 = epTempRef2[ch];
+; 000D 0185                                             stdMeter3 = epTempRef3[ch];
+	CALL SUBOPT_0x20E
+	CALL SUBOPT_0x229
+	__PUTD1S 40
+; 000D 0186                                             viSensorTempValue = iAD595ADCToTemp(viADCbuffer,30);
+	CALL SUBOPT_0x217
+; 000D 0187                                             gaussian(sensorRef1,  sensorRef2,  sensorRef3, stdMeter1, stdMeter2, stdMeter3, &factorAA, &factorBB, &factorCC);
+	CALL SUBOPT_0x22A
+	CALL SUBOPT_0x22A
+	CALL SUBOPT_0x22A
+	CALL SUBOPT_0x22A
+	CALL SUBOPT_0x22A
+	CALL SUBOPT_0x22A
+	MOVW R30,R28
+	ADIW R30,52
+	ST   -Y,R31
+	ST   -Y,R30
+	MOVW R30,R28
+	ADIW R30,50
+	ST   -Y,R31
+	ST   -Y,R30
+	MOVW R26,R28
+	ADIW R26,48
+	CALL _gaussian
+; 000D 0188                                             sensor->value = (factorAA*viSensorTempValue*viSensorTempValue) + (factorBB*viSensorTempValue) + factorCC;      //polynomail formula
+	CALL SUBOPT_0xC
 	__GETD2S 28
 	CALL __MULF12
-	MOVW R26,R30
-	MOVW R24,R22
-	CALL SUBOPT_0xF3
-	CALL __DIVF21
-	CALL SUBOPT_0xAE
-	RJMP _0x1A00C8
-; 000D 014C 
-; 000D 014D 
-; 000D 014E 
-; 000D 014F                                         }else{
-_0x1A0054:
-; 000D 0150                                                sensor->value   =   (epFactor_B[ch]   * adcData[ch]) + epFactor_C[ch];
-	CALL SUBOPT_0x22E
+	CALL SUBOPT_0x21E
+	CALL __MULF12
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x217
+	CALL SUBOPT_0xC
+	CALL SUBOPT_0x22B
+	CALL __MULF12
+	POP  R26
+	POP  R27
+	POP  R24
+	POP  R25
+	CALL __ADDF12
+	CALL SUBOPT_0x22C
+	RJMP _0x1A00C8
+; 000D 0189 
+; 000D 018A                                         }else{
+_0x1A0060:
+; 000D 018B                                               sensor->value   =   (epFactor_A[ch]   * adcData[ch] * adcData[ch]) +
+; 000D 018C                                                         (epFactor_B[ch]   * adcData[ch]) +
+; 000D 018D                                                          epFactor_C[ch];
+	CALL SUBOPT_0x20E
+	CALL SUBOPT_0x22D
+	CALL __EEPROMRDD
+	PUSH R23
+	PUSH R22
+	PUSH R31
+	PUSH R30
+	CALL SUBOPT_0x20D
+	CALL SUBOPT_0x1B
+	POP  R26
+	POP  R27
+	POP  R24
+	POP  R25
+	CALL __MULF12
+	PUSH R23
+	PUSH R22
+	PUSH R31
+	PUSH R30
+	CALL SUBOPT_0x20D
 	CALL SUBOPT_0x1B
 	POP  R26
 	POP  R27
@@ -22427,233 +22571,91 @@ _0x1A0054:
 	PUSH R31
 	PUSH R30
 	CALL SUBOPT_0x227
+	PUSH R23
+	PUSH R22
+	PUSH R31
+	PUSH R30
+	CALL SUBOPT_0x20D
+	CALL SUBOPT_0x1B
+	POP  R26
+	POP  R27
+	POP  R24
+	POP  R25
+	CALL __MULF12
+	POP  R26
+	POP  R27
+	POP  R24
+	POP  R25
+	CALL __ADDF12
+	PUSH R23
+	PUSH R22
+	PUSH R31
+	PUSH R30
+	CALL SUBOPT_0x220
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
 _0x1A00C8:
 	CALL __ADDF12
-	CALL SUBOPT_0x22A
-; 000D 0151                                         }
-; 000D 0152 
-; 000D 0153                                         break;
-	RJMP _0x1A0045
-; 000D 0154                                     }
-; 000D 0155         case CAL_EXTPOLYNOMIAL  :   {   if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
-_0x1A0053:
-	CPI  R30,LOW(0x4)
-	LDI  R26,HIGH(0x4)
-	CPC  R31,R26
-	BREQ PC+3
-	JMP _0x1A0063
+	CALL SUBOPT_0x223
+; 000D 018E                                         }
+; 000D 018F 
+; 000D 0190                                         break;
+	RJMP _0x1A0049
+; 000D 0191                                     }
+; 000D 0192         default                 :   if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+_0x1A0067:
 	CALL SUBOPT_0x2E
-	BREQ _0x1A005D
+	BREQ _0x1A0069
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
-	BREQ _0x1A005D
-	RJMP _0x1A005C
-_0x1A005D:
-; 000D 0156                                             viADCbuffer = 0;
-	CALL SUBOPT_0x209
-; 000D 0157                                             for(i=0;i<30;i++){
-_0x1A0060:
-	__CPWRN 18,19,30
-	BRGE _0x1A0061
-; 000D 0158                                                 viADCbuffer += read_adc(8+ch);
-	CALL SUBOPT_0x20A
-	CALL SUBOPT_0x21E
-; 000D 0159                                             }
-	__ADDWRN 18,19,1
-	RJMP _0x1A0060
-_0x1A0061:
-; 000D 015A                                             sensorRef1 = epADCRef1[ch];
-	CALL SUBOPT_0x221
-	CALL SUBOPT_0x22C
-; 000D 015B                                             sensorRef2 = epADCRef2[ch];
-	__PUTD1S 52
-; 000D 015C                                             sensorRef3 = epADCRef3[ch];
-	CALL SUBOPT_0x20E
-	CALL SUBOPT_0x22F
-	__PUTD1S 48
-; 000D 015D                                             stdMeter1 = epTempRef1[ch];
-	CALL SUBOPT_0x220
-	CALL SUBOPT_0x22D
-; 000D 015E                                             stdMeter2 = epTempRef2[ch];
-; 000D 015F                                             stdMeter3 = epTempRef3[ch];
-	CALL SUBOPT_0x20E
-	CALL SUBOPT_0x230
-	__PUTD1S 36
-; 000D 0160                                             viSensorTempValue = iAD595ADCToTemp(viADCbuffer,30);
-	CALL SUBOPT_0x21F
-; 000D 0161                                             gaussian(sensorRef1,  sensorRef2,  sensorRef3, stdMeter1, stdMeter2, stdMeter3, &factorAA, &factorBB, &factorCC);
-	CALL SUBOPT_0x231
-	CALL SUBOPT_0x231
-	CALL SUBOPT_0x231
-	CALL SUBOPT_0x231
-	CALL SUBOPT_0x231
-	CALL SUBOPT_0x231
-	MOVW R30,R28
-	ADIW R30,48
-	ST   -Y,R31
-	ST   -Y,R30
-	MOVW R30,R28
-	ADIW R30,46
-	ST   -Y,R31
-	ST   -Y,R30
-	MOVW R26,R28
-	ADIW R26,44
-	CALL _gaussian
-; 000D 0162                                             sensor->value = (factorAA*viSensorTempValue*viSensorTempValue) + (factorBB*viSensorTempValue) + factorCC;      //polynomail formula
-	CALL SUBOPT_0xD9
-	CALL SUBOPT_0x232
-	CALL __MULF12
-	CALL SUBOPT_0xB
-	CALL __MULF12
-	PUSH R23
-	PUSH R22
-	PUSH R31
-	PUSH R30
-	CALL SUBOPT_0xD9
-	CALL SUBOPT_0x233
-	CALL __MULF12
-	POP  R26
-	POP  R27
-	POP  R24
-	POP  R25
-	CALL __ADDF12
-	CALL SUBOPT_0x234
-	RJMP _0x1A00C9
-; 000D 0163 
-; 000D 0164                                         }else{
-_0x1A005C:
-; 000D 0165                                               sensor->value   =   (epFactor_A[ch]   * adcData[ch] * adcData[ch]) +
-; 000D 0166                                                         (epFactor_B[ch]   * adcData[ch]) +
-; 000D 0167                                                          epFactor_C[ch];
-	CALL SUBOPT_0x20E
-	CALL SUBOPT_0x235
-	CALL __EEPROMRDD
-	PUSH R23
-	PUSH R22
-	PUSH R31
-	PUSH R30
-	CALL SUBOPT_0x217
-	CALL SUBOPT_0x1B
-	POP  R26
-	POP  R27
-	POP  R24
-	POP  R25
-	CALL __MULF12
-	PUSH R23
-	PUSH R22
-	PUSH R31
-	PUSH R30
-	CALL SUBOPT_0x217
-	CALL SUBOPT_0x1B
-	POP  R26
-	POP  R27
-	POP  R24
-	POP  R25
-	CALL __MULF12
-	PUSH R23
-	PUSH R22
-	PUSH R31
-	PUSH R30
-	CALL SUBOPT_0x22E
-	PUSH R23
-	PUSH R22
-	PUSH R31
-	PUSH R30
-	CALL SUBOPT_0x217
-	CALL SUBOPT_0x1B
-	POP  R26
-	POP  R27
-	POP  R24
-	POP  R25
-	CALL __MULF12
-	POP  R26
-	POP  R27
-	POP  R24
-	POP  R25
-	CALL __ADDF12
-	PUSH R23
-	PUSH R22
-	PUSH R31
-	PUSH R30
-	CALL SUBOPT_0x227
-	POP  R26
-	POP  R27
-	POP  R24
-	POP  R25
-_0x1A00C9:
-	CALL __ADDF12
-	CALL SUBOPT_0x22A
-; 000D 0168                                         }
-; 000D 0169 
-; 000D 016A                                         break;
-	RJMP _0x1A0045
-; 000D 016B                                     }
-; 000D 016C         default                 :   if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
-_0x1A0063:
-	CALL SUBOPT_0x2E
-	BREQ _0x1A0065
-	CALL SUBOPT_0x2E
-	CPI  R30,LOW(0x3)
-	BRNE _0x1A0064
-_0x1A0065:
-; 000D 016D                                         //sensor->value   =   (ADC_CONV_FAC*100 * adcData[ch]);
-; 000D 016E                                          viADCbuffer = 0;
-	CALL SUBOPT_0x209
-; 000D 016F                                          for(i=0;i<20;i++){
-_0x1A0068:
-	__CPWRN 18,19,20
-	BRGE _0x1A0069
-; 000D 0170                                             viADCbuffer += (unsigned long)(read_adc(8+ch));
-	CALL SUBOPT_0x20A
-	CALL SUBOPT_0x20B
-; 000D 0171                                          }
-	__ADDWRN 18,19,1
-	RJMP _0x1A0068
+	BRNE _0x1A0068
 _0x1A0069:
-; 000D 0172                                          viRawVoltValue = iAD595ADCToVolt(viADCbuffer,20.0);
-	CALL SUBOPT_0x20C
-	CALL SUBOPT_0x20D
-; 000D 0173 
-; 000D 0174                                          sensor->value = iAD595VoltToTemp((float)((viRawVoltValue+0.213)-viZeroSet));        //0.213 *2 = 0.426
-	CALL SUBOPT_0x210
-	CALL SUBOPT_0x213
-	MOVW R26,R30
-	MOVW R24,R22
+; 000D 0193                                         //sensor->value   =   (ADC_CONV_FAC*100 * adcData[ch]);
+; 000D 0194 //                                         viADCbuffer = 0;
+; 000D 0195 //                                         for(i=0;i<20;i++){
+; 000D 0196 //                                            viADCbuffer += (unsigned long)(read_adc(8+ch));
+; 000D 0197 //                                         }
+; 000D 0198 //                                         viRawVoltValue = iAD595ADCToVolt(viADCbuffer,20.0);
+; 000D 0199 //
+; 000D 019A //                                         sensor->value = iAD595VoltToTemp((float)((viRawVoltValue+0.213)-viZeroSet));        //0.213 *2 = 0.426
+; 000D 019B 
+; 000D 019C                                          viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+	CALL SUBOPT_0x20A
+; 000D 019D                                          viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
+; 000D 019E                                          sensor->value = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
 	CALL _iAD595VoltToTemp
-	RJMP _0x1A00CA
-; 000D 0175                                     }
-; 000D 0176                                     else if(TEMP_SEL == TEMP_TMEC){
-_0x1A0064:
+	RJMP _0x1A00C9
+; 000D 019F                                     }
+; 000D 01A0                                     else if(TEMP_SEL == TEMP_TMEC){
+_0x1A0068:
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x1)
-	BRNE _0x1A006B
-; 000D 0177                                         sensor->value   =   (epTMECTempSlope  * adcData[ch]) + epTMECTempOffset;
-	CALL SUBOPT_0x217
+	BRNE _0x1A006C
+; 000D 01A1                                         sensor->value   =   (epTMECTempSlope  * adcData[ch]) + epTMECTempOffset;
+	CALL SUBOPT_0x20D
 	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x226
+	CALL SUBOPT_0x21F
 	__GETD2N 0x427EEB85
-	RJMP _0x1A00CB
-; 000D 0178                                     }
-; 000D 0179                                     else if(TEMP_SEL == TEMP_PT100){
-_0x1A006B:
+	RJMP _0x1A00CA
+; 000D 01A2                                     }
+; 000D 01A3                                     else if(TEMP_SEL == TEMP_PT100){
+_0x1A006C:
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x2)
-	BRNE _0x1A006D
-; 000D 017A                                         sensor->value   =   (epPT100Temp_A    * adcData[ch] * adcData[ch]) +
-; 000D 017B                                                             (epPT100Temp_B    * adcData[ch]) +
-; 000D 017C                                                              epPT100Temp_C;
-	CALL SUBOPT_0x217
+	BRNE _0x1A006E
+; 000D 01A4                                         sensor->value   =   (epPT100Temp_A    * adcData[ch] * adcData[ch]) +
+; 000D 01A5                                                             (epPT100Temp_B    * adcData[ch]) +
+; 000D 01A6                                                              epPT100Temp_C;
+	CALL SUBOPT_0x20D
 	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x228
+	CALL SUBOPT_0x221
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x217
+	CALL SUBOPT_0x20D
 	CALL SUBOPT_0x1B
 	POP  R26
 	POP  R27
@@ -22664,79 +22666,79 @@ _0x1A006B:
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x217
+	CALL SUBOPT_0x20D
 	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x229
+	CALL SUBOPT_0x222
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
 	CALL __ADDF12
 	__GETD2N 0xC334E2E5
-_0x1A00CB:
-	CALL __ADDF12
 _0x1A00CA:
-	__GETW2SX 88
+	CALL __ADDF12
+_0x1A00C9:
+	__GETW2SX 92
 	CALL __PUTDP1
-; 000D 017D //                                        sensor->value = (epPT100TempSlope * adcData[ch]) + epPT100TempOffset;
-; 000D 017E //                                        getInterval(adcData[ch], &x_1, &x_2, &y_1, &y_2);
-; 000D 017F //                                        sensor->value = (((adcData[ch] - x_1) * (y_2 - y_1)) / (x_2 - x_1)) + y_1;
-; 000D 0180 
-; 000D 0181                                         // test
-; 000D 0182                                         //printDebug("ADC: %f, Value: %f \r\n", adcData[ch], sensor->value);
-; 000D 0183                                         //
-; 000D 0184                                     }
-; 000D 0185                                     break;
-_0x1A006D:
-; 000D 0186     }
-_0x1A0045:
-; 000D 0187     //printDebug("end read sensor.\r\n");
-; 000D 0188     sensor->status  = SENS_NORMAL;
-	CALL SUBOPT_0x21B
+; 000D 01A7 //                                        sensor->value = (epPT100TempSlope * adcData[ch]) + epPT100TempOffset;
+; 000D 01A8 //                                        getInterval(adcData[ch], &x_1, &x_2, &y_1, &y_2);
+; 000D 01A9 //                                        sensor->value = (((adcData[ch] - x_1) * (y_2 - y_1)) / (x_2 - x_1)) + y_1;
+; 000D 01AA 
+; 000D 01AB                                         // test
+; 000D 01AC                                         //printDebug("ADC: %f, Value: %f \r\n", adcData[ch], sensor->value);
+; 000D 01AD                                         //
+; 000D 01AE                                     }
+; 000D 01AF                                     break;
+_0x1A006E:
+; 000D 01B0     }
+_0x1A0049:
+; 000D 01B1     //printDebug("end read sensor.\r\n");
+; 000D 01B2     sensor->status  = SENS_NORMAL;
+	CALL SUBOPT_0x212
 	ADIW R26,4
 	LDI  R30,LOW(0)
 	ST   X,R30
-; 000D 0189 
-; 000D 018A     return 0;
+; 000D 01B3 
+; 000D 01B4     return 0;
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
 _0x20E006A:
 	CALL __LOADLOCR4
 	ADIW R28,63
-	ADIW R28,29
+	ADIW R28,33
 	RET
-; 000D 018B }
+; 000D 01B5 }
 ;/*============================================================*/
 ;void getInterval(float adcRaw, float *x1, float *x2, float *y1, float *y2) {
-; 000D 018D void getInterval(float adcRaw, float *x1, float *x2, float *y1, float *y2) {
-; 000D 018E 
-; 000D 018F     int i = 0;
-; 000D 0190 
-; 000D 0191     for(i = 0; i < 15; i++) {
+; 000D 01B7 void getInterval(float adcRaw, float *x1, float *x2, float *y1, float *y2) {
+; 000D 01B8 
+; 000D 01B9     int i = 0;
+; 000D 01BA 
+; 000D 01BB     for(i = 0; i < 15; i++) {
 ;	adcRaw -> Y+10
 ;	*x1 -> Y+8
 ;	*x2 -> Y+6
 ;	*y1 -> Y+4
 ;	*y2 -> Y+2
 ;	i -> R16,R17
-; 000D 0192         if(adcRaw <= adcTable[i]) {
-; 000D 0193             *x1 = adcTable[i-1];
-; 000D 0194             *y1 = tempTable[i-1];
-; 000D 0195             *x2 = adcTable[i];
-; 000D 0196             *y2 = tempTable[i];
-; 000D 0197             break;
-; 000D 0198         }
-; 000D 0199     }
-; 000D 019A 
-; 000D 019B     return;
-; 000D 019C }
+; 000D 01BC         if(adcRaw <= adcTable[i]) {
+; 000D 01BD             *x1 = adcTable[i-1];
+; 000D 01BE             *y1 = tempTable[i-1];
+; 000D 01BF             *x2 = adcTable[i];
+; 000D 01C0             *y2 = tempTable[i];
+; 000D 01C1             break;
+; 000D 01C2         }
+; 000D 01C3     }
+; 000D 01C4 
+; 000D 01C5     return;
+; 000D 01C6 }
 ;/*============================================================*/
 ;int sensorCalibrate1(int p1, int p2)
-; 000D 019F {
+; 000D 01C9 {
 _sensorCalibrate1:
-; 000D 01A0     float p2_raw;
-; 000D 01A1 
-; 000D 01A2     if(operating_config.sensorEnable[p1] != 0x01){
+; 000D 01CA     float p2_raw;
+; 000D 01CB 
+; 000D 01CC     if(operating_config.sensorEnable[p1] != 0x01){
 	ST   -Y,R27
 	ST   -Y,R26
 	SBIW R28,4
@@ -22744,137 +22746,137 @@ _sensorCalibrate1:
 ;	p2 -> Y+4
 ;	p2_raw -> Y+0
 	__POINTW1MN _operating_config,3
-	CALL SUBOPT_0x236
+	CALL SUBOPT_0x22E
 	LD   R26,X
 	CPI  R26,LOW(0x1)
-	BREQ _0x1A0072
-; 000D 01A3         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p1+1);
-	__POINTD1FN _0x1A0000,343
-	CALL SUBOPT_0x129
+	BREQ _0x1A0073
+; 000D 01CD         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p1+1);
+	__POINTD1FN _0x1A0000,133
+	CALL SUBOPT_0x128
 	ADIW R30,1
 	CALL SUBOPT_0xE9
-; 000D 01A4         return -1;
+; 000D 01CE         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0069
-; 000D 01A5     }
-; 000D 01A6     if(operating_config.sensorEnable[p2] != 0x01){
-_0x1A0072:
+; 000D 01CF     }
+; 000D 01D0     if(operating_config.sensorEnable[p2] != 0x01){
+_0x1A0073:
 	__POINTW1MN _operating_config,3
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
-	CALL SUBOPT_0x237
-	BREQ _0x1A0073
-; 000D 01A7         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p2+1);
-	__POINTD1FN _0x1A0000,343
-	CALL SUBOPT_0x1DB
+	CALL SUBOPT_0x22F
+	BREQ _0x1A0074
+; 000D 01D1         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p2+1);
+	__POINTD1FN _0x1A0000,133
+	CALL SUBOPT_0x1DA
 	ADIW R30,1
 	CALL SUBOPT_0xE9
-; 000D 01A8         return -1;
+; 000D 01D2         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0069
-; 000D 01A9     }
-; 000D 01AA 
-; 000D 01AB     if(sensor[p1].status != SENS_NORMAL){
-_0x1A0073:
+; 000D 01D3     }
+; 000D 01D4 
+; 000D 01D5     if(sensor[p1].status != SENS_NORMAL){
+_0x1A0074:
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
-	CALL SUBOPT_0x238
-	CPI  R30,0
-	BREQ _0x1A0074
-; 000D 01AC         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p1+1,sensor[p1].status);
-	__POINTD1FN _0x1A0000,395
-	CALL SUBOPT_0x129
-	CALL SUBOPT_0x202
-	LDD  R26,Y+14
-	LDD  R27,Y+14+1
-	CALL SUBOPT_0x238
-	CALL SUBOPT_0x239
-; 000D 01AD         return -1;
-	LDI  R30,LOW(65535)
-	LDI  R31,HIGH(65535)
-	RJMP _0x20E0069
-; 000D 01AE     }
-; 000D 01AF     if(sensor[p2].status != SENS_NORMAL){
-_0x1A0074:
-	LDD  R26,Y+4
-	LDD  R27,Y+4+1
-	CALL SUBOPT_0x238
+	CALL SUBOPT_0x230
 	CPI  R30,0
 	BREQ _0x1A0075
-; 000D 01B0         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p2+1,sensor[p2].status);
-	__POINTD1FN _0x1A0000,395
-	CALL SUBOPT_0x1DB
-	CALL SUBOPT_0x202
-	LDD  R26,Y+12
-	LDD  R27,Y+12+1
-	CALL SUBOPT_0x238
-	CALL SUBOPT_0x239
-; 000D 01B1         return -1;
+; 000D 01D6         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p1+1,sensor[p1].status);
+	__POINTD1FN _0x1A0000,185
+	CALL SUBOPT_0x128
+	CALL SUBOPT_0x201
+	LDD  R26,Y+14
+	LDD  R27,Y+14+1
+	CALL SUBOPT_0x230
+	CALL SUBOPT_0x231
+; 000D 01D7         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0069
-; 000D 01B2     }
-; 000D 01B3 
-; 000D 01B4     epCalType[p2]   = CAL_SELFCOMPARE;
+; 000D 01D8     }
+; 000D 01D9     if(sensor[p2].status != SENS_NORMAL){
 _0x1A0075:
+	LDD  R26,Y+4
+	LDD  R27,Y+4+1
+	CALL SUBOPT_0x230
+	CPI  R30,0
+	BREQ _0x1A0076
+; 000D 01DA         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p2+1,sensor[p2].status);
+	__POINTD1FN _0x1A0000,185
+	CALL SUBOPT_0x1DA
+	CALL SUBOPT_0x201
+	LDD  R26,Y+12
+	LDD  R27,Y+12+1
+	CALL SUBOPT_0x230
+	CALL SUBOPT_0x231
+; 000D 01DB         return -1;
+	LDI  R30,LOW(65535)
+	LDI  R31,HIGH(65535)
+	RJMP _0x20E0069
+; 000D 01DC     }
+; 000D 01DD 
+; 000D 01DE     epCalType[p2]   = CAL_SELFCOMPARE;
+_0x1A0076:
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	SUBI R26,LOW(-_epCalType)
 	SBCI R27,HIGH(-_epCalType)
 	LDI  R30,LOW(1)
 	CALL __EEPROMWRB
-; 000D 01B5 
-; 000D 01B6     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+; 000D 01DF 
+; 000D 01E0     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 	CALL SUBOPT_0x2E
-	BREQ _0x1A0077
+	BREQ _0x1A0078
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
-	BRNE _0x1A0076
-_0x1A0077:
-; 000D 01B7         p2_raw          = (ADC_CONV_FAC*100 * adcData[p2]);
+	BRNE _0x1A0077
+_0x1A0078:
+; 000D 01E1         p2_raw          = (ADC_CONV_FAC*100 * adcData[p2]);
 	CALL SUBOPT_0x32
 	CALL SUBOPT_0x33
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x23A
+	CALL SUBOPT_0x232
 	CALL SUBOPT_0x1B
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
 	CALL __MULF12
-	RJMP _0x1A00CC
-; 000D 01B8     }
-; 000D 01B9     else if(TEMP_SEL == TEMP_TMEC){
-_0x1A0076:
+	RJMP _0x1A00CB
+; 000D 01E2     }
+; 000D 01E3     else if(TEMP_SEL == TEMP_TMEC){
+_0x1A0077:
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x1)
-	BRNE _0x1A007A
-; 000D 01BA         p2_raw          = epTMECTempSlope   * adcData[p2];
-	CALL SUBOPT_0x23A
+	BRNE _0x1A007B
+; 000D 01E4         p2_raw          = epTMECTempSlope   * adcData[p2];
+	CALL SUBOPT_0x232
 	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x226
-	RJMP _0x1A00CC
-; 000D 01BB     }
-; 000D 01BC     else if(TEMP_SEL == TEMP_PT100){
-_0x1A007A:
+	CALL SUBOPT_0x21F
+	RJMP _0x1A00CB
+; 000D 01E5     }
+; 000D 01E6     else if(TEMP_SEL == TEMP_PT100){
+_0x1A007B:
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x2)
-	BRNE _0x1A007C
-; 000D 01BD         p2_raw          = (epPT100Temp_A    * adcData[p2] * adcData[p2]) +
-; 000D 01BE                           (epPT100Temp_B    * adcData[p2]);
-	CALL SUBOPT_0x23A
+	BRNE _0x1A007D
+; 000D 01E7         p2_raw          = (epPT100Temp_A    * adcData[p2] * adcData[p2]) +
+; 000D 01E8                           (epPT100Temp_B    * adcData[p2]);
+	CALL SUBOPT_0x232
 	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x228
+	CALL SUBOPT_0x221
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x23A
+	CALL SUBOPT_0x232
 	CALL SUBOPT_0x1B
 	POP  R26
 	POP  R27
@@ -22885,29 +22887,29 @@ _0x1A007A:
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x23A
+	CALL SUBOPT_0x232
 	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x229
+	CALL SUBOPT_0x222
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
 	CALL __ADDF12
-_0x1A00CC:
+_0x1A00CB:
 	CALL __PUTD1S0
-; 000D 01BF     }
-; 000D 01C0 
-; 000D 01C1     epFactor_A[p2]  = 0;
-_0x1A007C:
+; 000D 01E9     }
+; 000D 01EA 
+; 000D 01EB     epFactor_A[p2]  = 0;
+_0x1A007D:
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
+	CALL SUBOPT_0x22D
+	CALL SUBOPT_0x233
+; 000D 01EC     epFactor_B[p2]  = 0;
+	CALL SUBOPT_0x234
+	CALL SUBOPT_0x233
+; 000D 01ED     epFactor_C[p2]  = sensor[p1].value - p2_raw;
 	CALL SUBOPT_0x235
-	CALL SUBOPT_0x23B
-; 000D 01C2     epFactor_B[p2]  = 0;
-	CALL SUBOPT_0x23C
-	CALL SUBOPT_0x23B
-; 000D 01C3     epFactor_C[p2]  = sensor[p1].value - p2_raw;
-	CALL SUBOPT_0x23D
 	PUSH R31
 	PUSH R30
 	LDD  R26,Y+6
@@ -22920,24 +22922,24 @@ _0x1A007C:
 	POP  R26
 	POP  R27
 	CALL __EEPROMWRD
-; 000D 01C4 
-; 000D 01C5     return 0;
+; 000D 01EE 
+; 000D 01EF     return 0;
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
 _0x20E0069:
 	ADIW R28,8
 	RET
-; 000D 01C6 }
+; 000D 01F0 }
 ;/*============================================================*/
 ;int sensorCalibrate2(int prbId)
-; 000D 01C9 {
+; 000D 01F3 {
 _sensorCalibrate2:
-; 000D 01CA     float p2_raw;
-; 000D 01CB     float tmpA,tmpB,tmpC;
-; 000D 01CC     //int i = 0;
-; 000D 01CD     //long viADCbuffer = 0;
-; 000D 01CE 
-; 000D 01CF     if(epIsPointSet1[prbId] == 0){
+; 000D 01F4     float p2_raw;
+; 000D 01F5     float tmpA,tmpB,tmpC;
+; 000D 01F6     //int i = 0;
+; 000D 01F7     //long viADCbuffer = 0;
+; 000D 01F8 
+; 000D 01F9     if(epIsPointSet1[prbId] == 0){
 	ST   -Y,R27
 	ST   -Y,R26
 	SBIW R28,16
@@ -22952,20 +22954,20 @@ _sensorCalibrate2:
 	SBCI R27,HIGH(-_epIsPointSet1)
 	CALL __EEPROMRDB
 	CPI  R30,0
-	BRNE _0x1A007D
-; 000D 01D0         printDebug("<sensorCalibrate2> ABORT: sensor ch %d No set point found\r\n",prbId+1);
-	__POINTD1FN _0x1A0000,450
+	BRNE _0x1A007E
+; 000D 01FA         printDebug("<sensorCalibrate2> ABORT: sensor ch %d No set point found\r\n",prbId+1);
+	__POINTD1FN _0x1A0000,240
 	CALL SUBOPT_0xE8
 	ADIW R30,1
 	CALL SUBOPT_0xE9
-; 000D 01D1         return -1;
+; 000D 01FB         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0068
-; 000D 01D2     }
-; 000D 01D3 
-; 000D 01D4     if(epIsPointSet2[prbId] == 0){
-_0x1A007D:
+; 000D 01FC     }
+; 000D 01FD 
+; 000D 01FE     if(epIsPointSet2[prbId] == 0){
+_0x1A007E:
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
 	SUBI R26,LOW(-_epIsPointSet2)
@@ -22973,69 +22975,69 @@ _0x1A007D:
 	CALL __EEPROMRDB
 	CPI  R30,0
 	BREQ PC+3
-	JMP _0x1A007E
-; 000D 01D5         printDebug("<sensorCalibrate2> -- CAL_EXTOFFSET --\r\n");
-	__POINTD1FN _0x1A0000,510
+	JMP _0x1A007F
+; 000D 01FF         printDebug("<sensorCalibrate2> -- CAL_EXTOFFSET --\r\n");
+	__POINTD1FN _0x1A0000,300
 	CALL SUBOPT_0x3
-; 000D 01D6         epFactor_A[prbId]   = 0;
+; 000D 0200         epFactor_A[prbId]   = 0;
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
-	CALL SUBOPT_0x235
-	CALL SUBOPT_0x23E
-; 000D 01D7         epFactor_B[prbId]   = 0;
+	CALL SUBOPT_0x22D
+	CALL SUBOPT_0x236
+; 000D 0201         epFactor_B[prbId]   = 0;
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
-	CALL SUBOPT_0x23C
-	CALL SUBOPT_0x23E
-; 000D 01D8 
-; 000D 01D9         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+	CALL SUBOPT_0x234
+	CALL SUBOPT_0x236
+; 000D 0202 
+; 000D 0203         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 	CALL SUBOPT_0x2E
-	BREQ _0x1A0080
+	BREQ _0x1A0081
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
-	BRNE _0x1A007F
-_0x1A0080:
-; 000D 01DA             p2_raw          = (ADC_CONV_FAC*100 * epADCRef1[prbId]);
+	BRNE _0x1A0080
+_0x1A0081:
+; 000D 0204             p2_raw          = (ADC_CONV_FAC*100 * epADCRef1[prbId]);
 	CALL SUBOPT_0x32
 	CALL SUBOPT_0x33
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x23F
+	CALL SUBOPT_0x237
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
 	CALL __MULF12
-	RJMP _0x1A00CD
-; 000D 01DB 
-; 000D 01DC 
-; 000D 01DD         }
-; 000D 01DE         else if(TEMP_SEL == TEMP_TMEC){
-_0x1A007F:
+	RJMP _0x1A00CC
+; 000D 0205 
+; 000D 0206 
+; 000D 0207         }
+; 000D 0208         else if(TEMP_SEL == TEMP_TMEC){
+_0x1A0080:
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x1)
-	BRNE _0x1A0083
-; 000D 01DF             p2_raw          = epTMECTempSlope   * epADCRef1[prbId];
-	CALL SUBOPT_0x23F
-	CALL SUBOPT_0x226
-	RJMP _0x1A00CD
-; 000D 01E0         }
-; 000D 01E1         else if(TEMP_SEL == TEMP_PT100){
-_0x1A0083:
+	BRNE _0x1A0084
+; 000D 0209             p2_raw          = epTMECTempSlope   * epADCRef1[prbId];
+	CALL SUBOPT_0x237
+	CALL SUBOPT_0x21F
+	RJMP _0x1A00CC
+; 000D 020A         }
+; 000D 020B         else if(TEMP_SEL == TEMP_PT100){
+_0x1A0084:
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x2)
-	BRNE _0x1A0085
-; 000D 01E2             p2_raw          = (epPT100Temp_A    * epADCRef1[prbId] * epADCRef1[prbId]) +
-; 000D 01E3                               (epPT100Temp_B    * epADCRef1[prbId]);
-	CALL SUBOPT_0x23F
-	CALL SUBOPT_0x228
+	BRNE _0x1A0086
+; 000D 020C             p2_raw          = (epPT100Temp_A    * epADCRef1[prbId] * epADCRef1[prbId]) +
+; 000D 020D                               (epPT100Temp_B    * epADCRef1[prbId]);
+	CALL SUBOPT_0x237
+	CALL SUBOPT_0x221
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x23F
+	CALL SUBOPT_0x237
 	POP  R26
 	POP  R27
 	POP  R24
@@ -23045,45 +23047,45 @@ _0x1A0083:
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x23F
-	CALL SUBOPT_0x229
+	CALL SUBOPT_0x237
+	CALL SUBOPT_0x222
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
 	CALL __ADDF12
-_0x1A00CD:
+_0x1A00CC:
 	__PUTD1S 12
-; 000D 01E4         }
-; 000D 01E5 
-; 000D 01E6         epFactor_C[prbId]   = epTempRef1[prbId] - p2_raw;
-_0x1A0085:
+; 000D 020E         }
+; 000D 020F 
+; 000D 0210         epFactor_C[prbId]   = epTempRef1[prbId] - p2_raw;
+_0x1A0086:
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
-	CALL SUBOPT_0x23D
+	CALL SUBOPT_0x235
 	PUSH R31
 	PUSH R30
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
-	CALL SUBOPT_0x223
+	CALL SUBOPT_0x21C
 	CALL SUBOPT_0xB
 	CALL __SUBF12
 	POP  R26
 	POP  R27
 	CALL __EEPROMWRD
-; 000D 01E7         epCalType[prbId]    = CAL_EXTOFFSET;
-	CALL SUBOPT_0x240
+; 000D 0211         epCalType[prbId]    = CAL_EXTOFFSET;
+	CALL SUBOPT_0x238
 	LDI  R30,LOW(2)
 	CALL __EEPROMWRB
-; 000D 01E8         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
-	CALL SUBOPT_0x241
-	CALL SUBOPT_0x242
-; 000D 01E9         return 0;
+; 000D 0212         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
+	CALL SUBOPT_0x239
+	CALL SUBOPT_0x23A
+; 000D 0213         return 0;
 	RJMP _0x20E0067
-; 000D 01EA     }
-; 000D 01EB 
-; 000D 01EC     if(epIsPointSet3[prbId] == 0){
-_0x1A007E:
+; 000D 0214     }
+; 000D 0215 
+; 000D 0216     if(epIsPointSet3[prbId] == 0){
+_0x1A007F:
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
 	SUBI R26,LOW(-_epIsPointSet3)
@@ -23091,52 +23093,50 @@ _0x1A007E:
 	CALL __EEPROMRDB
 	CPI  R30,0
 	BREQ PC+3
-	JMP _0x1A0086
-; 000D 01ED         printDebug("<sensorCalibrate2> -- CAL_EXTLINEAR --\r\n");
-	__POINTD1FN _0x1A0000,582
+	JMP _0x1A0087
+; 000D 0217         printDebug("<sensorCalibrate2> -- CAL_EXTLINEAR --\r\n");
+	__POINTD1FN _0x1A0000,372
 	CALL SUBOPT_0x3
-; 000D 01EE         epFactor_A[prbId]   = 0;
+; 000D 0218         epFactor_A[prbId]   = 0;
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
-	CALL SUBOPT_0x235
-	CALL SUBOPT_0x23E
-; 000D 01EF 
-; 000D 01F0         epFactor_B[prbId]   = (epTempRef2[prbId] - epTempRef1[prbId])/(epADCRef2[prbId] - epADCRef1[prbId]);
-	LDD  R30,Y+16
-	LDD  R31,Y+16+1
-	LDI  R26,LOW(_epFactor_B)
-	LDI  R27,HIGH(_epFactor_B)
-	CALL SUBOPT_0x211
+	CALL SUBOPT_0x22D
+	CALL SUBOPT_0x236
+; 000D 0219 
+; 000D 021A         epFactor_B[prbId]   = (epTempRef2[prbId] - epTempRef1[prbId])/(epADCRef2[prbId] - epADCRef1[prbId]);
+	CALL SUBOPT_0x23B
+	ADD  R30,R26
+	ADC  R31,R27
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x243
+	CALL SUBOPT_0x23C
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
-	CALL SUBOPT_0x223
+	CALL SUBOPT_0x21C
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x222
+	CALL SUBOPT_0x21A
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x244
+	CALL SUBOPT_0x23D
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x23F
+	CALL SUBOPT_0x237
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x222
+	CALL SUBOPT_0x21A
 	POP  R26
 	POP  R27
 	POP  R24
@@ -23145,31 +23145,31 @@ _0x1A007E:
 	POP  R26
 	POP  R27
 	CALL __EEPROMWRD
-; 000D 01F1         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
-	CALL SUBOPT_0x245
-	CALL SUBOPT_0x23C
-	CALL SUBOPT_0x14C
-; 000D 01F2 
-; 000D 01F3         epFactor_C[prbId]   = epTempRef2[prbId] - (epFactor_B[prbId] * epADCRef2[prbId]);
+; 000D 021B         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
+	CALL SUBOPT_0x23E
+	CALL SUBOPT_0x234
+	CALL SUBOPT_0x14B
+; 000D 021C 
+; 000D 021D         epFactor_C[prbId]   = epTempRef2[prbId] - (epFactor_B[prbId] * epADCRef2[prbId]);
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
-	CALL SUBOPT_0x23D
+	CALL SUBOPT_0x235
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x243
+	CALL SUBOPT_0x23C
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
-	CALL SUBOPT_0x23C
+	CALL SUBOPT_0x234
 	CALL __EEPROMRDD
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x244
+	CALL SUBOPT_0x23D
 	POP  R26
 	POP  R27
 	POP  R24
@@ -23179,47 +23179,45 @@ _0x1A007E:
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x222
+	CALL SUBOPT_0x21A
 	POP  R26
 	POP  R27
 	CALL __EEPROMWRD
-; 000D 01F4         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
-	CALL SUBOPT_0x241
-	CALL SUBOPT_0x242
-; 000D 01F5 
-; 000D 01F6         epCalType[prbId]    = CAL_EXTLINEAR;
-	CALL SUBOPT_0x240
+; 000D 021E         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
+	CALL SUBOPT_0x239
+	CALL SUBOPT_0x23A
+; 000D 021F 
+; 000D 0220         epCalType[prbId]    = CAL_EXTLINEAR;
+	CALL SUBOPT_0x238
 	LDI  R30,LOW(3)
-	RJMP _0x1A00CE
-; 000D 01F7     }
-; 000D 01F8     else{
-_0x1A0086:
-; 000D 01F9         printDebug("<sensorCalibrate2> -- CAL_EXTPOLYNOMIAL --\r\n");
-	__POINTD1FN _0x1A0000,654
+	RJMP _0x1A00CD
+; 000D 0221     }
+; 000D 0222     else{
+_0x1A0087:
+; 000D 0223         printDebug("<sensorCalibrate2> -- CAL_EXTPOLYNOMIAL --\r\n");
+	__POINTD1FN _0x1A0000,444
 	CALL SUBOPT_0x3
-; 000D 01FA 
-; 000D 01FB         gaussian(epADCRef1[prbId],  epADCRef2[prbId],  epADCRef3[prbId],
-; 000D 01FC                  epTempRef1[prbId], epTempRef2[prbId], epTempRef3[prbId],
-; 000D 01FD                  &tmpA, &tmpB, &tmpC);
-	CALL SUBOPT_0x23F
+; 000D 0224 
+; 000D 0225         gaussian(epADCRef1[prbId],  epADCRef2[prbId],  epADCRef3[prbId],
+; 000D 0226                  epTempRef1[prbId], epTempRef2[prbId], epTempRef3[prbId],
+; 000D 0227                  &tmpA, &tmpB, &tmpC);
+	CALL SUBOPT_0x237
 	CALL SUBOPT_0xE8
-	LDI  R26,LOW(_epADCRef2)
-	LDI  R27,HIGH(_epADCRef2)
-	CALL SUBOPT_0x246
+	CALL SUBOPT_0x23F
+	CALL SUBOPT_0x240
 	LDD  R30,Y+24
 	LDD  R31,Y+24+1
-	CALL SUBOPT_0x22F
+	CALL SUBOPT_0x228
 	CALL SUBOPT_0xF1
-	CALL SUBOPT_0x223
+	CALL SUBOPT_0x21C
 	CALL __PUTPARD1
 	LDD  R30,Y+32
 	LDD  R31,Y+32+1
-	LDI  R26,LOW(_epTempRef2)
-	LDI  R27,HIGH(_epTempRef2)
-	CALL SUBOPT_0x246
+	CALL SUBOPT_0x241
+	CALL SUBOPT_0x240
 	LDD  R30,Y+36
 	LDD  R31,Y+36+1
-	CALL SUBOPT_0x230
+	CALL SUBOPT_0x229
 	CALL __PUTPARD1
 	MOVW R30,R28
 	ADIW R30,32
@@ -23232,8 +23230,8 @@ _0x1A0086:
 	MOVW R26,R28
 	ADIW R26,28
 	CALL _gaussian
-; 000D 01FE 
-; 000D 01FF         epFactor_A[prbId]   = tmpA;
+; 000D 0228 
+; 000D 0229         epFactor_A[prbId]   = tmpA;
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	LDI  R26,LOW(_epFactor_A)
@@ -23243,65 +23241,61 @@ _0x1A0086:
 	ADC  R27,R31
 	CALL SUBOPT_0x4F
 	CALL __EEPROMWRD
-; 000D 0200         epFactor_B[prbId]   = tmpB;
-	LDD  R30,Y+16
-	LDD  R31,Y+16+1
-	LDI  R26,LOW(_epFactor_B)
-	LDI  R27,HIGH(_epFactor_B)
-	CALL __LSLW2
+; 000D 022A         epFactor_B[prbId]   = tmpB;
+	CALL SUBOPT_0x23B
 	ADD  R26,R30
 	ADC  R27,R31
 	CALL SUBOPT_0x89
 	CALL __EEPROMWRD
-; 000D 0201         epFactor_C[prbId]   = tmpC;
+; 000D 022B         epFactor_C[prbId]   = tmpC;
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	LDI  R26,LOW(_epFactor_C)
 	LDI  R27,HIGH(_epFactor_C)
-	CALL SUBOPT_0x247
+	CALL SUBOPT_0x242
 	CALL SUBOPT_0x87
 	CALL __EEPROMWRD
-; 000D 0202 
-; 000D 0203         printDebug("<sensorCalibrate2> --A--> %f\r\n", epFactor_A[prbId]);
-	__POINTD1FN _0x1A0000,699
+; 000D 022C 
+; 000D 022D         printDebug("<sensorCalibrate2> --A--> %f\r\n", epFactor_A[prbId]);
+	__POINTD1FN _0x1A0000,489
 	CALL SUBOPT_0xE8
-	CALL SUBOPT_0x235
-	CALL SUBOPT_0x14C
-; 000D 0204         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
-	CALL SUBOPT_0x245
-	CALL SUBOPT_0x23C
-	CALL SUBOPT_0x14C
-; 000D 0205         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
-	CALL SUBOPT_0x241
-	CALL SUBOPT_0x242
-; 000D 0206 
-; 000D 0207 
-; 000D 0208 
-; 000D 0209         epCalType[prbId]    = CAL_EXTPOLYNOMIAL;
-	CALL SUBOPT_0x240
+	CALL SUBOPT_0x22D
+	CALL SUBOPT_0x14B
+; 000D 022E         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
+	CALL SUBOPT_0x23E
+	CALL SUBOPT_0x234
+	CALL SUBOPT_0x14B
+; 000D 022F         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
+	CALL SUBOPT_0x239
+	CALL SUBOPT_0x23A
+; 000D 0230 
+; 000D 0231 
+; 000D 0232 
+; 000D 0233         epCalType[prbId]    = CAL_EXTPOLYNOMIAL;
+	CALL SUBOPT_0x238
 	LDI  R30,LOW(4)
-_0x1A00CE:
+_0x1A00CD:
 	CALL __EEPROMWRB
-; 000D 020A     }
-; 000D 020B 
-; 000D 020C     return 0;
+; 000D 0234     }
+; 000D 0235 
+; 000D 0236     return 0;
 _0x20E0067:
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
 _0x20E0068:
 	ADIW R28,18
 	RET
-; 000D 020D }
+; 000D 0237 }
 ;/*============================================================*/
 ;int sensorGetCurrentSetPoint(int ch,int pnt, unsigned char *buf)
-; 000D 0210 {
+; 000D 023A {
 _sensorGetCurrentSetPoint:
-; 000D 0211     unsigned char   valStr[10];
-; 000D 0212     float           valTmp;
-; 000D 0213     //signed int      val;
-; 000D 0214     int             i;
-; 000D 0215 
-; 000D 0216     if(pnt == CALPOINT(1)){
+; 000D 023B     unsigned char   valStr[10];
+; 000D 023C     float           valTmp;
+; 000D 023D     //signed int      val;
+; 000D 023E     int             i;
+; 000D 023F 
+; 000D 0240     if(pnt == CALPOINT(1)){
 	ST   -Y,R27
 	ST   -Y,R26
 	SBIW R28,14
@@ -23318,166 +23312,164 @@ _sensorGetCurrentSetPoint:
 	CPI  R26,LOW(0x65)
 	LDI  R30,HIGH(0x65)
 	CPC  R27,R30
-	BRNE _0x1A0088
-; 000D 0217         if(epIsPointSet1[ch] == 1){
+	BRNE _0x1A0089
+; 000D 0241         if(epIsPointSet1[ch] == 1){
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
 	SUBI R26,LOW(-_epIsPointSet1)
 	SBCI R27,HIGH(-_epIsPointSet1)
 	CALL __EEPROMRDB
 	CPI  R30,LOW(0x1)
-	BRNE _0x1A0089
-; 000D 0218             valTmp  = epTempRef1[ch];
+	BRNE _0x1A008A
+; 000D 0242             valTmp  = epTempRef1[ch];
 	LDD  R30,Y+20
 	LDD  R31,Y+20+1
-	CALL SUBOPT_0x223
+	CALL SUBOPT_0x21C
 	CALL SUBOPT_0xB2
-; 000D 0219             printDebug("<sensorGetCurrentSetPoint> tempRef1 = [%f][%f]\r\n",epTempRef1[ch],valTmp);
-	__POINTD1FN _0x1A0000,730
-	CALL SUBOPT_0x248
-	CALL SUBOPT_0x223
+; 000D 0243             printDebug("<sensorGetCurrentSetPoint> tempRef1 = [%f][%f]\r\n",epTempRef1[ch],valTmp);
+	__POINTD1FN _0x1A0000,520
+	CALL SUBOPT_0x243
+	CALL SUBOPT_0x21C
 	CALL SUBOPT_0x57
 	CALL SUBOPT_0x21
-; 000D 021A             ftoa(valTmp,2,valStr);
-	CALL SUBOPT_0xF0
-	CALL SUBOPT_0x249
-; 000D 021B             //val = (epTempRef1[ch] * 100);
-; 000D 021C         }
-; 000D 021D         else{
-	RJMP _0x1A008A
-_0x1A0089:
-; 000D 021E             printDebug("<sensorGetCurrentSetPoint> tempRef1 not set [0.00]\r\n");
-	__POINTD1FN _0x1A0000,779
-	CALL SUBOPT_0x3
-; 000D 021F             sprintf(valStr,"0.00");                 //val = 0;
-	CALL SUBOPT_0x56
-	CALL SUBOPT_0x24A
-; 000D 0220         }
-_0x1A008A:
-; 000D 0221     }
-; 000D 0222     else if(pnt == CALPOINT(2)){
+; 000D 0244             ftoa(valTmp,2,valStr);
+	CALL SUBOPT_0x244
+; 000D 0245             //val = (epTempRef1[ch] * 100);
+; 000D 0246         }
+; 000D 0247         else{
 	RJMP _0x1A008B
-_0x1A0088:
+_0x1A008A:
+; 000D 0248             printDebug("<sensorGetCurrentSetPoint> tempRef1 not set [0.00]\r\n");
+	__POINTD1FN _0x1A0000,569
+	CALL SUBOPT_0x3
+; 000D 0249             sprintf(valStr,"0.00");                 //val = 0;
+	CALL SUBOPT_0x56
+	CALL SUBOPT_0x245
+; 000D 024A         }
+_0x1A008B:
+; 000D 024B     }
+; 000D 024C     else if(pnt == CALPOINT(2)){
+	RJMP _0x1A008C
+_0x1A0089:
 	LDD  R26,Y+18
 	LDD  R27,Y+18+1
 	CPI  R26,LOW(0x66)
 	LDI  R30,HIGH(0x66)
 	CPC  R27,R30
-	BRNE _0x1A008C
-; 000D 0223         if(epIsPointSet2[ch] == 1){
+	BRNE _0x1A008D
+; 000D 024D         if(epIsPointSet2[ch] == 1){
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
 	SUBI R26,LOW(-_epIsPointSet2)
 	SBCI R27,HIGH(-_epIsPointSet2)
 	CALL __EEPROMRDB
 	CPI  R30,LOW(0x1)
-	BRNE _0x1A008D
-; 000D 0224             valTmp  = epTempRef2[ch];
+	BRNE _0x1A008E
+; 000D 024E             valTmp  = epTempRef2[ch];
 	LDD  R30,Y+20
 	LDD  R31,Y+20+1
-	LDI  R26,LOW(_epTempRef2)
-	LDI  R27,HIGH(_epTempRef2)
-	CALL SUBOPT_0x247
+	CALL SUBOPT_0x241
+	ADD  R26,R30
+	ADC  R27,R31
 	CALL __EEPROMRDD
 	CALL SUBOPT_0xB2
-; 000D 0225             printDebug("<sensorGetCurrentSetPoint> tempRef2 = [%f][%f]\r\n",epTempRef2[ch],valTmp);
-	__POINTD1FN _0x1A0000,837
-	CALL SUBOPT_0x248
-	LDI  R26,LOW(_epTempRef2)
-	LDI  R27,HIGH(_epTempRef2)
-	CALL SUBOPT_0x247
+; 000D 024F             printDebug("<sensorGetCurrentSetPoint> tempRef2 = [%f][%f]\r\n",epTempRef2[ch],valTmp);
+	__POINTD1FN _0x1A0000,627
+	CALL SUBOPT_0x243
+	CALL SUBOPT_0x241
+	ADD  R26,R30
+	ADC  R27,R31
 	CALL __EEPROMRDD
 	CALL SUBOPT_0x57
 	CALL SUBOPT_0x21
-; 000D 0226             ftoa(valTmp,2,valStr);
-	CALL SUBOPT_0xF0
-	CALL SUBOPT_0x249
-; 000D 0227             //val = (epTempRef1[ch] * 100);
-; 000D 0228         }
-; 000D 0229         else{
-	RJMP _0x1A008E
-_0x1A008D:
-; 000D 022A             printDebug("<sensorGetCurrentSetPoint> tempRef2 not set [0.00]\r\n");
-	__POINTD1FN _0x1A0000,886
-	CALL SUBOPT_0x3
-; 000D 022B             sprintf(valStr,"0.00");                 //val = 0;
-	CALL SUBOPT_0x56
-	CALL SUBOPT_0x24A
-; 000D 022C         }
-_0x1A008E:
-; 000D 022D         /*
-; 000D 022E         if(epIsPointSet2[ch] == 1){ val = (epTempRef2[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef2[ch]);}
-; 000D 022F         else{                       val = 0;        }
-; 000D 0230         */
-; 000D 0231     }
-; 000D 0232     else if(pnt == CALPOINT(3)){
+; 000D 0250             ftoa(valTmp,2,valStr);
+	CALL SUBOPT_0x244
+; 000D 0251             //val = (epTempRef1[ch] * 100);
+; 000D 0252         }
+; 000D 0253         else{
 	RJMP _0x1A008F
-_0x1A008C:
+_0x1A008E:
+; 000D 0254             printDebug("<sensorGetCurrentSetPoint> tempRef2 not set [0.00]\r\n");
+	__POINTD1FN _0x1A0000,676
+	CALL SUBOPT_0x3
+; 000D 0255             sprintf(valStr,"0.00");                 //val = 0;
+	CALL SUBOPT_0x56
+	CALL SUBOPT_0x245
+; 000D 0256         }
+_0x1A008F:
+; 000D 0257         /*
+; 000D 0258         if(epIsPointSet2[ch] == 1){ val = (epTempRef2[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef2[ch]);}
+; 000D 0259         else{                       val = 0;        }
+; 000D 025A         */
+; 000D 025B     }
+; 000D 025C     else if(pnt == CALPOINT(3)){
+	RJMP _0x1A0090
+_0x1A008D:
 	LDD  R26,Y+18
 	LDD  R27,Y+18+1
 	CPI  R26,LOW(0x67)
 	LDI  R30,HIGH(0x67)
 	CPC  R27,R30
-	BRNE _0x1A0090
-; 000D 0233         if(epIsPointSet3[ch] == 1){
+	BRNE _0x1A0091
+; 000D 025D         if(epIsPointSet3[ch] == 1){
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
 	SUBI R26,LOW(-_epIsPointSet3)
 	SBCI R27,HIGH(-_epIsPointSet3)
 	CALL __EEPROMRDB
 	CPI  R30,LOW(0x1)
-	BRNE _0x1A0091
-; 000D 0234             valTmp  = epTempRef3[ch];
+	BRNE _0x1A0092
+; 000D 025E             valTmp  = epTempRef3[ch];
 	LDD  R30,Y+20
 	LDD  R31,Y+20+1
-	CALL SUBOPT_0x230
+	CALL SUBOPT_0x229
 	CALL SUBOPT_0xB2
-; 000D 0235             printDebug("<sensorGetCurrentSetPoint> tempRef3 = [%f][%f]\r\n",epTempRef3[ch],valTmp);
-	__POINTD1FN _0x1A0000,939
-	CALL SUBOPT_0x248
-	CALL SUBOPT_0x230
+; 000D 025F             printDebug("<sensorGetCurrentSetPoint> tempRef3 = [%f][%f]\r\n",epTempRef3[ch],valTmp);
+	__POINTD1FN _0x1A0000,729
+	CALL SUBOPT_0x243
+	CALL SUBOPT_0x229
 	CALL SUBOPT_0x57
 	CALL SUBOPT_0x21
-; 000D 0236             ftoa(valTmp,2,valStr);
-	CALL SUBOPT_0xF0
-	CALL SUBOPT_0x249
-; 000D 0237             //val = (epTempRef1[ch] * 100);
-; 000D 0238         }
-; 000D 0239         else{
-	RJMP _0x1A0092
-_0x1A0091:
-; 000D 023A             printDebug("<sensorGetCurrentSetPoint> tempRef3 not set [0.00]\r\n");
-	__POINTD1FN _0x1A0000,988
-	CALL SUBOPT_0x3
-; 000D 023B             sprintf(valStr,"0.00");                 //val = 0;
-	CALL SUBOPT_0x56
-	CALL SUBOPT_0x24A
-; 000D 023C         }
-_0x1A0092:
-; 000D 023D         /*
-; 000D 023E         if(epIsPointSet3[ch] == 1){ val = (epTempRef3[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef3[ch]);}
-; 000D 023F         else{                       val = 0;        }
-; 000D 0240         */
-; 000D 0241     }
-; 000D 0242     else{
+; 000D 0260             ftoa(valTmp,2,valStr);
+	CALL SUBOPT_0x244
+; 000D 0261             //val = (epTempRef1[ch] * 100);
+; 000D 0262         }
+; 000D 0263         else{
 	RJMP _0x1A0093
-_0x1A0090:
-; 000D 0243         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
-	CALL SUBOPT_0x24B
+_0x1A0092:
+; 000D 0264             printDebug("<sensorGetCurrentSetPoint> tempRef3 not set [0.00]\r\n");
+	__POINTD1FN _0x1A0000,778
+	CALL SUBOPT_0x3
+; 000D 0265             sprintf(valStr,"0.00");                 //val = 0;
+	CALL SUBOPT_0x56
+	CALL SUBOPT_0x245
+; 000D 0266         }
+_0x1A0093:
+; 000D 0267         /*
+; 000D 0268         if(epIsPointSet3[ch] == 1){ val = (epTempRef3[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef3[ch]);}
+; 000D 0269         else{                       val = 0;        }
+; 000D 026A         */
+; 000D 026B     }
+; 000D 026C     else{
+	RJMP _0x1A0094
+_0x1A0091:
+; 000D 026D         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
+	__POINTD1FN _0x1A0000,831
+	CALL __PUTPARD1
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	CALL SUBOPT_0xE9
-; 000D 0244         return -1;
+; 000D 026E         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0066
-; 000D 0245     }
-_0x1A0093:
-_0x1A008F:
-_0x1A008B:
-; 000D 0246     //printDebug("<sensorGetCurrentSetPoint> read val = [%d]\r\n",val);
-; 000D 0247     printDebug("<sensorGetCurrentSetPoint> read val(%d) = [%s]\r\n",strlen(valStr),valStr);
-	__POINTD1FN _0x1A0000,1097
+; 000D 026F     }
+_0x1A0094:
+_0x1A0090:
+_0x1A008C:
+; 000D 0270     //printDebug("<sensorGetCurrentSetPoint> read val = [%d]\r\n",val);
+; 000D 0271     printDebug("<sensorGetCurrentSetPoint> read val(%d) = [%s]\r\n",strlen(valStr),valStr);
+	__POINTD1FN _0x1A0000,887
 	CALL __PUTPARD1
 	MOVW R26,R28
 	ADIW R26,10
@@ -23485,208 +23477,208 @@ _0x1A008B:
 	CALL SUBOPT_0x34
 	MOVW R30,R28
 	ADIW R30,14
-	CALL SUBOPT_0x13F
-; 000D 0248 
-; 000D 0249     if(valStr[0] == '-'){
+	CALL SUBOPT_0x13E
+; 000D 0272 
+; 000D 0273     if(valStr[0] == '-'){
 	LDD  R26,Y+6
 	CPI  R26,LOW(0x2D)
 	BREQ PC+3
-	JMP _0x1A0094
-; 000D 024A         buf[0] = 1;
+	JMP _0x1A0095
+; 000D 0274         buf[0] = 1;
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
 	LDI  R30,LOW(1)
 	ST   X,R30
-; 000D 024B         if(strlen(valStr) == 7){
-	CALL SUBOPT_0x24C
+; 000D 0275         if(strlen(valStr) == 7){
+	CALL SUBOPT_0x246
 	CPI  R30,LOW(0x7)
 	LDI  R26,HIGH(0x7)
 	CPC  R31,R26
-	BRNE _0x1A0095
-; 000D 024C             buf[1]  = valStr[1] - 0x30;     buf[2]  = valStr[2] - 0x30;     buf[3]  = valStr[3] - 0x30;
+	BRNE _0x1A0096
+; 000D 0276             buf[1]  = valStr[1] - 0x30;     buf[2]  = valStr[2] - 0x30;     buf[3]  = valStr[3] - 0x30;
 	LDD  R30,Y+7
 	SUBI R30,LOW(48)
 	__PUTB1SNS 16,1
 	LDD  R30,Y+8
-	CALL SUBOPT_0x24D
+	CALL SUBOPT_0x247
 	LDD  R30,Y+9
-	CALL SUBOPT_0x24E
-; 000D 024D             buf[4]  = valStr[5] - 0x30;     buf[5]  = valStr[6] - 0x30;
+	CALL SUBOPT_0x248
+; 000D 0277             buf[4]  = valStr[5] - 0x30;     buf[5]  = valStr[6] - 0x30;
 	LDD  R30,Y+11
-	CALL SUBOPT_0x24F
+	CALL SUBOPT_0x249
 	LDD  R30,Y+12
-	CALL SUBOPT_0x250
-; 000D 024E         }
-; 000D 024F         else if(strlen(valStr) == 6){
-	RJMP _0x1A0096
-_0x1A0095:
-	CALL SUBOPT_0x24C
+	CALL SUBOPT_0x24A
+; 000D 0278         }
+; 000D 0279         else if(strlen(valStr) == 6){
+	RJMP _0x1A0097
+_0x1A0096:
+	CALL SUBOPT_0x246
 	CPI  R30,LOW(0x6)
 	LDI  R26,HIGH(0x6)
 	CPC  R31,R26
-	BRNE _0x1A0097
-; 000D 0250             buf[1]  = 0;                    buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
-	CALL SUBOPT_0x251
+	BRNE _0x1A0098
+; 000D 027A             buf[1]  = 0;                    buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
+	CALL SUBOPT_0x24B
 	LDD  R30,Y+7
-	CALL SUBOPT_0x24D
+	CALL SUBOPT_0x247
 	LDD  R30,Y+8
-	CALL SUBOPT_0x24E
-; 000D 0251             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
+	CALL SUBOPT_0x248
+; 000D 027B             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
 	LDD  R30,Y+10
-	CALL SUBOPT_0x24F
+	CALL SUBOPT_0x249
 	LDD  R30,Y+11
-	CALL SUBOPT_0x250
-; 000D 0252         }
-; 000D 0253         else if(strlen(valStr) == 5){
-	RJMP _0x1A0098
-_0x1A0097:
-	CALL SUBOPT_0x24C
+	CALL SUBOPT_0x24A
+; 000D 027C         }
+; 000D 027D         else if(strlen(valStr) == 5){
+	RJMP _0x1A0099
+_0x1A0098:
+	CALL SUBOPT_0x246
 	CPI  R30,LOW(0x5)
 	LDI  R26,HIGH(0x5)
 	CPC  R31,R26
-	BRNE _0x1A0099
-; 000D 0254             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[1] - 0x30;
-	CALL SUBOPT_0x251
+	BRNE _0x1A009A
+; 000D 027E             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[1] - 0x30;
+	CALL SUBOPT_0x24B
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
 	ADIW R26,2
 	LDI  R30,LOW(0)
 	ST   X,R30
 	LDD  R30,Y+7
-	CALL SUBOPT_0x24E
-; 000D 0255             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
+	CALL SUBOPT_0x248
+; 000D 027F             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
 	LDD  R30,Y+9
-	CALL SUBOPT_0x24F
+	CALL SUBOPT_0x249
 	LDD  R30,Y+10
-	CALL SUBOPT_0x250
-; 000D 0256         }
-; 000D 0257         else{
-	RJMP _0x1A009A
-_0x1A0099:
-; 000D 0258             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
-	CALL SUBOPT_0x252
+	CALL SUBOPT_0x24A
+; 000D 0280         }
+; 000D 0281         else{
+	RJMP _0x1A009B
+_0x1A009A:
+; 000D 0282             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
+	CALL SUBOPT_0x24C
 	CALL SUBOPT_0x12
-; 000D 0259             return -1;
+; 000D 0283             return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0066
-; 000D 025A         }
-_0x1A009A:
-_0x1A0098:
-_0x1A0096:
-; 000D 025B     }
-; 000D 025C     else{
-	RJMP _0x1A009B
-_0x1A0094:
-; 000D 025D         buf[0] = 0;
+; 000D 0284         }
+_0x1A009B:
+_0x1A0099:
+_0x1A0097:
+; 000D 0285     }
+; 000D 0286     else{
+	RJMP _0x1A009C
+_0x1A0095:
+; 000D 0287         buf[0] = 0;
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
 	LDI  R30,LOW(0)
 	ST   X,R30
-; 000D 025E         if(strlen(valStr) == 6){
-	CALL SUBOPT_0x24C
+; 000D 0288         if(strlen(valStr) == 6){
+	CALL SUBOPT_0x246
 	CPI  R30,LOW(0x6)
 	LDI  R26,HIGH(0x6)
 	CPC  R31,R26
-	BRNE _0x1A009C
-; 000D 025F             buf[1]  = valStr[0] - 0x30;     buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
+	BRNE _0x1A009D
+; 000D 0289             buf[1]  = valStr[0] - 0x30;     buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
 	LDD  R30,Y+6
 	SUBI R30,LOW(48)
 	__PUTB1SNS 16,1
 	LDD  R30,Y+7
-	CALL SUBOPT_0x24D
+	CALL SUBOPT_0x247
 	LDD  R30,Y+8
-	CALL SUBOPT_0x24E
-; 000D 0260             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
+	CALL SUBOPT_0x248
+; 000D 028A             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
 	LDD  R30,Y+10
-	CALL SUBOPT_0x24F
+	CALL SUBOPT_0x249
 	LDD  R30,Y+11
-	CALL SUBOPT_0x250
-; 000D 0261         }
-; 000D 0262         else if(strlen(valStr) == 5){
-	RJMP _0x1A009D
-_0x1A009C:
-	CALL SUBOPT_0x24C
+	CALL SUBOPT_0x24A
+; 000D 028B         }
+; 000D 028C         else if(strlen(valStr) == 5){
+	RJMP _0x1A009E
+_0x1A009D:
+	CALL SUBOPT_0x246
 	CPI  R30,LOW(0x5)
 	LDI  R26,HIGH(0x5)
 	CPC  R31,R26
-	BRNE _0x1A009E
-; 000D 0263             buf[1]  = 0;                    buf[2]  = valStr[0] - 0x30;     buf[3]  = valStr[1] - 0x30;
-	CALL SUBOPT_0x251
+	BRNE _0x1A009F
+; 000D 028D             buf[1]  = 0;                    buf[2]  = valStr[0] - 0x30;     buf[3]  = valStr[1] - 0x30;
+	CALL SUBOPT_0x24B
 	LDD  R30,Y+6
-	CALL SUBOPT_0x24D
+	CALL SUBOPT_0x247
 	LDD  R30,Y+7
-	CALL SUBOPT_0x24E
-; 000D 0264             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
+	CALL SUBOPT_0x248
+; 000D 028E             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
 	LDD  R30,Y+9
-	CALL SUBOPT_0x24F
+	CALL SUBOPT_0x249
 	LDD  R30,Y+10
-	CALL SUBOPT_0x250
-; 000D 0265         }
-; 000D 0266         else if(strlen(valStr) == 4){
-	RJMP _0x1A009F
-_0x1A009E:
-	CALL SUBOPT_0x24C
+	CALL SUBOPT_0x24A
+; 000D 028F         }
+; 000D 0290         else if(strlen(valStr) == 4){
+	RJMP _0x1A00A0
+_0x1A009F:
+	CALL SUBOPT_0x246
 	CPI  R30,LOW(0x4)
 	LDI  R26,HIGH(0x4)
 	CPC  R31,R26
-	BRNE _0x1A00A0
-; 000D 0267             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[0] - 0x30;
-	CALL SUBOPT_0x251
+	BRNE _0x1A00A1
+; 000D 0291             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[0] - 0x30;
+	CALL SUBOPT_0x24B
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
 	ADIW R26,2
 	LDI  R30,LOW(0)
 	ST   X,R30
 	LDD  R30,Y+6
-	CALL SUBOPT_0x24E
-; 000D 0268             buf[4]  = valStr[2] - 0x30;     buf[5]  = valStr[3] - 0x30;
+	CALL SUBOPT_0x248
+; 000D 0292             buf[4]  = valStr[2] - 0x30;     buf[5]  = valStr[3] - 0x30;
 	LDD  R30,Y+8
-	CALL SUBOPT_0x24F
+	CALL SUBOPT_0x249
 	LDD  R30,Y+9
-	CALL SUBOPT_0x250
-; 000D 0269         }
-; 000D 026A         else{
-	RJMP _0x1A00A1
-_0x1A00A0:
-; 000D 026B             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
-	CALL SUBOPT_0x252
+	CALL SUBOPT_0x24A
+; 000D 0293         }
+; 000D 0294         else{
+	RJMP _0x1A00A2
+_0x1A00A1:
+; 000D 0295             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
+	CALL SUBOPT_0x24C
 	CALL SUBOPT_0x12
-; 000D 026C             return -1;
+; 000D 0296             return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0066
-; 000D 026D         }
-_0x1A00A1:
-_0x1A009F:
-_0x1A009D:
-; 000D 026E     }
-_0x1A009B:
-; 000D 026F 
-; 000D 0270     printDebug("<sensorGetCurrentSetPoint> buf read");
-	__POINTD1FN _0x1A0000,1204
+; 000D 0297         }
+_0x1A00A2:
+_0x1A00A0:
+_0x1A009E:
+; 000D 0298     }
+_0x1A009C:
+; 000D 0299 
+; 000D 029A     printDebug("<sensorGetCurrentSetPoint> buf read");
+	__POINTD1FN _0x1A0000,994
 	CALL SUBOPT_0x3
-; 000D 0271     for(i=0;i<6;i++){
+; 000D 029B     for(i=0;i<6;i++){
 	__GETWRN 16,17,0
-_0x1A00A3:
+_0x1A00A4:
 	__CPWRN 16,17,6
-	BRGE _0x1A00A4
-; 000D 0272         printDebug("[%d]",buf[i]);
-	__POINTD1FN _0x1A0000,1240
+	BRGE _0x1A00A5
+; 000D 029C         printDebug("[%d]",buf[i]);
+	__POINTD1FN _0x1A0000,1030
 	CALL __PUTPARD1
 	MOVW R30,R16
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
-	CALL SUBOPT_0x184
-; 000D 0273     }
+	CALL SUBOPT_0x183
+; 000D 029D     }
 	__ADDWRN 16,17,1
-	RJMP _0x1A00A3
-_0x1A00A4:
-; 000D 0274     printDebug("\r\n");
+	RJMP _0x1A00A4
+_0x1A00A5:
+; 000D 029E     printDebug("\r\n");
 	__POINTD1FN _0x1A0000,49
 	CALL SUBOPT_0x3
-; 000D 0275 
-; 000D 0276     return 0;
+; 000D 029F 
+; 000D 02A0     return 0;
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
 _0x20E0066:
@@ -23694,384 +23686,402 @@ _0x20E0066:
 	LDD  R16,Y+0
 	ADIW R28,22
 	RET
-; 000D 0277 }
+; 000D 02A1 }
 ;/*============================================================*/
 ;int sensorSetCurrentSetPoint(int ch,int pnt,unsigned char *buf)
-; 000D 027A {
+; 000D 02A4 {
 _sensorSetCurrentSetPoint:
-; 000D 027B     float   val=0;
-; 000D 027C     long viADCbuffer = 0;
-; 000D 027D     int i = 0;
-; 000D 027E 
-; 000D 027F     if(operating_config.sensorEnable[ch] != 0x01){
-	ST   -Y,R27
-	ST   -Y,R26
-	SBIW R28,8
-	CALL SUBOPT_0x253
-	LDI  R30,LOW(0)
-	STD  Y+3,R30
-	STD  Y+4,R30
-	STD  Y+5,R30
-	STD  Y+6,R30
-	STD  Y+7,R30
-	CALL SUBOPT_0x14D
-;	ch -> Y+14
-;	pnt -> Y+12
-;	*buf -> Y+10
-;	val -> Y+6
-;	viADCbuffer -> Y+2
+; 000D 02A5     float   val=0;
+; 000D 02A6     long viADCbuffer = 0;
+; 000D 02A7     int i = 0;
+; 000D 02A8     float viVoltUseCaluate = 0.0;
+; 000D 02A9     float viRiaseUpVoltValue = 0.0;
+; 000D 02AA     const float viZeroSet = 1.667;
+; 000D 02AB 
+; 000D 02AC     if(operating_config.sensorEnable[ch] != 0x01){
+	CALL SUBOPT_0x24D
+	LDI  R30,LOW(_0x1A00A6*2)
+	LDI  R31,HIGH(_0x1A00A6*2)
+	LDI  R22,BYTE3(_0x1A00A6*2)
+	CALL __INITLOCB
+	CALL SUBOPT_0x14C
+;	ch -> Y+26
+;	pnt -> Y+24
+;	*buf -> Y+22
+;	val -> Y+18
+;	viADCbuffer -> Y+14
 ;	i -> R16,R17
+;	viVoltUseCaluate -> Y+10
+;	viRiaseUpVoltValue -> Y+6
+;	viZeroSet -> Y+2
 	__POINTW1MN _operating_config,3
-	LDD  R26,Y+14
-	LDD  R27,Y+14+1
-	CALL SUBOPT_0x237
-	BREQ _0x1A00A5
-; 000D 0280         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d is disable\r\n",ch+1);
-	__POINTD1FN _0x1A0000,1245
-	CALL SUBOPT_0x254
+	LDD  R26,Y+26
+	LDD  R27,Y+26+1
+	CALL SUBOPT_0x22F
+	BREQ _0x1A00A7
+; 000D 02AD         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d is disable\r\n",ch+1);
+	__POINTD1FN _0x1A0000,1035
+	CALL SUBOPT_0x24E
 	ADIW R30,1
 	CALL SUBOPT_0xE9
-; 000D 0281         return -1;
+; 000D 02AE         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0065
-; 000D 0282     }
-; 000D 0283 
-; 000D 0284     if(sensor[ch].status != SENS_NORMAL){
-_0x1A00A5:
-	LDD  R26,Y+14
-	LDD  R27,Y+14+1
-	CALL SUBOPT_0x238
+; 000D 02AF     }
+; 000D 02B0 
+; 000D 02B1     if(sensor[ch].status != SENS_NORMAL){
+_0x1A00A7:
+	LDD  R26,Y+26
+	LDD  R27,Y+26+1
+	CALL SUBOPT_0x230
 	CPI  R30,0
-	BREQ _0x1A00A6
-; 000D 0285         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d error(0x%02X)\r\n",ch+1,sensor[ch].status);
-	__POINTD1FN _0x1A0000,1305
-	CALL SUBOPT_0x254
-	CALL SUBOPT_0x202
-	LDD  R26,Y+22
-	LDD  R27,Y+22+1
-	CALL SUBOPT_0x238
-	CALL SUBOPT_0x239
-; 000D 0286         return -1;
+	BREQ _0x1A00A8
+; 000D 02B2         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d error(0x%02X)\r\n",ch+1,sensor[ch].status);
+	__POINTD1FN _0x1A0000,1095
+	CALL SUBOPT_0x24E
+	CALL SUBOPT_0x201
+	LDD  R26,Y+34
+	LDD  R27,Y+34+1
+	CALL SUBOPT_0x230
+	CALL SUBOPT_0x231
+; 000D 02B3         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0065
-; 000D 0287     }
-; 000D 0288 
-; 000D 0289     printDebug("<sensorSetCurrentSetPoint> buf: [%d]/[%d][%d][%d][%d][%d]\r\n",
-_0x1A00A6:
-; 000D 028A                                         buf[0],buf[1],buf[2],buf[3],buf[4],buf[5]);
-	__POINTD1FN _0x1A0000,1368
+; 000D 02B4     }
+; 000D 02B5 
+; 000D 02B6     printDebug("<sensorSetCurrentSetPoint> buf: [%d]/[%d][%d][%d][%d][%d]\r\n",
+_0x1A00A8:
+; 000D 02B7                                         buf[0],buf[1],buf[2],buf[3],buf[4],buf[5]);
+	__POINTD1FN _0x1A0000,1158
 	CALL __PUTPARD1
-	LDD  R26,Y+14
-	LDD  R27,Y+14+1
+	LDD  R26,Y+26
+	LDD  R27,Y+26+1
 	LD   R30,X
-	CALL SUBOPT_0x65
-	LDD  R30,Y+18
-	LDD  R31,Y+18+1
-	LDD  R30,Z+1
-	CALL SUBOPT_0x65
-	LDD  R30,Y+22
-	LDD  R31,Y+22+1
-	LDD  R30,Z+2
-	CALL SUBOPT_0x65
-	LDD  R30,Y+26
-	LDD  R31,Y+26+1
-	LDD  R30,Z+3
 	CALL SUBOPT_0x65
 	LDD  R30,Y+30
 	LDD  R31,Y+30+1
-	LDD  R30,Z+4
+	LDD  R30,Z+1
 	CALL SUBOPT_0x65
 	LDD  R30,Y+34
 	LDD  R31,Y+34+1
+	LDD  R30,Z+2
+	CALL SUBOPT_0x65
+	LDD  R30,Y+38
+	LDD  R31,Y+38+1
+	LDD  R30,Z+3
+	CALL SUBOPT_0x65
+	LDD  R30,Y+42
+	LDD  R31,Y+42+1
+	LDD  R30,Z+4
+	CALL SUBOPT_0x65
+	LDD  R30,Y+46
+	LDD  R31,Y+46+1
 	LDD  R30,Z+5
 	CALL SUBOPT_0x65
 	LDI  R24,24
 	CALL _printDebug
 	ADIW R28,28
-; 000D 028B 
-; 000D 028C     val =  (float) (0.0);
-	CALL SUBOPT_0x200
-; 000D 028D     val += (float) (buf[1] * 100);
-	LDD  R30,Y+10
-	LDD  R31,Y+10+1
+; 000D 02B8 
+; 000D 02B9     val =  (float) (0.0);
+	LDI  R30,LOW(0)
+	__CLRD1S 18
+; 000D 02BA     val += (float) (buf[1] * 100);
+	LDD  R30,Y+22
+	LDD  R31,Y+22+1
 	LDD  R30,Z+1
 	LDI  R26,LOW(100)
-	CALL SUBOPT_0x255
-; 000D 028E     val += (float) (buf[2] * 10);
+	CALL SUBOPT_0x24F
+; 000D 02BB     val += (float) (buf[2] * 10);
 	LDD  R30,Z+2
 	LDI  R26,LOW(10)
-	CALL SUBOPT_0x255
-; 000D 028F     val += (float) (buf[3]);
+	CALL SUBOPT_0x24F
+; 000D 02BC     val += (float) (buf[3]);
 	LDD  R30,Z+3
 	CLR  R31
 	CLR  R22
 	CLR  R23
 	CALL __CDF1
-	CALL SUBOPT_0x256
-; 000D 0290     val += (float) (buf[4] * 0.1);
+	CALL SUBOPT_0x250
+; 000D 02BD     val += (float) (buf[4] * 0.1);
 	LDD  R30,Z+4
-	CALL SUBOPT_0x257
-	CALL SUBOPT_0x9E
-	CALL SUBOPT_0x256
-; 000D 0291     val += (float) (buf[5] * 0.01);
+	CALL SUBOPT_0x251
+	CALL SUBOPT_0x9F
+	CALL SUBOPT_0x250
+; 000D 02BE     val += (float) (buf[5] * 0.01);
 	LDD  R30,Z+5
-	CALL SUBOPT_0x257
+	CALL SUBOPT_0x251
 	__GETD2N 0x3C23D70A
 	CALL __MULF12
-	CALL SUBOPT_0x59
+	CALL SUBOPT_0x252
 	CALL __ADDF12
-	CALL SUBOPT_0xB6
-; 000D 0292     if(buf[0] == 1){    val *= (float) (-1.0);  }
-	LDD  R26,Y+10
-	LDD  R27,Y+10+1
+	CALL SUBOPT_0x253
+; 000D 02BF     if(buf[0] == 1){    val *= (float) (-1.0);  }
+	LDD  R26,Y+22
+	LDD  R27,Y+22+1
 	LD   R26,X
 	CPI  R26,LOW(0x1)
-	BRNE _0x1A00A7
-	CALL SUBOPT_0x59
+	BRNE _0x1A00A9
+	CALL SUBOPT_0x252
 	__GETD1N 0xBF800000
 	CALL __MULF12
-	CALL SUBOPT_0xB6
-; 000D 0293 
-; 000D 0294     printDebug("<sensorSetCurrentSetPoint> sensor %1d, point %1d, set to [%f]",ch+1,pnt,val);
-_0x1A00A7:
-	__POINTD1FN _0x1A0000,1428
+	CALL SUBOPT_0x253
+; 000D 02C0 
+; 000D 02C1     printDebug("<sensorSetCurrentSetPoint> sensor %1d, point %1d, set to [%f]",ch+1,pnt,val);
+_0x1A00A9:
+	__POINTD1FN _0x1A0000,1218
+	CALL SUBOPT_0x24E
+	CALL SUBOPT_0x201
+	LDD  R30,Y+32
+	LDD  R31,Y+32+1
 	CALL SUBOPT_0x254
-	ADIW R30,1
-	CALL __CWD1
-	CALL SUBOPT_0xE8
-	CALL SUBOPT_0x258
-	CALL SUBOPT_0x51
-; 000D 0295 
-; 000D 0296     if(pnt == CALPOINT(1)){
-	LDD  R26,Y+12
-	LDD  R27,Y+12+1
+	CALL SUBOPT_0xBB
+	CALL SUBOPT_0x8E
+; 000D 02C2 
+; 000D 02C3     if(pnt == CALPOINT(1)){
+	LDD  R26,Y+24
+	LDD  R27,Y+24+1
 	CPI  R26,LOW(0x65)
 	LDI  R30,HIGH(0x65)
 	CPC  R27,R30
-	BRNE _0x1A00A8
-; 000D 0297         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+	BREQ PC+3
+	JMP _0x1A00AA
+; 000D 02C4         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 	CALL SUBOPT_0x2E
-	BREQ _0x1A00AA
+	BREQ _0x1A00AC
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
-	BRNE _0x1A00A9
-_0x1A00AA:
-; 000D 0298            viADCbuffer = 0;
-	CALL SUBOPT_0x259
-; 000D 0299              for(i=0;i<30;i++){
-_0x1A00AD:
-	__CPWRN 16,17,30
-	BRGE _0x1A00AE
-; 000D 029A                 viADCbuffer += read_adc(8+ch);
-	CALL SUBOPT_0x25A
-; 000D 029B              }
-	__ADDWRN 16,17,1
-	RJMP _0x1A00AD
-_0x1A00AE:
-; 000D 029C 
-; 000D 029D              epADCRef1[ch] = iAD595ADCToTemp(viADCbuffer,30);
-	CALL SUBOPT_0x25B
+	BRNE _0x1A00AB
+_0x1A00AC:
+; 000D 02C5 //           viADCbuffer = 0;
+; 000D 02C6 //             for(i=0;i<30;i++){
+; 000D 02C7 //                viADCbuffer += read_adc(8+ch);
+; 000D 02C8 //             }
+; 000D 02C9 //
+; 000D 02CA //             epADCRef1[ch] = iAD595ADCToTemp(viADCbuffer,30);
+; 000D 02CB 
+; 000D 02CC              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+	LDD  R26,Y+26
+	LDD  R27,Y+26+1
+	RCALL _iUpdateSmoothlyADC
+	__GETD2N 0x3E5A1CAC
+	CALL __ADDF12
+	CALL SUBOPT_0xB0
+; 000D 02CD              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
+	CALL SUBOPT_0x255
+	CALL SUBOPT_0x256
+; 000D 02CE              epADCRef1[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
+	CALL SUBOPT_0x257
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0xF0
+	CALL SUBOPT_0x52
+	CALL _iAD595VoltToTemp
+	POP  R26
+	POP  R27
+	RJMP _0x1A00CE
+; 000D 02CF         }else{
+_0x1A00AB:
+; 000D 02D0            epADCRef1[ch]       = adcData[ch];
+	CALL SUBOPT_0x257
+	CALL SUBOPT_0x258
+	CALL SUBOPT_0x1B
+	MOVW R26,R0
+_0x1A00CE:
+	CALL __EEPROMWRD
+; 000D 02D1         }
+; 000D 02D2 
+; 000D 02D3 
+; 000D 02D4 
+; 000D 02D5         epTempRef1[ch]      = val;
+	LDD  R30,Y+26
+	LDD  R31,Y+26+1
+	LDI  R26,LOW(_epTempRef1)
+	LDI  R27,HIGH(_epTempRef1)
+	CALL SUBOPT_0x259
+; 000D 02D6         //epADCRef1[ch]       = adcData[ch];
+; 000D 02D7         epIsPointSet1[ch]   = 1;
+	SUBI R26,LOW(-_epIsPointSet1)
+	SBCI R27,HIGH(-_epIsPointSet1)
+	LDI  R30,LOW(1)
+	CALL SUBOPT_0x25A
+; 000D 02D8         epIsPointSet2[ch]   = 0;                        // -- reset cal_point 2 -- //
+	SUBI R26,LOW(-_epIsPointSet2)
+	SBCI R27,HIGH(-_epIsPointSet2)
+	LDI  R30,LOW(0)
+	CALL SUBOPT_0x25A
+; 000D 02D9         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
+	SUBI R26,LOW(-_epIsPointSet3)
+	SBCI R27,HIGH(-_epIsPointSet3)
+	LDI  R30,LOW(0)
+	CALL __EEPROMWRB
+; 000D 02DA     }
+; 000D 02DB     else if(pnt == CALPOINT(2)){
+	RJMP _0x1A00AF
+_0x1A00AA:
+	LDD  R26,Y+24
+	LDD  R27,Y+24+1
+	CPI  R26,LOW(0x66)
+	LDI  R30,HIGH(0x66)
+	CPC  R27,R30
+	BREQ PC+3
+	JMP _0x1A00B0
+; 000D 02DC 
+; 000D 02DD         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+	CALL SUBOPT_0x2E
+	BREQ _0x1A00B2
+	CALL SUBOPT_0x2E
+	CPI  R30,LOW(0x3)
+	BRNE _0x1A00B1
+_0x1A00B2:
+; 000D 02DE            viADCbuffer = 0;
+	CALL SUBOPT_0x25B
+; 000D 02DF              for(i=0;i<30;i++){
+_0x1A00B5:
+	__CPWRN 16,17,30
+	BRGE _0x1A00B6
+; 000D 02E0                 viADCbuffer += read_adc(8+ch);
 	CALL SUBOPT_0x25C
+; 000D 02E1              }
+	__ADDWRN 16,17,1
+	RJMP _0x1A00B5
+_0x1A00B6:
+; 000D 02E2 
+; 000D 02E3              epADCRef2[ch] = iAD595ADCToTemp(viADCbuffer,30);
+	LDD  R30,Y+26
+	LDD  R31,Y+26+1
+	CALL SUBOPT_0x23F
+	ADD  R30,R26
+	ADC  R31,R27
+	PUSH R31
+	PUSH R30
+	CALL SUBOPT_0x25D
 	POP  R26
 	POP  R27
 	RJMP _0x1A00CF
-; 000D 029E         }else{
-_0x1A00A9:
-; 000D 029F            epADCRef1[ch]       = adcData[ch];
-	CALL SUBOPT_0x25B
-	CALL SUBOPT_0x25D
+; 000D 02E4         }else{
+_0x1A00B1:
+; 000D 02E5            epADCRef2[ch]       = adcData[ch];
+	LDD  R30,Y+26
+	LDD  R31,Y+26+1
+	CALL SUBOPT_0x23F
+	ADD  R30,R26
+	ADC  R31,R27
+	CALL SUBOPT_0x258
 	CALL SUBOPT_0x1B
 	MOVW R26,R0
 _0x1A00CF:
 	CALL __EEPROMWRD
-; 000D 02A0         }
-; 000D 02A1 
-; 000D 02A2 
-; 000D 02A3 
-; 000D 02A4         epTempRef1[ch]      = val;
-	LDD  R30,Y+14
-	LDD  R31,Y+14+1
-	LDI  R26,LOW(_epTempRef1)
-	LDI  R27,HIGH(_epTempRef1)
-	CALL SUBOPT_0x25E
-; 000D 02A5         //epADCRef1[ch]       = adcData[ch];
-; 000D 02A6         epIsPointSet1[ch]   = 1;
-	SUBI R26,LOW(-_epIsPointSet1)
-	SBCI R27,HIGH(-_epIsPointSet1)
-	LDI  R30,LOW(1)
-	CALL SUBOPT_0x25F
-; 000D 02A7         epIsPointSet2[ch]   = 0;                        // -- reset cal_point 2 -- //
+; 000D 02E6         }
+; 000D 02E7 
+; 000D 02E8         epTempRef2[ch]      = val;
+	LDD  R30,Y+26
+	LDD  R31,Y+26+1
+	CALL SUBOPT_0x241
+	ADD  R26,R30
+	ADC  R27,R31
+	CALL SUBOPT_0xD4
+	CALL __EEPROMWRD
+; 000D 02E9         //epADCRef2[ch]       = adcData[ch];
+; 000D 02EA         epIsPointSet2[ch]   = 1;
+	LDD  R26,Y+26
+	LDD  R27,Y+26+1
 	SUBI R26,LOW(-_epIsPointSet2)
 	SBCI R27,HIGH(-_epIsPointSet2)
-	LDI  R30,LOW(0)
-	CALL SUBOPT_0x25F
-; 000D 02A8         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
+	LDI  R30,LOW(1)
+	CALL SUBOPT_0x25A
+; 000D 02EB         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
 	SUBI R26,LOW(-_epIsPointSet3)
 	SBCI R27,HIGH(-_epIsPointSet3)
 	LDI  R30,LOW(0)
 	CALL __EEPROMWRB
-; 000D 02A9     }
-; 000D 02AA     else if(pnt == CALPOINT(2)){
-	RJMP _0x1A00B0
-_0x1A00A8:
-	LDD  R26,Y+12
-	LDD  R27,Y+12+1
-	CPI  R26,LOW(0x66)
-	LDI  R30,HIGH(0x66)
+; 000D 02EC     }
+; 000D 02ED     else if(pnt == CALPOINT(3)){
+	RJMP _0x1A00B8
+_0x1A00B0:
+	LDD  R26,Y+24
+	LDD  R27,Y+24+1
+	CPI  R26,LOW(0x67)
+	LDI  R30,HIGH(0x67)
 	CPC  R27,R30
-	BRNE _0x1A00B1
-; 000D 02AB 
-; 000D 02AC         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+	BRNE _0x1A00B9
+; 000D 02EE         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 	CALL SUBOPT_0x2E
-	BREQ _0x1A00B3
+	BREQ _0x1A00BB
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
-	BRNE _0x1A00B2
-_0x1A00B3:
-; 000D 02AD            viADCbuffer = 0;
-	CALL SUBOPT_0x259
-; 000D 02AE              for(i=0;i<30;i++){
-_0x1A00B6:
+	BRNE _0x1A00BA
+_0x1A00BB:
+; 000D 02EF            viADCbuffer = 0;
+	CALL SUBOPT_0x25B
+; 000D 02F0              for(i=0;i<30;i++){
+_0x1A00BE:
 	__CPWRN 16,17,30
-	BRGE _0x1A00B7
-; 000D 02AF                 viADCbuffer += read_adc(8+ch);
-	CALL SUBOPT_0x25A
-; 000D 02B0              }
+	BRGE _0x1A00BF
+; 000D 02F1                 viADCbuffer += read_adc(8+ch);
+	CALL SUBOPT_0x25C
+; 000D 02F2              }
 	__ADDWRN 16,17,1
-	RJMP _0x1A00B6
-_0x1A00B7:
-; 000D 02B1 
-; 000D 02B2              epADCRef2[ch] = iAD595ADCToTemp(viADCbuffer,30);
-	CALL SUBOPT_0x260
+	RJMP _0x1A00BE
+_0x1A00BF:
+; 000D 02F3 
+; 000D 02F4              epADCRef3[ch] = iAD595ADCToTemp(viADCbuffer,30);
+	CALL SUBOPT_0x25E
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0xF0
-	CALL SUBOPT_0x25C
+	CALL SUBOPT_0x25D
 	POP  R26
 	POP  R27
 	RJMP _0x1A00D0
-; 000D 02B3         }else{
-_0x1A00B2:
-; 000D 02B4            epADCRef2[ch]       = adcData[ch];
-	CALL SUBOPT_0x260
-	CALL SUBOPT_0x25D
+; 000D 02F5         }else{
+_0x1A00BA:
+; 000D 02F6            epADCRef3[ch]       = adcData[ch];
+	CALL SUBOPT_0x25E
+	CALL SUBOPT_0x258
 	CALL SUBOPT_0x1B
 	MOVW R26,R0
 _0x1A00D0:
 	CALL __EEPROMWRD
-; 000D 02B5         }
-; 000D 02B6 
-; 000D 02B7         epTempRef2[ch]      = val;
-	LDD  R30,Y+14
-	LDD  R31,Y+14+1
-	LDI  R26,LOW(_epTempRef2)
-	LDI  R27,HIGH(_epTempRef2)
-	CALL SUBOPT_0x25E
-; 000D 02B8         //epADCRef2[ch]       = adcData[ch];
-; 000D 02B9         epIsPointSet2[ch]   = 1;
-	SUBI R26,LOW(-_epIsPointSet2)
-	SBCI R27,HIGH(-_epIsPointSet2)
-	LDI  R30,LOW(1)
-	CALL SUBOPT_0x25F
-; 000D 02BA         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
-	SUBI R26,LOW(-_epIsPointSet3)
-	SBCI R27,HIGH(-_epIsPointSet3)
-	LDI  R30,LOW(0)
-	CALL __EEPROMWRB
-; 000D 02BB     }
-; 000D 02BC     else if(pnt == CALPOINT(3)){
-	RJMP _0x1A00B9
-_0x1A00B1:
-	LDD  R26,Y+12
-	LDD  R27,Y+12+1
-	CPI  R26,LOW(0x67)
-	LDI  R30,HIGH(0x67)
-	CPC  R27,R30
-	BRNE _0x1A00BA
-; 000D 02BD         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
-	CALL SUBOPT_0x2E
-	BREQ _0x1A00BC
-	CALL SUBOPT_0x2E
-	CPI  R30,LOW(0x3)
-	BRNE _0x1A00BB
-_0x1A00BC:
-; 000D 02BE            viADCbuffer = 0;
-	CALL SUBOPT_0x259
-; 000D 02BF              for(i=0;i<30;i++){
-_0x1A00BF:
-	__CPWRN 16,17,30
-	BRGE _0x1A00C0
-; 000D 02C0                 viADCbuffer += read_adc(8+ch);
-	CALL SUBOPT_0x25A
-; 000D 02C1              }
-	__ADDWRN 16,17,1
-	RJMP _0x1A00BF
-_0x1A00C0:
-; 000D 02C2 
-; 000D 02C3              epADCRef3[ch] = iAD595ADCToTemp(viADCbuffer,30);
-	CALL SUBOPT_0x261
-	PUSH R31
-	PUSH R30
-	CALL SUBOPT_0xF0
-	CALL SUBOPT_0x25C
-	POP  R26
-	POP  R27
-	RJMP _0x1A00D1
-; 000D 02C4         }else{
-_0x1A00BB:
-; 000D 02C5            epADCRef3[ch]       = adcData[ch];
-	CALL SUBOPT_0x261
-	CALL SUBOPT_0x25D
-	CALL SUBOPT_0x1B
-	MOVW R26,R0
-_0x1A00D1:
-	CALL __EEPROMWRD
-; 000D 02C6         }
-; 000D 02C7 
-; 000D 02C8         epTempRef3[ch]      = val;
-	LDD  R30,Y+14
-	LDD  R31,Y+14+1
+; 000D 02F7         }
+; 000D 02F8 
+; 000D 02F9         epTempRef3[ch]      = val;
+	LDD  R30,Y+26
+	LDD  R31,Y+26+1
 	LDI  R26,LOW(_epTempRef3)
 	LDI  R27,HIGH(_epTempRef3)
-	CALL SUBOPT_0x25E
-; 000D 02C9         //epADCRef3[ch]       = adcData[ch];
-; 000D 02CA         epIsPointSet3[ch]   = 1;
+	CALL SUBOPT_0x259
+; 000D 02FA         //epADCRef3[ch]       = adcData[ch];
+; 000D 02FB         epIsPointSet3[ch]   = 1;
 	SUBI R26,LOW(-_epIsPointSet3)
 	SBCI R27,HIGH(-_epIsPointSet3)
 	LDI  R30,LOW(1)
 	CALL __EEPROMWRB
-; 000D 02CB     }
-; 000D 02CC     else{
-	RJMP _0x1A00C2
-_0x1A00BA:
-; 000D 02CD         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
-	CALL SUBOPT_0x24B
-	LDD  R30,Y+16
-	LDD  R31,Y+16+1
+; 000D 02FC     }
+; 000D 02FD     else{
+	RJMP _0x1A00C1
+_0x1A00B9:
+; 000D 02FE         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
+	__POINTD1FN _0x1A0000,831
+	CALL SUBOPT_0xF1
 	CALL SUBOPT_0xE9
-; 000D 02CE         return -1;
+; 000D 02FF         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0065
-; 000D 02CF     }
-_0x1A00C2:
-_0x1A00B9:
-_0x1A00B0:
-; 000D 02D0 
-; 000D 02D1     return 0;
+; 000D 0300     }
+_0x1A00C1:
+_0x1A00B8:
+_0x1A00AF:
+; 000D 0301 
+; 000D 0302     return 0;
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
 _0x20E0065:
 	LDD  R17,Y+1
 	LDD  R16,Y+0
-	ADIW R28,16
+	ADIW R28,28
 	RET
-; 000D 02D2 }
+; 000D 0303 }
 ;/*============================================================*/
 ;#include <stdlib.h>
 ;#include <stdio.h>
@@ -24106,27 +24116,27 @@ _addDataQueue:
 ; 000E 0011 
 ; 000E 0012     dataQ[last_wr_dataQ].timestamp      = timestamp;
 _0x1C0003:
-	CALL SUBOPT_0x262
+	CALL SUBOPT_0x25F
 	SUBI R30,LOW(-_dataQ)
 	SBCI R31,HIGH(-_dataQ)
-	CALL SUBOPT_0x263
+	CALL SUBOPT_0x260
 ; 000E 0013     dataQ[last_wr_dataQ].channel        = channel;
-	CALL SUBOPT_0x262
+	CALL SUBOPT_0x25F
 	__ADDW1MN _dataQ,4
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	STD  Z+0,R26
 	STD  Z+1,R27
 ; 000E 0014     dataQ[last_wr_dataQ].value          = value;
-	CALL SUBOPT_0x262
+	CALL SUBOPT_0x25F
 	__ADDW1MN _dataQ,6
 	CALL SUBOPT_0x8C
-	CALL SUBOPT_0x264
+	CALL SUBOPT_0x261
 ; 000E 0015 
 ; 000E 0016     last_wr_dataQ = (last_wr_dataQ + 1) % MAX_DATA_QUEUE;
 	MOVW R26,R10
 	ADIW R26,1
-	CALL SUBOPT_0x265
+	CALL SUBOPT_0x262
 	MOVW R10,R30
 ; 000E 0017 
 ; 000E 0018     dataQ_len++;
@@ -24161,12 +24171,12 @@ _fetchDataQueue:
 ; 000E 0022 
 ; 000E 0023     *timestamp  =   dataQ[last_rd_dataQ].timestamp;
 _0x1C0004:
-	CALL SUBOPT_0x266
+	CALL SUBOPT_0x263
 	SUBI R30,LOW(-_dataQ)
 	SBCI R31,HIGH(-_dataQ)
-	CALL SUBOPT_0x267
+	CALL SUBOPT_0x264
 ; 000E 0024     *channel    =   dataQ[last_rd_dataQ].channel;
-	CALL SUBOPT_0x266
+	CALL SUBOPT_0x263
 	__ADDW1MN _dataQ,4
 	MOVW R26,R30
 	CALL __GETW1P
@@ -24175,7 +24185,7 @@ _0x1C0004:
 	ST   X+,R30
 	ST   X,R31
 ; 000E 0025     *value      =   dataQ[last_rd_dataQ].value;
-	CALL SUBOPT_0x266
+	CALL SUBOPT_0x263
 	__ADDW1MN _dataQ,6
 	MOVW R26,R30
 	CALL __GETD1P
@@ -24186,7 +24196,7 @@ _0x1C0004:
 ; 000E 0027     last_rd_dataQ = (last_rd_dataQ + 1) % MAX_DATA_QUEUE;
 	MOVW R26,R12
 	ADIW R26,1
-	CALL SUBOPT_0x265
+	CALL SUBOPT_0x262
 	MOVW R12,R30
 ; 000E 0028 
 ; 000E 0029     dataQ_len--;
@@ -24278,7 +24288,7 @@ _updateBatteryStatus:
 	STS  _batteryStatus,R30
 ; 000F 0034         batteryVolt         =   4.2;
 	__GETD1N 0x40866666
-	CALL SUBOPT_0x268
+	CALL SUBOPT_0x265
 ; 000F 0035         return 0;
 	RJMP _0x20E0064
 ; 000F 0036     }
@@ -24289,10 +24299,10 @@ _0x1E0006:
 	STS  _powerSrcStatus,R30
 ; 000F 0039         batteryVolt         =   readBattery();
 	CALL _readBattery
-	CALL SUBOPT_0x268
+	CALL SUBOPT_0x265
 ; 000F 003A 
 ; 000F 003B         if(env_config.batteryLevel == 0)    // -- battery alarm disable --> always BATT_NORMAL -- //
-	CALL SUBOPT_0x269
+	CALL SUBOPT_0x266
 	CALL __CPD10
 	BRNE _0x1E0008
 ; 000F 003C         {
@@ -24305,7 +24315,7 @@ _0x1E0006:
 _0x1E0008:
 ; 000F 0040         {
 ; 000F 0041             if(batteryVolt < env_config.batteryLevel)
-	CALL SUBOPT_0x269
+	CALL SUBOPT_0x266
 	CALL SUBOPT_0x2D
 	CALL __CMPF12
 	BRSH _0x1E000A
@@ -24396,7 +24406,7 @@ _updateCommStatus:
 	ST   -Y,R16
 ;	res -> R16,R17
 	LDS  R30,256
-	CALL SUBOPT_0x26A
+	CALL SUBOPT_0x267
 	SBIW R30,0
 	BREQ _0x1E0010
 ; 000F 0069         lanStatus                       = COMM_LAN_DISCONNECT;
@@ -24425,10 +24435,10 @@ _0x1E0010:
 	STS  _lanStatus,R30
 ; 000F 0072 
 ; 000F 0073         if((commLostTimer != 0xFFFFFFFF) && (commLostTimer != 0)){
-	CALL SUBOPT_0x171
+	CALL SUBOPT_0x170
 	CALL SUBOPT_0x3A
 	BREQ _0x1E0013
-	CALL SUBOPT_0x171
+	CALL SUBOPT_0x170
 	CALL __CPD02
 	BRNE _0x1E0014
 _0x1E0013:
@@ -24436,14 +24446,14 @@ _0x1E0013:
 _0x1E0014:
 ; 000F 0074             printDebug("<updateCommStatus> LostTimer time left = %ld(%lX)\r\n",(commLostTimer-baseCounter),(commLostTimer-baseCounter));
 	__POINTD1FN _0x1E0000,0
-	CALL SUBOPT_0x173
-	CALL SUBOPT_0x173
+	CALL SUBOPT_0x172
+	CALL SUBOPT_0x172
 	CALL SUBOPT_0x21
 ; 000F 0075         }
 ; 000F 0076 
 ; 000F 0077         res = TIMER_checkTimerExceed(commLostTimer);
 _0x1E0012:
-	CALL SUBOPT_0x171
+	CALL SUBOPT_0x170
 	CALL _TIMER_checkTimerExceed
 	MOVW R16,R30
 ; 000F 0078         if(res < 0){
@@ -24516,7 +24526,7 @@ _updateMemoryStatus:
 ; 000F 0095 //    else
 ; 000F 0096 //    {
 ; 000F 0097         if(sdFreeSpace == 0)
-	CALL SUBOPT_0x26B
+	CALL SUBOPT_0x268
 	BRNE _0x1E001B
 ; 000F 0098         {
 ; 000F 0099             memoryStatus    = MEM_ERROR;
@@ -24580,7 +24590,7 @@ _updateSensorStatus:
 _0x1E0022:
 ; 000F 00B0         printDebug("<checkProbeAlarm> sensor channel out of range (%d)\r\n",ch);
 	__POINTD1FN _0x1E0000,122
-	CALL SUBOPT_0x12F
+	CALL SUBOPT_0x12E
 	CALL SUBOPT_0xE9
 ; 000F 00B1         return 0;
 	LDI  R30,LOW(0)
@@ -24590,16 +24600,16 @@ _0x1E0022:
 ; 000F 00B3 
 ; 000F 00B4     sensorStatus[ch] = sensor[ch].status;
 _0x1E0021:
-	CALL SUBOPT_0x26C
+	CALL SUBOPT_0x269
 	__PUTW1R 23,24
 	LD   R26,Y
 	LDD  R27,Y+1
-	CALL SUBOPT_0x238
+	CALL SUBOPT_0x230
 	__GETW2R 23,24
 	ST   X,R30
 ; 000F 00B5 
 ; 000F 00B6     if(sensorStatus[ch] == SENS_ERR_UNKNOWN){
-	CALL SUBOPT_0x26C
+	CALL SUBOPT_0x269
 	LD   R26,Z
 	CPI  R26,LOW(0xFF)
 	BRNE _0x1E0024
@@ -24610,7 +24620,7 @@ _0x1E0021:
 ; 000F 00B8     }
 ; 000F 00B9     else if(sensorStatus[ch] != SENS_NORMAL){
 _0x1E0024:
-	CALL SUBOPT_0x26C
+	CALL SUBOPT_0x269
 	LD   R30,Z
 	CPI  R30,0
 	BREQ _0x1E0026
@@ -24655,7 +24665,7 @@ _updateDataStatus:
 _0x1E0029:
 ; 000F 00CB         printDebug("<updateDataStatus> ABORT: sensor channel out of range (%d)\r\n",ch);
 	__POINTD1FN _0x1E0000,175
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x104
 	CALL SUBOPT_0xE9
 ; 000F 00CC         return 0;
 	LDI  R30,LOW(0)
@@ -24665,7 +24675,7 @@ _0x1E0029:
 ; 000F 00CE 
 ; 000F 00CF     if(sensor[ch].status != SENS_NORMAL){
 _0x1E0028:
-	CALL SUBOPT_0x120
+	CALL SUBOPT_0x11F
 	__ADDW1MN _sensor,4
 	LD   R30,Z
 	CPI  R30,0
@@ -24679,13 +24689,13 @@ _0x1E0028:
 ; 000F 00D3 
 ; 000F 00D4     if(sensor[ch].value < sensor_config[ch].lowerLimit){
 _0x1E002B:
-	CALL SUBOPT_0x120
+	CALL SUBOPT_0x11F
 	CALL SUBOPT_0x20
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x10D
+	CALL SUBOPT_0x10C
 	__ADDW1MN _sensor_config,9
 	MOVW R26,R30
 	CALL __GETD1P
@@ -24697,20 +24707,20 @@ _0x1E002B:
 	BRSH _0x1E002C
 ; 000F 00D5 
 ; 000F 00D6         if(!flag_lower[ch])
-	CALL SUBOPT_0x26D
+	CALL SUBOPT_0x26A
 	LD   R30,Z
 	CPI  R30,0
 	BRNE _0x1E002D
 ; 000F 00D7         {
 ; 000F 00D8             TIMER_setTimer(&t[ch],sensor_config[ch].lowerDelay);
-	CALL SUBOPT_0x26E
+	CALL SUBOPT_0x26B
 	CALL SUBOPT_0x1D
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
-	CALL SUBOPT_0x26F
+	CALL SUBOPT_0x26C
 	CALL SUBOPT_0x1F
 ; 000F 00D9             flag_lower[ch] = 1;
-	CALL SUBOPT_0x26D
+	CALL SUBOPT_0x26A
 	LDI  R26,LOW(1)
 	STD  Z+0,R26
 ; 000F 00DA         }
@@ -24719,13 +24729,13 @@ _0x1E002B:
 _0x1E002D:
 ; 000F 00DC         {
 ; 000F 00DD             if(TIMER_checkTimerExceed(t[ch]))
-	CALL SUBOPT_0x26E
+	CALL SUBOPT_0x26B
 	CALL SUBOPT_0x1B
 	CALL SUBOPT_0x1C
 	BREQ _0x1E002F
 ; 000F 00DE             {
 ; 000F 00DF                 dataStatus[ch]              |=  DATA_LOWER_LIMIT;
-	CALL SUBOPT_0x270
+	CALL SUBOPT_0x26D
 	ORI  R30,1
 	ST   X,R30
 ; 000F 00E0                 //printDebug("<updateDataStatus> Probe %d lowerDelayLimit[%02X]\r\n", ch+1, dataStatus[ch]);   /////
@@ -24744,11 +24754,11 @@ _0x1E002E:
 	RJMP _0x1E0030
 _0x1E002C:
 ; 000F 00EA         flag_lower[ch] = 0;
-	CALL SUBOPT_0x26D
+	CALL SUBOPT_0x26A
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 000F 00EB         dataStatus[ch]                      &=  ~DATA_LOWER_LIMIT;
-	CALL SUBOPT_0x270
+	CALL SUBOPT_0x26D
 	ANDI R30,0xFE
 	ST   X,R30
 ; 000F 00EC         //dataStatus[ch]                      &=  ~DATA_LOWER_DELAY;
@@ -24756,13 +24766,13 @@ _0x1E002C:
 _0x1E0030:
 ; 000F 00EE 
 ; 000F 00EF     if(sensor[ch].value < sensor_config[ch].lowerExtreme)
-	CALL SUBOPT_0x120
+	CALL SUBOPT_0x11F
 	CALL SUBOPT_0x20
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x10D
+	CALL SUBOPT_0x10C
 	__ADDW1MN _sensor_config,15
 	MOVW R26,R30
 	CALL __GETD1P
@@ -24774,7 +24784,7 @@ _0x1E0030:
 	BRSH _0x1E0031
 ; 000F 00F0     {
 ; 000F 00F1         dataStatus[ch]                      |=  DATA_LOWER_EXTREME;
-	CALL SUBOPT_0x270
+	CALL SUBOPT_0x26D
 	ORI  R30,2
 	ST   X,R30
 ; 000F 00F2         res |= 1;
@@ -24788,20 +24798,20 @@ _0x1E0030:
 _0x1E0031:
 ; 000F 00F8     {
 ; 000F 00F9         dataStatus[ch]                      &=  ~DATA_LOWER_EXTREME;
-	CALL SUBOPT_0x270
+	CALL SUBOPT_0x26D
 	ANDI R30,0xFD
 	ST   X,R30
 ; 000F 00FA     }
 _0x1E0032:
 ; 000F 00FB 
 ; 000F 00FC     if(sensor[ch].value > sensor_config[ch].upperLimit)
-	CALL SUBOPT_0x120
+	CALL SUBOPT_0x11F
 	CALL SUBOPT_0x20
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x10D
+	CALL SUBOPT_0x10C
 	__ADDW1MN _sensor_config,19
 	MOVW R26,R30
 	CALL __GETD1P
@@ -24815,20 +24825,20 @@ _0x1E0032:
 	JMP  _0x1E0033
 ; 000F 00FD     {
 ; 000F 00FE         if(!flag_upper[ch])
-	CALL SUBOPT_0x271
+	CALL SUBOPT_0x26E
 	LD   R30,Z
 	CPI  R30,0
 	BRNE _0x1E0034
 ; 000F 00FF         {
 ; 000F 0100             TIMER_setTimer(&t[ch],sensor_config[ch].upperDelay);
-	CALL SUBOPT_0x26E
+	CALL SUBOPT_0x26B
 	CALL SUBOPT_0x1D
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
-	CALL SUBOPT_0x272
+	CALL SUBOPT_0x26F
 	CALL SUBOPT_0x1F
 ; 000F 0101             flag_upper[ch] = 1;
-	CALL SUBOPT_0x271
+	CALL SUBOPT_0x26E
 	LDI  R26,LOW(1)
 	STD  Z+0,R26
 ; 000F 0102         }
@@ -24837,13 +24847,13 @@ _0x1E0032:
 _0x1E0034:
 ; 000F 0104         {
 ; 000F 0105             if(TIMER_checkTimerExceed(t[ch]))
-	CALL SUBOPT_0x26E
+	CALL SUBOPT_0x26B
 	CALL SUBOPT_0x1B
 	CALL SUBOPT_0x1C
 	BREQ _0x1E0036
 ; 000F 0106             {
 ; 000F 0107                 dataStatus[ch]              |=  DATA_UPPER_LIMIT;
-	CALL SUBOPT_0x270
+	CALL SUBOPT_0x26D
 	ORI  R30,4
 	ST   X,R30
 ; 000F 0108             }
@@ -24862,11 +24872,11 @@ _0x1E0035:
 _0x1E0033:
 ; 000F 0111     {
 ; 000F 0112         flag_upper[ch] = 0;
-	CALL SUBOPT_0x271
+	CALL SUBOPT_0x26E
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 000F 0113         dataStatus[ch]                      &=  ~DATA_UPPER_LIMIT;
-	CALL SUBOPT_0x270
+	CALL SUBOPT_0x26D
 	ANDI R30,0xFB
 	ST   X,R30
 ; 000F 0114         //dataStatus[ch]                      &=  ~DATA_UPPER_DELAY;
@@ -24874,13 +24884,13 @@ _0x1E0033:
 _0x1E0037:
 ; 000F 0116 
 ; 000F 0117     if(sensor[ch].value > sensor_config[ch].upperExtreme)
-	CALL SUBOPT_0x120
+	CALL SUBOPT_0x11F
 	CALL SUBOPT_0x20
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x10D
+	CALL SUBOPT_0x10C
 	__ADDW1MN _sensor_config,25
 	MOVW R26,R30
 	CALL __GETD1P
@@ -24894,7 +24904,7 @@ _0x1E0037:
 	JMP  _0x1E0038
 ; 000F 0118     {
 ; 000F 0119         dataStatus[ch]                      |=  DATA_UPPER_EXTREME;
-	CALL SUBOPT_0x270
+	CALL SUBOPT_0x26D
 	ORI  R30,8
 	ST   X,R30
 ; 000F 011A         res |= 1;
@@ -24908,7 +24918,7 @@ _0x1E0037:
 _0x1E0038:
 ; 000F 0120     {
 ; 000F 0121         dataStatus[ch]                      &=  ~DATA_UPPER_EXTREME;
-	CALL SUBOPT_0x270
+	CALL SUBOPT_0x26D
 	ANDI R30,0XF7
 	ST   X,R30
 ; 000F 0122     }
@@ -24963,7 +24973,7 @@ _0x1E003C:
 	SBIW R30,0
 	BRNE _0x1E0042
 	LDS  R30,259
-	CALL SUBOPT_0x26A
+	CALL SUBOPT_0x267
 	CALL __LNEGW1
 	MOV  R17,R30
 	RJMP _0x1E0041
@@ -25005,7 +25015,7 @@ _0x1E0041:
 	MOVW R30,R18
 	LDI  R26,LOW(_t_S00F0006000)
 	LDI  R27,HIGH(_t_S00F0006000)
-	CALL SUBOPT_0x273
+	CALL SUBOPT_0x270
 	__GETD2N 0x1
 	CALL _TIMER_setTimer
 ; 000F 013D                 lastDinCheck[ch]    = currentState;
@@ -25027,7 +25037,7 @@ _0x1E0045:
 	MOVW R30,R18
 	LDI  R26,LOW(_t_S00F0006000)
 	LDI  R27,HIGH(_t_S00F0006000)
-	CALL SUBOPT_0x274
+	CALL SUBOPT_0x271
 	CALL SUBOPT_0x1C
 	BREQ _0x1E0048
 ; 000F 0143 
@@ -25130,7 +25140,7 @@ _getDeviceState:
 	__GETWRN 16,17,0
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
-	CALL SUBOPT_0x114
+	CALL SUBOPT_0x113
 ; 000F 0169 
 ; 000F 016A     if(isDeviceConfig()){
 	CALL _isDeviceConfig
@@ -25239,10 +25249,10 @@ _0x1E0059:
 	BRGE _0x1E005A
 ; 000F 0187     {
 ; 000F 0188         if(operating_config.sensorEnable[i]){
-	CALL SUBOPT_0x275
+	CALL SUBOPT_0x272
 	BREQ _0x1E005B
 ; 000F 0189             *state |= (1 << (4-i) );
-	CALL SUBOPT_0x276
+	CALL SUBOPT_0x273
 	OR   R30,R22
 	OR   R31,R23
 	RJMP _0x1E0067
@@ -25250,7 +25260,7 @@ _0x1E0059:
 ; 000F 018B         else{
 _0x1E005B:
 ; 000F 018C             *state &= ~(1 << (4-i) );
-	CALL SUBOPT_0x276
+	CALL SUBOPT_0x273
 	COM  R30
 	COM  R31
 	AND  R30,R22
@@ -25267,9 +25277,9 @@ _0x1E005A:
 ; 000F 018F 
 ; 000F 0190     printDebug("<getDeviceState> state = [0x%04X]\r\n",*state);
 	__POINTD1FN _0x1E0000,281
-	CALL SUBOPT_0x144
+	CALL SUBOPT_0x143
 	CALL SUBOPT_0x1E
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 000F 0191 
 ; 000F 0192     return 0;
 	CALL SUBOPT_0xD6
@@ -25309,18 +25319,18 @@ _addEventQueue:
 ; 0010 0011 
 ; 0010 0012     eventQ[last_wr_eventQ].timestamp        = timestamp;
 _0x200003:
-	CALL SUBOPT_0x277
+	CALL SUBOPT_0x274
 	SUBI R30,LOW(-_eventQ)
 	SBCI R31,HIGH(-_eventQ)
 	CALL SUBOPT_0xB4
-	CALL SUBOPT_0x264
+	CALL SUBOPT_0x261
 ; 0010 0013     eventQ[last_wr_eventQ].eventID          = eventID;
-	CALL SUBOPT_0x277
+	CALL SUBOPT_0x274
 	__ADDW1MN _eventQ,4
 	LDD  R26,Y+1
 	STD  Z+0,R26
 ; 0010 0014     eventQ[last_wr_eventQ].eventStatus      = eventStatus;
-	CALL SUBOPT_0x277
+	CALL SUBOPT_0x274
 	__ADDW1MN _eventQ,5
 	LD   R26,Y
 	STD  Z+0,R26
@@ -25367,21 +25377,21 @@ _fetchEventQueue:
 ; 0010 0022 
 ; 0010 0023     *timestamp      =   eventQ[last_rd_eventQ].timestamp;
 _0x200004:
-	CALL SUBOPT_0x278
+	CALL SUBOPT_0x275
 	SUBI R30,LOW(-_eventQ)
 	SBCI R31,HIGH(-_eventQ)
-	CALL SUBOPT_0x267
+	CALL SUBOPT_0x264
 ; 0010 0024     *eventID        =   eventQ[last_rd_eventQ].eventID;
-	CALL SUBOPT_0x278
+	CALL SUBOPT_0x275
 	__ADDW1MN _eventQ,4
 	LD   R30,Z
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
 	ST   X,R30
 ; 0010 0025     *eventStatus    =   eventQ[last_rd_eventQ].eventStatus;
-	CALL SUBOPT_0x278
+	CALL SUBOPT_0x275
 	__ADDW1MN _eventQ,5
-	CALL SUBOPT_0x279
+	CALL SUBOPT_0x276
 ; 0010 0026 
 ; 0010 0027     last_rd_eventQ  = (last_rd_eventQ + 1) % MAX_EVENT_QUEUE;
 	LDS  R26,_last_rd_eventQ
@@ -25506,7 +25516,7 @@ _checkAlarmFromSrc:
 ; 0011 002C 
 ; 0011 002D     switch(alarmSrc)
 	ST   -Y,R26
-	CALL SUBOPT_0x27A
+	CALL SUBOPT_0x277
 ;	alarmSrc -> Y+4
 ;	i -> R16,R17
 ;	res -> R18,R19
@@ -26118,7 +26128,7 @@ _0x22007A:
 ; 0011 006C                                                 if(dinStatus[i] == DIN_FALLING)         res = 1;    break;
 	LDI  R26,LOW(_dinStatus)
 	LDI  R27,HIGH(_dinStatus)
-	CALL SUBOPT_0x27B
+	CALL SUBOPT_0x278
 	BRNE _0x220083
 	__GETWRN 18,19,1
 _0x220083:
@@ -26427,7 +26437,7 @@ _0x2200AA:
 ; 0011 00B9                 TIMER_setTimer(&t,30);
 	LDI  R30,LOW(_t_S0110003000)
 	LDI  R31,HIGH(_t_S0110003000)
-	CALL SUBOPT_0x172
+	CALL SUBOPT_0x171
 	RJMP _0x2200F2
 ; 0011 00BA             }
 ; 0011 00BB             else{
@@ -26435,7 +26445,7 @@ _0x2200AC:
 ; 0011 00BC                 TIMER_setTimer(&t,3);
 	LDI  R30,LOW(_t_S0110003000)
 	LDI  R31,HIGH(_t_S0110003000)
-	CALL SUBOPT_0x27C
+	CALL SUBOPT_0x279
 _0x2200F2:
 	CALL _TIMER_setTimer
 ; 0011 00BD             }
@@ -26461,7 +26471,7 @@ _0x2200AB:
 ; 0011 00C4 
 ; 0011 00C5                 *code           = powerSrcStatus;
 	LDS  R30,_powerSrcStatus
-	CALL SUBOPT_0x27D
+	CALL SUBOPT_0x27A
 ; 0011 00C6 
 ; 0011 00C7                 t_flag          = 0;
 	STS  _t_flag_S0110003000,R30
@@ -26503,7 +26513,7 @@ _checkSendBatteryAlarm:
 	ST   -Y,R27
 	ST   -Y,R26
 ;	*code -> Y+0
-	CALL SUBOPT_0x27E
+	CALL SUBOPT_0x27B
 	BRGE _0x2200B2
 ; 0011 00DB     {
 ; 0011 00DC         if(batteryStatus != batteryAlarm)
@@ -26564,7 +26574,7 @@ _0x2200B5:
 ; 0011 00F3 
 ; 0011 00F4                     *code           = batteryStatus;
 	LDS  R30,_batteryStatus
-	CALL SUBOPT_0x27D
+	CALL SUBOPT_0x27A
 ; 0011 00F5 
 ; 0011 00F6                     t_flag          = 0;
 	STS  _t_flag_S0110004000,R30
@@ -26611,7 +26621,7 @@ _0x2200B2:
 	LDI  R30,LOW(0)
 	STS  _batteryAlarm,R30
 ; 0011 0108             *code           = BATT_NORMAL;
-	CALL SUBOPT_0x27F
+	CALL SUBOPT_0x27C
 ; 0011 0109             return 1;
 	RJMP _0x20E0059
 ; 0011 010A         }
@@ -26633,7 +26643,7 @@ _checkSendMemoryAlarm:
 	ST   -Y,R27
 	ST   -Y,R26
 ;	*code -> Y+0
-	CALL SUBOPT_0x280
+	CALL SUBOPT_0x27D
 	BRSH _0x2200BD
 ; 0011 0116     {
 ; 0011 0117         if(memoryStatus != memoryAlarm)
@@ -26672,7 +26682,7 @@ _0x2200BF:
 ; 0011 0121 
 ; 0011 0122                     *code           = memoryStatus;
 	LDS  R30,_memoryStatus
-	CALL SUBOPT_0x27D
+	CALL SUBOPT_0x27A
 ; 0011 0123 
 ; 0011 0124                     t_flag          = 0;
 	STS  _t_flag_S0110005000,R30
@@ -26716,7 +26726,7 @@ _0x2200BD:
 	LDI  R30,LOW(0)
 	STS  _memoryAlarm,R30
 ; 0011 0135             *code           = MEM_NORMAL;
-	CALL SUBOPT_0x27F
+	CALL SUBOPT_0x27C
 ; 0011 0136             return 1;
 	RJMP _0x20E0059
 ; 0011 0137         }
@@ -26745,7 +26755,7 @@ _checkSendDinAlarm:
 	.CSEG
 ; 0011 0142 
 ; 0011 0143     if((ch < 0) || (ch >= USE_DIN)){
-	CALL SUBOPT_0x109
+	CALL SUBOPT_0x108
 ;	ch -> Y+2
 ;	*code -> Y+0
 	BRMI _0x2200C7
@@ -26756,7 +26766,7 @@ _checkSendDinAlarm:
 _0x2200C7:
 ; 0011 0144         printDebug("<checkSendDinAlarm> channel out of range [%d]\r\n",ch);
 	__POINTD1FN _0x220000,99
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x104
 	CALL SUBOPT_0xE9
 ; 0011 0145         return 0;
 	RJMP _0x20E0058
@@ -26764,7 +26774,7 @@ _0x2200C7:
 ; 0011 0147 
 ; 0011 0148     if(dinStatus[ch] != dinAlarm[ch])
 _0x2200C6:
-	CALL SUBOPT_0x281
+	CALL SUBOPT_0x27E
 	SUBI R30,LOW(-_dinAlarm)
 	SBCI R31,HIGH(-_dinAlarm)
 	LD   R30,Z
@@ -26773,14 +26783,14 @@ _0x2200C6:
 	JMP _0x2200C9
 ; 0011 0149     {
 ; 0011 014A         if(dinStatus[ch] != lastCheck[ch]){
-	CALL SUBOPT_0x281
+	CALL SUBOPT_0x27E
 	SUBI R30,LOW(-_lastCheck_S0110006000)
 	SBCI R31,HIGH(-_lastCheck_S0110006000)
 	LD   R30,Z
 	CP   R30,R26
 	BREQ _0x2200CA
 ; 0011 014B             t_flag[ch]          = 0;
-	CALL SUBOPT_0x282
+	CALL SUBOPT_0x27F
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0011 014C             lastCheck[ch]       = dinStatus[ch];
@@ -26788,12 +26798,12 @@ _0x2200C6:
 	LDD  R27,Y+2+1
 	SUBI R26,LOW(-_lastCheck_S0110006000)
 	SBCI R27,HIGH(-_lastCheck_S0110006000)
-	CALL SUBOPT_0x283
+	CALL SUBOPT_0x280
 ; 0011 014D         }
 ; 0011 014E 
 ; 0011 014F         if(!t_flag[ch]){
 _0x2200CA:
-	CALL SUBOPT_0x282
+	CALL SUBOPT_0x27F
 	LD   R30,Z
 	CPI  R30,0
 	BRNE _0x2200CB
@@ -26802,10 +26812,10 @@ _0x2200CA:
 	LDD  R31,Y+2+1
 	LDI  R26,LOW(_t_S0110006000)
 	LDI  R27,HIGH(_t_S0110006000)
-	CALL SUBOPT_0x273
-	CALL SUBOPT_0x219
+	CALL SUBOPT_0x270
+	CALL SUBOPT_0x210
 ; 0011 0151             t_flag[ch]          = 1;
-	CALL SUBOPT_0x282
+	CALL SUBOPT_0x27F
 	LDI  R26,LOW(1)
 	STD  Z+0,R26
 ; 0011 0152         }
@@ -26817,7 +26827,7 @@ _0x2200CB:
 	LDD  R31,Y+2+1
 	LDI  R26,LOW(_t_S0110006000)
 	LDI  R27,HIGH(_t_S0110006000)
-	CALL SUBOPT_0x274
+	CALL SUBOPT_0x271
 	CALL SUBOPT_0x1C
 	BREQ _0x2200CD
 ; 0011 0155             {
@@ -26826,15 +26836,15 @@ _0x2200CB:
 	LDD  R27,Y+2+1
 	SUBI R26,LOW(-_dinAlarm)
 	SBCI R27,HIGH(-_dinAlarm)
-	CALL SUBOPT_0x283
+	CALL SUBOPT_0x280
 ; 0011 0157                 *code           = dinStatus[ch];
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	SUBI R30,LOW(-_dinStatus)
 	SBCI R31,HIGH(-_dinStatus)
-	CALL SUBOPT_0x279
+	CALL SUBOPT_0x276
 ; 0011 0158                 t_flag[ch]      = 0;
-	CALL SUBOPT_0x282
+	CALL SUBOPT_0x27F
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0011 0159                 return 1;
@@ -26850,7 +26860,7 @@ _0x2200CC:
 	RJMP _0x2200CE
 _0x2200C9:
 ; 0011 015E         t_flag[ch]              =   0;
-	CALL SUBOPT_0x282
+	CALL SUBOPT_0x27F
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0011 015F     }
@@ -26872,7 +26882,7 @@ _checkSendSensorAlarm:
 	.CSEG
 ; 0011 0169 
 ; 0011 016A     if(sensorStatus[ch] != sensorAlarm[ch])
-	CALL SUBOPT_0x284
+	CALL SUBOPT_0x281
 ;	ch -> Y+2
 ;	*code -> Y+0
 	SUBI R30,LOW(-_sensorStatus)
@@ -26888,7 +26898,7 @@ _checkSendSensorAlarm:
 	JMP _0x2200D0
 ; 0011 016B     {
 ; 0011 016C         if(sensorStatus[ch] != lastCheck[ch]){
-	CALL SUBOPT_0x285
+	CALL SUBOPT_0x282
 	LD   R26,Z
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
@@ -26898,7 +26908,7 @@ _checkSendSensorAlarm:
 	CP   R30,R26
 	BREQ _0x2200D1
 ; 0011 016D             t_flag[ch]          = 0;
-	CALL SUBOPT_0x286
+	CALL SUBOPT_0x283
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0011 016E             lastCheck[ch]       = sensorStatus[ch];
@@ -26906,37 +26916,37 @@ _checkSendSensorAlarm:
 	LDD  R27,Y+2+1
 	SUBI R26,LOW(-_lastCheck_S0110007000)
 	SBCI R27,HIGH(-_lastCheck_S0110007000)
-	CALL SUBOPT_0x285
+	CALL SUBOPT_0x282
 	LD   R30,Z
 	ST   X,R30
 ; 0011 016F         }
 ; 0011 0170 
 ; 0011 0171         if(!t_flag[ch]){
 _0x2200D1:
-	CALL SUBOPT_0x286
+	CALL SUBOPT_0x283
 	LD   R30,Z
 	CPI  R30,0
 	BRNE _0x2200D2
 ; 0011 0172             if(sensorStatus[ch] == SENS_ERR_UNKNOWN){
-	CALL SUBOPT_0x285
+	CALL SUBOPT_0x282
 	LD   R26,Z
 	CPI  R26,LOW(0xFF)
 	BRNE _0x2200D3
 ; 0011 0173                 TIMER_setTimer(&t[ch],30);
-	CALL SUBOPT_0x287
+	CALL SUBOPT_0x284
 	__GETD2N 0x1E
 	RJMP _0x2200F4
 ; 0011 0174             }
 ; 0011 0175             else{
 _0x2200D3:
 ; 0011 0176                 TIMER_setTimer(&t[ch],3);
-	CALL SUBOPT_0x287
+	CALL SUBOPT_0x284
 	__GETD2N 0x3
 _0x2200F4:
 	CALL _TIMER_setTimer
 ; 0011 0177             }
 ; 0011 0178             t_flag[ch]          = 1;
-	CALL SUBOPT_0x286
+	CALL SUBOPT_0x283
 	LDI  R26,LOW(1)
 	STD  Z+0,R26
 ; 0011 0179         }
@@ -26948,7 +26958,7 @@ _0x2200D2:
 	LDD  R31,Y+2+1
 	LDI  R26,LOW(_t_S0110007000)
 	LDI  R27,HIGH(_t_S0110007000)
-	CALL SUBOPT_0x274
+	CALL SUBOPT_0x271
 	CALL SUBOPT_0x1C
 	BREQ _0x2200D6
 ; 0011 017C             {
@@ -26957,16 +26967,16 @@ _0x2200D2:
 	LDD  R27,Y+2+1
 	SUBI R26,LOW(-_sensorAlarm)
 	SBCI R27,HIGH(-_sensorAlarm)
-	CALL SUBOPT_0x285
+	CALL SUBOPT_0x282
 	LD   R30,Z
 	ST   X,R30
 ; 0011 017E 
 ; 0011 017F                 *code           = sensorStatus[ch];
-	CALL SUBOPT_0x285
-	CALL SUBOPT_0x279
+	CALL SUBOPT_0x282
+	CALL SUBOPT_0x276
 ; 0011 0180 
 ; 0011 0181                 t_flag[ch]      = 0;
-	CALL SUBOPT_0x286
+	CALL SUBOPT_0x283
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0011 0182                 return 1;
@@ -26982,7 +26992,7 @@ _0x2200D5:
 	RJMP _0x2200D7
 _0x2200D0:
 ; 0011 0187         t_flag[ch]              =   0;
-	CALL SUBOPT_0x286
+	CALL SUBOPT_0x283
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0011 0188     }
@@ -27033,7 +27043,7 @@ _checkSendDataAlarm:
 ; 0011 01B2     static char     t_flag[MAX_SENS_CHANNEL] = {0,0,0,0,0};
 ; 0011 01B3 
 ; 0011 01B4     if(dataStatus[ch] != dataAlarm[ch])
-	CALL SUBOPT_0x284
+	CALL SUBOPT_0x281
 ;	ch -> Y+2
 ;	*code -> Y+0
 	SUBI R30,LOW(-_dataStatus)
@@ -27049,7 +27059,7 @@ _checkSendDataAlarm:
 	JMP _0x2200D8
 ; 0011 01B5     {
 ; 0011 01B6         if(!t_flag[ch]){
-	CALL SUBOPT_0x288
+	CALL SUBOPT_0x285
 	LD   R30,Z
 	CPI  R30,0
 	BRNE _0x2200D9
@@ -27058,11 +27068,11 @@ _checkSendDataAlarm:
 	LDD  R31,Y+2+1
 	LDI  R26,LOW(_t_S0110008000)
 	LDI  R27,HIGH(_t_S0110008000)
-	CALL SUBOPT_0x273
+	CALL SUBOPT_0x270
 	__GETD2N 0x3
 	CALL _TIMER_setTimer
 ; 0011 01B8             t_flag[ch]          = 1;
-	CALL SUBOPT_0x288
+	CALL SUBOPT_0x285
 	LDI  R26,LOW(1)
 	STD  Z+0,R26
 ; 0011 01B9 //            printDebug("<checkSendDataAlarm> Probe %d dataAlarm[0x%02X] != dataStatus[0x%02X]\r\n",ch+1,dataAlarm[ch],dataStatus[ch]);
@@ -27075,7 +27085,7 @@ _0x2200D9:
 	LDD  R31,Y+2+1
 	LDI  R26,LOW(_t_S0110008000)
 	LDI  R27,HIGH(_t_S0110008000)
-	CALL SUBOPT_0x274
+	CALL SUBOPT_0x271
 	CALL SUBOPT_0x1C
 	BREQ _0x2200DB
 ; 0011 01BD             {
@@ -27096,23 +27106,23 @@ _0x2200D9:
 	LDD  R31,Y+2+1
 	SUBI R30,LOW(-_dataStatus)
 	SBCI R31,HIGH(-_dataStatus)
-	CALL SUBOPT_0x279
+	CALL SUBOPT_0x276
 ; 0011 01C1 
 ; 0011 01C2                 t_flag[ch]      = 0;
-	CALL SUBOPT_0x288
+	CALL SUBOPT_0x285
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0011 01C3 
 ; 0011 01C4                 printDebug("<checkSendDataAlarm> Probe %d dataAlarm[0x%02X]\r\n",ch+1,dataAlarm[ch]);
 	__POINTD1FN _0x220000,147
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x104
 	ADIW R30,1
 	CALL __CWD1
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x128
 	SUBI R30,LOW(-_dataAlarm)
 	SBCI R31,HIGH(-_dataAlarm)
 	LD   R30,Z
-	CALL SUBOPT_0x239
+	CALL SUBOPT_0x231
 ; 0011 01C5 
 ; 0011 01C6                 return 1;
 	LDI  R30,LOW(1)
@@ -27127,7 +27137,7 @@ _0x2200DA:
 	RJMP _0x2200DC
 _0x2200D8:
 ; 0011 01CB         t_flag[ch]              = 0;
-	CALL SUBOPT_0x288
+	CALL SUBOPT_0x285
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0011 01CC     }
@@ -27205,7 +27215,7 @@ _0x2200F5:
 _ALARM_checkMuteExpired:
 ; 0011 01F4     switch(muteMode){
 	LDS  R30,_muteMode
-	CALL SUBOPT_0x21D
+	CALL SUBOPT_0x214
 ; 0011 01F5         case MUTE_PERMAMENT :   return 0;
 	BREQ _0x20E0055
 ; 0011 01F6                                 break;
@@ -27258,7 +27268,7 @@ _resetAlarm:
 ; 0011 020B     int i;
 ; 0011 020C 
 ; 0011 020D     for(i=0;i<MAX_SENS_CHANNEL;i++){
-	CALL SUBOPT_0x14D
+	CALL SUBOPT_0x14C
 ;	i -> R16,R17
 _0x2200E9:
 	__CPWRN 16,17,5
@@ -27266,11 +27276,11 @@ _0x2200E9:
 ; 0011 020E         sensorAlarm[i]      =   SENS_NORMAL;
 	LDI  R26,LOW(_sensorAlarm)
 	LDI  R27,HIGH(_sensorAlarm)
-	CALL SUBOPT_0x14E
+	CALL SUBOPT_0x14D
 ; 0011 020F         dataAlarm[i]        =   DATA_NORMAL;
 	LDI  R26,LOW(_dataAlarm)
 	LDI  R27,HIGH(_dataAlarm)
-	CALL SUBOPT_0x14E
+	CALL SUBOPT_0x14D
 ; 0011 0210     }
 	__ADDWRN 16,17,1
 	RJMP _0x2200E9
@@ -27387,7 +27397,7 @@ _OLED_showDateTime:
 	__POINTD1FN _0x240000,17
 	CALL SUBOPT_0x5B
 	CALL SUBOPT_0xF2
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x286
 ; 0012 0019 
 ; 0012 001A }
 	ADIW R28,28
@@ -27399,7 +27409,7 @@ _OLED_showSensorValue:
 ; 0012 001E     int i;
 ; 0012 001F 
 ; 0012 0020     for(i=0;i<MAX_SENS_CHANNEL;i++)
-	CALL SUBOPT_0x14D
+	CALL SUBOPT_0x14C
 ;	i -> R16,R17
 _0x240004:
 	__CPWRN 16,17,5
@@ -27408,12 +27418,12 @@ _0x240004:
 ; 0012 0021     {
 ; 0012 0022 
 ; 0012 0023         if( operating_config.sensorEnable[i] ){
-	CALL SUBOPT_0x275
+	CALL SUBOPT_0x272
 	BRNE PC+3
 	JMP _0x240006
 ; 0012 0024 
 ; 0012 0025             switch (sensor[i].status)
-	CALL SUBOPT_0x28A
+	CALL SUBOPT_0x287
 	__ADDW1MN _sensor,4
 	LD   R30,Z
 	CALL SUBOPT_0x2B
@@ -27421,10 +27431,10 @@ _0x240004:
 ; 0012 0027                 case SENS_NORMAL            :   printOLED("DV%1d%.1f",i+1,sensor[i].value);
 	BRNE _0x24000A
 	__POINTD1FN _0x240000,29
-	CALL SUBOPT_0x28B
-	CALL SUBOPT_0x28A
+	CALL SUBOPT_0x288
+	CALL SUBOPT_0x287
 	CALL SUBOPT_0x20
-	CALL SUBOPT_0x28C
+	CALL SUBOPT_0x289
 ; 0012 0028                                                 break;
 	RJMP _0x240009
 ; 0012 0029                 case SENS_ERR_LOWER_BOUND   :   printOLED("DV%1dERRLB",i+1);
@@ -27434,8 +27444,8 @@ _0x24000A:
 	CPC  R31,R26
 	BRNE _0x24000B
 	__POINTD1FN _0x240000,39
-	CALL SUBOPT_0x28B
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x288
+	CALL SUBOPT_0x28A
 ; 0012 002A                                                 break;
 	RJMP _0x240009
 ; 0012 002B                 case SENS_ERR_UPPER_BOUND   :   printOLED("DV%1dERRUB",i+1);
@@ -27445,8 +27455,8 @@ _0x24000B:
 	CPC  R31,R26
 	BRNE _0x24000C
 	__POINTD1FN _0x240000,50
-	CALL SUBOPT_0x28B
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x288
+	CALL SUBOPT_0x28A
 ; 0012 002C                                                 break;
 	RJMP _0x240009
 ; 0012 002D                 case SENS_ERR_DISCONNECT    :   printOLED("DV%1dERRNC",i+1);
@@ -27456,8 +27466,8 @@ _0x24000C:
 	CPC  R31,R26
 	BRNE _0x24000D
 	__POINTD1FN _0x240000,61
-	CALL SUBOPT_0x28B
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x288
+	CALL SUBOPT_0x28A
 ; 0012 002E                                                 break;
 	RJMP _0x240009
 ; 0012 002F                 case SENS_ERR_SHORT         :   printOLED("DV%1dERRSH",i+1);
@@ -27467,8 +27477,8 @@ _0x24000D:
 	CPC  R31,R26
 	BRNE _0x24000E
 	__POINTD1FN _0x240000,72
-	CALL SUBOPT_0x28B
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x288
+	CALL SUBOPT_0x28A
 ; 0012 0030                                                 break;
 	RJMP _0x240009
 ; 0012 0031                 case SENS_ERR_UNKNOWN       :   printOLED("DV%1dDETECTING",i+1);
@@ -27478,18 +27488,18 @@ _0x24000E:
 	CPC  R31,R26
 	BRNE _0x240010
 	__POINTD1FN _0x240000,83
-	CALL SUBOPT_0x28B
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x288
+	CALL SUBOPT_0x28A
 ; 0012 0032                                                 break;
 	RJMP _0x240009
 ; 0012 0033                 default                     :   printDebug("<OLED_showSensorValue> sensor[%d].status unknown [0x%02X]\r\n",i+1,sensor[i].status);
 _0x240010:
 	__POINTD1FN _0x240000,98
-	CALL SUBOPT_0x28B
-	CALL SUBOPT_0x28A
+	CALL SUBOPT_0x288
+	CALL SUBOPT_0x287
 	__ADDW1MN _sensor,4
 	LD   R30,Z
-	CALL SUBOPT_0x239
+	CALL SUBOPT_0x231
 ; 0012 0034                                                 return;
 	RJMP _0x20E0048
 ; 0012 0035             }
@@ -27500,8 +27510,8 @@ _0x240009:
 _0x240006:
 ; 0012 0038             printOLED("DV%1dN/A",i+1);
 	__POINTD1FN _0x240000,158
-	CALL SUBOPT_0x28B
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x288
+	CALL SUBOPT_0x28A
 ; 0012 0039         }
 _0x240011:
 ; 0012 003A     }
@@ -27533,7 +27543,7 @@ _OLED_showPowerStatus:
 _0x240012:
 ; 0012 0047         //printDebug("<OLED_showPowerStatus> batt = %f\r\n",batLevel);
 ; 0012 0048         if(batLevel < 3.0){
-	CALL SUBOPT_0x28E
+	CALL SUBOPT_0x28B
 	BRSH _0x240014
 ; 0012 0049             printOLED("BL0");
 	__POINTD1FN _0x240000,171
@@ -27541,9 +27551,9 @@ _0x240012:
 ; 0012 004A         }
 ; 0012 004B         else if((batLevel >= 3.0) && (batLevel < 3.3)){
 _0x240014:
-	CALL SUBOPT_0x28E
+	CALL SUBOPT_0x28B
 	BRLO _0x240017
-	CALL SUBOPT_0x28F
+	CALL SUBOPT_0x28C
 	BRLO _0x240018
 _0x240017:
 	RJMP _0x240016
@@ -27554,9 +27564,9 @@ _0x240018:
 ; 0012 004D         }
 ; 0012 004E         else if((batLevel >= 3.3) && (batLevel < 3.7)){
 _0x240016:
-	CALL SUBOPT_0x28F
+	CALL SUBOPT_0x28C
 	BRLO _0x24001B
-	CALL SUBOPT_0x290
+	CALL SUBOPT_0x28D
 	BRLO _0x24001C
 _0x24001B:
 	RJMP _0x24001A
@@ -27567,9 +27577,9 @@ _0x24001C:
 ; 0012 0050         }
 ; 0012 0051         else if((batLevel >= 3.7) && (batLevel < 4.0)){
 _0x24001A:
-	CALL SUBOPT_0x290
+	CALL SUBOPT_0x28D
 	BRLO _0x24001F
-	CALL SUBOPT_0x291
+	CALL SUBOPT_0x28E
 	BRLO _0x240020
 _0x24001F:
 	RJMP _0x24001E
@@ -27580,13 +27590,13 @@ _0x240020:
 ; 0012 0053         }
 ; 0012 0054         else if(batLevel >= 4.0){
 _0x24001E:
-	CALL SUBOPT_0x291
+	CALL SUBOPT_0x28E
 	BRLO _0x240022
 ; 0012 0055             printOLED("BL4");
 	__POINTD1FN _0x240000,187
 _0x240056:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0012 0056         }
 ; 0012 0057     }
 _0x240022:
@@ -27708,10 +27718,10 @@ _0x20E0053:
 	CALL __PUTPARD1
 	LDD  R30,Y+5
 	LDD  R31,Y+5+1
-	CALL SUBOPT_0x258
+	CALL SUBOPT_0x254
 	LDD  R30,Y+8
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x286
 ; 0012 007E }
 _0x20E0052:
 	ADIW R28,3
@@ -27724,8 +27734,8 @@ _OLED_showServerCommStatus:
 	ST   -Y,R26
 ;	state -> Y+0
 	__POINTD1FN _0x240000,320
-	CALL SUBOPT_0x293
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x290
+	CALL SUBOPT_0x28A
 ; 0012 0083 }
 	RJMP _0x20E0051
 ;/*============================================================*/
@@ -27736,8 +27746,8 @@ _OLED_showLanStatus:
 	ST   -Y,R26
 ;	state -> Y+0
 	__POINTD1FN _0x240000,326
-	CALL SUBOPT_0x293
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x290
+	CALL SUBOPT_0x28A
 ; 0012 0088 }
 	RJMP _0x20E0051
 ;/*============================================================*/
@@ -27748,8 +27758,8 @@ _OLED_showBuzzerStatus:
 	ST   -Y,R26
 ;	state -> Y+0
 	__POINTD1FN _0x240000,332
-	CALL SUBOPT_0x293
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x290
+	CALL SUBOPT_0x28A
 ; 0012 008D }
 	RJMP _0x20E0051
 ;/*============================================================*/
@@ -27760,8 +27770,8 @@ _OLED_showMemoryStatus:
 	ST   -Y,R26
 ;	state -> Y+0
 	__POINTD1FN _0x240000,338
-	CALL SUBOPT_0x293
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x290
+	CALL SUBOPT_0x28A
 ; 0012 0092 }
 	RJMP _0x20E0051
 ;/*============================================================*/
@@ -27773,7 +27783,7 @@ _OLED_showAlarmStatus:
 ; 0012 0098 
 ; 0012 0099     for(i=0;i<MAX_SENS_CHANNEL;i++)
 	SBIW R28,10
-	CALL SUBOPT_0x27A
+	CALL SUBOPT_0x277
 ;	i -> R16,R17
 ;	flagSens -> Y+9
 ;	flagData -> Y+4
@@ -27786,7 +27796,7 @@ _0x240032:
 	JMP _0x240033
 ; 0012 009A     {
 ; 0012 009B         if(operating_config.sensorEnable[i]){
-	CALL SUBOPT_0x275
+	CALL SUBOPT_0x272
 	BREQ _0x240034
 ; 0012 009C 
 ; 0012 009D             flagSens[i]         = sensorAlarm[i] ? 1:0;
@@ -27798,7 +27808,7 @@ _0x240032:
 	MOVW R0,R30
 	LDI  R26,LOW(_sensorAlarm)
 	LDI  R27,HIGH(_sensorAlarm)
-	CALL SUBOPT_0x27B
+	CALL SUBOPT_0x278
 	BREQ _0x240035
 	LDI  R30,LOW(1)
 	RJMP _0x240036
@@ -27823,7 +27833,7 @@ _0x240036:
 	MOVW R0,R30
 	LDI  R26,LOW(_dataAlarm)
 	LDI  R27,HIGH(_dataAlarm)
-	CALL SUBOPT_0x27B
+	CALL SUBOPT_0x278
 	BREQ _0x240039
 	LDI  R30,LOW(1)
 	RJMP _0x24003A
@@ -27851,11 +27861,11 @@ _0x240034:
 ; 0012 00A7             flagSens[i]         = 0;
 	MOVW R26,R28
 	ADIW R26,9
-	CALL SUBOPT_0x14E
+	CALL SUBOPT_0x14D
 ; 0012 00A8             flagData[i]         = 0;
 	MOVW R26,R28
 	ADIW R26,4
-	CALL SUBOPT_0x14E
+	CALL SUBOPT_0x14D
 ; 0012 00A9         }
 _0x24003D:
 ; 0012 00AA 
@@ -27865,7 +27875,7 @@ _0x24003D:
 _0x240033:
 ; 0012 00AC 
 ; 0012 00AD     if(env_config.batteryLevel > 0){
-	CALL SUBOPT_0x27E
+	CALL SUBOPT_0x27B
 	BRGE _0x24003E
 ; 0012 00AE         flagBatt                = batteryAlarm ? 1:0;
 	LDS  R30,_batteryAlarm
@@ -27887,7 +27897,7 @@ _0x24003E:
 _0x240042:
 ; 0012 00B3 
 ; 0012 00B4     if(env_config.memoryMin > 0){
-	CALL SUBOPT_0x280
+	CALL SUBOPT_0x27D
 	BRSH _0x240043
 ; 0012 00B5         flagMemo                = memoryAlarm ? 1:0;
 	LDS  R30,_memoryAlarm
@@ -27976,11 +27986,11 @@ _printOLED:
 	CALL __ADDW2R15
 	MOVW R16,R26
 ; 0012 00D1     vsprintf(strcmd,fmtstr,argptr);
-	CALL SUBOPT_0x1F3
+	CALL SUBOPT_0x1F2
 	MOVW R26,R28
 	SUBI R26,LOW(-(68))
 	SBCI R27,HIGH(-(68))
-	CALL SUBOPT_0x294
+	CALL SUBOPT_0x291
 ; 0012 00D2     va_end(argptr);
 ; 0012 00D3 
 ; 0012 00D4 //    if ( (strstr(strcmd,"DV") != NULL) ){
@@ -28006,7 +28016,7 @@ _printOLED:
 ; 0012 00DE     TIMER_setTimer(&timeout, 3);
 	MOVW R30,R28
 	ADIW R30,62
-	CALL SUBOPT_0x27C
+	CALL SUBOPT_0x279
 	CALL _TIMER_setTimer
 ; 0012 00DF 
 ; 0012 00E0     /*bongkot OLED assume flag_oled_ack = 1(OLED has connect and ack);*/
@@ -28148,7 +28158,7 @@ _0x260006:
 	CALL __LSLD1
 	CALL __ADDD12
 	CALL __GETD1PF
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 _0x260004:
 _0x20E0051:
 	ADIW R28,1
@@ -28169,7 +28179,7 @@ _SD_writeData:
 ;	len -> Y+4
 ;	res -> R17
 ;	actual_write -> R18,R19
-	CALL SUBOPT_0x26B
+	CALL SUBOPT_0x268
 	BRNE _0x260007
 	__POINTD1FN _0x260000,219
 	CALL SUBOPT_0x3
@@ -28179,25 +28189,25 @@ _SD_writeData:
 ; 0013 002D 
 ; 0013 002E     res = f_lseek(file,start);
 _0x260007:
-	CALL SUBOPT_0x1AF
-	CALL SUBOPT_0x295
+	CALL SUBOPT_0x1AE
+	CALL SUBOPT_0x292
 ; 0013 002F     if(res != FR_OK){
 	BREQ _0x260008
 ; 0013 0030         printDebug("<SD_writeData> f_lseek(%u) failed!!\r\n", start);
 	__POINTD1FN _0x260000,254
 	CALL SUBOPT_0x8D
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 0013 0031         error(res);
-	CALL SUBOPT_0x296
+	CALL SUBOPT_0x293
 ; 0013 0032         return -1;
 	RJMP _0x20E004F
 ; 0013 0033     }
 ; 0013 0034 
 ; 0013 0035     res = f_write(file,data,len,&actual_write);
 _0x260008:
-	CALL SUBOPT_0x1AF
-	CALL SUBOPT_0x194
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x1AE
+	CALL SUBOPT_0x193
+	CALL SUBOPT_0x193
 	IN   R26,SPL
 	IN   R27,SPH
 	SBIW R26,1
@@ -28214,7 +28224,7 @@ _0x260008:
 	__POINTD1FN _0x260000,292
 	CALL SUBOPT_0x3
 ; 0013 0038         print_payload(data,len);
-	CALL SUBOPT_0x15C
+	CALL SUBOPT_0x15B
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	CALL _print_payload
@@ -28241,7 +28251,7 @@ _0x260009:
 	CALL SUBOPT_0x34
 	LDD  R30,Y+12
 	LDD  R31,Y+12+1
-	CALL SUBOPT_0x13F
+	CALL SUBOPT_0x13E
 ; 0013 003F         return -3; // -- the caller should roll back the last data -- //
 	LDI  R30,LOW(65533)
 	LDI  R31,HIGH(65533)
@@ -28267,7 +28277,7 @@ _SD_readData:
 ;	len -> Y+4
 ;	res -> R17
 ;	actual_read -> R18,R19
-	CALL SUBOPT_0x26B
+	CALL SUBOPT_0x268
 	BRNE _0x26000B
 	__POINTD1FN _0x260000,371
 	CALL SUBOPT_0x3
@@ -28277,25 +28287,25 @@ _SD_readData:
 ; 0013 004B 
 ; 0013 004C     res = f_lseek(file,start);
 _0x26000B:
-	CALL SUBOPT_0x1AF
-	CALL SUBOPT_0x295
+	CALL SUBOPT_0x1AE
+	CALL SUBOPT_0x292
 ; 0013 004D     if(res != FR_OK){
 	BREQ _0x26000C
 ; 0013 004E         printDebug("<SD_readData> f_lseek(%u) failed!!\r\n", start);
 	__POINTD1FN _0x260000,405
 	CALL SUBOPT_0x8D
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 0013 004F         error(res);
-	CALL SUBOPT_0x296
+	CALL SUBOPT_0x293
 ; 0013 0050         return -1;
 	RJMP _0x20E004F
 ; 0013 0051     }
 ; 0013 0052 
 ; 0013 0053     res = f_read(file,data,len,&actual_read);
 _0x26000C:
-	CALL SUBOPT_0x1AF
-	CALL SUBOPT_0x194
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x1AE
+	CALL SUBOPT_0x193
+	CALL SUBOPT_0x193
 	IN   R26,SPL
 	IN   R27,SPH
 	SBIW R26,1
@@ -28334,7 +28344,7 @@ _0x26000D:
 	CALL SUBOPT_0x34
 	LDD  R30,Y+12
 	LDD  R31,Y+12+1
-	CALL SUBOPT_0x13F
+	CALL SUBOPT_0x13E
 ; 0013 005C         return -3; // -- the caller should roll back the last data -- //
 	LDI  R30,LOW(65533)
 	LDI  R31,HIGH(65533)
@@ -28369,7 +28379,7 @@ _SD_readMemoryRemain:
 ;	free_clusters -> Y+1
 	LDI  R30,LOW(_root_path)
 	LDI  R31,HIGH(_root_path)
-	CALL SUBOPT_0x297
+	CALL SUBOPT_0x294
 	LDI  R26,LOW(_pfat)
 	LDI  R27,HIGH(_pfat)
 	CALL _f_getfree
@@ -28380,11 +28390,11 @@ _SD_readMemoryRemain:
 ; 0013 006D        /* an error occured, display it and stop */
 ; 0013 006E        printDebug("<SD_readMemoryRemain> f_getfree(%s) error!!\r\n",root_path);
 	__POINTD1FN _0x260000,518
-	CALL SUBOPT_0x298
+	CALL SUBOPT_0x295
 	CALL SUBOPT_0x12
 ; 0013 006F        error(res);
 	MOV  R26,R17
-	CALL SUBOPT_0x299
+	CALL SUBOPT_0x296
 ; 0013 0070        sdFreeSpace = 0;
 ; 0013 0071        return -1;
 	RJMP _0x20E004E
@@ -28395,9 +28405,9 @@ _SD_readMemoryRemain:
 _0x26000F:
 	LDS  R30,_pfat
 	LDS  R31,_pfat+1
-	CALL SUBOPT_0x29A
-	CALL SUBOPT_0x29B
-	CALL SUBOPT_0x29C
+	CALL SUBOPT_0x297
+	CALL SUBOPT_0x298
+	CALL SUBOPT_0x299
 	CALL __LSRD1
 	LDD  R26,Y+5
 	LDD  R27,Y+5+1
@@ -28434,7 +28444,7 @@ _SD_mount:
 	__POINTD1FN _0x260000,564
 	CALL SUBOPT_0x3
 ; 0013 0082         error(res);
-	CALL SUBOPT_0x296
+	CALL SUBOPT_0x293
 ; 0013 0083         return -1;
 	RJMP _0x20E004D
 ; 0013 0084     }
@@ -28512,7 +28522,7 @@ _SD_createFile:
 ;	file -> Y+51
 ;	res -> R17
 ;	filepath -> Y+1
-	CALL SUBOPT_0x26B
+	CALL SUBOPT_0x268
 	BRNE _0x260014
 	__POINTD1FN _0x260000,762
 	CALL SUBOPT_0x3
@@ -28526,7 +28536,7 @@ _0x260014:
 	ADIW R30,1
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0x29D
+	CALL SUBOPT_0x29A
 	__GETW1SX 606
 	CALL SUBOPT_0x34
 	LDI  R24,8
@@ -28544,7 +28554,7 @@ _0x260014:
 ; 0013 00C2                         FA_CREATE_ALWAYS | FA_WRITE );
 	MOVW R30,R28
 	ADIW R30,51
-	CALL SUBOPT_0x297
+	CALL SUBOPT_0x294
 	LDI  R26,LOW(10)
 	RJMP _0x260021
 ; 0013 00C3     }
@@ -28557,7 +28567,7 @@ _0x260015:
 ; 0013 00C9                         FA_CREATE_NEW | FA_WRITE );
 	MOVW R30,R28
 	ADIW R30,51
-	CALL SUBOPT_0x297
+	CALL SUBOPT_0x294
 	LDI  R26,LOW(6)
 _0x260021:
 	CALL _f_open
@@ -28589,7 +28599,7 @@ _0x260017:
 	__POINTD1FN _0x260000,803
 	CALL SUBOPT_0x3
 ; 0013 00DA         error(res);
-	CALL SUBOPT_0x296
+	CALL SUBOPT_0x293
 ; 0013 00DB         return -1;
 	RJMP _0x20E004C
 ; 0013 00DC     }
@@ -28609,7 +28619,7 @@ _0x260019:
 	__POINTD1FN _0x260000,837
 	CALL SUBOPT_0x3
 ; 0013 00E3         error(res);
-	CALL SUBOPT_0x296
+	CALL SUBOPT_0x293
 ; 0013 00E4         return -1;
 	RJMP _0x20E004C
 ; 0013 00E5     }
@@ -28642,7 +28652,7 @@ _SD_openFile:
 ;	*filename -> Y+52
 ;	res -> R16,R17
 ;	filepath -> Y+2
-	CALL SUBOPT_0x26B
+	CALL SUBOPT_0x268
 	BRNE _0x26001B
 	__POINTD1FN _0x260000,872
 	CALL SUBOPT_0x3
@@ -28652,8 +28662,8 @@ _SD_openFile:
 ; 0013 00F0 
 ; 0013 00F1     sprintf(filepath,"%s%s",root_path,filename);
 _0x26001B:
-	CALL SUBOPT_0x1F3
-	CALL SUBOPT_0x29D
+	CALL SUBOPT_0x1F2
+	CALL SUBOPT_0x29A
 	LDD  R30,Y+62
 	LDD  R31,Y+62+1
 	CALL SUBOPT_0x34
@@ -28664,7 +28674,7 @@ _0x26001B:
 ; 0013 00F3     res = f_open( file, filepath, FA_WRITE | FA_READ | FA_OPEN_EXISTING);
 	LDD  R30,Y+54
 	LDD  R31,Y+54+1
-	CALL SUBOPT_0x29E
+	CALL SUBOPT_0x29B
 	LDI  R26,LOW(3)
 	CALL _f_open
 	MOV  R16,R30
@@ -28682,7 +28692,7 @@ _0x26001B:
 	CALL SUBOPT_0x12
 ; 0013 00F6         error(res);
 	MOV  R26,R16
-	CALL SUBOPT_0x299
+	CALL SUBOPT_0x296
 ; 0013 00F7         sdFreeSpace = 0;
 ; 0013 00F8         return -1;
 	RJMP _0x20E004B
@@ -28708,7 +28718,7 @@ _SD_closeFile:
 	CALL SUBOPT_0x81
 ;	*file -> Y+2
 ;	res -> R16,R17
-	CALL SUBOPT_0x26B
+	CALL SUBOPT_0x268
 	BRNE _0x26001D
 	__POINTD1FN _0x260000,943
 	CALL SUBOPT_0x3
@@ -28830,7 +28840,7 @@ _0x260020:
 	LDS  R31,_sdFreeSpace+1
 	LDS  R22,_sdFreeSpace+2
 	LDS  R23,_sdFreeSpace+3
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 0013 012D 
 ; 0013 012E     return 0;
 	LDI  R30,LOW(0)
@@ -28891,8 +28901,8 @@ _LOG_insertData:
 ;	index -> Y+8
 ;	startAddr -> Y+4
 ;	flag -> R19
-	CALL SUBOPT_0x29F
-	CALL SUBOPT_0x2A0
+	CALL SUBOPT_0x29C
+	CALL SUBOPT_0x29D
 ; 0014 0022     if(res < 0){    printDebug("<LOG_insertData> LOG_getLastInsert() failed\r\n");      return -1;  }
 	BRPL _0x280009
 	__POINTD1FN _0x280000,0
@@ -28906,12 +28916,12 @@ _0x280009:
 	LDI  R19,LOW(80)
 ; 0014 0025 
 ; 0014 0026     startAddr       = index2Addr(index,SIZE_LOG_DATA);
-	CALL SUBOPT_0x2A1
-	CALL SUBOPT_0x2A2
+	CALL SUBOPT_0x29E
+	CALL SUBOPT_0x29F
 ; 0014 0027 
 ; 0014 0028     res             = SD_writeData(file, startAddr+OFFSET_FLAG,         (unsigned char *) &flag,        SIZE_FLAG);
-	CALL SUBOPT_0x29F
-	CALL SUBOPT_0x2A3
+	CALL SUBOPT_0x29C
+	CALL SUBOPT_0x208
 	IN   R30,SPL
 	IN   R31,SPH
 	SBIW R30,1
@@ -28935,13 +28945,13 @@ _0x280009:
 ; 0014 002A 
 ; 0014 002B     res             = SD_writeData(file, startAddr+OFFSET_TIMESTAMP,    (unsigned char *) &timestamp,   SIZE_TIMESTAMP);
 _0x28000A:
-	CALL SUBOPT_0x29F
-	CALL SUBOPT_0x2A4
+	CALL SUBOPT_0x29C
+	CALL SUBOPT_0x2A0
 	CALL __PUTPARD1
 	MOVW R30,R28
 	ADIW R30,24
-	CALL SUBOPT_0x2A5
-	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A1
+	CALL SUBOPT_0x2A2
 ; 0014 002C     if(res < 0){    printDebug("<LOG_insertData> SD_writeData(timestamp) failed\r\n");  return -1;  }
 	BRPL _0x28000B
 	__POINTD1FN _0x280000,91
@@ -28952,14 +28962,14 @@ _0x28000A:
 ; 0014 002D 
 ; 0014 002E     res             = SD_writeData(file, startAddr+OFFSET_DATA_CHANNEL, (unsigned char *) &channel,     SIZE_CHANNEL);
 _0x28000B:
-	CALL SUBOPT_0x29F
-	CALL SUBOPT_0x2A7
+	CALL SUBOPT_0x29C
+	CALL SUBOPT_0x2A3
 	MOVW R30,R28
 	ADIW R30,22
 	ST   -Y,R31
 	ST   -Y,R30
 	CALL SUBOPT_0x73
-	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A2
 ; 0014 002F     if(res < 0){    printDebug("<LOG_insertData> SD_writeData(channel) failed\r\n");    return -1;  }
 	BRPL _0x28000C
 	__POINTD1FN _0x280000,141
@@ -28970,12 +28980,12 @@ _0x28000B:
 ; 0014 0030 
 ; 0014 0031     res             = SD_writeData(file, startAddr+OFFSET_DATA_VALUE,   (unsigned char *) &value,       SIZE_VALUE);
 _0x28000C:
-	CALL SUBOPT_0x29F
-	CALL SUBOPT_0x2A8
+	CALL SUBOPT_0x29C
+	CALL SUBOPT_0x2A4
 	CALL __PUTPARD1
 	CALL SUBOPT_0x6C
 	CALL SUBOPT_0x77
-	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A2
 ; 0014 0032     if(res < 0){    printDebug("<LOG_insertData> SD_writeData(value) failed\r\n");      return -1;  }
 	BRPL _0x28000D
 	__POINTD1FN _0x280000,189
@@ -28986,13 +28996,13 @@ _0x28000C:
 ; 0014 0033 
 ; 0014 0034     res = LOG_setLastInsert(file,++index);
 _0x28000D:
-	CALL SUBOPT_0x29F
-	CALL SUBOPT_0x2A9
+	CALL SUBOPT_0x29C
+	CALL SUBOPT_0x2A5
 ; 0014 0035     if(res < 0){    printDebug("<LOG_insertData> LOG_setLastInsert(%ld) failed\r\n",index);      return -1;  }
 	BRPL _0x28000E
 	__POINTD1FN _0x280000,235
 	CALL SUBOPT_0x8D
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0047
@@ -29032,8 +29042,8 @@ _LOG_readData:
 ;	lastLogSend -> Y+8
 ;	startAddr -> Y+4
 ;	flag -> R19
-	CALL SUBOPT_0x2AA
-	CALL SUBOPT_0x2AB
+	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A7
 ; 0014 0045     if(res < 0){    printDebug("<LOG_readData> LOG_getLastInsert() failed\r\n");        return -1;  }
 	BRPL _0x28000F
 	__POINTD1FN _0x280000,284
@@ -29043,8 +29053,8 @@ _LOG_readData:
 	RJMP _0x20E0044
 ; 0014 0046     res             = LOG_getLastSend(file, &lastLogSend);
 _0x28000F:
-	CALL SUBOPT_0x2AA
-	CALL SUBOPT_0x2AC
+	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A8
 ; 0014 0047     if(res < 0){    printDebug("<LOG_readData> LOG_getLastSend() failed\r\n");          return -1;  }
 	BRPL _0x280010
 	__POINTD1FN _0x280000,328
@@ -29055,11 +29065,12 @@ _0x28000F:
 ; 0014 0048 
 ; 0014 0049     printDebug("<LOG_readEvent> lastSend/lastInsert  --> %ld/%ld\r\n",lastLogSend,lastLogInsert);
 _0x280010:
-	CALL SUBOPT_0x2AD
-	CALL SUBOPT_0x2AE
+	CALL SUBOPT_0x2A9
+	CALL SUBOPT_0x21B
+	CALL SUBOPT_0x21
 ; 0014 004A 
 ; 0014 004B     if(lastLogSend >= lastLogInsert)
-	CALL SUBOPT_0x2AF
+	CALL SUBOPT_0x2AA
 	BRLO _0x280011
 ; 0014 004C     {
 ; 0014 004D         printDebug("<LOG_readData> Log empty..!!\r\n");
@@ -29067,7 +29078,7 @@ _0x280010:
 	CALL SUBOPT_0x3
 ; 0014 004E 
 ; 0014 004F         res = LOG_createFile(LOGFILE_DATA,SD_FORCE,LOG_INIT_STR,SIZE_RECORD);
-	CALL SUBOPT_0x2B0
+	CALL SUBOPT_0x2AB
 ; 0014 0050         if(res < 0)
 	BRPL _0x280012
 ; 0014 0051         {
@@ -29089,12 +29100,12 @@ _0x280012:
 ; 0014 0058 
 ; 0014 0059     startAddr       = index2Addr(lastLogSend,SIZE_LOG_DATA);
 _0x280011:
-	CALL SUBOPT_0x2A1
-	CALL SUBOPT_0x2A2
+	CALL SUBOPT_0x29E
+	CALL SUBOPT_0x29F
 ; 0014 005A 
 ; 0014 005B     res             = SD_readData(file, startAddr+OFFSET_FLAG,          (unsigned char *) &flag,        SIZE_FLAG);
-	CALL SUBOPT_0x2AA
-	CALL SUBOPT_0x2A3
+	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x208
 	IN   R30,SPL
 	IN   R31,SPH
 	SBIW R30,1
@@ -29118,11 +29129,11 @@ _0x280011:
 ; 0014 005D 
 ; 0014 005E     res             = SD_readData(file, startAddr+OFFSET_TIMESTAMP,     (unsigned char *) timestamp,    SIZE_TIMESTAMP);
 _0x280013:
-	CALL SUBOPT_0x2AA
-	CALL SUBOPT_0x2A4
+	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A0
 	CALL SUBOPT_0xF1
-	CALL SUBOPT_0x2A5
-	CALL SUBOPT_0x2B1
+	CALL SUBOPT_0x2A1
+	CALL SUBOPT_0x2AC
 ; 0014 005F     if(res < 0){    printDebug("<LOG_readData> SD_readData(timestamp) failed\r\n");     return -1;  }
 	BRPL _0x280014
 	__POINTD1FN _0x280000,543
@@ -29133,14 +29144,14 @@ _0x280013:
 ; 0014 0060 
 ; 0014 0061     res             = SD_readData(file, startAddr+OFFSET_DATA_CHANNEL, (unsigned char *) channel,       SIZE_CHANNEL);
 _0x280014:
-	CALL SUBOPT_0x2AA
-	CALL SUBOPT_0x2A7
+	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A3
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	ST   -Y,R31
 	ST   -Y,R30
 	CALL SUBOPT_0x73
-	CALL SUBOPT_0x2B1
+	CALL SUBOPT_0x2AC
 ; 0014 0062     if(res < 0){    printDebug("<LOG_readData> SD_readData(channel) failed\r\n");       return -1;  }
 	BRPL _0x280015
 	__POINTD1FN _0x280000,590
@@ -29151,11 +29162,11 @@ _0x280014:
 ; 0014 0063 
 ; 0014 0064     res             = SD_readData(file, startAddr+OFFSET_DATA_VALUE,    (unsigned char *) value,        SIZE_VALUE);
 _0x280015:
-	CALL SUBOPT_0x2AA
-	CALL SUBOPT_0x2A8
-	CALL SUBOPT_0x248
-	CALL SUBOPT_0x2A5
-	CALL SUBOPT_0x2B1
+	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A4
+	CALL SUBOPT_0x243
+	CALL SUBOPT_0x2A1
+	CALL SUBOPT_0x2AC
 ; 0014 0065     if(res < 0){    printDebug("<LOG_readData> SD_readData(value) failed\r\n");         return -1;  }
 	BRPL _0x280016
 	__POINTD1FN _0x280000,635
@@ -29197,8 +29208,8 @@ _LOG_insertEvent:
 ;	index -> Y+8
 ;	startAddr -> Y+4
 ;	flag -> R19
-	CALL SUBOPT_0x2B2
-	CALL SUBOPT_0x2A0
+	CALL SUBOPT_0x2AD
+	CALL SUBOPT_0x29D
 ; 0014 007A     if(res < 0){    printDebug("<LOG_insertEvent> LOG_getLastInsert() failed\r\n");     return -1;  }
 	BRPL _0x280017
 	__POINTD1FN _0x280000,678
@@ -29212,12 +29223,12 @@ _0x280017:
 	LDI  R19,LOW(80)
 ; 0014 007D 
 ; 0014 007E     startAddr       = index2Addr(index,SIZE_LOG_EVENT);
-	CALL SUBOPT_0x2B3
-	CALL SUBOPT_0x2A2
+	CALL SUBOPT_0x2AE
+	CALL SUBOPT_0x29F
 ; 0014 007F 
 ; 0014 0080     res             = SD_writeData(file, startAddr+OFFSET_FLAG,         (unsigned char *) &flag,        SIZE_FLAG);
-	CALL SUBOPT_0x2B2
-	CALL SUBOPT_0x2A3
+	CALL SUBOPT_0x2AD
+	CALL SUBOPT_0x208
 	IN   R30,SPL
 	IN   R31,SPH
 	SBIW R30,1
@@ -29241,13 +29252,13 @@ _0x280017:
 ; 0014 0082 
 ; 0014 0083     res             = SD_writeData(file, startAddr+OFFSET_TIMESTAMP,    (unsigned char *) &timestamp,   SIZE_TIMESTAMP);
 _0x280018:
-	CALL SUBOPT_0x2B2
-	CALL SUBOPT_0x2A4
+	CALL SUBOPT_0x2AD
+	CALL SUBOPT_0x2A0
 	CALL __PUTPARD1
 	MOVW R30,R28
 	ADIW R30,20
-	CALL SUBOPT_0x2A5
-	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A1
+	CALL SUBOPT_0x2A2
 ; 0014 0084     if(res < 0){    printDebug("<LOG_insertEvent> SD_writeData(timestamp) failed\r\n"); return -1;  }
 	BRPL _0x280019
 	__POINTD1FN _0x280000,771
@@ -29258,12 +29269,12 @@ _0x280018:
 ; 0014 0085 
 ; 0014 0086     res             = SD_writeData(file, startAddr+OFFSET_EVENT_ID,     (unsigned char *) &id,          SIZE_ID);
 _0x280019:
-	CALL SUBOPT_0x2B2
-	CALL SUBOPT_0x2A7
+	CALL SUBOPT_0x2AD
+	CALL SUBOPT_0x2A3
 	MOVW R30,R28
 	ADIW R30,19
-	CALL SUBOPT_0x2B4
-	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2AF
+	CALL SUBOPT_0x2A2
 ; 0014 0087     if(res < 0){    printDebug("<LOG_insertEvent> SD_writeData(id) failed\r\n");        return -1;  }
 	BRPL _0x28001A
 	__POINTD1FN _0x280000,822
@@ -29274,12 +29285,12 @@ _0x280019:
 ; 0014 0088 
 ; 0014 0089     res             = SD_writeData(file, startAddr+OFFSET_EVENT_STATUS, (unsigned char *) &status,      SIZE_STATUS);
 _0x28001A:
-	CALL SUBOPT_0x2B2
-	CALL SUBOPT_0x2B5
+	CALL SUBOPT_0x2AD
+	CALL SUBOPT_0x2B0
 	CALL __PUTPARD1
 	CALL SUBOPT_0x6C
 	CALL SUBOPT_0x75
-	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A2
 ; 0014 008A     if(res < 0){    printDebug("<LOG_insertEvent> SD_writeData(status) failed\r\n");    return -1;  }
 	BRPL _0x28001B
 	__POINTD1FN _0x280000,866
@@ -29290,13 +29301,13 @@ _0x28001A:
 ; 0014 008B 
 ; 0014 008C     res = LOG_setLastInsert(file,++index);
 _0x28001B:
-	CALL SUBOPT_0x2B2
-	CALL SUBOPT_0x2A9
+	CALL SUBOPT_0x2AD
+	CALL SUBOPT_0x2A5
 ; 0014 008D     if(res < 0){    printDebug("<LOG_insertEvent> LOG_setLastInsert(%ld) failed\r\n",index);     return -1;  }
 	BRPL _0x28001C
 	__POINTD1FN _0x280000,914
 	CALL SUBOPT_0x8D
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0046
@@ -29337,8 +29348,8 @@ _LOG_readEvent:
 ;	lastLogSend -> Y+8
 ;	startAddr -> Y+4
 ;	flag -> R19
-	CALL SUBOPT_0x2AA
-	CALL SUBOPT_0x2AB
+	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A7
 ; 0014 009E     if(res < 0){    printDebug("<LOG_readEvent> LOG_getLastInsert() failed\r\n");       return -1;  }
 	BRPL _0x28001D
 	__POINTD1FN _0x280000,964
@@ -29348,8 +29359,8 @@ _LOG_readEvent:
 	RJMP _0x20E0044
 ; 0014 009F     res             = LOG_getLastSend(file, &lastLogSend);
 _0x28001D:
-	CALL SUBOPT_0x2AA
-	CALL SUBOPT_0x2AC
+	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A8
 ; 0014 00A0     if(res < 0){    printDebug("<LOG_readEvent> LOG_getLastSend() failed\r\n");         return -1;  }
 	BRPL _0x28001E
 	__POINTD1FN _0x280000,1009
@@ -29360,11 +29371,12 @@ _0x28001D:
 ; 0014 00A1 
 ; 0014 00A2     printDebug("<LOG_readEvent> lastSend/lastInsert  --> %ld/%ld\r\n",lastLogSend,lastLogInsert);
 _0x28001E:
-	CALL SUBOPT_0x2AD
-	CALL SUBOPT_0x2AE
+	CALL SUBOPT_0x2A9
+	CALL SUBOPT_0x21B
+	CALL SUBOPT_0x21
 ; 0014 00A3 
 ; 0014 00A4     if(lastLogSend >= lastLogInsert)
-	CALL SUBOPT_0x2AF
+	CALL SUBOPT_0x2AA
 	BRLO _0x28001F
 ; 0014 00A5     {
 ; 0014 00A6         printDebug("<LOG_readEvent> Log empty..!!\r\n");
@@ -29372,7 +29384,7 @@ _0x28001E:
 	CALL SUBOPT_0x3
 ; 0014 00A7 
 ; 0014 00A8         res = LOG_createFile(LOGFILE_EVENT,SD_FORCE,LOG_INIT_STR,SIZE_RECORD);
-	CALL SUBOPT_0x2B6
+	CALL SUBOPT_0x2B1
 ; 0014 00A9         if(res < 0)
 	BRPL _0x280020
 ; 0014 00AA         {
@@ -29394,12 +29406,12 @@ _0x280020:
 ; 0014 00B1 
 ; 0014 00B2     startAddr       = index2Addr(lastLogSend,SIZE_LOG_EVENT);
 _0x28001F:
-	CALL SUBOPT_0x2B3
-	CALL SUBOPT_0x2A2
+	CALL SUBOPT_0x2AE
+	CALL SUBOPT_0x29F
 ; 0014 00B3 
 ; 0014 00B4     res             = SD_readData(file, startAddr+OFFSET_FLAG,          (unsigned char *) &flag,        SIZE_FLAG);
-	CALL SUBOPT_0x2AA
-	CALL SUBOPT_0x2A3
+	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x208
 	IN   R30,SPL
 	IN   R31,SPH
 	SBIW R30,1
@@ -29423,11 +29435,11 @@ _0x28001F:
 ; 0014 00B6 
 ; 0014 00B7     res             = SD_readData(file, startAddr+OFFSET_TIMESTAMP,     (unsigned char *) timestamp,    SIZE_TIMESTAMP);
 _0x280021:
-	CALL SUBOPT_0x2AA
-	CALL SUBOPT_0x2A4
+	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A0
 	CALL SUBOPT_0xF1
-	CALL SUBOPT_0x2A5
-	CALL SUBOPT_0x2B1
+	CALL SUBOPT_0x2A1
+	CALL SUBOPT_0x2AC
 ; 0014 00B8     if(res < 0){    printDebug("<LOG_readEvent> SD_readData(timestamp) failed\r\n");    return -1;  }
 	BRPL _0x280022
 	__POINTD1FN _0x280000,1127
@@ -29438,12 +29450,12 @@ _0x280021:
 ; 0014 00B9 
 ; 0014 00BA     res             = SD_readData(file, startAddr+OFFSET_EVENT_ID,      (unsigned char *) id,           SIZE_ID);
 _0x280022:
-	CALL SUBOPT_0x2AA
-	CALL SUBOPT_0x2A7
+	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A3
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
-	CALL SUBOPT_0x2B4
-	CALL SUBOPT_0x2B1
+	CALL SUBOPT_0x2AF
+	CALL SUBOPT_0x2AC
 ; 0014 00BB     if(res < 0){    printDebug("<LOG_readEvent> SD_readData(id) failed\r\n");           return -1;  }
 	BRPL _0x280023
 	__POINTD1FN _0x280000,1175
@@ -29454,11 +29466,11 @@ _0x280022:
 ; 0014 00BC 
 ; 0014 00BD     res             = SD_readData(file, startAddr+OFFSET_EVENT_STATUS,  (unsigned char *) status,       SIZE_STATUS);
 _0x280023:
-	CALL SUBOPT_0x2AA
-	CALL SUBOPT_0x2B5
-	CALL SUBOPT_0x248
-	CALL SUBOPT_0x2B4
-	CALL SUBOPT_0x2B1
+	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2B0
+	CALL SUBOPT_0x243
+	CALL SUBOPT_0x2AF
+	CALL SUBOPT_0x2AC
 ; 0014 00BE     if(res < 0){    printDebug("<LOG_readEvent> SD_readData(status) failed\r\n");       return -1;  }
 	BRPL _0x280024
 	__POINTD1FN _0x280000,1216
@@ -29498,11 +29510,11 @@ _LOG_getLastInsert:
 ;	*file -> Y+4
 ;	*index -> Y+2
 ;	res -> R16,R17
-	CALL SUBOPT_0x2B7
-	CALL SUBOPT_0x2B8
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x2B2
+	CALL SUBOPT_0x2B3
+	CALL SUBOPT_0x193
 	CALL SUBOPT_0x77
-	CALL SUBOPT_0x2B1
+	CALL SUBOPT_0x2AC
 ; 0014 00CE     if(res < 0)
 	BRPL _0x280025
 ; 0014 00CF     {
@@ -29529,23 +29541,23 @@ _LOG_setLastInsert:
 ; 0014 00DB     int             res;
 ; 0014 00DC 
 ; 0014 00DD     printDebug("<LOG_setLastInsert> writing %ld\r\n", index);
-	CALL SUBOPT_0x1F6
+	CALL SUBOPT_0x1F5
 ;	*file -> Y+6
 ;	index -> Y+2
 ;	res -> R16,R17
 	__POINTD1FN _0x280000,1334
-	CALL SUBOPT_0x1F5
+	CALL SUBOPT_0x1F4
 ; 0014 00DE     print_payload((unsigned char *) &index, sizeof(unsigned long int));
-	CALL SUBOPT_0x1F3
+	CALL SUBOPT_0x1F2
 	CALL SUBOPT_0x77
-	CALL SUBOPT_0x163
+	CALL SUBOPT_0x162
 ; 0014 00DF 
 ; 0014 00E0     res = SD_writeData(file, 0, (unsigned char *) &index, sizeof(unsigned long int));
-	CALL SUBOPT_0x2B8
+	CALL SUBOPT_0x2B3
 	MOVW R30,R28
 	ADIW R30,8
-	CALL SUBOPT_0x2A5
-	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A1
+	CALL SUBOPT_0x2A2
 ; 0014 00E1     if(res < 0)
 	BRPL _0x280026
 ; 0014 00E2     {
@@ -29573,11 +29585,11 @@ _LOG_getLastSend:
 ;	*file -> Y+4
 ;	*index -> Y+2
 ;	res -> R16,R17
-	CALL SUBOPT_0x2B7
-	CALL SUBOPT_0x2B9
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x2B2
+	CALL SUBOPT_0x2B4
+	CALL SUBOPT_0x193
 	CALL SUBOPT_0x77
-	CALL SUBOPT_0x2B1
+	CALL SUBOPT_0x2AC
 ; 0014 00EF     if(res < 0)
 	BRPL _0x280027
 ; 0014 00F0     {
@@ -29597,7 +29609,7 @@ _0x20E0043:
 	CALL __PUTPARD1
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
-	CALL SUBOPT_0x12D
+	CALL SUBOPT_0x12C
 ; 0014 00F6 
 ; 0014 00F7     return 0;
 	LDI  R30,LOW(0)
@@ -29615,23 +29627,23 @@ _LOG_setLastSend:
 ; 0014 00FC     int             res;
 ; 0014 00FD 
 ; 0014 00FE     printDebug("<LOG_setLastSend> writing %ld\r\n", index);
-	CALL SUBOPT_0x1F6
+	CALL SUBOPT_0x1F5
 ;	*file -> Y+6
 ;	index -> Y+2
 ;	res -> R16,R17
 	__POINTD1FN _0x280000,1480
-	CALL SUBOPT_0x1F5
+	CALL SUBOPT_0x1F4
 ; 0014 00FF     print_payload((unsigned char *) &index, sizeof(unsigned long int));
-	CALL SUBOPT_0x1F3
+	CALL SUBOPT_0x1F2
 	CALL SUBOPT_0x77
-	CALL SUBOPT_0x163
+	CALL SUBOPT_0x162
 ; 0014 0100 
 ; 0014 0101     res = SD_writeData(file, 4, (unsigned char *) &index, sizeof(unsigned long int));
-	CALL SUBOPT_0x2B9
+	CALL SUBOPT_0x2B4
 	MOVW R30,R28
 	ADIW R30,8
-	CALL SUBOPT_0x2A5
-	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A1
+	CALL SUBOPT_0x2A2
 ; 0014 0102     if(res < 0)
 	BRPL _0x280028
 ; 0014 0103     {
@@ -29667,16 +29679,16 @@ _index2Addr:
 ; 0014 0112     unsigned long int address=0;
 ; 0014 0113 
 ; 0014 0114     address = ( index * recordSize ) + SIZE_LAST_LOG_INDEX + SIZE_LAST_LOG_SENT + SIZE_PADDING;
-	CALL SUBOPT_0x1DC
+	CALL SUBOPT_0x1DB
 ;	index -> Y+6
 ;	recordSize -> Y+4
 ;	address -> Y+0
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
 	CALL SUBOPT_0x59
-	CALL SUBOPT_0x29C
+	CALL SUBOPT_0x299
 	__ADDD1N 16
-	CALL SUBOPT_0xA0
+	CALL SUBOPT_0xA1
 ; 0014 0115 
 ; 0014 0116     return address;
 	CALL SUBOPT_0x87
@@ -29714,7 +29726,7 @@ _LOG_createFile:
 	BRPL _0x280029
 ; 0014 0120         printDebug("<LOG_createFile> SD_createFile(%s) failed\r\n",filename);
 	__POINTD1FN _0x280000,1553
-	CALL SUBOPT_0x2BA
+	CALL SUBOPT_0x2B5
 	CALL SUBOPT_0x12
 ; 0014 0121         return -1;
 	LDI  R30,LOW(65535)
@@ -29729,7 +29741,7 @@ _0x280029:
 ; 0014 0124     {
 ; 0014 0125         printDebug("<LOG_createFile> %s already exist\r\n", filename);
 	__POINTD1FN _0x280000,1597
-	CALL SUBOPT_0x2BA
+	CALL SUBOPT_0x2B5
 	CALL SUBOPT_0x12
 ; 0014 0126         return 0;
 	LDI  R30,LOW(0)
@@ -29741,7 +29753,7 @@ _0x28002B:
 ; 0014 0129     {
 ; 0014 012A         printDebug("<LOG_createFile> %s created\r\n", filename);
 	__POINTD1FN _0x280000,1633
-	CALL SUBOPT_0x2BA
+	CALL SUBOPT_0x2B5
 	CALL SUBOPT_0x12
 ; 0014 012B         if(len == 0) // -- no initial data -- //
 	__GETW1SX 546
@@ -29758,7 +29770,7 @@ _0x28002B:
 ; 0014 0131         // -- write the file initial data -- //
 ; 0014 0132         res = SD_openFile(&file,filename);
 _0x28002D:
-	CALL SUBOPT_0x1F3
+	CALL SUBOPT_0x1F2
 	__GETW2SX 553
 	RCALL _SD_openFile
 	MOVW R16,R30
@@ -29768,7 +29780,7 @@ _0x28002D:
 ; 0014 0134         {
 ; 0014 0135             printDebug("<LOG_createFile> SD_openFile(%s) failed\r\n",filename);
 	__POINTD1FN _0x280000,1711
-	CALL SUBOPT_0x2BA
+	CALL SUBOPT_0x2B5
 	CALL SUBOPT_0x12
 ; 0014 0136             return -1;
 	LDI  R30,LOW(65535)
@@ -29782,15 +29794,15 @@ _0x28002E:
 	__POINTD1FN _0x280000,1753
 	CALL SUBOPT_0x3
 ; 0014 013B             print_payload(initString,len);
-	CALL SUBOPT_0x2BB
+	CALL SUBOPT_0x2B6
 ; 0014 013C             res = SD_writeData(&file,0,initString,len);
-	CALL SUBOPT_0x1F3
-	CALL SUBOPT_0x2B8
+	CALL SUBOPT_0x1F2
+	CALL SUBOPT_0x2B3
 	__GETW1SX 554
 	ST   -Y,R31
 	ST   -Y,R30
 	__GETW2SX 554
-	CALL SUBOPT_0x2A6
+	CALL SUBOPT_0x2A2
 ; 0014 013D             if(res < 0)
 	BRPL _0x280030
 ; 0014 013E             {
@@ -29798,7 +29810,7 @@ _0x28002E:
 	__POINTD1FN _0x280000,1793
 	CALL SUBOPT_0x3
 ; 0014 0140                 print_payload(initString,len);
-	CALL SUBOPT_0x2BB
+	CALL SUBOPT_0x2B6
 ; 0014 0141                 return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
@@ -29857,13 +29869,13 @@ _LOG_init:
 ; 0014 0158     res = LOG_createFile(LOGFILE_DATA,0,LOG_INIT_STR,sizeof(LOG_INIT_STR));
 	LDI  R30,LOW(_LOGFILE_DATA)
 	LDI  R31,HIGH(_LOGFILE_DATA)
-	CALL SUBOPT_0xF7
-	CALL SUBOPT_0x2BC
+	CALL SUBOPT_0xF6
+	CALL SUBOPT_0x2B7
 ; 0014 0159     if(res < 0)
 	BRPL _0x280032
 ; 0014 015A     {
 ; 0014 015B         printDebug("<LOG_init> LOG_createFile(%s) failed\r\n",LOGFILE_DATA);
-	CALL SUBOPT_0x2BD
+	CALL SUBOPT_0x2B8
 	CALL SUBOPT_0x5F
 	CALL SUBOPT_0x12
 ; 0014 015C         ret = ret-1;
@@ -29874,13 +29886,13 @@ _LOG_init:
 _0x280032:
 	LDI  R30,LOW(_LOGFILE_EVENT)
 	LDI  R31,HIGH(_LOGFILE_EVENT)
-	CALL SUBOPT_0xF7
-	CALL SUBOPT_0x2BC
+	CALL SUBOPT_0xF6
+	CALL SUBOPT_0x2B7
 ; 0014 0160     if(res < 0)
 	BRPL _0x280033
 ; 0014 0161     {
 ; 0014 0162         printDebug("<LOG_init> LOG_createFile(%s) failed\r\n",LOGFILE_EVENT);
-	CALL SUBOPT_0x2BD
+	CALL SUBOPT_0x2B8
 	CALL SUBOPT_0x6A
 	CALL SUBOPT_0x12
 ; 0014 0163         ret = ret-1;
@@ -29891,8 +29903,8 @@ _0x280032:
 _0x280033:
 	LDI  R30,LOW(_LOGFILE_ERROR)
 	LDI  R31,HIGH(_LOGFILE_ERROR)
-	CALL SUBOPT_0xF7
-	CALL SUBOPT_0x196
+	CALL SUBOPT_0xF6
+	CALL SUBOPT_0x195
 	RCALL _LOG_createFile
 	MOVW R16,R30
 ; 0014 0167     if(res < 0)
@@ -29900,8 +29912,8 @@ _0x280033:
 	BRPL _0x280034
 ; 0014 0168     {
 ; 0014 0169         printDebug("<LOG_init> LOG_createFile(%s) failed\r\n",LOGFILE_ERROR);
-	CALL SUBOPT_0x2BD
-	CALL SUBOPT_0x2BE
+	CALL SUBOPT_0x2B8
+	CALL SUBOPT_0x2B9
 	CALL SUBOPT_0x12
 ; 0014 016A         ret = ret-1;
 	__SUBWRN 18,19,1
@@ -29938,7 +29950,7 @@ _addDataLogQueue:
 ; 0015 0011     int slot;
 ; 0015 0012 
 ; 0015 0013     slot = findFreeSlotDataLogQueue();
-	CALL SUBOPT_0x1F6
+	CALL SUBOPT_0x1F5
 ;	id -> Y+12
 ;	timestamp -> Y+8
 ;	channel -> Y+6
@@ -29962,28 +29974,28 @@ _addDataLogQueue:
 ; 0015 0019 
 ; 0015 001A     dataLogQueue[slot].id                    = id;
 _0x2A0003:
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	SUBI R30,LOW(-_dataLogQueue)
 	SBCI R31,HIGH(-_dataLogQueue)
 	LDD  R26,Y+12
 	STD  Z+0,R26
 ; 0015 001B     dataLogQueue[slot].data.timestamp        = timestamp;
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _dataLogQueue,1
 	CALL SUBOPT_0xD8
-	CALL SUBOPT_0x264
+	CALL SUBOPT_0x261
 ; 0015 001C     dataLogQueue[slot].data.channel          = channel;
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _dataLogQueue,5
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	STD  Z+0,R26
 	STD  Z+1,R27
 ; 0015 001D     dataLogQueue[slot].data.value            = value;
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _dataLogQueue,7
 	CALL SUBOPT_0xB4
-	CALL SUBOPT_0x264
+	CALL SUBOPT_0x261
 ; 0015 001E 
 ; 0015 001F     dataLogQCount++;
 	LDS  R30,_dataLogQCount
@@ -29995,7 +30007,7 @@ _0x2A0003:
 	LDD  R30,Y+16
 	CALL SUBOPT_0x65
 	MOVW R30,R16
-	CALL SUBOPT_0x258
+	CALL SUBOPT_0x254
 	LDS  R30,_dataLogQCount
 	CALL SUBOPT_0x65
 	CALL SUBOPT_0x66
@@ -30039,7 +30051,7 @@ _0x2A0006:
 	BRGE _0x2A0007
 ; 0015 002E     {
 ; 0015 002F         if(id == dataLogQueue[i].id)                       // -- scan id in dataLogQueue
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	SUBI R30,LOW(-_dataLogQueue)
 	SBCI R31,HIGH(-_dataLogQueue)
 	LD   R30,Z
@@ -30048,11 +30060,11 @@ _0x2A0006:
 	BRNE _0x2A0008
 ; 0015 0030         {
 ; 0015 0031             *timestamp      =   dataLogQueue[i].data.timestamp;
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _dataLogQueue,1
-	CALL SUBOPT_0x2BF
+	CALL SUBOPT_0x2BA
 ; 0015 0032             *channel        =   dataLogQueue[i].data.channel;
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _dataLogQueue,5
 	MOVW R26,R30
 	CALL __GETW1P
@@ -30061,7 +30073,7 @@ _0x2A0006:
 	ST   X+,R30
 	ST   X,R31
 ; 0015 0033             *value          =   dataLogQueue[i].data.value;
-	CALL SUBOPT_0x16F
+	CALL SUBOPT_0x16E
 	__ADDW1MN _dataLogQueue,7
 	MOVW R26,R30
 	CALL __GETD1P
@@ -30100,15 +30112,15 @@ _0x2A000A:
 	BRSH _0x2A000B
 ; 0015 0041     {
 ; 0015 0042         if(id == dataLogQueue[i].id)                       // -- scan id in dataLogQueue
-	CALL SUBOPT_0x2C0
+	CALL SUBOPT_0x2BB
 	LD   R30,Z
 	LDD  R26,Y+1
 	CP   R30,R26
 	BRNE _0x2A000C
 ; 0015 0043         {
 ; 0015 0044             dataLogQueue[i].id                  = 0x00;
-	CALL SUBOPT_0x2C0
-	CALL SUBOPT_0x2C1
+	CALL SUBOPT_0x2BB
+	CALL SUBOPT_0x2BC
 ; 0015 0045             dataLogQueue[i].data.timestamp      = 0;
 ; 0015 0046             dataLogQueue[i].data.channel        = 0;
 ; 0015 0047             dataLogQueue[i].data.value          = 0;
@@ -30119,8 +30131,8 @@ _0x2A000A:
 ; 0015 0049 
 ; 0015 004A             printDebug("\r\n<removeDataLogQueue>                        Removed (%02X) from dataLogQueue[%d]\r\n", id, i);
 	__POINTD1FN _0x2A0000,258
+	CALL SUBOPT_0x1FC
 	CALL SUBOPT_0x1FD
-	CALL SUBOPT_0x1FE
 ; 0015 004B             return dataLogQCount;
 	LDS  R30,_dataLogQCount
 	LDI  R31,0
@@ -30149,7 +30161,7 @@ _0x2A000E:
 	CPI  R17,10
 	BRSH _0x2A000F
 ; 0015 0056         if(dataLogQueue[i].id == 0x00){
-	CALL SUBOPT_0x2C0
+	CALL SUBOPT_0x2BB
 	LD   R30,Z
 	CPI  R30,0
 	BRNE _0x2A0010
@@ -30180,8 +30192,8 @@ _0x2A0012:
 	CPI  R17,10
 	BRSH _0x2A0013
 ; 0015 0062         dataLogQueue[i].id                  = 0x00;
-	CALL SUBOPT_0x2C0
-	CALL SUBOPT_0x2C1
+	CALL SUBOPT_0x2BB
+	CALL SUBOPT_0x2BC
 ; 0015 0063         dataLogQueue[i].data.timestamp      = 0;
 ; 0015 0064         dataLogQueue[i].data.channel        = 0;
 ; 0015 0065         dataLogQueue[i].data.value          = 0;
@@ -30227,22 +30239,23 @@ _addEventLogQueue:
 ; 0015 0078 
 ; 0015 0079     eventLogQueue[slot].id                  = id;
 _0x2A0014:
-	CALL SUBOPT_0x2C2
+	CALL SUBOPT_0x2BD
 	SUBI R30,LOW(-_eventLogQueue)
 	SBCI R31,HIGH(-_eventLogQueue)
 	LDD  R26,Y+8
 	STD  Z+0,R26
 ; 0015 007A     eventLogQueue[slot].event.timestamp     = timestamp;
-	CALL SUBOPT_0x2C2
+	CALL SUBOPT_0x2BD
 	__ADDW1MN _eventLogQueue,1
-	CALL SUBOPT_0x214
+	CALL SUBOPT_0xA9
+	CALL SUBOPT_0x261
 ; 0015 007B     eventLogQueue[slot].event.eventID       = eventID;
-	CALL SUBOPT_0x2C2
+	CALL SUBOPT_0x2BD
 	__ADDW1MN _eventLogQueue,5
 	LDD  R26,Y+3
 	STD  Z+0,R26
 ; 0015 007C     eventLogQueue[slot].event.eventStatus   = eventStatus;
-	CALL SUBOPT_0x2C2
+	CALL SUBOPT_0x2BD
 	__ADDW1MN _eventLogQueue,6
 	LDD  R26,Y+2
 	STD  Z+0,R26
@@ -30253,9 +30266,9 @@ _0x2A0014:
 	STS  _eventLogQCount,R30
 ; 0015 007F     printDebug("\r\n<addEventLogQueue>                         Added (%02X) to eventLogQueue[%d] Count = %d\r\n",id,slot,eventLogQCount);
 	__POINTD1FN _0x2A0000,465
-	CALL SUBOPT_0x1F8
+	CALL SUBOPT_0x1F7
 	MOVW R30,R16
-	CALL SUBOPT_0x258
+	CALL SUBOPT_0x254
 	LDS  R30,_eventLogQCount
 	CALL SUBOPT_0x65
 	CALL SUBOPT_0x66
@@ -30295,7 +30308,7 @@ _0x2A0017:
 	BRGE _0x2A0018
 ; 0015 008D     {
 ; 0015 008E         if(id == eventLogQueue[i].id)                       // -- scan id in eventLogQueue
-	CALL SUBOPT_0x2C2
+	CALL SUBOPT_0x2BD
 	SUBI R30,LOW(-_eventLogQueue)
 	SBCI R31,HIGH(-_eventLogQueue)
 	LD   R30,Z
@@ -30304,18 +30317,18 @@ _0x2A0017:
 	BRNE _0x2A0019
 ; 0015 008F         {
 ; 0015 0090             *timestamp      =   eventLogQueue[i].event.timestamp;
-	CALL SUBOPT_0x2C2
+	CALL SUBOPT_0x2BD
 	__ADDW1MN _eventLogQueue,1
-	CALL SUBOPT_0x2BF
+	CALL SUBOPT_0x2BA
 ; 0015 0091             *eventID        =   eventLogQueue[i].event.eventID;
-	CALL SUBOPT_0x2C2
+	CALL SUBOPT_0x2BD
 	__ADDW1MN _eventLogQueue,5
 	LD   R30,Z
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	ST   X,R30
 ; 0015 0092             *eventStatus    =   eventLogQueue[i].event.eventStatus;
-	CALL SUBOPT_0x2C2
+	CALL SUBOPT_0x2BD
 	__ADDW1MN _eventLogQueue,6
 	LD   R30,Z
 	LDD  R26,Y+2
@@ -30364,17 +30377,17 @@ _0x2A001B:
 	BRSH _0x2A001C
 ; 0015 00A0     {
 ; 0015 00A1         if(id == eventLogQueue[i].id)                       // -- scan id in eventLogQueue
-	CALL SUBOPT_0x2C3
+	CALL SUBOPT_0x2BE
 	LD   R30,Z
 	LDD  R26,Y+1
 	CP   R30,R26
 	BRNE _0x2A001D
 ; 0015 00A2         {
 ; 0015 00A3             eventLogQueue[i].id                  = 0x00;
-	CALL SUBOPT_0x2C3
-	CALL SUBOPT_0x2C4
+	CALL SUBOPT_0x2BE
+	CALL SUBOPT_0x2BF
 ; 0015 00A4             eventLogQueue[i].event.timestamp     = 0;
-	CALL SUBOPT_0x2C5
+	CALL SUBOPT_0x2C0
 ; 0015 00A5             eventLogQueue[i].event.eventID       = 0;
 ; 0015 00A6             eventLogQueue[i].event.eventStatus   = 0;
 	__ADDW1MN _eventLogQueue,6
@@ -30387,8 +30400,8 @@ _0x2A001B:
 ; 0015 00A8 
 ; 0015 00A9             printDebug("\r\n<removeEventLogQueue>                      Removed (%02X) from eventLogQueue[%d]\r\n", id, i);
 	__POINTD1FN _0x2A0000,673
+	CALL SUBOPT_0x1FC
 	CALL SUBOPT_0x1FD
-	CALL SUBOPT_0x1FE
 ; 0015 00AA             return eventLogQCount;
 	LDS  R30,_eventLogQCount
 	LDI  R31,0
@@ -30426,7 +30439,7 @@ _0x2A001F:
 	CPI  R17,20
 	BRSH _0x2A0020
 ; 0015 00B5         if(eventLogQueue[i].id == 0x00){
-	CALL SUBOPT_0x2C3
+	CALL SUBOPT_0x2BE
 	LD   R30,Z
 	CPI  R30,0
 	BRNE _0x2A0021
@@ -30457,10 +30470,10 @@ _0x2A0023:
 	CPI  R17,20
 	BRSH _0x2A0024
 ; 0015 00C1         eventLogQueue[i].id                  = 0x00;
-	CALL SUBOPT_0x2C3
-	CALL SUBOPT_0x2C4
+	CALL SUBOPT_0x2BE
+	CALL SUBOPT_0x2BF
 ; 0015 00C2         eventLogQueue[i].event.timestamp     = 0;
-	CALL SUBOPT_0x2C5
+	CALL SUBOPT_0x2C0
 ; 0015 00C3         eventLogQueue[i].event.eventID       = 0;
 ; 0015 00C4         eventLogQueue[i].event.eventStatus   = 0;
 	__ADDW1MN _eventLogQueue,6
@@ -30578,7 +30591,7 @@ _MENU_processKey:
 	CPI  R26,LOW(0x1)
 	BRNE _0x2C0005
 ; 0016 003C             currentPage     = P_MAIN_MENU;
-	CALL SUBOPT_0x2C6
+	CALL SUBOPT_0x2C1
 ; 0016 003D             cursor          = 0;
 ; 0016 003E             printOLED("M1%1d",cursor);
 ; 0016 003F         }
@@ -30593,7 +30606,7 @@ _0x2C0004:
 	JMP _0x2C0007
 ; 0016 0042     {
 ; 0016 0043         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 0044         case KEY_MODE   :   currentPage = P_MONITOR;        cursor  = 0;        printOLED("M0");            break;
 	BRNE _0x2C000B
 	RJMP _0x2C02B4
@@ -30603,12 +30616,12 @@ _0x2C000B:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C000C
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C000D
 	LDI  R30,LOW(3)
 	STS  _cursor_S0160000000,R30
 _0x2C000D:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C000A
 ; 0016 0046         case KEY_DOWN   :   if(++cursor > 3){               cursor  = 0;    }   printOLED("MA%1d",cursor);  break;
 _0x2C000C:
@@ -30616,13 +30629,13 @@ _0x2C000C:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C000E
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x4)
 	BRLT _0x2C000F
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C000F:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C000A
 ; 0016 0047         case KEY_OK     :   if(cursor == 0){            // -- Device Config
 _0x2C000E:
@@ -30634,7 +30647,7 @@ _0x2C000E:
 	CPI  R30,0
 	BRNE _0x2C0011
 ; 0016 0048                                 currentPage = P_DEV_MENU;
-	CALL SUBOPT_0x2CB
+	CALL SUBOPT_0x2C6
 ; 0016 0049                                 cursor      = 0;
 ; 0016 004A                                 printOLED("M2%1d",cursor);
 ; 0016 004B                             }
@@ -30646,10 +30659,10 @@ _0x2C0011:
 	BRNE _0x2C0013
 ; 0016 004D                                 currentPage = P_PRB_MENU;
 	LDI  R30,LOW(14)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 004E                                 cursor      = 0;
 ; 0016 004F                                 printOLED("M3%1d",cursor);
-	CALL SUBOPT_0x2CD
+	CALL SUBOPT_0x2C8
 ; 0016 0050                             }
 ; 0016 0051                             else if(cursor == 2){       // -- Management
 	RJMP _0x2C0014
@@ -30659,10 +30672,10 @@ _0x2C0013:
 	BRNE _0x2C0015
 ; 0016 0052                                 currentPage = P_MANAGE_MENU;
 	LDI  R30,LOW(17)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0053                                 cursor      = 0;
 ; 0016 0054                                 printOLED("M4%1d",cursor);
-	CALL SUBOPT_0x2CE
+	CALL SUBOPT_0x2C9
 ; 0016 0055                             }
 ; 0016 0056                             else if(cursor == 3){       // -- Maintenance
 	RJMP _0x2C0016
@@ -30672,13 +30685,13 @@ _0x2C0015:
 	BRNE _0x2C0017
 ; 0016 0057                                 currentPage = P_ENTER_M_PASS;
 	LDI  R30,LOW(34)
-	CALL SUBOPT_0x2CF
+	CALL SUBOPT_0x2CA
 ; 0016 0058                                 tmpNextPage = P_MTNC_MENU;
 ; 0016 0059                                 tmpPrevPage = P_MAIN_MENU;
 	LDI  R30,LOW(1)
-	CALL SUBOPT_0x2D0
+	CALL SUBOPT_0x2CB
 ; 0016 005A                                 memset(entPwd,0xFF,sizeof(entPwd));
-	CALL SUBOPT_0x2D1
+	CALL SUBOPT_0x2CC
 ; 0016 005B                                 cursor      = 0;
 ; 0016 005C                                 printOLED("P1");
 	__POINTD1FN _0x2C0000,33
@@ -30689,13 +30702,13 @@ _0x2C0017:
 ; 0016 005F                                 currentPage = P_MONITOR;
 _0x2C02B4:
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0060                                 cursor      = 0;
 ; 0016 0061                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
+	CALL SUBOPT_0x2CD
 _0x2C02B5:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 0062                             }
 _0x2C0016:
 _0x2C0014:
@@ -30713,10 +30726,10 @@ _0x2C0007:
 	JMP _0x2C001A
 ; 0016 0067     {
 ; 0016 0068         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 0069         case KEY_MODE   :   currentPage = P_MAIN_MENU;      cursor  = 0;            printOLED("M1%1d",cursor);  break;
 	BRNE _0x2C001E
-	CALL SUBOPT_0x2C6
+	CALL SUBOPT_0x2C1
 	RJMP _0x2C001D
 ; 0016 006A         case KEY_UP     :   if(--cursor < 0){               cursor  = 1;    }       printOLED("MA%1d",cursor);  break;
 _0x2C001E:
@@ -30724,12 +30737,12 @@ _0x2C001E:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C001F
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C0020
 	LDI  R30,LOW(1)
 	STS  _cursor_S0160000000,R30
 _0x2C0020:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C001D
 ; 0016 006B         case KEY_DOWN   :   if(++cursor > 1){               cursor  = 0;    }       printOLED("MA%1d",cursor);  break;
 _0x2C001F:
@@ -30737,13 +30750,13 @@ _0x2C001F:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C0021
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x2)
 	BRLT _0x2C0022
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C0022:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C001D
 ; 0016 006C         case KEY_OK     :   if(cursor == 0){            // -- View Device Config
 _0x2C0021:
@@ -30756,10 +30769,10 @@ _0x2C0021:
 	BRNE _0x2C0024
 ; 0016 006D                                 currentPage = P_DEV_V_MENU;
 	LDI  R30,LOW(3)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 006E                                 cursor      = 0;
 ; 0016 006F                                 printOLED("M5%1d",cursor);
-	CALL SUBOPT_0x2D3
+	CALL SUBOPT_0x2CE
 ; 0016 0070                             }
 ; 0016 0071                             else if(cursor == 1){       // -- Set Device Config
 	RJMP _0x2C0025
@@ -30769,29 +30782,29 @@ _0x2C0024:
 	BRNE _0x2C0026
 ; 0016 0072                                 currentPage = P_ENTER_U_PASS;
 	LDI  R30,LOW(33)
-	CALL SUBOPT_0x2D4
+	CALL SUBOPT_0x2CF
 ; 0016 0073                                 tmpNextPage = P_DEV_S_MENU;
 ; 0016 0074                                 tmpPrevPage = P_DEV_MENU;
 	LDI  R30,LOW(2)
-	CALL SUBOPT_0x2D0
+	CALL SUBOPT_0x2CB
 ; 0016 0075                                 memset(entPwd,0xFF,sizeof(entPwd));
-	CALL SUBOPT_0x2D1
+	CALL SUBOPT_0x2CC
 ; 0016 0076                                 cursor      = 0;
 ; 0016 0077                                 printOLED("P0");
-	CALL SUBOPT_0x2D5
+	CALL SUBOPT_0x2D0
 	RJMP _0x2C02B6
 ; 0016 0078                             }
 ; 0016 0079                             else{                       // -- Exit -- should not occur
 _0x2C0026:
 ; 0016 007A                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 007B                                 cursor      = 0;
 ; 0016 007C                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
+	CALL SUBOPT_0x2CD
 _0x2C02B6:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 007D                             }
 _0x2C0025:
 ; 0016 007E             break;
@@ -30807,10 +30820,10 @@ _0x2C001A:
 	JMP _0x2C0029
 ; 0016 0082     {
 ; 0016 0083         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 0084         case KEY_MODE   :   currentPage = P_DEV_MENU;       cursor  = 0;            printOLED("M2%1d",cursor);  break;
 	BRNE _0x2C002D
-	CALL SUBOPT_0x2CB
+	CALL SUBOPT_0x2C6
 	RJMP _0x2C002C
 ; 0016 0085         /* // -- disable network view -- //
 ; 0016 0086         case KEY_UP     :   if(--cursor < 0){               cursor  = 1;    }       printOLED("MA%1d",cursor);  break;
@@ -30823,12 +30836,12 @@ _0x2C002D:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C002E
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C002F
 	LDI  R30,LOW(2)
 	STS  _cursor_S0160000000,R30
 _0x2C002F:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C002C
 ; 0016 008B         case KEY_DOWN   :   if(++cursor > 2){               cursor  = 0;    }       printOLED("MA%1d",cursor);  break;
 _0x2C002E:
@@ -30836,13 +30849,13 @@ _0x2C002E:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C0030
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x3)
 	BRLT _0x2C0031
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C0031:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C002C
 ; 0016 008C         case KEY_OK     :   if(cursor == 0){            // -- View Properties
 _0x2C0030:
@@ -30856,13 +30869,13 @@ _0x2C0030:
 	BRNE _0x2C0033
 ; 0016 008D                                 currentPage = P_DEV_V_PROP;
 	LDI  R30,LOW(4)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 008E                                 cursor      = 0;
 ; 0016 008F                                 printDebug("<MENU_processKey> VP%s,%s,%s,",  properties_config.deviceID,
 ; 0016 0090                                                                             properties_config.hostID,
 ; 0016 0091                                                                             properties_config.firmwareVersion);
 	__POINTD1FN _0x2C0000,45
-	CALL SUBOPT_0x2D6
+	CALL SUBOPT_0x2D1
 	__POINTW1MN _properties_config,140
 	CALL SUBOPT_0x34
 	__POINTW1MN _properties_config,20
@@ -30873,7 +30886,7 @@ _0x2C0030:
 ; 0016 0094                                                         properties_config.hostID,
 ; 0016 0095                                                         properties_config.firmwareVersion);
 	__POINTD1FN _0x2C0000,63
-	CALL SUBOPT_0x2D6
+	CALL SUBOPT_0x2D1
 	__POINTW1MN _properties_config,140
 	CALL SUBOPT_0x34
 	__POINTW1MN _properties_config,20
@@ -30891,22 +30904,22 @@ _0x2C0033:
 	JMP _0x2C0035
 ; 0016 0098                                 currentPage = P_DEV_V_OPER;
 	LDI  R30,LOW(5)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0099                                 cursor      = 0;
 ; 0016 009A 
 ; 0016 009B                                 memset(cmd,'\0',sizeof(cmd));   sprintf(cmd,"");
 	MOVW R30,R28
 	ADIW R30,8
-	CALL SUBOPT_0xF7
-	CALL SUBOPT_0x2D7
+	CALL SUBOPT_0xF6
+	CALL SUBOPT_0x2D2
 ; 0016 009C                                 memset(str,'\0',sizeof(str));
-	CALL SUBOPT_0x2D8
-	CALL SUBOPT_0x2D9
+	CALL SUBOPT_0x2D3
+	CALL SUBOPT_0x2D4
 ; 0016 009D                                 if(     operating_config.mode == MODE_REALTIME){    sprintf(str,"Realtime,");   }
 	LDS  R26,_operating_config
 	CPI  R26,LOW(0x10)
 	BRNE _0x2C0036
-	CALL SUBOPT_0x2DA
+	CALL SUBOPT_0x2D5
 	__POINTD1FN _0x2C0000,75
 	RJMP _0x2C02B7
 ; 0016 009E                                 else if(operating_config.mode == MODE_DATALOGGER){  sprintf(str,"Datalogger,"); }
@@ -30914,59 +30927,59 @@ _0x2C0036:
 	LDS  R26,_operating_config
 	CPI  R26,LOW(0x20)
 	BRNE _0x2C0038
-	CALL SUBOPT_0x2DA
+	CALL SUBOPT_0x2D5
 	__POINTD1FN _0x2C0000,85
 	RJMP _0x2C02B7
 ; 0016 009F                                 else{                                               sprintf(str,"Unknown,");    }
 _0x2C0038:
-	CALL SUBOPT_0x2DA
+	CALL SUBOPT_0x2D5
 	__POINTD1FN _0x2C0000,97
 _0x2C02B7:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x2DB
+	CALL SUBOPT_0x2D6
 ; 0016 00A0                                 strcat(cmd,str);
-	CALL SUBOPT_0x2DC
+	CALL SUBOPT_0x2D7
 ; 0016 00A1 
 ; 0016 00A2                                 memset(str,'\0',sizeof(str));
-	CALL SUBOPT_0x2D9
+	CALL SUBOPT_0x2D4
 ; 0016 00A3                                 if(     operating_config.deviceEnable == 0x01   ){  sprintf(str,"Enable,");     }
 	__GETB2MN _operating_config,1
 	CPI  R26,LOW(0x1)
 	BRNE _0x2C003A
-	CALL SUBOPT_0x2DA
+	CALL SUBOPT_0x2D5
 	__POINTD1FN _0x2C0000,106
 	RJMP _0x2C02B8
 ; 0016 00A4                                 else{                                               sprintf(str,"Disable,");    }
 _0x2C003A:
-	CALL SUBOPT_0x2DA
+	CALL SUBOPT_0x2D5
 	__POINTD1FN _0x2C0000,114
 _0x2C02B8:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x2DB
+	CALL SUBOPT_0x2D6
 ; 0016 00A5                                 strcat(cmd,str);
-	CALL SUBOPT_0x2DC
+	CALL SUBOPT_0x2D7
 ; 0016 00A6 
 ; 0016 00A7                                 memset(str,'\0',sizeof(str));
-	CALL SUBOPT_0x2D9
+	CALL SUBOPT_0x2D4
 ; 0016 00A8                                 if(     operating_config.alarmEnable  == 0x01   ){  sprintf(str,"Enable,");     }
 	__GETB2MN _operating_config,2
 	CPI  R26,LOW(0x1)
 	BRNE _0x2C003C
-	CALL SUBOPT_0x2DA
+	CALL SUBOPT_0x2D5
 	__POINTD1FN _0x2C0000,106
 	RJMP _0x2C02B9
 ; 0016 00A9                                 else{                                               sprintf(str,"Disable,");    }
 _0x2C003C:
-	CALL SUBOPT_0x2DA
+	CALL SUBOPT_0x2D5
 	__POINTD1FN _0x2C0000,114
 _0x2C02B9:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x2DB
+	CALL SUBOPT_0x2D6
 ; 0016 00AA                                 strcat(cmd,str);
-	CALL SUBOPT_0x2DC
+	CALL SUBOPT_0x2D7
 ; 0016 00AB 
 ; 0016 00AC                                 memset(str,'\0',sizeof(str));
-	CALL SUBOPT_0x2D9
+	CALL SUBOPT_0x2D4
 ; 0016 00AD                                 for(i=0,j=0;i<MAX_SENS_CHANNEL;i++){
 	__GETWRN 16,17,0
 	__GETWRN 18,19,0
@@ -30974,16 +30987,16 @@ _0x2C003F:
 	__CPWRN 16,17,5
 	BRGE _0x2C0040
 ; 0016 00AE                                     if(operating_config.sensorEnable[i]==0x01   ){  str[j++] = 'E';             }
-	CALL SUBOPT_0x2DD
+	CALL SUBOPT_0x2D8
 	LD   R26,Z
 	CPI  R26,LOW(0x1)
 	BRNE _0x2C0041
-	CALL SUBOPT_0x2DE
+	CALL SUBOPT_0x2D9
 	LDI  R30,LOW(69)
 	RJMP _0x2C02BA
 ; 0016 00AF                                     else{                                           str[j++] = 'D';             }
 _0x2C0041:
-	CALL SUBOPT_0x2DE
+	CALL SUBOPT_0x2D9
 	LDI  R30,LOW(68)
 _0x2C02BA:
 	ST   X,R30
@@ -30991,7 +31004,7 @@ _0x2C02BA:
 	__CPWRN 16,17,4
 	BRGE _0x2C0043
 ; 0016 00B1                                         str[j++] = '/';
-	CALL SUBOPT_0x2DE
+	CALL SUBOPT_0x2D9
 	LDI  R30,LOW(47)
 	ST   X,R30
 ; 0016 00B2                                     }
@@ -31002,11 +31015,11 @@ _0x2C0043:
 	RJMP _0x2C003F
 _0x2C0040:
 ; 0016 00B5                                 str[j++]    = ',';
-	CALL SUBOPT_0x2DE
+	CALL SUBOPT_0x2D9
 	LDI  R30,LOW(44)
 	ST   X,R30
 ; 0016 00B6                                 str[j++]    = '\0';
-	CALL SUBOPT_0x2DE
+	CALL SUBOPT_0x2D9
 	LDI  R30,LOW(0)
 	ST   X,R30
 ; 0016 00B7                                 strcat(cmd,str);
@@ -31021,12 +31034,12 @@ _0x2C0040:
 ; 0016 00B9 
 ; 0016 00BA                                 printDebug("<MENU_processKey> VO%s", cmd);
 	__POINTD1FN _0x2C0000,123
-	CALL SUBOPT_0x2DF
+	CALL SUBOPT_0x2DA
 	CALL SUBOPT_0x12
 ; 0016 00BB                                 printOLED("VO%s", cmd);
 	__POINTD1FN _0x2C0000,141
-	CALL SUBOPT_0x2DF
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x2DA
+	CALL SUBOPT_0x28A
 ; 0016 00BC                             }
 ; 0016 00BD                             else if(cursor == 2){       // -- View Network Config
 	RJMP _0x2C0044
@@ -31039,8 +31052,8 @@ _0x2C0035:
 ; 0016 00BF                                 memset(cmd,'\0',sizeof(cmd));   sprintf(cmd,"");
 	MOVW R30,R28
 	ADIW R30,8
-	CALL SUBOPT_0xF7
-	CALL SUBOPT_0x2D7
+	CALL SUBOPT_0xF6
+	CALL SUBOPT_0x2D2
 ; 0016 00C0 
 ; 0016 00C1                                 msg = (unsigned char *) malloc( sizeof(char) * CONF_READ_BUFFER );
 	LDI  R26,LOW(325)
@@ -31048,20 +31061,20 @@ _0x2C0035:
 	CALL _malloc
 	__PUTW1SX 84
 ; 0016 00C2                                 if(msg == NULL){
-	CALL SUBOPT_0x2E0
+	CALL SUBOPT_0x2DB
 	SBIW R30,0
 	BRNE _0x2C0046
 ; 0016 00C3                                     printDebug("<MENU_processKey> malloc(CONF_READ_BUFFER) failed\r\n");
 	__POINTD1FN _0x2C0000,146
 	CALL SUBOPT_0x3
 ; 0016 00C4                                     currentPage = P_DEV_MENU;       cursor  = 0;            printOLED("M2%1d",cursor);  break;
-	CALL SUBOPT_0x2CB
+	CALL SUBOPT_0x2C6
 	RJMP _0x2C002C
 ; 0016 00C5                                 }
 ; 0016 00C6 
 ; 0016 00C7                                 res = ETH_getConfig(msg,&msg_len);
 _0x2C0046:
-	CALL SUBOPT_0x2E0
+	CALL SUBOPT_0x2DB
 	ST   -Y,R31
 	ST   -Y,R30
 	MOVW R26,R28
@@ -31090,13 +31103,13 @@ _0x2C0047:
 ; 0016 00CE                                     for(i=0;i<msg_len;i++){
 	__GETWRN 16,17,0
 _0x2C004A:
-	CALL SUBOPT_0x2E1
+	CALL SUBOPT_0x2DC
 	CP   R16,R30
 	CPC  R17,R31
 	BRSH _0x2C004B
 ; 0016 00CF                                         putchar3(msg[i]);
 	MOVW R30,R16
-	CALL SUBOPT_0x2E2
+	CALL SUBOPT_0x2DD
 	ADD  R26,R30
 	ADC  R27,R31
 	LD   R26,X
@@ -31113,10 +31126,10 @@ _0x2C02BB:
 ; 0016 00D2                                 }
 ; 0016 00D3 
 ; 0016 00D4                                 res = getNetworkInfo(msg,&setIp[0],&setMask[0],&setGw[0],&setServer[0]);
-	CALL SUBOPT_0x2E0
+	CALL SUBOPT_0x2DB
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0x2E3
+	CALL SUBOPT_0x2DE
 	CALL _getNetworkInfo
 	MOVW R20,R30
 ; 0016 00D5                                 if(res<0){
@@ -31135,7 +31148,7 @@ _0x2C02BB:
 ; 0016 00DA                                 currentPage = P_DEV_V_NETW;
 _0x2C004C:
 	LDI  R30,LOW(6)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 00DB                                 cursor      = 0;
 ; 0016 00DC 
 ; 0016 00DD                                 printDebug("<MENU_processKey> VN%u.%u.%u.%u,%u.%u.%u.%u,%u.%u.%u.%u,%u.%u.%u.%u,\r\n",
@@ -31156,6 +31169,11 @@ _0x2C004C:
 ; 0016 00EC                                             (setServer[6]*100) + (setServer[7] *10) + setServer[8],
 ; 0016 00ED                                             (setServer[9]*100) + (setServer[10]*10) + setServer[11]);
 	__POINTD1FN _0x2C0000,366
+	CALL SUBOPT_0x2DF
+	CALL SUBOPT_0x2E0
+	CALL SUBOPT_0x2E1
+	CALL SUBOPT_0x2E2
+	CALL SUBOPT_0x2E3
 	CALL SUBOPT_0x2E4
 	CALL SUBOPT_0x2E5
 	CALL SUBOPT_0x2E6
@@ -31167,11 +31185,6 @@ _0x2C004C:
 	CALL SUBOPT_0x2EC
 	CALL SUBOPT_0x2ED
 	CALL SUBOPT_0x2EE
-	CALL SUBOPT_0x2EF
-	CALL SUBOPT_0x2F0
-	CALL SUBOPT_0x2F1
-	CALL SUBOPT_0x2F2
-	CALL SUBOPT_0x2F3
 	LDI  R24,64
 	CALL _printDebug
 	ADIW R28,63
@@ -31195,6 +31208,11 @@ _0x2C004C:
 ; 0016 00FE                                             (setServer[6]*100) + (setServer[7] *10) + setServer[8],
 ; 0016 00FF                                             (setServer[9]*100) + (setServer[10]*10) + setServer[11]);
 	__POINTD1FN _0x2C0000,437
+	CALL SUBOPT_0x2DF
+	CALL SUBOPT_0x2E0
+	CALL SUBOPT_0x2E1
+	CALL SUBOPT_0x2E2
+	CALL SUBOPT_0x2E3
 	CALL SUBOPT_0x2E4
 	CALL SUBOPT_0x2E5
 	CALL SUBOPT_0x2E6
@@ -31206,17 +31224,12 @@ _0x2C004C:
 	CALL SUBOPT_0x2EC
 	CALL SUBOPT_0x2ED
 	CALL SUBOPT_0x2EE
-	CALL SUBOPT_0x2EF
-	CALL SUBOPT_0x2F0
-	CALL SUBOPT_0x2F1
-	CALL SUBOPT_0x2F2
-	CALL SUBOPT_0x2F3
 	LDI  R24,64
 	CALL _printOLED
 	ADIW R28,63
 	ADIW R28,5
 ; 0016 0100                                 free( msg );
-	CALL SUBOPT_0x2E2
+	CALL SUBOPT_0x2DD
 	CALL _free
 ; 0016 0101                             }
 ; 0016 0102                             else{                       // -- Exit -- should not occur
@@ -31224,11 +31237,11 @@ _0x2C004C:
 _0x2C0045:
 ; 0016 0103                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0104                                 cursor      = 0;
 ; 0016 0105                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2CD
+	CALL SUBOPT_0x2EF
 ; 0016 0106                             }
 _0x2C004D:
 _0x2C0044:
@@ -31245,7 +31258,7 @@ _0x2C0029:
 	BRNE _0x2C004F
 ; 0016 010B     {
 ; 0016 010C         switch(key){
-	CALL SUBOPT_0x2F5
+	CALL SUBOPT_0x2F0
 ; 0016 010D         case KEY_UP     :   /* no operation */                                                                  break;
 	BREQ _0x2C0052
 ; 0016 010E         case KEY_DOWN   :   /* no operation */                                                                  break;
@@ -31265,10 +31278,10 @@ _0x2C0029:
 	BRNE _0x2C0052
 _0x2C0056:
 	LDI  R30,LOW(3)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0111                             cursor      = 0;
 ; 0016 0112                             printOLED("M5%1d",cursor);
-	CALL SUBOPT_0x2D3
+	CALL SUBOPT_0x2CE
 ; 0016 0113                         break;
 ; 0016 0114         }
 _0x2C0052:
@@ -31281,7 +31294,7 @@ _0x2C004F:
 	BRNE _0x2C0059
 ; 0016 0117     {
 ; 0016 0118         switch(key){
-	CALL SUBOPT_0x2F5
+	CALL SUBOPT_0x2F0
 ; 0016 0119         case KEY_UP     :   /* no operation */                                                                  break;
 	BREQ _0x2C005C
 ; 0016 011A         case KEY_DOWN   :   /* no operation */                                                                  break;
@@ -31301,10 +31314,10 @@ _0x2C004F:
 	BRNE _0x2C005C
 _0x2C0060:
 	LDI  R30,LOW(3)
-	CALL SUBOPT_0x2F6
+	CALL SUBOPT_0x2F1
 ; 0016 011D                             cursor      = 1;
 ; 0016 011E                             printOLED("M5%1d",cursor);
-	CALL SUBOPT_0x2D3
+	CALL SUBOPT_0x2CE
 ; 0016 011F                         break;
 ; 0016 0120         }
 _0x2C005C:
@@ -31317,7 +31330,7 @@ _0x2C0059:
 	BRNE _0x2C0063
 ; 0016 0123     {
 ; 0016 0124         switch(key){
-	CALL SUBOPT_0x2F5
+	CALL SUBOPT_0x2F0
 ; 0016 0125         case KEY_UP     :   /* no operation */                                                                  break;
 	BREQ _0x2C0066
 ; 0016 0126         case KEY_DOWN   :   /* no operation */                                                                  break;
@@ -31337,10 +31350,10 @@ _0x2C0059:
 	BRNE _0x2C0066
 _0x2C006A:
 	LDI  R30,LOW(3)
-	CALL SUBOPT_0x2F7
+	CALL SUBOPT_0x2F2
 ; 0016 0129                             cursor      = 2;
 ; 0016 012A                             printOLED("M5%1d",cursor);
-	CALL SUBOPT_0x2D3
+	CALL SUBOPT_0x2CE
 ; 0016 012B                         break;
 ; 0016 012C         }
 _0x2C0066:
@@ -31354,13 +31367,13 @@ _0x2C0063:
 	JMP _0x2C006D
 ; 0016 012F     {
 ; 0016 0130         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 0131         case KEY_MODE   :   currentPage = P_DEV_MENU;       cursor  = 1;            printOLED("M2%1d",cursor);  break;
 	BRNE _0x2C0071
 	LDI  R30,LOW(2)
-	CALL SUBOPT_0x2F6
-	CALL SUBOPT_0x2F8
-	CALL SUBOPT_0x2F9
+	CALL SUBOPT_0x2F1
+	CALL SUBOPT_0x2F3
+	CALL SUBOPT_0x2F4
 	RJMP _0x2C0070
 ; 0016 0132         //case KEY_UP     :   break;
 ; 0016 0133         //case KEY_DOWN   :   break;
@@ -31371,12 +31384,12 @@ _0x2C0071:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C0072
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C0073
 	LDI  R30,LOW(1)
 	STS  _cursor_S0160000000,R30
 _0x2C0073:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C0070
 ; 0016 0136         case KEY_DOWN   :   if(++cursor > 1){               cursor  = 0;    }       printOLED("MA%1d",cursor);  break;
 _0x2C0072:
@@ -31384,13 +31397,13 @@ _0x2C0072:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C0074
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x2)
 	BRLT _0x2C0075
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C0075:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C0070
 ; 0016 0137 
 ; 0016 0138         case KEY_OK     :   if(cursor == 0){            // -- Set Operate Config
@@ -31405,7 +31418,7 @@ _0x2C0074:
 	BRNE _0x2C0077
 ; 0016 0139                                 currentPage = P_DEV_S_OPER;
 	LDI  R30,LOW(8)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 013A                                 cursor      = 0;
 ; 0016 013B                                 devEn       = operating_config.deviceEnable;
 	__GETB1MN _operating_config,1
@@ -31415,21 +31428,21 @@ _0x2C0074:
 	STS  _almEn_S0160000000,R30
 ; 0016 013D                                 printDebug("<MENU_processKey> devEn[%d] almEn[%d]",devEn,almEn);
 	__POINTD1FN _0x2C0000,488
-	CALL SUBOPT_0x2FA
+	CALL SUBOPT_0x2F5
 	LDS  R30,_almEn_S0160000000
-	CALL SUBOPT_0x239
+	CALL SUBOPT_0x231
 ; 0016 013E                                 printOLED("SO%1d",cursor);
-	CALL SUBOPT_0x2FB
+	CALL SUBOPT_0x2F6
 ; 0016 013F                                 printOLED("ED2%1d",devEn);
 	__POINTD1FN _0x2C0000,532
-	CALL SUBOPT_0x2FA
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x2F5
+	CALL SUBOPT_0x28A
 ; 0016 0140                                 printOLED("ED3%1d",almEn);
 	__POINTD1FN _0x2C0000,539
 	CALL __PUTPARD1
 	LDS  R30,_almEn_S0160000000
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x28A
 ; 0016 0141                             }
 ; 0016 0142                             else if(cursor == 1){       // -- Set Network Config
 	RJMP _0x2C0078
@@ -31439,22 +31452,22 @@ _0x2C0077:
 	BRNE _0x2C0079
 ; 0016 0143                                 currentPage = P_DEV_S_IP;
 	LDI  R30,LOW(9)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0144                                 cursor      = 0;
 ; 0016 0145                                 printOLED("SI");
 	__POINTD1FN _0x2C0000,546
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2EF
 ; 0016 0146                                 for(i=0;i<12;i++){
 	__GETWRN 16,17,0
 _0x2C007B:
 	__CPWRN 16,17,12
 	BRGE _0x2C007C
 ; 0016 0147                                     printOLED("ID%1X%1d",i,setIp[i]);
-	CALL SUBOPT_0x2FC
+	CALL SUBOPT_0x2F7
 	LDI  R26,LOW(_setIp_S0160000000)
 	LDI  R27,HIGH(_setIp_S0160000000)
-	CALL SUBOPT_0x2FD
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x2F8
+	CALL SUBOPT_0x286
 ; 0016 0148                                 }
 	__ADDWRN 16,17,1
 	RJMP _0x2C007B
@@ -31465,11 +31478,11 @@ _0x2C007C:
 _0x2C0079:
 ; 0016 014B                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 014C                                 cursor      = 0;
 ; 0016 014D                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2CD
+	CALL SUBOPT_0x2EF
 ; 0016 014E                             }
 _0x2C007D:
 _0x2C0078:
@@ -31486,12 +31499,12 @@ _0x2C006D:
 	JMP _0x2C007F
 ; 0016 0153     {
 ; 0016 0154         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 0155         case KEY_MODE   :   currentPage = P_DEV_S_MENU;     cursor  = 0;            printOLED("M6%1d",cursor);  break;
 	BRNE _0x2C0083
 	LDI  R30,LOW(7)
-	CALL SUBOPT_0x2CC
-	CALL SUBOPT_0x2FE
+	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2F9
 	RJMP _0x2C0082
 ; 0016 0156         case KEY_UP     :   if(--cursor < 0){               cursor  = 2;    }       printOLED("SO%1d",cursor);  break;
 _0x2C0083:
@@ -31499,12 +31512,12 @@ _0x2C0083:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C0084
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C0085
 	LDI  R30,LOW(2)
 	STS  _cursor_S0160000000,R30
 _0x2C0085:
-	CALL SUBOPT_0x2FB
+	CALL SUBOPT_0x2F6
 	RJMP _0x2C0082
 ; 0016 0157         case KEY_DOWN   :   if(++cursor > 2){               cursor  = 0;    }       printOLED("SO%1d",cursor);  break;
 _0x2C0084:
@@ -31512,13 +31525,13 @@ _0x2C0084:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C0086
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x3)
 	BRLT _0x2C0087
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C0087:
-	CALL SUBOPT_0x2FB
+	CALL SUBOPT_0x2F6
 	RJMP _0x2C0082
 ; 0016 0158         case KEY_OK     :   if(cursor == 0){            // -- Set Device Enable
 _0x2C0086:
@@ -31536,14 +31549,14 @@ _0x2C0086:
 	STS  _devEn_S0160000000,R30
 ; 0016 015A                                 printDebug("<MENU_processKey> devEn -> ED%1d%1d",cursor+2,devEn);
 	__POINTD1FN _0x2C0000,564
-	CALL SUBOPT_0x2FF
+	CALL SUBOPT_0x2FA
 	LDS  R30,_devEn_S0160000000
-	CALL SUBOPT_0x239
+	CALL SUBOPT_0x231
 ; 0016 015B                                 printOLED("ED%1d%1d",cursor+2,devEn);
-	CALL SUBOPT_0x300
+	CALL SUBOPT_0x2FB
 	LDS  R30,_devEn_S0160000000
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x286
 ; 0016 015C                             }
 ; 0016 015D                             else if(cursor == 1){       // -- Set Alarm Enable
 	RJMP _0x2C008A
@@ -31557,14 +31570,14 @@ _0x2C0089:
 	STS  _almEn_S0160000000,R30
 ; 0016 015F                                 printDebug("<MENU_processKey> almEn -> ED%1d%1d",cursor+2,almEn);
 	__POINTD1FN _0x2C0000,600
-	CALL SUBOPT_0x2FF
+	CALL SUBOPT_0x2FA
 	LDS  R30,_almEn_S0160000000
-	CALL SUBOPT_0x239
+	CALL SUBOPT_0x231
 ; 0016 0160                                 printOLED("ED%1d%1d",cursor+2,almEn);
-	CALL SUBOPT_0x300
+	CALL SUBOPT_0x2FB
 	LDS  R30,_almEn_S0160000000
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x286
 ; 0016 0161                             }
 ; 0016 0162                             else if(cursor == 2){       // -- Display Finish page
 	RJMP _0x2C008C
@@ -31580,36 +31593,36 @@ _0x2C008B:
 	LDS  R30,_almEn_S0160000000
 	__PUTB1MN _operating_config,2
 ; 0016 0166                                 res = setOperatingConfig(&operating_config);
-	CALL SUBOPT_0x301
+	CALL SUBOPT_0x2FC
 ; 0016 0167                                 if(res < 0){
 	BRPL _0x2C008E
 ; 0016 0168                                     printDebug("<MENU_processKey> setOperatingConfig() failed\r\n");
-	CALL SUBOPT_0x302
+	CALL SUBOPT_0x2FD
 ; 0016 0169                                     currentPage = P_FAILED;
 	LDI  R30,LOW(37)
-	CALL SUBOPT_0x2D4
+	CALL SUBOPT_0x2CF
 ; 0016 016A                                     tmpNextPage = P_DEV_S_MENU;
 ; 0016 016B                                     tmpPrevPage = P_DEV_S_OPER;
-	CALL SUBOPT_0x303
+	CALL SUBOPT_0x2FE
 ; 0016 016C                                     cursor      = 0;
 ; 0016 016D                                     printOLED("FL");
-	CALL SUBOPT_0x304
+	CALL SUBOPT_0x2FF
 	RJMP _0x2C02BC
 ; 0016 016E                                 }
 ; 0016 016F                                 else{
 _0x2C008E:
 ; 0016 0170                                     currentPage = P_FINISH;
 	LDI  R30,LOW(36)
-	CALL SUBOPT_0x2D4
+	CALL SUBOPT_0x2CF
 ; 0016 0171                                     tmpNextPage = P_DEV_S_MENU;
 ; 0016 0172                                     tmpPrevPage = P_DEV_S_OPER;
-	CALL SUBOPT_0x303
+	CALL SUBOPT_0x2FE
 ; 0016 0173                                     cursor      = 0;
 ; 0016 0174                                     printOLED("FI");
-	CALL SUBOPT_0x305
+	CALL SUBOPT_0x300
 _0x2C02BC:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 0175                                 }
 ; 0016 0176                             }
 ; 0016 0177                             else{                       // -- Exit -- should not occur
@@ -31617,11 +31630,11 @@ _0x2C02BC:
 _0x2C008D:
 ; 0016 0178                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0179                                 cursor      = 0;
 ; 0016 017A                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2CD
+	CALL SUBOPT_0x2EF
 ; 0016 017B                             }
 _0x2C0090:
 _0x2C008C:
@@ -31639,12 +31652,12 @@ _0x2C007F:
 	JMP _0x2C0092
 ; 0016 0180     {
 ; 0016 0181         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 0182         case KEY_MODE   :   currentPage = P_DEV_S_MENU;     cursor  = 1;            printOLED("M6%1d",cursor);              break;
 	BRNE _0x2C0096
 	LDI  R30,LOW(7)
-	CALL SUBOPT_0x2F6
-	CALL SUBOPT_0x2FE
+	CALL SUBOPT_0x2F1
+	CALL SUBOPT_0x2F9
 	RJMP _0x2C0095
 ; 0016 0183         case KEY_UP     :   if(++cursor > 12){              cursor  = 0;    }       printOLED("IA%1X",cursor);              break;
 _0x2C0096:
@@ -31652,13 +31665,13 @@ _0x2C0096:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C0097
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0xD)
 	BRLT _0x2C0098
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C0098:
-	CALL SUBOPT_0x306
+	CALL SUBOPT_0x301
 	RJMP _0x2C0095
 ; 0016 0184         case KEY_DOWN   :   if(--cursor < 0){               cursor  = 12;   }       printOLED("IA%1X",cursor);              break;
 _0x2C0097:
@@ -31666,12 +31679,12 @@ _0x2C0097:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C0099
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C009A
 	LDI  R30,LOW(12)
 	STS  _cursor_S0160000000,R30
 _0x2C009A:
-	CALL SUBOPT_0x306
+	CALL SUBOPT_0x301
 	RJMP _0x2C0095
 ; 0016 0185         case KEY_OK     :   if(cursor == 12){
 _0x2C0099:
@@ -31691,18 +31704,18 @@ _0x2C0099:
 	STS  _currentPage,R30
 ; 0016 0188                                 printOLED("SM");
 	__POINTD1FN _0x2C0000,696
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2EF
 ; 0016 0189                                 for(i=0;i<12;i++){
 	__GETWRN 16,17,0
 _0x2C009E:
 	__CPWRN 16,17,12
 	BRGE _0x2C009F
 ; 0016 018A                                     printOLED("ID%1X%1d",i,setMask[i]);
-	CALL SUBOPT_0x2FC
+	CALL SUBOPT_0x2F7
 	LDI  R26,LOW(_setMask_S0160000000)
 	LDI  R27,HIGH(_setMask_S0160000000)
-	CALL SUBOPT_0x2FD
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x2F8
+	CALL SUBOPT_0x286
 ; 0016 018B                                 }
 	__ADDWRN 16,17,1
 	RJMP _0x2C009E
@@ -31715,45 +31728,45 @@ _0x2C009C:
 	CPI  R26,LOW(0xC)
 	BRGE _0x2C00A1
 ; 0016 018E                                 if((cursor%3) == 0){
-	CALL SUBOPT_0x307
+	CALL SUBOPT_0x302
 	BRNE _0x2C00A2
 ; 0016 018F                                     if(++setIp[cursor] >2)  setIp[cursor] = 0;
-	CALL SUBOPT_0x308
+	CALL SUBOPT_0x303
 	CPI  R30,LOW(0x3)
 	BRLO _0x2C00A3
-	CALL SUBOPT_0x309
+	CALL SUBOPT_0x304
 ; 0016 0190                                 }
 _0x2C00A3:
 ; 0016 0191                                 else{
 	RJMP _0x2C00A4
 _0x2C00A2:
 ; 0016 0192                                     if(++setIp[cursor] >9)  setIp[cursor] = 0;
-	CALL SUBOPT_0x308
+	CALL SUBOPT_0x303
 	CPI  R30,LOW(0xA)
 	BRLO _0x2C00A5
-	CALL SUBOPT_0x309
+	CALL SUBOPT_0x304
 ; 0016 0193                                 }
 _0x2C00A5:
 _0x2C00A4:
 ; 0016 0194                                 //if(++setIp[cursor] >9)  setIp[cursor] = 0;
 ; 0016 0195                                 printOLED("ID%1X%1d",cursor, setIp[cursor]);
-	CALL SUBOPT_0x30A
+	CALL SUBOPT_0x305
 	SUBI R30,LOW(-_setIp_S0160000000)
 	SBCI R31,HIGH(-_setIp_S0160000000)
 	LD   R30,Z
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x286
 ; 0016 0196                             }
 ; 0016 0197                             else{                       // -- Exit -- should not occur
 	RJMP _0x2C00A6
 _0x2C00A1:
 ; 0016 0198                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0199                                 cursor      = 0;
 ; 0016 019A                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2CD
+	CALL SUBOPT_0x2EF
 ; 0016 019B                             }
 _0x2C00A6:
 _0x2C00A0:
@@ -31770,11 +31783,11 @@ _0x2C0092:
 	JMP _0x2C00A8
 ; 0016 01A0     {
 ; 0016 01A1         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 01A2         case KEY_MODE   :   currentPage = P_DEV_S_IP;       cursor  = 0;            printOLED("SI");                        break;
 	BRNE _0x2C00AC
 	LDI  R30,LOW(9)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 	__POINTD1FN _0x2C0000,546
 	RJMP _0x2C02BD
 ; 0016 01A3         case KEY_UP     :   if(++cursor > 12){              cursor  = 0;    }       printOLED("IA%1X",cursor);              break;
@@ -31783,13 +31796,13 @@ _0x2C00AC:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C00AD
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0xD)
 	BRLT _0x2C00AE
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C00AE:
-	CALL SUBOPT_0x306
+	CALL SUBOPT_0x301
 	RJMP _0x2C00AB
 ; 0016 01A4         case KEY_DOWN   :   if(--cursor < 0){               cursor  = 12;   }       printOLED("IA%1X",cursor);              break;
 _0x2C00AD:
@@ -31797,12 +31810,12 @@ _0x2C00AD:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C00AF
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C00B0
 	LDI  R30,LOW(12)
 	STS  _cursor_S0160000000,R30
 _0x2C00B0:
-	CALL SUBOPT_0x306
+	CALL SUBOPT_0x301
 	RJMP _0x2C00AB
 ; 0016 01A5         case KEY_OK     :   if(cursor == 12){
 _0x2C00AF:
@@ -31822,18 +31835,18 @@ _0x2C00AF:
 	STS  _currentPage,R30
 ; 0016 01A8                                 printOLED("SG");
 	__POINTD1FN _0x2C0000,699
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2EF
 ; 0016 01A9                                 for(i=0;i<12;i++){
 	__GETWRN 16,17,0
 _0x2C00B4:
 	__CPWRN 16,17,12
 	BRGE _0x2C00B5
 ; 0016 01AA                                     printOLED("ID%1X%1d",i,setGw[i]);
-	CALL SUBOPT_0x2FC
+	CALL SUBOPT_0x2F7
 	LDI  R26,LOW(_setGw_S0160000000)
 	LDI  R27,HIGH(_setGw_S0160000000)
-	CALL SUBOPT_0x2FD
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x2F8
+	CALL SUBOPT_0x286
 ; 0016 01AB                                 }
 	__ADDWRN 16,17,1
 	RJMP _0x2C00B4
@@ -31846,47 +31859,47 @@ _0x2C00B2:
 	CPI  R26,LOW(0xC)
 	BRGE _0x2C00B7
 ; 0016 01AE                                 if((cursor%3) == 0){
-	CALL SUBOPT_0x307
+	CALL SUBOPT_0x302
 	BRNE _0x2C00B8
 ; 0016 01AF                                     if(++setMask[cursor] >2)  setMask[cursor] = 0;
-	CALL SUBOPT_0x30B
+	CALL SUBOPT_0x306
 	CPI  R30,LOW(0x3)
 	BRLO _0x2C00B9
-	CALL SUBOPT_0x30C
+	CALL SUBOPT_0x307
 ; 0016 01B0                                 }
 _0x2C00B9:
 ; 0016 01B1                                 else{
 	RJMP _0x2C00BA
 _0x2C00B8:
 ; 0016 01B2                                     if(++setMask[cursor] >9)  setMask[cursor] = 0;
-	CALL SUBOPT_0x30B
+	CALL SUBOPT_0x306
 	CPI  R30,LOW(0xA)
 	BRLO _0x2C00BB
-	CALL SUBOPT_0x30C
+	CALL SUBOPT_0x307
 ; 0016 01B3                                 }
 _0x2C00BB:
 _0x2C00BA:
 ; 0016 01B4                                 //if(++setMask[cursor] >9)  setMask[cursor] = 0;
 ; 0016 01B5                                 printOLED("ID%1X%1d",cursor, setMask[cursor]);
-	CALL SUBOPT_0x30A
+	CALL SUBOPT_0x305
 	SUBI R30,LOW(-_setMask_S0160000000)
 	SBCI R31,HIGH(-_setMask_S0160000000)
 	LD   R30,Z
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x286
 ; 0016 01B6                             }
 ; 0016 01B7                             else{                       // -- Exit -- should not occur
 	RJMP _0x2C00BC
 _0x2C00B7:
 ; 0016 01B8                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 01B9                                 cursor      = 0;
 ; 0016 01BA                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
+	CALL SUBOPT_0x2CD
 _0x2C02BD:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 01BB                             }
 _0x2C00BC:
 _0x2C00B6:
@@ -31903,11 +31916,11 @@ _0x2C00A8:
 	JMP _0x2C00BE
 ; 0016 01C0     {
 ; 0016 01C1         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 01C2         case KEY_MODE   :   currentPage = P_DEV_S_MASK;     cursor  = 0;            printOLED("SM");                        break;
 	BRNE _0x2C00C2
 	LDI  R30,LOW(10)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 	__POINTD1FN _0x2C0000,696
 	RJMP _0x2C02BE
 ; 0016 01C3         case KEY_UP     :   if(++cursor > 12){              cursor  = 0;    }       printOLED("IA%1X",cursor);              break;
@@ -31916,13 +31929,13 @@ _0x2C00C2:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C00C3
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0xD)
 	BRLT _0x2C00C4
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C00C4:
-	CALL SUBOPT_0x306
+	CALL SUBOPT_0x301
 	RJMP _0x2C00C1
 ; 0016 01C4         case KEY_DOWN   :   if(--cursor < 0){               cursor  = 12;   }       printOLED("IA%1X",cursor);              break;
 _0x2C00C3:
@@ -31930,12 +31943,12 @@ _0x2C00C3:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C00C5
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C00C6
 	LDI  R30,LOW(12)
 	STS  _cursor_S0160000000,R30
 _0x2C00C6:
-	CALL SUBOPT_0x306
+	CALL SUBOPT_0x301
 	RJMP _0x2C00C1
 ; 0016 01C5         case KEY_OK     :   if(cursor == 12){
 _0x2C00C5:
@@ -31955,18 +31968,18 @@ _0x2C00C5:
 	STS  _currentPage,R30
 ; 0016 01C8                                 printOLED("SS");
 	__POINTD1FN _0x2C0000,702
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2EF
 ; 0016 01C9                                 for(i=0;i<12;i++){
 	__GETWRN 16,17,0
 _0x2C00CA:
 	__CPWRN 16,17,12
 	BRGE _0x2C00CB
 ; 0016 01CA                                     printOLED("ID%1X%1d",i,setServer[i]);
-	CALL SUBOPT_0x2FC
+	CALL SUBOPT_0x2F7
 	LDI  R26,LOW(_setServer_S0160000000)
 	LDI  R27,HIGH(_setServer_S0160000000)
-	CALL SUBOPT_0x2FD
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x2F8
+	CALL SUBOPT_0x286
 ; 0016 01CB                                 }
 	__ADDWRN 16,17,1
 	RJMP _0x2C00CA
@@ -31979,47 +31992,47 @@ _0x2C00C8:
 	CPI  R26,LOW(0xC)
 	BRGE _0x2C00CD
 ; 0016 01CE                                 if((cursor%3) == 0){
-	CALL SUBOPT_0x307
+	CALL SUBOPT_0x302
 	BRNE _0x2C00CE
 ; 0016 01CF                                     if(++setGw[cursor] >2)  setGw[cursor] = 0;
-	CALL SUBOPT_0x30D
+	CALL SUBOPT_0x308
 	CPI  R30,LOW(0x3)
 	BRLO _0x2C00CF
-	CALL SUBOPT_0x30E
+	CALL SUBOPT_0x309
 ; 0016 01D0                                 }
 _0x2C00CF:
 ; 0016 01D1                                 else{
 	RJMP _0x2C00D0
 _0x2C00CE:
 ; 0016 01D2                                     if(++setGw[cursor] >9)  setGw[cursor] = 0;
-	CALL SUBOPT_0x30D
+	CALL SUBOPT_0x308
 	CPI  R30,LOW(0xA)
 	BRLO _0x2C00D1
-	CALL SUBOPT_0x30E
+	CALL SUBOPT_0x309
 ; 0016 01D3                                 }
 _0x2C00D1:
 _0x2C00D0:
 ; 0016 01D4                                 //if(++setGw[cursor] >9)  setGw[cursor] = 0;
 ; 0016 01D5                                 printOLED("ID%1X%1d",cursor, setGw[cursor]);
-	CALL SUBOPT_0x30A
+	CALL SUBOPT_0x305
 	SUBI R30,LOW(-_setGw_S0160000000)
 	SBCI R31,HIGH(-_setGw_S0160000000)
 	LD   R30,Z
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x286
 ; 0016 01D6                             }
 ; 0016 01D7                             else{                       // -- Exit -- should not occur
 	RJMP _0x2C00D2
 _0x2C00CD:
 ; 0016 01D8                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 01D9                                 cursor      = 0;
 ; 0016 01DA                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
+	CALL SUBOPT_0x2CD
 _0x2C02BE:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 01DB                             }
 _0x2C00D2:
 _0x2C00CC:
@@ -32036,11 +32049,11 @@ _0x2C00BE:
 	JMP _0x2C00D4
 ; 0016 01E0     {
 ; 0016 01E1         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 01E2         case KEY_MODE   :   currentPage = P_DEV_S_GATEWAY;  cursor  = 0;            printOLED("SG");                        break;
 	BRNE _0x2C00D8
 	LDI  R30,LOW(11)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 	__POINTD1FN _0x2C0000,699
 	RJMP _0x2C02BF
 ; 0016 01E3         case KEY_UP     :   if(++cursor > 12){              cursor  = 0;    }       printOLED("IA%1X",cursor);              break;
@@ -32049,13 +32062,13 @@ _0x2C00D8:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C00D9
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0xD)
 	BRLT _0x2C00DA
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C00DA:
-	CALL SUBOPT_0x306
+	CALL SUBOPT_0x301
 	RJMP _0x2C00D7
 ; 0016 01E4         case KEY_DOWN   :   if(--cursor < 0){               cursor  = 12;   }       printOLED("IA%1X",cursor);              break;
 _0x2C00D9:
@@ -32063,12 +32076,12 @@ _0x2C00D9:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C00DB
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C00DC
 	LDI  R30,LOW(12)
 	STS  _cursor_S0160000000,R30
 _0x2C00DC:
-	CALL SUBOPT_0x306
+	CALL SUBOPT_0x301
 	RJMP _0x2C00D7
 ; 0016 01E5         case KEY_OK     :   if(cursor == 12){
 _0x2C00DB:
@@ -32082,7 +32095,7 @@ _0x2C00DB:
 	BRNE _0x2C00DE
 ; 0016 01E6                                 currentPage = P_DEV_S_CONFIRM;
 	LDI  R30,LOW(13)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 01E7                                 cursor      = 0;
 ; 0016 01E8                                 printOLED("SF%u.%u.%u.%u,%u.%u.%u.%u,%u.%u.%u.%u,%u.%u.%u.%u,",
 ; 0016 01E9                                             (setIp[0]    *100) + (setIp[1]     *10) + setIp[2],
@@ -32102,6 +32115,11 @@ _0x2C00DB:
 ; 0016 01F7                                             (setServer[6]*100) + (setServer[7] *10) + setServer[8],
 ; 0016 01F8                                             (setServer[9]*100) + (setServer[10]*10) + setServer[11]);
 	__POINTD1FN _0x2C0000,705
+	CALL SUBOPT_0x2DF
+	CALL SUBOPT_0x2E0
+	CALL SUBOPT_0x2E1
+	CALL SUBOPT_0x2E2
+	CALL SUBOPT_0x2E3
 	CALL SUBOPT_0x2E4
 	CALL SUBOPT_0x2E5
 	CALL SUBOPT_0x2E6
@@ -32113,11 +32131,6 @@ _0x2C00DB:
 	CALL SUBOPT_0x2EC
 	CALL SUBOPT_0x2ED
 	CALL SUBOPT_0x2EE
-	CALL SUBOPT_0x2EF
-	CALL SUBOPT_0x2F0
-	CALL SUBOPT_0x2F1
-	CALL SUBOPT_0x2F2
-	CALL SUBOPT_0x2F3
 	LDI  R24,64
 	CALL _printOLED
 	ADIW R28,63
@@ -32130,47 +32143,47 @@ _0x2C00DE:
 	CPI  R26,LOW(0xC)
 	BRGE _0x2C00E0
 ; 0016 01FB                                 if((cursor%3) == 0){
-	CALL SUBOPT_0x307
+	CALL SUBOPT_0x302
 	BRNE _0x2C00E1
 ; 0016 01FC                                     if(++setServer[cursor] >2)  setServer[cursor] = 0;
-	CALL SUBOPT_0x30F
+	CALL SUBOPT_0x30A
 	CPI  R30,LOW(0x3)
 	BRLO _0x2C00E2
-	CALL SUBOPT_0x310
+	CALL SUBOPT_0x30B
 ; 0016 01FD                                 }
 _0x2C00E2:
 ; 0016 01FE                                 else{
 	RJMP _0x2C00E3
 _0x2C00E1:
 ; 0016 01FF                                     if(++setServer[cursor] >9)  setServer[cursor] = 0;
-	CALL SUBOPT_0x30F
+	CALL SUBOPT_0x30A
 	CPI  R30,LOW(0xA)
 	BRLO _0x2C00E4
-	CALL SUBOPT_0x310
+	CALL SUBOPT_0x30B
 ; 0016 0200                                 }
 _0x2C00E4:
 _0x2C00E3:
 ; 0016 0201                                 //if(++setServer[cursor] >9)  setServer[cursor] = 0;
 ; 0016 0202                                 printOLED("ID%1X%1d",cursor, setServer[cursor]);
-	CALL SUBOPT_0x30A
+	CALL SUBOPT_0x305
 	SUBI R30,LOW(-_setServer_S0160000000)
 	SBCI R31,HIGH(-_setServer_S0160000000)
 	LD   R30,Z
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x286
 ; 0016 0203                             }
 ; 0016 0204                             else{                       // -- Exit -- should not occur
 	RJMP _0x2C00E5
 _0x2C00E0:
 ; 0016 0205                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0206                                 cursor      = 0;
 ; 0016 0207                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
+	CALL SUBOPT_0x2CD
 _0x2C02BF:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 0208                             }
 _0x2C00E5:
 _0x2C00DF:
@@ -32186,12 +32199,12 @@ _0x2C00D4:
 	BRNE _0x2C00E7
 ; 0016 020D     {
 ; 0016 020E         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 020F         case KEY_MODE   :   currentPage = P_DEV_S_MENU;     cursor  = 1;    printOLED("M6%1d",cursor);  break;
 	BRNE _0x2C00EB
 	LDI  R30,LOW(7)
-	CALL SUBOPT_0x2F6
-	CALL SUBOPT_0x2FE
+	CALL SUBOPT_0x2F1
+	CALL SUBOPT_0x2F9
 	RJMP _0x2C00EA
 ; 0016 0210         case KEY_UP     :   /* no operation */                                                          break;
 _0x2C00EB:
@@ -32210,15 +32223,15 @@ _0x2C00EB:
 	CPC  R31,R26
 	BRNE _0x2C00EA
 	LDI  R30,LOW(36)
-	CALL SUBOPT_0x2D4
+	CALL SUBOPT_0x2CF
 ; 0016 0213                             tmpNextPage = P_DEV_S_MENU;
 ; 0016 0214                             tmpPrevPage = P_DEV_S_CONFIRM;
 	LDI  R30,LOW(13)
-	CALL SUBOPT_0x311
+	CALL SUBOPT_0x30C
 ; 0016 0215                             cursor      = 0;
 ; 0016 0216                             // -- set network -- //
 ; 0016 0217                             res = ETH_setConfig(setIp,setMask,setGw,setServer);
-	CALL SUBOPT_0x2E3
+	CALL SUBOPT_0x2DE
 	CALL _ETH_setConfig
 	MOVW R20,R30
 ; 0016 0218                             //res = setNetworkInfo(setIp,setMask,setGw,setServer);
@@ -32233,8 +32246,8 @@ _0x2C00EB:
 ; 0016 021D                             // ----------------- //
 ; 0016 021E                             printOLED("FI");
 _0x2C00EF:
-	CALL SUBOPT_0x305
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x300
+	CALL SUBOPT_0x2EF
 ; 0016 021F                             break;
 ; 0016 0220         }
 _0x2C00EA:
@@ -32248,12 +32261,12 @@ _0x2C00E7:
 	JMP _0x2C00F1
 ; 0016 0223     {
 ; 0016 0224         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 0225         case KEY_MODE   :   currentPage = P_MAIN_MENU;      cursor  = 1;            printOLED("M1%1d",cursor);  break;
 	BRNE _0x2C00F5
 	LDI  R30,LOW(1)
-	CALL SUBOPT_0x2F6
-	CALL SUBOPT_0x312
+	CALL SUBOPT_0x2F1
+	CALL SUBOPT_0x30D
 	RJMP _0x2C00F4
 ; 0016 0226         case KEY_UP     :   if(--cursor < 0){               cursor  = 1;    }       printOLED("MA%1d",cursor);  break;
 _0x2C00F5:
@@ -32261,12 +32274,12 @@ _0x2C00F5:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C00F6
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C00F7
 	LDI  R30,LOW(1)
 	STS  _cursor_S0160000000,R30
 _0x2C00F7:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C00F4
 ; 0016 0227         case KEY_DOWN   :   if(++cursor > 1){               cursor  = 0;    }       printOLED("MA%1d",cursor);  break;
 _0x2C00F6:
@@ -32274,13 +32287,13 @@ _0x2C00F6:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C00F8
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x2)
 	BRLT _0x2C00F9
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C00F9:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C00F4
 ; 0016 0228         case KEY_OK     :   if(cursor == 0){            // -- View Probe Config
 _0x2C00F8:
@@ -32293,10 +32306,10 @@ _0x2C00F8:
 	BRNE _0x2C00FB
 ; 0016 0229                                 currentPage = P_PRB_V;
 	LDI  R30,LOW(15)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 022A                                 cursor      = 0;
 ; 0016 022B                                 showProbeConfig(cursor);
-	CALL SUBOPT_0x313
+	CALL SUBOPT_0x30E
 ; 0016 022C 
 ; 0016 022D                             }
 ; 0016 022E                             else if(cursor == 1){       // -- Set Probe Config
@@ -32313,25 +32326,25 @@ _0x2C00FB:
 	STS  _tmpNextPage_S0160000000,R30
 ; 0016 0231                                 tmpPrevPage = P_PRB_MENU;
 	LDI  R30,LOW(14)
-	CALL SUBOPT_0x2D0
+	CALL SUBOPT_0x2CB
 ; 0016 0232                                 memset(entPwd,0xFF,sizeof(entPwd));
-	CALL SUBOPT_0x2D1
+	CALL SUBOPT_0x2CC
 ; 0016 0233                                 cursor      = 0;
 ; 0016 0234                                 printOLED("P0");
-	CALL SUBOPT_0x2D5
+	CALL SUBOPT_0x2D0
 	RJMP _0x2C02C0
 ; 0016 0235                             }
 ; 0016 0236                             else{                       // -- Exit -- should not occur
 _0x2C00FD:
 ; 0016 0237                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0238                                 cursor      = 0;
 ; 0016 0239                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
+	CALL SUBOPT_0x2CD
 _0x2C02C0:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 023A                             }
 _0x2C00FC:
 ; 0016 023B             break;
@@ -32346,7 +32359,7 @@ _0x2C00F1:
 	BRNE _0x2C0100
 ; 0016 023F     {
 ; 0016 0240         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 0241         case KEY_MODE   :   currentPage = P_PRB_MENU;       cursor  = 0;            printOLED("M3%1d",cursor);  break;
 	BREQ _0x2C02C1
 ; 0016 0242         case KEY_UP     :   if(++cursor > 4){               cursor  = 0;    }       showProbeConfig(cursor);    break;
@@ -32354,13 +32367,13 @@ _0x2C00F1:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C0105
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x5)
 	BRLT _0x2C0106
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C0106:
-	CALL SUBOPT_0x313
+	CALL SUBOPT_0x30E
 	RJMP _0x2C0103
 ; 0016 0243         case KEY_DOWN   :   if(--cursor < 0){               cursor  = 4;    }       showProbeConfig(cursor);    break;
 _0x2C0105:
@@ -32368,12 +32381,12 @@ _0x2C0105:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C0107
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C0108
 	LDI  R30,LOW(4)
 	STS  _cursor_S0160000000,R30
 _0x2C0108:
-	CALL SUBOPT_0x313
+	CALL SUBOPT_0x30E
 	RJMP _0x2C0103
 ; 0016 0244         case KEY_OK     :   currentPage = P_PRB_MENU;       cursor  = 0;            printOLED("M3%1d",cursor);  break;
 _0x2C0107:
@@ -32383,8 +32396,8 @@ _0x2C0107:
 	BRNE _0x2C0103
 _0x2C02C1:
 	LDI  R30,LOW(14)
-	CALL SUBOPT_0x2CC
-	CALL SUBOPT_0x2CD
+	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C8
 ; 0016 0245         }
 _0x2C0103:
 ; 0016 0246     }
@@ -32397,12 +32410,12 @@ _0x2C0100:
 	JMP _0x2C010B
 ; 0016 0248     {
 ; 0016 0249         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 024A         case KEY_MODE   :   currentPage = P_PRB_MENU;       cursor  = 1;            printOLED("M3%1d",cursor);  break;
 	BRNE _0x2C010F
 	LDI  R30,LOW(14)
-	CALL SUBOPT_0x2F6
-	CALL SUBOPT_0x2CD
+	CALL SUBOPT_0x2F1
+	CALL SUBOPT_0x2C8
 	RJMP _0x2C010E
 ; 0016 024B         case KEY_UP     :   if(--cursor < 0){               cursor  = 5;    }       printOLED("MA%1d",cursor);  break;
 _0x2C010F:
@@ -32410,12 +32423,12 @@ _0x2C010F:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C0110
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C0111
 	LDI  R30,LOW(5)
 	STS  _cursor_S0160000000,R30
 _0x2C0111:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C010E
 ; 0016 024C         case KEY_DOWN   :   if(++cursor > 5){               cursor  = 0;    }       printOLED("MA%1d",cursor);  break;
 _0x2C0110:
@@ -32423,13 +32436,13 @@ _0x2C0110:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C0112
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x6)
 	BRLT _0x2C0113
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C0113:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C010E
 ; 0016 024D         case KEY_OK     :   if(cursor < 5){
 _0x2C0112:
@@ -32442,17 +32455,17 @@ _0x2C0112:
 	CPI  R26,LOW(0x5)
 	BRGE _0x2C0115
 ; 0016 024E                                 prbEn[cursor] = !prbEn[cursor];
-	CALL SUBOPT_0x314
+	CALL SUBOPT_0x30F
 	SUBI R26,LOW(-_prbEn_S0160000000)
 	SBCI R27,HIGH(-_prbEn_S0160000000)
-	CALL SUBOPT_0x315
+	CALL SUBOPT_0x310
 	CALL __LNEGB1
-	CALL SUBOPT_0x316
+	CALL SUBOPT_0x311
 ; 0016 024F                                 printOLED("ED%1d%1d",cursor,prbEn[cursor]);
-	CALL SUBOPT_0x317
-	CALL SUBOPT_0x315
+	CALL SUBOPT_0x312
+	CALL SUBOPT_0x310
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x286
 ; 0016 0250                             }
 ; 0016 0251                             else if(cursor == 5){       // -- Display Finish page
 	RJMP _0x2C0116
@@ -32461,7 +32474,7 @@ _0x2C0115:
 	CPI  R26,LOW(0x5)
 	BRNE _0x2C0117
 ; 0016 0252                                 currentPage = P_FINISH;
-	CALL SUBOPT_0x318
+	CALL SUBOPT_0x313
 ; 0016 0253                                 tmpNextPage = P_PRB_MENU;
 ; 0016 0254                                 cursor      = 0;
 	LDI  R30,LOW(0)
@@ -32472,7 +32485,7 @@ _0x2C0119:
 	__CPWRN 16,17,5
 	BRGE _0x2C011A
 ; 0016 0256                                     operating_config.sensorEnable[i]    = prbEn[i];
-	CALL SUBOPT_0x2DD
+	CALL SUBOPT_0x2D8
 	MOVW R0,R30
 	LDI  R26,LOW(_prbEn_S0160000000)
 	LDI  R27,HIGH(_prbEn_S0160000000)
@@ -32487,11 +32500,11 @@ _0x2C0119:
 _0x2C011A:
 ; 0016 0258 
 ; 0016 0259                                 res = setOperatingConfig(&operating_config);
-	CALL SUBOPT_0x301
+	CALL SUBOPT_0x2FC
 ; 0016 025A                                 if(res < 0){
 	BRPL _0x2C011B
 ; 0016 025B                                     printDebug("<MENU_processKey> setOperatingConfig() failed\r\n");
-	CALL SUBOPT_0x302
+	CALL SUBOPT_0x2FD
 ; 0016 025C                                     currentPage = P_FAILED;
 	LDI  R30,LOW(37)
 	STS  _currentPage,R30
@@ -32500,26 +32513,26 @@ _0x2C011A:
 	STS  _tmpNextPage_S0160000000,R30
 ; 0016 025E                                     tmpPrevPage = P_PRB_S;
 	LDI  R30,LOW(16)
-	CALL SUBOPT_0x311
+	CALL SUBOPT_0x30C
 ; 0016 025F                                     cursor      = 0;
 ; 0016 0260                                     printOLED("FL");
-	CALL SUBOPT_0x304
+	CALL SUBOPT_0x2FF
 	RJMP _0x2C02C2
 ; 0016 0261                                 }
 ; 0016 0262                                 else{
 _0x2C011B:
 ; 0016 0263                                     currentPage = P_FINISH;
-	CALL SUBOPT_0x318
+	CALL SUBOPT_0x313
 ; 0016 0264                                     tmpNextPage = P_PRB_MENU;
 ; 0016 0265                                     tmpPrevPage = P_PRB_S;
 	LDI  R30,LOW(16)
-	CALL SUBOPT_0x311
+	CALL SUBOPT_0x30C
 ; 0016 0266                                     cursor      = 0;
 ; 0016 0267                                     printOLED("FI");
-	CALL SUBOPT_0x305
+	CALL SUBOPT_0x300
 _0x2C02C2:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 0268                                 }
 ; 0016 0269                             }
 ; 0016 026A                             else{                       // -- Exit -- should not occur
@@ -32527,11 +32540,11 @@ _0x2C02C2:
 _0x2C0117:
 ; 0016 026B                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 026C                                 cursor      = 0;
 ; 0016 026D                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2CD
+	CALL SUBOPT_0x2EF
 ; 0016 026E                             }
 _0x2C011D:
 _0x2C0116:
@@ -32548,12 +32561,12 @@ _0x2C010B:
 	JMP _0x2C011F
 ; 0016 0273     {
 ; 0016 0274         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 0275         case KEY_MODE   :   currentPage = P_MAIN_MENU;      cursor  = 2;            printOLED("M1%1d",cursor);  break;
 	BRNE _0x2C0123
 	LDI  R30,LOW(1)
-	CALL SUBOPT_0x2F7
-	CALL SUBOPT_0x312
+	CALL SUBOPT_0x2F2
+	CALL SUBOPT_0x30D
 	RJMP _0x2C0122
 ; 0016 0276         case KEY_UP     :   if(--cursor < 0){               cursor  = 1;    }       printOLED("MA%1d",cursor);  break;
 _0x2C0123:
@@ -32561,12 +32574,12 @@ _0x2C0123:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C0124
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C0125
 	LDI  R30,LOW(1)
 	STS  _cursor_S0160000000,R30
 _0x2C0125:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C0122
 ; 0016 0277         case KEY_DOWN   :   if(++cursor > 1){               cursor  = 0;    }       printOLED("MA%1d",cursor);  break;
 _0x2C0124:
@@ -32574,13 +32587,13 @@ _0x2C0124:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C0126
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x2)
 	BRLT _0x2C0127
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C0127:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C0122
 ; 0016 0278         case KEY_OK     :   if(cursor == 0){            // -- Set Mute
 _0x2C0126:
@@ -32593,18 +32606,18 @@ _0x2C0126:
 	BRNE _0x2C0129
 ; 0016 0279                                 currentPage = P_MUTE_MENU;
 	LDI  R30,LOW(18)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 027A                                 cursor      = 0;
 ; 0016 027B                                 mute        = muteMode;
 	LDS  R30,_muteMode
 	STS  _mute_S0160000000,R30
 ; 0016 027C                                 printOLED("MU%1d",cursor);
-	CALL SUBOPT_0x319
+	CALL SUBOPT_0x314
 ; 0016 027D                                 printOLED("ED%1d%1d",cursor+2,mute);
-	CALL SUBOPT_0x300
+	CALL SUBOPT_0x2FB
 	LDS  R30,_mute_S0160000000
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x286
 ; 0016 027E                             }
 ; 0016 027F                             else if(cursor == 1){       // -- Set New User Password
 	RJMP _0x2C012A
@@ -32620,25 +32633,25 @@ _0x2C0129:
 	STS  _tmpNextPage_S0160000000,R30
 ; 0016 0282                                 tmpPrevPage = P_MANAGE_MENU;
 	LDI  R30,LOW(17)
-	CALL SUBOPT_0x2D0
+	CALL SUBOPT_0x2CB
 ; 0016 0283                                 memset(entPwd,0xFF,sizeof(entPwd));
-	CALL SUBOPT_0x2D1
+	CALL SUBOPT_0x2CC
 ; 0016 0284                                 cursor      = 0;
 ; 0016 0285                                 printOLED("P0");
-	CALL SUBOPT_0x2D5
+	CALL SUBOPT_0x2D0
 	RJMP _0x2C02C3
 ; 0016 0286                             }
 ; 0016 0287                             else{                       // -- Exit -- should not occur
 _0x2C012B:
 ; 0016 0288                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0289                                 cursor      = 0;
 ; 0016 028A                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
+	CALL SUBOPT_0x2CD
 _0x2C02C3:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 028B                             }
 _0x2C012A:
 ; 0016 028C             break;
@@ -32654,12 +32667,12 @@ _0x2C011F:
 	JMP _0x2C012E
 ; 0016 0290     {
 ; 0016 0291         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 0292         case KEY_MODE   :   currentPage = P_MANAGE_MENU;    cursor  = 0;            printOLED("M4%1d",cursor);  break;
 	BRNE _0x2C0132
 	LDI  R30,LOW(17)
-	CALL SUBOPT_0x2CC
-	CALL SUBOPT_0x2CE
+	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C9
 	RJMP _0x2C0131
 ; 0016 0293         case KEY_UP     :   if(--cursor < 0){               cursor  = 1;    }       printOLED("MU%1d",cursor);  break;
 _0x2C0132:
@@ -32667,12 +32680,12 @@ _0x2C0132:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C0133
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C0134
 	LDI  R30,LOW(1)
 	STS  _cursor_S0160000000,R30
 _0x2C0134:
-	CALL SUBOPT_0x319
+	CALL SUBOPT_0x314
 	RJMP _0x2C0131
 ; 0016 0294         case KEY_DOWN   :   if(++cursor > 1){               cursor  = 0;    }       printOLED("MU%1d",cursor);  break;
 _0x2C0133:
@@ -32680,13 +32693,13 @@ _0x2C0133:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C0135
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x2)
 	BRLT _0x2C0136
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C0136:
-	CALL SUBOPT_0x319
+	CALL SUBOPT_0x314
 	RJMP _0x2C0131
 ; 0016 0295         case KEY_OK     :   if(cursor == 0){            // -- Set Device Enable
 _0x2C0135:
@@ -32702,10 +32715,10 @@ _0x2C0135:
 	CALL __LNEGB1
 	STS  _mute_S0160000000,R30
 ; 0016 0297                                 printOLED("ED%1d%1d",cursor+2,mute);
-	CALL SUBOPT_0x300
+	CALL SUBOPT_0x2FB
 	LDS  R30,_mute_S0160000000
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x286
 ; 0016 0298                             }
 ; 0016 0299                             else if(cursor == 1){       // -- Display Finish page
 	RJMP _0x2C0139
@@ -32714,7 +32727,7 @@ _0x2C0138:
 	CPI  R26,LOW(0x1)
 	BRNE _0x2C013A
 ; 0016 029A                                 currentPage = P_FINISH;
-	CALL SUBOPT_0x31A
+	CALL SUBOPT_0x315
 ; 0016 029B                                 tmpNextPage = P_MANAGE_MENU;
 ; 0016 029C                                 tmpPrevPage = P_MUTE_MENU;
 	LDI  R30,LOW(18)
@@ -32726,20 +32739,20 @@ _0x2C0138:
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 ; 0016 029F                                 printOLED("FI");
-	CALL SUBOPT_0x305
+	CALL SUBOPT_0x300
 	RJMP _0x2C02C4
 ; 0016 02A0                             }
 ; 0016 02A1                             else{                       // -- Exit -- should not occur
 _0x2C013A:
 ; 0016 02A2                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 02A3                                 cursor      = 0;
 ; 0016 02A4                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
+	CALL SUBOPT_0x2CD
 _0x2C02C4:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 02A5                             }
 _0x2C0139:
 ; 0016 02A6             break;
@@ -32755,12 +32768,12 @@ _0x2C012E:
 	JMP _0x2C013D
 ; 0016 02AA     {
 ; 0016 02AB         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 02AC         case KEY_MODE   :   currentPage = P_MANAGE_MENU;    cursor  = 1;        printOLED("M4%1d",cursor);      break;
 	BRNE _0x2C0141
 	LDI  R30,LOW(17)
-	CALL SUBOPT_0x2F6
-	CALL SUBOPT_0x2CE
+	CALL SUBOPT_0x2F1
+	CALL SUBOPT_0x2C9
 	RJMP _0x2C0140
 ; 0016 02AD         case KEY_UP     :   if(cursor < 4){     printOLED("PD%1d*",cursor); }
 _0x2C0141:
@@ -32771,16 +32784,16 @@ _0x2C0141:
 	LDS  R26,_cursor_S0160000000
 	CPI  R26,LOW(0x4)
 	BRGE _0x2C0143
-	CALL SUBOPT_0x31B
+	CALL SUBOPT_0x316
 ; 0016 02AE                             if(++cursor > 4){   cursor  = 0;                }   printOLED("PA%1d",cursor);      break;
 _0x2C0143:
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x5)
 	BRLT _0x2C0144
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C0144:
-	CALL SUBOPT_0x31C
+	CALL SUBOPT_0x317
 	RJMP _0x2C0140
 ; 0016 02AF         case KEY_DOWN   :   if(cursor < 4){     printOLED("PD%1d*",cursor); }
 _0x2C0142:
@@ -32791,15 +32804,15 @@ _0x2C0142:
 	LDS  R26,_cursor_S0160000000
 	CPI  R26,LOW(0x4)
 	BRGE _0x2C0146
-	CALL SUBOPT_0x31B
+	CALL SUBOPT_0x316
 ; 0016 02B0                             if(--cursor < 0){   cursor  = 4;                }   printOLED("PA%1d",cursor);      break;
 _0x2C0146:
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C0147
 	LDI  R30,LOW(4)
 	STS  _cursor_S0160000000,R30
 _0x2C0147:
-	CALL SUBOPT_0x31C
+	CALL SUBOPT_0x317
 	RJMP _0x2C0140
 ; 0016 02B1         case KEY_OK     :   if(cursor == 4){
 _0x2C0145:
@@ -32814,12 +32827,12 @@ _0x2C0145:
 	LDI  R30,LOW(20)
 	STS  _currentPage,R30
 ; 0016 02B3                                 memset(confPwd,0xFF,sizeof(confPwd));
-	CALL SUBOPT_0x31D
-	CALL SUBOPT_0x2D1
+	CALL SUBOPT_0x318
+	CALL SUBOPT_0x2CC
 ; 0016 02B4                                 cursor      = 0;
 ; 0016 02B5                                 printOLED("P5");
 	__POINTD1FN _0x2C0000,819
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2EF
 ; 0016 02B6                             }
 ; 0016 02B7                             else if(cursor < 4){
 	RJMP _0x2C014A
@@ -32828,19 +32841,19 @@ _0x2C0149:
 	CPI  R26,LOW(0x4)
 	BRGE _0x2C014B
 ; 0016 02B8                                 if(++newPwd[cursor] >9) newPwd[cursor] = 0;
-	CALL SUBOPT_0x314
+	CALL SUBOPT_0x30F
 	SUBI R26,LOW(-_newPwd_S0160000000)
 	SBCI R27,HIGH(-_newPwd_S0160000000)
-	CALL SUBOPT_0x31E
+	CALL SUBOPT_0x319
 	BRLT _0x2C014C
-	CALL SUBOPT_0x31F
+	CALL SUBOPT_0x31A
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0016 02B9                                 printOLED("PD%1d%1d",cursor, newPwd[cursor]);
 _0x2C014C:
-	CALL SUBOPT_0x320
-	CALL SUBOPT_0x31F
-	CALL SUBOPT_0x321
+	CALL SUBOPT_0x31B
+	CALL SUBOPT_0x31A
+	CALL SUBOPT_0x31C
 ; 0016 02BA                             }
 ; 0016 02BB                             break;
 _0x2C014B:
@@ -32857,12 +32870,12 @@ _0x2C013D:
 	JMP _0x2C014E
 ; 0016 02BF     {
 ; 0016 02C0         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 02C1         case KEY_MODE   :   currentPage = P_MANAGE_MENU;    cursor  = 1;        printOLED("M4%1d",cursor);      break;
 	BRNE _0x2C0152
 	LDI  R30,LOW(17)
-	CALL SUBOPT_0x2F6
-	CALL SUBOPT_0x2CE
+	CALL SUBOPT_0x2F1
+	CALL SUBOPT_0x2C9
 	RJMP _0x2C0151
 ; 0016 02C2         case KEY_UP     :   if(cursor < 4){     printOLED("PD%1d*",cursor); }
 _0x2C0152:
@@ -32873,16 +32886,16 @@ _0x2C0152:
 	LDS  R26,_cursor_S0160000000
 	CPI  R26,LOW(0x4)
 	BRGE _0x2C0154
-	CALL SUBOPT_0x31B
+	CALL SUBOPT_0x316
 ; 0016 02C3                             if(++cursor > 4){   cursor  = 0;                }   printOLED("PA%1d",cursor);      break;
 _0x2C0154:
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x5)
 	BRLT _0x2C0155
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C0155:
-	CALL SUBOPT_0x31C
+	CALL SUBOPT_0x317
 	RJMP _0x2C0151
 ; 0016 02C4         case KEY_DOWN   :   if(cursor < 4){     printOLED("PD%1d*",cursor); }
 _0x2C0153:
@@ -32893,15 +32906,15 @@ _0x2C0153:
 	LDS  R26,_cursor_S0160000000
 	CPI  R26,LOW(0x4)
 	BRGE _0x2C0157
-	CALL SUBOPT_0x31B
+	CALL SUBOPT_0x316
 ; 0016 02C5                             if(--cursor < 0){   cursor  = 4;                }   printOLED("PA%1d",cursor);      break;
 _0x2C0157:
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C0158
 	LDI  R30,LOW(4)
 	STS  _cursor_S0160000000,R30
 _0x2C0158:
-	CALL SUBOPT_0x31C
+	CALL SUBOPT_0x317
 	RJMP _0x2C0151
 ; 0016 02C6         case KEY_OK     :   if(cursor == 4){
 _0x2C0156:
@@ -32915,10 +32928,10 @@ _0x2C0156:
 	BRNE _0x2C015A
 ; 0016 02C7                                 // -- checkValidation -- //
 ; 0016 02C8                                 if(memcmp(newPwd,confPwd,sizeof(newPwd)) != 0){
-	CALL SUBOPT_0x322
+	CALL SUBOPT_0x31D
 	LDI  R30,LOW(_confPwd_S0160000000)
 	LDI  R31,HIGH(_confPwd_S0160000000)
-	CALL SUBOPT_0x2A5
+	CALL SUBOPT_0x2A1
 	CALL _memcmp
 	CPI  R30,0
 	BREQ _0x2C015B
@@ -32926,11 +32939,11 @@ _0x2C0156:
 	__POINTD1FN _0x2C0000,831
 	CALL SUBOPT_0x3
 ; 0016 02CA                                     memset(newPwd,0xFF,sizeof(newPwd));
-	CALL SUBOPT_0x322
-	CALL SUBOPT_0x323
+	CALL SUBOPT_0x31D
+	CALL SUBOPT_0x31E
 	CALL _memset
 ; 0016 02CB                                     memset(confPwd,0xFF,sizeof(confPwd));
-	CALL SUBOPT_0x31D
+	CALL SUBOPT_0x318
 	CALL _memset
 ; 0016 02CC                                     currentPage = P_FAILED;
 	LDI  R30,LOW(37)
@@ -32940,32 +32953,32 @@ _0x2C0156:
 	STS  _tmpNextPage_S0160000000,R30
 ; 0016 02CE                                     tmpPrevPage = P_PASS_CONFIRM;
 	LDI  R30,LOW(20)
-	CALL SUBOPT_0x311
+	CALL SUBOPT_0x30C
 ; 0016 02CF                                     cursor      = 0;
 ; 0016 02D0                                     printOLED("FL");
-	CALL SUBOPT_0x304
+	CALL SUBOPT_0x2FF
 	RJMP _0x2C02C5
 ; 0016 02D1                                 }
 ; 0016 02D2                                 else{
 _0x2C015B:
 ; 0016 02D3                                     r2ecpy(uPwd,(unsigned char *) confPwd,sizeof(userPwd));
-	CALL SUBOPT_0x324
+	CALL SUBOPT_0x31F
 	LDI  R30,LOW(_confPwd_S0160000000)
 	LDI  R31,HIGH(_confPwd_S0160000000)
-	CALL SUBOPT_0x2A5
+	CALL SUBOPT_0x2A1
 	CALL _r2ecpy
 ; 0016 02D4                                     currentPage = P_FINISH;
-	CALL SUBOPT_0x31A
+	CALL SUBOPT_0x315
 ; 0016 02D5                                     tmpNextPage = P_MANAGE_MENU;
 ; 0016 02D6                                     tmpPrevPage = P_PASS_CONFIRM;
 	LDI  R30,LOW(20)
-	CALL SUBOPT_0x311
+	CALL SUBOPT_0x30C
 ; 0016 02D7                                     cursor      = 0;
 ; 0016 02D8                                     printOLED("FI");
-	CALL SUBOPT_0x305
+	CALL SUBOPT_0x300
 _0x2C02C5:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 02D9                                 }
 ; 0016 02DA                             }
 ; 0016 02DB                             else if(cursor < 4){
@@ -32975,19 +32988,19 @@ _0x2C015A:
 	CPI  R26,LOW(0x4)
 	BRGE _0x2C015E
 ; 0016 02DC                                 if(++confPwd[cursor] >9) confPwd[cursor] = 0;
-	CALL SUBOPT_0x314
+	CALL SUBOPT_0x30F
 	SUBI R26,LOW(-_confPwd_S0160000000)
 	SBCI R27,HIGH(-_confPwd_S0160000000)
-	CALL SUBOPT_0x31E
+	CALL SUBOPT_0x319
 	BRLT _0x2C015F
-	CALL SUBOPT_0x325
+	CALL SUBOPT_0x320
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0016 02DD                                 printOLED("PD%1d%1d",cursor, confPwd[cursor]);
 _0x2C015F:
+	CALL SUBOPT_0x31B
 	CALL SUBOPT_0x320
-	CALL SUBOPT_0x325
-	CALL SUBOPT_0x321
+	CALL SUBOPT_0x31C
 ; 0016 02DE                             }
 ; 0016 02DF 
 ; 0016 02E0                             break;
@@ -33005,10 +33018,10 @@ _0x2C014E:
 	JMP _0x2C0161
 ; 0016 02E4     {
 ; 0016 02E5         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 02E6         case KEY_MODE   :   currentPage = P_MAIN_MENU;      cursor  = 3;            printOLED("M1%1d",cursor);  break;
 	BRNE _0x2C0165
-	CALL SUBOPT_0x326
+	CALL SUBOPT_0x321
 	RJMP _0x2C0164
 ; 0016 02E7         case KEY_UP     :   if(--cursor < 0){               cursor  = 3;    }       printOLED("MA%1d",cursor);  break;
 _0x2C0165:
@@ -33016,12 +33029,12 @@ _0x2C0165:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C0166
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C0167
 	LDI  R30,LOW(3)
 	STS  _cursor_S0160000000,R30
 _0x2C0167:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C0164
 ; 0016 02E8         case KEY_DOWN   :   if(++cursor > 3){               cursor  = 0;    }       printOLED("MA%1d",cursor);  break;
 _0x2C0166:
@@ -33029,13 +33042,13 @@ _0x2C0166:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C0168
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x4)
 	BRLT _0x2C0169
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C0169:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C0164
 ; 0016 02E9         case KEY_OK     :   if(cursor == 0){            // -- Set Voltage Reference
 _0x2C0168:
@@ -33049,7 +33062,7 @@ _0x2C0168:
 	BRNE _0x2C016B
 ; 0016 02EA                                 currentPage = P_SET_VREF;
 	LDI  R30,LOW(22)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 02EB                                 cursor      = 0;
 ; 0016 02EC                                 res = get_current_vref(&vRef[0]);
 	LDI  R26,LOW(_vRef_S0160000000)
@@ -33072,20 +33085,20 @@ _0x2C0168:
 ; 0016 02F2                                 printOLED("SV");
 _0x2C016C:
 	__POINTD1FN _0x2C0000,878
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2EF
 ; 0016 02F3                                 for(i=0;i<3;i++){
 	__GETWRN 16,17,0
 _0x2C016E:
 	__CPWRN 16,17,3
 	BRGE _0x2C016F
 ; 0016 02F4                                     printOLED("VD%1d%1d",i,vRef[i]);
-	CALL SUBOPT_0x327
+	CALL SUBOPT_0x322
 	MOVW R30,R16
-	CALL SUBOPT_0x258
+	CALL SUBOPT_0x254
 	LDI  R26,LOW(_vRef_S0160000000)
 	LDI  R27,HIGH(_vRef_S0160000000)
-	CALL SUBOPT_0x2FD
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x2F8
+	CALL SUBOPT_0x286
 ; 0016 02F5                                 }
 	__ADDWRN 16,17,1
 	RJMP _0x2C016E
@@ -33099,14 +33112,14 @@ _0x2C016B:
 	BRNE _0x2C0171
 ; 0016 02F8                                 currentPage = P_CAL1_SEL_REF_PRB;
 	LDI  R30,LOW(23)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 02F9                                 cursor      = 0;
 ; 0016 02FA                                 prb1        = 0;
 	LDI  R30,LOW(0)
 	STS  _prb1_S0160000000,R30
 ; 0016 02FB                                 printOLED("S1%1d",prb1+1);
-	CALL SUBOPT_0x328
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x323
+	CALL SUBOPT_0x28A
 ; 0016 02FC                             }
 ; 0016 02FD                             else if(cursor == 2){       // -- Calibrate method 2
 	RJMP _0x2C0172
@@ -33116,15 +33129,15 @@ _0x2C0171:
 	BRNE _0x2C0173
 ; 0016 02FE                                 currentPage = P_CAL2_SEL_PRB;
 	LDI  R30,LOW(26)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 02FF                                 cursor      = 0;
 ; 0016 0300                                 prb1        = 0;
 	LDI  R30,LOW(0)
 	STS  _prb1_S0160000000,R30
 ; 0016 0301                                 printOLED("S2%1d",prb1+1);
-	CALL SUBOPT_0x329
-	CALL SUBOPT_0x32A
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x324
+	CALL SUBOPT_0x325
+	CALL SUBOPT_0x28A
 ; 0016 0302                             }
 ; 0016 0303                             else if(cursor == 3){       // -- Reset User Password
 	RJMP _0x2C0174
@@ -33134,7 +33147,7 @@ _0x2C0173:
 	BRNE _0x2C0175
 ; 0016 0304                                 currentPage = P_RESET_CONFIRM;
 	LDI  R30,LOW(32)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0305                                 cursor      = 0;
 ; 0016 0306                                 printOLED("RC");
 	__POINTD1FN _0x2C0000,902
@@ -33144,13 +33157,13 @@ _0x2C0173:
 _0x2C0175:
 ; 0016 0309                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 030A                                 cursor      = 0;
 ; 0016 030B                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
+	CALL SUBOPT_0x2CD
 _0x2C02C6:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 030C                             }
 _0x2C0174:
 _0x2C0172:
@@ -33168,12 +33181,12 @@ _0x2C0161:
 	JMP _0x2C0178
 ; 0016 0311     {
 ; 0016 0312         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 0313         case KEY_MODE   :   currentPage = P_MTNC_MENU;      cursor  = 0;            printOLED("M7%1d",cursor);              break;
 	BRNE _0x2C017C
 	LDI  R30,LOW(21)
-	CALL SUBOPT_0x2CC
-	CALL SUBOPT_0x32B
+	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x326
 	RJMP _0x2C017B
 ; 0016 0314         case KEY_UP     :   if(++cursor > 3){   cursor  = 0;                }       printOLED("VA%1d",cursor);              break;
 _0x2C017C:
@@ -33181,13 +33194,13 @@ _0x2C017C:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C017D
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x4)
 	BRLT _0x2C017E
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C017E:
-	CALL SUBOPT_0x32C
+	CALL SUBOPT_0x327
 	RJMP _0x2C017B
 ; 0016 0315         case KEY_DOWN   :   if(--cursor < 0){   cursor  = 3;                }       printOLED("VA%1d",cursor);              break;
 _0x2C017D:
@@ -33195,12 +33208,12 @@ _0x2C017D:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C017F
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C0180
 	LDI  R30,LOW(3)
 	STS  _cursor_S0160000000,R30
 _0x2C0180:
-	CALL SUBOPT_0x32C
+	CALL SUBOPT_0x327
 	RJMP _0x2C017B
 ; 0016 0316         case KEY_OK     :   if(cursor == 3){
 _0x2C017F:
@@ -33213,7 +33226,7 @@ _0x2C017F:
 	BRNE _0x2C0182
 ; 0016 0317                                 currentPage = P_FINISH;
 	LDI  R30,LOW(36)
-	CALL SUBOPT_0x2CF
+	CALL SUBOPT_0x2CA
 ; 0016 0318                                 tmpNextPage = P_MTNC_MENU;
 ; 0016 0319                                 tmpPrevPage = P_SET_VREF;
 	LDI  R30,LOW(22)
@@ -33226,7 +33239,7 @@ _0x2C017F:
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 ; 0016 031C                                 printOLED("FI");
-	CALL SUBOPT_0x305
+	CALL SUBOPT_0x300
 	RJMP _0x2C02C7
 ; 0016 031D                             }
 ; 0016 031E                             else if(cursor < 3){
@@ -33235,35 +33248,35 @@ _0x2C0182:
 	CPI  R26,LOW(0x3)
 	BRGE _0x2C0184
 ; 0016 031F                                 if(++vRef[cursor] >9) vRef[cursor] = 0;
-	CALL SUBOPT_0x314
+	CALL SUBOPT_0x30F
 	SUBI R26,LOW(-_vRef_S0160000000)
 	SBCI R27,HIGH(-_vRef_S0160000000)
-	CALL SUBOPT_0x31E
+	CALL SUBOPT_0x319
 	BRLO _0x2C0185
-	CALL SUBOPT_0x32D
+	CALL SUBOPT_0x328
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0016 0320                                 printOLED("VD%1d%1d",cursor, vRef[cursor]);
 _0x2C0185:
-	CALL SUBOPT_0x327
-	CALL SUBOPT_0x317
-	CALL SUBOPT_0x32D
+	CALL SUBOPT_0x322
+	CALL SUBOPT_0x312
+	CALL SUBOPT_0x328
 	LD   R30,Z
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x286
 ; 0016 0321                             }
 ; 0016 0322                             else{                       // -- Exit -- should not occur
 	RJMP _0x2C0186
 _0x2C0184:
 ; 0016 0323                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0324                                 cursor      = 0;
 ; 0016 0325                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
+	CALL SUBOPT_0x2CD
 _0x2C02C7:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 0326                             }
 _0x2C0186:
 ; 0016 0327             break;
@@ -33279,14 +33292,14 @@ _0x2C0178:
 	JMP _0x2C0188
 ; 0016 032B     {
 ; 0016 032C         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 032D         case KEY_MODE   :   currentPage = P_MTNC_MENU;      cursor  = 1;    prb1 = 0;   printOLED("M7%1d",cursor);  break;
 	BRNE _0x2C018C
 	LDI  R30,LOW(21)
-	CALL SUBOPT_0x2F6
+	CALL SUBOPT_0x2F1
 	LDI  R30,LOW(0)
 	STS  _prb1_S0160000000,R30
-	CALL SUBOPT_0x32B
+	CALL SUBOPT_0x326
 	RJMP _0x2C018B
 ; 0016 032E         case KEY_UP     :   if(++cursor > 1){               cursor  = 0;    }           printOLED("SA%1d",cursor);  break;
 _0x2C018C:
@@ -33294,13 +33307,13 @@ _0x2C018C:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C018D
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x2)
 	BRLT _0x2C018E
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C018E:
-	CALL SUBOPT_0x32E
+	CALL SUBOPT_0x329
 	RJMP _0x2C018B
 ; 0016 032F         case KEY_DOWN   :   if(--cursor < 0){               cursor  = 1;    }           printOLED("SA%1d",cursor);  break;
 _0x2C018D:
@@ -33308,12 +33321,12 @@ _0x2C018D:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C018F
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C0190
 	LDI  R30,LOW(1)
 	STS  _cursor_S0160000000,R30
 _0x2C0190:
-	CALL SUBOPT_0x32E
+	CALL SUBOPT_0x329
 	RJMP _0x2C018B
 ; 0016 0330         case KEY_OK     :   if(cursor == 0){
 _0x2C018F:
@@ -33325,15 +33338,15 @@ _0x2C018F:
 	CPI  R30,0
 	BRNE _0x2C0192
 ; 0016 0331                                 if(++prb1 > 4){ prb1 = 0; }
-	CALL SUBOPT_0x32F
+	CALL SUBOPT_0x32A
 	BRLO _0x2C0193
 	LDI  R30,LOW(0)
 	STS  _prb1_S0160000000,R30
 ; 0016 0332                                 printOLED("PN%1d",prb1+1);
 _0x2C0193:
-	CALL SUBOPT_0x330
-	CALL SUBOPT_0x32A
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x32B
+	CALL SUBOPT_0x325
+	CALL SUBOPT_0x28A
 ; 0016 0333                             }
 ; 0016 0334                             else if(cursor == 1){
 	RJMP _0x2C0194
@@ -33343,26 +33356,26 @@ _0x2C0192:
 	BRNE _0x2C0195
 ; 0016 0335                                 currentPage = P_CAL1_SEL_CAL_PRB;
 	LDI  R30,LOW(24)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0336                                 cursor      = 0;
 ; 0016 0337                                 prb2        = 0;
 	LDI  R30,LOW(0)
 	STS  _prb2_S0160000000,R30
 ; 0016 0338                                 printOLED("S2%1d",prb2+1);
-	CALL SUBOPT_0x329
-	CALL SUBOPT_0x331
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x324
+	CALL SUBOPT_0x32C
+	CALL SUBOPT_0x28A
 ; 0016 0339                             }
 ; 0016 033A                             else{                       // -- Exit -- should not occur
 	RJMP _0x2C0196
 _0x2C0195:
 ; 0016 033B                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 033C                                 cursor      = 0;
 ; 0016 033D                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2CD
+	CALL SUBOPT_0x2EF
 ; 0016 033E                             }
 _0x2C0196:
 _0x2C0194:
@@ -33379,15 +33392,15 @@ _0x2C0188:
 	JMP _0x2C0198
 ; 0016 0343     {
 ; 0016 0344         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 0345         case KEY_MODE   :   currentPage = P_CAL1_SEL_REF_PRB;   cursor  = 0;    prb2 = 0;   printOLED("S1%1d",prb1+1);  break;
 	BRNE _0x2C019C
 	LDI  R30,LOW(23)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 	LDI  R30,LOW(0)
 	STS  _prb2_S0160000000,R30
-	CALL SUBOPT_0x328
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x323
+	CALL SUBOPT_0x28A
 	RJMP _0x2C019B
 ; 0016 0346         case KEY_UP     :   if(++cursor > 1){                   cursor  = 0;    }           printOLED("SA%1d",cursor);  break;
 _0x2C019C:
@@ -33395,13 +33408,13 @@ _0x2C019C:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C019D
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x2)
 	BRLT _0x2C019E
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C019E:
-	CALL SUBOPT_0x32E
+	CALL SUBOPT_0x329
 	RJMP _0x2C019B
 ; 0016 0347         case KEY_DOWN   :   if(--cursor < 0){                   cursor  = 1;    }           printOLED("SA%1d",cursor);  break;
 _0x2C019D:
@@ -33409,12 +33422,12 @@ _0x2C019D:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C019F
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C01A0
 	LDI  R30,LOW(1)
 	STS  _cursor_S0160000000,R30
 _0x2C01A0:
-	CALL SUBOPT_0x32E
+	CALL SUBOPT_0x329
 	RJMP _0x2C019B
 ; 0016 0348         case KEY_OK     :   if(cursor == 0){
 _0x2C019F:
@@ -33435,9 +33448,9 @@ _0x2C019F:
 	STS  _prb2_S0160000000,R30
 ; 0016 034A                                 printOLED("PN%1d",prb2+1);
 _0x2C01A3:
-	CALL SUBOPT_0x330
-	CALL SUBOPT_0x331
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x32B
+	CALL SUBOPT_0x32C
+	CALL SUBOPT_0x28A
 ; 0016 034B                             }
 ; 0016 034C                             else if(cursor == 1){
 	RJMP _0x2C01A4
@@ -33447,23 +33460,23 @@ _0x2C01A2:
 	BRNE _0x2C01A5
 ; 0016 034D                                 currentPage = P_CAL1_CONFIRM;
 	LDI  R30,LOW(25)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 034E                                 cursor      = 0;
 ; 0016 034F                                 printOLED("CC%1d",prb2+1);
-	CALL SUBOPT_0x332
-	CALL SUBOPT_0x331
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x32D
+	CALL SUBOPT_0x32C
+	CALL SUBOPT_0x28A
 ; 0016 0350                             }
 ; 0016 0351                             else{                       // -- Exit -- should not occur
 	RJMP _0x2C01A6
 _0x2C01A5:
 ; 0016 0352                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0353                                 cursor      = 0;
 ; 0016 0354                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2CD
+	CALL SUBOPT_0x2EF
 ; 0016 0355                             }
 _0x2C01A6:
 _0x2C01A4:
@@ -33479,14 +33492,14 @@ _0x2C0198:
 	BRNE _0x2C01A8
 ; 0016 035A     {
 ; 0016 035B         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 035C         case KEY_MODE   :   currentPage = P_CAL1_SEL_CAL_PRB;   cursor  = 0;        printOLED("S2%1d",prb2+1);  break;
 	BRNE _0x2C01AC
 	LDI  R30,LOW(24)
-	CALL SUBOPT_0x2CC
-	CALL SUBOPT_0x329
-	CALL SUBOPT_0x331
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x324
+	CALL SUBOPT_0x32C
+	CALL SUBOPT_0x28A
 	RJMP _0x2C01AB
 ; 0016 035D         case KEY_UP     :   /* no operation */                                                                  break;
 _0x2C01AC:
@@ -33504,7 +33517,7 @@ _0x2C01AC:
 	LDI  R26,HIGH(0x4)
 	CPC  R31,R26
 	BRNE _0x2C01AB
-	CALL SUBOPT_0x333
+	CALL SUBOPT_0x32E
 	LDS  R26,_prb2_S0160000000
 	CLR  R27
 	CALL _sensorCalibrate1
@@ -33514,27 +33527,27 @@ _0x2C01AC:
 	BRPL _0x2C01B0
 ; 0016 0361                                 currentPage = P_FAILED;
 	LDI  R30,LOW(37)
-	CALL SUBOPT_0x334
+	CALL SUBOPT_0x32F
 ; 0016 0362                                 tmpNextPage = P_CAL1_SEL_CAL_PRB;
 ; 0016 0363                                 tmpPrevPage = P_CAL1_CONFIRM;
 ; 0016 0364                                 cursor      = 0;
 ; 0016 0365                                 printOLED("FL");
-	CALL SUBOPT_0x304
+	CALL SUBOPT_0x2FF
 	RJMP _0x2C02C8
 ; 0016 0366                             }
 ; 0016 0367                             else{
 _0x2C01B0:
 ; 0016 0368                                 currentPage = P_FINISH;
 	LDI  R30,LOW(36)
-	CALL SUBOPT_0x334
+	CALL SUBOPT_0x32F
 ; 0016 0369                                 tmpNextPage = P_CAL1_SEL_CAL_PRB;
 ; 0016 036A                                 tmpPrevPage = P_CAL1_CONFIRM;
 ; 0016 036B                                 cursor      = 0;
 ; 0016 036C                                 printOLED("FI");
-	CALL SUBOPT_0x305
+	CALL SUBOPT_0x300
 _0x2C02C8:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 036D                             }
 ; 0016 036E                             break;
 ; 0016 036F         }
@@ -33549,12 +33562,12 @@ _0x2C01A8:
 	JMP _0x2C01B3
 ; 0016 0372     {
 ; 0016 0373         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 0374         case KEY_MODE   :   currentPage = P_MTNC_MENU;      cursor  = 2;            printOLED("M7%1d",cursor);  break;
 	BRNE _0x2C01B7
 	LDI  R30,LOW(21)
-	CALL SUBOPT_0x2F7
-	CALL SUBOPT_0x32B
+	CALL SUBOPT_0x2F2
+	CALL SUBOPT_0x326
 	RJMP _0x2C01B6
 ; 0016 0375         case KEY_UP     :   if(++cursor > 1){               cursor  = 0;    }       printOLED("SA%1d",cursor);  break;
 _0x2C01B7:
@@ -33562,13 +33575,13 @@ _0x2C01B7:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C01B8
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x2)
 	BRLT _0x2C01B9
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C01B9:
-	CALL SUBOPT_0x32E
+	CALL SUBOPT_0x329
 	RJMP _0x2C01B6
 ; 0016 0376         case KEY_DOWN   :   if(--cursor < 0){               cursor  = 1;    }       printOLED("SA%1d",cursor);  break;
 _0x2C01B8:
@@ -33576,12 +33589,12 @@ _0x2C01B8:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C01BA
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C01BB
 	LDI  R30,LOW(1)
 	STS  _cursor_S0160000000,R30
 _0x2C01BB:
-	CALL SUBOPT_0x32E
+	CALL SUBOPT_0x329
 	RJMP _0x2C01B6
 ; 0016 0377         case KEY_OK     :   if(cursor == 0){
 _0x2C01BA:
@@ -33593,15 +33606,15 @@ _0x2C01BA:
 	CPI  R30,0
 	BRNE _0x2C01BD
 ; 0016 0378                                 if(++prb1 > 4){ prb1 = 0; }
-	CALL SUBOPT_0x32F
+	CALL SUBOPT_0x32A
 	BRLO _0x2C01BE
 	LDI  R30,LOW(0)
 	STS  _prb1_S0160000000,R30
 ; 0016 0379                                 printOLED("PN%1d",prb1+1);
 _0x2C01BE:
-	CALL SUBOPT_0x330
-	CALL SUBOPT_0x32A
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x32B
+	CALL SUBOPT_0x325
+	CALL SUBOPT_0x28A
 ; 0016 037A                             }
 ; 0016 037B                             else if(cursor == 1){
 	RJMP _0x2C01BF
@@ -33611,21 +33624,21 @@ _0x2C01BD:
 	BRNE _0x2C01C0
 ; 0016 037C                                 currentPage = P_CAL2_MENU;
 	LDI  R30,LOW(27)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 037D                                 cursor      = 0;
 ; 0016 037E                                 printOLED("M8%1d",cursor);
-	CALL SUBOPT_0x335
+	CALL SUBOPT_0x330
 ; 0016 037F                             }
 ; 0016 0380                             else{                       // -- Exit -- should not occur
 	RJMP _0x2C01C1
 _0x2C01C0:
 ; 0016 0381                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0382                                 cursor      = 0;
 ; 0016 0383                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2CD
+	CALL SUBOPT_0x2EF
 ; 0016 0384                             }
 _0x2C01C1:
 _0x2C01BF:
@@ -33642,14 +33655,14 @@ _0x2C01B3:
 	JMP _0x2C01C3
 ; 0016 0389     {
 ; 0016 038A         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 038B         case KEY_MODE   :   currentPage = P_CAL2_SEL_PRB;   cursor  = 0;        printOLED("S2%1d",prb1+1);  break;
 	BRNE _0x2C01C7
 	LDI  R30,LOW(26)
-	CALL SUBOPT_0x2CC
-	CALL SUBOPT_0x329
-	CALL SUBOPT_0x32A
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x324
+	CALL SUBOPT_0x325
+	CALL SUBOPT_0x28A
 	RJMP _0x2C01C6
 ; 0016 038C         case KEY_UP     :   if(--cursor < 0){               cursor  = 3;    }   printOLED("MA%1d",cursor);  break;
 _0x2C01C7:
@@ -33657,12 +33670,12 @@ _0x2C01C7:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C01C8
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C01C9
 	LDI  R30,LOW(3)
 	STS  _cursor_S0160000000,R30
 _0x2C01C9:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C01C6
 ; 0016 038D         case KEY_DOWN   :   if(++cursor > 3){               cursor  = 0;    }   printOLED("MA%1d",cursor);  break;
 _0x2C01C8:
@@ -33670,13 +33683,13 @@ _0x2C01C8:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C01CA
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x4)
 	BRLT _0x2C01CB
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C01CB:
-	CALL SUBOPT_0x2C9
+	CALL SUBOPT_0x2C4
 	RJMP _0x2C01C6
 ; 0016 038E         case KEY_OK     :   if(cursor < 3){
 _0x2C01CA:
@@ -33719,19 +33732,19 @@ _0x2C01D2:
 	LDI  R31,0
 	SBRC R30,7
 	SER  R31
-	CALL SUBOPT_0x202
-	CALL SUBOPT_0x32A
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x201
+	CALL SUBOPT_0x325
+	CALL SUBOPT_0x286
 ; 0016 0394 
 ; 0016 0395                                 res = sensorGetCurrentSetPoint(prb1,CALPOINT(cursor+1),&calPnt[0]);
-	CALL SUBOPT_0x333
+	CALL SUBOPT_0x32E
 	LDS  R30,_cursor_S0160000000
 	LDI  R31,0
 	SBRC R30,7
 	SER  R31
 	SUBI R30,LOW(-101)
 	SBCI R31,HIGH(-101)
-	CALL SUBOPT_0x336
+	CALL SUBOPT_0x331
 	CALL _sensorGetCurrentSetPoint
 	MOVW R20,R30
 ; 0016 0396                                 if(res<0){          memset(&calPnt[0],0x00,sizeof(calPnt));     }
@@ -33739,7 +33752,7 @@ _0x2C01D2:
 	BRPL _0x2C01D3
 	LDI  R30,LOW(_calPnt_S0160000000)
 	LDI  R31,HIGH(_calPnt_S0160000000)
-	CALL SUBOPT_0xF7
+	CALL SUBOPT_0xF6
 	LDI  R26,LOW(6)
 	LDI  R27,0
 	CALL _memset
@@ -33749,24 +33762,24 @@ _0x2C01D3:
 _0x2C01D5:
 	__CPWRN 16,17,6
 	BRGE _0x2C01D6
-	CALL SUBOPT_0x337
+	CALL SUBOPT_0x332
 	MOVW R30,R16
-	CALL SUBOPT_0x258
+	CALL SUBOPT_0x254
 	LDI  R26,LOW(_calPnt_S0160000000)
 	LDI  R27,HIGH(_calPnt_S0160000000)
-	CALL SUBOPT_0x2FD
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x2F8
+	CALL SUBOPT_0x286
 ; 0016 0398                                                     printDebug("calPnt[%1d] = %1d\r\n",i,calPnt[i]);         }
 	__POINTD1FN _0x2C0000,959
 	CALL __PUTPARD1
 	MOVW R30,R16
-	CALL SUBOPT_0x258
+	CALL SUBOPT_0x254
 	LDI  R26,LOW(_calPnt_S0160000000)
 	LDI  R27,HIGH(_calPnt_S0160000000)
 	ADD  R26,R16
 	ADC  R27,R17
 	LD   R30,X
-	CALL SUBOPT_0x239
+	CALL SUBOPT_0x231
 	__ADDWRN 16,17,1
 	RJMP _0x2C01D5
 _0x2C01D6:
@@ -33782,23 +33795,23 @@ _0x2C01CD:
 	BRNE _0x2C01D8
 ; 0016 039C                                 currentPage = P_CAL2_CONFIRM;
 	LDI  R30,LOW(31)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 039D                                 cursor      = 0;
 ; 0016 039E                                 printOLED("CC%1d",prb1+1);
-	CALL SUBOPT_0x332
-	CALL SUBOPT_0x32A
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x32D
+	CALL SUBOPT_0x325
+	CALL SUBOPT_0x28A
 ; 0016 039F                             }
 ; 0016 03A0                             else{                       // -- Exit -- should not occur
 	RJMP _0x2C01D9
 _0x2C01D8:
 ; 0016 03A1                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 03A2                                 cursor      = 0;
 ; 0016 03A3                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2CD
+	CALL SUBOPT_0x2EF
 ; 0016 03A4                             }
 _0x2C01D9:
 _0x2C01D7:
@@ -33820,7 +33833,7 @@ _0x2C01C3:
 _0x2C01DC:
 ; 0016 03A9     {
 ; 0016 03AA         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 03AB         case KEY_MODE   :   currentPage = P_CAL2_MENU;
 	BRNE _0x2C01E1
 	LDI  R30,LOW(27)
@@ -33848,7 +33861,7 @@ _0x2C02CA:
 	STS  _cursor_S0160000000,R30
 ; 0016 03AF                             printOLED("M8%1d",cursor);                                                                      break;
 _0x2C01E6:
-	CALL SUBOPT_0x335
+	CALL SUBOPT_0x330
 	RJMP _0x2C01E0
 ; 0016 03B0         case KEY_UP     :   if(++cursor > 6){                       cursor  = 0;    }       printOLED("CA%1d",cursor);      break;
 _0x2C01E1:
@@ -33856,13 +33869,13 @@ _0x2C01E1:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2C01E7
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x7)
 	BRLT _0x2C01E8
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C01E8:
-	CALL SUBOPT_0x338
+	CALL SUBOPT_0x333
 	RJMP _0x2C01E0
 ; 0016 03B1         case KEY_DOWN   :   if(--cursor < 0){                       cursor  = 6;    }       printOLED("CA%1d",cursor);      break;
 _0x2C01E7:
@@ -33870,12 +33883,12 @@ _0x2C01E7:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x2C01E9
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C01EA
 	LDI  R30,LOW(6)
 	STS  _cursor_S0160000000,R30
 _0x2C01EA:
-	CALL SUBOPT_0x338
+	CALL SUBOPT_0x333
 	RJMP _0x2C01E0
 ; 0016 03B2         case KEY_OK     :   if(cursor == 6){
 _0x2C01E9:
@@ -33894,10 +33907,10 @@ _0x2C01E9:
 	CPI  R26,LOW(0x1C)
 	BRNE _0x2C01ED
 ; 0016 03B5                                     res = sensorSetCurrentSetPoint(prb1,CALPOINT(1),&calPnt[0]);
-	CALL SUBOPT_0x333
+	CALL SUBOPT_0x32E
 	LDI  R30,LOW(101)
 	LDI  R31,HIGH(101)
-	CALL SUBOPT_0x336
+	CALL SUBOPT_0x331
 	CALL _sensorSetCurrentSetPoint
 	MOVW R20,R30
 ; 0016 03B6                                 }
@@ -33908,10 +33921,10 @@ _0x2C01ED:
 	CPI  R26,LOW(0x1D)
 	BRNE _0x2C01EF
 ; 0016 03B8                                     res = sensorSetCurrentSetPoint(prb1,CALPOINT(2),&calPnt[0]);
-	CALL SUBOPT_0x333
+	CALL SUBOPT_0x32E
 	LDI  R30,LOW(102)
 	LDI  R31,HIGH(102)
-	CALL SUBOPT_0x336
+	CALL SUBOPT_0x331
 	CALL _sensorSetCurrentSetPoint
 	MOVW R20,R30
 ; 0016 03B9                                 }
@@ -33922,10 +33935,10 @@ _0x2C01EF:
 	CPI  R26,LOW(0x1E)
 	BRNE _0x2C01F1
 ; 0016 03BB                                     res = sensorSetCurrentSetPoint(prb1,CALPOINT(3),&calPnt[0]);
-	CALL SUBOPT_0x333
+	CALL SUBOPT_0x32E
 	LDI  R30,LOW(103)
 	LDI  R31,HIGH(103)
-	CALL SUBOPT_0x336
+	CALL SUBOPT_0x331
 	CALL _sensorSetCurrentSetPoint
 	MOVW R20,R30
 ; 0016 03BC                                 }
@@ -33944,30 +33957,30 @@ _0x2C01EE:
 	TST  R21
 	BRPL _0x2C01F3
 ; 0016 03C3                                     currentPage = P_FAILED;
-	CALL SUBOPT_0x339
+	CALL SUBOPT_0x334
 ; 0016 03C4                                     tmpNextPage = P_CAL2_MENU;
 ; 0016 03C5                                     tmpPrevPage = currentPage;
 	LDS  R30,_currentPage
-	CALL SUBOPT_0x311
+	CALL SUBOPT_0x30C
 ; 0016 03C6                                     cursor      = 0;
 ; 0016 03C7                                     printOLED("FL");
-	CALL SUBOPT_0x304
+	CALL SUBOPT_0x2FF
 	RJMP _0x2C02CB
 ; 0016 03C8                                 }
 ; 0016 03C9                                 else{
 _0x2C01F3:
 ; 0016 03CA                                     currentPage = P_FINISH;
-	CALL SUBOPT_0x33A
+	CALL SUBOPT_0x335
 ; 0016 03CB                                     tmpNextPage = P_CAL2_MENU;
 ; 0016 03CC                                     tmpPrevPage = currentPage;
 	LDS  R30,_currentPage
-	CALL SUBOPT_0x311
+	CALL SUBOPT_0x30C
 ; 0016 03CD                                     cursor      = 0;
 ; 0016 03CE                                     printOLED("FI");
-	CALL SUBOPT_0x305
+	CALL SUBOPT_0x300
 _0x2C02CB:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 03CF                                 }
 ; 0016 03D0                             }
 ; 0016 03D1                             else if(cursor == 0){   // toggle '+' & '-'
@@ -33977,7 +33990,7 @@ _0x2C01EC:
 	CPI  R30,0
 	BRNE _0x2C01F6
 ; 0016 03D2                                 if(++calPnt[cursor] > 1){ calPnt[cursor] = 0;   }
-	CALL SUBOPT_0x314
+	CALL SUBOPT_0x30F
 	SUBI R26,LOW(-_calPnt_S0160000000)
 	SBCI R27,HIGH(-_calPnt_S0160000000)
 	LD   R30,X
@@ -33985,17 +33998,17 @@ _0x2C01EC:
 	ST   X,R30
 	CPI  R30,LOW(0x2)
 	BRLO _0x2C01F7
-	CALL SUBOPT_0x33B
+	CALL SUBOPT_0x336
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0016 03D3                                 printOLED("CD%1d%1d",cursor,calPnt[cursor]);
 _0x2C01F7:
-	CALL SUBOPT_0x337
-	CALL SUBOPT_0x317
-	CALL SUBOPT_0x33B
+	CALL SUBOPT_0x332
+	CALL SUBOPT_0x312
+	CALL SUBOPT_0x336
 	LD   R30,Z
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x286
 ; 0016 03D4                             }
 ; 0016 03D5                             else if(cursor < 6){
 	RJMP _0x2C01F8
@@ -34004,33 +34017,33 @@ _0x2C01F6:
 	CPI  R26,LOW(0x6)
 	BRGE _0x2C01F9
 ; 0016 03D6                                 if(++calPnt[cursor] > 9){ calPnt[cursor] = 0;   }
-	CALL SUBOPT_0x314
+	CALL SUBOPT_0x30F
 	SUBI R26,LOW(-_calPnt_S0160000000)
 	SBCI R27,HIGH(-_calPnt_S0160000000)
-	CALL SUBOPT_0x31E
+	CALL SUBOPT_0x319
 	BRLO _0x2C01FA
-	CALL SUBOPT_0x33B
+	CALL SUBOPT_0x336
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0016 03D7                                 printOLED("CD%1d%1d",cursor,calPnt[cursor]);
 _0x2C01FA:
-	CALL SUBOPT_0x337
-	CALL SUBOPT_0x317
-	CALL SUBOPT_0x33B
+	CALL SUBOPT_0x332
+	CALL SUBOPT_0x312
+	CALL SUBOPT_0x336
 	LD   R30,Z
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x286
 ; 0016 03D8                             }
 ; 0016 03D9                             else{                       // -- Exit -- should not occur
 	RJMP _0x2C01FB
 _0x2C01F9:
 ; 0016 03DA                                 currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 03DB                                 cursor      = 0;
 ; 0016 03DC                                 printOLED("M0");
-	CALL SUBOPT_0x2D2
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2CD
+	CALL SUBOPT_0x2EF
 ; 0016 03DD                             }
 _0x2C01FB:
 _0x2C01F8:
@@ -34047,12 +34060,12 @@ _0x2C01DB:
 	BRNE _0x2C01FD
 ; 0016 03E2     {
 ; 0016 03E3         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 03E4         case KEY_MODE   :   currentPage = P_CAL2_MENU;      cursor  = 1;            printOLED("M8%1d",cursor);  break;
 	BRNE _0x2C0201
 	LDI  R30,LOW(27)
-	CALL SUBOPT_0x2F6
-	CALL SUBOPT_0x335
+	CALL SUBOPT_0x2F1
+	CALL SUBOPT_0x330
 	RJMP _0x2C0200
 ; 0016 03E5         case KEY_UP     :   /* no operation */                                                                  break;
 _0x2C0201:
@@ -34078,30 +34091,30 @@ _0x2C0201:
 	TST  R21
 	BRPL _0x2C0205
 ; 0016 03E9                                 currentPage = P_FAILED;
-	CALL SUBOPT_0x339
+	CALL SUBOPT_0x334
 ; 0016 03EA                                 tmpNextPage = P_CAL2_MENU;
 ; 0016 03EB                                 tmpPrevPage = P_CAL2_CONFIRM;
 	LDI  R30,LOW(31)
-	CALL SUBOPT_0x311
+	CALL SUBOPT_0x30C
 ; 0016 03EC                                 cursor      = 0;
 ; 0016 03ED                                 printOLED("FL");
-	CALL SUBOPT_0x304
+	CALL SUBOPT_0x2FF
 	RJMP _0x2C02CC
 ; 0016 03EE                             }
 ; 0016 03EF                             else{
 _0x2C0205:
 ; 0016 03F0                                 currentPage = P_FINISH;
-	CALL SUBOPT_0x33A
+	CALL SUBOPT_0x335
 ; 0016 03F1                                 tmpNextPage = P_CAL2_MENU;
 ; 0016 03F2                                 tmpPrevPage = P_CAL2_CONFIRM;
 	LDI  R30,LOW(31)
-	CALL SUBOPT_0x311
+	CALL SUBOPT_0x30C
 ; 0016 03F3                                 cursor      = 0;
 ; 0016 03F4                                 printOLED("FI");
-	CALL SUBOPT_0x305
+	CALL SUBOPT_0x300
 _0x2C02CC:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 03F5                             }
 ; 0016 03F6                             break;
 ; 0016 03F7         }
@@ -34115,14 +34128,14 @@ _0x2C01FD:
 	BRNE _0x2C0208
 ; 0016 03FA     {
 ; 0016 03FB         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 03FC         case KEY_MODE   :   currentPage = P_MTNC_MENU;      cursor  = 3;            printOLED("M7%1d",cursor);  break;
 	BRNE _0x2C020C
 	LDI  R30,LOW(21)
 	STS  _currentPage,R30
 	LDI  R30,LOW(3)
 	STS  _cursor_S0160000000,R30
-	CALL SUBOPT_0x32B
+	CALL SUBOPT_0x326
 	RJMP _0x2C020B
 ; 0016 03FD         case KEY_UP     :   /* no operation */                                                                  break;
 _0x2C020C:
@@ -34142,26 +34155,26 @@ _0x2C020C:
 	BRNE _0x2C020B
 	LDI  R30,LOW(_newPwd_S0160000000)
 	LDI  R31,HIGH(_newPwd_S0160000000)
-	CALL SUBOPT_0xF7
+	CALL SUBOPT_0xF6
 	CALL SUBOPT_0x77
 	CALL _memset
 ; 0016 0400                             r2ecpy(uPwd,(unsigned char *) newPwd,sizeof(userPwd));
-	CALL SUBOPT_0x324
+	CALL SUBOPT_0x31F
 	LDI  R30,LOW(_newPwd_S0160000000)
 	LDI  R31,HIGH(_newPwd_S0160000000)
-	CALL SUBOPT_0x2A5
+	CALL SUBOPT_0x2A1
 	RCALL _r2ecpy
 ; 0016 0401                             currentPage = P_FINISH;
 	LDI  R30,LOW(36)
-	CALL SUBOPT_0x2CF
+	CALL SUBOPT_0x2CA
 ; 0016 0402                             tmpNextPage = P_MTNC_MENU;
 ; 0016 0403                             tmpPrevPage = P_RESET_CONFIRM;
 	LDI  R30,LOW(32)
-	CALL SUBOPT_0x311
+	CALL SUBOPT_0x30C
 ; 0016 0404                             cursor      = 0;
 ; 0016 0405                             printOLED("FI");
-	CALL SUBOPT_0x305
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x300
+	CALL SUBOPT_0x2EF
 ; 0016 0406                             break;
 ; 0016 0407         }
 _0x2C020B:
@@ -34175,7 +34188,7 @@ _0x2C0208:
 	JMP _0x2C0211
 ; 0016 040A     {
 ; 0016 040B         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 040C         case KEY_MODE   :   switch(tmpPrevPage){
 	BRNE _0x2C0215
 	LDS  R30,_tmpPrevPage_S0160000000
@@ -34186,8 +34199,8 @@ _0x2C0208:
 	CPC  R31,R26
 	BRNE _0x2C0219
 	LDI  R30,LOW(2)
-	CALL SUBOPT_0x2F6
-	CALL SUBOPT_0x2F8
+	CALL SUBOPT_0x2F1
+	CALL SUBOPT_0x2F3
 	RJMP _0x2C02CD
 ; 0016 040E                             case P_PRB_MENU     : currentPage = P_PRB_MENU;     cursor  = 1;    printOLED("M3%1d",cursor);  break;
 _0x2C0219:
@@ -34196,8 +34209,8 @@ _0x2C0219:
 	CPC  R31,R26
 	BRNE _0x2C021A
 	LDI  R30,LOW(14)
-	CALL SUBOPT_0x2F6
-	CALL SUBOPT_0x33C
+	CALL SUBOPT_0x2F1
+	CALL SUBOPT_0x337
 	RJMP _0x2C02CD
 ; 0016 040F                             case P_MANAGE_MENU  : currentPage = P_MANAGE_MENU;  cursor  = 1;    printOLED("M4%1d",cursor);  break;
 _0x2C021A:
@@ -34206,18 +34219,18 @@ _0x2C021A:
 	CPC  R31,R26
 	BRNE _0x2C0218
 	LDI  R30,LOW(17)
-	CALL SUBOPT_0x2F6
-	CALL SUBOPT_0x33D
+	CALL SUBOPT_0x2F1
+	CALL SUBOPT_0x338
 _0x2C02CD:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x317
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x312
+	CALL SUBOPT_0x28A
 ; 0016 0410                             }
 _0x2C0218:
 ; 0016 0411                             // --- clear entered password
 ; 0016 0412                             memset(entPwd,0xFF,sizeof(entPwd));                                                             break;
-	CALL SUBOPT_0x33E
-	CALL SUBOPT_0x323
+	CALL SUBOPT_0x339
+	CALL SUBOPT_0x31E
 	CALL _memset
 	RJMP _0x2C0214
 ; 0016 0413         case KEY_UP     :   if(cursor < 4){     printOLED("PD%1d*",cursor); }
@@ -34229,16 +34242,16 @@ _0x2C0215:
 	LDS  R26,_cursor_S0160000000
 	CPI  R26,LOW(0x4)
 	BRGE _0x2C021D
-	CALL SUBOPT_0x31B
+	CALL SUBOPT_0x316
 ; 0016 0414                             if(++cursor > 4){   cursor  = 0;                }   printOLED("PA%1d",cursor);                  break;
 _0x2C021D:
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x5)
 	BRLT _0x2C021E
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C021E:
-	CALL SUBOPT_0x31C
+	CALL SUBOPT_0x317
 	RJMP _0x2C0214
 ; 0016 0415         case KEY_DOWN   :   if(cursor < 4){     printOLED("PD%1d*",cursor); }
 _0x2C021C:
@@ -34249,15 +34262,15 @@ _0x2C021C:
 	LDS  R26,_cursor_S0160000000
 	CPI  R26,LOW(0x4)
 	BRGE _0x2C0220
-	CALL SUBOPT_0x31B
+	CALL SUBOPT_0x316
 ; 0016 0416                             if(--cursor < 0){   cursor  = 4;                }   printOLED("PA%1d",cursor);                  break;
 _0x2C0220:
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C0221
 	LDI  R30,LOW(4)
 	STS  _cursor_S0160000000,R30
 _0x2C0221:
-	CALL SUBOPT_0x31C
+	CALL SUBOPT_0x317
 	RJMP _0x2C0214
 ; 0016 0417         case KEY_OK     :   if(cursor == 4){
 _0x2C021F:
@@ -34273,19 +34286,19 @@ _0x2C021F:
 ; 0016 0418 
 ; 0016 0419                                 // -- verifyPassword -- //
 ; 0016 041A                                 if(recmp((unsigned char *) entPwd,uPwd,sizeof(entPwd)) != 0){
-	CALL SUBOPT_0x33E
-	CALL SUBOPT_0x2E1
-	CALL SUBOPT_0x2A5
+	CALL SUBOPT_0x339
+	CALL SUBOPT_0x2DC
+	CALL SUBOPT_0x2A1
 	RCALL _recmp
 	SBIW R30,0
 	BREQ _0x2C0224
 ; 0016 041B                                     currentPage = P_WRONG_PASS;  cursor = 0;    printOLED("WP");
 	LDI  R30,LOW(35)
-	CALL SUBOPT_0x2CC
-	CALL SUBOPT_0x33F
+	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x33A
 ; 0016 041C                                     memset(entPwd,0xFF,sizeof(entPwd));
-	CALL SUBOPT_0x33E
-	CALL SUBOPT_0x323
+	CALL SUBOPT_0x339
+	CALL SUBOPT_0x31E
 	CALL _memset
 ; 0016 041D                                     break;
 	RJMP _0x2C0214
@@ -34294,12 +34307,12 @@ _0x2C021F:
 ; 0016 0420                                 // -- else, allow access -- //
 ; 0016 0421                                 switch(tmpNextPage){
 _0x2C0224:
-	CALL SUBOPT_0x340
+	CALL SUBOPT_0x33B
 ; 0016 0422                                 case P_DEV_S_MENU   : currentPage = P_DEV_S_MENU;   cursor  = 0;    printOLED("M6%1d",cursor);  break;
 	BRNE _0x2C0228
 	LDI  R30,LOW(7)
-	CALL SUBOPT_0x2CC
-	CALL SUBOPT_0x2FE
+	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2F9
 	RJMP _0x2C0227
 ; 0016 0423                                 case P_PRB_S        : currentPage = P_PRB_S;        cursor  = 0;    printOLED("PS");
 _0x2C0228:
@@ -34308,9 +34321,9 @@ _0x2C0228:
 	CPC  R31,R26
 	BRNE _0x2C0229
 	LDI  R30,LOW(16)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 	__POINTD1FN _0x2C0000,988
-	CALL SUBOPT_0x2F4
+	CALL SUBOPT_0x2EF
 ; 0016 0424                                                       for(i=0;i<MAX_SENS_CHANNEL;i++){
 	__GETWRN 16,17,0
 _0x2C022B:
@@ -34320,16 +34333,16 @@ _0x2C022B:
 	MOVW R26,R16
 	SUBI R26,LOW(-_prbEn_S0160000000)
 	SBCI R27,HIGH(-_prbEn_S0160000000)
-	CALL SUBOPT_0x2DD
+	CALL SUBOPT_0x2D8
 	LD   R30,Z
-	CALL SUBOPT_0x316
+	CALL SUBOPT_0x311
 ; 0016 0426                                                         printOLED("ED%1d%1d",i,prbEn[i]);
 	MOVW R30,R16
-	CALL SUBOPT_0x258
+	CALL SUBOPT_0x254
 	LDI  R26,LOW(_prbEn_S0160000000)
 	LDI  R27,HIGH(_prbEn_S0160000000)
-	CALL SUBOPT_0x2FD
-	CALL SUBOPT_0x289
+	CALL SUBOPT_0x2F8
+	CALL SUBOPT_0x286
 ; 0016 0427                                                       }
 	__ADDWRN 16,17,1
 	RJMP _0x2C022B
@@ -34345,9 +34358,9 @@ _0x2C0229:
 	LDI  R30,LOW(19)
 	STS  _currentPage,R30
 ; 0016 042A                                                       memset(newPwd,0xFF,sizeof(newPwd));
-	CALL SUBOPT_0x322
-	CALL SUBOPT_0x323
-	CALL SUBOPT_0x2D1
+	CALL SUBOPT_0x31D
+	CALL SUBOPT_0x31E
+	CALL SUBOPT_0x2CC
 ; 0016 042B                                                       cursor  = 0;
 ; 0016 042C                                                       printOLED("P4");
 	__POINTD1FN _0x2C0000,991
@@ -34357,13 +34370,13 @@ _0x2C0229:
 _0x2C022E:
 ; 0016 042F                                                       currentPage = P_MONITOR;
 	LDI  R30,LOW(0)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0430                                                       cursor      = 0;
 ; 0016 0431                                                       printOLED("M0");
-	CALL SUBOPT_0x2D2
+	CALL SUBOPT_0x2CD
 _0x2C02CE:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x292
+	CALL SUBOPT_0x28F
 ; 0016 0432                                                       break;
 ; 0016 0433                                 }
 _0x2C0227:
@@ -34375,19 +34388,19 @@ _0x2C0223:
 	CPI  R26,LOW(0x4)
 	BRGE _0x2C0230
 ; 0016 0436                                 if(++entPwd[cursor] >9) entPwd[cursor] = 0;
-	CALL SUBOPT_0x314
+	CALL SUBOPT_0x30F
 	SUBI R26,LOW(-_entPwd_S0160000000)
 	SBCI R27,HIGH(-_entPwd_S0160000000)
-	CALL SUBOPT_0x31E
+	CALL SUBOPT_0x319
 	BRLT _0x2C0231
-	CALL SUBOPT_0x341
+	CALL SUBOPT_0x33C
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0016 0437                                 printOLED("PD%1d%1d",cursor, entPwd[cursor]);
 _0x2C0231:
-	CALL SUBOPT_0x320
-	CALL SUBOPT_0x341
-	CALL SUBOPT_0x321
+	CALL SUBOPT_0x31B
+	CALL SUBOPT_0x33C
+	CALL SUBOPT_0x31C
 ; 0016 0438                             }
 ; 0016 0439             break;
 _0x2C0230:
@@ -34404,10 +34417,10 @@ _0x2C0211:
 	JMP _0x2C0233
 ; 0016 043D     {
 ; 0016 043E         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 043F         case KEY_MODE   :   currentPage = P_MAIN_MENU;      cursor  = 3;            printOLED("M1%1d",cursor);  break;
 	BRNE _0x2C0237
-	CALL SUBOPT_0x326
+	CALL SUBOPT_0x321
 	RJMP _0x2C0236
 ; 0016 0440         case KEY_UP     :   if(cursor < 4){     printOLED("PD%1d*",cursor); }
 _0x2C0237:
@@ -34418,16 +34431,16 @@ _0x2C0237:
 	LDS  R26,_cursor_S0160000000
 	CPI  R26,LOW(0x4)
 	BRGE _0x2C0239
-	CALL SUBOPT_0x31B
+	CALL SUBOPT_0x316
 ; 0016 0441                             if(++cursor > 4){   cursor  = 0;                }       printOLED("PA%1d",cursor);  break;
 _0x2C0239:
-	CALL SUBOPT_0x2CA
+	CALL SUBOPT_0x2C5
 	CPI  R26,LOW(0x5)
 	BRLT _0x2C023A
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 _0x2C023A:
-	CALL SUBOPT_0x31C
+	CALL SUBOPT_0x317
 	RJMP _0x2C0236
 ; 0016 0442         case KEY_DOWN   :   if(cursor < 4){     printOLED("PD%1d*",cursor); }
 _0x2C0238:
@@ -34438,15 +34451,15 @@ _0x2C0238:
 	LDS  R26,_cursor_S0160000000
 	CPI  R26,LOW(0x4)
 	BRGE _0x2C023C
-	CALL SUBOPT_0x31B
+	CALL SUBOPT_0x316
 ; 0016 0443                             if(--cursor < 0){   cursor  = 4;                }       printOLED("PA%1d",cursor);  break;
 _0x2C023C:
-	CALL SUBOPT_0x2C8
+	CALL SUBOPT_0x2C3
 	BRGE _0x2C023D
 	LDI  R30,LOW(4)
 	STS  _cursor_S0160000000,R30
 _0x2C023D:
-	CALL SUBOPT_0x31C
+	CALL SUBOPT_0x317
 	RJMP _0x2C0236
 ; 0016 0444         case KEY_OK     :   if(cursor == 4){
 _0x2C023B:
@@ -34461,9 +34474,9 @@ _0x2C023B:
 ; 0016 0445 
 ; 0016 0446                                 // -- verifyPassword -- //
 ; 0016 0447                                 if(recmp((unsigned char *) entPwd,sPwd,sizeof(entPwd)) != 0){
-	CALL SUBOPT_0x33E
+	CALL SUBOPT_0x339
 	__GETW1SX 80
-	CALL SUBOPT_0x2A5
+	CALL SUBOPT_0x2A1
 	RCALL _recmp
 	SBIW R30,0
 	BREQ _0x2C0240
@@ -34472,11 +34485,11 @@ _0x2C023B:
 	STS  _tmpPrevPage_S0160000000,R30
 ; 0016 0449                                     currentPage = P_WRONG_PASS; cursor  = 0;    printOLED("WP");
 	LDI  R30,LOW(35)
-	CALL SUBOPT_0x2CC
-	CALL SUBOPT_0x33F
+	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x33A
 ; 0016 044A                                     memset(entPwd,0xFF,sizeof(entPwd));
-	CALL SUBOPT_0x33E
-	CALL SUBOPT_0x323
+	CALL SUBOPT_0x339
+	CALL SUBOPT_0x31E
 	CALL _memset
 ; 0016 044B                                     break;
 	RJMP _0x2C0236
@@ -34486,11 +34499,11 @@ _0x2C023B:
 ; 0016 044F                                 currentPage = P_MTNC_MENU;     cursor  = 0;     printOLED("M7%1d",cursor);
 _0x2C0240:
 	LDI  R30,LOW(21)
-	CALL SUBOPT_0x2CC
-	CALL SUBOPT_0x32B
+	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x326
 ; 0016 0450                                 memset(entPwd,0xFF,sizeof(entPwd));
-	CALL SUBOPT_0x33E
-	CALL SUBOPT_0x323
+	CALL SUBOPT_0x339
+	CALL SUBOPT_0x31E
 	CALL _memset
 ; 0016 0451                                 break;
 	RJMP _0x2C0236
@@ -34501,19 +34514,19 @@ _0x2C023F:
 	CPI  R26,LOW(0x4)
 	BRGE _0x2C0242
 ; 0016 0454                                 if(++entPwd[cursor] >9) entPwd[cursor] = 0;
-	CALL SUBOPT_0x314
+	CALL SUBOPT_0x30F
 	SUBI R26,LOW(-_entPwd_S0160000000)
 	SBCI R27,HIGH(-_entPwd_S0160000000)
-	CALL SUBOPT_0x31E
+	CALL SUBOPT_0x319
 	BRLT _0x2C0243
-	CALL SUBOPT_0x341
+	CALL SUBOPT_0x33C
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 ; 0016 0455                                 printOLED("PD%1d%1d",cursor, entPwd[cursor]);
 _0x2C0243:
-	CALL SUBOPT_0x320
-	CALL SUBOPT_0x341
-	CALL SUBOPT_0x321
+	CALL SUBOPT_0x31B
+	CALL SUBOPT_0x33C
+	CALL SUBOPT_0x31C
 ; 0016 0456                             }
 ; 0016 0457             break;
 _0x2C0242:
@@ -34533,7 +34546,7 @@ _0x2C0233:
 	JMP _0x2C0245
 ; 0016 045F     {
 ; 0016 0460         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 0461         case KEY_MODE   :   /* no operation */                                                                              break;
 	BRNE _0x2C0249
 	RJMP _0x2C0248
@@ -34554,7 +34567,7 @@ _0x2C0249:
 	CPC  R31,R26
 	BRNE _0x2C0248
 	LDS  R30,_tmpPrevPage_S0160000000
-	CALL SUBOPT_0x21D
+	CALL SUBOPT_0x214
 ; 0016 0465                             case P_MAIN_MENU    : currentPage = P_MAIN_MENU;    cursor  = 3;    printOLED("M1%1d",cursor);  break;
 	BRNE _0x2C0250
 	LDI  R30,LOW(1)
@@ -34570,8 +34583,8 @@ _0x2C0250:
 	CPC  R31,R26
 	BRNE _0x2C0251
 	LDI  R30,LOW(2)
-	CALL SUBOPT_0x2F6
-	CALL SUBOPT_0x2F8
+	CALL SUBOPT_0x2F1
+	CALL SUBOPT_0x2F3
 	RJMP _0x2C02CF
 ; 0016 0467                             case P_PRB_MENU     : currentPage = P_PRB_MENU;     cursor  = 1;    printOLED("M3%1d",cursor);  break;
 _0x2C0251:
@@ -34580,8 +34593,8 @@ _0x2C0251:
 	CPC  R31,R26
 	BRNE _0x2C0252
 	LDI  R30,LOW(14)
-	CALL SUBOPT_0x2F6
-	CALL SUBOPT_0x33C
+	CALL SUBOPT_0x2F1
+	CALL SUBOPT_0x337
 	RJMP _0x2C02CF
 ; 0016 0468                             case P_MANAGE_MENU  : currentPage = P_MANAGE_MENU;  cursor  = 1;    printOLED("M4%1d",cursor);  break;
 _0x2C0252:
@@ -34590,12 +34603,12 @@ _0x2C0252:
 	CPC  R31,R26
 	BRNE _0x2C024F
 	LDI  R30,LOW(17)
-	CALL SUBOPT_0x2F6
-	CALL SUBOPT_0x33D
+	CALL SUBOPT_0x2F1
+	CALL SUBOPT_0x338
 _0x2C02CF:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x317
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x312
+	CALL SUBOPT_0x28A
 ; 0016 0469                             }
 _0x2C024F:
 ; 0016 046A 
@@ -34616,7 +34629,7 @@ _0x2C0245:
 _0x2C0256:
 ; 0016 0470     {
 ; 0016 0471         switch(key){
-	CALL SUBOPT_0x2C7
+	CALL SUBOPT_0x2C2
 ; 0016 0472         case KEY_MODE   :   /* no operation */                                                                              break;
 	BRNE _0x2C025B
 	RJMP _0x2C025A
@@ -34641,11 +34654,11 @@ _0x2C025D:
 	CPC  R31,R26
 	BREQ PC+3
 	JMP _0x2C025A
-	CALL SUBOPT_0x340
+	CALL SUBOPT_0x33B
 ; 0016 0476                             case P_DEV_S_MENU       :   currentPage = P_DEV_S_MENU;
 	BRNE _0x2C0262
 	LDI  R30,LOW(7)
-	CALL SUBOPT_0x342
+	CALL SUBOPT_0x33D
 ; 0016 0477                                                         if(       tmpPrevPage == P_DEV_S_OPER){       cursor  = 0;    }
 	CPI  R26,LOW(0x8)
 	BRNE _0x2C0263
@@ -34670,8 +34683,8 @@ _0x2C0262:
 	CPC  R31,R26
 	BRNE _0x2C0266
 	LDI  R30,LOW(14)
-	CALL SUBOPT_0x2F6
-	CALL SUBOPT_0x33C
+	CALL SUBOPT_0x2F1
+	CALL SUBOPT_0x337
 	RJMP _0x2C02D1
 ; 0016 047B                             case P_MANAGE_MENU      :   currentPage = P_MANAGE_MENU;
 _0x2C0266:
@@ -34680,7 +34693,7 @@ _0x2C0266:
 	CPC  R31,R26
 	BRNE _0x2C0267
 	LDI  R30,LOW(17)
-	CALL SUBOPT_0x342
+	CALL SUBOPT_0x33D
 ; 0016 047C                                                         if(       tmpPrevPage == P_MUTE_MENU){        cursor  = 0;    }
 	CPI  R26,LOW(0x12)
 	BRNE _0x2C0268
@@ -34696,7 +34709,7 @@ _0x2C02D2:
 	STS  _cursor_S0160000000,R30
 ; 0016 047E                                                         printOLED("M4%1d",cursor);                                                  break;
 _0x2C026A:
-	CALL SUBOPT_0x33D
+	CALL SUBOPT_0x338
 	RJMP _0x2C02D1
 ; 0016 047F                             case P_MTNC_MENU        :   currentPage = P_MTNC_MENU;
 _0x2C0267:
@@ -34705,7 +34718,7 @@ _0x2C0267:
 	CPC  R31,R26
 	BRNE _0x2C026B
 	LDI  R30,LOW(21)
-	CALL SUBOPT_0x342
+	CALL SUBOPT_0x33D
 ; 0016 0480                                                         if(       tmpPrevPage == P_SET_VREF){         cursor  = 0;    }
 	CPI  R26,LOW(0x16)
 	BRNE _0x2C026C
@@ -34737,10 +34750,10 @@ _0x2C026B:
 	CPC  R31,R26
 	BRNE _0x2C0271
 	LDI  R30,LOW(24)
-	CALL SUBOPT_0x2CC
+	CALL SUBOPT_0x2C7
 ; 0016 0485                                                         cursor      = 0;
 ; 0016 0486                                                         printOLED("S2%1d",prb2+1);                                                  break;
-	CALL SUBOPT_0x329
+	CALL SUBOPT_0x324
 	LDS  R30,_prb2_S0160000000
 	LDI  R31,0
 	ADIW R30,1
@@ -34753,7 +34766,7 @@ _0x2C0271:
 	CPC  R31,R26
 	BRNE _0x2C0261
 	LDI  R30,LOW(27)
-	CALL SUBOPT_0x342
+	CALL SUBOPT_0x33D
 ; 0016 0488                                                         if(       tmpPrevPage == P_CAL2_SPT1){        cursor  = 0;    }
 	CPI  R26,LOW(0x1C)
 	BRNE _0x2C0273
@@ -34790,7 +34803,7 @@ _0x2C02D1:
 	CALL __CBD1
 _0x2C02D4:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x28D
+	CALL SUBOPT_0x28A
 ; 0016 048D                             }
 _0x2C0261:
 ; 0016 048E 
@@ -34858,17 +34871,12 @@ _showProbeConfig:
 ; 0016 04A3 
 ; 0016 04A4 
 ; 0016 04A5     res = get_current_sampling(sensor_config[id].samplingRate,&val[0]);
-	ST   -Y,R27
-	ST   -Y,R26
-	SBIW R28,20
-	LDI  R24,20
-	LDI  R26,LOW(0)
-	LDI  R27,HIGH(0)
+	CALL SUBOPT_0x24D
 	LDI  R30,LOW(_0x2C027A*2)
 	LDI  R31,HIGH(_0x2C027A*2)
 	LDI  R22,BYTE3(_0x2C027A*2)
 	CALL __INITLOCB
-	CALL SUBOPT_0x27A
+	CALL SUBOPT_0x277
 ;	id -> Y+24
 ;	res -> R16,R17
 ;	sampling -> R18,R19
@@ -34883,7 +34891,7 @@ _showProbeConfig:
 	SUBI R30,LOW(-_sensor_config)
 	SBCI R31,HIGH(-_sensor_config)
 	MOVW R26,R30
-	CALL SUBOPT_0x343
+	CALL SUBOPT_0x33E
 	MOVW R26,R28
 	ADIW R26,22
 	RCALL _get_current_sampling
@@ -34929,13 +34937,13 @@ _0x2C027B:
 	CALL SUBOPT_0x5A
 	LDI  R30,LOW(0)
 	ST   -Y,R30
-	CALL SUBOPT_0x1E1
+	CALL SUBOPT_0x1E0
 	CALL _memset
 ; 0016 04B4     if( operating_config.sensorEnable[id]==0x01 ){  sprintf(str1,"[E]");        }
 	__POINTW1MN _operating_config,3
 	LDD  R26,Y+24
 	LDD  R27,Y+24+1
-	CALL SUBOPT_0x237
+	CALL SUBOPT_0x22F
 	BRNE _0x2C027C
 	CALL SUBOPT_0x5A
 	__POINTD1FN _0x2C0000,994
@@ -34946,13 +34954,13 @@ _0x2C027C:
 	__POINTD1FN _0x2C0000,998
 _0x2C02D6:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x2DB
+	CALL SUBOPT_0x2D6
 ; 0016 04B6 
 ; 0016 04B7     memset(str2,'\0',sizeof(str2));
 	MOVW R30,R28
 	ADIW R30,4
-	CALL SUBOPT_0xF7
-	CALL SUBOPT_0x1E1
+	CALL SUBOPT_0xF6
+	CALL SUBOPT_0x1E0
 	CALL _memset
 ; 0016 04B8     if( sensor_config[id].alarmEnable == 0x01   ){  sprintf(str2,"Enable");     }
 	LDD  R26,Y+24
@@ -34978,7 +34986,7 @@ _0x2C027E:
 	__POINTD1FN _0x2C0000,1009
 _0x2C02D7:
 	CALL __PUTPARD1
-	CALL SUBOPT_0x2DB
+	CALL SUBOPT_0x2D6
 ; 0016 04BA 
 ; 0016 04BB 
 ; 0016 04BC     printDebug("<showProbeConfig> PC%1d%1d%d,%s,%s,%.1f,%d,%.1f,%.1f,%d,%.1f",
@@ -34992,22 +35000,22 @@ _0x2C02D7:
 ; 0016 04C4                 sensor_config[id].upperExtreme);
 	__POINTD1FN _0x2C0000,1017
 	CALL SUBOPT_0xF1
-	CALL SUBOPT_0x258
-	CALL SUBOPT_0x344
+	CALL SUBOPT_0x254
+	CALL SUBOPT_0x33F
 	MOVW R30,R28
 	ADIW R30,28
 	CALL SUBOPT_0x34
 	MOVW R30,R28
 	ADIW R30,24
 	CALL SUBOPT_0x34
-	CALL SUBOPT_0x345
+	CALL SUBOPT_0x340
 	LDD  R26,Y+52
 	LDD  R27,Y+52+1
-	CALL SUBOPT_0x26F
-	CALL SUBOPT_0x346
-	CALL SUBOPT_0x347
-	CALL SUBOPT_0x348
-	CALL SUBOPT_0x349
+	CALL SUBOPT_0x26C
+	CALL SUBOPT_0x341
+	CALL SUBOPT_0x342
+	CALL SUBOPT_0x343
+	CALL SUBOPT_0x344
 	LDI  R24,44
 	CALL _printDebug
 	ADIW R28,48
@@ -35023,22 +35031,22 @@ _0x2C02D7:
 ; 0016 04CE                 sensor_config[id].upperExtreme);
 	__POINTD1FN _0x2C0000,1035
 	CALL SUBOPT_0xF1
-	CALL SUBOPT_0x258
-	CALL SUBOPT_0x344
+	CALL SUBOPT_0x254
+	CALL SUBOPT_0x33F
 	MOVW R30,R28
 	ADIW R30,28
 	CALL SUBOPT_0x34
 	MOVW R30,R28
 	ADIW R30,24
 	CALL SUBOPT_0x34
-	CALL SUBOPT_0x345
+	CALL SUBOPT_0x340
 	LDD  R26,Y+52
 	LDD  R27,Y+52+1
-	CALL SUBOPT_0x26F
-	CALL SUBOPT_0x346
-	CALL SUBOPT_0x347
-	CALL SUBOPT_0x348
-	CALL SUBOPT_0x349
+	CALL SUBOPT_0x26C
+	CALL SUBOPT_0x341
+	CALL SUBOPT_0x342
+	CALL SUBOPT_0x343
+	CALL SUBOPT_0x344
 	LDI  R24,44
 	CALL _printOLED
 	ADIW R28,48
@@ -35054,7 +35062,7 @@ _get_current_sampling:
 ; 0016 04D5     unsigned int hr, hr_c;
 ; 0016 04D6 
 ; 0016 04D7     printDebug("\r\n<get_current_sampling> real value (%l sec.)\r\n");
-	CALL SUBOPT_0x34A
+	CALL SUBOPT_0x345
 ;	period -> Y+10
 ;	*val -> Y+8
 ;	min -> R16,R17
@@ -35095,10 +35103,10 @@ _0x2C0281:
 _0x2C0282:
 ; 0016 04DC         printDebug("<get_current_sampling> %d hr.\r\n",hr);
 	__POINTD1FN _0x2C0000,1126
-	CALL SUBOPT_0x34B
+	CALL SUBOPT_0x346
 	CALL SUBOPT_0x12
 ; 0016 04DD         val[0] = hr / 100;
-	CALL SUBOPT_0x34C
+	CALL SUBOPT_0x347
 ; 0016 04DE         val[1] = (hr % 100) / 10;
 ; 0016 04DF         val[2] = ((hr % 100) % 10);
 ; 0016 04E0         val[3] = 2;
@@ -35138,10 +35146,10 @@ _0x2C0284:
 _0x2C0285:
 ; 0016 04E8         printDebug("<get_current_sampling> %d min.\r\n",min);
 	__POINTD1FN _0x2C0000,1158
-	CALL SUBOPT_0x34D
+	CALL SUBOPT_0x348
 	CALL SUBOPT_0x12
 ; 0016 04E9         val[0] = min / 100;
-	CALL SUBOPT_0x34E
+	CALL SUBOPT_0x349
 ; 0016 04EA         val[1] = (min % 100) / 10;
 ; 0016 04EB         val[2] = ((min % 100) % 10);
 ; 0016 04EC         val[3] = 1;
@@ -35166,13 +35174,13 @@ _0x2C0283:
 	CALL SUBOPT_0x34
 	CALL SUBOPT_0x12
 ; 0016 04F3         val[0] = period / 100;
-	CALL SUBOPT_0x34F
+	CALL SUBOPT_0x34A
 	CALL __DIVW21U
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	ST   X,R30
 ; 0016 04F4         val[1] = (period % 100) / 10;
-	CALL SUBOPT_0x34F
+	CALL SUBOPT_0x34A
 	CALL __MODW21U
 	MOVW R26,R30
 	LDI  R30,LOW(10)
@@ -35180,7 +35188,7 @@ _0x2C0283:
 	CALL __DIVW21U
 	__PUTB1SNS 8,1
 ; 0016 04F5         val[2] = ((period % 100) % 10);
-	CALL SUBOPT_0x34F
+	CALL SUBOPT_0x34A
 	CALL __MODW21U
 	MOVW R26,R30
 	LDI  R30,LOW(10)
@@ -35205,9 +35213,9 @@ _0x2C0286:
 	BRSH _0x2C0287
 ; 0016 04FB         printDebug("<get_current_sampling> %d min. %d sec. ",min,min_c);
 	__POINTD1FN _0x2C0000,1224
-	CALL SUBOPT_0x34D
+	CALL SUBOPT_0x348
 	MOVW R30,R18
-	CALL SUBOPT_0x13F
+	CALL SUBOPT_0x13E
 ; 0016 04FC         if(min_c > 30){
 	__CPWRN 18,19,31
 	BRLO _0x2C0288
@@ -35217,10 +35225,10 @@ _0x2C0286:
 ; 0016 04FF         printDebug("--> %d min.\r\n",min);
 _0x2C0288:
 	__POINTD1FN _0x2C0000,1264
-	CALL SUBOPT_0x34D
+	CALL SUBOPT_0x348
 	CALL SUBOPT_0x12
 ; 0016 0500         val[0] = min / 100;
-	CALL SUBOPT_0x34E
+	CALL SUBOPT_0x349
 ; 0016 0501         val[1] = (min % 100) / 10;
 ; 0016 0502         val[2] = ((min % 100) % 10);
 ; 0016 0503         val[3] = 1;
@@ -35248,7 +35256,7 @@ _0x2C0287:
 	MOVW R18,R30
 ; 0016 050A         printDebug("<get_current_sampling> %d hr. %d min. %d sec. ",hr,min,min_c);
 	__POINTD1FN _0x2C0000,1278
-	CALL SUBOPT_0x34B
+	CALL SUBOPT_0x346
 	MOVW R30,R16
 	CALL SUBOPT_0x34
 	MOVW R30,R18
@@ -35263,10 +35271,10 @@ _0x2C0287:
 ; 0016 050E         printDebug("--> %d hr.\r\n",hr);
 _0x2C028A:
 	__POINTD1FN _0x2C0000,1325
-	CALL SUBOPT_0x34B
+	CALL SUBOPT_0x346
 	CALL SUBOPT_0x12
 ; 0016 050F         val[0] = hr / 100;
-	CALL SUBOPT_0x34C
+	CALL SUBOPT_0x347
 ; 0016 0510         val[1] = (hr % 100) / 10;
 ; 0016 0511         val[2] = ((hr % 100) % 10);
 ; 0016 0512         val[3] = 2;
@@ -35312,8 +35320,8 @@ _get_current_vref:
 ;	d2 -> R20,R21
 ;	d1 -> Y+8
 ;	d0 -> Y+6
-	CALL SUBOPT_0x350
-	CALL SUBOPT_0x351
+	CALL SUBOPT_0x34B
+	CALL SUBOPT_0x34C
 	CALL __CMPF12
 	BREQ PC+2
 	BRCC PC+3
@@ -35326,10 +35334,10 @@ _get_current_vref:
 ; 0016 0528 
 ; 0016 0529     vref = eep_vref_val;
 _0x2C028B:
-	CALL SUBOPT_0x350
-	CALL SUBOPT_0x352
+	CALL SUBOPT_0x34B
+	CALL SUBOPT_0x256
 ; 0016 052A     ftoa(vref,2,valTmp);
-	CALL SUBOPT_0x353
+	CALL SUBOPT_0x34D
 	LDI  R30,LOW(2)
 	ST   -Y,R30
 	MOVW R26,R28
@@ -35364,11 +35372,11 @@ _0x2C028B:
 _0x2C028C:
 	__POINTD1FN _0x2C0000,1375
 	CALL __PUTPARD1
-	CALL SUBOPT_0x350
+	CALL SUBOPT_0x34B
 	CALL __PUTPARD1
 	MOVW R30,R28
 	ADIW R30,22
-	CALL SUBOPT_0x13F
+	CALL SUBOPT_0x13E
 ; 0016 053B     buf[0]  = valTmp[0]-0x30;
 	LDD  R30,Y+14
 	SUBI R30,LOW(48)
@@ -35398,7 +35406,7 @@ _0x2C028E:
 	MOVW R30,R16
 	LDD  R26,Y+28
 	LDD  R27,Y+28+1
-	CALL SUBOPT_0x184
+	CALL SUBOPT_0x183
 ; 0016 0542     }
 	__ADDWRN 16,17,1
 	RJMP _0x2C028E
@@ -35447,36 +35455,36 @@ _getNetworkInfo:
 ; 0016 0552     for(i=offset;i<(offset+4);i++){
 	MOVW R16,R18
 _0x2C0291:
-	CALL SUBOPT_0x354
+	CALL SUBOPT_0x34E
 	BRGE _0x2C0292
 ; 0016 0553         dIp[i-offset]                   = (h2i(msg[i*2]) * 16) + h2i(msg[(i*2) + 1]);
-	CALL SUBOPT_0x355
+	CALL SUBOPT_0x34F
 	ADD  R30,R26
 	ADC  R31,R27
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x356
+	CALL SUBOPT_0x350
 	PUSH R30
-	CALL SUBOPT_0x357
+	CALL SUBOPT_0x351
 	POP  R26
 	ADD  R30,R26
 	POP  R26
 	POP  R27
-	CALL SUBOPT_0x358
+	CALL SUBOPT_0x352
 ; 0016 0554         ip[(i-offset) * 3]              = (dIp[i-offset]/100);
-	CALL SUBOPT_0x359
-	CALL SUBOPT_0x35A
+	CALL SUBOPT_0x353
+	CALL SUBOPT_0x354
 ; 0016 0555         ip[((i-offset) * 3) + 1]        = (dIp[i-offset]%100) / 10;
 	ADIW R30,1
-	CALL SUBOPT_0x359
-	CALL SUBOPT_0x35B
-	CALL SUBOPT_0x1FF
-	CALL SUBOPT_0x35C
+	CALL SUBOPT_0x353
+	CALL SUBOPT_0x355
+	CALL SUBOPT_0x1FE
+	CALL SUBOPT_0x356
 ; 0016 0556         ip[((i-offset) * 3) + 2]        = (dIp[i-offset]%10);
 	ADIW R30,2
-	CALL SUBOPT_0x359
-	CALL SUBOPT_0x35B
-	CALL SUBOPT_0x265
+	CALL SUBOPT_0x353
+	CALL SUBOPT_0x355
+	CALL SUBOPT_0x262
 	MOVW R26,R22
 	ST   X,R30
 ; 0016 0557     }
@@ -35489,36 +35497,36 @@ _0x2C0292:
 ; 0016 055A     for(i=offset;i<(offset+4);i++){
 	MOVW R16,R18
 _0x2C0294:
-	CALL SUBOPT_0x354
+	CALL SUBOPT_0x34E
 	BRGE _0x2C0295
 ; 0016 055B         dMask[i-offset]                 = (h2i(msg[i*2]) * 16) + h2i(msg[(i*2) + 1]);
-	CALL SUBOPT_0x35D
+	CALL SUBOPT_0x357
 	ADD  R30,R26
 	ADC  R31,R27
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x356
+	CALL SUBOPT_0x350
 	PUSH R30
-	CALL SUBOPT_0x357
+	CALL SUBOPT_0x351
 	POP  R26
 	ADD  R30,R26
 	POP  R26
 	POP  R27
-	CALL SUBOPT_0x358
+	CALL SUBOPT_0x352
 ; 0016 055C         mask[(i-offset) * 3]            = (dMask[i-offset]/100);
-	CALL SUBOPT_0x35E
-	CALL SUBOPT_0x35A
+	CALL SUBOPT_0x358
+	CALL SUBOPT_0x354
 ; 0016 055D         mask[((i-offset) * 3) + 1]      = (dMask[i-offset]%100) / 10;
 	ADIW R30,1
-	CALL SUBOPT_0x35E
-	CALL SUBOPT_0x35B
-	CALL SUBOPT_0x1FF
-	CALL SUBOPT_0x35C
+	CALL SUBOPT_0x358
+	CALL SUBOPT_0x355
+	CALL SUBOPT_0x1FE
+	CALL SUBOPT_0x356
 ; 0016 055E         mask[((i-offset) * 3) + 2]      = (dMask[i-offset]%10);
 	ADIW R30,2
-	CALL SUBOPT_0x35E
-	CALL SUBOPT_0x35B
-	CALL SUBOPT_0x265
+	CALL SUBOPT_0x358
+	CALL SUBOPT_0x355
+	CALL SUBOPT_0x262
 	MOVW R26,R22
 	ST   X,R30
 ; 0016 055F     }
@@ -35531,36 +35539,36 @@ _0x2C0295:
 ; 0016 0562     for(i=offset;i<(offset+4);i++){
 	MOVW R16,R18
 _0x2C0297:
-	CALL SUBOPT_0x354
+	CALL SUBOPT_0x34E
 	BRGE _0x2C0298
 ; 0016 0563         dGw[i-offset]                   = (h2i(msg[i*2]) * 16) + h2i(msg[(i*2) + 1]);
-	CALL SUBOPT_0x35F
+	CALL SUBOPT_0x359
 	ADD  R30,R26
 	ADC  R31,R27
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x356
+	CALL SUBOPT_0x350
 	PUSH R30
-	CALL SUBOPT_0x357
+	CALL SUBOPT_0x351
 	POP  R26
 	ADD  R30,R26
 	POP  R26
 	POP  R27
-	CALL SUBOPT_0x358
+	CALL SUBOPT_0x352
 ; 0016 0564         gw[(i-offset) * 3]              = (dGw[i-offset]/100);
-	CALL SUBOPT_0x360
 	CALL SUBOPT_0x35A
+	CALL SUBOPT_0x354
 ; 0016 0565         gw[((i-offset) * 3) + 1]        = (dGw[i-offset]%100) / 10;
 	ADIW R30,1
-	CALL SUBOPT_0x360
-	CALL SUBOPT_0x35B
-	CALL SUBOPT_0x1FF
-	CALL SUBOPT_0x35C
+	CALL SUBOPT_0x35A
+	CALL SUBOPT_0x355
+	CALL SUBOPT_0x1FE
+	CALL SUBOPT_0x356
 ; 0016 0566         gw[((i-offset) * 3) + 2]        = (dGw[i-offset]%10);
 	ADIW R30,2
-	CALL SUBOPT_0x360
-	CALL SUBOPT_0x35B
-	CALL SUBOPT_0x265
+	CALL SUBOPT_0x35A
+	CALL SUBOPT_0x355
+	CALL SUBOPT_0x262
 	MOVW R26,R22
 	ST   X,R30
 ; 0016 0567     }
@@ -35573,7 +35581,7 @@ _0x2C0298:
 ; 0016 056A     for(i=offset;i<(offset+4);i++){
 	MOVW R16,R18
 _0x2C029A:
-	CALL SUBOPT_0x354
+	CALL SUBOPT_0x34E
 	BRGE _0x2C029B
 ; 0016 056B         dServer[i-offset]               = (h2i(msg[i*2]) * 16) + h2i(msg[(i*2) + 1]);
 	MOVW R30,R16
@@ -35585,36 +35593,36 @@ _0x2C029A:
 	ADC  R31,R27
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x356
+	CALL SUBOPT_0x350
 	PUSH R30
-	CALL SUBOPT_0x357
+	CALL SUBOPT_0x351
 	POP  R26
 	ADD  R30,R26
 	POP  R26
 	POP  R27
-	CALL SUBOPT_0x358
+	CALL SUBOPT_0x352
 ; 0016 056C         server[(i-offset) * 3]          = (dServer[i-offset]/100);
-	CALL SUBOPT_0x361
-	CALL SUBOPT_0x362
+	CALL SUBOPT_0x35B
+	CALL SUBOPT_0x35C
 	MOVW R26,R30
 	LDI  R30,LOW(100)
 	LDI  R31,HIGH(100)
 	CALL __DIVW21
 	MOVW R26,R22
-	CALL SUBOPT_0x358
+	CALL SUBOPT_0x352
 ; 0016 056D         server[((i-offset) * 3) + 1]    = (dServer[i-offset]%100) / 10;
 	ADIW R30,1
-	CALL SUBOPT_0x361
+	CALL SUBOPT_0x35B
 	LD   R26,X
 	CLR  R27
-	CALL SUBOPT_0x1FF
-	CALL SUBOPT_0x35C
+	CALL SUBOPT_0x1FE
+	CALL SUBOPT_0x356
 ; 0016 056E         server[((i-offset) * 3) + 2]    = (dServer[i-offset]%10);
 	ADIW R30,2
-	CALL SUBOPT_0x361
+	CALL SUBOPT_0x35B
 	LD   R26,X
 	CLR  R27
-	CALL SUBOPT_0x265
+	CALL SUBOPT_0x262
 	MOVW R26,R22
 	ST   X,R30
 ; 0016 056F     }
@@ -35633,7 +35641,7 @@ _0x2C029B:
 	CALL SUBOPT_0x65
 	LDD  R30,Y+35
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x161
+	CALL SUBOPT_0x160
 ; 0016 0572     printDebug("<getNetworkInfo> MSK : %u.%u.%u.%u\r\n",dMask[0],dMask[1],dMask[2],dMask[3]);
 	__POINTD1FN _0x2C0000,1486
 	CALL __PUTPARD1
@@ -35645,17 +35653,17 @@ _0x2C029B:
 	CALL SUBOPT_0x65
 	LDD  R30,Y+31
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x161
+	CALL SUBOPT_0x160
 ; 0016 0573     printDebug("<getNetworkInfo> DGW : %u.%u.%u.%u\r\n",dGw[0],dGw[1],dGw[2],dGw[3]);
 	__POINTD1FN _0x2C0000,1523
-	CALL SUBOPT_0x1F8
+	CALL SUBOPT_0x1F7
 	LDD  R30,Y+17
 	CALL SUBOPT_0x65
 	LDD  R30,Y+22
 	CALL SUBOPT_0x65
 	LDD  R30,Y+27
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x161
+	CALL SUBOPT_0x160
 ; 0016 0574     printDebug("<getNetworkInfo> SIP : %u.%u.%u.%u\r\n",dServer[0],dServer[1],dServer[2],dServer[3]);
 	__POINTD1FN _0x2C0000,1560
 	CALL __PUTPARD1
@@ -35667,10 +35675,10 @@ _0x2C029B:
 	CALL SUBOPT_0x65
 	LDD  R30,Y+23
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x161
+	CALL SUBOPT_0x160
 ; 0016 0575 
 ; 0016 0576     return 0;
-	CALL SUBOPT_0x14F
+	CALL SUBOPT_0x14E
 	ADIW R28,30
 	RET
 ; 0016 0577 }
@@ -35779,18 +35787,18 @@ _set_vref:
 ;	tmpf -> Y+2
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
+	CALL SUBOPT_0x1B2
+	LDD  R30,Y+6
+	LDD  R31,Y+6+1
 	CALL SUBOPT_0x1B3
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
-	CALL SUBOPT_0x1B4
-	LDD  R30,Y+6
-	LDD  R31,Y+6+1
-	CALL SUBOPT_0x29A
+	CALL SUBOPT_0x297
 	ADD  R30,R26
 	ADC  R31,R27
 	MOVW R16,R30
 ; 0016 05D9     tmpf = (float) (tmp / 100.0);
-	CALL SUBOPT_0x205
+	CALL SUBOPT_0x204
 	MOVW R26,R30
 	MOVW R24,R22
 	__GETD1N 0x42C80000
@@ -35799,7 +35807,7 @@ _set_vref:
 ; 0016 05DA 
 ; 0016 05DB     printDebug("<set_vref> [%d][%d][%d] -> %d -> %f\r\n",buf[0],buf[1],buf[2],tmp,tmpf);
 	__POINTD1FN _0x2C0000,1597
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x127
 	LD   R30,X
 	CALL SUBOPT_0x65
 	LDD  R30,Y+14
@@ -35811,7 +35819,7 @@ _set_vref:
 	LDD  R30,Z+2
 	CALL SUBOPT_0x65
 	MOVW R30,R16
-	CALL SUBOPT_0x258
+	CALL SUBOPT_0x254
 	CALL SUBOPT_0xC2
 	CALL __PUTPARD1
 	LDI  R24,20
@@ -35847,7 +35855,7 @@ _h2i:
 _0x2C029D:
 	RJMP _0x2C029C
 _0x2C029E:
-	CALL SUBOPT_0x363
+	CALL SUBOPT_0x35D
 	SBIW R30,55
 	RJMP _0x20E0030
 ; 0016 05EA     else if ((hex >= 'a') && (hex <= 'f')){ return hex - 0x57;  }
@@ -35860,7 +35868,7 @@ _0x2C029C:
 _0x2C02A1:
 	RJMP _0x2C02A0
 _0x2C02A2:
-	CALL SUBOPT_0x363
+	CALL SUBOPT_0x35D
 	SUBI R30,LOW(87)
 	SBCI R31,HIGH(87)
 	RJMP _0x20E0030
@@ -35874,7 +35882,7 @@ _0x2C02A0:
 _0x2C02A5:
 	RJMP _0x2C02A4
 _0x2C02A6:
-	CALL SUBOPT_0x363
+	CALL SUBOPT_0x35D
 	SBIW R30,48
 	RJMP _0x20E0030
 ; 0016 05EC 
@@ -35915,10 +35923,10 @@ _0x2C02AB:
 	BRGE _0x2C02AC
 ; 0016 05FE         dest[i] = src[i];
 	MOVW R30,R16
-	CALL SUBOPT_0x1A6
+	CALL SUBOPT_0x1A5
 	MOVW R0,R30
 	CALL SUBOPT_0x83
-	CALL SUBOPT_0x133
+	CALL SUBOPT_0x132
 ; 0016 05FF     }
 	__ADDWRN 16,17,1
 	RJMP _0x2C02AB
@@ -35961,13 +35969,13 @@ _0x2C02AE:
 	CALL SUBOPT_0x65
 	LDI  R26,LOW(_userPwd)
 	LDI  R27,HIGH(_userPwd)
-	CALL SUBOPT_0xF9
+	CALL SUBOPT_0xF8
 	CALL SUBOPT_0x65
 	LDI  R26,LOW(_servicePwd)
 	LDI  R27,HIGH(_servicePwd)
-	CALL SUBOPT_0xF9
+	CALL SUBOPT_0xF8
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0x161
+	CALL SUBOPT_0x160
 ; 0016 0609     }
 	__ADDWRN 16,17,1
 	RJMP _0x2C02AE
@@ -35980,7 +35988,7 @@ _0x2C02B1:
 	BRGE _0x2C02B2
 ; 0016 060C         if(src1[i] != src2[i]){
 	MOVW R30,R16
-	CALL SUBOPT_0x236
+	CALL SUBOPT_0x22E
 	LD   R0,X
 	CALL SUBOPT_0x83
 	CALL __EEPROMRDB
@@ -36118,8 +36126,8 @@ _0x2E0008:
 	BRSH _0x2E0009
 ; 0017 0048     {
 ; 0017 0049         buffer[i] = rxPackage3[i+8];
-	CALL SUBOPT_0xAB
-	CALL SUBOPT_0x364
+	CALL SUBOPT_0xAC
+	CALL SUBOPT_0x35E
 	__ADDW1MN _rxPackage3,8
 	LD   R30,Z
 	ST   X,R30
@@ -36128,15 +36136,15 @@ _0x2E0008:
 	RJMP _0x2E0008
 _0x2E0009:
 ; 0017 004B     buffer[4] = 0;
-	CALL SUBOPT_0x365
+	CALL SUBOPT_0x35F
 ; 0017 004C 
 ; 0017 004D     rtcSet.year = atol(buffer);
-	CALL SUBOPT_0xA7
+	CALL SUBOPT_0xA8
 ; 0017 004E 
 ; 0017 004F     printDebug("get year = %d\r\n",rtcSet.year);
 	__POINTD1FN _0x2E0000,60
-	CALL SUBOPT_0x1F2
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x1F1
+	CALL SUBOPT_0x18A
 ; 0017 0050 
 ; 0017 0051     for(i=0;i<2;i++)
 	LDI  R17,LOW(0)
@@ -36145,8 +36153,8 @@ _0x2E000B:
 	BRSH _0x2E000C
 ; 0017 0052     {
 ; 0017 0053         buffer[i] = rxPackage3[i+13];
-	CALL SUBOPT_0xAB
-	CALL SUBOPT_0x364
+	CALL SUBOPT_0xAC
+	CALL SUBOPT_0x35E
 	__ADDW1MN _rxPackage3,13
 	LD   R30,Z
 	ST   X,R30
@@ -36155,15 +36163,15 @@ _0x2E000B:
 	RJMP _0x2E000B
 _0x2E000C:
 ; 0017 0055     buffer[2] = 0;
-	CALL SUBOPT_0x366
+	CALL SUBOPT_0x360
 ; 0017 0056 
 ; 0017 0057     rtcSet.month = atol(buffer);
-	CALL SUBOPT_0x367
+	CALL SUBOPT_0x361
 ; 0017 0058 
 ; 0017 0059     printDebug("get month = %d\r\n",rtcSet.month);
 	__POINTD1FN _0x2E0000,76
 	CALL SUBOPT_0x8D
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18A
 ; 0017 005A 
 ; 0017 005B     for(i=0;i<2;i++)
 	LDI  R17,LOW(0)
@@ -36172,8 +36180,8 @@ _0x2E000E:
 	BRSH _0x2E000F
 ; 0017 005C     {
 ; 0017 005D         buffer[i] = rxPackage3[i+16];
-	CALL SUBOPT_0xAB
-	CALL SUBOPT_0x364
+	CALL SUBOPT_0xAC
+	CALL SUBOPT_0x35E
 	__ADDW1MN _rxPackage3,16
 	LD   R30,Z
 	ST   X,R30
@@ -36182,7 +36190,7 @@ _0x2E000E:
 	RJMP _0x2E000E
 _0x2E000F:
 ; 0017 005F     buffer[2] = 0;
-	CALL SUBOPT_0x366
+	CALL SUBOPT_0x360
 ; 0017 0060 
 ; 0017 0061     rtcSet.date = atol(buffer);
 	CALL SUBOPT_0xEA
@@ -36199,8 +36207,8 @@ _0x2E0011:
 	BRSH _0x2E0012
 ; 0017 0066     {
 ; 0017 0067         buffer[i] = rxPackage3[i+19];
-	CALL SUBOPT_0xAB
-	CALL SUBOPT_0x364
+	CALL SUBOPT_0xAC
+	CALL SUBOPT_0x35E
 	__ADDW1MN _rxPackage3,19
 	LD   R30,Z
 	ST   X,R30
@@ -36209,16 +36217,15 @@ _0x2E0011:
 	RJMP _0x2E0011
 _0x2E0012:
 ; 0017 0069     buffer[2] = 0;
-	CALL SUBOPT_0x366
+	CALL SUBOPT_0x360
 ; 0017 006A 
 ; 0017 006B     rtcSet.hour = atol(buffer);
-	CALL SUBOPT_0x368
+	CALL SUBOPT_0x362
 ; 0017 006C 
 ; 0017 006D     printDebug("get hour = %d\r\n",rtcSet.hour);
 	__POINTD1FN _0x2E0000,109
-	CALL __PUTPARD1
-	CALL SUBOPT_0xDC
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x21B
+	CALL SUBOPT_0x18A
 ; 0017 006E 
 ; 0017 006F     for(i=0;i<2;i++)
 	LDI  R17,LOW(0)
@@ -36227,8 +36234,8 @@ _0x2E0014:
 	BRSH _0x2E0015
 ; 0017 0070     {
 ; 0017 0071         buffer[i] = rxPackage3[i+22];
-	CALL SUBOPT_0xAB
-	CALL SUBOPT_0x364
+	CALL SUBOPT_0xAC
+	CALL SUBOPT_0x35E
 	__ADDW1MN _rxPackage3,22
 	LD   R30,Z
 	ST   X,R30
@@ -36237,10 +36244,10 @@ _0x2E0014:
 	RJMP _0x2E0014
 _0x2E0015:
 ; 0017 0073     buffer[2] = 0;
-	CALL SUBOPT_0x366
+	CALL SUBOPT_0x360
 ; 0017 0074 
 ; 0017 0075     rtcSet.min = atol(buffer);
-	CALL SUBOPT_0x369
+	CALL SUBOPT_0x363
 ; 0017 0076 
 ; 0017 0077     printDebug("get min = %d\r\n",rtcSet.min);
 	__POINTD1FN _0x2E0000,125
@@ -36255,8 +36262,8 @@ _0x2E0017:
 	BRSH _0x2E0018
 ; 0017 007A     {
 ; 0017 007B         buffer[i] = rxPackage3[i+25];
-	CALL SUBOPT_0xAB
-	CALL SUBOPT_0x364
+	CALL SUBOPT_0xAC
+	CALL SUBOPT_0x35E
 	__ADDW1MN _rxPackage3,25
 	LD   R30,Z
 	ST   X,R30
@@ -36265,15 +36272,15 @@ _0x2E0017:
 	RJMP _0x2E0017
 _0x2E0018:
 ; 0017 007D     buffer[2] = 0;
-	CALL SUBOPT_0x366
+	CALL SUBOPT_0x360
 ; 0017 007E 
 ; 0017 007F     rtcSet.sec = atol(buffer);
 	__PUTD1S 24
 ; 0017 0080 
 ; 0017 0081     printDebug("get sec = %d\r\n",rtcSet.sec);
 	__POINTD1FN _0x2E0000,140
-	CALL SUBOPT_0x36A
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x364
+	CALL SUBOPT_0x18A
 ; 0017 0082 
 ; 0017 0083     for(i=0;i<3;i++)
 	LDI  R17,LOW(0)
@@ -36282,8 +36289,8 @@ _0x2E001A:
 	BRSH _0x2E001B
 ; 0017 0084     {
 ; 0017 0085         buffer[i] = rxPackage3[i+28];
-	CALL SUBOPT_0xAB
-	CALL SUBOPT_0x364
+	CALL SUBOPT_0xAC
+	CALL SUBOPT_0x35E
 	__ADDW1MN _rxPackage3,28
 	LD   R30,Z
 	ST   X,R30
@@ -36292,7 +36299,7 @@ _0x2E001A:
 	RJMP _0x2E001A
 _0x2E001B:
 ; 0017 0087     buffer[4] = 0;
-	CALL SUBOPT_0x365
+	CALL SUBOPT_0x35F
 ; 0017 0088 
 ; 0017 0089     tz = atol(buffer);
 	MOVW R18,R30
@@ -36311,7 +36318,7 @@ _0x2E001B:
 	CALL _RTC_setDateTime
 ; 0017 008E 
 ; 0017 008F     return 0;
-	CALL SUBOPT_0x14F
+	CALL SUBOPT_0x14E
 	ADIW R28,62
 	RET
 ; 0017 0090 }
@@ -36341,24 +36348,24 @@ _DEBUG_ClearLogFile:
 	CALL SUBOPT_0x3
 ; 0017 009E 
 ; 0017 009F     res = LOG_createFile(LOGFILE_DATA,SD_FORCE,LOG_INIT_STR,SIZE_RECORD);
-	CALL SUBOPT_0x2B0
+	CALL SUBOPT_0x2AB
 ; 0017 00A0     if(res < 0)
 	BRPL _0x2E001C
 ; 0017 00A1     {
 ; 0017 00A2         printDebug("<DEBUG_ClearLogFile> LOG_createFile(%s) failed\r\n",LOGFILE_DATA);
-	CALL SUBOPT_0x36B
+	CALL SUBOPT_0x365
 	CALL SUBOPT_0x5F
 	CALL SUBOPT_0x12
 ; 0017 00A3     }
 ; 0017 00A4 
 ; 0017 00A5     res = LOG_createFile(LOGFILE_EVENT,SD_FORCE,LOG_INIT_STR,SIZE_RECORD);
 _0x2E001C:
-	CALL SUBOPT_0x2B6
+	CALL SUBOPT_0x2B1
 ; 0017 00A6     if(res < 0)
 	BRPL _0x2E001D
 ; 0017 00A7     {
 ; 0017 00A8         printDebug("<DEBUG_ClearLogFile> LOG_createFile(%s) failed\r\n",LOGFILE_EVENT);
-	CALL SUBOPT_0x36B
+	CALL SUBOPT_0x365
 	CALL SUBOPT_0x6A
 	CALL SUBOPT_0x12
 ; 0017 00A9     }
@@ -36371,7 +36378,7 @@ _0x2E001D:
 	ST   -Y,R30
 	LDI  R30,LOW(1)
 	ST   -Y,R30
-	CALL SUBOPT_0x196
+	CALL SUBOPT_0x195
 	CALL _LOG_createFile
 	MOVW R16,R30
 ; 0017 00AC     if(res < 0)
@@ -36379,8 +36386,8 @@ _0x2E001D:
 	BRPL _0x2E001E
 ; 0017 00AD     {
 ; 0017 00AE         printDebug("<DEBUG_ClearLogFile> LOG_createFile(%s) failed\r\n",LOGFILE_ERROR);
-	CALL SUBOPT_0x36B
-	CALL SUBOPT_0x2BE
+	CALL SUBOPT_0x365
+	CALL SUBOPT_0x2B9
 	CALL SUBOPT_0x12
 ; 0017 00AF     }
 ; 0017 00B0 
@@ -36408,8 +36415,8 @@ _0x2E0020:
 	BRSH _0x2E0021
 ; 0017 00BA     {
 ; 0017 00BB         rxStrSetVREF[i] = rxPackage3[i+8];
-	CALL SUBOPT_0xAB
-	CALL SUBOPT_0x36C
+	CALL SUBOPT_0xAC
+	CALL SUBOPT_0x366
 	__ADDW1MN _rxPackage3,8
 	LD   R30,Z
 	ST   X,R30
@@ -36439,7 +36446,7 @@ _0x2E0021:
 	CALL __PUTPARD1
 	LDI  R26,LOW(_eep_vref_val)
 	LDI  R27,HIGH(_eep_vref_val)
-	CALL SUBOPT_0x14C
+	CALL SUBOPT_0x14B
 ; 0017 00C1 }
 	LDD  R17,Y+0
 	ADIW R28,7
@@ -36468,7 +36475,7 @@ _0x2E0022:
 	CPI  R26,LOW(0x4E)
 	BRNE _0x2E0023
 ; 0017 00CD         hwCalId     = 9;
-	CALL SUBOPT_0x36D
+	CALL SUBOPT_0x367
 ; 0017 00CE         printDebug("<DEBUG_sensorSelect> Deselect sensor\r\n\r\n");
 	__POINTD1FN _0x2E0000,442
 	CALL SUBOPT_0x3
@@ -36493,7 +36500,7 @@ _0x2E0023:
 	STS  _hwCalId+1,R31
 ; 0017 00D4 
 ; 0017 00D5         SENSOR_SELECT(hwCalId);
-	CALL SUBOPT_0xA1
+	CALL SUBOPT_0xA2
 	LDS  R30,_hwCalId
 	LSL  R30
 	OR   R30,R26
@@ -36512,14 +36519,14 @@ _0x2E0023:
 	RJMP _0x2E0026
 _0x2E0025:
 ; 0017 00DB         hwCalId     = 9;
-	CALL SUBOPT_0x36D
+	CALL SUBOPT_0x367
 ; 0017 00DC         printDebug("<DEBUG_sensorSelect> ERROR : Selecting sensor [%c][0x%02X]\r\n\r\n",rxPackage3[8],rxPackage3[8]);
 	__POINTD1FN _0x2E0000,527
 	CALL __PUTPARD1
 	__GETB1MN _rxPackage3,8
 	CALL SUBOPT_0x65
 	__GETB1MN _rxPackage3,8
-	CALL SUBOPT_0x239
+	CALL SUBOPT_0x231
 ; 0017 00DD     }
 _0x2E0026:
 _0x2E0024:
@@ -36556,7 +36563,7 @@ _0x2E0068:
 ; 0017 00EB     config_oper_flag                    =   0x01;
 	LDI  R26,LOW(_config_oper_flag)
 	LDI  R27,HIGH(_config_oper_flag)
-	CALL SUBOPT_0x134
+	CALL SUBOPT_0x133
 ; 0017 00EC     is_operating_config_update          =   1;
 	STS  _is_operating_config_update,R30
 ; 0017 00ED 
@@ -36583,7 +36590,7 @@ _0x2E002A:
 	CPI  R17,24
 	BRSH _0x2E002B
 ; 0017 00F8         if( ( rxPackage3[i+7] != ',') && !isxdigit(rxPackage3[i+7])){
-	CALL SUBOPT_0xAB
+	CALL SUBOPT_0xAC
 	__ADDW1MN _rxPackage3,7
 	LD   R26,Z
 	CPI  R26,LOW(0x2C)
@@ -36596,20 +36603,20 @@ _0x2E002D:
 _0x2E002E:
 ; 0017 00F9             printDebug("<DEBUG_setSerialNumber> invalid setting string (%c)[0x%02]\r\n",rxPackage3[i+7],rxPackage3[i+7]);
 	__POINTD1FN _0x2E0000,590
-	CALL SUBOPT_0x36E
+	CALL SUBOPT_0x368
 	__ADDW1MN _rxPackage3,7
 	LD   R30,Z
 	CALL SUBOPT_0x65
-	CALL SUBOPT_0xAB
+	CALL SUBOPT_0xAC
 	__ADDW1MN _rxPackage3,7
 	LD   R30,Z
-	CALL SUBOPT_0x239
+	CALL SUBOPT_0x231
 ; 0017 00FA             return;
 	RJMP _0x20E002F
 ; 0017 00FB         }
 ; 0017 00FC         set_str[i] = tolower(rxPackage3[i+7]);           // -- copy only ",01,02,03,04,05,06,07,08" -- //
 _0x2E002C:
-	CALL SUBOPT_0xAB
+	CALL SUBOPT_0xAC
 	MOVW R0,R30
 	MOVW R26,R28
 	ADIW R26,1
@@ -36643,13 +36650,13 @@ _0x2E0030:
 	BRLO PC+3
 	JMP _0x2E0031
 ; 0017 0103         if((i%3) == 0)      {   continue;                       }
-	CALL SUBOPT_0x36F
+	CALL SUBOPT_0x369
 	SBIW R30,0
 	BRNE _0x2E0032
 	RJMP _0x2E002F
 ; 0017 0104         else if((i%3) == 1) {
 _0x2E0032:
-	CALL SUBOPT_0x36F
+	CALL SUBOPT_0x369
 	CPI  R30,LOW(0x1)
 	LDI  R26,HIGH(0x1)
 	CPC  R31,R26
@@ -36657,27 +36664,27 @@ _0x2E0032:
 ; 0017 0105 
 ; 0017 0106             printDebug("[%c",set_str[i]);
 	__POINTD1FN _0x2E0000,743
-	CALL SUBOPT_0x36E
+	CALL SUBOPT_0x368
 	MOVW R26,R28
 	ADIW R26,5
-	CALL SUBOPT_0x184
+	CALL SUBOPT_0x183
 ; 0017 0107 
 ; 0017 0108             DEVICE_SERIAL[i/3]      = 0x00;
-	CALL SUBOPT_0x370
+	CALL SUBOPT_0x36A
 	MOVW R26,R30
 	LDI  R30,LOW(0)
 	CALL __EEPROMWRB
 ; 0017 0109 
 ; 0017 010A             if(isdigit(set_str[i])){
-	CALL SUBOPT_0xAB
-	CALL SUBOPT_0x36C
-	CALL SUBOPT_0x371
+	CALL SUBOPT_0xAC
+	CALL SUBOPT_0x366
+	CALL SUBOPT_0x36B
 	BREQ _0x2E0035
 ; 0017 010B                 DEVICE_SERIAL[i/3]  = (set_str[i] - 48) << 4;
-	CALL SUBOPT_0x370
+	CALL SUBOPT_0x36A
 	MOVW R0,R30
-	CALL SUBOPT_0xAB
-	CALL SUBOPT_0x36C
+	CALL SUBOPT_0xAC
+	CALL SUBOPT_0x366
 	LD   R30,X
 	SUBI R30,LOW(48)
 	RJMP _0x2E0069
@@ -36685,10 +36692,10 @@ _0x2E0032:
 ; 0017 010D             else{
 _0x2E0035:
 ; 0017 010E                 DEVICE_SERIAL[i/3]  = (set_str[i] - 87) << 4;
-	CALL SUBOPT_0x370
+	CALL SUBOPT_0x36A
 	MOVW R0,R30
-	CALL SUBOPT_0xAB
-	CALL SUBOPT_0x36C
+	CALL SUBOPT_0xAC
+	CALL SUBOPT_0x366
 	LD   R30,X
 	SUBI R30,LOW(87)
 _0x2E0069:
@@ -36701,7 +36708,7 @@ _0x2E0069:
 ; 0017 0111         else if((i%3) == 2) {
 	RJMP _0x2E0037
 _0x2E0034:
-	CALL SUBOPT_0x36F
+	CALL SUBOPT_0x369
 	CPI  R30,LOW(0x2)
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
@@ -36709,20 +36716,20 @@ _0x2E0034:
 ; 0017 0112 
 ; 0017 0113             printDebug("%c]",set_str[i]);
 	__POINTD1FN _0x2E0000,747
-	CALL SUBOPT_0x36E
+	CALL SUBOPT_0x368
 	MOVW R26,R28
 	ADIW R26,5
-	CALL SUBOPT_0x184
+	CALL SUBOPT_0x183
 ; 0017 0114 
 ; 0017 0115             if(isdigit(set_str[i])){
-	CALL SUBOPT_0xAB
-	CALL SUBOPT_0x36C
-	CALL SUBOPT_0x371
+	CALL SUBOPT_0xAC
+	CALL SUBOPT_0x366
+	CALL SUBOPT_0x36B
 	BREQ _0x2E0039
 ; 0017 0116                 DEVICE_SERIAL[i/3]  |= (set_str[i] - 48);
-	CALL SUBOPT_0x370
-	CALL SUBOPT_0x372
+	CALL SUBOPT_0x36A
 	CALL SUBOPT_0x36C
+	CALL SUBOPT_0x366
 	LD   R30,X
 	SUBI R30,LOW(48)
 	RJMP _0x2E006A
@@ -36730,9 +36737,9 @@ _0x2E0034:
 ; 0017 0118             else{
 _0x2E0039:
 ; 0017 0119                 DEVICE_SERIAL[i/3]  |= (set_str[i] - 87);
-	CALL SUBOPT_0x370
-	CALL SUBOPT_0x372
+	CALL SUBOPT_0x36A
 	CALL SUBOPT_0x36C
+	CALL SUBOPT_0x366
 	LD   R30,X
 	SUBI R30,LOW(87)
 _0x2E006A:
@@ -36758,13 +36765,13 @@ _0x2E003C:
 	CPI  R17,8
 	BRSH _0x2E003D
 ; 0017 0120         printDebug("[%02X]",DEVICE_SERIAL[i]);
-	CALL SUBOPT_0x373
+	CALL SUBOPT_0x36D
 ; 0017 0121     }
 	SUBI R17,-1
 	RJMP _0x2E003C
 _0x2E003D:
 ; 0017 0122     printDebug("\r\n");
-	CALL SUBOPT_0x374
+	CALL SUBOPT_0x36E
 ; 0017 0123 
 ; 0017 0124     return;
 _0x20E002F:
@@ -36789,13 +36796,13 @@ _0x2E003F:
 	CPI  R17,8
 	BRSH _0x2E0040
 ; 0017 012D         printDebug("[%02X]",DEVICE_SERIAL[i]);
-	CALL SUBOPT_0x373
+	CALL SUBOPT_0x36D
 ; 0017 012E     }
 	SUBI R17,-1
 	RJMP _0x2E003F
 _0x2E0040:
 ; 0017 012F     printDebug("\r\n");
-	CALL SUBOPT_0x374
+	CALL SUBOPT_0x36E
 ; 0017 0130 
 ; 0017 0131     return;
 	LD   R17,Y+
@@ -36820,9 +36827,9 @@ _debug_req:
 ; 0017 013E 
 ; 0017 013F 
 ; 0017 0140     if(!strncmpf(rxPackage3,cmdSetRTCDateTime,7)){
-	CALL SUBOPT_0x375
+	CALL SUBOPT_0x36F
 	__POINTD1FN _cmdSetRTCDateTime,0
-	CALL SUBOPT_0x376
+	CALL SUBOPT_0x370
 	BRNE _0x2E0041
 ; 0017 0141         DEBUG_setDateTime();
 	RCALL _DEBUG_setDateTime
@@ -36830,9 +36837,9 @@ _debug_req:
 ; 0017 0143     else if(!strncmpf(rxPackage3,cmdResetAlarmStatus,7)){
 	RJMP _0x2E0042
 _0x2E0041:
-	CALL SUBOPT_0x375
+	CALL SUBOPT_0x36F
 	__POINTD1FN _cmdResetAlarmStatus,0
-	CALL SUBOPT_0x376
+	CALL SUBOPT_0x370
 	BRNE _0x2E0043
 ; 0017 0144         DEBUG_resetAlarm();
 	RCALL _DEBUG_resetAlarm
@@ -36840,9 +36847,9 @@ _0x2E0041:
 ; 0017 0146     else if(!strncmpf(rxPackage3,cmdClearLogFile,7)){
 	RJMP _0x2E0044
 _0x2E0043:
-	CALL SUBOPT_0x375
+	CALL SUBOPT_0x36F
 	__POINTD1FN _cmdClearLogFile,0
-	CALL SUBOPT_0x376
+	CALL SUBOPT_0x370
 	BRNE _0x2E0045
 ; 0017 0147         DEBUG_ClearLogFile();
 	RCALL _DEBUG_ClearLogFile
@@ -36850,9 +36857,9 @@ _0x2E0043:
 ; 0017 0149     else if(!strncmpf(rxPackage3,cmdSetVref,7)){
 	RJMP _0x2E0046
 _0x2E0045:
-	CALL SUBOPT_0x375
+	CALL SUBOPT_0x36F
 	__POINTD1FN _cmdSetVref,0
-	CALL SUBOPT_0x376
+	CALL SUBOPT_0x370
 	BRNE _0x2E0047
 ; 0017 014A         DEBUG_setRealVref();
 	RCALL _DEBUG_setRealVref
@@ -36860,9 +36867,9 @@ _0x2E0045:
 ; 0017 014C     else if(!strncmpf(rxPackage3,cmdSensorSelect,7)){
 	RJMP _0x2E0048
 _0x2E0047:
-	CALL SUBOPT_0x375
+	CALL SUBOPT_0x36F
 	__POINTD1FN _cmdSensorSelect,0
-	CALL SUBOPT_0x376
+	CALL SUBOPT_0x370
 	BRNE _0x2E0049
 ; 0017 014D         DEBUG_sensorSelect();
 	RCALL _DEBUG_sensorSelect
@@ -36870,9 +36877,9 @@ _0x2E0047:
 ; 0017 014F     else if(!strncmpf(rxPackage3,cmdDeviceEnable,7)){
 	RJMP _0x2E004A
 _0x2E0049:
-	CALL SUBOPT_0x375
+	CALL SUBOPT_0x36F
 	__POINTD1FN _cmdDeviceEnable,0
-	CALL SUBOPT_0x376
+	CALL SUBOPT_0x370
 	BRNE _0x2E004B
 ; 0017 0150         DEBUG_setDeviceEnable(1);
 	LDI  R26,LOW(1)
@@ -36881,9 +36888,9 @@ _0x2E0049:
 ; 0017 0152     else if(!strncmpf(rxPackage3,cmdDeviceDisable,7)){
 	RJMP _0x2E004C
 _0x2E004B:
-	CALL SUBOPT_0x375
+	CALL SUBOPT_0x36F
 	__POINTD1FN _cmdDeviceDisable,0
-	CALL SUBOPT_0x376
+	CALL SUBOPT_0x370
 	BRNE _0x2E004D
 ; 0017 0153         DEBUG_setDeviceEnable(0);
 	LDI  R26,LOW(0)
@@ -36892,9 +36899,9 @@ _0x2E004B:
 ; 0017 0155     else if(!strncmpf(rxPackage3,cmdSetSerialNumber,7)){
 	RJMP _0x2E004E
 _0x2E004D:
-	CALL SUBOPT_0x375
+	CALL SUBOPT_0x36F
 	__POINTD1FN _cmdSetSerialNumber,0
-	CALL SUBOPT_0x376
+	CALL SUBOPT_0x370
 	BRNE _0x2E004F
 ; 0017 0156         DEBUG_setSerialNumber();
 	RCALL _DEBUG_setSerialNumber
@@ -36902,9 +36909,9 @@ _0x2E004D:
 ; 0017 0158     else if(!strncmpf(rxPackage3,cmdReadSerialNumber,7)){
 	RJMP _0x2E0050
 _0x2E004F:
-	CALL SUBOPT_0x375
+	CALL SUBOPT_0x36F
 	__POINTD1FN _cmdReadSerialNumber,0
-	CALL SUBOPT_0x376
+	CALL SUBOPT_0x370
 	BRNE _0x2E0051
 ; 0017 0159         DEBUG_readSerialNumber();
 	RCALL _DEBUG_readSerialNumber
@@ -36912,9 +36919,9 @@ _0x2E004F:
 ; 0017 015B     else if(!strncmpf(rxPackage3,cmdGetADCSensor,7)){
 	RJMP _0x2E0052
 _0x2E0051:
-	CALL SUBOPT_0x375
+	CALL SUBOPT_0x36F
 	__POINTD1FN _cmdGetADCSensor,0
-	CALL SUBOPT_0x376
+	CALL SUBOPT_0x370
 	BRNE _0x2E0053
 ; 0017 015C         iGetSensorValue();
 	RCALL _iGetSensorValue
@@ -36955,11 +36962,11 @@ _printDebug:
 	CALL __ADDW2R15
 	MOVW R16,R26
 ; 0017 0168     vsprintf(textBuffer,fmtstr,argptr);
-	CALL SUBOPT_0x1F3
+	CALL SUBOPT_0x1F2
 	MOVW R26,R28
 	SUBI R26,LOW(-(260))
 	SBCI R27,HIGH(-(260))
-	CALL SUBOPT_0x294
+	CALL SUBOPT_0x291
 ; 0017 0169     send_uart(3,textBuffer);
 	LDI  R30,LOW(3)
 	ST   -Y,R30
@@ -36987,7 +36994,7 @@ _print_hex_ascii_line:
 ; 0017 0175 
 ; 0017 0176     // offset //
 ; 0017 0177     printDebug("%05d   ", offset);
-	CALL SUBOPT_0x1A8
+	CALL SUBOPT_0x1A7
 ;	*payload -> Y+10
 ;	len -> Y+8
 ;	offset -> Y+6
@@ -36995,7 +37002,7 @@ _print_hex_ascii_line:
 ;	gap -> R18,R19
 ;	*ch -> R20,R21
 	__POINTD1FN _0x2E0000,865
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x128
 	CALL SUBOPT_0xE9
 ; 0017 0178 
 ; 0017 0179 
@@ -37012,7 +37019,7 @@ _0x2E0055:
 	BRGE _0x2E0056
 ; 0017 017D         printDebug("%02x ", *ch);
 	__POINTD1FN _0x2E0000,873
-	CALL SUBOPT_0x377
+	CALL SUBOPT_0x371
 ; 0017 017E 
 ; 0017 017F         ch++;
 	__ADDWRN 20,21,1
@@ -37024,7 +37031,7 @@ _0x2E0055:
 	CPC  R31,R17
 	BRNE _0x2E0057
 ; 0017 0182             printDebug(" ");
-	CALL SUBOPT_0x378
+	CALL SUBOPT_0x372
 ; 0017 0183 
 ; 0017 0184         }
 ; 0017 0185     }
@@ -37039,7 +37046,7 @@ _0x2E0056:
 	SBIW R26,8
 	BRGE _0x2E0058
 ; 0017 0188         printDebug(" ");
-	CALL SUBOPT_0x378
+	CALL SUBOPT_0x372
 ; 0017 0189 
 ; 0017 018A     }
 ; 0017 018B 
@@ -37064,7 +37071,7 @@ _0x2E005B:
 	__CPWRR 16,17,18,19
 	BRGE _0x2E005C
 ; 0017 0190             printDebug("   ");
-	CALL SUBOPT_0x379
+	CALL SUBOPT_0x373
 ; 0017 0191 
 ; 0017 0192         }
 	__ADDWRN 16,17,1
@@ -37073,7 +37080,7 @@ _0x2E005C:
 ; 0017 0193     }
 ; 0017 0194     printDebug("   ");
 _0x2E0059:
-	CALL SUBOPT_0x379
+	CALL SUBOPT_0x373
 ; 0017 0195 
 ; 0017 0196 
 ; 0017 0197     // ascii (if printable) //
@@ -37095,7 +37102,7 @@ _0x2E005E:
 	BREQ _0x2E0060
 ; 0017 019B             printDebug("%c", *ch);
 	__POINTD1FN _0x2E0000,744
-	CALL SUBOPT_0x377
+	CALL SUBOPT_0x371
 ; 0017 019C 
 ; 0017 019D         }
 ; 0017 019E         else{
@@ -37115,7 +37122,7 @@ _0x2E0061:
 _0x2E005F:
 ; 0017 01A4 
 ; 0017 01A5     printDebug("\r\n");
-	CALL SUBOPT_0x374
+	CALL SUBOPT_0x36E
 ; 0017 01A6 
 ; 0017 01A7 
 ; 0017 01A8 return;
@@ -37165,9 +37172,9 @@ _print_payload:
 	CPC  R19,R27
 	BRLT _0x2E0063
 ; 0017 01B9         print_hex_ascii_line(ch, len, offset);
-	CALL SUBOPT_0x15C
-	CALL SUBOPT_0x1AF
-	CALL SUBOPT_0x37A
+	CALL SUBOPT_0x15B
+	CALL SUBOPT_0x1AE
+	CALL SUBOPT_0x374
 ; 0017 01BA         return;
 	RJMP _0x20E002E
 ; 0017 01BB     }
@@ -37183,17 +37190,17 @@ _0x2E0065:
 	MOVW R20,R30
 ; 0017 01C0         // print line //
 ; 0017 01C1         print_hex_ascii_line(ch, line_len, offset);
-	CALL SUBOPT_0x15C
+	CALL SUBOPT_0x15B
 	ST   -Y,R21
 	ST   -Y,R20
-	CALL SUBOPT_0x37A
+	CALL SUBOPT_0x374
 ; 0017 01C2         // compute total remaining //
 ; 0017 01C3         len_rem = len_rem - line_len;
 	__SUBWRR 16,17,20,21
 ; 0017 01C4         // shift pointer to remaining bytes to print //
 ; 0017 01C5         ch = ch + line_len;
 	MOVW R30,R20
-	CALL SUBOPT_0x1A6
+	CALL SUBOPT_0x1A5
 	STD  Y+6,R30
 	STD  Y+6+1,R31
 ; 0017 01C6         // add offset //
@@ -37211,10 +37218,10 @@ _0x2E0065:
 	BRLT _0x2E0067
 ; 0017 01CA             // print last line and get out //
 ; 0017 01CB             print_hex_ascii_line(ch, len_rem, offset);
-	CALL SUBOPT_0x15C
+	CALL SUBOPT_0x15B
 	ST   -Y,R17
 	ST   -Y,R16
-	CALL SUBOPT_0x37A
+	CALL SUBOPT_0x374
 ; 0017 01CC             break;
 	RJMP _0x2E0066
 ; 0017 01CD         }
@@ -37257,7 +37264,7 @@ _forwardSubstitution:
 ;	max -> Y+10
 ;	t -> Y+6
 _0x300005:
-	CALL SUBOPT_0x37B
+	CALL SUBOPT_0x375
 	CP   R16,R30
 	CPC  R17,R31
 	BRLT PC+3
@@ -37270,19 +37277,19 @@ _0x300005:
 	ADIW R30,1
 	MOVW R18,R30
 _0x300008:
-	CALL SUBOPT_0x37B
+	CALL SUBOPT_0x375
 	CP   R18,R30
 	CPC  R19,R31
 	BRGE _0x300009
 ; 0018 0011             if (a[j][i] > a[max][i])
-	CALL SUBOPT_0x37C
-	CALL SUBOPT_0x37D
+	CALL SUBOPT_0x376
+	CALL SUBOPT_0x377
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x37E
-	CALL SUBOPT_0x37D
+	CALL SUBOPT_0x378
+	CALL SUBOPT_0x377
 	POP  R26
 	POP  R27
 	POP  R24
@@ -37301,27 +37308,27 @@ _0x30000A:
 _0x300009:
 	__GETWRN 18,19,0
 _0x30000C:
-	CALL SUBOPT_0x37B
+	CALL SUBOPT_0x375
 	ADIW R30,1
 	CP   R18,R30
 	CPC  R19,R31
 	BRGE _0x30000D
 ; 0018 0015             t = a[max][j];
-	CALL SUBOPT_0x37E
-	CALL SUBOPT_0x37F
+	CALL SUBOPT_0x378
+	CALL SUBOPT_0x379
 	CALL SUBOPT_0xB6
 ; 0018 0016             a[max][j] = a[i][j];
-	CALL SUBOPT_0x37E
-	CALL SUBOPT_0x380
+	CALL SUBOPT_0x378
+	CALL SUBOPT_0x37A
 	MOVW R0,R30
-	CALL SUBOPT_0x381
-	CALL SUBOPT_0x37F
+	CALL SUBOPT_0x37B
+	CALL SUBOPT_0x379
 	MOVW R26,R0
 	CALL __PUTDP1
 ; 0018 0017             a[i][j] = t;
-	CALL SUBOPT_0x381
-	CALL SUBOPT_0x380
-	CALL SUBOPT_0x263
+	CALL SUBOPT_0x37B
+	CALL SUBOPT_0x37A
+	CALL SUBOPT_0x260
 ; 0018 0018         }
 	__ADDWRN 18,19,1
 	RJMP _0x30000C
@@ -37350,7 +37357,7 @@ _0x30000F:
 	ADIW R30,1
 	MOVW R20,R30
 _0x300012:
-	CALL SUBOPT_0x37B
+	CALL SUBOPT_0x375
 	CP   R20,R30
 	CPC  R21,R31
 	BRGE _0x300013
@@ -37360,7 +37367,7 @@ _0x300012:
 	SUBI R30,LOW(-_a)
 	SBCI R31,HIGH(-_a)
 	MOVW R0,R30
-	CALL SUBOPT_0x380
+	CALL SUBOPT_0x37A
 	PUSH R31
 	PUSH R30
 	MOVW R26,R30
@@ -37371,13 +37378,13 @@ _0x300012:
 	PUSH R30
 	MOVW R26,R0
 	MOVW R30,R16
-	CALL SUBOPT_0x274
+	CALL SUBOPT_0x271
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x381
-	CALL SUBOPT_0x37D
+	CALL SUBOPT_0x37B
+	CALL SUBOPT_0x377
 	POP  R26
 	POP  R27
 	POP  R24
@@ -37387,8 +37394,8 @@ _0x300012:
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x381
-	CALL SUBOPT_0x37F
+	CALL SUBOPT_0x37B
+	CALL SUBOPT_0x379
 	POP  R26
 	POP  R27
 	POP  R24
@@ -37398,7 +37405,7 @@ _0x300012:
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x222
+	CALL SUBOPT_0x21A
 	POP  R26
 	POP  R27
 	CALL __PUTDP1
@@ -37443,7 +37450,7 @@ _reverseElimination:
 ;	i -> R16,R17
 ;	j -> R18,R19
 ;	k -> R20,R21
-	CALL SUBOPT_0x37B
+	CALL SUBOPT_0x375
 	SBIW R30,1
 	MOVW R16,R30
 _0x300015:
@@ -37451,22 +37458,20 @@ _0x300015:
 	BRPL PC+3
 	JMP _0x300016
 ; 0018 0040         a[i][n] = a[i][n] / a[i][i];
-	CALL SUBOPT_0x381
-	MOVW R26,R30
 	CALL SUBOPT_0x37B
-	CALL SUBOPT_0x211
+	CALL SUBOPT_0x37C
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x381
-	MOVW R26,R30
 	CALL SUBOPT_0x37B
-	CALL SUBOPT_0x274
+	MOVW R26,R30
+	CALL SUBOPT_0x375
+	CALL SUBOPT_0x271
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x381
-	CALL SUBOPT_0x37D
+	CALL SUBOPT_0x37B
+	CALL SUBOPT_0x377
 	POP  R26
 	POP  R27
 	POP  R24
@@ -37476,11 +37481,11 @@ _0x300015:
 	POP  R27
 	CALL __PUTDP1
 ; 0018 0041         a[i][i] = 1;
-	CALL SUBOPT_0x381
+	CALL SUBOPT_0x37B
 	MOVW R26,R30
 	MOVW R30,R16
-	CALL SUBOPT_0x247
-	CALL SUBOPT_0x382
+	CALL SUBOPT_0x242
+	CALL SUBOPT_0x37D
 	CALL __PUTDP1
 ; 0018 0042         for (j = i - 1; j >= 0; --j) {
 	MOVW R30,R16
@@ -37490,11 +37495,9 @@ _0x300018:
 	TST  R19
 	BRMI _0x300019
 ; 0018 0043             a[j][n] -= a[j][i] * a[i][n];
-	CALL SUBOPT_0x37C
+	CALL SUBOPT_0x376
 	MOVW R0,R30
-	MOVW R26,R30
-	CALL SUBOPT_0x37B
-	CALL SUBOPT_0x211
+	CALL SUBOPT_0x37C
 	PUSH R31
 	PUSH R30
 	MOVW R26,R30
@@ -37505,15 +37508,15 @@ _0x300018:
 	PUSH R30
 	MOVW R26,R0
 	MOVW R30,R16
-	CALL SUBOPT_0x274
+	CALL SUBOPT_0x271
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x381
-	MOVW R26,R30
 	CALL SUBOPT_0x37B
-	CALL SUBOPT_0x274
+	MOVW R26,R30
+	CALL SUBOPT_0x375
+	CALL SUBOPT_0x271
 	POP  R26
 	POP  R27
 	POP  R24
@@ -37523,16 +37526,16 @@ _0x300018:
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x222
+	CALL SUBOPT_0x21A
 	POP  R26
 	POP  R27
 	CALL __PUTDP1
 ; 0018 0044             a[j][i] = 0;
-	CALL SUBOPT_0x37C
+	CALL SUBOPT_0x376
 	MOVW R26,R30
 	MOVW R30,R16
-	CALL SUBOPT_0x247
-	CALL SUBOPT_0x8E
+	CALL SUBOPT_0x242
+	CALL SUBOPT_0x8F
 ; 0018 0045         }
 	__SUBWRN 18,19,1
 	RJMP _0x300018
@@ -37576,7 +37579,7 @@ _gaussian:
 ;	*resC -> Y+4
 ;	i -> R16,R17
 ;	j -> R18,R19
-	CALL SUBOPT_0x382
+	CALL SUBOPT_0x37D
 	STS  _a,R30
 	STS  _a+1,R31
 	STS  _a+2,R22
@@ -37591,7 +37594,7 @@ _gaussian:
 	__PUTD1MN _a,12
 ; 0018 005A     a[1][0] = 1.0;      a[1][1] = factor2;     a[1][2] = factor2 * factor2;  a[1][3] = ref2;
 	__POINTW1MN _a,16
-	CALL SUBOPT_0x383
+	CALL SUBOPT_0x37E
 	CALL SUBOPT_0xD1
 	__PUTD1MN _a,20
 	CALL SUBOPT_0xD1
@@ -37602,7 +37605,7 @@ _gaussian:
 	__PUTD1MN _a,28
 ; 0018 005B     a[2][0] = 1.0;      a[2][1] = factor3;     a[2][2] = factor3 * factor3;  a[2][3] = ref3;
 	__POINTW1MN _a,32
-	CALL SUBOPT_0x383
+	CALL SUBOPT_0x37E
 	CALL SUBOPT_0xC2
 	__PUTD1MN _a,36
 	CALL SUBOPT_0xC2
@@ -37762,7 +37765,7 @@ _iAD595ADCToTemp:
 ; 001A 0030      viADCToVolt = (float)(viADCSmooth/1024.0)*3.30;          //- 0  +
 	ST   -Y,R27
 	ST   -Y,R26
-	CALL SUBOPT_0x384
+	CALL SUBOPT_0x37F
 	LDI  R30,LOW(_0x340003*2)
 	LDI  R31,HIGH(_0x340003*2)
 	LDI  R22,BYTE3(_0x340003*2)
@@ -37798,14 +37801,13 @@ _iAD595ADCToTemp:
 	CALL __CWD1
 	CALL __DIVD21
 	MOVW R16,R30
-	CALL SUBOPT_0x205
+	CALL SUBOPT_0x204
 	MOVW R26,R30
 	MOVW R24,R22
-	CALL SUBOPT_0x385
+	CALL SUBOPT_0x380
 	__PUTD1SX 194
 ; 001A 0031      viVoltUpLevel = viADCToVolt - viZeroSet;
-	__GETD2N 0x3FD56042
-	CALL __SUBF12
+	CALL SUBOPT_0x255
 	__PUTD1SX 186
 ; 001A 0032 
 ; 001A 0033 
@@ -37874,17 +37876,17 @@ _iAD595ADCToTemp:
 ; 001A 0072 
 ; 001A 0073 
 ; 001A 0074      if(viVoltUpLevel >= (-0.094)){
-	CALL SUBOPT_0x386
+	CALL SUBOPT_0x381
 	BRLO _0x340004
 ; 001A 0075           ivTempValue = (viVoltUpLevel*1000) / 10.0;
-	RJMP _0x340034
+	RJMP _0x340035
 ; 001A 0076         //  printDebug("ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
 ; 001A 0077      }else if((viVoltUpLevel < (-0.094)) && (viVoltUpLevel >= (-0.375)) ){
 _0x340004:
-	CALL SUBOPT_0x386
+	CALL SUBOPT_0x381
 	BRSH _0x340007
-	CALL SUBOPT_0x387
-	CALL SUBOPT_0x388
+	CALL SUBOPT_0x382
+	CALL SUBOPT_0x383
 	BRSH _0x340008
 _0x340007:
 	RJMP _0x340006
@@ -37892,7 +37894,7 @@ _0x340008:
 ; 001A 0078 
 ; 001A 0079         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
 ; 001A 007A         gaussian(viVoltPointTable[0][0],  viVoltPointTable[0][1],  viVoltPointTable[0][2], viTempOutPointTable[0][0], viTempOutPointTable[0][1], viTempOutPointTable[0][2], &factorA, &factorB, &factorC);
-	CALL SUBOPT_0x389
+	CALL SUBOPT_0x384
 	__GETD1SX 70
 	CALL __PUTPARD1
 	__GETD1SX 78
@@ -37900,28 +37902,28 @@ _0x340008:
 	CALL SUBOPT_0xC2
 	CALL __PUTPARD1
 	CALL SUBOPT_0xBB
-	CALL SUBOPT_0x38A
+	CALL SUBOPT_0x385
 ; 001A 007B         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x38B
-	CALL SUBOPT_0x38C
+	CALL SUBOPT_0x386
+	CALL SUBOPT_0x387
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x38D
-	RJMP _0x340035
+	CALL SUBOPT_0x388
+	RJMP _0x340036
 ; 001A 007C 
 ; 001A 007D         // printDebug("-L1 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
 ; 001A 007E      }else if((viVoltUpLevel < (-0.375)) && (viVoltUpLevel >= (-0.719)) ){
 _0x340006:
-	CALL SUBOPT_0x387
-	CALL SUBOPT_0x388
+	CALL SUBOPT_0x382
+	CALL SUBOPT_0x383
 	BRSH _0x34000B
-	CALL SUBOPT_0x38E
+	CALL SUBOPT_0x389
 	BRSH _0x34000C
 _0x34000B:
 	RJMP _0x34000A
@@ -37929,7 +37931,7 @@ _0x34000C:
 ; 001A 007F         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
 ; 001A 0080         gaussian(viVoltPointTable[1][0],  viVoltPointTable[1][1],  viVoltPointTable[1][2], viTempOutPointTable[1][0], viTempOutPointTable[1][1], viTempOutPointTable[1][2], &factorA, &factorB, &factorC);
 	__GETD1SX 74
-	CALL SUBOPT_0x38F
+	CALL SUBOPT_0x38A
 	ADIW R30,16
 	CALL SUBOPT_0x78
 	MOVW R30,R28
@@ -37941,27 +37943,27 @@ _0x34000C:
 	CALL __PUTPARD1
 	CALL SUBOPT_0xC3
 	CALL __PUTPARD1
-	CALL SUBOPT_0x165
-	CALL SUBOPT_0x390
+	CALL SUBOPT_0x164
+	CALL SUBOPT_0x38B
 ; 001A 0081         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x391
+	CALL SUBOPT_0x38C
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x38D
-	RJMP _0x340035
+	CALL SUBOPT_0x388
+	RJMP _0x340036
 ; 001A 0082 
 ; 001A 0083         // printDebug("-L2 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
 ; 001A 0084      }else if((viVoltUpLevel < (-0.719)) && (viVoltUpLevel >= (-1.021)) ){
 _0x34000A:
-	CALL SUBOPT_0x38E
+	CALL SUBOPT_0x389
 	BRSH _0x34000F
-	CALL SUBOPT_0x392
+	CALL SUBOPT_0x38D
 	BRSH _0x340010
 _0x34000F:
 	RJMP _0x34000E
@@ -37969,7 +37971,7 @@ _0x340010:
 ; 001A 0085         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
 ; 001A 0086         gaussian(viVoltPointTable[2][0],  viVoltPointTable[2][1],  viVoltPointTable[2][2], viTempOutPointTable[2][0], viTempOutPointTable[2][1], viTempOutPointTable[2][2], &factorA, &factorB, &factorC);
 	__GETD1SX 86
-	CALL SUBOPT_0x38F
+	CALL SUBOPT_0x38A
 	ADIW R30,28
 	CALL SUBOPT_0x78
 	MOVW R30,R28
@@ -37982,26 +37984,26 @@ _0x340010:
 	__GETD1S 46
 	CALL __PUTPARD1
 	__GETD1S 54
-	CALL SUBOPT_0x38A
+	CALL SUBOPT_0x385
 ; 001A 0087         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x391
+	CALL SUBOPT_0x38C
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x38D
-	RJMP _0x340035
+	CALL SUBOPT_0x388
+	RJMP _0x340036
 ; 001A 0088 
 ; 001A 0089         // printDebug("-L3 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
 ; 001A 008A      }else if((viVoltUpLevel < (-1.021)) && (viVoltUpLevel >= (-1.269)) ){
 _0x34000E:
-	CALL SUBOPT_0x392
+	CALL SUBOPT_0x38D
 	BRSH _0x340013
-	CALL SUBOPT_0x393
+	CALL SUBOPT_0x38E
 	BRSH _0x340014
 _0x340013:
 	RJMP _0x340012
@@ -38009,7 +38011,7 @@ _0x340014:
 ; 001A 008B         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
 ; 001A 008C         gaussian(viVoltPointTable[3][0],  viVoltPointTable[3][1],  viVoltPointTable[3][2], viTempOutPointTable[3][0], viTempOutPointTable[3][1], viTempOutPointTable[3][2], &factorA, &factorB, &factorC);
 	__GETD1SX 98
-	CALL SUBOPT_0x38F
+	CALL SUBOPT_0x38A
 	ADIW R30,40
 	CALL SUBOPT_0x78
 	MOVW R30,R28
@@ -38025,27 +38027,27 @@ _0x340014:
 	ADIW R30,58
 	ADIW R30,8
 	CALL SUBOPT_0x78
-	CALL SUBOPT_0x390
+	CALL SUBOPT_0x38B
 ; 001A 008D         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x391
+	CALL SUBOPT_0x38C
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x38D
-	RJMP _0x340035
+	CALL SUBOPT_0x388
+	RJMP _0x340036
 ; 001A 008E 
 ; 001A 008F         // printDebug("-L4 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
 ; 001A 0090      }else if((viVoltUpLevel < (-1.269)) && (viVoltUpLevel >= (-1.504)) ){        //-1.454 + 50.0   | 50 = +compencess
 _0x340012:
-	CALL SUBOPT_0x393
+	CALL SUBOPT_0x38E
 	BRSH _0x340017
-	CALL SUBOPT_0x387
-	CALL SUBOPT_0x215
+	CALL SUBOPT_0x382
+	CALL SUBOPT_0x20B
 	BRSH _0x340018
 _0x340017:
 	RJMP _0x340016
@@ -38053,7 +38055,7 @@ _0x340018:
 ; 001A 0091         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
 ; 001A 0092         gaussian(viVoltPointTable[4][0],  viVoltPointTable[4][1],  viVoltPointTable[4][2], viTempOutPointTable[4][0], viTempOutPointTable[4][1], viTempOutPointTable[4][2], &factorA, &factorB, &factorC);
 	__GETD1SX 110
-	CALL SUBOPT_0x38F
+	CALL SUBOPT_0x38A
 	ADIW R30,52
 	CALL SUBOPT_0x78
 	MOVW R30,R28
@@ -38061,7 +38063,7 @@ _0x340018:
 	SBCI R31,HIGH(-(70))
 	ADIW R30,56
 	CALL SUBOPT_0x78
-	CALL SUBOPT_0x389
+	CALL SUBOPT_0x384
 	MOVW R30,R28
 	ADIW R30,18
 	ADIW R30,52
@@ -38070,33 +38072,33 @@ _0x340018:
 	ADIW R30,22
 	ADIW R30,56
 	CALL SUBOPT_0x78
-	CALL SUBOPT_0x390
+	CALL SUBOPT_0x38B
 ; 001A 0093         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x391
+	CALL SUBOPT_0x38C
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x38D
-	RJMP _0x340035
+	CALL SUBOPT_0x388
+	RJMP _0x340036
 ; 001A 0094 
 ; 001A 0095          //printDebug("-L5 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
 ; 001A 0096      }
 ; 001A 0097      else if(viVoltUpLevel < (-1.504)){
 _0x340016:
-	CALL SUBOPT_0x387
-	CALL SUBOPT_0x215
+	CALL SUBOPT_0x382
+	CALL SUBOPT_0x20B
 	BRSH _0x34001A
 ; 001A 0098         ivTempValue = (viVoltUpLevel*1000) / 10.0;
-_0x340034:
-	__GETD2SX 186
-	CALL SUBOPT_0x394
-	CALL __DIVF21
 _0x340035:
+	__GETD2SX 186
+	CALL SUBOPT_0x38F
+	CALL __DIVF21
+_0x340036:
 	__PUTD1SX 182
 ; 001A 0099          //printDebug("-L6 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp Error\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel);
 ; 001A 009A      }
@@ -38116,14 +38118,14 @@ _0x34001A:
 ;float iAD595ADCToVolt(unsigned long viADC_p,float viADCLoop_p){            //Volt Uplevel
 ; 001A 009F float iAD595ADCToVolt(unsigned long viADC_p,float viADCLoop_p){
 _iAD595ADCToVolt:
-; 001A 00A0      float    viADCSmooth =  (float)(viADC_p/viADCLoop_p);           ////(float)(viADCbuffer/30.0);
+; 001A 00A0      float    viADCSmooth =  (float)(viADC_p/viADCLoop_p);           //(float)(viADCbuffer/30.0);
 ; 001A 00A1      float  viADCToVolt = 0.0;
 ; 001A 00A2      //const float  viZeroSet   = 1.68;
 ; 001A 00A3      const float  viZeroSet   = 1.667;
 ; 001A 00A4      float viVoltUpLevel = 0.0;
 ; 001A 00A5      float ivVoltValue = 0.0;
 ; 001A 00A6 
-; 001A 00A7      viADCToVolt = (float)((viADCSmooth/1024.0)*3.30);          //- 0  +
+; 001A 00A7      viADCToVolt = (float)((viADCSmooth/1024.0)*3.30);      //    - 0  +
 	CALL __PUTPARD2
 	SBIW R28,20
 	LDI  R24,16
@@ -38141,14 +38143,14 @@ _iAD595ADCToVolt:
 ;	viVoltUpLevel -> Y+4
 ;	ivVoltValue -> Y+0
 	CALL SUBOPT_0xDC
-	CALL SUBOPT_0x232
+	CALL SUBOPT_0x22B
 	CALL __CDF2U
 	CALL __DIVF21
-	CALL SUBOPT_0x395
-	CALL SUBOPT_0x385
+	CALL SUBOPT_0x390
+	CALL SUBOPT_0x380
 	CALL SUBOPT_0xEC
 ; 001A 00A8      viVoltUpLevel = viADCToVolt;
-	CALL SUBOPT_0xAD
+	CALL SUBOPT_0xAE
 ; 001A 00A9      //viVoltUpLevel = viADCToVolt - viZeroSet;
 ; 001A 00AA 
 ; 001A 00AB 
@@ -38157,58 +38159,80 @@ _iAD595ADCToVolt:
 	RET
 ; 001A 00AD }
 ;
-;float iAD595VoltToTemp(float viVolt_arg){
-; 001A 00AF float iAD595VoltToTemp(float viVolt_arg){
-_iAD595VoltToTemp:
-; 001A 00B0      //int    viADCSmooth =  (int)(viADC_p/viADCLoop_p);           ////(float)(viADCbuffer/30.0);
+;float iAD595ADCToVoltage(float viADC_arg){
+; 001A 00AF float iAD595ADCToVoltage(float viADC_arg){
+; 001A 00B0      float    viADCSmooth =  viADC_arg;
 ; 001A 00B1      float  viADCToVolt = 0.0;
-; 001A 00B2      //const float  viZeroSet   = 1.68;
-; 001A 00B3      const float  viZeroSet   = 1.667;
+; 001A 00B2      const float  viZeroSet = 1.667;
+; 001A 00B3      const float  viOffset = 0.213;
 ; 001A 00B4      float viVoltUpLevel = 0.0;
-; 001A 00B5      float ivTempValue = 0.0;
-; 001A 00B6      float factorA = 0.0;
-; 001A 00B7      float factorB = 0.0;
-; 001A 00B8      float factorC = 0.0;
+; 001A 00B5      float ivVoltValue = 0.0;
+; 001A 00B6 
+; 001A 00B7      viADCToVolt = (float)((viADCSmooth/1024.0)*3.30);    //      - 0  +
+;	viADC_arg -> Y+24
+;	viADCSmooth -> Y+20
+;	viADCToVolt -> Y+16
+;	viZeroSet -> Y+12
+;	viOffset -> Y+8
+;	viVoltUpLevel -> Y+4
+;	ivVoltValue -> Y+0
+; 001A 00B8      viVoltUpLevel = (viADCToVolt+viOffset) - viZeroSet;
 ; 001A 00B9 
-; 001A 00BA      /////////range 1 Temp C(-10 to -100)
-; 001A 00BB      float viVoltPoint1_1 = -0.094;
-; 001A 00BC      float viVoltPoint2_1 = -0.552;
-; 001A 00BD      float viVoltPoint3_1 = -0.876;
-; 001A 00BE      float viTempOutPoint1_1 = -10.0;
-; 001A 00BF      float viTempOutPoint2_1 = -60.0;
-; 001A 00C0      float viTempOutPoint3_1 = -100.0;
-; 001A 00C1 
-; 001A 00C2      /////////range 2 Temp C(-100 to -200)
-; 001A 00C3      float viVoltPoint1_2 = -0.876;
-; 001A 00C4      float viVoltPoint2_2 = -1.269;
-; 001A 00C5      float viVoltPoint3_2 = -1.454;
-; 001A 00C6      float viTempOutPoint1_2 = -100.0;
-; 001A 00C7      float viTempOutPoint2_2 = -160.0;
-; 001A 00C8      float viTempOutPoint3_2 = -200.0;
-; 001A 00C9 
-; 001A 00CA      const float viVoltPointTable[5][3]  = {
-; 001A 00CB             {-0.094,-0.189,-0.375},           //-10 to -40
-; 001A 00CC             {-0.375,-0.552,-0.719},           //-40 to -80
-; 001A 00CD             {-0.719,-0.876,-1.021},           //-80 to -120
-; 001A 00CE             {-1.021,-1.152,-1.269},           //-120 to -160
-; 001A 00CF             {-1.269,-1.370,-1.454}            //-160 to -200
-; 001A 00D0      };
-; 001A 00D1 
-; 001A 00D2      const float viTempOutPointTable[5][3]  = {
-; 001A 00D3             {-10.0,-20.0,-40.0},           //-10 to -40
-; 001A 00D4             {-40.0,-60.0,-80.0},           //-40 to -80
-; 001A 00D5             {-80.0,-100.0,-120.0},           //-80 to -120
-; 001A 00D6             {-120.0,-140.0,-160.0},           //-120 to -160
-; 001A 00D7             {-160.0,-180.0,-200.0}            //-160 to -200
-; 001A 00D8      };
-; 001A 00D9 
-; 001A 00DA      //viADCToVolt = (float)(viADCSmooth/1024.0)*3.30;          //- 0  +
-; 001A 00DB      viVoltUpLevel = viVolt_arg;
+; 001A 00BA      return viVoltUpLevel;
+; 001A 00BB }
+;
+;float iAD595VoltToTemp(float viVolt_arg){
+; 001A 00BD float iAD595VoltToTemp(float viVolt_arg){
+_iAD595VoltToTemp:
+; 001A 00BE      //int    viADCSmooth =  (int)(viADC_p/viADCLoop_p);           ////(float)(viADCbuffer/30.0);
+; 001A 00BF      float  viADCToVolt = 0.0;
+; 001A 00C0      //const float  viZeroSet   = 1.68;
+; 001A 00C1      const float  viZeroSet   = 1.667;
+; 001A 00C2      float viVoltUpLevel = 0.0;
+; 001A 00C3      float ivTempValue = 0.0;
+; 001A 00C4      float factorA = 0.0;
+; 001A 00C5      float factorB = 0.0;
+; 001A 00C6      float factorC = 0.0;
+; 001A 00C7 
+; 001A 00C8      /////////range 1 Temp C(-10 to -100)
+; 001A 00C9      float viVoltPoint1_1 = -0.094;
+; 001A 00CA      float viVoltPoint2_1 = -0.552;
+; 001A 00CB      float viVoltPoint3_1 = -0.876;
+; 001A 00CC      float viTempOutPoint1_1 = -10.0;
+; 001A 00CD      float viTempOutPoint2_1 = -60.0;
+; 001A 00CE      float viTempOutPoint3_1 = -100.0;
+; 001A 00CF 
+; 001A 00D0      /////////range 2 Temp C(-100 to -200)
+; 001A 00D1      float viVoltPoint1_2 = -0.876;
+; 001A 00D2      float viVoltPoint2_2 = -1.269;
+; 001A 00D3      float viVoltPoint3_2 = -1.454;
+; 001A 00D4      float viTempOutPoint1_2 = -100.0;
+; 001A 00D5      float viTempOutPoint2_2 = -160.0;
+; 001A 00D6      float viTempOutPoint3_2 = -200.0;
+; 001A 00D7 
+; 001A 00D8      const float viVoltPointTable[5][3]  = {
+; 001A 00D9             {-0.094,-0.189,-0.375},           //-10 to -40
+; 001A 00DA             {-0.375,-0.552,-0.719},           //-40 to -80
+; 001A 00DB             {-0.719,-0.876,-1.021},           //-80 to -120
+; 001A 00DC             {-1.021,-1.152,-1.269},           //-120 to -160
+; 001A 00DD             {-1.269,-1.370,-1.454}            //-160 to -200
+; 001A 00DE      };
+; 001A 00DF 
+; 001A 00E0      const float viTempOutPointTable[5][3]  = {
+; 001A 00E1             {-10.0,-20.0,-40.0},           //-10 to -40
+; 001A 00E2             {-40.0,-60.0,-80.0},           //-40 to -80
+; 001A 00E3             {-80.0,-100.0,-120.0},           //-80 to -120
+; 001A 00E4             {-120.0,-140.0,-160.0},           //-120 to -160
+; 001A 00E5             {-160.0,-180.0,-200.0}            //-160 to -200
+; 001A 00E6      };
+; 001A 00E7 
+; 001A 00E8      //viADCToVolt = (float)(viADCSmooth/1024.0)*3.30;          //- 0  +
+; 001A 00E9      viVoltUpLevel = viVolt_arg;
 	CALL __PUTPARD2
-	CALL SUBOPT_0x384
-	LDI  R30,LOW(_0x34001C*2)
-	LDI  R31,HIGH(_0x34001C*2)
-	LDI  R22,BYTE3(_0x34001C*2)
+	CALL SUBOPT_0x37F
+	LDI  R30,LOW(_0x34001D*2)
+	LDI  R31,HIGH(_0x34001D*2)
+	LDI  R22,BYTE3(_0x34001D*2)
 	CALL __INITLOCB
 ;	viVolt_arg -> Y+196
 ;	viADCToVolt -> Y+192
@@ -38234,68 +38258,63 @@ _iAD595VoltToTemp:
 ;	viTempOutPointTable -> Y+0
 	__GETD1SX 196
 	__PUTD1SX 184
-; 001A 00DC 
-; 001A 00DD 
-; 001A 00DE      if(viVoltUpLevel >= (-0.094)){
-	CALL SUBOPT_0x396
-	BRLO _0x34001D
-; 001A 00DF           ivTempValue = (viVoltUpLevel*1000) / 10.0;
-	RJMP _0x340036
-; 001A 00E0         //  printDebug("ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
-; 001A 00E1      }else if((viVoltUpLevel < (-0.094)) && (viVoltUpLevel >= (-0.375)) ){
-_0x34001D:
-	CALL SUBOPT_0x396
-	BRSH _0x340020
-	CALL SUBOPT_0x397
-	CALL SUBOPT_0x388
+; 001A 00EA 
+; 001A 00EB 
+; 001A 00EC      if(viVoltUpLevel >= (-0.094)){
+	CALL SUBOPT_0x391
+	BRLO _0x34001E
+; 001A 00ED           ivTempValue = (viVoltUpLevel*1000) / 10.0;
+	RJMP _0x340037
+; 001A 00EE         //  printDebug("ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
+; 001A 00EF      }else if((viVoltUpLevel < (-0.094)) && (viVoltUpLevel >= (-0.375)) ){
+_0x34001E:
+	CALL SUBOPT_0x391
 	BRSH _0x340021
-_0x340020:
-	RJMP _0x34001F
+	CALL SUBOPT_0x392
+	CALL SUBOPT_0x383
+	BRSH _0x340022
 _0x340021:
-; 001A 00E2 
-; 001A 00E3         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
-; 001A 00E4         gaussian(viVoltPointTable[0][0],  viVoltPointTable[0][1],  viVoltPointTable[0][2], viTempOutPointTable[0][0], viTempOutPointTable[0][1], viTempOutPointTable[0][2], &factorA, &factorB, &factorC);
-	CALL SUBOPT_0x225
-	CALL __PUTPARD1
+	RJMP _0x340020
+_0x340022:
+; 001A 00F0 
+; 001A 00F1         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
+; 001A 00F2         gaussian(viVoltPointTable[0][0],  viVoltPointTable[0][1],  viVoltPointTable[0][2], viTempOutPointTable[0][0], viTempOutPointTable[0][1], viTempOutPointTable[0][2], &factorA, &factorB, &factorC);
+	CALL SUBOPT_0x22A
 	__GETD1SX 68
-	CALL __PUTPARD1
-	__GETD1SX 76
+	CALL SUBOPT_0x21D
 	CALL SUBOPT_0x8D
-	CALL __PUTPARD1
-	CALL SUBOPT_0xDC
-	CALL SUBOPT_0x36A
-	CALL SUBOPT_0x398
-; 001A 00E5         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
+	CALL SUBOPT_0x21B
+	CALL SUBOPT_0x364
+	CALL SUBOPT_0x393
+; 001A 00F3         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x399
-	CALL SUBOPT_0x39A
+	CALL SUBOPT_0x394
+	CALL SUBOPT_0x395
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x39B
-	RJMP _0x340037
-; 001A 00E6 
-; 001A 00E7         // printDebug("-L1 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
-; 001A 00E8      }else if((viVoltUpLevel < (-0.375)) && (viVoltUpLevel >= (-0.719)) ){
-_0x34001F:
-	CALL SUBOPT_0x397
-	CALL SUBOPT_0x388
-	BRSH _0x340024
-	CALL SUBOPT_0x39C
+	CALL SUBOPT_0x396
+	RJMP _0x340038
+; 001A 00F4 
+; 001A 00F5         // printDebug("-L1 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
+; 001A 00F6      }else if((viVoltUpLevel < (-0.375)) && (viVoltUpLevel >= (-0.719)) ){
+_0x340020:
+	CALL SUBOPT_0x392
+	CALL SUBOPT_0x383
 	BRSH _0x340025
-_0x340024:
-	RJMP _0x340023
+	CALL SUBOPT_0x397
+	BRSH _0x340026
 _0x340025:
-; 001A 00E9         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
-; 001A 00EA         gaussian(viVoltPointTable[1][0],  viVoltPointTable[1][1],  viVoltPointTable[1][2], viTempOutPointTable[1][0], viTempOutPointTable[1][1], viTempOutPointTable[1][2], &factorA, &factorB, &factorC);
-	CALL SUBOPT_0x224
-	MOVW R30,R28
-	SUBI R30,LOW(-(64))
-	SBCI R31,HIGH(-(64))
+	RJMP _0x340024
+_0x340026:
+; 001A 00F7         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
+; 001A 00F8         gaussian(viVoltPointTable[1][0],  viVoltPointTable[1][1],  viVoltPointTable[1][2], viTempOutPointTable[1][0], viTempOutPointTable[1][1], viTempOutPointTable[1][2], &factorA, &factorB, &factorC);
+	__GETD1SX 72
+	CALL SUBOPT_0x398
 	ADIW R30,16
 	CALL SUBOPT_0x78
 	MOVW R30,R28
@@ -38305,35 +38324,34 @@ _0x340025:
 	CALL SUBOPT_0x78
 	CALL SUBOPT_0xF2
 	CALL SUBOPT_0xF3
-	CALL SUBOPT_0xF4
-	CALL SUBOPT_0x39D
-; 001A 00EB         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
+	CALL SUBOPT_0x399
+; 001A 00F9         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x39E
+	CALL SUBOPT_0x39A
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x39B
-	RJMP _0x340037
-; 001A 00EC 
-; 001A 00ED         // printDebug("-L2 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
-; 001A 00EE      }else if((viVoltUpLevel < (-0.719)) && (viVoltUpLevel >= (-1.021)) ){
-_0x340023:
-	CALL SUBOPT_0x39C
-	BRSH _0x340028
-	CALL SUBOPT_0x39F
+	CALL SUBOPT_0x396
+	RJMP _0x340038
+; 001A 00FA 
+; 001A 00FB         // printDebug("-L2 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
+; 001A 00FC      }else if((viVoltUpLevel < (-0.719)) && (viVoltUpLevel >= (-1.021)) ){
+_0x340024:
+	CALL SUBOPT_0x397
 	BRSH _0x340029
-_0x340028:
-	RJMP _0x340027
+	CALL SUBOPT_0x39B
+	BRSH _0x34002A
 _0x340029:
-; 001A 00EF         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
-; 001A 00F0         gaussian(viVoltPointTable[2][0],  viVoltPointTable[2][1],  viVoltPointTable[2][2], viTempOutPointTable[2][0], viTempOutPointTable[2][1], viTempOutPointTable[2][2], &factorA, &factorB, &factorC);
+	RJMP _0x340028
+_0x34002A:
+; 001A 00FD         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
+; 001A 00FE         gaussian(viVoltPointTable[2][0],  viVoltPointTable[2][1],  viVoltPointTable[2][2], viTempOutPointTable[2][0], viTempOutPointTable[2][1], viTempOutPointTable[2][2], &factorA, &factorB, &factorC);
 	__GETD1SX 84
-	CALL SUBOPT_0x3A0
+	CALL SUBOPT_0x398
 	ADIW R30,28
 	CALL SUBOPT_0x78
 	MOVW R30,R28
@@ -38346,34 +38364,34 @@ _0x340029:
 	__GETD1S 44
 	CALL __PUTPARD1
 	__GETD1S 52
-	CALL SUBOPT_0x398
-; 001A 00F1         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
+	CALL SUBOPT_0x393
+; 001A 00FF         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x39E
+	CALL SUBOPT_0x39A
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
+	CALL SUBOPT_0x396
+	RJMP _0x340038
+; 001A 0100 
+; 001A 0101         // printDebug("-L3 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
+; 001A 0102      }else if((viVoltUpLevel < (-1.021)) && (viVoltUpLevel >= (-1.269)) ){
+_0x340028:
 	CALL SUBOPT_0x39B
-	RJMP _0x340037
-; 001A 00F2 
-; 001A 00F3         // printDebug("-L3 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
-; 001A 00F4      }else if((viVoltUpLevel < (-1.021)) && (viVoltUpLevel >= (-1.269)) ){
-_0x340027:
-	CALL SUBOPT_0x39F
-	BRSH _0x34002C
-	CALL SUBOPT_0x3A1
 	BRSH _0x34002D
-_0x34002C:
-	RJMP _0x34002B
+	CALL SUBOPT_0x39C
+	BRSH _0x34002E
 _0x34002D:
-; 001A 00F5         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
-; 001A 00F6         gaussian(viVoltPointTable[3][0],  viVoltPointTable[3][1],  viVoltPointTable[3][2], viTempOutPointTable[3][0], viTempOutPointTable[3][1], viTempOutPointTable[3][2], &factorA, &factorB, &factorC);
+	RJMP _0x34002C
+_0x34002E:
+; 001A 0103         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
+; 001A 0104         gaussian(viVoltPointTable[3][0],  viVoltPointTable[3][1],  viVoltPointTable[3][2], viTempOutPointTable[3][0], viTempOutPointTable[3][1], viTempOutPointTable[3][2], &factorA, &factorB, &factorC);
 	__GETD1SX 96
-	CALL SUBOPT_0x3A0
+	CALL SUBOPT_0x398
 	ADIW R30,40
 	CALL SUBOPT_0x78
 	MOVW R30,R28
@@ -38381,41 +38399,42 @@ _0x34002D:
 	SBCI R31,HIGH(-(68))
 	ADIW R30,44
 	CALL SUBOPT_0x78
-	CALL SUBOPT_0xF5
-	CALL SUBOPT_0x231
+	CALL SUBOPT_0xF4
+	__GETD1S 56
+	CALL __PUTPARD1
 	MOVW R30,R28
 	ADIW R30,56
 	ADIW R30,8
 	CALL SUBOPT_0x78
-	CALL SUBOPT_0x39D
-; 001A 00F7         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
+	CALL SUBOPT_0x399
+; 001A 0105         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x39E
+	CALL SUBOPT_0x39A
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x39B
-	RJMP _0x340037
-; 001A 00F8 
-; 001A 00F9         // printDebug("-L4 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
-; 001A 00FA      }else if((viVoltUpLevel < (-1.269)) && (viVoltUpLevel >= (-1.504)) ){        //-1.454 + 50.0   | 50 = +compencess
-_0x34002B:
-	CALL SUBOPT_0x3A1
-	BRSH _0x340030
-	CALL SUBOPT_0x397
-	CALL SUBOPT_0x215
+	CALL SUBOPT_0x396
+	RJMP _0x340038
+; 001A 0106 
+; 001A 0107         // printDebug("-L4 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
+; 001A 0108      }else if((viVoltUpLevel < (-1.269)) && (viVoltUpLevel >= (-1.504)) ){        //-1.454 + 50.0   | 50 = +compencess
+_0x34002C:
+	CALL SUBOPT_0x39C
 	BRSH _0x340031
-_0x340030:
-	RJMP _0x34002F
+	CALL SUBOPT_0x392
+	CALL SUBOPT_0x20B
+	BRSH _0x340032
 _0x340031:
-; 001A 00FB         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
-; 001A 00FC         gaussian(viVoltPointTable[4][0],  viVoltPointTable[4][1],  viVoltPointTable[4][2], viTempOutPointTable[4][0], viTempOutPointTable[4][1], viTempOutPointTable[4][2], &factorA, &factorB, &factorC);
+	RJMP _0x340030
+_0x340032:
+; 001A 0109         //ivTempValue = (viVoltUpLevel*1000) / 10.0;
+; 001A 010A         gaussian(viVoltPointTable[4][0],  viVoltPointTable[4][1],  viVoltPointTable[4][2], viTempOutPointTable[4][0], viTempOutPointTable[4][1], viTempOutPointTable[4][2], &factorA, &factorB, &factorC);
 	__GETD1SX 108
-	CALL SUBOPT_0x3A0
+	CALL SUBOPT_0x398
 	ADIW R30,52
 	CALL SUBOPT_0x78
 	MOVW R30,R28
@@ -38423,8 +38442,7 @@ _0x340031:
 	SBCI R31,HIGH(-(68))
 	ADIW R30,56
 	CALL SUBOPT_0x78
-	CALL SUBOPT_0x225
-	CALL __PUTPARD1
+	CALL SUBOPT_0x22A
 	MOVW R30,R28
 	ADIW R30,16
 	ADIW R30,52
@@ -38433,46 +38451,46 @@ _0x340031:
 	ADIW R30,20
 	ADIW R30,56
 	CALL SUBOPT_0x78
-	CALL SUBOPT_0x39D
-; 001A 00FD         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
+	CALL SUBOPT_0x399
+; 001A 010B         ivTempValue = (factorA*viVoltUpLevel*viVoltUpLevel) + (factorB*viVoltUpLevel) + factorC;      //polynomail formular
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x39E
+	CALL SUBOPT_0x39A
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x39B
-	RJMP _0x340037
-; 001A 00FE 
-; 001A 00FF          //printDebug("-L5 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
-; 001A 0100      }
-; 001A 0101      else if(viVoltUpLevel < (-1.504)){
-_0x34002F:
-	CALL SUBOPT_0x397
-	CALL SUBOPT_0x215
-	BRSH _0x340033
-; 001A 0102         ivTempValue = (viVoltUpLevel*1000) / 10.0;
-_0x340036:
-	__GETD2SX 184
-	CALL SUBOPT_0x394
-	CALL __DIVF21
+	CALL SUBOPT_0x396
+	RJMP _0x340038
+; 001A 010C 
+; 001A 010D          //printDebug("-L5 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp(%f)\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel,ivTempValue);
+; 001A 010E      }
+; 001A 010F      else if(viVoltUpLevel < (-1.504)){
+_0x340030:
+	CALL SUBOPT_0x392
+	CALL SUBOPT_0x20B
+	BRSH _0x340034
+; 001A 0110         ivTempValue = (viVoltUpLevel*1000) / 10.0;
 _0x340037:
+	__GETD2SX 184
+	CALL SUBOPT_0x38F
+	CALL __DIVF21
+_0x340038:
 	__PUTD1SX 180
-; 001A 0103          //printDebug("-L6 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp Error\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel);
-; 001A 0104      }
-; 001A 0105      //printDebug("%f,%f\r\n",viVoltUpLevel,ivTempValue);
-; 001A 0106      return ivTempValue;
-_0x340033:
+; 001A 0111          //printDebug("-L6 ADC(%d), V(%f) ,V(offset+(-range))(%f) ,Temp Error\r\n",viADCSmooth,viADCToVolt,viVoltUpLevel);
+; 001A 0112      }
+; 001A 0113      //printDebug("%f,%f\r\n",viVoltUpLevel,ivTempValue);
+; 001A 0114      return ivTempValue;
+_0x340034:
 	__GETD1SX 180
 	ADIW R28,63
 	ADIW R28,63
 	ADIW R28,63
 	ADIW R28,11
 	RET
-; 001A 0107 }
+; 001A 0115 }
 ;#include <stdlib.h>
 ;#include "gaussianAD595.h"
 ;#include "debug.h"
@@ -38632,7 +38650,7 @@ _ftoa:
 	ST   -Y,R27
 	ST   -Y,R26
 	SBIW R28,4
-	CALL SUBOPT_0x253
+	CALL SUBOPT_0x207
 	LDI  R30,LOW(63)
 	STD  Y+3,R30
 	ST   -Y,R17
@@ -38643,7 +38661,7 @@ _ftoa:
 	LDI  R26,HIGH(0xFFFF)
 	CPC  R31,R26
 	BRNE _0x200000D
-	CALL SUBOPT_0x15C
+	CALL SUBOPT_0x15B
 	__POINTD2FN _0x2000000,0
 	CALL _strcpyf
 	RJMP _0x20E002C
@@ -38652,7 +38670,7 @@ _0x200000D:
 	LDI  R26,HIGH(0x7FFF)
 	CPC  R31,R26
 	BRNE _0x200000C
-	CALL SUBOPT_0x15C
+	CALL SUBOPT_0x15B
 	__POINTD2FN _0x2000000,1
 	CALL _strcpyf
 	RJMP _0x20E002C
@@ -38662,8 +38680,8 @@ _0x200000C:
 	BRPL _0x200000F
 	CALL SUBOPT_0x6B
 	CALL __ANEGF1
-	CALL SUBOPT_0x3A2
-	CALL SUBOPT_0x3A3
+	CALL SUBOPT_0x39D
+	CALL SUBOPT_0x39E
 	LDI  R30,LOW(45)
 	ST   X,R30
 _0x200000F:
@@ -38679,27 +38697,27 @@ _0x2000011:
 	SUBI R17,1
 	CPI  R30,0
 	BREQ _0x2000013
-	CALL SUBOPT_0x3A4
+	CALL SUBOPT_0x39F
 	CALL SUBOPT_0xB2
 	RJMP _0x2000011
 _0x2000013:
-	CALL SUBOPT_0x3A5
+	CALL SUBOPT_0x3A0
 	CALL __ADDF12
-	CALL SUBOPT_0x3A2
+	CALL SUBOPT_0x39D
 	LDI  R17,LOW(0)
-	CALL SUBOPT_0x382
+	CALL SUBOPT_0x37D
 	CALL SUBOPT_0xB2
 _0x2000014:
-	CALL SUBOPT_0x3A5
+	CALL SUBOPT_0x3A0
 	CALL __CMPF12
 	BRLO _0x2000016
 	CALL SUBOPT_0xB4
-	CALL SUBOPT_0x3A6
+	CALL SUBOPT_0x3A1
 	CALL SUBOPT_0xB2
 	SUBI R17,-LOW(1)
 	CPI  R17,39
 	BRLO _0x2000017
-	CALL SUBOPT_0x15C
+	CALL SUBOPT_0x15B
 	__POINTD2FN _0x2000000,5
 	CALL _strcpyf
 	RJMP _0x20E002C
@@ -38708,7 +38726,7 @@ _0x2000017:
 _0x2000016:
 	CPI  R17,0
 	BRNE _0x2000018
-	CALL SUBOPT_0x3A3
+	CALL SUBOPT_0x39E
 	LDI  R30,LOW(48)
 	ST   X,R30
 	RJMP _0x2000019
@@ -38718,31 +38736,31 @@ _0x200001A:
 	SUBI R17,1
 	CPI  R30,0
 	BREQ _0x200001C
-	CALL SUBOPT_0x3A4
-	CALL SUBOPT_0x3A7
+	CALL SUBOPT_0x39F
+	CALL SUBOPT_0x3A2
 	MOVW R26,R30
 	MOVW R24,R22
 	CALL _floor
-	CALL SUBOPT_0xB2
-	CALL SUBOPT_0x3A5
+	CALL SUBOPT_0xF0
+	CALL SUBOPT_0x3A3
 	CALL __DIVF21
 	CALL __CFD1U
 	MOV  R16,R30
-	CALL SUBOPT_0x3A3
-	CALL SUBOPT_0x3A8
+	CALL SUBOPT_0x39E
+	CALL SUBOPT_0x3A4
 	CALL SUBOPT_0xB4
-	CALL SUBOPT_0x3A9
+	CALL SUBOPT_0x3A5
 	CALL __MULF12
-	CALL SUBOPT_0x3AA
-	CALL SUBOPT_0x222
-	CALL SUBOPT_0x3A2
+	CALL SUBOPT_0x3A3
+	CALL SUBOPT_0x21A
+	CALL SUBOPT_0x39D
 	RJMP _0x200001A
 _0x200001C:
 _0x2000019:
 	LDD  R30,Y+8
 	CPI  R30,0
 	BREQ _0x20E002B
-	CALL SUBOPT_0x3A3
+	CALL SUBOPT_0x39E
 	LDI  R30,LOW(46)
 	ST   X,R30
 _0x200001E:
@@ -38751,18 +38769,18 @@ _0x200001E:
 	STD  Y+8,R30
 	SUBI R30,-LOW(1)
 	BREQ _0x2000020
-	CALL SUBOPT_0x3AA
-	CALL SUBOPT_0x3A6
-	CALL SUBOPT_0x3A2
+	CALL SUBOPT_0x3A3
+	CALL SUBOPT_0x3A1
+	CALL SUBOPT_0x39D
 	CALL SUBOPT_0x6B
 	CALL __CFD1U
 	MOV  R16,R30
+	CALL SUBOPT_0x39E
+	CALL SUBOPT_0x3A4
 	CALL SUBOPT_0x3A3
-	CALL SUBOPT_0x3A8
-	CALL SUBOPT_0x3AA
-	CALL SUBOPT_0x3A9
-	CALL SUBOPT_0x222
-	CALL SUBOPT_0x3A2
+	CALL SUBOPT_0x3A5
+	CALL SUBOPT_0x21A
+	CALL SUBOPT_0x39D
 	RJMP _0x200001E
 _0x2000020:
 _0x20E002B:
@@ -38791,7 +38809,7 @@ _0x200003C:
 	CALL _isspace
 	CPI  R30,0
 	BREQ _0x200003E
-	CALL SUBOPT_0x3AB
+	CALL SUBOPT_0x3A6
 	RJMP _0x200003C
 _0x200003E:
 	LDI  R30,LOW(0)
@@ -38816,7 +38834,7 @@ _0x2000041:
 _0x2000042:
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
-	CALL SUBOPT_0x371
+	CALL SUBOPT_0x36B
 	BRNE _0x2000045
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
@@ -38828,7 +38846,7 @@ _0x2000042:
 	BREQ _0x2000044
 _0x2000045:
 	OR   R20,R21
-	CALL SUBOPT_0x3AB
+	CALL SUBOPT_0x3A6
 	RJMP _0x2000042
 _0x2000044:
 	__GETWRS 18,19,16
@@ -38847,12 +38865,12 @@ _0x2000048:
 	BREQ _0x200004A
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
-	CALL SUBOPT_0x362
+	CALL SUBOPT_0x35C
 	SBIW R30,48
 	CALL SUBOPT_0xD8
-	CALL SUBOPT_0x3A9
-	CALL SUBOPT_0x9F
-	CALL SUBOPT_0x367
+	CALL SUBOPT_0x3A5
+	CALL SUBOPT_0xA0
+	CALL SUBOPT_0x361
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	SBIW R30,1
@@ -38861,7 +38879,7 @@ _0x2000048:
 	RJMP _0x2000048
 _0x200004A:
 _0x2000047:
-	CALL SUBOPT_0x382
+	CALL SUBOPT_0x37D
 	CALL SUBOPT_0xEA
 _0x200004B:
 	LDD  R26,Y+16
@@ -38872,15 +38890,15 @@ _0x200004B:
 	CP   R26,R16
 	CPC  R27,R17
 	BRLO _0x200004D
-	CALL SUBOPT_0x362
+	CALL SUBOPT_0x35C
 	SBIW R30,48
 	CALL SUBOPT_0xB
-	CALL SUBOPT_0x3A9
+	CALL SUBOPT_0x3A5
 	CALL __MULF12
 	CALL SUBOPT_0xD8
 	CALL __ADDF12
-	CALL SUBOPT_0x367
-	CALL SUBOPT_0x3AC
+	CALL SUBOPT_0x361
+	CALL SUBOPT_0x3A7
 	CALL SUBOPT_0xEA
 	RJMP _0x200004B
 _0x200004D:
@@ -38936,18 +38954,18 @@ _0x2000058:
 	RJMP _0x20E002A
 _0x2000057:
 	LDI  R21,LOW(32)
-	CALL SUBOPT_0x382
+	CALL SUBOPT_0x37D
 	CALL SUBOPT_0xEA
 _0x2000059:
 	CPI  R21,0
 	BREQ _0x200005B
 	CALL SUBOPT_0xD9
 	CALL SUBOPT_0xB
-	CALL SUBOPT_0x3AD
+	CALL SUBOPT_0x3A8
 	MOV  R30,R20
 	AND  R30,R21
 	BREQ _0x200005C
-	CALL SUBOPT_0x3AC
+	CALL SUBOPT_0x3A7
 	CALL SUBOPT_0xEA
 _0x200005C:
 	LSR  R21
@@ -38972,7 +38990,7 @@ _0x200004E:
 	BREQ _0x200005F
 	CALL SUBOPT_0x4F
 	CALL __ANEGF1
-	CALL SUBOPT_0x367
+	CALL SUBOPT_0x361
 _0x200005F:
 	CALL SUBOPT_0x4F
 _0x20E002A:
@@ -38984,9 +39002,9 @@ _0x20E002A:
 
 	.CSEG
 _srand:
-	CALL SUBOPT_0x94
+	CALL SUBOPT_0x95
 	CALL __CWD1
-	CALL SUBOPT_0x3AE
+	CALL SUBOPT_0x3A9
 	RJMP _0x20E0027
 _rand:
 	LDS  R30,__seed_G100
@@ -38996,15 +39014,15 @@ _rand:
 	__GETD2N 0x41C64E6D
 	CALL __MULD12U
 	__ADDD1N 30562
-	CALL SUBOPT_0x3AE
+	CALL SUBOPT_0x3A9
 	movw r30,r22
 	andi r31,0x7F
 	RET
 _allocate_block_G100:
-	CALL SUBOPT_0x34A
+	CALL SUBOPT_0x345
 	__GETWRN 16,17,7562
 	MOVW R26,R16
-	CALL SUBOPT_0x114
+	CALL SUBOPT_0x113
 _0x2000061:
 	MOV  R0,R16
 	OR   R0,R17
@@ -39090,7 +39108,7 @@ _0x20E0028:
 	ADIW R28,6
 	RET
 _realloc:
-	CALL SUBOPT_0x34A
+	CALL SUBOPT_0x345
 	LDD  R30,Y+10
 	LDD  R31,Y+10+1
 	SBIW R30,0
@@ -39117,7 +39135,7 @@ _realloc:
 	SBIW R30,0
 	BREQ _0x200006E
 	MOVW R26,R16
-	CALL SUBOPT_0x3AF
+	CALL SUBOPT_0x3AA
 	MOVW R26,R30
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
@@ -39131,7 +39149,7 @@ _realloc:
 _0x200006F:
 	ST   -Y,R21
 	ST   -Y,R20
-	CALL SUBOPT_0x1AF
+	CALL SUBOPT_0x1AE
 	LDD  R26,Y+12
 	LDD  R27,Y+12+1
 	CALL _memmove
@@ -39172,10 +39190,10 @@ _0x2000070:
 	LDD  R16,Y+0
 	JMP  _0x20E0026
 _free:
-	CALL SUBOPT_0x94
+	CALL SUBOPT_0x95
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0xF6
+	CALL SUBOPT_0xF5
 	RCALL _realloc
 _0x20E0027:
 	ADIW R28,2
@@ -40701,7 +40719,7 @@ _0x2060003:
 	__CALL1MN _prtc_get_time,0
 	MOVW R30,R28
 	ADIW R30,3
-	CALL SUBOPT_0x29E
+	CALL SUBOPT_0x29B
 	MOVW R26,R28
 	ADIW R26,4
 	__CALL1MN _prtc_get_date,0
@@ -40720,7 +40738,7 @@ _0x2060003:
 	PUSH R31
 	PUSH R30
 	LDD  R30,Y+2
-	CALL SUBOPT_0x3B0
+	CALL SUBOPT_0x3AB
 	MOVW R26,R30
 	MOVW R24,R22
 	LDI  R30,LOW(21)
@@ -40733,7 +40751,7 @@ _0x2060003:
 	MOVW R26,R30
 	MOVW R24,R22
 	LDD  R30,Y+3
-	CALL SUBOPT_0x3B0
+	CALL SUBOPT_0x3AB
 	CALL __LSLD16
 	CALL __ORD12
 	PUSH R23
@@ -40741,7 +40759,7 @@ _0x2060003:
 	PUSH R31
 	PUSH R30
 	LDD  R30,Y+6
-	CALL SUBOPT_0x3B0
+	CALL SUBOPT_0x3AB
 	MOVW R26,R30
 	MOVW R24,R22
 	LDI  R30,LOW(11)
@@ -40756,7 +40774,7 @@ _0x2060003:
 	PUSH R31
 	PUSH R30
 	LDD  R30,Y+5
-	CALL SUBOPT_0x3B0
+	CALL SUBOPT_0x3AB
 	MOVW R26,R30
 	MOVW R24,R22
 	LDI  R30,LOW(5)
@@ -40828,7 +40846,7 @@ _0x20E0020:
 	ADIW R28,8
 	RET
 _mem_cmp_G103:
-	CALL SUBOPT_0x1A8
+	CALL SUBOPT_0x1A7
 	__GETWRS 16,17,10
 	__GETWRS 18,19,8
 	__GETWRN 20,21,0
@@ -40886,7 +40904,7 @@ _0x2060017:
 _0x2060018:
 	MOVW R26,R28
 	ADIW R26,2
-	CALL SUBOPT_0x3B1
+	CALL SUBOPT_0x3AC
 	RJMP _0x2060014
 _0x2060016:
 	CALL SUBOPT_0xB3
@@ -40902,9 +40920,9 @@ _move_window_G103:
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
 	ADIW R26,46
-	CALL SUBOPT_0x3B2
-	CALL SUBOPT_0x3B3
-	CALL SUBOPT_0x29B
+	CALL SUBOPT_0x3AD
+	CALL SUBOPT_0x3AE
+	CALL SUBOPT_0x298
 	CALL __CPD12
 	BRNE PC+3
 	JMP _0x2060019
@@ -40913,7 +40931,7 @@ _move_window_G103:
 	LDD  R30,Z+4
 	CPI  R30,0
 	BREQ _0x206001A
-	CALL SUBOPT_0x3B4
+	CALL SUBOPT_0x3AF
 	CPI  R30,0
 	BREQ _0x206001B
 	LDI  R30,LOW(1)
@@ -40926,7 +40944,7 @@ _0x206001B:
 	ST   X,R30
 	LDD  R30,Y+9
 	LDD  R31,Y+9+1
-	CALL SUBOPT_0x3B5
+	CALL SUBOPT_0x3B0
 	MOVW R0,R26
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
@@ -40934,7 +40952,7 @@ _0x206001B:
 	CALL __GETD1P
 	MOVW R26,R0
 	CALL __ADDD12
-	CALL SUBOPT_0x29B
+	CALL SUBOPT_0x298
 	CALL __CPD21
 	BRSH _0x206001C
 	LDD  R30,Y+9
@@ -40947,16 +40965,16 @@ _0x206001E:
 	LDD  R27,Y+9+1
 	ADIW R26,26
 	CALL __GETD1P
-	CALL SUBOPT_0x29B
+	CALL SUBOPT_0x298
 	CALL __ADDD12
 	__PUTD1S 1
-	CALL SUBOPT_0x3B4
+	CALL SUBOPT_0x3AF
 	SUBI R17,1
 	RJMP _0x206001E
 _0x206001F:
 _0x206001C:
 _0x206001A:
-	CALL SUBOPT_0x3B3
+	CALL SUBOPT_0x3AE
 	CALL __CPD10
 	BREQ _0x2060020
 	LDD  R30,Y+9
@@ -40966,12 +40984,12 @@ _0x206001A:
 	LDD  R30,Y+10
 	LDD  R31,Y+10+1
 	ADIW R30,50
-	CALL SUBOPT_0x3B6
+	CALL SUBOPT_0x3B1
 	BREQ _0x2060021
 	LDI  R30,LOW(1)
 	RJMP _0x20E001C
 _0x2060021:
-	CALL SUBOPT_0x3B3
+	CALL SUBOPT_0x3AE
 	__PUTD1SNS 9,46
 _0x2060020:
 _0x2060019:
@@ -40988,7 +41006,7 @@ _sync_G103:
 	LDD  R31,Y+1+1
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0x3B7
+	CALL SUBOPT_0x3B2
 	MOV  R17,R30
 	CPI  R17,0
 	BREQ PC+3
@@ -41009,10 +41027,10 @@ _0x2060025:
 	LDD  R26,Y+1
 	LDD  R27,Y+1+1
 	ADIW R26,46
-	CALL SUBOPT_0x8E
+	CALL SUBOPT_0x8F
 	LDD  R30,Y+1
 	LDD  R31,Y+1+1
-	CALL SUBOPT_0x3B8
+	CALL SUBOPT_0x3B3
 	LDD  R30,Y+1
 	LDD  R31,Y+1+1
 	ADIW R30,50
@@ -41026,14 +41044,14 @@ _0x2060025:
 	LDD  R31,Y+1+1
 	ADIW R30,50
 	__GETD2N 0x41615252
-	CALL SUBOPT_0x264
+	CALL SUBOPT_0x261
 	LDD  R30,Y+1
 	LDD  R31,Y+1+1
 	ADIW R30,50
 	SUBI R30,LOW(-484)
 	SBCI R31,HIGH(-484)
 	__GETD2N 0x61417272
-	CALL SUBOPT_0x264
+	CALL SUBOPT_0x261
 	LDD  R30,Y+1
 	LDD  R31,Y+1+1
 	ADIW R30,50
@@ -41043,7 +41061,7 @@ _0x2060025:
 	LDD  R26,Y+1
 	LDD  R27,Y+1+1
 	ADIW R26,14
-	CALL SUBOPT_0x3B9
+	CALL SUBOPT_0x3B4
 	ADIW R30,50
 	SUBI R30,LOW(-492)
 	SBCI R31,HIGH(-492)
@@ -41051,7 +41069,7 @@ _0x2060025:
 	LDD  R26,Y+1
 	LDD  R27,Y+1+1
 	ADIW R26,10
-	CALL SUBOPT_0x3B9
+	CALL SUBOPT_0x3B4
 	LDD  R26,Z+1
 	ST   -Y,R26
 	LDD  R30,Y+2
@@ -41061,7 +41079,7 @@ _0x2060025:
 	ST   -Y,R30
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
-	CALL SUBOPT_0x3BA
+	CALL SUBOPT_0x3B5
 	RCALL _disk_write
 	LDD  R26,Y+1
 	LDD  R27,Y+1+1
@@ -41093,7 +41111,7 @@ _get_fat:
 	SBIW R28,4
 	CALL __SAVELOCR4
 	CALL SUBOPT_0xD8
-	CALL SUBOPT_0x3BB
+	CALL SUBOPT_0x3B6
 	BRLO _0x2060028
 	LDD  R26,Y+12
 	LDD  R27,Y+12+1
@@ -41103,40 +41121,40 @@ _get_fat:
 	CALL __CPD21
 	BRLO _0x2060027
 _0x2060028:
-	CALL SUBOPT_0x3BC
+	CALL SUBOPT_0x3B7
 	RJMP _0x20E001A
 _0x2060027:
 	LDD  R26,Y+12
 	LDD  R27,Y+12+1
 	ADIW R26,34
-	CALL SUBOPT_0x3BD
+	CALL SUBOPT_0x3B8
 	LDD  R26,Y+12
 	LDD  R27,Y+12+1
 	LD   R30,X
-	CALL SUBOPT_0x21D
+	CALL SUBOPT_0x214
 	BRNE _0x206002D
 	__GETWRS 18,19,8
 	MOVW R30,R18
 	LSR  R31
 	ROR  R30
 	__ADDWRR 18,19,30,31
-	CALL SUBOPT_0x1AF
-	CALL SUBOPT_0x3BE
-	CALL SUBOPT_0x3BF
+	CALL SUBOPT_0x1AE
+	CALL SUBOPT_0x3B9
+	CALL SUBOPT_0x3BA
 	BREQ _0x206002E
 	RJMP _0x206002C
 _0x206002E:
-	CALL SUBOPT_0x3C0
+	CALL SUBOPT_0x3BB
 	LD   R16,X
 	CLR  R17
 	__ADDWRN 18,19,1
-	CALL SUBOPT_0x1AF
-	CALL SUBOPT_0x3BE
-	CALL SUBOPT_0x3BF
+	CALL SUBOPT_0x1AE
+	CALL SUBOPT_0x3B9
+	CALL SUBOPT_0x3BA
 	BREQ _0x206002F
 	RJMP _0x206002C
 _0x206002F:
-	CALL SUBOPT_0x3C0
+	CALL SUBOPT_0x3BB
 	LD   R30,X
 	MOV  R31,R30
 	LDI  R30,0
@@ -41159,16 +41177,16 @@ _0x206002D:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2060033
-	CALL SUBOPT_0x1AF
+	CALL SUBOPT_0x1AE
 	CALL SUBOPT_0x52
-	CALL SUBOPT_0x3C1
+	CALL SUBOPT_0x3BC
 	CALL SUBOPT_0x59
-	CALL SUBOPT_0x3BF
+	CALL SUBOPT_0x3BA
 	BRNE _0x206002C
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	LDI  R30,LOW(2)
-	CALL SUBOPT_0x3C2
+	CALL SUBOPT_0x3BD
 	ADD  R26,R30
 	ADC  R27,R31
 	CALL SUBOPT_0x1E
@@ -41178,16 +41196,16 @@ _0x2060033:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x206002C
-	CALL SUBOPT_0x1AF
+	CALL SUBOPT_0x1AE
 	CALL SUBOPT_0x52
-	CALL SUBOPT_0x3C3
+	CALL SUBOPT_0x3BE
 	CALL SUBOPT_0x59
-	CALL SUBOPT_0x3BF
+	CALL SUBOPT_0x3BA
 	BRNE _0x206002C
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	LDI  R30,LOW(4)
-	CALL SUBOPT_0x3C2
+	CALL SUBOPT_0x3BD
 	CALL SUBOPT_0x1B
 	__ANDD1N 0xFFFFFFF
 	RJMP _0x20E001A
@@ -41201,14 +41219,14 @@ _put_fat:
 	CALL __PUTPARD2
 	SBIW R28,4
 	CALL __SAVELOCR6
-	CALL SUBOPT_0x3C4
-	CALL SUBOPT_0x3BB
+	CALL SUBOPT_0x3BF
+	CALL SUBOPT_0x3B6
 	BRLO _0x2060038
 	LDD  R26,Y+18
 	LDD  R27,Y+18+1
 	ADIW R26,30
 	CALL __GETD1P
-	CALL SUBOPT_0x3C4
+	CALL SUBOPT_0x3BF
 	CALL __CPD21
 	BRLO _0x2060037
 _0x2060038:
@@ -41223,7 +41241,7 @@ _0x2060037:
 	LDD  R26,Y+18
 	LDD  R27,Y+18+1
 	LD   R30,X
-	CALL SUBOPT_0x21D
+	CALL SUBOPT_0x214
 	BREQ PC+3
 	JMP _0x206003E
 	__GETWRS 16,17,14
@@ -41231,12 +41249,12 @@ _0x2060037:
 	LSR  R31
 	ROR  R30
 	__ADDWRR 16,17,30,31
-	CALL SUBOPT_0x2B2
-	CALL SUBOPT_0x3C5
+	CALL SUBOPT_0x2AD
+	CALL SUBOPT_0x3C0
 	BREQ _0x206003F
 	RJMP _0x206003D
 _0x206003F:
-	CALL SUBOPT_0x3C6
+	CALL SUBOPT_0x3C1
 	BREQ _0x2060040
 	MOVW R26,R18
 	LD   R30,X
@@ -41258,12 +41276,12 @@ _0x2060041:
 	ADIW R26,4
 	LDI  R30,LOW(1)
 	ST   X,R30
-	CALL SUBOPT_0x2B2
-	CALL SUBOPT_0x3C5
+	CALL SUBOPT_0x2AD
+	CALL SUBOPT_0x3C0
 	BREQ _0x2060043
 	RJMP _0x206003D
 _0x2060043:
-	CALL SUBOPT_0x3C6
+	CALL SUBOPT_0x3C1
 	BREQ _0x2060044
 	CALL SUBOPT_0x52
 	LDI  R30,LOW(4)
@@ -41294,15 +41312,15 @@ _0x206003E:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2060047
-	CALL SUBOPT_0x2B2
-	CALL SUBOPT_0x234
-	CALL SUBOPT_0x3C1
-	CALL SUBOPT_0x3C7
+	CALL SUBOPT_0x2AD
+	CALL SUBOPT_0x21E
+	CALL SUBOPT_0x3BC
+	CALL SUBOPT_0x3C2
 	BRNE _0x206003D
 	LDD  R26,Y+14
 	LDD  R27,Y+14+1
 	LDI  R30,LOW(2)
-	CALL SUBOPT_0x3C8
+	CALL SUBOPT_0x3C3
 	LDD  R26,Y+10
 	LDD  R27,Y+10+1
 	STD  Z+0,R26
@@ -41313,17 +41331,17 @@ _0x2060047:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x206004B
-	CALL SUBOPT_0x2B2
-	CALL SUBOPT_0x234
-	CALL SUBOPT_0x3C3
-	CALL SUBOPT_0x3C7
+	CALL SUBOPT_0x2AD
+	CALL SUBOPT_0x21E
+	CALL SUBOPT_0x3BE
+	CALL SUBOPT_0x3C2
 	BRNE _0x206003D
 	LDD  R26,Y+14
 	LDD  R27,Y+14+1
 	LDI  R30,LOW(4)
-	CALL SUBOPT_0x3C8
+	CALL SUBOPT_0x3C3
 	CALL SUBOPT_0x52
-	CALL SUBOPT_0x264
+	CALL SUBOPT_0x261
 	RJMP _0x206003D
 _0x206004B:
 	LDI  R21,LOW(2)
@@ -41342,10 +41360,10 @@ _remove_chain_G103:
 	CALL __PUTPARD2
 	SBIW R28,4
 	ST   -Y,R17
-	CALL SUBOPT_0x3C9
-	CALL SUBOPT_0x3BB
+	CALL SUBOPT_0x3C4
+	CALL SUBOPT_0x3B6
 	BRLO _0x206004D
-	CALL SUBOPT_0x3CA
+	CALL SUBOPT_0x3C5
 	BRLO _0x206004C
 _0x206004D:
 	LDI  R17,LOW(2)
@@ -41353,28 +41371,28 @@ _0x206004D:
 _0x206004C:
 	LDI  R17,LOW(0)
 _0x2060050:
-	CALL SUBOPT_0x3CA
+	CALL SUBOPT_0x3C5
 	BRSH _0x2060052
-	CALL SUBOPT_0x195
+	CALL SUBOPT_0x194
 	CALL SUBOPT_0x67
 	RCALL _get_fat
 	__PUTD1S 1
-	CALL SUBOPT_0x3CB
+	CALL SUBOPT_0x3C6
 	CALL __CPD10
 	BREQ _0x2060052
-	CALL SUBOPT_0x29B
-	CALL SUBOPT_0x3CC
+	CALL SUBOPT_0x298
+	CALL SUBOPT_0x3C7
 	BRNE _0x2060054
 	LDI  R17,LOW(2)
 	RJMP _0x2060052
 _0x2060054:
-	CALL SUBOPT_0x29B
+	CALL SUBOPT_0x298
 	CALL SUBOPT_0x3A
 	BRNE _0x2060055
 	LDI  R17,LOW(1)
 	RJMP _0x2060052
 _0x2060055:
-	CALL SUBOPT_0x195
+	CALL SUBOPT_0x194
 	CALL SUBOPT_0x3F
 	CALL SUBOPT_0x2C
 	RCALL _put_fat
@@ -41383,20 +41401,20 @@ _0x2060055:
 	BRNE _0x2060052
 	LDD  R30,Y+9
 	LDD  R31,Y+9+1
-	CALL SUBOPT_0x3CD
+	CALL SUBOPT_0x3C8
 	BREQ _0x2060057
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
 	ADIW R26,14
-	CALL SUBOPT_0x92
+	CALL SUBOPT_0x93
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
 	ADIW R26,5
 	LDI  R30,LOW(1)
 	ST   X,R30
 _0x2060057:
-	CALL SUBOPT_0x3CB
-	CALL SUBOPT_0x3CE
+	CALL SUBOPT_0x3C6
+	CALL SUBOPT_0x3C9
 	RJMP _0x2060050
 _0x2060052:
 _0x206004F:
@@ -41410,35 +41428,35 @@ _create_chain_G103:
 	LDD  R27,Y+20+1
 	ADIW R26,30
 	CALL __GETD1P
-	CALL SUBOPT_0xA0
+	CALL SUBOPT_0xA1
 	CALL SUBOPT_0xC
 	CALL __CPD10
 	BRNE _0x2060058
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
 	ADIW R26,10
-	CALL SUBOPT_0x3BD
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0x3B8
+	CALL SUBOPT_0xA9
 	CALL __CPD02
 	BREQ _0x206005A
 	CALL SUBOPT_0x87
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0xA9
 	CALL __CPD21
 	BRLO _0x2060059
 _0x206005A:
-	CALL SUBOPT_0x3BC
-	CALL SUBOPT_0xA7
+	CALL SUBOPT_0x3B7
+	CALL SUBOPT_0xA8
 _0x2060059:
 	RJMP _0x206005C
 _0x2060058:
-	CALL SUBOPT_0x3CF
-	CALL SUBOPT_0x3D0
+	CALL SUBOPT_0x3CA
+	CALL SUBOPT_0x252
 	RCALL _get_fat
 	CALL SUBOPT_0xEA
 	CALL SUBOPT_0xB
-	CALL SUBOPT_0x3BB
+	CALL SUBOPT_0x3B6
 	BRSH _0x206005D
-	CALL SUBOPT_0x3BC
+	CALL SUBOPT_0x3B7
 	RJMP _0x20E0019
 _0x206005D:
 	CALL SUBOPT_0x87
@@ -41449,27 +41467,27 @@ _0x206005D:
 	RJMP _0x20E0019
 _0x206005E:
 	CALL SUBOPT_0xC
-	CALL SUBOPT_0xA7
+	CALL SUBOPT_0xA8
 _0x206005C:
 	CALL SUBOPT_0x89
-	CALL SUBOPT_0x367
+	CALL SUBOPT_0x361
 _0x2060060:
 	CALL SUBOPT_0x4F
 	CALL SUBOPT_0xBC
-	CALL SUBOPT_0x367
+	CALL SUBOPT_0x361
 	CALL SUBOPT_0x87
 	CALL SUBOPT_0xD8
 	CALL __CPD21
 	BRLO _0x2060062
-	CALL SUBOPT_0x3D1
-	CALL SUBOPT_0x367
-	CALL SUBOPT_0x3D2
+	CALL SUBOPT_0x3CB
+	CALL SUBOPT_0x361
+	CALL SUBOPT_0x3CC
 	BRSH _0x2060063
-	CALL SUBOPT_0x3D3
+	CALL SUBOPT_0x3CD
 	RJMP _0x20E0019
 _0x2060063:
 _0x2060062:
-	CALL SUBOPT_0x3CF
+	CALL SUBOPT_0x3CA
 	CALL SUBOPT_0x52
 	RCALL _get_fat
 	CALL SUBOPT_0xEC
@@ -41478,21 +41496,21 @@ _0x2060062:
 	CALL SUBOPT_0x5C
 	BREQ _0x2060066
 	CALL SUBOPT_0xB
-	CALL SUBOPT_0x3CC
+	CALL SUBOPT_0x3C7
 	BRNE _0x2060065
 _0x2060066:
 	CALL SUBOPT_0xD9
 	RJMP _0x20E0019
 _0x2060065:
-	CALL SUBOPT_0x3D2
+	CALL SUBOPT_0x3CC
 	BRNE _0x2060068
-	CALL SUBOPT_0x3D3
+	CALL SUBOPT_0x3CD
 	RJMP _0x20E0019
 _0x2060068:
 	RJMP _0x2060060
 _0x2060061:
-	CALL SUBOPT_0x3CF
-	CALL SUBOPT_0x353
+	CALL SUBOPT_0x3CA
+	CALL SUBOPT_0x34D
 	__GETD2N 0xFFFFFFF
 	RCALL _put_fat
 	CPI  R30,0
@@ -41503,10 +41521,10 @@ _0x2060069:
 	CALL SUBOPT_0xC
 	CALL __CPD10
 	BREQ _0x206006A
-	CALL SUBOPT_0x3CF
+	CALL SUBOPT_0x3CA
 	CALL SUBOPT_0xD4
 	CALL __PUTPARD1
-	CALL SUBOPT_0x3C4
+	CALL SUBOPT_0x3BF
 	RCALL _put_fat
 	CPI  R30,0
 	BREQ _0x206006B
@@ -41518,7 +41536,7 @@ _0x206006A:
 	__PUTD1SNS 20,10
 	LDD  R30,Y+20
 	LDD  R31,Y+20+1
-	CALL SUBOPT_0x3CD
+	CALL SUBOPT_0x3C8
 	BREQ _0x206006C
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
@@ -41542,23 +41560,23 @@ _clust2sect:
 	CALL __PUTPARD2
 	CALL SUBOPT_0x87
 	__SUBD1N 2
-	CALL SUBOPT_0xA0
+	CALL SUBOPT_0xA1
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
 	__GETD2Z 30
-	CALL SUBOPT_0x3D1
+	CALL SUBOPT_0x3CB
 	CALL SUBOPT_0xC0
 	CALL SUBOPT_0x8C
 	CALL __CPD21
 	BRLO _0x206006D
-	CALL SUBOPT_0x3D3
+	CALL SUBOPT_0x3CD
 	RJMP _0x20E0012
 _0x206006D:
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
-	CALL SUBOPT_0x29A
+	CALL SUBOPT_0x297
 	CALL SUBOPT_0x8C
-	CALL SUBOPT_0x29C
+	CALL SUBOPT_0x299
 	PUSH R23
 	PUSH R22
 	PUSH R31
@@ -41584,48 +41602,48 @@ _dir_seek_G103:
 	ADIW R26,6
 	CALL __GETD1P
 	CALL SUBOPT_0xEF
-	CALL SUBOPT_0x3CC
+	CALL SUBOPT_0x3C7
 	BREQ _0x206006F
-	CALL SUBOPT_0x3D4
-	CALL SUBOPT_0x3D5
+	CALL SUBOPT_0x3CE
+	CALL SUBOPT_0x3CF
 	BRLO _0x206006E
 _0x206006F:
 	LDI  R30,LOW(2)
 	RJMP _0x20E0017
 _0x206006E:
-	CALL SUBOPT_0x1F4
+	CALL SUBOPT_0x1F3
 	BRNE _0x2060072
-	CALL SUBOPT_0x3D4
+	CALL SUBOPT_0x3CE
 	LD   R26,Z
 	CPI  R26,LOW(0x3)
 	BREQ _0x2060073
 _0x2060072:
 	RJMP _0x2060071
 _0x2060073:
-	CALL SUBOPT_0x3D4
+	CALL SUBOPT_0x3CE
 	ADIW R30,38
 	MOVW R26,R30
 	CALL __GETD1P
 	CALL SUBOPT_0xB2
 _0x2060071:
-	CALL SUBOPT_0x1F4
+	CALL SUBOPT_0x1F3
 	BRNE _0x2060074
-	CALL SUBOPT_0x3D6
-	CALL SUBOPT_0x3D4
+	CALL SUBOPT_0x3D0
+	CALL SUBOPT_0x3CE
 	ADIW R30,8
 	MOVW R26,R30
-	CALL SUBOPT_0x183
+	CALL SUBOPT_0x182
 	BRLO _0x2060075
 	LDI  R30,LOW(2)
 	RJMP _0x20E0017
 _0x2060075:
-	CALL SUBOPT_0x3D4
+	CALL SUBOPT_0x3CE
 	ADIW R30,38
 	MOVW R26,R30
 	CALL __GETD1P
 	RJMP _0x206022C
 _0x2060074:
-	CALL SUBOPT_0x3D4
+	CALL SUBOPT_0x3CE
 	LDD  R30,Z+2
 	LDI  R26,LOW(16)
 	MUL  R30,R26
@@ -41636,8 +41654,8 @@ _0x2060077:
 	CP   R26,R16
 	CPC  R27,R17
 	BRLO _0x2060079
-	CALL SUBOPT_0x3D7
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0x3D1
+	CALL SUBOPT_0xA9
 	RCALL _get_fat
 	CALL SUBOPT_0xEF
 	CALL SUBOPT_0x3A
@@ -41646,10 +41664,10 @@ _0x2060077:
 	RJMP _0x20E0017
 _0x206007A:
 	CALL SUBOPT_0xB4
-	CALL SUBOPT_0x3BB
+	CALL SUBOPT_0x3B6
 	BRLO _0x206007C
-	CALL SUBOPT_0x3D4
-	CALL SUBOPT_0x3D5
+	CALL SUBOPT_0x3CE
+	CALL SUBOPT_0x3CF
 	BRLO _0x206007B
 _0x206007C:
 	LDI  R30,LOW(2)
@@ -41663,9 +41681,9 @@ _0x206007B:
 	STD  Y+6+1,R31
 	RJMP _0x2060077
 _0x2060079:
-	CALL SUBOPT_0x3D6
-	CALL SUBOPT_0x3D7
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0x3D0
+	CALL SUBOPT_0x3D1
+	CALL SUBOPT_0xA9
 	RCALL _clust2sect
 _0x206022C:
 	MOVW R26,R30
@@ -41673,14 +41691,14 @@ _0x206022C:
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
 	CALL __LSRW4
-	CALL SUBOPT_0x3D8
+	CALL SUBOPT_0x3D2
 	__PUTD1SNS 8,14
-	CALL SUBOPT_0x3D4
+	CALL SUBOPT_0x3CE
 	ADIW R30,50
 	MOVW R26,R30
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
-	CALL SUBOPT_0x3D9
+	CALL SUBOPT_0x3D3
 	__PUTW1SNS 8,18
 	LDI  R30,LOW(0)
 _0x20E0017:
@@ -41705,7 +41723,7 @@ _dir_next_G103:
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
 	ADIW R26,14
-	CALL SUBOPT_0x3DA
+	CALL SUBOPT_0x3D4
 	BRNE _0x206007E
 _0x206007F:
 	LDI  R30,LOW(4)
@@ -41718,16 +41736,16 @@ _0x206007E:
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
 	ADIW R26,14
-	CALL SUBOPT_0x92
+	CALL SUBOPT_0x93
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
 	ADIW R26,10
-	CALL SUBOPT_0x3DA
+	CALL SUBOPT_0x3D4
 	BRNE _0x2060082
-	CALL SUBOPT_0x3DB
+	CALL SUBOPT_0x3D5
 	ADIW R30,8
 	MOVW R26,R30
-	CALL SUBOPT_0x1D3
+	CALL SUBOPT_0x1D2
 	BRLO _0x2060083
 	LDI  R30,LOW(4)
 	RJMP _0x20E0015
@@ -41737,33 +41755,33 @@ _0x2060082:
 	MOVW R30,R16
 	CALL __LSRW4
 	MOVW R0,R30
-	CALL SUBOPT_0x3DB
-	CALL SUBOPT_0x29A
+	CALL SUBOPT_0x3D5
+	CALL SUBOPT_0x297
 	SBIW R30,1
 	AND  R30,R0
 	AND  R31,R1
 	SBIW R30,0
 	BREQ PC+3
 	JMP _0x2060085
-	CALL SUBOPT_0x3DC
-	CALL SUBOPT_0x3DD
+	CALL SUBOPT_0x3D6
+	CALL SUBOPT_0x3D7
 	RCALL _get_fat
-	CALL SUBOPT_0xA7
 	CALL SUBOPT_0xA8
-	CALL SUBOPT_0x3BB
+	CALL SUBOPT_0xA9
+	CALL SUBOPT_0x3B6
 	BRSH _0x2060086
 	LDI  R30,LOW(2)
 	RJMP _0x20E0015
 _0x2060086:
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0xA9
 	CALL SUBOPT_0x3A
 	BRNE _0x2060087
 	LDI  R30,LOW(1)
 	RJMP _0x20E0015
 _0x2060087:
-	CALL SUBOPT_0x3DB
-	CALL SUBOPT_0x3DE
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0x3D5
+	CALL SUBOPT_0x3D8
+	CALL SUBOPT_0xA9
 	CALL __CPD21
 	BRSH PC+3
 	JMP _0x2060088
@@ -41773,37 +41791,37 @@ _0x2060087:
 	LDI  R30,LOW(4)
 	RJMP _0x20E0015
 _0x2060089:
-	CALL SUBOPT_0x3DC
-	CALL SUBOPT_0x3DD
+	CALL SUBOPT_0x3D6
+	CALL SUBOPT_0x3D7
 	RCALL _create_chain_G103
-	CALL SUBOPT_0xAD
+	CALL SUBOPT_0xAE
 	CALL __CPD10
 	BRNE _0x206008A
 	LDI  R30,LOW(7)
 	RJMP _0x20E0015
 _0x206008A:
-	CALL SUBOPT_0xA8
-	CALL SUBOPT_0x3CC
+	CALL SUBOPT_0xA9
+	CALL SUBOPT_0x3C7
 	BRNE _0x206008B
 	LDI  R30,LOW(2)
 	RJMP _0x20E0015
 _0x206008B:
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0xA9
 	CALL SUBOPT_0x3A
 	BRNE _0x206008C
 	LDI  R30,LOW(1)
 	RJMP _0x20E0015
 _0x206008C:
-	CALL SUBOPT_0x3DC
-	CALL SUBOPT_0x3B7
+	CALL SUBOPT_0x3D6
+	CALL SUBOPT_0x3B2
 	CPI  R30,0
 	BREQ _0x206008D
 	LDI  R30,LOW(1)
 	RJMP _0x20E0015
 _0x206008D:
-	CALL SUBOPT_0x3DB
-	CALL SUBOPT_0x3B8
-	CALL SUBOPT_0x3DB
+	CALL SUBOPT_0x3D5
+	CALL SUBOPT_0x3B3
+	CALL SUBOPT_0x3D5
 	MOVW R26,R30
 	ADIW R30,46
 	PUSH R31
@@ -41818,32 +41836,32 @@ _0x206008D:
 	CALL __PUTDP1
 	LDI  R19,LOW(0)
 _0x206008F:
-	CALL SUBOPT_0x3DB
+	CALL SUBOPT_0x3D5
 	LDD  R30,Z+2
 	CP   R19,R30
 	BRSH _0x2060090
-	CALL SUBOPT_0x3DB
+	CALL SUBOPT_0x3D5
 	ADIW R30,4
 	LDI  R26,LOW(1)
 	STD  Z+0,R26
-	CALL SUBOPT_0x3DC
-	CALL SUBOPT_0x3B7
+	CALL SUBOPT_0x3D6
+	CALL SUBOPT_0x3B2
 	CPI  R30,0
 	BREQ _0x2060091
 	LDI  R30,LOW(1)
 	RJMP _0x20E0015
 _0x2060091:
-	CALL SUBOPT_0x3DB
+	CALL SUBOPT_0x3D5
 	ADIW R30,46
 	MOVW R26,R30
-	CALL SUBOPT_0x92
+	CALL SUBOPT_0x93
 	SBIW R30,1
 	SBCI R22,0
 	SBCI R23,0
 	SUBI R19,-1
 	RJMP _0x206008F
 _0x2060090:
-	CALL SUBOPT_0x3DB
+	CALL SUBOPT_0x3D5
 	ADIW R30,46
 	PUSH R31
 	PUSH R30
@@ -41852,7 +41870,7 @@ _0x2060090:
 	MOVW R26,R30
 	MOVW R24,R22
 	MOV  R30,R19
-	CALL SUBOPT_0x3B0
+	CALL SUBOPT_0x3AB
 	CALL SUBOPT_0xC0
 	POP  R26
 	POP  R27
@@ -41860,7 +41878,7 @@ _0x2060090:
 _0x2060088:
 	CALL SUBOPT_0x89
 	__PUTD1SNS 9,10
-	CALL SUBOPT_0x3DC
+	CALL SUBOPT_0x3D6
 	CALL SUBOPT_0x59
 	RCALL _clust2sect
 	__PUTD1SNS 9,14
@@ -41869,11 +41887,11 @@ _0x2060084:
 _0x2060081:
 	MOVW R30,R16
 	__PUTW1SNS 9,4
-	CALL SUBOPT_0x3DB
+	CALL SUBOPT_0x3D5
 	ADIW R30,50
 	MOVW R26,R30
 	MOVW R30,R16
-	CALL SUBOPT_0x3D9
+	CALL SUBOPT_0x3D3
 	__PUTW1SNS 9,18
 	LDI  R30,LOW(0)
 _0x20E0015:
@@ -41883,8 +41901,8 @@ _0x20E0016:
 	RET
 _dir_find_G103:
 	CALL SUBOPT_0x7F
-	CALL SUBOPT_0x2B7
-	CALL SUBOPT_0xF6
+	CALL SUBOPT_0x2B2
+	CALL SUBOPT_0xF5
 	RCALL _dir_seek_G103
 	MOV  R17,R30
 	CPI  R17,0
@@ -41894,8 +41912,8 @@ _dir_find_G103:
 	RJMP _0x20E0012
 _0x2060092:
 _0x2060094:
-	CALL SUBOPT_0x3DF
-	CALL SUBOPT_0x3E0
+	CALL SUBOPT_0x3D9
+	CALL SUBOPT_0x3DA
 	BRNE _0x2060095
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
@@ -41913,7 +41931,7 @@ _0x2060097:
 	LDD  R30,Z+11
 	ANDI R30,LOW(0x8)
 	BRNE _0x2060099
-	CALL SUBOPT_0x3E1
+	CALL SUBOPT_0x3DB
 	RCALL _mem_cmp_G103
 	SBIW R30,0
 	BREQ _0x206009A
@@ -41922,7 +41940,7 @@ _0x2060099:
 _0x206009A:
 	RJMP _0x2060095
 _0x2060098:
-	CALL SUBOPT_0x2B7
+	CALL SUBOPT_0x2B2
 	LDI  R26,LOW(0)
 	RCALL _dir_next_G103
 	MOV  R17,R30
@@ -41934,15 +41952,15 @@ _0x2060095:
 	RJMP _0x20E0012
 _dir_register_G103:
 	CALL SUBOPT_0x7F
-	CALL SUBOPT_0x2B7
-	CALL SUBOPT_0xF6
+	CALL SUBOPT_0x2B2
+	CALL SUBOPT_0xF5
 	RCALL _dir_seek_G103
 	MOV  R17,R30
 	CPI  R17,0
 	BRNE _0x20600A7
 _0x20600A9:
-	CALL SUBOPT_0x3DF
-	CALL SUBOPT_0x3E0
+	CALL SUBOPT_0x3D9
+	CALL SUBOPT_0x3DA
 	BRNE _0x20600AA
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
@@ -41956,7 +41974,7 @@ _0x20600A9:
 _0x20600AD:
 	RJMP _0x20600AA
 _0x20600AC:
-	CALL SUBOPT_0x2B7
+	CALL SUBOPT_0x2B2
 	LDI  R26,LOW(1)
 	RCALL _dir_next_G103
 	MOV  R17,R30
@@ -41966,8 +41984,8 @@ _0x20600AA:
 _0x20600A7:
 	CPI  R17,0
 	BRNE _0x20600AF
-	CALL SUBOPT_0x3DF
-	CALL SUBOPT_0x3E0
+	CALL SUBOPT_0x3D9
+	CALL SUBOPT_0x3DA
 	BRNE _0x20600B0
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
@@ -41983,7 +42001,7 @@ _0x20600A7:
 	LDI  R26,LOW(32)
 	LDI  R27,0
 	RCALL _mem_set_G103
-	CALL SUBOPT_0x3E1
+	CALL SUBOPT_0x3DB
 	RCALL _mem_cpy_G103
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
@@ -42030,16 +42048,16 @@ _create_name_G103:
 	STD  Y+10,R30
 	LDD  R26,Y+11
 	LDD  R27,Y+11+1
-	CALL SUBOPT_0x3AF
+	CALL SUBOPT_0x3AA
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
-	CALL SUBOPT_0x236
+	CALL SUBOPT_0x22E
 	LD   R26,X
 	CPI  R26,LOW(0x2E)
 	BRNE _0x20600B3
 _0x20600B5:
 	CALL SUBOPT_0x80
-	CALL SUBOPT_0x236
+	CALL SUBOPT_0x22E
 	LD   R16,X
 	CPI  R16,46
 	BRNE _0x20600B8
@@ -42050,7 +42068,7 @@ _0x20600B5:
 _0x20600B8:
 	RJMP _0x20600B6
 _0x20600B7:
-	CALL SUBOPT_0x3E2
+	CALL SUBOPT_0x3DC
 	RJMP _0x20600B5
 _0x20600B6:
 	CPI  R16,47
@@ -42067,7 +42085,7 @@ _0x20600BC:
 _0x20600BA:
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
-	CALL SUBOPT_0x1A6
+	CALL SUBOPT_0x1A5
 	LDD  R26,Y+11
 	LDD  R27,Y+11+1
 	ST   X+,R30
@@ -42084,7 +42102,7 @@ _0x20600BE:
 _0x20600B3:
 _0x20600C1:
 	CALL SUBOPT_0x80
-	CALL SUBOPT_0x236
+	CALL SUBOPT_0x22E
 	LD   R16,X
 	CPI  R16,33
 	BRLO _0x20600C4
@@ -42154,13 +42172,13 @@ _0x20600D9:
 	SUBI R16,LOW(32)
 _0x20600D7:
 _0x20600D6:
-	CALL SUBOPT_0x3E2
+	CALL SUBOPT_0x3DC
 _0x20600C0:
 	RJMP _0x20600C1
 _0x20600C2:
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
-	CALL SUBOPT_0x1A6
+	CALL SUBOPT_0x1A5
 	LDD  R26,Y+11
 	LDD  R27,Y+11+1
 	ST   X+,R30
@@ -42252,7 +42270,7 @@ _0x20600FD:
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	ADIW R26,6
-	CALL SUBOPT_0x8E
+	CALL SUBOPT_0x8F
 	RJMP _0x20600FF
 _0x20600FC:
 	LDD  R26,Y+6
@@ -42261,7 +42279,7 @@ _0x20600FC:
 	ADIW R30,22
 	MOVW R26,R30
 	CALL __GETD1P
-	CALL SUBOPT_0x3E4
+	CALL SUBOPT_0x3DE
 _0x20600FF:
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
@@ -42269,18 +42287,18 @@ _0x20600FF:
 	CLR  R27
 	SBIW R26,32
 	BRSH _0x2060100
-	CALL SUBOPT_0x15C
-	CALL SUBOPT_0xF6
+	CALL SUBOPT_0x15B
+	CALL SUBOPT_0xF5
 	RCALL _dir_seek_G103
 	MOV  R17,R30
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	ADIW R26,18
-	CALL SUBOPT_0x114
+	CALL SUBOPT_0x113
 	RJMP _0x2060101
 _0x2060100:
 _0x2060103:
-	CALL SUBOPT_0x15C
+	CALL SUBOPT_0x15B
 	MOVW R26,R28
 	ADIW R26,6
 	RCALL _create_name_G103
@@ -42325,19 +42343,19 @@ _0x2060106:
 	LDI  R17,LOW(5)
 	RJMP _0x2060104
 _0x206010B:
-	CALL SUBOPT_0x3E5
+	CALL SUBOPT_0x3DF
 	CALL __LSLD16
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x3E6
+	CALL SUBOPT_0x3E0
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x3E7
-	CALL SUBOPT_0x3E4
+	CALL SUBOPT_0x3E1
+	CALL SUBOPT_0x3DE
 	RJMP _0x2060103
 _0x2060104:
 _0x2060101:
@@ -42357,14 +42375,14 @@ _check_fs_G103:
 	ST   -Y,R31
 	ST   -Y,R30
 	__GETD1S 3
-	CALL SUBOPT_0x3E8
+	CALL SUBOPT_0x3E2
 	BREQ _0x206010C
 	LDI  R30,LOW(3)
 	RJMP _0x20E0012
 _0x206010C:
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
-	CALL SUBOPT_0x3E9
+	CALL SUBOPT_0x3E3
 	BREQ _0x206010D
 	LDI  R30,LOW(2)
 	RJMP _0x20E0012
@@ -42373,7 +42391,7 @@ _0x206010D:
 	LDD  R27,Y+4+1
 	SUBI R26,LOW(-104)
 	SBCI R27,HIGH(-104)
-	CALL SUBOPT_0x3EA
+	CALL SUBOPT_0x3E4
 	BRNE _0x206010E
 	LDI  R30,LOW(0)
 	RJMP _0x20E0012
@@ -42384,7 +42402,7 @@ _0x206010E:
 	SUBI R30,LOW(-82)
 	SBCI R31,HIGH(-82)
 	MOVW R26,R30
-	CALL SUBOPT_0x3EA
+	CALL SUBOPT_0x3E4
 	BRNE _0x206010F
 	LDI  R30,LOW(0)
 	RJMP _0x20E0012
@@ -42419,7 +42437,7 @@ _0x2060112:
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
 	ADIW R30,2
-	CALL SUBOPT_0x193
+	CALL SUBOPT_0x192
 	LDD  R26,Y+29
 	LDD  R27,Y+29+1
 	ST   X+,R30
@@ -42434,8 +42452,8 @@ _0x2060113:
 	RJMP _0x20E0010
 _0x2060114:
 	MOV  R30,R16
-	CALL SUBOPT_0x3EB
-	CALL SUBOPT_0x3AF
+	CALL SUBOPT_0x3E5
+	CALL SUBOPT_0x3AA
 	LDD  R26,Y+27
 	LDD  R27,Y+27+1
 	ST   X+,R30
@@ -42500,8 +42518,8 @@ _0x206011E:
 	LDI  R30,LOW(10)
 	RJMP _0x20E0010
 _0x206011C:
-	CALL SUBOPT_0x15C
-	CALL SUBOPT_0x3D3
+	CALL SUBOPT_0x15B
+	CALL SUBOPT_0x3CD
 	__PUTD1S 24
 	MOVW R26,R30
 	MOVW R24,R22
@@ -42523,8 +42541,8 @@ _0x206011C:
 	ADIW R26,8
 	CALL __GETD1P
 	CALL SUBOPT_0xC1
-	CALL SUBOPT_0x15C
-	CALL SUBOPT_0x232
+	CALL SUBOPT_0x15B
+	CALL SUBOPT_0x22B
 	RCALL _check_fs_G103
 	MOV  R17,R30
 _0x2060120:
@@ -42553,7 +42571,7 @@ _0x2060122:
 	SUBI R26,LOW(-72)
 	SBCI R27,HIGH(-72)
 	CALL SUBOPT_0x1E
-	CALL SUBOPT_0x3EC
+	CALL SUBOPT_0x253
 	CALL SUBOPT_0xD4
 	CALL __CPD10
 	BRNE _0x2060125
@@ -42562,7 +42580,7 @@ _0x2060122:
 	SUBI R26,LOW(-86)
 	SBCI R27,HIGH(-86)
 	CALL __GETD1P
-	CALL SUBOPT_0x3EC
+	CALL SUBOPT_0x253
 _0x2060125:
 	CALL SUBOPT_0xD4
 	__PUTD1SNS 6,26
@@ -42576,12 +42594,12 @@ _0x2060125:
 	LDD  R31,Y+6+1
 	LDD  R30,Z+3
 	LDI  R31,0
-	CALL SUBOPT_0x3D0
-	CALL SUBOPT_0x29C
-	CALL SUBOPT_0x3EC
-	CALL SUBOPT_0x3ED
+	CALL SUBOPT_0x252
+	CALL SUBOPT_0x299
+	CALL SUBOPT_0x253
+	CALL SUBOPT_0x3E6
 	CALL SUBOPT_0xD2
-	CALL SUBOPT_0x3D8
+	CALL SUBOPT_0x3D2
 	__PUTD1SNS 6,34
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
@@ -42598,7 +42616,7 @@ _0x2060125:
 	SUBI R26,LOW(-69)
 	SBCI R27,HIGH(-69)
 	CALL SUBOPT_0x1E
-	CALL SUBOPT_0x3EE
+	CALL SUBOPT_0x3E7
 	CALL SUBOPT_0x60
 	CALL __CPD10
 	BRNE _0x2060126
@@ -42607,20 +42625,20 @@ _0x2060125:
 	SUBI R26,LOW(-82)
 	SBCI R27,HIGH(-82)
 	CALL __GETD1P
-	CALL SUBOPT_0x3EE
+	CALL SUBOPT_0x3E7
 _0x2060126:
-	CALL SUBOPT_0x3ED
-	CALL SUBOPT_0x3C4
+	CALL SUBOPT_0x3E6
+	CALL SUBOPT_0x3BF
 	CLR  R22
 	CLR  R23
 	CALL SUBOPT_0xC0
-	CALL SUBOPT_0x3D0
+	CALL SUBOPT_0x252
 	CALL __SUBD12
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x3EF
+	CALL SUBOPT_0x3E8
 	POP  R26
 	POP  R27
 	POP  R24
@@ -42630,11 +42648,11 @@ _0x2060126:
 	CALL __SUBD21
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
-	CALL SUBOPT_0x29A
+	CALL SUBOPT_0x297
 	CALL __CWD1
 	CALL __DIVD21U
 	__ADDD1N 2
-	CALL SUBOPT_0x352
+	CALL SUBOPT_0x256
 	__PUTD1SNS 6,30
 	LDI  R17,LOW(1)
 	CALL SUBOPT_0x52
@@ -42656,20 +42674,20 @@ _0x2060128:
 	CALL __GETD1P
 	RJMP _0x206022D
 _0x2060129:
-	CALL SUBOPT_0x3F0
+	CALL SUBOPT_0x3E9
 _0x206022D:
 	__PUTD1SNS 6,38
-	CALL SUBOPT_0x3F0
+	CALL SUBOPT_0x3E9
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x3EF
+	CALL SUBOPT_0x3E8
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x3D8
+	CALL SUBOPT_0x3D2
 	__PUTD1SNS 6,42
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
@@ -42694,7 +42712,7 @@ _0x206022D:
 	SBCI R27,HIGH(-98)
 	CALL __GETW1P
 	CALL SUBOPT_0xD2
-	CALL SUBOPT_0x3D8
+	CALL SUBOPT_0x3D2
 	__PUTD1SNS 6,18
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
@@ -42707,13 +42725,13 @@ _0x206022D:
 	ST   -Y,R30
 	LDD  R30,Y+9
 	LDD  R31,Y+9+1
-	CALL SUBOPT_0x3BA
+	CALL SUBOPT_0x3B5
 	CALL _disk_read
 	CPI  R30,0
 	BRNE _0x206012D
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
-	CALL SUBOPT_0x3E9
+	CALL SUBOPT_0x3E3
 	BRNE _0x206012D
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
@@ -42755,11 +42773,11 @@ _0x206012B:
 	LDD  R27,Y+6+1
 	ST   X,R17
 	ADIW R26,46
-	CALL SUBOPT_0x8E
+	CALL SUBOPT_0x8F
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	ADIW R26,22
-	CALL SUBOPT_0x8E
+	CALL SUBOPT_0x8F
 	LDI  R26,LOW(_Fsid_G103)
 	LDI  R27,HIGH(_Fsid_G103)
 	CALL SUBOPT_0x7C
@@ -42771,7 +42789,7 @@ _0x20E0010:
 	ADIW R28,31
 	RET
 _validate_G103:
-	CALL SUBOPT_0x284
+	CALL SUBOPT_0x281
 	SBIW R30,0
 	BREQ _0x2060130
 	LDD  R26,Y+2
@@ -42814,7 +42832,7 @@ _f_mount:
 	RJMP _0x20E000E
 _0x2060133:
 	LDD  R30,Y+4
-	CALL SUBOPT_0x3EB
+	CALL SUBOPT_0x3E5
 	LD   R16,X+
 	LD   R17,X
 	MOV  R0,R16
@@ -42857,7 +42875,7 @@ _f_open:
 	CALL __SAVELOCR4
 	LDD  R26,Y+41
 	LDD  R27,Y+41+1
-	CALL SUBOPT_0x114
+	CALL SUBOPT_0x113
 	LDD  R30,Y+38
 	ANDI R30,LOW(0x1F)
 	STD  Y+38,R30
@@ -42935,19 +42953,19 @@ _0x206013D:
 	ANDI R30,LOW(0x8)
 	BRNE PC+3
 	JMP _0x2060140
-	CALL SUBOPT_0x3E5
+	CALL SUBOPT_0x3DF
 	CALL __LSLD16
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x3E6
+	CALL SUBOPT_0x3E0
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x3E7
-	CALL SUBOPT_0xA0
+	CALL SUBOPT_0x3E1
+	CALL SUBOPT_0xA1
 	MOVW R30,R18
 	ADIW R30,20
 	LDI  R26,LOW(0)
@@ -42961,7 +42979,7 @@ _0x206013D:
 	MOVW R30,R18
 	ADIW R30,28
 	CALL SUBOPT_0x2C
-	CALL SUBOPT_0x264
+	CALL SUBOPT_0x261
 	LDD  R26,Y+24
 	LDD  R27,Y+24+1
 	ADIW R26,4
@@ -42970,11 +42988,11 @@ _0x206013D:
 	LDD  R26,Y+24
 	LDD  R27,Y+24+1
 	ADIW R26,46
-	CALL SUBOPT_0x3BD
+	CALL SUBOPT_0x3B8
 	CALL SUBOPT_0x87
 	CALL __CPD10
 	BREQ _0x2060141
-	CALL SUBOPT_0x2AA
+	CALL SUBOPT_0x2A6
 	CALL SUBOPT_0xB4
 	RCALL _remove_chain_G103
 	MOV  R17,R30
@@ -42988,9 +43006,9 @@ _0x2060142:
 	CALL SUBOPT_0xDA
 	__PUTD1SNS 24,10
 _0x2060141:
-	CALL SUBOPT_0x2AA
+	CALL SUBOPT_0x2A6
 	CALL SUBOPT_0x59
-	CALL SUBOPT_0x3F1
+	CALL SUBOPT_0x3EA
 	BREQ _0x2060143
 	MOV  R30,R17
 	ADIW R28,8
@@ -43006,7 +43024,7 @@ _0x206013B:
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 	CALL _get_fattime
-	CALL SUBOPT_0xAD
+	CALL SUBOPT_0xAE
 	__PUTD1RNS 18,14
 	LDD  R26,Y+24
 	LDD  R27,Y+24+1
@@ -43061,18 +43079,18 @@ _0x2060145:
 	__PUTW1SNS 41,30
 	LDD  R30,Y+38
 	__PUTB1SNS 41,4
-	CALL SUBOPT_0x3E5
+	CALL SUBOPT_0x3DF
 	CALL __LSLD16
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x3E6
+	CALL SUBOPT_0x3E0
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x3E7
+	CALL SUBOPT_0x3E1
 	__PUTD1SNS 41,14
 	MOVW R26,R18
 	ADIW R26,28
@@ -43081,7 +43099,7 @@ _0x2060145:
 	LDD  R26,Y+41
 	LDD  R27,Y+41+1
 	ADIW R26,6
-	CALL SUBOPT_0x8E
+	CALL SUBOPT_0x8F
 	LDD  R26,Y+41
 	LDD  R27,Y+41+1
 	ADIW R26,5
@@ -43090,7 +43108,7 @@ _0x2060145:
 	LDD  R26,Y+41
 	LDD  R27,Y+41+1
 	ADIW R26,22
-	CALL SUBOPT_0x8E
+	CALL SUBOPT_0x8F
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	LDD  R26,Y+41
@@ -43118,11 +43136,11 @@ _f_read:
 	STD  Y+6+1,R31
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
-	CALL SUBOPT_0x114
-	CALL SUBOPT_0x3F2
+	CALL SUBOPT_0x113
+	CALL SUBOPT_0x3EB
 	LDD  R30,Y+28
 	LDD  R31,Y+28+1
-	CALL SUBOPT_0x3F3
+	CALL SUBOPT_0x3EC
 	BREQ _0x206014D
 	MOV  R30,R17
 	RJMP _0x20E000C
@@ -43150,13 +43168,13 @@ _0x206014F:
 	PUSH R24
 	PUSH R27
 	PUSH R26
-	CALL SUBOPT_0x3F4
+	CALL SUBOPT_0x3ED
 	POP  R30
 	POP  R31
 	POP  R22
 	POP  R23
 	CALL __SUBD12
-	CALL SUBOPT_0x367
+	CALL SUBOPT_0x361
 	CALL SUBOPT_0x4F
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
@@ -43175,8 +43193,8 @@ _0x2060152:
 	SBIW R30,0
 	BRNE PC+3
 	JMP _0x2060153
-	CALL SUBOPT_0x3F4
-	CALL SUBOPT_0x3F5
+	CALL SUBOPT_0x3ED
+	CALL SUBOPT_0x3EE
 	BREQ PC+3
 	JMP _0x2060154
 	LDD  R30,Y+26
@@ -43188,7 +43206,7 @@ _0x2060152:
 	LDD  R30,Z+2
 	CP   R0,R30
 	BRLO _0x2060155
-	CALL SUBOPT_0x3F4
+	CALL SUBOPT_0x3ED
 	CALL __CPD02
 	BRNE _0x2060156
 	LDD  R26,Y+26
@@ -43197,21 +43215,21 @@ _0x2060152:
 	CALL __GETD1P
 	RJMP _0x2060157
 _0x2060156:
-	CALL SUBOPT_0x3F2
-	CALL SUBOPT_0x3F6
+	CALL SUBOPT_0x3EB
+	CALL SUBOPT_0x3EF
 	CALL _get_fat
 _0x2060157:
-	CALL SUBOPT_0x395
-	CALL SUBOPT_0x3BB
+	CALL SUBOPT_0x390
+	CALL SUBOPT_0x3B6
 	BRSH _0x2060159
-	CALL SUBOPT_0x3F7
+	CALL SUBOPT_0x3F0
 	LDI  R30,LOW(2)
 	RJMP _0x20E000C
 _0x2060159:
-	CALL SUBOPT_0x234
+	CALL SUBOPT_0x21E
 	CALL SUBOPT_0x3A
 	BRNE _0x206015A
-	CALL SUBOPT_0x3F7
+	CALL SUBOPT_0x3F0
 	LDI  R30,LOW(1)
 	RJMP _0x20E000C
 _0x206015A:
@@ -43223,51 +43241,51 @@ _0x206015A:
 	LDI  R30,LOW(0)
 	ST   X,R30
 _0x2060155:
-	CALL SUBOPT_0x3F2
-	CALL SUBOPT_0x3F6
+	CALL SUBOPT_0x3EB
+	CALL SUBOPT_0x3EF
 	RCALL _clust2sect
 	CALL SUBOPT_0xEC
 	CALL __CPD10
 	BRNE _0x206015B
-	CALL SUBOPT_0x3F7
+	CALL SUBOPT_0x3F0
 	LDI  R30,LOW(2)
 	RJMP _0x20E000C
 _0x206015B:
-	CALL SUBOPT_0x3F8
+	CALL SUBOPT_0x3F1
 	CALL SUBOPT_0xB
-	CALL SUBOPT_0xAC
+	CALL SUBOPT_0xAD
 	CALL SUBOPT_0xEA
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	CALL SUBOPT_0x3F9
+	CALL SUBOPT_0x3F2
 	BRNE PC+3
 	JMP _0x206015C
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	LDD  R30,Z+5
-	CALL SUBOPT_0x3E3
+	CALL SUBOPT_0x3DD
 	MOVW R0,R30
-	CALL SUBOPT_0x3FA
+	CALL SUBOPT_0x3F3
 	LDD  R30,Z+2
-	CALL SUBOPT_0x1A7
+	CALL SUBOPT_0x1A6
 	BRSH _0x206015D
-	CALL SUBOPT_0x3FA
-	CALL SUBOPT_0x29A
+	CALL SUBOPT_0x3F3
+	CALL SUBOPT_0x297
 	MOVW R26,R30
-	CALL SUBOPT_0x3F8
+	CALL SUBOPT_0x3F1
 	SUB  R26,R30
 	SBC  R27,R31
 	MOVW R20,R26
 _0x206015D:
-	CALL SUBOPT_0x3FA
-	CALL SUBOPT_0x3FB
+	CALL SUBOPT_0x3F3
+	CALL SUBOPT_0x3F4
 	__GETD1S 15
 	CALL __PUTPARD1
 	MOV  R26,R20
 	CALL _disk_read
 	CPI  R30,0
 	BREQ _0x206015E
-	CALL SUBOPT_0x3F7
+	CALL SUBOPT_0x3F0
 	LDI  R30,LOW(1)
 	RJMP _0x20E000C
 _0x206015E:
@@ -43276,14 +43294,14 @@ _0x206015E:
 	LDD  R26,Z+4
 	ANDI R26,LOW(0x40)
 	BREQ _0x2060160
-	CALL SUBOPT_0x3FC
-	CALL SUBOPT_0x3FD
+	CALL SUBOPT_0x3F5
+	CALL SUBOPT_0x3F6
 	BRLO _0x2060161
 _0x2060160:
 	RJMP _0x206015F
 _0x2060161:
-	CALL SUBOPT_0x3FC
-	CALL SUBOPT_0x3FE
+	CALL SUBOPT_0x3F5
+	CALL SUBOPT_0x3F7
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	CLR  R24
@@ -43300,7 +43318,7 @@ _0x2060161:
 _0x206015F:
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
-	CALL SUBOPT_0x3FF
+	CALL SUBOPT_0x3F8
 	RJMP _0x2060151
 _0x206015C:
 	LDD  R30,Y+26
@@ -43308,29 +43326,29 @@ _0x206015C:
 	LDD  R26,Z+4
 	ANDI R26,LOW(0x40)
 	BREQ _0x2060162
-	CALL SUBOPT_0x3FA
-	CALL SUBOPT_0x400
+	CALL SUBOPT_0x3F3
+	CALL SUBOPT_0x3F9
 	LDD  R30,Y+29
 	LDD  R31,Y+29+1
-	CALL SUBOPT_0x401
+	CALL SUBOPT_0x3FA
 	BREQ _0x2060163
-	CALL SUBOPT_0x3F7
+	CALL SUBOPT_0x3F0
 	LDI  R30,LOW(1)
 	RJMP _0x20E000C
 _0x2060163:
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
-	CALL SUBOPT_0x402
+	CALL SUBOPT_0x3FB
 _0x2060162:
-	CALL SUBOPT_0x3FC
+	CALL SUBOPT_0x3F5
 	CALL __CPD12
 	BREQ _0x2060164
-	CALL SUBOPT_0x3FA
-	CALL SUBOPT_0x400
+	CALL SUBOPT_0x3F3
+	CALL SUBOPT_0x3F9
 	__GETD1S 15
-	CALL SUBOPT_0x3E8
+	CALL SUBOPT_0x3E2
 	BREQ _0x2060165
-	CALL SUBOPT_0x3F7
+	CALL SUBOPT_0x3F0
 	LDI  R30,LOW(1)
 	RJMP _0x20E000C
 _0x2060165:
@@ -43339,11 +43357,11 @@ _0x2060164:
 	__PUTD1SNS 26,22
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
-	CALL SUBOPT_0x403
+	CALL SUBOPT_0x3FC
 _0x2060154:
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
-	CALL SUBOPT_0x404
+	CALL SUBOPT_0x3FD
 	LDI  R26,LOW(512)
 	LDI  R27,HIGH(512)
 	SUB  R26,R30
@@ -43356,10 +43374,10 @@ _0x2060154:
 	BRSH _0x2060166
 	__GETWRS 18,19,22
 _0x2060166:
-	CALL SUBOPT_0x15C
+	CALL SUBOPT_0x15B
 	LDD  R26,Y+28
 	LDD  R27,Y+28+1
-	CALL SUBOPT_0x404
+	CALL SUBOPT_0x3FD
 	LDD  R26,Y+28
 	LDD  R27,Y+28+1
 	ADIW R26,32
@@ -43368,17 +43386,17 @@ _0x2060166:
 	CALL _mem_cpy_G103
 _0x2060151:
 	MOVW R30,R18
-	CALL SUBOPT_0x1A6
+	CALL SUBOPT_0x1A5
 	STD  Y+6,R30
 	STD  Y+6+1,R31
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
-	CALL SUBOPT_0x405
+	CALL SUBOPT_0x3FE
 	MOVW R26,R0
 	CALL __PUTDP1
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
-	CALL SUBOPT_0x406
+	CALL SUBOPT_0x3FF
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	SUB  R30,R18
@@ -43403,11 +43421,11 @@ _f_write:
 	STD  Y+6+1,R31
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
-	CALL SUBOPT_0x114
-	CALL SUBOPT_0x407
+	CALL SUBOPT_0x113
+	CALL SUBOPT_0x400
 	LDD  R30,Y+24
 	LDD  R31,Y+24+1
-	CALL SUBOPT_0x3F3
+	CALL SUBOPT_0x3EC
 	BREQ _0x2060167
 	MOV  R30,R17
 	RJMP _0x20E000B
@@ -43433,12 +43451,12 @@ _0x2060169:
 	__GETD2Z 10
 	LDD  R30,Y+18
 	LDD  R31,Y+18+1
-	CALL SUBOPT_0x3D8
+	CALL SUBOPT_0x3D2
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x408
+	CALL SUBOPT_0x401
 	POP  R26
 	POP  R27
 	POP  R24
@@ -43455,14 +43473,14 @@ _0x206016C:
 	SBIW R30,0
 	BRNE PC+3
 	JMP _0x206016D
-	CALL SUBOPT_0x409
-	CALL SUBOPT_0x3F5
+	CALL SUBOPT_0x402
+	CALL SUBOPT_0x3EE
 	BREQ PC+3
 	JMP _0x206016E
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	LDD  R0,Z+5
-	CALL SUBOPT_0x40A
+	CALL SUBOPT_0x403
 	LDD  R30,Z+2
 	CP   R0,R30
 	BRSH PC+3
@@ -43470,7 +43488,7 @@ _0x206016C:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
 	ADIW R26,6
-	CALL SUBOPT_0x3DA
+	CALL SUBOPT_0x3D4
 	BRNE _0x2060170
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
@@ -43479,7 +43497,7 @@ _0x206016C:
 	CALL SUBOPT_0xEC
 	CALL __CPD10
 	BRNE _0x2060171
-	CALL SUBOPT_0x407
+	CALL SUBOPT_0x400
 	CALL SUBOPT_0x2C
 	CALL _create_chain_G103
 	CALL SUBOPT_0xEA
@@ -43487,8 +43505,8 @@ _0x206016C:
 _0x2060171:
 	RJMP _0x2060172
 _0x2060170:
-	CALL SUBOPT_0x407
-	CALL SUBOPT_0x40B
+	CALL SUBOPT_0x400
+	CALL SUBOPT_0x404
 	CALL _create_chain_G103
 	CALL SUBOPT_0xEA
 _0x2060172:
@@ -43498,15 +43516,15 @@ _0x2060172:
 	RJMP _0x206016D
 _0x2060173:
 	CALL SUBOPT_0xB
-	CALL SUBOPT_0x3CC
+	CALL SUBOPT_0x3C7
 	BRNE _0x2060174
-	CALL SUBOPT_0x40C
+	CALL SUBOPT_0x405
 	LDI  R30,LOW(2)
 	RJMP _0x20E000B
 _0x2060174:
 	CALL SUBOPT_0x5C
 	BRNE _0x2060175
-	CALL SUBOPT_0x40C
+	CALL SUBOPT_0x405
 	LDI  R30,LOW(1)
 	RJMP _0x20E000B
 _0x2060175:
@@ -43523,75 +43541,75 @@ _0x206016F:
 	LDD  R26,Z+4
 	ANDI R26,LOW(0x40)
 	BREQ _0x2060176
-	CALL SUBOPT_0x40A
-	CALL SUBOPT_0x40D
+	CALL SUBOPT_0x403
+	CALL SUBOPT_0x406
 	LDD  R30,Y+25
 	LDD  R31,Y+25+1
-	CALL SUBOPT_0x401
+	CALL SUBOPT_0x3FA
 	BREQ _0x2060177
-	CALL SUBOPT_0x40C
+	CALL SUBOPT_0x405
 	LDI  R30,LOW(1)
 	RJMP _0x20E000B
 _0x2060177:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	CALL SUBOPT_0x402
+	CALL SUBOPT_0x3FB
 _0x2060176:
-	CALL SUBOPT_0x407
-	CALL SUBOPT_0x40B
+	CALL SUBOPT_0x400
+	CALL SUBOPT_0x404
 	CALL _clust2sect
-	CALL SUBOPT_0x367
+	CALL SUBOPT_0x361
 	CALL SUBOPT_0x4F
 	CALL __CPD10
 	BRNE _0x2060178
-	CALL SUBOPT_0x40C
+	CALL SUBOPT_0x405
 	LDI  R30,LOW(2)
 	RJMP _0x20E000B
 _0x2060178:
-	CALL SUBOPT_0x40E
+	CALL SUBOPT_0x407
 	CALL SUBOPT_0xD8
-	CALL SUBOPT_0xAC
-	CALL SUBOPT_0x367
+	CALL SUBOPT_0xAD
+	CALL SUBOPT_0x361
 	LDD  R26,Y+18
 	LDD  R27,Y+18+1
-	CALL SUBOPT_0x3F9
+	CALL SUBOPT_0x3F2
 	BRNE PC+3
 	JMP _0x2060179
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	LDD  R30,Z+5
-	CALL SUBOPT_0x3E3
+	CALL SUBOPT_0x3DD
 	MOVW R0,R30
-	CALL SUBOPT_0x40A
+	CALL SUBOPT_0x403
 	LDD  R30,Z+2
-	CALL SUBOPT_0x1A7
+	CALL SUBOPT_0x1A6
 	BRSH _0x206017A
-	CALL SUBOPT_0x40A
-	CALL SUBOPT_0x29A
+	CALL SUBOPT_0x403
+	CALL SUBOPT_0x297
 	MOVW R26,R30
-	CALL SUBOPT_0x40E
+	CALL SUBOPT_0x407
 	SUB  R26,R30
 	SBC  R27,R31
 	MOVW R20,R26
 _0x206017A:
-	CALL SUBOPT_0x40A
-	CALL SUBOPT_0x3FB
+	CALL SUBOPT_0x403
+	CALL SUBOPT_0x3F4
 	CALL SUBOPT_0x64
 	MOV  R26,R20
 	CALL _disk_write
 	CPI  R30,0
 	BREQ _0x206017B
-	CALL SUBOPT_0x40C
+	CALL SUBOPT_0x405
 	LDI  R30,LOW(1)
 	RJMP _0x20E000B
 _0x206017B:
-	CALL SUBOPT_0x40F
-	CALL SUBOPT_0x3FD
+	CALL SUBOPT_0x408
+	CALL SUBOPT_0x3F6
 	BRSH _0x206017C
-	CALL SUBOPT_0x410
+	CALL SUBOPT_0x409
 	__GETD2Z 22
 	CALL SUBOPT_0xD5
-	CALL SUBOPT_0x3FE
+	CALL SUBOPT_0x3F7
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	CLR  R24
@@ -43602,24 +43620,24 @@ _0x206017B:
 	CALL _mem_cpy_G103
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	CALL SUBOPT_0x402
+	CALL SUBOPT_0x3FB
 _0x206017C:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	CALL SUBOPT_0x3FF
+	CALL SUBOPT_0x3F8
 	RJMP _0x206016B
 _0x2060179:
-	CALL SUBOPT_0x40F
+	CALL SUBOPT_0x408
 	CALL __CPD12
 	BREQ _0x206017D
-	CALL SUBOPT_0x409
+	CALL SUBOPT_0x402
 	MOVW R0,R26
-	CALL SUBOPT_0x408
+	CALL SUBOPT_0x401
 	MOVW R26,R0
 	CALL __CPD21
 	BRSH _0x206017F
-	CALL SUBOPT_0x40A
-	CALL SUBOPT_0x40D
+	CALL SUBOPT_0x403
+	CALL SUBOPT_0x406
 	CALL SUBOPT_0x64
 	LDI  R26,LOW(1)
 	CALL _disk_read
@@ -43628,7 +43646,7 @@ _0x2060179:
 _0x206017F:
 	RJMP _0x206017E
 _0x2060180:
-	CALL SUBOPT_0x40C
+	CALL SUBOPT_0x405
 	LDI  R30,LOW(1)
 	RJMP _0x20E000B
 _0x206017E:
@@ -43637,11 +43655,11 @@ _0x206017D:
 	__PUTD1SNS 22,22
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	CALL SUBOPT_0x403
+	CALL SUBOPT_0x3FC
 _0x206016E:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	CALL SUBOPT_0x404
+	CALL SUBOPT_0x3FD
 	LDI  R26,LOW(512)
 	LDI  R27,HIGH(512)
 	SUB  R26,R30
@@ -43656,12 +43674,12 @@ _0x206016E:
 _0x2060181:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	CALL SUBOPT_0x404
+	CALL SUBOPT_0x3FD
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
 	ADIW R26,32
 	CALL SUBOPT_0x1D
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x193
 	MOVW R26,R18
 	CALL _mem_cpy_G103
 	LDD  R26,Y+22
@@ -43672,17 +43690,17 @@ _0x2060181:
 	ST   X,R30
 _0x206016B:
 	MOVW R30,R18
-	CALL SUBOPT_0x1A6
+	CALL SUBOPT_0x1A5
 	STD  Y+6,R30
 	STD  Y+6+1,R31
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
-	CALL SUBOPT_0x405
+	CALL SUBOPT_0x3FE
 	MOVW R26,R0
 	CALL __PUTDP1
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
-	CALL SUBOPT_0x406
+	CALL SUBOPT_0x3FF
 	LDD  R30,Y+18
 	LDD  R31,Y+18+1
 	SUB  R30,R18
@@ -43691,9 +43709,9 @@ _0x206016B:
 	STD  Y+18+1,R31
 	RJMP _0x206016C
 _0x206016D:
-	CALL SUBOPT_0x409
+	CALL SUBOPT_0x402
 	MOVW R0,R26
-	CALL SUBOPT_0x408
+	CALL SUBOPT_0x401
 	MOVW R26,R0
 	CALL __CPD12
 	BRSH _0x2060182
@@ -43719,10 +43737,10 @@ _f_sync:
 	ST   -Y,R26
 	SBIW R28,4
 	CALL __SAVELOCR4
-	CALL SUBOPT_0x3D7
+	CALL SUBOPT_0x3D1
 	LDD  R30,Y+10
 	LDD  R31,Y+10+1
-	CALL SUBOPT_0x3F3
+	CALL SUBOPT_0x3EC
 	BREQ PC+3
 	JMP _0x2060183
 	LDD  R30,Y+8
@@ -43734,7 +43752,7 @@ _f_sync:
 	LDD  R26,Z+4
 	ANDI R26,LOW(0x40)
 	BREQ _0x2060185
-	CALL SUBOPT_0x3D4
+	CALL SUBOPT_0x3CE
 	LDD  R30,Z+1
 	ST   -Y,R30
 	LDD  R30,Y+9
@@ -43744,20 +43762,20 @@ _f_sync:
 	ST   -Y,R30
 	LDD  R30,Y+11
 	LDD  R31,Y+11+1
-	CALL SUBOPT_0x401
+	CALL SUBOPT_0x3FA
 	BREQ _0x2060186
 	LDI  R30,LOW(1)
 	RJMP _0x20E000A
 _0x2060186:
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
-	CALL SUBOPT_0x402
+	CALL SUBOPT_0x3FB
 _0x2060185:
-	CALL SUBOPT_0x3D7
+	CALL SUBOPT_0x3D1
 	LDD  R30,Y+10
 	LDD  R31,Y+10+1
 	__GETD2Z 26
-	CALL SUBOPT_0x3F1
+	CALL SUBOPT_0x3EA
 	BREQ PC+3
 	JMP _0x2060187
 	LDD  R26,Y+8
@@ -43788,7 +43806,7 @@ _0x2060185:
 	CALL __LSRD16
 	__PUTW1RNS 18,20
 	CALL _get_fattime
-	CALL SUBOPT_0xAD
+	CALL SUBOPT_0xAE
 	__PUTD1RNS 18,22
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
@@ -43796,11 +43814,11 @@ _0x2060185:
 	LD   R30,X
 	ANDI R30,0xDF
 	ST   X,R30
-	CALL SUBOPT_0x3D4
+	CALL SUBOPT_0x3CE
 	ADIW R30,4
 	LDI  R26,LOW(1)
 	STD  Z+0,R26
-	CALL SUBOPT_0x3D4
+	CALL SUBOPT_0x3CE
 	MOVW R26,R30
 	CALL _sync_G103
 	MOV  R17,R30
@@ -43824,7 +43842,7 @@ _f_close:
 	BRNE _0x2060188
 	LDD  R26,Y+1
 	LDD  R27,Y+1+1
-	CALL SUBOPT_0x114
+	CALL SUBOPT_0x113
 _0x2060188:
 	MOV  R30,R17
 	RJMP _0x20E0005
@@ -43832,10 +43850,10 @@ _f_lseek:
 	CALL __PUTPARD2
 	SBIW R28,16
 	ST   -Y,R17
-	CALL SUBOPT_0x411
+	CALL SUBOPT_0x40A
 	LDD  R30,Y+23
 	LDD  R31,Y+23+1
-	CALL SUBOPT_0x3F3
+	CALL SUBOPT_0x3EC
 	BREQ _0x2060191
 	RJMP _0x20E0009
 _0x2060191:
@@ -43847,8 +43865,8 @@ _0x2060191:
 	LDI  R30,LOW(2)
 	RJMP _0x20E0008
 _0x2060192:
-	CALL SUBOPT_0x412
-	CALL SUBOPT_0x413
+	CALL SUBOPT_0x40B
+	CALL SUBOPT_0x40C
 	CALL __CPD12
 	BRSH _0x2060194
 	LDD  R30,Y+21
@@ -43859,40 +43877,40 @@ _0x2060192:
 _0x2060194:
 	RJMP _0x2060193
 _0x2060195:
-	CALL SUBOPT_0x412
-	CALL SUBOPT_0x414
+	CALL SUBOPT_0x40B
+	CALL SUBOPT_0x40D
 _0x2060193:
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	ADIW R26,6
-	CALL SUBOPT_0x3B2
-	CALL SUBOPT_0x3D3
-	CALL SUBOPT_0x3CE
-	CALL SUBOPT_0x415
+	CALL SUBOPT_0x3AD
+	CALL SUBOPT_0x3CD
+	CALL SUBOPT_0x3C9
+	CALL SUBOPT_0x40E
 	ADIW R26,5
 	LDI  R30,LOW(255)
 	ST   X,R30
-	CALL SUBOPT_0x413
+	CALL SUBOPT_0x40C
 	CALL __CPD02
 	BRLO PC+3
 	JMP _0x2060196
-	CALL SUBOPT_0x416
-	CALL SUBOPT_0x29A
+	CALL SUBOPT_0x40F
+	CALL SUBOPT_0x297
 	CALL __CWD1
 	__GETD2N 0x200
 	CALL __MULD12U
-	CALL SUBOPT_0x3A2
-	CALL SUBOPT_0x29B
+	CALL SUBOPT_0x39D
+	CALL SUBOPT_0x298
 	CALL __CPD02
 	BRSH _0x2060198
-	CALL SUBOPT_0x417
-	CALL SUBOPT_0x418
+	CALL SUBOPT_0x410
+	CALL SUBOPT_0x411
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x3CB
-	CALL SUBOPT_0x418
+	CALL SUBOPT_0x3C6
+	CALL SUBOPT_0x411
 	POP  R26
 	POP  R27
 	POP  R24
@@ -43902,7 +43920,7 @@ _0x2060193:
 _0x2060198:
 	RJMP _0x2060197
 _0x2060199:
-	CALL SUBOPT_0x3CB
+	CALL SUBOPT_0x3C6
 	CALL SUBOPT_0xDA
 	MOVW R26,R30
 	MOVW R24,R22
@@ -43910,54 +43928,54 @@ _0x2060199:
 	CALL SUBOPT_0xDA
 	CALL __COMD1
 	CALL __ANDD12
-	CALL SUBOPT_0x415
+	CALL SUBOPT_0x40E
 	ADIW R26,6
 	CALL __GETD1P
-	CALL SUBOPT_0x413
+	CALL SUBOPT_0x40C
 	CALL __SUBD21
 	__PUTD2S 17
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	ADIW R26,18
-	CALL SUBOPT_0x419
+	CALL SUBOPT_0x412
 	RJMP _0x206019A
 _0x2060197:
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	ADIW R26,14
-	CALL SUBOPT_0x419
-	CALL SUBOPT_0x41A
+	CALL SUBOPT_0x412
+	CALL SUBOPT_0x413
 	CALL __CPD10
 	BRNE _0x206019B
-	CALL SUBOPT_0x411
+	CALL SUBOPT_0x40A
 	CALL SUBOPT_0x2C
-	CALL SUBOPT_0x41B
-	CALL SUBOPT_0x41C
-	CALL SUBOPT_0x3CC
+	CALL SUBOPT_0x414
+	CALL SUBOPT_0x415
+	CALL SUBOPT_0x3C7
 	BRNE _0x206019C
-	CALL SUBOPT_0x41D
+	CALL SUBOPT_0x416
 	LDI  R30,LOW(2)
 	RJMP _0x20E0008
 _0x206019C:
-	CALL SUBOPT_0x41C
+	CALL SUBOPT_0x415
 	CALL SUBOPT_0x3A
 	BRNE _0x206019D
-	CALL SUBOPT_0x41D
+	CALL SUBOPT_0x416
 	LDI  R30,LOW(1)
 	RJMP _0x20E0008
 _0x206019D:
-	CALL SUBOPT_0x41A
+	CALL SUBOPT_0x413
 	__PUTD1SNS 21,14
 _0x206019B:
-	CALL SUBOPT_0x41E
+	CALL SUBOPT_0x417
 _0x206019A:
-	CALL SUBOPT_0x41A
+	CALL SUBOPT_0x413
 	CALL __CPD10
 	BRNE PC+3
 	JMP _0x206019E
 _0x206019F:
 	CALL SUBOPT_0x6B
-	CALL SUBOPT_0x413
+	CALL SUBOPT_0x40C
 	CALL __CPD12
 	BRLO PC+3
 	JMP _0x20601A1
@@ -43966,76 +43984,76 @@ _0x206019F:
 	LDD  R26,Z+4
 	ANDI R26,LOW(0x2)
 	BREQ _0x20601A2
-	CALL SUBOPT_0x411
-	CALL SUBOPT_0x41F
-	CALL SUBOPT_0x41B
-	CALL SUBOPT_0x41A
+	CALL SUBOPT_0x40A
+	CALL SUBOPT_0x418
+	CALL SUBOPT_0x414
+	CALL SUBOPT_0x413
 	CALL __CPD10
 	BRNE _0x20601A3
 	CALL SUBOPT_0x6B
-	CALL SUBOPT_0x414
+	CALL SUBOPT_0x40D
 	RJMP _0x20601A1
 _0x20601A3:
 	RJMP _0x20601A4
 _0x20601A2:
-	CALL SUBOPT_0x411
-	CALL SUBOPT_0x41F
+	CALL SUBOPT_0x40A
+	CALL SUBOPT_0x418
 	CALL _get_fat
 	__PUTD1S 13
 _0x20601A4:
-	CALL SUBOPT_0x41C
+	CALL SUBOPT_0x415
 	CALL SUBOPT_0x3A
 	BRNE _0x20601A5
-	CALL SUBOPT_0x41D
+	CALL SUBOPT_0x416
 	LDI  R30,LOW(1)
 	RJMP _0x20E0008
 _0x20601A5:
-	CALL SUBOPT_0x41C
-	CALL SUBOPT_0x3BB
+	CALL SUBOPT_0x415
+	CALL SUBOPT_0x3B6
 	BRLO _0x20601A7
-	CALL SUBOPT_0x416
-	CALL SUBOPT_0x3DE
-	CALL SUBOPT_0x41C
+	CALL SUBOPT_0x40F
+	CALL SUBOPT_0x3D8
+	CALL SUBOPT_0x415
 	CALL __CPD21
 	BRLO _0x20601A6
 _0x20601A7:
-	CALL SUBOPT_0x41D
+	CALL SUBOPT_0x416
 	LDI  R30,LOW(2)
 	RJMP _0x20E0008
 _0x20601A6:
-	CALL SUBOPT_0x41E
-	CALL SUBOPT_0x420
-	CALL SUBOPT_0x3AA
+	CALL SUBOPT_0x417
+	CALL SUBOPT_0x419
+	CALL SUBOPT_0x3A3
 	CALL __ADDD12
 	MOVW R26,R0
 	CALL __PUTDP1
-	CALL SUBOPT_0x3AA
-	CALL SUBOPT_0x417
+	CALL SUBOPT_0x3A3
+	CALL SUBOPT_0x410
 	CALL __SUBD12
-	CALL SUBOPT_0x414
+	CALL SUBOPT_0x40D
 	RJMP _0x206019F
 _0x20601A1:
-	CALL SUBOPT_0x420
-	CALL SUBOPT_0x413
+	CALL SUBOPT_0x419
+	CALL SUBOPT_0x40C
 	CALL __ADDD12
 	MOVW R26,R0
 	CALL __PUTDP1
-	CALL SUBOPT_0x413
+	CALL SUBOPT_0x40C
 	__GETD1N 0x200
 	CALL __DIVD21U
 	__PUTB1SNS 21,5
-	CALL SUBOPT_0x417
+	CALL SUBOPT_0x410
 	ANDI R31,HIGH(0x1FF)
 	SBIW R30,0
 	BREQ _0x20601A9
-	CALL SUBOPT_0x411
-	CALL SUBOPT_0x41F
+	CALL SUBOPT_0x40A
+	CALL SUBOPT_0x418
 	CALL _clust2sect
-	CALL SUBOPT_0x3CE
-	CALL SUBOPT_0x3B3
+	CALL SUBOPT_0x3C9
+	CALL SUBOPT_0x3AE
 	CALL __CPD10
 	BRNE _0x20601AA
-	CALL SUBOPT_0x41D
+	CALL SUBOPT_0x416
 	LDI  R30,LOW(2)
 	RJMP _0x20E0008
 _0x20601AA:
@@ -44043,23 +44061,23 @@ _0x20601AA:
 	LDD  R31,Y+21+1
 	LDD  R30,Z+5
 	LDI  R31,0
+	CALL SUBOPT_0x3C4
+	CALL SUBOPT_0xAD
 	CALL SUBOPT_0x3C9
-	CALL SUBOPT_0xAC
-	CALL SUBOPT_0x3CE
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
-	CALL SUBOPT_0x403
+	CALL SUBOPT_0x3FC
 _0x20601A9:
 _0x206019E:
 _0x2060196:
-	CALL SUBOPT_0x421
-	CALL SUBOPT_0x3F5
+	CALL SUBOPT_0x41A
+	CALL SUBOPT_0x3EE
 	BREQ _0x20601AC
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	ADIW R26,22
 	CALL __GETD1P
-	CALL SUBOPT_0x3C9
+	CALL SUBOPT_0x3C4
 	CALL __CPD12
 	BRNE _0x20601AD
 _0x20601AC:
@@ -44070,38 +44088,38 @@ _0x20601AD:
 	LDD  R26,Z+4
 	ANDI R26,LOW(0x40)
 	BREQ _0x20601AE
-	CALL SUBOPT_0x416
+	CALL SUBOPT_0x40F
 	LDD  R30,Z+1
 	ST   -Y,R30
-	CALL SUBOPT_0x410
-	CALL SUBOPT_0x401
+	CALL SUBOPT_0x409
+	CALL SUBOPT_0x3FA
 	BREQ _0x20601AF
-	CALL SUBOPT_0x41D
+	CALL SUBOPT_0x416
 	LDI  R30,LOW(1)
 	RJMP _0x20E0008
 _0x20601AF:
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
-	CALL SUBOPT_0x402
+	CALL SUBOPT_0x3FB
 _0x20601AE:
-	CALL SUBOPT_0x416
+	CALL SUBOPT_0x40F
 	LDD  R30,Z+1
 	ST   -Y,R30
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	ADIW R30,32
-	CALL SUBOPT_0x3B6
+	CALL SUBOPT_0x3B1
 	BREQ _0x20601B0
-	CALL SUBOPT_0x41D
+	CALL SUBOPT_0x416
 	LDI  R30,LOW(1)
 	RJMP _0x20E0008
 _0x20601B0:
-	CALL SUBOPT_0x3B3
+	CALL SUBOPT_0x3AE
 	__PUTD1SNS 21,22
 _0x20601AB:
-	CALL SUBOPT_0x421
+	CALL SUBOPT_0x41A
 	MOVW R0,R26
-	CALL SUBOPT_0x412
+	CALL SUBOPT_0x40B
 	MOVW R26,R0
 	CALL __CPD12
 	BRSH _0x20601B1
@@ -44132,7 +44150,7 @@ _f_getfree:
 	ADIW R30,26
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0x2AA
+	CALL SUBOPT_0x2A6
 	LDI  R26,LOW(0)
 	CALL _chk_mounted
 	MOV  R17,R30
@@ -44141,7 +44159,7 @@ _f_getfree:
 	MOV  R30,R17
 	RJMP _0x20E0006
 _0x20601C3:
-	CALL SUBOPT_0x40A
+	CALL SUBOPT_0x403
 	MOVW R0,R30
 	ADIW R30,14
 	MOVW R26,R30
@@ -44160,23 +44178,23 @@ _0x20601C3:
 	POP  R25
 	CALL __CPD12
 	BRLO _0x20601C4
-	CALL SUBOPT_0x40A
+	CALL SUBOPT_0x403
 	ADIW R30,14
 	MOVW R26,R30
 	CALL __GETD1P
 	RJMP _0x20E0007
 _0x20601C4:
-	CALL SUBOPT_0x40A
+	CALL SUBOPT_0x403
 	LD   R16,Z
 	LDI  R30,LOW(0)
 	__CLRD1S 18
 	CPI  R16,1
 	BRNE _0x20601C5
-	CALL SUBOPT_0x3D1
-	CALL SUBOPT_0x3EE
+	CALL SUBOPT_0x3CB
+	CALL SUBOPT_0x3E7
 _0x20601C7:
-	CALL SUBOPT_0x407
-	CALL SUBOPT_0x234
+	CALL SUBOPT_0x400
+	CALL SUBOPT_0x21E
 	CALL _get_fat
 	CALL SUBOPT_0xB6
 	CALL SUBOPT_0x59
@@ -44186,7 +44204,7 @@ _0x20601C7:
 	RJMP _0x20E0006
 _0x20601C9:
 	CALL SUBOPT_0x59
-	CALL SUBOPT_0x3CC
+	CALL SUBOPT_0x3C7
 	BRNE _0x20601CA
 	LDI  R30,LOW(2)
 	RJMP _0x20E0006
@@ -44194,17 +44212,17 @@ _0x20601CA:
 	CALL SUBOPT_0xB5
 	CALL __CPD10
 	BRNE _0x20601CB
-	CALL SUBOPT_0x422
+	CALL SUBOPT_0x41B
 _0x20601CB:
 	CALL SUBOPT_0x60
 	CALL SUBOPT_0xBC
-	CALL SUBOPT_0x3EE
+	CALL SUBOPT_0x3E7
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x40A
-	CALL SUBOPT_0x3DE
+	CALL SUBOPT_0x403
+	CALL SUBOPT_0x3D8
 	POP  R26
 	POP  R27
 	POP  R24
@@ -44213,20 +44231,20 @@ _0x20601CB:
 	BRLO _0x20601C7
 	RJMP _0x20601CC
 _0x20601C5:
-	CALL SUBOPT_0x40A
-	CALL SUBOPT_0x3DE
-	CALL SUBOPT_0x3EE
-	CALL SUBOPT_0x40A
+	CALL SUBOPT_0x403
+	CALL SUBOPT_0x3D8
+	CALL SUBOPT_0x3E7
+	CALL SUBOPT_0x403
 	ADIW R30,34
 	MOVW R26,R30
 	CALL __GETD1P
-	CALL SUBOPT_0x352
+	CALL SUBOPT_0x256
 	CALL SUBOPT_0x0
 _0x20601CE:
 	MOV  R0,R18
 	OR   R0,R19
 	BRNE _0x20601D0
-	CALL SUBOPT_0x407
+	CALL SUBOPT_0x400
 	CALL SUBOPT_0xD9
 	CALL SUBOPT_0xBC
 	CALL SUBOPT_0xEA
@@ -44235,12 +44253,12 @@ _0x20601CE:
 	SBCI R23,0
 	MOVW R26,R30
 	MOVW R24,R22
-	CALL SUBOPT_0x3F1
+	CALL SUBOPT_0x3EA
 	BREQ _0x20601D1
 	MOV  R30,R17
 	RJMP _0x20E0006
 _0x20601D1:
-	CALL SUBOPT_0x40A
+	CALL SUBOPT_0x403
 	ADIW R30,50
 	MOVW R20,R30
 	__GETWRN 18,19,512
@@ -44251,7 +44269,7 @@ _0x20601D0:
 	CALL __GETW1P
 	SBIW R30,0
 	BRNE _0x20601D3
-	CALL SUBOPT_0x422
+	CALL SUBOPT_0x41B
 _0x20601D3:
 	__ADDWRN 20,21,2
 	__SUBWRN 18,19,2
@@ -44262,7 +44280,7 @@ _0x20601D2:
 	__ANDD1N 0xFFFFFFF
 	CALL __CPD10
 	BRNE _0x20601D5
-	CALL SUBOPT_0x422
+	CALL SUBOPT_0x41B
 _0x20601D5:
 	__ADDWRN 20,21,4
 	__SUBWRN 18,19,4
@@ -44271,18 +44289,18 @@ _0x20601D4:
 	SBIW R30,1
 	SBCI R22,0
 	SBCI R23,0
-	CALL SUBOPT_0x3EE
+	CALL SUBOPT_0x3E7
 	BREQ _0x20601CF
 	RJMP _0x20601CE
 _0x20601CF:
 _0x20601CC:
-	CALL SUBOPT_0x40A
+	CALL SUBOPT_0x403
 	ADIW R30,14
-	CALL SUBOPT_0x3D0
-	CALL SUBOPT_0x264
+	CALL SUBOPT_0x252
+	CALL SUBOPT_0x261
 	CPI  R16,3
 	BRNE _0x20601D6
-	CALL SUBOPT_0x40A
+	CALL SUBOPT_0x403
 	ADIW R30,5
 	LDI  R26,LOW(1)
 	STD  Z+0,R26
@@ -44411,7 +44429,7 @@ __ftoe_G104:
 	LDI  R26,HIGH(0xFFFF)
 	CPC  R31,R26
 	BRNE _0x2080037
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x193
 	__POINTD2FN _0x2080000,0
 	CALL _strcpyf
 	CALL __LOADLOCR4
@@ -44421,7 +44439,7 @@ _0x2080037:
 	LDI  R26,HIGH(0x7FFF)
 	CPC  R31,R26
 	BRNE _0x2080036
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x193
 	__POINTD2FN _0x2080000,1
 	CALL _strcpyf
 	CALL __LOADLOCR4
@@ -44439,51 +44457,51 @@ _0x208003A:
 	SUBI R17,1
 	CPI  R30,0
 	BREQ _0x208003C
-	CALL SUBOPT_0x423
-	CALL SUBOPT_0xA7
+	CALL SUBOPT_0x41C
+	CALL SUBOPT_0xA8
 	RJMP _0x208003A
 _0x208003C:
 	CALL SUBOPT_0xD9
 	CALL __CPD10
 	BRNE _0x208003D
 	LDI  R19,LOW(0)
-	CALL SUBOPT_0x423
-	CALL SUBOPT_0xA7
+	CALL SUBOPT_0x41C
+	CALL SUBOPT_0xA8
 	RJMP _0x208003E
 _0x208003D:
 	LDD  R19,Y+11
-	CALL SUBOPT_0x424
+	CALL SUBOPT_0x41D
 	BREQ PC+2
 	BRCC PC+3
 	JMP  _0x208003F
-	CALL SUBOPT_0x423
-	CALL SUBOPT_0xA7
+	CALL SUBOPT_0x41C
+	CALL SUBOPT_0xA8
 _0x2080040:
-	CALL SUBOPT_0x424
+	CALL SUBOPT_0x41D
 	BRLO _0x2080042
-	CALL SUBOPT_0x425
+	CALL SUBOPT_0x41E
 	SUBI R19,-LOW(1)
 	RJMP _0x2080040
 _0x2080042:
 	RJMP _0x2080043
 _0x208003F:
 _0x2080044:
-	CALL SUBOPT_0x424
+	CALL SUBOPT_0x41D
 	BRSH _0x2080046
-	CALL SUBOPT_0x3AC
+	CALL SUBOPT_0x3A7
 	CALL SUBOPT_0xEA
 	SUBI R19,LOW(1)
 	RJMP _0x2080044
 _0x2080046:
-	CALL SUBOPT_0x423
-	CALL SUBOPT_0xA7
+	CALL SUBOPT_0x41C
+	CALL SUBOPT_0xA8
 _0x2080043:
 	CALL SUBOPT_0xD9
-	CALL SUBOPT_0x3A7
+	CALL SUBOPT_0x3A2
 	CALL SUBOPT_0xEA
-	CALL SUBOPT_0x424
+	CALL SUBOPT_0x41D
 	BRLO _0x2080047
-	CALL SUBOPT_0x425
+	CALL SUBOPT_0x41E
 	SUBI R19,-LOW(1)
 _0x2080047:
 _0x208003E:
@@ -44492,19 +44510,19 @@ _0x2080048:
 	LDD  R30,Y+11
 	CP   R30,R17
 	BRLO _0x208004A
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0xA9
 	__GETD1N 0x3DCCCCCD
 	CALL __MULF12
-	CALL SUBOPT_0x3A7
+	CALL SUBOPT_0x3A2
 	MOVW R26,R30
 	MOVW R24,R22
 	CALL _floor
-	CALL SUBOPT_0xAD
+	CALL SUBOPT_0xAE
 	CALL SUBOPT_0xB
 	CALL __DIVF21
 	CALL __CFD1U
 	MOV  R16,R30
-	CALL SUBOPT_0x426
+	CALL SUBOPT_0x41F
 	MOV  R30,R16
 	SUBI R30,-LOW(48)
 	ST   X,R30
@@ -44513,16 +44531,16 @@ _0x2080048:
 	CLR  R22
 	CLR  R23
 	CALL __CDF1
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0xA9
 	CALL __MULF12
 	CALL SUBOPT_0xB
-	CALL SUBOPT_0x222
+	CALL SUBOPT_0x21A
 	CALL SUBOPT_0xEA
 	MOV  R30,R17
 	SUBI R17,-1
 	CPI  R30,0
 	BRNE _0x2080048
-	CALL SUBOPT_0x426
+	CALL SUBOPT_0x41F
 	LDI  R30,LOW(46)
 	ST   X,R30
 	RJMP _0x2080048
@@ -44546,7 +44564,7 @@ _0x2080137:
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
 	ADIW R30,1
-	CALL SUBOPT_0x193
+	CALL SUBOPT_0x192
 	ADIW R30,1
 	STD  Y+8,R30
 	STD  Y+8+1,R31
@@ -44580,18 +44598,18 @@ __print_G104:
 	CALL __SAVELOCR6
 	LDI  R17,0
 	__GETD1SX 92
-	CALL SUBOPT_0x367
-	CALL SUBOPT_0x20E
+	CALL SUBOPT_0x361
+	__GETW1SX 90
 	STD  Y+6,R30
 	STD  Y+6+1,R31
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
-	CALL SUBOPT_0x114
+	CALL SUBOPT_0x113
 _0x208004E:
 	MOVW R26,R28
 	SUBI R26,LOW(-(98))
 	SBCI R27,HIGH(-(98))
-	CALL SUBOPT_0x3B1
+	CALL SUBOPT_0x3AC
 	__GETBRPF 30
 	MOV  R18,R30
 	CPI  R30,0
@@ -44605,7 +44623,7 @@ _0x208004E:
 	LDI  R17,LOW(1)
 	RJMP _0x2080056
 _0x2080055:
-	CALL SUBOPT_0x427
+	CALL SUBOPT_0x420
 _0x2080056:
 	RJMP _0x2080053
 _0x2080054:
@@ -44613,7 +44631,7 @@ _0x2080054:
 	BRNE _0x2080057
 	CPI  R18,37
 	BRNE _0x2080058
-	CALL SUBOPT_0x427
+	CALL SUBOPT_0x420
 	RJMP _0x2080138
 _0x2080058:
 	LDI  R17,LOW(2)
@@ -44711,12 +44729,12 @@ _0x208006C:
 	MOV  R30,R18
 	CPI  R30,LOW(0x63)
 	BRNE _0x2080071
-	CALL SUBOPT_0x428
-	CALL SUBOPT_0x429
-	CALL SUBOPT_0x428
+	CALL SUBOPT_0x421
+	CALL SUBOPT_0x422
+	CALL SUBOPT_0x421
 	LDD  R26,Z+4
 	ST   -Y,R26
-	CALL SUBOPT_0x42A
+	CALL SUBOPT_0x423
 	RJMP _0x2080072
 _0x2080071:
 	CPI  R30,LOW(0x45)
@@ -44734,10 +44752,10 @@ _0x2080077:
 	ADIW R30,26
 	STD  Y+16,R30
 	STD  Y+16+1,R31
-	CALL SUBOPT_0x42B
+	CALL SUBOPT_0x424
 	CALL __GETD1P
 	CALL SUBOPT_0xEA
-	CALL SUBOPT_0x42C
+	CALL SUBOPT_0x425
 	LDD  R26,Y+15
 	TST  R26
 	BRMI _0x2080079
@@ -44756,10 +44774,10 @@ _0x208007B:
 	RJMP _0x208007D
 	LDD  R30,Y+25
 	ST   -Y,R30
-	CALL SUBOPT_0x42A
+	CALL SUBOPT_0x423
 	RJMP _0x208007E
 _0x208007D:
-	CALL SUBOPT_0x3AB
+	CALL SUBOPT_0x3A6
 	SBIW R30,1
 	LDD  R26,Y+25
 	STD  Z+0,R26
@@ -44769,14 +44787,14 @@ _0x208007C:
 	LDI  R20,LOW(6)
 	CPI  R18,102
 	BRNE _0x2080080
-	CALL SUBOPT_0x16B
+	CALL SUBOPT_0x16A
 	ST   -Y,R20
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	CALL _ftoa
 	RJMP _0x2080081
 _0x2080080:
-	CALL SUBOPT_0x16B
+	CALL SUBOPT_0x16A
 	ST   -Y,R20
 	ST   -Y,R18
 	LDD  R26,Y+22
@@ -44785,25 +44803,25 @@ _0x2080080:
 _0x2080081:
 	MOVW R30,R28
 	ADIW R30,26
-	CALL SUBOPT_0x42D
+	CALL SUBOPT_0x426
 	RJMP _0x2080082
 _0x2080078:
 	CPI  R30,LOW(0x73)
 	BRNE _0x2080084
-	CALL SUBOPT_0x42C
-	CALL SUBOPT_0x42B
+	CALL SUBOPT_0x425
+	CALL SUBOPT_0x424
 	ADIW R26,4
 	CALL __GETW1P
-	CALL SUBOPT_0x42D
+	CALL SUBOPT_0x426
 	RJMP _0x2080085
 _0x2080084:
 	CPI  R30,LOW(0x70)
 	BRNE _0x2080087
-	CALL SUBOPT_0x42C
-	CALL SUBOPT_0x42B
+	CALL SUBOPT_0x425
+	CALL SUBOPT_0x424
 	ADIW R26,4
 	CALL __GETD1P
-	CALL SUBOPT_0x395
+	CALL SUBOPT_0x390
 	CALL _strlenf
 	MOV  R17,R30
 	ORI  R16,LOW(8)
@@ -44841,12 +44859,12 @@ _0x2080090:
 	SBRS R16,1
 	RJMP _0x2080092
 	__GETD1N 0x3B9ACA00
-	CALL SUBOPT_0x369
+	CALL SUBOPT_0x363
 	LDI  R17,LOW(10)
 	RJMP _0x2080093
 _0x2080092:
 	__GETD1N 0x2710
-	CALL SUBOPT_0x369
+	CALL SUBOPT_0x363
 	LDI  R17,LOW(5)
 	RJMP _0x2080093
 _0x2080091:
@@ -44864,12 +44882,12 @@ _0x2080096:
 	SBRS R16,1
 	RJMP _0x2080098
 	__GETD1N 0x10000000
-	CALL SUBOPT_0x369
+	CALL SUBOPT_0x363
 	LDI  R17,LOW(8)
 	RJMP _0x2080093
 _0x2080098:
 	__GETD1N 0x1000
-	CALL SUBOPT_0x369
+	CALL SUBOPT_0x363
 	LDI  R17,LOW(4)
 _0x2080093:
 	CPI  R20,0
@@ -44881,23 +44899,23 @@ _0x2080099:
 _0x208009A:
 	SBRS R16,1
 	RJMP _0x208009B
-	CALL SUBOPT_0x42C
-	CALL SUBOPT_0x42B
+	CALL SUBOPT_0x425
+	CALL SUBOPT_0x424
 	ADIW R26,4
 	CALL __GETD1P
 	RJMP _0x2080139
 _0x208009B:
 	SBRS R16,2
 	RJMP _0x208009D
-	CALL SUBOPT_0x42C
-	CALL SUBOPT_0x42B
+	CALL SUBOPT_0x425
+	CALL SUBOPT_0x424
 	ADIW R26,4
 	CALL __GETW1P
 	CALL __CWD1
 	RJMP _0x2080139
 _0x208009D:
-	CALL SUBOPT_0x42C
-	CALL SUBOPT_0x42B
+	CALL SUBOPT_0x425
+	CALL SUBOPT_0x424
 	ADIW R26,4
 	CALL SUBOPT_0x1E
 _0x2080139:
@@ -44950,7 +44968,7 @@ _0x20800AB:
 _0x20800A9:
 	LDI  R18,LOW(32)
 _0x20800AC:
-	CALL SUBOPT_0x427
+	CALL SUBOPT_0x420
 	SUBI R21,LOW(1)
 	RJMP _0x20800A4
 _0x20800A6:
@@ -44961,7 +44979,7 @@ _0x20800AD:
 	ORI  R16,LOW(16)
 	SBRS R16,2
 	RJMP _0x20800B0
-	CALL SUBOPT_0x42E
+	CALL SUBOPT_0x427
 	BREQ _0x20800B1
 	SUBI R21,LOW(1)
 _0x20800B1:
@@ -44970,7 +44988,7 @@ _0x20800B1:
 _0x20800B0:
 	LDI  R30,LOW(48)
 	ST   -Y,R30
-	CALL SUBOPT_0x42A
+	CALL SUBOPT_0x423
 	CPI  R21,0
 	BREQ _0x20800B2
 	SUBI R21,LOW(1)
@@ -44989,7 +45007,7 @@ _0x20800B4:
 	RJMP _0x20800B7
 	MOVW R26,R28
 	ADIW R26,16
-	CALL SUBOPT_0x3B1
+	CALL SUBOPT_0x3AC
 	__GETBRPF 18
 	RJMP _0x20800B8
 _0x20800B7:
@@ -44999,7 +45017,7 @@ _0x20800B7:
 	STD  Y+16,R26
 	STD  Y+16+1,R27
 _0x20800B8:
-	CALL SUBOPT_0x427
+	CALL SUBOPT_0x420
 	CPI  R21,0
 	BREQ _0x20800B9
 	SUBI R21,LOW(1)
@@ -45031,8 +45049,8 @@ _0x20800C1:
 	RJMP _0x20800C3
 	CPI  R18,49
 	BRSH _0x20800C5
-	CALL SUBOPT_0x233
-	CALL SUBOPT_0x3CC
+	CALL SUBOPT_0x22C
+	CALL SUBOPT_0x3C7
 	BRNE _0x20800C4
 _0x20800C5:
 	RJMP _0x20800C7
@@ -45055,14 +45073,14 @@ _0x20800C7:
 	ORI  R16,LOW(16)
 	SBRS R16,2
 	RJMP _0x20800CD
-	CALL SUBOPT_0x42E
+	CALL SUBOPT_0x427
 	BREQ _0x20800CE
 	SUBI R21,LOW(1)
 _0x20800CE:
 _0x20800CD:
 _0x20800CC:
 _0x20800C3:
-	CALL SUBOPT_0x427
+	CALL SUBOPT_0x420
 	CPI  R21,0
 	BREQ _0x20800CF
 	SUBI R21,LOW(1)
@@ -45074,12 +45092,12 @@ _0x20800C9:
 	CALL __MODD21U
 	CALL SUBOPT_0xEA
 	LDD  R30,Y+24
-	CALL SUBOPT_0x233
+	CALL SUBOPT_0x22C
 	CLR  R31
 	CLR  R22
 	CLR  R23
 	CALL __DIVD21U
-	CALL SUBOPT_0x369
+	CALL SUBOPT_0x363
 	CALL SUBOPT_0xDC
 	CALL __CPD10
 	BREQ _0x20800BD
@@ -45094,7 +45112,7 @@ _0x20800D1:
 	SUBI R21,LOW(1)
 	LDI  R30,LOW(32)
 	ST   -Y,R30
-	CALL SUBOPT_0x42A
+	CALL SUBOPT_0x423
 	RJMP _0x20800D1
 _0x20800D3:
 _0x20800D0:
@@ -45134,7 +45152,7 @@ _0x20800D5:
 	MOVW R26,R28
 	ADIW R26,14
 	CALL __ADDW2R15
-	CALL SUBOPT_0x3AF
+	CALL SUBOPT_0x3AA
 	LDI  R30,LOW(0)
 	STD  Y+8,R30
 	STD  Y+8+1,R30
@@ -45145,7 +45163,7 @@ _0x20800D5:
 	CALL __PUTPARD1
 	ST   -Y,R17
 	ST   -Y,R16
-	CALL SUBOPT_0x42F
+	CALL SUBOPT_0x428
 	MOVW R26,R28
 	ADIW R26,14
 	RCALL __print_G104
@@ -45181,9 +45199,9 @@ _0x20800D8:
 	LDI  R30,LOW(0)
 	STD  Y+6,R30
 	STD  Y+6+1,R30
-	CALL SUBOPT_0x353
-	CALL SUBOPT_0x1AF
-	CALL SUBOPT_0x42F
+	CALL SUBOPT_0x34D
+	CALL SUBOPT_0x1AE
+	CALL SUBOPT_0x428
 	MOVW R26,R28
 	ADIW R26,12
 	RCALL __print_G104
@@ -45326,7 +45344,7 @@ _floor:
 	CALL __PUTPARD2
 	CALL SUBOPT_0x8C
 	CALL _ftrunc
-	CALL SUBOPT_0xA0
+	CALL SUBOPT_0xA1
     brne __floor1
 __floor0:
 	CALL SUBOPT_0x87
@@ -45972,15 +45990,11 @@ _epCalType:
 	.DB  0x0
 
 	.DSEG
-_iTCVoltData:
+_t_S00D0004000:
 	.BYTE 0x14
-_iTCADCData:
-	.BYTE 0x14
-_t_S00D0002000:
-	.BYTE 0x14
-_lastCheck_S00D0002000:
+_lastCheck_S00D0004000:
 	.BYTE 0x5
-_steadyState_S00D0002000:
+_steadyState_S00D0004000:
 	.BYTE 0x5
 _dataQ:
 	.BYTE 0x64
@@ -46231,12 +46245,12 @@ SUBOPT_0xA:
 	LDI  R27,0
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 37 TIMES, CODE SIZE REDUCTION:69 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 35 TIMES, CODE SIZE REDUCTION:65 WORDS
 SUBOPT_0xB:
 	__GETD2S 12
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 14 TIMES, CODE SIZE REDUCTION:23 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 16 TIMES, CODE SIZE REDUCTION:27 WORDS
 SUBOPT_0xC:
 	__GETD1S 16
 	RET
@@ -46361,7 +46375,7 @@ SUBOPT_0x1A:
 	CALL __LSLW2
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 55 TIMES, CODE SIZE REDUCTION:105 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 54 TIMES, CODE SIZE REDUCTION:103 WORDS
 SUBOPT_0x1B:
 	ADD  R26,R30
 	ADC  R27,R31
@@ -46758,7 +46772,7 @@ SUBOPT_0x50:
 	CALL __PUTPARD1
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:29 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:21 WORDS
 SUBOPT_0x51:
 	__GETD1S 18
 	CALL __PUTPARD1
@@ -46767,7 +46781,7 @@ SUBOPT_0x51:
 	ADIW R28,16
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 20 TIMES, CODE SIZE REDUCTION:35 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 21 TIMES, CODE SIZE REDUCTION:37 WORDS
 SUBOPT_0x52:
 	__GETD2S 10
 	RET
@@ -46820,7 +46834,7 @@ SUBOPT_0x58:
 	ADIW R28,16
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 29 TIMES, CODE SIZE REDUCTION:53 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 24 TIMES, CODE SIZE REDUCTION:43 WORDS
 SUBOPT_0x59:
 	__GETD2S 6
 	RET
@@ -46833,7 +46847,7 @@ SUBOPT_0x5A:
 	ST   -Y,R30
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:21 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:17 WORDS
 SUBOPT_0x5B:
 	CALL __PUTPARD1
 	RCALL SUBOPT_0xC
@@ -46867,7 +46881,7 @@ SUBOPT_0x5F:
 	LDI  R31,HIGH(_LOGFILE_DATA)
 	RJMP SUBOPT_0x34
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:11 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:15 WORDS
 SUBOPT_0x60:
 	__GETD1S 14
 	RET
@@ -46906,7 +46920,7 @@ SUBOPT_0x65:
 	CALL __PUTPARD1
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:13 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:15 WORDS
 SUBOPT_0x66:
 	LDI  R24,12
 	CALL _printDebug
@@ -47200,14 +47214,19 @@ SUBOPT_0x8D:
 	__GETD1S 12
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 14 TIMES, CODE SIZE REDUCTION:49 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
 SUBOPT_0x8E:
+	CALL __PUTPARD1
+	RJMP SUBOPT_0x66
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 14 TIMES, CODE SIZE REDUCTION:49 WORDS
+SUBOPT_0x8F:
 	__GETD1N 0x0
 	CALL __PUTDP1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:12 WORDS
-SUBOPT_0x8F:
+SUBOPT_0x90:
 	ST   -Y,R0
 	ST   -Y,R1
 	ST   -Y,R15
@@ -47228,7 +47247,7 @@ SUBOPT_0x8F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x90:
+SUBOPT_0x91:
 	LDI  R30,LOW(254)
 	STS  133,R30
 	LDI  R30,LOW(121)
@@ -47236,7 +47255,7 @@ SUBOPT_0x90:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x91:
+SUBOPT_0x92:
 	LDI  R30,LOW(133)
 	STS  149,R30
 	LDI  R30,LOW(237)
@@ -47244,14 +47263,14 @@ SUBOPT_0x91:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x92:
+SUBOPT_0x93:
 	CALL __GETD1P_INC
 	__SUBD1N -1
 	CALL __PUTDP1_DEC
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x93:
+SUBOPT_0x94:
 	LDI  R30,LOW(133)
 	STS  165,R30
 	LDI  R30,LOW(237)
@@ -47259,7 +47278,7 @@ SUBOPT_0x93:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x94:
+SUBOPT_0x95:
 	ST   -Y,R27
 	ST   -Y,R26
 	LD   R30,Y
@@ -47267,7 +47286,7 @@ SUBOPT_0x94:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:45 WORDS
-SUBOPT_0x95:
+SUBOPT_0x96:
 	IN   R30,0x6
 	ANDI R30,LOW(0xC0)
 	LDI  R31,0
@@ -47281,7 +47300,7 @@ SUBOPT_0x95:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x96:
+SUBOPT_0x97:
 	IN   R30,0x3
 	ANDI R30,LOW(0x10)
 	LDI  R31,0
@@ -47290,13 +47309,13 @@ SUBOPT_0x96:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x97:
+SUBOPT_0x98:
 	LDI  R26,LOW(5)
 	LDI  R27,0
 	JMP  _delay_ms
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x98:
+SUBOPT_0x99:
 	IN   R30,0x3
 	ANDI R30,LOW(0x20)
 	LDI  R31,0
@@ -47307,7 +47326,7 @@ SUBOPT_0x98:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x99:
+SUBOPT_0x9A:
 	IN   R30,0x3
 	ANDI R30,LOW(0x40)
 	LDI  R31,0
@@ -47317,7 +47336,7 @@ SUBOPT_0x99:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x9A:
+SUBOPT_0x9B:
 	IN   R30,0x3
 	ANDI R30,LOW(0x80)
 	LDI  R31,0
@@ -47327,13 +47346,13 @@ SUBOPT_0x9A:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x9B:
+SUBOPT_0x9C:
 	LDI  R31,0
 	ANDI R31,HIGH(0xFF)
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x9C:
+SUBOPT_0x9D:
 	LDS  R26,_adcBatt
 	LDS  R27,_adcBatt+1
 	LDS  R24,_adcBatt+2
@@ -47341,20 +47360,20 @@ SUBOPT_0x9C:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0x9D:
+SUBOPT_0x9E:
 	CLR  R22
 	CLR  R23
 	CALL __CDF1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x9E:
+SUBOPT_0x9F:
 	__GETD2N 0x3DCCCCCD
 	CALL __MULF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:45 WORDS
-SUBOPT_0x9F:
+SUBOPT_0xA0:
 	CALL __ADDF12
 	MOVW R26,R30
 	MOVW R24,R22
@@ -47363,12 +47382,12 @@ SUBOPT_0x9F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0xA0:
+SUBOPT_0xA1:
 	CALL __PUTD1S0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0xA1:
+SUBOPT_0xA2:
 	LDS  R30,264
 	ANDI R30,LOW(0xF1)
 	STS  264,R30
@@ -47379,7 +47398,7 @@ SUBOPT_0xA1:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0xA2:
+SUBOPT_0xA3:
 	LSL  R30
 	OR   R30,R26
 	MOV  R26,R0
@@ -47389,24 +47408,24 @@ SUBOPT_0xA2:
 	JMP  _delay_ms
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0xA3:
-	RCALL SUBOPT_0x9D
+SUBOPT_0xA4:
+	RCALL SUBOPT_0x9E
 	CALL __PUTDP1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0xA4:
+SUBOPT_0xA5:
 	CALL _i2c_start
 	LDI  R26,LOW(208)
 	JMP  _i2c_write
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xA5:
+SUBOPT_0xA6:
 	CALL _i2c_write
 	JMP  _i2c_stop
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0xA6:
+SUBOPT_0xA7:
 	LDI  R26,LOW(10)
 	LDI  R27,0
 	CALL _delay_ms
@@ -47414,53 +47433,48 @@ SUBOPT_0xA6:
 	LDI  R31,HIGH(0)
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 32 TIMES, CODE SIZE REDUCTION:59 WORDS
-SUBOPT_0xA7:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 33 TIMES, CODE SIZE REDUCTION:61 WORDS
+SUBOPT_0xA8:
 	__PUTD1S 4
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 29 TIMES, CODE SIZE REDUCTION:53 WORDS
-SUBOPT_0xA8:
+SUBOPT_0xA9:
 	__GETD2S 4
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xA9:
+SUBOPT_0xAA:
 	LDI  R30,LOW(8)
 	CALL __LSLD12
-	RJMP SUBOPT_0xA7
+	RJMP SUBOPT_0xA8
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:10 WORDS
-SUBOPT_0xAA:
+SUBOPT_0xAB:
 	LDI  R31,0
-	RCALL SUBOPT_0xA8
+	RCALL SUBOPT_0xA9
 	CALL __CWD1
 	CALL __ADDD12
-	RCALL SUBOPT_0xA7
 	RCALL SUBOPT_0xA8
-	RJMP SUBOPT_0xA9
+	RCALL SUBOPT_0xA9
+	RJMP SUBOPT_0xAA
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 23 TIMES, CODE SIZE REDUCTION:41 WORDS
-SUBOPT_0xAB:
+SUBOPT_0xAC:
 	MOV  R30,R17
 	LDI  R31,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0xAC:
+SUBOPT_0xAD:
 	CALL __CWD1
 	CALL __ADDD12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0xAD:
-	RCALL SUBOPT_0xA7
-	RJMP SUBOPT_0x89
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
 SUBOPT_0xAE:
-	__GETD2S 44
-	RET
+	RCALL SUBOPT_0xA8
+	RJMP SUBOPT_0x89
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
 SUBOPT_0xAF:
@@ -47468,7 +47482,7 @@ SUBOPT_0xAF:
 	CALL __DIVD21U
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:9 WORDS
 SUBOPT_0xB0:
 	__PUTD1S 6
 	RET
@@ -47479,27 +47493,27 @@ SUBOPT_0xB1:
 	CALL __MULD12U
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 18 TIMES, CODE SIZE REDUCTION:31 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 16 TIMES, CODE SIZE REDUCTION:27 WORDS
 SUBOPT_0xB2:
 	__PUTD1S 2
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 22 TIMES, CODE SIZE REDUCTION:39 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 20 TIMES, CODE SIZE REDUCTION:35 WORDS
 SUBOPT_0xB3:
 	__GETD1S 2
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 24 TIMES, CODE SIZE REDUCTION:43 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 21 TIMES, CODE SIZE REDUCTION:37 WORDS
 SUBOPT_0xB4:
 	__GETD2S 2
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 29 TIMES, CODE SIZE REDUCTION:53 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 27 TIMES, CODE SIZE REDUCTION:49 WORDS
 SUBOPT_0xB5:
 	__GETD1S 6
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 11 TIMES, CODE SIZE REDUCTION:17 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
 SUBOPT_0xB6:
 	__PUTD1S 6
 	RET
@@ -47525,7 +47539,7 @@ SUBOPT_0xBA:
 	__CPD2N 0x3C
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
 SUBOPT_0xBB:
 	__GETD1S 30
 	RET
@@ -47652,7 +47666,7 @@ SUBOPT_0xD3:
 	__ADDD1N 1
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 11 TIMES, CODE SIZE REDUCTION:17 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 14 TIMES, CODE SIZE REDUCTION:23 WORDS
 SUBOPT_0xD4:
 	__GETD1S 18
 	RET
@@ -47680,7 +47694,7 @@ SUBOPT_0xD8:
 	__GETD2S 8
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 37 TIMES, CODE SIZE REDUCTION:69 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 34 TIMES, CODE SIZE REDUCTION:63 WORDS
 SUBOPT_0xD9:
 	__GETD1S 12
 	RET
@@ -47697,7 +47711,7 @@ SUBOPT_0xDB:
 	CALL __MULD12U
 	RJMP SUBOPT_0xD7
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 11 TIMES, CODE SIZE REDUCTION:17 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 12 TIMES, CODE SIZE REDUCTION:19 WORDS
 SUBOPT_0xDC:
 	__GETD1S 20
 	RET
@@ -47719,7 +47733,7 @@ SUBOPT_0xDF:
 	RCALL SUBOPT_0xB
 	RCALL SUBOPT_0x4F
 	CALL __SUBD12
-	RJMP SUBOPT_0xA7
+	RJMP SUBOPT_0xA8
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
 SUBOPT_0xE0:
@@ -47733,11 +47747,11 @@ SUBOPT_0xE1:
 	RCALL SUBOPT_0xD8
 	RCALL SUBOPT_0xD9
 	CALL __SUBD12
-	RJMP SUBOPT_0xA7
+	RJMP SUBOPT_0xA8
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
 SUBOPT_0xE2:
-	RCALL SUBOPT_0xA8
+	RCALL SUBOPT_0xA9
 	__CPD2N 0xA
 	RET
 
@@ -47780,7 +47794,7 @@ SUBOPT_0xE6:
 	MOV  R26,R19
 	CALL _i2c_write
 	MOV  R26,R18
-	RJMP SUBOPT_0xA5
+	RJMP SUBOPT_0xA6
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
 SUBOPT_0xE7:
@@ -47790,7 +47804,7 @@ SUBOPT_0xE7:
 	CALL __SAVELOCR4
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:15 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:13 WORDS
 SUBOPT_0xE8:
 	CALL __PUTPARD1
 	LDD  R30,Y+20
@@ -47803,7 +47817,7 @@ SUBOPT_0xE9:
 	CALL __PUTPARD1
 	RJMP SUBOPT_0x12
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 29 TIMES, CODE SIZE REDUCTION:53 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 26 TIMES, CODE SIZE REDUCTION:47 WORDS
 SUBOPT_0xEA:
 	__PUTD1S 12
 	RET
@@ -47841,13 +47855,12 @@ SUBOPT_0xEF:
 	RCALL SUBOPT_0xB2
 	RJMP SUBOPT_0xB4
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:9 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
 SUBOPT_0xF0:
-	RCALL SUBOPT_0xB3
-	CALL __PUTPARD1
-	RET
+	RCALL SUBOPT_0xB2
+	RJMP SUBOPT_0xB3
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:9 WORDS
 SUBOPT_0xF1:
 	CALL __PUTPARD1
 	LDD  R30,Y+28
@@ -47860,32 +47873,28 @@ SUBOPT_0xF2:
 	CALL __PUTPARD1
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:7 WORDS
 SUBOPT_0xF3:
 	__GETD1S 32
-	RET
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xF4:
 	CALL __PUTPARD1
 	__GETD1S 40
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xF5:
+SUBOPT_0xF4:
 	__GETD1S 48
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 15 TIMES, CODE SIZE REDUCTION:25 WORDS
-SUBOPT_0xF6:
+SUBOPT_0xF5:
 	LDI  R26,LOW(0)
 	LDI  R27,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 13 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0xF7:
+SUBOPT_0xF6:
 	ST   -Y,R31
 	ST   -Y,R30
 	LDI  R30,LOW(0)
@@ -47893,20 +47902,20 @@ SUBOPT_0xF7:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xF8:
+SUBOPT_0xF7:
 	LDI  R26,LOW(161)
 	LDI  R27,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0xF9:
+SUBOPT_0xF8:
 	ADD  R26,R16
 	ADC  R27,R17
 	CALL __EEPROMRDB
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:22 WORDS
-SUBOPT_0xFA:
+SUBOPT_0xF9:
 	ADD  R30,R16
 	ADC  R31,R17
 	MOVW R26,R30
@@ -47916,7 +47925,7 @@ SUBOPT_0xFA:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xFB:
+SUBOPT_0xFA:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	SUBI R30,LOW(-80)
@@ -47926,7 +47935,7 @@ SUBOPT_0xFB:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xFC:
+SUBOPT_0xFB:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	SUBI R30,LOW(-100)
@@ -47936,7 +47945,7 @@ SUBOPT_0xFC:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xFD:
+SUBOPT_0xFC:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	SUBI R30,LOW(-140)
@@ -47946,7 +47955,7 @@ SUBOPT_0xFD:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xFE:
+SUBOPT_0xFD:
 	ST   X,R30
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
@@ -47954,7 +47963,7 @@ SUBOPT_0xFE:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xFF:
+SUBOPT_0xFE:
 	ST   X,R30
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
@@ -47965,7 +47974,7 @@ SUBOPT_0xFF:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x100:
+SUBOPT_0xFF:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	ADIW R30,3
@@ -47974,7 +47983,7 @@ SUBOPT_0x100:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x101:
+SUBOPT_0x100:
 	CALL __EEPROMRDB
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
@@ -47982,19 +47991,19 @@ SUBOPT_0x101:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x102:
+SUBOPT_0x101:
 	CALL __EEPROMRDB
 	__PUTB1SNS 2,1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x103:
+SUBOPT_0x102:
 	CALL __EEPROMRDB
 	__PUTB1SNS 2,2
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x104:
+SUBOPT_0x103:
 	CALL __PUTPARD1
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
@@ -48002,19 +48011,19 @@ SUBOPT_0x104:
 	RJMP SUBOPT_0x29
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 15 TIMES, CODE SIZE REDUCTION:25 WORDS
-SUBOPT_0x105:
+SUBOPT_0x104:
 	CALL __PUTPARD1
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x106:
+SUBOPT_0x105:
 	__POINTD1FN _0xE0000,295
-	RJMP SUBOPT_0x105
+	RJMP SUBOPT_0x104
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x107:
+SUBOPT_0x106:
 	ADIW R30,3
 	ADD  R30,R16
 	ADC  R31,R17
@@ -48022,12 +48031,12 @@ SUBOPT_0x107:
 	RJMP SUBOPT_0x29
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:25 WORDS
-SUBOPT_0x108:
+SUBOPT_0x107:
 	__POINTD1FN _0xE0000,51
 	RJMP SUBOPT_0x3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x109:
+SUBOPT_0x108:
 	ST   -Y,R27
 	ST   -Y,R26
 	LDD  R26,Y+3
@@ -48035,7 +48044,7 @@ SUBOPT_0x109:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x10A:
+SUBOPT_0x109:
 	ST   X+,R30
 	ST   X,R31
 	LD   R26,Y
@@ -48043,7 +48052,7 @@ SUBOPT_0x10A:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x10B:
+SUBOPT_0x10A:
 	LDI  R30,LOW(0)
 	ST   X,R30
 	LD   R26,Y
@@ -48051,12 +48060,12 @@ SUBOPT_0x10B:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 14 TIMES, CODE SIZE REDUCTION:23 WORDS
-SUBOPT_0x10C:
+SUBOPT_0x10B:
 	__GETD1N 0x41200000
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 30 TIMES, CODE SIZE REDUCTION:84 WORDS
-SUBOPT_0x10D:
+SUBOPT_0x10C:
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
 	LDI  R30,LOW(29)
@@ -48064,49 +48073,49 @@ SUBOPT_0x10D:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x10E:
+SUBOPT_0x10D:
 	__ADDW1MN _config_sens,9
 	MOVW R26,R30
 	CALL __EEPROMRDD
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x10F:
+SUBOPT_0x10E:
 	__ADDW1MN _config_sens,13
 	MOVW R26,R30
 	CALL __EEPROMRDW
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x110:
+SUBOPT_0x10F:
 	__ADDW1MN _config_sens,15
 	MOVW R26,R30
 	CALL __EEPROMRDD
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x111:
+SUBOPT_0x110:
 	__ADDW1MN _config_sens,19
 	MOVW R26,R30
 	CALL __EEPROMRDD
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x112:
+SUBOPT_0x111:
 	__ADDW1MN _config_sens,23
 	MOVW R26,R30
 	CALL __EEPROMRDW
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x113:
+SUBOPT_0x112:
 	__ADDW1MN _config_sens,25
 	MOVW R26,R30
 	CALL __EEPROMRDD
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 12 TIMES, CODE SIZE REDUCTION:19 WORDS
-SUBOPT_0x114:
+SUBOPT_0x113:
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
 	ST   X+,R30
@@ -48114,7 +48123,7 @@ SUBOPT_0x114:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x115:
+SUBOPT_0x114:
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
 	LDI  R30,LOW(3)
@@ -48122,7 +48131,7 @@ SUBOPT_0x115:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x116:
+SUBOPT_0x115:
 	MOVW R26,R30
 	CALL __EEPROMRDB
 	LD   R26,Y
@@ -48131,20 +48140,20 @@ SUBOPT_0x116:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x117:
+SUBOPT_0x116:
 	CALL __EEPROMRDW
 	__PUTW1SNS 0,1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x118:
+SUBOPT_0x117:
 	CALL __PUTPARD1
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
 	RJMP SUBOPT_0xE9
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 12 TIMES, CODE SIZE REDUCTION:30 WORDS
-SUBOPT_0x119:
+SUBOPT_0x118:
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	LDI  R30,LOW(38)
@@ -48152,7 +48161,7 @@ SUBOPT_0x119:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:27 WORDS
-SUBOPT_0x11A:
+SUBOPT_0x119:
 	CALL __PUTPARD1
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
@@ -48161,7 +48170,7 @@ SUBOPT_0x11A:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x11B:
+SUBOPT_0x11A:
 	SUBI R30,LOW(-_config_dout)
 	SBCI R31,HIGH(-_config_dout)
 	MOVW R26,R30
@@ -48169,21 +48178,21 @@ SUBOPT_0x11B:
 	RJMP SUBOPT_0x29
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x11C:
+SUBOPT_0x11B:
 	__ADDW1MN _config_dout,1
 	MOVW R26,R30
 	CALL __EEPROMRDB
 	RJMP SUBOPT_0x29
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x11D:
+SUBOPT_0x11C:
 	__ADDW1MN _config_dout,2
 	MOVW R26,R30
 	CALL __EEPROMRDB
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x11E:
+SUBOPT_0x11D:
 	MOVW R26,R16
 	LDI  R31,0
 	CP   R26,R30
@@ -48191,7 +48200,7 @@ SUBOPT_0x11E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x11F:
+SUBOPT_0x11E:
 	__ADDW1MN _config_dout,3
 	ADD  R30,R16
 	ADC  R31,R17
@@ -48199,7 +48208,7 @@ SUBOPT_0x11F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x120:
+SUBOPT_0x11F:
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
 	LDI  R30,LOW(5)
@@ -48207,7 +48216,7 @@ SUBOPT_0x120:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x121:
+SUBOPT_0x120:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	ADIW R30,6
@@ -48216,7 +48225,7 @@ SUBOPT_0x121:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 12 TIMES, CODE SIZE REDUCTION:30 WORDS
-SUBOPT_0x122:
+SUBOPT_0x121:
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	LDI  R30,LOW(41)
@@ -48224,14 +48233,14 @@ SUBOPT_0x122:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x123:
+SUBOPT_0x122:
 	__ADDW1MN _config_aout,5
 	MOVW R26,R30
 	CALL __EEPROMRDB
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x124:
+SUBOPT_0x123:
 	__ADDW1MN _config_aout,6
 	ADD  R30,R16
 	ADC  R31,R17
@@ -48239,7 +48248,7 @@ SUBOPT_0x124:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x125:
+SUBOPT_0x124:
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
 	ADIW R30,2
@@ -48248,7 +48257,7 @@ SUBOPT_0x125:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x126:
+SUBOPT_0x125:
 	MOVW R26,R28
 	ADIW R26,2
 	ADD  R26,R16
@@ -48256,32 +48265,32 @@ SUBOPT_0x126:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x127:
+SUBOPT_0x126:
 	__POINTW2MN _config_buzz,1
 	CALL __EEPROMRDB
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 24 TIMES, CODE SIZE REDUCTION:43 WORDS
-SUBOPT_0x128:
+SUBOPT_0x127:
 	CALL __PUTPARD1
 	LDD  R26,Y+10
 	LDD  R27,Y+10+1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 36 TIMES, CODE SIZE REDUCTION:67 WORDS
-SUBOPT_0x129:
+SUBOPT_0x128:
 	CALL __PUTPARD1
 	LDD  R30,Y+10
 	LDD  R31,Y+10+1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x12A:
+SUBOPT_0x129:
 	__POINTD1FN _0xE0000,295
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x12B:
+SUBOPT_0x12A:
 	ADIW R30,2
 	ADD  R30,R16
 	ADC  R31,R17
@@ -48289,44 +48298,44 @@ SUBOPT_0x12B:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x12C:
+SUBOPT_0x12B:
 	CALL __PUTPARD1
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x12D:
+SUBOPT_0x12C:
 	CALL __GETD1P
 	CALL __PUTPARD1
 	RJMP SUBOPT_0x12
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x12E:
+SUBOPT_0x12D:
 	CALL __GETW1P
 	RJMP SUBOPT_0xE9
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x12F:
+SUBOPT_0x12E:
 	CALL __PUTPARD1
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x130:
+SUBOPT_0x12F:
 	__GETD2Z 6
 	CALL __PUTPARD2
 	RJMP SUBOPT_0x12
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x131:
+SUBOPT_0x130:
 	__GETD2Z 10
 	CALL __PUTPARD2
 	RJMP SUBOPT_0x12
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x132:
+SUBOPT_0x131:
 	ADD  R26,R30
 	ADC  R27,R31
 	LD   R30,X
@@ -48334,68 +48343,68 @@ SUBOPT_0x132:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x133:
+SUBOPT_0x132:
 	LD   R30,X
 	MOVW R26,R0
 	CALL __EEPROMWRB
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x134:
+SUBOPT_0x133:
 	LDI  R30,LOW(1)
 	CALL __EEPROMWRB
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 19 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x135:
+SUBOPT_0x134:
 	CALL __EEPROMRDB
 	RJMP SUBOPT_0x29
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x136:
+SUBOPT_0x135:
 	__POINTD1FN _0xE0000,1805
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x137:
+SUBOPT_0x136:
 	LD   R26,Y
 	LDD  R27,Y+1
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x138:
+SUBOPT_0x137:
 	MOVW R26,R0
 	CALL __EEPROMWRW
-	RJMP SUBOPT_0x10D
+	RJMP SUBOPT_0x10C
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x139:
+SUBOPT_0x138:
 	CALL __GETW1P
-	RJMP SUBOPT_0x138
+	RJMP SUBOPT_0x137
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x13A:
+SUBOPT_0x139:
 	CALL __EEPROMWRB
-	RJMP SUBOPT_0x10D
+	RJMP SUBOPT_0x10C
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x13B:
+SUBOPT_0x13A:
 	CALL __GETD1P
 	MOVW R26,R0
 	CALL __EEPROMWRD
-	RJMP SUBOPT_0x10D
+	RJMP SUBOPT_0x10C
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x13C:
+SUBOPT_0x13B:
 	CALL __GETD1P
 	MOVW R26,R0
 	CALL __EEPROMWRD
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 12 TIMES, CODE SIZE REDUCTION:52 WORDS
-SUBOPT_0x13D:
+SUBOPT_0x13C:
 	CALL __PUTPARD1
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
@@ -48404,19 +48413,19 @@ SUBOPT_0x13D:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x13E:
+SUBOPT_0x13D:
 	MOVW R26,R30
 	CALL __EEPROMRDW
 	RJMP SUBOPT_0x34
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0x13F:
+SUBOPT_0x13E:
 	CLR  R22
 	CLR  R23
 	RJMP SUBOPT_0x21
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x140:
+SUBOPT_0x13F:
 	MOVW R0,R30
 	LD   R26,Y
 	LDD  R27,Y+1
@@ -48424,19 +48433,19 @@ SUBOPT_0x140:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x141:
+SUBOPT_0x140:
 	CALL __GETW1P
 	MOVW R26,R0
 	CALL __EEPROMWRW
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x142:
+SUBOPT_0x141:
 	__POINTD1FN _0xE0000,2332
-	RJMP SUBOPT_0x105
+	RJMP SUBOPT_0x104
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x143:
+SUBOPT_0x142:
 	__POINTD1FN _0xE0000,2359
 	CALL __PUTPARD1
 	LDD  R26,Y+6
@@ -48444,42 +48453,42 @@ SUBOPT_0x143:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x144:
+SUBOPT_0x143:
 	CALL __PUTPARD1
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x145:
+SUBOPT_0x144:
 	CALL __EEPROMWRB
-	RJMP SUBOPT_0x119
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x146:
-	CALL __EEPROMWRB
-	__POINTD1FN _0xE0000,2512
 	RJMP SUBOPT_0x118
 
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
+SUBOPT_0x145:
+	CALL __EEPROMWRB
+	__POINTD1FN _0xE0000,2512
+	RJMP SUBOPT_0x117
+
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x147:
+SUBOPT_0x146:
 	__POINTD1FN _0xE0000,2603
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x148:
+SUBOPT_0x147:
 	__POINTD1FN _0xE0000,2630
 	JMP SUBOPT_0x3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x149:
+SUBOPT_0x148:
 	MOVW R26,R30
 	CALL __EEPROMRDD
 	CALL __PUTPARD1
 	JMP SUBOPT_0x12
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:12 WORDS
-SUBOPT_0x14A:
+SUBOPT_0x149:
 	CALL __PUTPARD1
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
@@ -48488,7 +48497,7 @@ SUBOPT_0x14A:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x14B:
+SUBOPT_0x14A:
 	__POINTW1MN _config_buzz,2
 	ADD  R30,R16
 	ADC  R31,R17
@@ -48496,20 +48505,20 @@ SUBOPT_0x14B:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x14C:
+SUBOPT_0x14B:
 	CALL __EEPROMRDD
 	CALL __PUTPARD1
 	JMP SUBOPT_0x12
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x14D:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:9 WORDS
+SUBOPT_0x14C:
 	ST   -Y,R17
 	ST   -Y,R16
 	__GETWRN 16,17,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x14E:
+SUBOPT_0x14D:
 	ADD  R26,R16
 	ADC  R27,R17
 	LDI  R30,LOW(0)
@@ -48517,14 +48526,14 @@ SUBOPT_0x14E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0x14F:
+SUBOPT_0x14E:
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
 	CALL __LOADLOCR4
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x150:
+SUBOPT_0x14F:
 	SBIW R28,10
 	CALL __SAVELOCR4
 	__GETWRN 16,17,0
@@ -48538,7 +48547,7 @@ SUBOPT_0x150:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 19 TIMES, CODE SIZE REDUCTION:87 WORDS
-SUBOPT_0x151:
+SUBOPT_0x150:
 	MOVW R30,R16
 	__ADDWRN 16,17,1
 	MOVW R26,R28
@@ -48548,7 +48557,7 @@ SUBOPT_0x151:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 11 TIMES, CODE SIZE REDUCTION:67 WORDS
-SUBOPT_0x152:
+SUBOPT_0x151:
 	MOVW R0,R30
 	LDI  R26,LOW(_DEVICE_SERIAL)
 	LDI  R27,HIGH(_DEVICE_SERIAL)
@@ -48560,7 +48569,7 @@ SUBOPT_0x152:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x153:
+SUBOPT_0x152:
 	MOVW R30,R28
 	ADIW R30,4
 	ST   -Y,R31
@@ -48570,12 +48579,12 @@ SUBOPT_0x153:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x154:
+SUBOPT_0x153:
 	CALL _ETH_send
-	RJMP SUBOPT_0x14F
+	RJMP SUBOPT_0x14E
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:41 WORDS
-SUBOPT_0x155:
+SUBOPT_0x154:
 	CALL __SAVELOCR4
 	__GETWRN 16,17,0
 	__GETWRN 18,19,0
@@ -48588,7 +48597,7 @@ SUBOPT_0x155:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x156:
+SUBOPT_0x155:
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
 	ADIW R30,15
@@ -48597,7 +48606,7 @@ SUBOPT_0x156:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x157:
+SUBOPT_0x156:
 	MOVW R26,R20
 	CALL _malloc
 	STD  Y+6,R30
@@ -48606,7 +48615,7 @@ SUBOPT_0x157:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:18 WORDS
-SUBOPT_0x158:
+SUBOPT_0x157:
 	MOVW R30,R16
 	__ADDWRN 16,17,1
 	LDD  R26,Y+6
@@ -48614,20 +48623,20 @@ SUBOPT_0x158:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x159:
+SUBOPT_0x158:
 	ADD  R30,R26
 	ADC  R31,R27
-	RJMP SUBOPT_0x152
+	RJMP SUBOPT_0x151
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x15A:
+SUBOPT_0x159:
 	MOVW R30,R16
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	JMP SUBOPT_0x1D
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x15B:
+SUBOPT_0x15A:
 	LDD  R30,Y+12
 	LDD  R31,Y+12+1
 	ST   -Y,R31
@@ -48641,7 +48650,7 @@ SUBOPT_0x15B:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 17 TIMES, CODE SIZE REDUCTION:29 WORDS
-SUBOPT_0x15C:
+SUBOPT_0x15B:
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
 	ST   -Y,R31
@@ -48649,20 +48658,20 @@ SUBOPT_0x15C:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x15D:
+SUBOPT_0x15C:
 	ST   -Y,R30
 	LDI  R26,LOW(12)
 	LDI  R27,0
 	JMP  _ETH_send
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 22 TIMES, CODE SIZE REDUCTION:39 WORDS
-SUBOPT_0x15E:
+SUBOPT_0x15D:
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	JMP  _free
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x15F:
+SUBOPT_0x15E:
 	MOVW R30,R16
 	__ADDWRN 16,17,1
 	MOVW R26,R28
@@ -48670,20 +48679,20 @@ SUBOPT_0x15F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x160:
+SUBOPT_0x15F:
 	__GETD1S 33
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0x161:
+SUBOPT_0x160:
 	LDI  R24,16
 	CALL _printDebug
 	ADIW R28,20
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x162:
+SUBOPT_0x161:
 	LDD  R30,Y+15
 	ST   -Y,R30
 	LDD  R30,Y+15
@@ -48697,12 +48706,12 @@ SUBOPT_0x162:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x163:
+SUBOPT_0x162:
 	CALL _print_payload
-	RJMP SUBOPT_0x15C
+	RJMP SUBOPT_0x15B
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x164:
+SUBOPT_0x163:
 	MOVW R30,R16
 	__ADDWRN 16,17,1
 	MOVW R26,R28
@@ -48710,25 +48719,25 @@ SUBOPT_0x164:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x165:
+SUBOPT_0x164:
 	__GETD1S 42
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x166:
+SUBOPT_0x165:
 	ST   -Y,R26
 	SBIW R28,11
-	RJMP SUBOPT_0x155
+	RJMP SUBOPT_0x154
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x167:
+SUBOPT_0x166:
 	LDD  R26,Y+16
 	STD  Z+0,R26
-	RJMP SUBOPT_0x151
+	RJMP SUBOPT_0x150
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x168:
+SUBOPT_0x167:
 	MOVW R26,R28
 	ADIW R26,4
 	ADD  R26,R30
@@ -48736,13 +48745,13 @@ SUBOPT_0x168:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x169:
+SUBOPT_0x168:
 	__GETB1SX 558
 	ST   -Y,R30
 	RJMP SUBOPT_0x68
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x16A:
+SUBOPT_0x169:
 	MOVW R30,R28
 	ADIW R30,14
 	ST   -Y,R31
@@ -48750,18 +48759,18 @@ SUBOPT_0x16A:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x16B:
+SUBOPT_0x16A:
 	RCALL SUBOPT_0xD9
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x16C:
+SUBOPT_0x16B:
 	__POINTD1FN _0x120000,1035
 	JMP SUBOPT_0x3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x16D:
+SUBOPT_0x16C:
 	MOVW R26,R28
 	ADIW R26,14
 	__CALL1MN _LOG_closeFile,0
@@ -48770,17 +48779,17 @@ SUBOPT_0x16D:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x16E:
+SUBOPT_0x16D:
 	__POINTD1FN _0x120000,1080
 	JMP SUBOPT_0x3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 31 TIMES, CODE SIZE REDUCTION:87 WORDS
-SUBOPT_0x16F:
+SUBOPT_0x16E:
 	__MULBNWRU 16,17,11
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x170:
+SUBOPT_0x16F:
 	CALL __PUTPARD1
 	LDS  R30,_commLostTimer
 	LDS  R31,_commLostTimer+1
@@ -48789,7 +48798,7 @@ SUBOPT_0x170:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x171:
+SUBOPT_0x170:
 	LDS  R26,_commLostTimer
 	LDS  R27,_commLostTimer+1
 	LDS  R24,_commLostTimer+2
@@ -48797,14 +48806,14 @@ SUBOPT_0x171:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x172:
+SUBOPT_0x171:
 	ST   -Y,R31
 	ST   -Y,R30
 	__GETD2N 0x1E
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x173:
+SUBOPT_0x172:
 	CALL __PUTPARD1
 	RCALL SUBOPT_0x88
 	LDS  R30,_commLostTimer
@@ -48815,14 +48824,14 @@ SUBOPT_0x173:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x174:
+SUBOPT_0x173:
 	__ADDW1MN _eth_waitQueue,1
 	ST   -Y,R31
 	ST   -Y,R30
-	RJMP SUBOPT_0x16F
+	RJMP SUBOPT_0x16E
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0x175:
+SUBOPT_0x174:
 	__ADDW1MN _eth_waitQueue,5
 	MOVW R26,R30
 	CALL __GETW1P
@@ -48830,36 +48839,36 @@ SUBOPT_0x175:
 	JMP SUBOPT_0x1F
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x176:
+SUBOPT_0x175:
 	__ADDW1MN _eth_waitQueue,9
 	MOVW R26,R30
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x177:
+SUBOPT_0x176:
 	__GETW2SX 558
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 11 TIMES, CODE SIZE REDUCTION:37 WORDS
-SUBOPT_0x178:
+SUBOPT_0x177:
 	__GETW2SX 556
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:53 WORDS
-SUBOPT_0x179:
+SUBOPT_0x178:
 	CALL __PUTPARD1
 	__GETW1SX 560
 	RJMP SUBOPT_0xE9
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x17A:
+SUBOPT_0x179:
 	ST   -Y,R16
 	LDI  R26,LOW(16)
 	JMP  _ETH_sendNack
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:18 WORDS
-SUBOPT_0x17B:
+SUBOPT_0x17A:
 	CALL _malloc
 	MOVW R20,R30
 	MOV  R0,R20
@@ -48867,22 +48876,22 @@ SUBOPT_0x17B:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x17C:
+SUBOPT_0x17B:
 	ST   -Y,R16
 	LDI  R26,LOW(80)
 	JMP  _ETH_sendNack
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 12 TIMES, CODE SIZE REDUCTION:41 WORDS
-SUBOPT_0x17D:
+SUBOPT_0x17C:
 	__GETW1SX 558
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:18 WORDS
-SUBOPT_0x17E:
+SUBOPT_0x17D:
 	ADIW R30,2
 	ST   -Y,R31
 	ST   -Y,R30
-	RCALL SUBOPT_0x17D
+	RCALL SUBOPT_0x17C
 	SBIW R30,2
 	ST   -Y,R31
 	ST   -Y,R30
@@ -48890,7 +48899,7 @@ SUBOPT_0x17E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x17F:
+SUBOPT_0x17E:
 	MOVW R26,R20
 	CALL _free
 	ST   -Y,R16
@@ -48898,27 +48907,27 @@ SUBOPT_0x17F:
 	JMP  _ETH_sendNack
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:24 WORDS
-SUBOPT_0x180:
+SUBOPT_0x17F:
 	CALL __PUTPARD1
 	MOV  R30,R16
 	JMP SUBOPT_0x29
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 11 TIMES, CODE SIZE REDUCTION:37 WORDS
-SUBOPT_0x181:
+SUBOPT_0x180:
 	CALL __PUTPARD1
 	MOVW R30,R20
 	LDD  R30,Z+8
 	JMP SUBOPT_0x29
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x182:
+SUBOPT_0x181:
 	CALL __PUTPARD1
 	MOVW R26,R20
 	ADIW R26,9
 	JMP SUBOPT_0x1E
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x183:
+SUBOPT_0x182:
 	CALL __GETW1P
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
@@ -48927,14 +48936,14 @@ SUBOPT_0x183:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x184:
+SUBOPT_0x183:
 	ADD  R26,R30
 	ADC  R27,R31
 	LD   R30,X
 	JMP SUBOPT_0x29
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 11 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x185:
+SUBOPT_0x184:
 	ST   -Y,R16
 	MOVW R30,R20
 	LDD  R26,Z+8
@@ -48942,7 +48951,7 @@ SUBOPT_0x185:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x186:
+SUBOPT_0x185:
 	RCALL SUBOPT_0xD3
 	MOVW R26,R30
 	MOVW R24,R22
@@ -48952,12 +48961,12 @@ SUBOPT_0x186:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x187:
+SUBOPT_0x186:
 	__POINTD1FN _0x120000,2221
 	JMP SUBOPT_0x3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x188:
+SUBOPT_0x187:
 	MOVW R26,R28
 	ADIW R26,12
 	__CALL1MN _LOG_closeFile,0
@@ -48966,46 +48975,46 @@ SUBOPT_0x188:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:12 WORDS
-SUBOPT_0x189:
+SUBOPT_0x188:
 	LDI  R27,0
-	RJMP SUBOPT_0x17B
+	RJMP SUBOPT_0x17A
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x18A:
+SUBOPT_0x189:
 	__POINTD1FN _0x120000,2446
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 44 TIMES, CODE SIZE REDUCTION:83 WORDS
-SUBOPT_0x18B:
+SUBOPT_0x18A:
 	CALL __PUTPARD1
 	JMP SUBOPT_0x12
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x18C:
-	RCALL SUBOPT_0x17D
-	RJMP SUBOPT_0x17E
+SUBOPT_0x18B:
+	RCALL SUBOPT_0x17C
+	RJMP SUBOPT_0x17D
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x18D:
+SUBOPT_0x18C:
 	__POINTD1FN _0x120000,2584
-	RJMP SUBOPT_0x181
+	RJMP SUBOPT_0x180
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x18E:
+SUBOPT_0x18D:
 	CALL __PUTPARD1
 	MOVW R30,R20
 	LDD  R30,Z+9
 	JMP SUBOPT_0x29
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x18F:
+SUBOPT_0x18E:
 	MOVW R30,R20
 	LDD  R30,Z+8
 	JMP SUBOPT_0x47
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x190:
+SUBOPT_0x18F:
 	MOVW R30,R20
 	LDD  R26,Z+9
 	ST   -Y,R26
@@ -49013,7 +49022,7 @@ SUBOPT_0x190:
 	JMP  _ETH_sendConfigManageNack
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x191:
+SUBOPT_0x190:
 	MOVW R30,R20
 	LDD  R26,Z+9
 	ST   -Y,R26
@@ -49022,20 +49031,20 @@ SUBOPT_0x191:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x192:
+SUBOPT_0x191:
 	CALL _ETH_sendConfigManageAck
 	MOVW R18,R30
 	TST  R19
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x193:
+SUBOPT_0x192:
 	STD  Y+8,R30
 	STD  Y+8+1,R31
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 28 TIMES, CODE SIZE REDUCTION:51 WORDS
-SUBOPT_0x194:
+SUBOPT_0x193:
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
 	ST   -Y,R31
@@ -49043,7 +49052,7 @@ SUBOPT_0x194:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x195:
+SUBOPT_0x194:
 	LDD  R30,Y+9
 	LDD  R31,Y+9+1
 	ST   -Y,R31
@@ -49051,30 +49060,30 @@ SUBOPT_0x195:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x196:
+SUBOPT_0x195:
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
 	ST   -Y,R31
 	ST   -Y,R30
-	RJMP SUBOPT_0xF6
+	RJMP SUBOPT_0xF5
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x197:
+SUBOPT_0x196:
 	__POINTD1FN _0x120000,2921
 	JMP SUBOPT_0x3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x198:
+SUBOPT_0x197:
 	__POINTD1FN _0x120000,3037
-	RJMP SUBOPT_0x181
+	RJMP SUBOPT_0x180
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x199:
+SUBOPT_0x198:
 	__POINTD1FN _0x120000,3294
 	JMP SUBOPT_0x3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x19A:
+SUBOPT_0x199:
 	CALL __PUTPARD1
 	MOVW R30,R20
 	__GETD2Z 9
@@ -49082,23 +49091,23 @@ SUBOPT_0x19A:
 	JMP SUBOPT_0x12
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x19B:
+SUBOPT_0x19A:
 	CALL __PUTPARD2
 	JMP SUBOPT_0x12
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x19C:
+SUBOPT_0x19B:
 	__GETD2Z 9
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x19D:
+SUBOPT_0x19C:
 	__GETD1N 0xA
-	RJMP SUBOPT_0x18B
+	RJMP SUBOPT_0x18A
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x19E:
-	RCALL SUBOPT_0x17D
+SUBOPT_0x19D:
+	RCALL SUBOPT_0x17C
 	ADIW R30,2
 	ST   -Y,R31
 	ST   -Y,R30
@@ -49106,36 +49115,36 @@ SUBOPT_0x19E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x19F:
+SUBOPT_0x19E:
 	__GETD1N 0xD
-	RJMP SUBOPT_0x18B
+	RJMP SUBOPT_0x18A
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1A0:
+SUBOPT_0x19F:
 	__POINTD1FN _0x120000,3797
-	RJMP SUBOPT_0x181
+	RJMP SUBOPT_0x180
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1A1:
+SUBOPT_0x1A0:
 	LDD  R26,Z+9
 	LDD  R27,Z+10
 	CALL __CPW02
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1A2:
+SUBOPT_0x1A1:
 	ST   -Y,R16
 	LDI  R26,LOW(48)
 	JMP  _ETH_sendNack
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1A3:
+SUBOPT_0x1A2:
 	LDD  R30,Z+8
 	LDI  R31,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:25 WORDS
-SUBOPT_0x1A4:
+SUBOPT_0x1A3:
 	SBIW R28,4
 	LDI  R30,LOW(0)
 	ST   Y,R30
@@ -49145,7 +49154,7 @@ SUBOPT_0x1A4:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1A5:
+SUBOPT_0x1A4:
 	ADD  R30,R16
 	ADC  R31,R17
 	ST   -Y,R31
@@ -49153,7 +49162,7 @@ SUBOPT_0x1A5:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x1A6:
+SUBOPT_0x1A5:
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	ADD  R30,R26
@@ -49161,7 +49170,7 @@ SUBOPT_0x1A6:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1A7:
+SUBOPT_0x1A6:
 	MOVW R26,R0
 	LDI  R31,0
 	CP   R30,R26
@@ -49169,14 +49178,14 @@ SUBOPT_0x1A7:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1A8:
+SUBOPT_0x1A7:
 	ST   -Y,R27
 	ST   -Y,R26
 	CALL __SAVELOCR6
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 11 TIMES, CODE SIZE REDUCTION:27 WORDS
-SUBOPT_0x1A9:
+SUBOPT_0x1A8:
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	ADD  R26,R30
@@ -49185,13 +49194,13 @@ SUBOPT_0x1A9:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1AA:
+SUBOPT_0x1A9:
 	LDI  R26,LOW(_configRd)
 	LDI  R27,HIGH(_configRd)
-	RJMP SUBOPT_0x14E
+	RJMP SUBOPT_0x14D
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x1AB:
+SUBOPT_0x1AA:
 	LDI  R30,LOW(0)
 	STS  _config_start,R30
 	STS  _config_ready,R30
@@ -49200,7 +49209,7 @@ SUBOPT_0x1AB:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1AC:
+SUBOPT_0x1AB:
 	MOVW R26,R28
 	ADIW R26,2
 	CALL _strlen
@@ -49209,17 +49218,17 @@ SUBOPT_0x1AC:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1AD:
+SUBOPT_0x1AC:
 	__POINTD1FN _0x120000,24
 	JMP SUBOPT_0x3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1AE:
+SUBOPT_0x1AD:
 	__GETD2N 0x7
 	JMP  _TIMER_setTimer
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 12 TIMES, CODE SIZE REDUCTION:19 WORDS
-SUBOPT_0x1AF:
+SUBOPT_0x1AE:
 	LDD  R30,Y+12
 	LDD  R31,Y+12+1
 	ST   -Y,R31
@@ -49227,7 +49236,7 @@ SUBOPT_0x1AF:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1B0:
+SUBOPT_0x1AF:
 	LDI  R30,LOW(_configRd)
 	LDI  R31,HIGH(_configRd)
 	ST   -Y,R31
@@ -49236,7 +49245,7 @@ SUBOPT_0x1B0:
 	JMP  _memcpy
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1B1:
+SUBOPT_0x1B0:
 	MOVW R26,R28
 	ADIW R26,39
 	CALL _strlen
@@ -49245,14 +49254,14 @@ SUBOPT_0x1B1:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x1B2:
+SUBOPT_0x1B1:
 	__GETD2S 43
 	CALL _TIMER_checkTimerExceed
 	SBIW R30,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1B3:
+SUBOPT_0x1B2:
 	LD   R30,X
 	LDI  R26,LOW(100)
 	MUL  R30,R26
@@ -49260,7 +49269,7 @@ SUBOPT_0x1B3:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x1B4:
+SUBOPT_0x1B3:
 	LDD  R30,Z+1
 	LDI  R26,LOW(10)
 	MUL  R30,R26
@@ -49271,7 +49280,7 @@ SUBOPT_0x1B4:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x1B5:
+SUBOPT_0x1B4:
 	LDD  R30,Z+2
 	LDI  R31,0
 	ADD  R30,R26
@@ -49281,12 +49290,12 @@ SUBOPT_0x1B5:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1B6:
+SUBOPT_0x1B5:
 	__GETW1SX 63
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1B7:
+SUBOPT_0x1B6:
 	LDD  R30,Z+3
 	LDI  R26,LOW(100)
 	MUL  R30,R26
@@ -49294,7 +49303,7 @@ SUBOPT_0x1B7:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:12 WORDS
-SUBOPT_0x1B8:
+SUBOPT_0x1B7:
 	LDD  R30,Z+4
 	LDI  R26,LOW(10)
 	MUL  R30,R26
@@ -49305,7 +49314,7 @@ SUBOPT_0x1B8:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x1B9:
+SUBOPT_0x1B8:
 	LDD  R30,Z+5
 	LDI  R31,0
 	ADD  R30,R26
@@ -49315,12 +49324,12 @@ SUBOPT_0x1B9:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1BA:
+SUBOPT_0x1B9:
 	__GETW1SX 67
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1BB:
+SUBOPT_0x1BA:
 	LDD  R30,Z+6
 	LDI  R26,LOW(100)
 	MUL  R30,R26
@@ -49328,7 +49337,7 @@ SUBOPT_0x1BB:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:12 WORDS
-SUBOPT_0x1BC:
+SUBOPT_0x1BB:
 	LDD  R30,Z+7
 	LDI  R26,LOW(10)
 	MUL  R30,R26
@@ -49339,7 +49348,7 @@ SUBOPT_0x1BC:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 56 TIMES, CODE SIZE REDUCTION:217 WORDS
-SUBOPT_0x1BD:
+SUBOPT_0x1BC:
 	ADD  R30,R26
 	ADC  R31,R27
 	CALL __CWD1
@@ -49347,12 +49356,12 @@ SUBOPT_0x1BD:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1BE:
+SUBOPT_0x1BD:
 	__GETW1SX 71
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1BF:
+SUBOPT_0x1BE:
 	LDD  R30,Z+9
 	LDI  R26,LOW(100)
 	MUL  R30,R26
@@ -49360,7 +49369,7 @@ SUBOPT_0x1BF:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:12 WORDS
-SUBOPT_0x1C0:
+SUBOPT_0x1BF:
 	LDD  R30,Z+10
 	LDI  R26,LOW(10)
 	MUL  R30,R26
@@ -49371,53 +49380,53 @@ SUBOPT_0x1C0:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x1C1:
+SUBOPT_0x1C0:
 	LDD  R30,Z+11
 	LDI  R31,0
-	RJMP SUBOPT_0x1BD
+	RJMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1C2:
+SUBOPT_0x1C1:
 	__GETW1SX 73
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1C3:
+SUBOPT_0x1C2:
 	__GETW1SX 77
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1C4:
+SUBOPT_0x1C3:
 	__GETW1SX 81
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1C5:
+SUBOPT_0x1C4:
 	__GETW1SX 85
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1C6:
+SUBOPT_0x1C5:
 	__GETW1SX 87
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1C7:
+SUBOPT_0x1C6:
 	__GETW1SX 91
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1C8:
+SUBOPT_0x1C7:
 	__GETW1SX 95
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1C9:
+SUBOPT_0x1C8:
 	__GETW1SX 99
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1CA:
+SUBOPT_0x1C9:
 	__POINTD1FN _0x120000,5360
 	CALL __PUTPARD1
 	MOVW R30,R28
@@ -49425,7 +49434,7 @@ SUBOPT_0x1CA:
 	JMP SUBOPT_0x34
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1CB:
+SUBOPT_0x1CA:
 	ST   -Y,R31
 	ST   -Y,R30
 	MOVW R30,R28
@@ -49435,23 +49444,23 @@ SUBOPT_0x1CB:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x1CC:
+SUBOPT_0x1CB:
 	LDI  R27,0
 	JMP  _memcpy
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1CD:
+SUBOPT_0x1CC:
 	__GETW1SX 65
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x1CE:
+SUBOPT_0x1CD:
 	__GETWRN 18,19,0
 	__GETWRN 16,17,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 19 TIMES, CODE SIZE REDUCTION:105 WORDS
-SUBOPT_0x1CF:
+SUBOPT_0x1CE:
 	MOVW R30,R18
 	__ADDWRN 18,19,1
 	LDD  R26,Y+8
@@ -49462,19 +49471,19 @@ SUBOPT_0x1CF:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1D0:
+SUBOPT_0x1CF:
 	__PUTB1SNS 4,8
-	RJMP SUBOPT_0x1CF
+	RJMP SUBOPT_0x1CE
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x1D1:
+SUBOPT_0x1D0:
 	__PUTW1SNS 4,9
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x1D2:
+SUBOPT_0x1D1:
 	LDI  R30,LOW(1)
 	LDI  R31,HIGH(1)
 	CALL __MULW12U
@@ -49482,14 +49491,14 @@ SUBOPT_0x1D2:
 	JMP  _malloc
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1D3:
+SUBOPT_0x1D2:
 	CALL __GETW1P
 	CP   R16,R30
 	CPC  R17,R31
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x1D4:
+SUBOPT_0x1D3:
 	MOVW R30,R16
 	ADD  R30,R26
 	ADC  R31,R27
@@ -49499,22 +49508,22 @@ SUBOPT_0x1D4:
 	ADC  R31,R17
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
-	RJMP SUBOPT_0x132
+	RJMP SUBOPT_0x131
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1D5:
+SUBOPT_0x1D4:
 	__PUTB1SNS 4,8
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 12 TIMES, CODE SIZE REDUCTION:74 WORDS
-SUBOPT_0x1D6:
+SUBOPT_0x1D5:
 	LDI  R31,0
 	CALL __CWD1
 	__ANDD1N 0xFF
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1D7:
+SUBOPT_0x1D6:
 	MOVW R26,R30
 	MOVW R24,R22
 	LDI  R30,LOW(24)
@@ -49522,7 +49531,7 @@ SUBOPT_0x1D7:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1D8:
+SUBOPT_0x1D7:
 	MOVW R26,R30
 	MOVW R24,R22
 	LDI  R30,LOW(8)
@@ -49530,32 +49539,32 @@ SUBOPT_0x1D8:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1D9:
+SUBOPT_0x1D8:
 	CALL __ORD12
 	__PUTD1SNS 4,9
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x1DA:
+SUBOPT_0x1D9:
 	MOVW R30,R18
 	__ADDWRN 18,19,1
-	RJMP SUBOPT_0x1A9
+	RJMP SUBOPT_0x1A8
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1DB:
+SUBOPT_0x1DA:
 	CALL __PUTPARD1
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1DC:
+SUBOPT_0x1DB:
 	ST   -Y,R27
 	ST   -Y,R26
-	RJMP SUBOPT_0x1A4
+	RJMP SUBOPT_0x1A3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:42 WORDS
-SUBOPT_0x1DD:
+SUBOPT_0x1DC:
 	CALL _malloc
 	STD  Y+6,R30
 	STD  Y+6+1,R31
@@ -49563,46 +49572,46 @@ SUBOPT_0x1DD:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x1DE:
+SUBOPT_0x1DD:
 	__POINTD1FN _0x160000,187
-	RJMP SUBOPT_0x129
+	RJMP SUBOPT_0x128
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x1DF:
+SUBOPT_0x1DE:
 	LDD  R30,Y+10
 	LDD  R31,Y+10+1
 	ST   -Y,R31
 	ST   -Y,R30
-	RJMP SUBOPT_0x194
+	RJMP SUBOPT_0x193
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
+SUBOPT_0x1DF:
+	CALL _memcpy
+	RJMP SUBOPT_0x15D
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
 SUBOPT_0x1E0:
-	CALL _memcpy
-	RJMP SUBOPT_0x15E
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1E1:
 	LDI  R26,LOW(8)
 	LDI  R27,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1E2:
+SUBOPT_0x1E1:
 	__POINTD1FN _0x160000,378
-	RJMP SUBOPT_0x129
+	RJMP SUBOPT_0x128
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
+SUBOPT_0x1E2:
+	__POINTD1FN _0x160000,422
+	RJMP SUBOPT_0x128
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
 SUBOPT_0x1E3:
-	__POINTD1FN _0x160000,422
-	RJMP SUBOPT_0x129
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x1E4:
 	__POINTD1FN _0x160000,50
 	JMP SUBOPT_0x3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x1E5:
+SUBOPT_0x1E4:
 	LDD  R30,Y+12
 	LDI  R31,0
 	ANDI R30,LOW(0xF)
@@ -49612,45 +49621,45 @@ SUBOPT_0x1E5:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:12 WORDS
-SUBOPT_0x1E6:
+SUBOPT_0x1E5:
 	LDI  R27,0
-	RJMP SUBOPT_0x1DD
+	RJMP SUBOPT_0x1DC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x1E7:
+SUBOPT_0x1E6:
 	CALL __PUTPARD1
 	LDD  R30,Y+12
 	LDD  R31,Y+12+1
 	RJMP SUBOPT_0xE9
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1E8:
+SUBOPT_0x1E7:
 	CALL __PUTPARD1
 	__GETD1N 0x3
-	RJMP SUBOPT_0x18B
+	RJMP SUBOPT_0x18A
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
+SUBOPT_0x1E8:
+	__POINTD1FN _0x160000,961
+	RJMP SUBOPT_0x127
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
 SUBOPT_0x1E9:
-	__POINTD1FN _0x160000,961
-	RJMP SUBOPT_0x128
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1EA:
 	__POINTD1FN _0x160000,1138
+	RJMP SUBOPT_0x127
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
+SUBOPT_0x1EA:
+	__POINTD1FN _0x160000,1192
 	RJMP SUBOPT_0x128
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
 SUBOPT_0x1EB:
-	__POINTD1FN _0x160000,1192
-	RJMP SUBOPT_0x129
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1EC:
 	__POINTD1FN _0x160000,1217
 	JMP SUBOPT_0x3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1ED:
+SUBOPT_0x1EC:
 	LDI  R30,LOW(34)
 	LDI  R31,HIGH(34)
 	CP   R30,R16
@@ -49658,18 +49667,18 @@ SUBOPT_0x1ED:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1EE:
+SUBOPT_0x1ED:
 	__GETD2Z 1
-	RJMP SUBOPT_0x19B
+	RJMP SUBOPT_0x19A
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1EF:
+SUBOPT_0x1EE:
 	__POINTD1FN _0x160000,2137
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x1F0:
+SUBOPT_0x1EF:
 	LDD  R30,Y+10
 	LDI  R31,0
 	ANDI R30,LOW(0xF)
@@ -49678,7 +49687,7 @@ SUBOPT_0x1F0:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1F1:
+SUBOPT_0x1F0:
 	ST   -Y,R21
 	ST   -Y,R20
 	LDD  R26,Y+10
@@ -49686,12 +49695,12 @@ SUBOPT_0x1F1:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1F2:
+SUBOPT_0x1F1:
 	CALL __PUTPARD1
 	JMP SUBOPT_0x4F
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0x1F3:
+SUBOPT_0x1F2:
 	MOVW R30,R28
 	ADIW R30,2
 	ST   -Y,R31
@@ -49699,26 +49708,26 @@ SUBOPT_0x1F3:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1F4:
+SUBOPT_0x1F3:
 	RCALL SUBOPT_0xB3
 	CALL __CPD10
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x1F5:
+SUBOPT_0x1F4:
 	CALL __PUTPARD1
 	RCALL SUBOPT_0xB5
-	RJMP SUBOPT_0x18B
+	RJMP SUBOPT_0x18A
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1F6:
+SUBOPT_0x1F5:
 	CALL __PUTPARD2
 	ST   -Y,R17
 	ST   -Y,R16
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1F7:
+SUBOPT_0x1F6:
 	SUBI R30,LOW(-_eth_waitQueue)
 	SBCI R31,HIGH(-_eth_waitQueue)
 	LDI  R26,LOW(0)
@@ -49726,13 +49735,13 @@ SUBOPT_0x1F7:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1F8:
+SUBOPT_0x1F7:
 	CALL __PUTPARD1
 	LDD  R30,Y+12
 	JMP SUBOPT_0x65
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x1F9:
+SUBOPT_0x1F8:
 	LDI  R26,LOW(11)
 	MUL  R17,R26
 	MOVW R30,R0
@@ -49740,7 +49749,7 @@ SUBOPT_0x1F9:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:16 WORDS
-SUBOPT_0x1FA:
+SUBOPT_0x1F9:
 	MOVW R26,R30
 	CALL _free
 	LDI  R26,LOW(11)
@@ -49757,19 +49766,19 @@ SUBOPT_0x1FA:
 	__ADDW1MN _eth_waitQueue,7
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
-	RJMP SUBOPT_0x1F9
+	RJMP SUBOPT_0x1F8
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x1FB:
+SUBOPT_0x1FA:
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 	LDI  R26,LOW(11)
 	MUL  R17,R26
 	MOVW R30,R0
-	RJMP SUBOPT_0x1F7
+	RJMP SUBOPT_0x1F6
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x1FC:
+SUBOPT_0x1FB:
 	LDI  R26,LOW(11)
 	MUL  R17,R26
 	MOVW R30,R0
@@ -49787,13 +49796,13 @@ SUBOPT_0x1FC:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1FD:
+SUBOPT_0x1FC:
 	CALL __PUTPARD1
 	LDD  R30,Y+5
 	JMP SUBOPT_0x65
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1FE:
+SUBOPT_0x1FD:
 	MOV  R30,R17
 	CLR  R31
 	CLR  R22
@@ -49801,40 +49810,40 @@ SUBOPT_0x1FE:
 	JMP SUBOPT_0x21
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1FF:
+SUBOPT_0x1FE:
 	LDI  R30,LOW(100)
 	LDI  R31,HIGH(100)
 	CALL __MODW21
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x200:
+SUBOPT_0x1FF:
 	LDI  R30,LOW(0)
 	__CLRD1S 6
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x201:
+SUBOPT_0x200:
 	CALL SUBOPT_0x59
 	CLR  R22
 	CLR  R23
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 25 TIMES, CODE SIZE REDUCTION:69 WORDS
-SUBOPT_0x202:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 26 TIMES, CODE SIZE REDUCTION:72 WORDS
+SUBOPT_0x201:
 	ADIW R30,1
 	CALL __CWD1
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 14 TIMES, CODE SIZE REDUCTION:23 WORDS
-SUBOPT_0x203:
+SUBOPT_0x202:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	JMP SUBOPT_0x31
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:42 WORDS
-SUBOPT_0x204:
+SUBOPT_0x203:
 	MOVW R26,R30
 	MOVW R24,R22
 	MOVW R30,R16
@@ -49850,217 +49859,150 @@ SUBOPT_0x204:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x205:
+SUBOPT_0x204:
 	MOVW R30,R16
 	CALL __CWD1
 	CALL __CDF1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x206:
+SUBOPT_0x205:
 	__GETD2N 0x3F000000
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x207:
+SUBOPT_0x206:
 	__GETD2N 0x40A00000
 	CALL __MULF12
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x208:
-	__GETW2SX 90
-	RET
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:29 WORDS
-SUBOPT_0x209:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
+SUBOPT_0x207:
 	LDI  R30,LOW(0)
-	__CLRD1SX 64
-	__GETWRN 18,19,0
+	ST   Y,R30
+	STD  Y+1,R30
+	STD  Y+2,R30
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x20A:
-	__GETB2SX 90
-	SUBI R26,-LOW(8)
-	JMP  _read_adc
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:14 WORDS
-SUBOPT_0x20B:
-	CLR  R22
-	CLR  R23
-	__GETD2SX 64
-	CALL __ADDD12
-	__PUTD1SX 64
-	RET
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:27 WORDS
-SUBOPT_0x20C:
-	__GETD1SX 64
-	RET
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x20D:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
+SUBOPT_0x208:
+	CALL SUBOPT_0xB5
 	CALL __PUTPARD1
-	__GETD2N 0x41A00000
-	CALL _iAD595ADCToVolt
-	__PUTD1S 8
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 48 TIMES, CODE SIZE REDUCTION:185 WORDS
-SUBOPT_0x20E:
-	__GETW1SX 90
+;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:21 WORDS
+SUBOPT_0x209:
+	__GETW2SX 94
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x20F:
-	LDI  R26,LOW(_iTCVoltData)
-	LDI  R27,HIGH(_iTCVoltData)
-	CALL __LSLW2
-	RET
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x210:
-	CALL SUBOPT_0x4F
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:21 WORDS
+SUBOPT_0x20A:
+	RCALL SUBOPT_0x209
+	CALL _iUpdateSmoothlyADC
 	__GETD2N 0x3E5A1CAC
 	CALL __ADDF12
-	RET
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 16 TIMES, CODE SIZE REDUCTION:27 WORDS
-SUBOPT_0x211:
-	CALL __LSLW2
-	ADD  R30,R26
-	ADC  R31,R27
-	RET
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:101 WORDS
-SUBOPT_0x212:
-	CALL __PUTPARD1
-	LDS  R30,_iTCADCData
-	LDS  R31,_iTCADCData+1
-	LDS  R22,_iTCADCData+2
-	LDS  R23,_iTCADCData+3
-	CALL __PUTPARD1
-	LDS  R30,_iTCVoltData
-	LDS  R31,_iTCVoltData+1
-	LDS  R22,_iTCVoltData+2
-	LDS  R23,_iTCVoltData+3
-	CALL __PUTPARD1
-	__GETD1MN _iTCADCData,4
-	CALL __PUTPARD1
-	__GETD1MN _iTCVoltData,4
-	CALL __PUTPARD1
-	__GETD1MN _iTCADCData,8
-	CALL __PUTPARD1
-	__GETD1MN _iTCVoltData,8
-	CALL __PUTPARD1
-	__GETD1MN _iTCADCData,12
-	CALL __PUTPARD1
-	__GETD1MN _iTCVoltData,12
-	CALL __PUTPARD1
-	__GETD1MN _iTCADCData,16
-	CALL __PUTPARD1
-	__GETD1MN _iTCVoltData,16
-	CALL __PUTPARD1
-	LDI  R24,40
-	CALL _printDebug
-	ADIW R28,44
-	RET
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x213:
-	MOVW R26,R30
-	MOVW R24,R22
-	__GETD1N 0x3FD56042
-	CALL __SWAPD12
+	__PUTD1S 8
+	CALL SUBOPT_0x4F
+	__GETD2N 0x3FD56042
 	CALL __SUBF12
-	RET
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x214:
 	CALL SUBOPT_0xA8
-	CALL __PUTDZ20
-	RET
+	JMP SUBOPT_0xA9
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x215:
+SUBOPT_0x20B:
 	__GETD1N 0xBFC08312
 	CALL __CMPF12
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x216:
-	RCALL SUBOPT_0x208
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:7 WORDS
+SUBOPT_0x20C:
+	RCALL SUBOPT_0x209
 	CALL _updateSensorADC
-	RCALL SUBOPT_0x20E
+	__GETW1SX 94
 	JMP SUBOPT_0x31
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 14 TIMES, CODE SIZE REDUCTION:23 WORDS
-SUBOPT_0x217:
-	RCALL SUBOPT_0x20E
+;OPTIMIZER ADDED SUBROUTINE, CALLED 14 TIMES, CODE SIZE REDUCTION:75 WORDS
+SUBOPT_0x20D:
+	__GETW1SX 94
 	JMP SUBOPT_0x31
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 27 TIMES, CODE SIZE REDUCTION:101 WORDS
+SUBOPT_0x20E:
+	__GETW1SX 94
+	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x218:
+SUBOPT_0x20F:
 	RCALL SUBOPT_0x20E
-	LDI  R26,LOW(_t_S00D0002000)
-	LDI  R27,HIGH(_t_S00D0002000)
+	LDI  R26,LOW(_t_S00D0004000)
+	LDI  R27,HIGH(_t_S00D0004000)
 	CALL __LSLW2
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x219:
+SUBOPT_0x210:
 	__GETD2N 0x5
 	JMP  _TIMER_setTimer
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x21A:
+SUBOPT_0x211:
 	RCALL SUBOPT_0x20E
-	SUBI R30,LOW(-_steadyState_S00D0002000)
-	SBCI R31,HIGH(-_steadyState_S00D0002000)
+	SUBI R30,LOW(-_steadyState_S00D0004000)
+	SBCI R31,HIGH(-_steadyState_S00D0004000)
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x21B:
-	__GETW2SX 88
+SUBOPT_0x212:
+	__GETW2SX 92
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0x21C:
-	__GETW1SX 88
+SUBOPT_0x213:
+	__GETW1SX 92
 	__PUTBZR 17,4
 	LDI  R30,LOW(65534)
 	LDI  R31,HIGH(65534)
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 36 TIMES, CODE SIZE REDUCTION:137 WORDS
-SUBOPT_0x21D:
+SUBOPT_0x214:
 	LDI  R31,0
 	CPI  R30,LOW(0x1)
 	LDI  R26,HIGH(0x1)
 	CPC  R31,R26
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:31 WORDS
-SUBOPT_0x21E:
-	__GETD2SX 64
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:13 WORDS
+SUBOPT_0x215:
+	LDI  R30,LOW(0)
+	__CLRD1SX 68
+	__GETWRN 18,19,0
+	RET
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:45 WORDS
+SUBOPT_0x216:
+	__GETB2SX 94
+	SUBI R26,-LOW(8)
+	CALL _read_adc
+	__GETD2SX 68
 	CLR  R22
 	CLR  R23
 	CALL __ADDD12
-	__PUTD1SX 64
+	__PUTD1SX 68
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x21F:
-	RCALL SUBOPT_0x20C
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
+SUBOPT_0x217:
+	__GETD1SX 68
 	CALL __PUTPARD1
 	LDI  R26,LOW(30)
 	LDI  R27,0
 	CALL _iAD595ADCToTemp
-	JMP SUBOPT_0xEA
+	__PUTD1S 16
+	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x220:
+SUBOPT_0x218:
 	RCALL SUBOPT_0x20E
 	LDI  R26,LOW(_epTempRef1)
 	LDI  R27,HIGH(_epTempRef1)
@@ -50071,7 +50013,7 @@ SUBOPT_0x220:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x221:
+SUBOPT_0x219:
 	RCALL SUBOPT_0x20E
 	LDI  R26,LOW(_epADCRef1)
 	LDI  R27,HIGH(_epADCRef1)
@@ -50082,13 +50024,18 @@ SUBOPT_0x221:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x222:
+SUBOPT_0x21A:
 	CALL __SWAPD12
 	CALL __SUBF12
 	RET
 
+;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
+SUBOPT_0x21B:
+	CALL __PUTPARD1
+	JMP SUBOPT_0xDC
+
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:27 WORDS
-SUBOPT_0x223:
+SUBOPT_0x21C:
 	LDI  R26,LOW(_epTempRef1)
 	LDI  R27,HIGH(_epTempRef1)
 	CALL __LSLW2
@@ -50098,24 +50045,24 @@ SUBOPT_0x223:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x224:
-	__GETD1SX 72
+SUBOPT_0x21D:
 	CALL __PUTPARD1
+	__GETD1SX 76
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x225:
-	__GETD1S 60
+;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:13 WORDS
+SUBOPT_0x21E:
+	__GETD2S 16
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x226:
+SUBOPT_0x21F:
 	__GETD2N 0xBDE425AF
 	CALL __MULF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x227:
+SUBOPT_0x220:
 	RCALL SUBOPT_0x20E
 	LDI  R26,LOW(_epFactor_C)
 	LDI  R27,HIGH(_epFactor_C)
@@ -50126,32 +50073,32 @@ SUBOPT_0x227:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x228:
+SUBOPT_0x221:
 	__GETD2N 0x3A25EFE9
 	CALL __MULF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x229:
+SUBOPT_0x222:
 	__GETD2N 0x3E2603D5
 	CALL __MULF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x22A:
-	RCALL SUBOPT_0x21B
+SUBOPT_0x223:
+	RCALL SUBOPT_0x212
 	CALL __PUTDP1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x22B:
+SUBOPT_0x224:
 	CALL __CFD1
 	CALL __PUTPARD1
 	JMP SUBOPT_0x75
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x22C:
-	__PUTD1S 56
+SUBOPT_0x225:
+	__PUTD1S 60
 	RCALL SUBOPT_0x20E
 	LDI  R26,LOW(_epADCRef2)
 	LDI  R27,HIGH(_epADCRef2)
@@ -50162,8 +50109,8 @@ SUBOPT_0x22C:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x22D:
-	__PUTD1S 44
+SUBOPT_0x226:
+	__PUTD1S 48
 	RCALL SUBOPT_0x20E
 	LDI  R26,LOW(_epTempRef2)
 	LDI  R27,HIGH(_epTempRef2)
@@ -50171,11 +50118,11 @@ SUBOPT_0x22D:
 	ADD  R26,R30
 	ADC  R27,R31
 	CALL __EEPROMRDD
-	__PUTD1S 40
+	__PUTD1S 44
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x22E:
+SUBOPT_0x227:
 	RCALL SUBOPT_0x20E
 	LDI  R26,LOW(_epFactor_B)
 	LDI  R27,HIGH(_epFactor_B)
@@ -50186,7 +50133,7 @@ SUBOPT_0x22E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x22F:
+SUBOPT_0x228:
 	LDI  R26,LOW(_epADCRef3)
 	LDI  R27,HIGH(_epADCRef3)
 	CALL __LSLW2
@@ -50196,7 +50143,7 @@ SUBOPT_0x22F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x230:
+SUBOPT_0x229:
 	LDI  R26,LOW(_epTempRef3)
 	LDI  R27,HIGH(_epTempRef3)
 	CALL __LSLW2
@@ -50205,29 +50152,24 @@ SUBOPT_0x230:
 	CALL __EEPROMRDD
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x231:
-	__GETD1S 56
+;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:25 WORDS
+SUBOPT_0x22A:
+	__GETD1S 60
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x232:
+SUBOPT_0x22B:
 	__GETD2S 24
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x233:
+SUBOPT_0x22C:
 	__GETD2S 20
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0x234:
-	__GETD2S 16
-	RET
-
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x235:
+SUBOPT_0x22D:
 	LDI  R26,LOW(_epFactor_A)
 	LDI  R27,HIGH(_epFactor_A)
 	CALL __LSLW2
@@ -50236,7 +50178,7 @@ SUBOPT_0x235:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x236:
+SUBOPT_0x22E:
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	ADD  R26,R30
@@ -50244,7 +50186,7 @@ SUBOPT_0x236:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x237:
+SUBOPT_0x22F:
 	ADD  R26,R30
 	ADC  R27,R31
 	LD   R26,X
@@ -50252,7 +50194,7 @@ SUBOPT_0x237:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x238:
+SUBOPT_0x230:
 	LDI  R30,LOW(5)
 	CALL __MULB1W2U
 	__ADDW1MN _sensor,4
@@ -50260,20 +50202,20 @@ SUBOPT_0x238:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 11 TIMES, CODE SIZE REDUCTION:27 WORDS
-SUBOPT_0x239:
+SUBOPT_0x231:
 	CLR  R31
 	CLR  R22
 	CLR  R23
 	JMP SUBOPT_0x21
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x23A:
+SUBOPT_0x232:
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
 	JMP SUBOPT_0x31
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x23B:
+SUBOPT_0x233:
 	__GETD1N 0x0
 	CALL __EEPROMWRD
 	LDD  R30,Y+4
@@ -50281,7 +50223,7 @@ SUBOPT_0x23B:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x23C:
+SUBOPT_0x234:
 	LDI  R26,LOW(_epFactor_B)
 	LDI  R27,HIGH(_epFactor_B)
 	CALL __LSLW2
@@ -50289,20 +50231,23 @@ SUBOPT_0x23C:
 	ADC  R27,R31
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x23D:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
+SUBOPT_0x235:
 	LDI  R26,LOW(_epFactor_C)
 	LDI  R27,HIGH(_epFactor_C)
-	RJMP SUBOPT_0x211
+	CALL __LSLW2
+	ADD  R30,R26
+	ADC  R31,R27
+	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x23E:
+SUBOPT_0x236:
 	__GETD1N 0x0
 	CALL __EEPROMWRD
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:45 WORDS
-SUBOPT_0x23F:
+SUBOPT_0x237:
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	LDI  R26,LOW(_epADCRef1)
@@ -50314,7 +50259,7 @@ SUBOPT_0x23F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x240:
+SUBOPT_0x238:
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
 	SUBI R26,LOW(-_epCalType)
@@ -50322,21 +50267,30 @@ SUBOPT_0x240:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x241:
-	__POINTD1FN _0x1A0000,551
+SUBOPT_0x239:
+	__POINTD1FN _0x1A0000,341
 	JMP SUBOPT_0xE8
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x242:
+SUBOPT_0x23A:
 	LDI  R26,LOW(_epFactor_C)
 	LDI  R27,HIGH(_epFactor_C)
 	CALL __LSLW2
 	ADD  R26,R30
 	ADC  R27,R31
-	RJMP SUBOPT_0x14C
+	RJMP SUBOPT_0x14B
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
+SUBOPT_0x23B:
+	LDD  R30,Y+16
+	LDD  R31,Y+16+1
+	LDI  R26,LOW(_epFactor_B)
+	LDI  R27,HIGH(_epFactor_B)
+	CALL __LSLW2
+	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x243:
+SUBOPT_0x23C:
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	LDI  R26,LOW(_epTempRef2)
@@ -50348,7 +50302,7 @@ SUBOPT_0x243:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x244:
+SUBOPT_0x23D:
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	LDI  R26,LOW(_epADCRef2)
@@ -50360,35 +50314,50 @@ SUBOPT_0x244:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x245:
-	__POINTD1FN _0x1A0000,623
+SUBOPT_0x23E:
+	__POINTD1FN _0x1A0000,413
 	JMP SUBOPT_0xE8
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x246:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
+SUBOPT_0x23F:
+	LDI  R26,LOW(_epADCRef2)
+	LDI  R27,HIGH(_epADCRef2)
 	CALL __LSLW2
+	RET
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
+SUBOPT_0x240:
 	ADD  R26,R30
 	ADC  R27,R31
 	CALL __EEPROMRDD
 	CALL __PUTPARD1
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x247:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
+SUBOPT_0x241:
+	LDI  R26,LOW(_epTempRef2)
+	LDI  R27,HIGH(_epTempRef2)
+	CALL __LSLW2
+	RET
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
+SUBOPT_0x242:
 	CALL __LSLW2
 	ADD  R26,R30
 	ADC  R27,R31
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x248:
+SUBOPT_0x243:
 	CALL __PUTPARD1
 	LDD  R30,Y+24
 	LDD  R31,Y+24+1
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x249:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:13 WORDS
+SUBOPT_0x244:
+	CALL SUBOPT_0xB3
+	CALL __PUTPARD1
 	LDI  R30,LOW(2)
 	ST   -Y,R30
 	MOVW R26,R28
@@ -50396,52 +50365,46 @@ SUBOPT_0x249:
 	JMP  _ftoa
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x24A:
-	__POINTD1FN _0x1A0000,832
+SUBOPT_0x245:
+	__POINTD1FN _0x1A0000,622
 	CALL __PUTPARD1
 	LDI  R24,0
 	CALL _sprintf
 	ADIW R28,6
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x24B:
-	__POINTD1FN _0x1A0000,1041
-	CALL __PUTPARD1
-	RET
-
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x24C:
+SUBOPT_0x246:
 	MOVW R26,R28
 	ADIW R26,6
 	JMP  _strlen
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x24D:
+SUBOPT_0x247:
 	SUBI R30,LOW(48)
 	__PUTB1SNS 16,2
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:12 WORDS
-SUBOPT_0x24E:
+SUBOPT_0x248:
 	SUBI R30,LOW(48)
 	__PUTB1SNS 16,3
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:12 WORDS
-SUBOPT_0x24F:
+SUBOPT_0x249:
 	SUBI R30,LOW(48)
 	__PUTB1SNS 16,4
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:12 WORDS
-SUBOPT_0x250:
+SUBOPT_0x24A:
 	SUBI R30,LOW(48)
 	__PUTB1SNS 16,5
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x251:
+SUBOPT_0x24B:
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
 	ADIW R26,1
@@ -50450,138 +50413,162 @@ SUBOPT_0x251:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x252:
-	__POINTD1FN _0x1A0000,1146
+SUBOPT_0x24C:
+	__POINTD1FN _0x1A0000,936
 	CALL __PUTPARD1
 	MOVW R30,R28
 	ADIW R30,10
 	JMP SUBOPT_0x34
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x253:
-	LDI  R30,LOW(0)
-	ST   Y,R30
-	STD  Y+1,R30
-	STD  Y+2,R30
+SUBOPT_0x24D:
+	ST   -Y,R27
+	ST   -Y,R26
+	SBIW R28,20
+	LDI  R24,20
+	LDI  R26,LOW(0)
+	LDI  R27,HIGH(0)
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x254:
+SUBOPT_0x24E:
 	CALL __PUTPARD1
-	LDD  R30,Y+18
-	LDD  R31,Y+18+1
+	LDD  R30,Y+30
+	LDD  R31,Y+30+1
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x255:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:13 WORDS
+SUBOPT_0x24F:
 	MUL  R30,R26
 	MOVW R30,R0
 	CALL __CWD1
 	CALL __CDF1
-	CALL SUBOPT_0x59
+	__GETD2S 18
 	CALL __ADDF12
-	CALL SUBOPT_0xB6
-	LDD  R30,Y+10
-	LDD  R31,Y+10+1
+	__PUTD1S 18
+	LDD  R30,Y+22
+	LDD  R31,Y+22+1
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x256:
-	CALL SUBOPT_0x59
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:7 WORDS
+SUBOPT_0x250:
+	__GETD2S 18
 	CALL __ADDF12
-	CALL SUBOPT_0xB6
-	LDD  R30,Y+10
-	LDD  R31,Y+10+1
+	__PUTD1S 18
+	LDD  R30,Y+22
+	LDD  R31,Y+22+1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x257:
+SUBOPT_0x251:
 	LDI  R31,0
 	CALL __CWD1
 	CALL __CDF1
 	RET
 
+;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
+SUBOPT_0x252:
+	__GETD2S 18
+	RET
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:11 WORDS
+SUBOPT_0x253:
+	__PUTD1S 18
+	RET
+
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 21 TIMES, CODE SIZE REDUCTION:37 WORDS
-SUBOPT_0x258:
+SUBOPT_0x254:
 	CALL __CWD1
 	CALL __PUTPARD1
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:7 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
+SUBOPT_0x255:
+	__GETD2N 0x3FD56042
+	CALL __SUBF12
+	RET
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
+SUBOPT_0x256:
+	__PUTD1S 10
+	RET
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
+SUBOPT_0x257:
+	LDD  R30,Y+26
+	LDD  R31,Y+26+1
+	LDI  R26,LOW(_epADCRef1)
+	LDI  R27,HIGH(_epADCRef1)
+	CALL __LSLW2
+	ADD  R30,R26
+	ADC  R31,R27
+	RET
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
+SUBOPT_0x258:
+	MOVW R0,R30
+	LDD  R30,Y+26
+	LDD  R31,Y+26+1
+	JMP SUBOPT_0x31
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
 SUBOPT_0x259:
+	CALL __LSLW2
+	ADD  R26,R30
+	ADC  R27,R31
+	CALL SUBOPT_0xD4
+	CALL __EEPROMWRD
+	LDD  R26,Y+26
+	LDD  R27,Y+26+1
+	RET
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
+SUBOPT_0x25A:
+	CALL __EEPROMWRB
+	LDD  R26,Y+26
+	LDD  R27,Y+26+1
+	RET
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
+SUBOPT_0x25B:
 	LDI  R30,LOW(0)
-	__CLRD1S 2
+	__CLRD1S 14
 	__GETWRN 16,17,0
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x25A:
-	LDD  R26,Y+14
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:11 WORDS
+SUBOPT_0x25C:
+	LDD  R26,Y+26
 	SUBI R26,-LOW(8)
 	CALL _read_adc
-	CALL SUBOPT_0xB4
+	__GETD2S 14
 	CLR  R22
 	CLR  R23
 	CALL __ADDD12
-	JMP SUBOPT_0xB2
+	__PUTD1S 14
+	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x25B:
-	LDD  R30,Y+14
-	LDD  R31,Y+14+1
-	LDI  R26,LOW(_epADCRef1)
-	LDI  R27,HIGH(_epADCRef1)
-	RJMP SUBOPT_0x211
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x25C:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
+SUBOPT_0x25D:
+	CALL SUBOPT_0x60
+	CALL __PUTPARD1
 	LDI  R26,LOW(30)
 	LDI  R27,0
 	JMP  _iAD595ADCToTemp
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x25D:
-	MOVW R0,R30
-	LDD  R30,Y+14
-	LDD  R31,Y+14+1
-	JMP SUBOPT_0x31
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:13 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
 SUBOPT_0x25E:
-	CALL __LSLW2
-	ADD  R26,R30
-	ADC  R27,R31
-	CALL SUBOPT_0xB5
-	CALL __EEPROMWRD
-	LDD  R26,Y+14
-	LDD  R27,Y+14+1
-	RET
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x25F:
-	CALL __EEPROMWRB
-	LDD  R26,Y+14
-	LDD  R27,Y+14+1
-	RET
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x260:
-	LDD  R30,Y+14
-	LDD  R31,Y+14+1
-	LDI  R26,LOW(_epADCRef2)
-	LDI  R27,HIGH(_epADCRef2)
-	RJMP SUBOPT_0x211
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x261:
-	LDD  R30,Y+14
-	LDD  R31,Y+14+1
+	LDD  R30,Y+26
+	LDD  R31,Y+26+1
 	LDI  R26,LOW(_epADCRef3)
 	LDI  R27,HIGH(_epADCRef3)
-	RJMP SUBOPT_0x211
+	CALL __LSLW2
+	ADD  R30,R26
+	ADC  R31,R27
+	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x262:
+SUBOPT_0x25F:
 	MOVW R30,R10
 	LDI  R26,LOW(10)
 	LDI  R27,HIGH(10)
@@ -50589,25 +50576,25 @@ SUBOPT_0x262:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x263:
+SUBOPT_0x260:
 	CALL SUBOPT_0x59
 	CALL __PUTDZ20
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 17 TIMES, CODE SIZE REDUCTION:29 WORDS
-SUBOPT_0x264:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 18 TIMES, CODE SIZE REDUCTION:31 WORDS
+SUBOPT_0x261:
 	CALL __PUTDZ20
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x265:
+SUBOPT_0x262:
 	LDI  R30,LOW(10)
 	LDI  R31,HIGH(10)
 	CALL __MODW21
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x266:
+SUBOPT_0x263:
 	MOVW R30,R12
 	LDI  R26,LOW(10)
 	LDI  R27,HIGH(10)
@@ -50615,7 +50602,7 @@ SUBOPT_0x266:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x267:
+SUBOPT_0x264:
 	MOVW R26,R30
 	CALL __GETD1P
 	LDD  R26,Y+4
@@ -50624,7 +50611,7 @@ SUBOPT_0x267:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x268:
+SUBOPT_0x265:
 	STS  _batteryVolt,R30
 	STS  _batteryVolt+1,R31
 	STS  _batteryVolt+2,R22
@@ -50632,19 +50619,19 @@ SUBOPT_0x268:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x269:
+SUBOPT_0x266:
 	__GETD1MN _env_config,6
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x26A:
+SUBOPT_0x267:
 	ANDI R30,LOW(0x4)
 	LDI  R31,0
 	CALL __ASRW2
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:37 WORDS
-SUBOPT_0x26B:
+SUBOPT_0x268:
 	LDS  R30,_sdFreeSpace
 	LDS  R31,_sdFreeSpace+1
 	LDS  R22,_sdFreeSpace+2
@@ -50653,7 +50640,7 @@ SUBOPT_0x26B:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x26C:
+SUBOPT_0x269:
 	LD   R30,Y
 	LDD  R31,Y+1
 	SUBI R30,LOW(-_sensorStatus)
@@ -50661,7 +50648,7 @@ SUBOPT_0x26C:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x26D:
+SUBOPT_0x26A:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	SUBI R30,LOW(-_flag_lower_S00F0005000)
@@ -50669,7 +50656,7 @@ SUBOPT_0x26D:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x26E:
+SUBOPT_0x26B:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	LDI  R26,LOW(_t_S00F0005000)
@@ -50678,7 +50665,7 @@ SUBOPT_0x26E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x26F:
+SUBOPT_0x26C:
 	LDI  R30,LOW(29)
 	CALL __MULB1W2U
 	__ADDW1MN _sensor_config,13
@@ -50686,7 +50673,7 @@ SUBOPT_0x26F:
 	JMP SUBOPT_0x1E
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:18 WORDS
-SUBOPT_0x270:
+SUBOPT_0x26D:
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
 	SUBI R26,LOW(-_dataStatus)
@@ -50695,7 +50682,7 @@ SUBOPT_0x270:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x271:
+SUBOPT_0x26E:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	SUBI R30,LOW(-_flag_upper_S00F0005000)
@@ -50703,7 +50690,7 @@ SUBOPT_0x271:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x272:
+SUBOPT_0x26F:
 	LDI  R30,LOW(29)
 	CALL __MULB1W2U
 	__ADDW1MN _sensor_config,23
@@ -50711,17 +50698,17 @@ SUBOPT_0x272:
 	JMP SUBOPT_0x1E
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x273:
+SUBOPT_0x270:
 	CALL __LSLW2
 	JMP SUBOPT_0x1D
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 15 TIMES, CODE SIZE REDUCTION:25 WORDS
-SUBOPT_0x274:
+SUBOPT_0x271:
 	CALL __LSLW2
 	JMP SUBOPT_0x1B
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x275:
+SUBOPT_0x272:
 	__POINTW1MN _operating_config,3
 	ADD  R30,R16
 	ADC  R31,R17
@@ -50730,7 +50717,7 @@ SUBOPT_0x275:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:8 WORDS
-SUBOPT_0x276:
+SUBOPT_0x273:
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
 	MOVW R24,R26
@@ -50746,7 +50733,7 @@ SUBOPT_0x276:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x277:
+SUBOPT_0x274:
 	LDS  R26,_last_wr_eventQ
 	LDS  R27,_last_wr_eventQ+1
 	LDI  R30,LOW(6)
@@ -50754,7 +50741,7 @@ SUBOPT_0x277:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x278:
+SUBOPT_0x275:
 	LDS  R26,_last_rd_eventQ
 	LDS  R27,_last_rd_eventQ+1
 	LDI  R30,LOW(6)
@@ -50762,7 +50749,7 @@ SUBOPT_0x278:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x279:
+SUBOPT_0x276:
 	LD   R30,Z
 	LD   R26,Y
 	LDD  R27,Y+1
@@ -50770,13 +50757,13 @@ SUBOPT_0x279:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x27A:
+SUBOPT_0x277:
 	CALL __SAVELOCR4
 	__GETWRN 16,17,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x27B:
+SUBOPT_0x278:
 	ADD  R26,R16
 	ADC  R27,R17
 	LD   R30,X
@@ -50784,14 +50771,14 @@ SUBOPT_0x27B:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x27C:
+SUBOPT_0x279:
 	ST   -Y,R31
 	ST   -Y,R30
 	__GETD2N 0x3
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x27D:
+SUBOPT_0x27A:
 	LD   R26,Y
 	LDD  R27,Y+1
 	ST   X,R30
@@ -50799,13 +50786,13 @@ SUBOPT_0x27D:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x27E:
+SUBOPT_0x27B:
 	__GETD2MN _env_config,6
 	CALL __CPD02
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x27F:
+SUBOPT_0x27C:
 	LD   R26,Y
 	LDD  R27,Y+1
 	LDI  R30,LOW(0)
@@ -50815,13 +50802,13 @@ SUBOPT_0x27F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x280:
+SUBOPT_0x27D:
 	__GETW2MN _env_config,16
 	CALL __CPW02
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x281:
+SUBOPT_0x27E:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	SUBI R30,LOW(-_dinStatus)
@@ -50832,7 +50819,7 @@ SUBOPT_0x281:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x282:
+SUBOPT_0x27F:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	SUBI R30,LOW(-_t_flag_S0110006000)
@@ -50840,7 +50827,7 @@ SUBOPT_0x282:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x283:
+SUBOPT_0x280:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	SUBI R30,LOW(-_dinStatus)
@@ -50850,7 +50837,7 @@ SUBOPT_0x283:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x284:
+SUBOPT_0x281:
 	ST   -Y,R27
 	ST   -Y,R26
 	LDD  R30,Y+2
@@ -50858,7 +50845,7 @@ SUBOPT_0x284:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x285:
+SUBOPT_0x282:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	SUBI R30,LOW(-_sensorStatus)
@@ -50866,7 +50853,7 @@ SUBOPT_0x285:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x286:
+SUBOPT_0x283:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	SUBI R30,LOW(-_t_flag_S0110007000)
@@ -50874,15 +50861,15 @@ SUBOPT_0x286:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x287:
+SUBOPT_0x284:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	LDI  R26,LOW(_t_S0110007000)
 	LDI  R27,HIGH(_t_S0110007000)
-	RJMP SUBOPT_0x273
+	RJMP SUBOPT_0x270
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x288:
+SUBOPT_0x285:
 	LDD  R30,Y+2
 	LDD  R31,Y+2+1
 	SUBI R30,LOW(-_t_flag_S0110008000)
@@ -50890,78 +50877,78 @@ SUBOPT_0x288:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 27 TIMES, CODE SIZE REDUCTION:49 WORDS
-SUBOPT_0x289:
+SUBOPT_0x286:
 	LDI  R24,8
 	CALL _printOLED
 	ADIW R28,12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x28A:
+SUBOPT_0x287:
 	__MULBNWRU 16,17,5
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:18 WORDS
-SUBOPT_0x28B:
+SUBOPT_0x288:
 	CALL __PUTPARD1
 	MOVW R30,R16
-	RJMP SUBOPT_0x202
+	RJMP SUBOPT_0x201
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x28C:
+SUBOPT_0x289:
 	CALL __PUTPARD1
-	RJMP SUBOPT_0x289
+	RJMP SUBOPT_0x286
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 118 TIMES, CODE SIZE REDUCTION:231 WORDS
-SUBOPT_0x28D:
+SUBOPT_0x28A:
 	LDI  R24,4
 	CALL _printOLED
 	ADIW R28,8
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x28E:
+SUBOPT_0x28B:
 	CALL SUBOPT_0x8C
 	__GETD1N 0x40400000
 	CALL __CMPF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x28F:
+SUBOPT_0x28C:
 	CALL SUBOPT_0x8C
 	__GETD1N 0x40533333
 	CALL __CMPF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x290:
+SUBOPT_0x28D:
 	CALL SUBOPT_0x8C
 	__GETD1N 0x406CCCCD
 	CALL __CMPF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x291:
+SUBOPT_0x28E:
 	CALL SUBOPT_0x8C
 	__GETD1N 0x40800000
 	CALL __CMPF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 39 TIMES, CODE SIZE REDUCTION:73 WORDS
-SUBOPT_0x292:
+SUBOPT_0x28F:
 	LDI  R24,0
 	CALL _printOLED
 	ADIW R28,4
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x293:
+SUBOPT_0x290:
 	CALL __PUTPARD1
 	LDD  R30,Y+4
 	JMP SUBOPT_0x65
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0x294:
+SUBOPT_0x291:
 	CALL __ADDW2R15
 	CALL __GETD1P
 	CALL __PUTPARD1
@@ -50969,7 +50956,7 @@ SUBOPT_0x294:
 	JMP  _vsprintf
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x295:
+SUBOPT_0x292:
 	CALL SUBOPT_0x52
 	CALL _f_lseek
 	MOV  R17,R30
@@ -50977,7 +50964,7 @@ SUBOPT_0x295:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x296:
+SUBOPT_0x293:
 	MOV  R26,R17
 	CALL _error
 	LDI  R30,LOW(65535)
@@ -50985,7 +50972,7 @@ SUBOPT_0x296:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x297:
+SUBOPT_0x294:
 	ST   -Y,R31
 	ST   -Y,R30
 	MOVW R30,R28
@@ -50995,14 +50982,14 @@ SUBOPT_0x297:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x298:
+SUBOPT_0x295:
 	CALL __PUTPARD1
 	LDI  R30,LOW(_root_path)
 	LDI  R31,HIGH(_root_path)
 	JMP SUBOPT_0x34
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:8 WORDS
-SUBOPT_0x299:
+SUBOPT_0x296:
 	CALL _error
 	LDI  R30,LOW(0)
 	STS  _sdFreeSpace,R30
@@ -51014,29 +51001,29 @@ SUBOPT_0x299:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0x29A:
+SUBOPT_0x297:
 	LDD  R30,Z+2
 	LDI  R31,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x29B:
+SUBOPT_0x298:
 	__GETD2S 1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x29C:
+SUBOPT_0x299:
 	CALL __CWD1
 	CALL __MULD12U
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x29D:
+SUBOPT_0x29A:
 	__POINTD1FN _0x260000,798
-	RJMP SUBOPT_0x298
+	RJMP SUBOPT_0x295
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x29E:
+SUBOPT_0x29B:
 	ST   -Y,R31
 	ST   -Y,R30
 	MOVW R30,R28
@@ -51046,7 +51033,7 @@ SUBOPT_0x29E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x29F:
+SUBOPT_0x29C:
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	ST   -Y,R31
@@ -51054,7 +51041,7 @@ SUBOPT_0x29F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2A0:
+SUBOPT_0x29D:
 	MOVW R26,R28
 	ADIW R26,10
 	CALL _LOG_getLastInsert
@@ -51063,58 +51050,52 @@ SUBOPT_0x2A0:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2A1:
+SUBOPT_0x29E:
 	CALL SUBOPT_0x4F
 	CALL __PUTPARD1
 	JMP SUBOPT_0x48
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x2A2:
+SUBOPT_0x29F:
 	CALL _index2Addr
-	JMP SUBOPT_0xA7
+	JMP SUBOPT_0xA8
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x2A3:
-	CALL SUBOPT_0xB5
-	CALL __PUTPARD1
-	RET
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x2A4:
+SUBOPT_0x2A0:
 	CALL SUBOPT_0xB5
 	JMP SUBOPT_0xD3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 12 TIMES, CODE SIZE REDUCTION:19 WORDS
-SUBOPT_0x2A5:
+SUBOPT_0x2A1:
 	ST   -Y,R31
 	ST   -Y,R30
 	JMP SUBOPT_0x77
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x2A6:
+SUBOPT_0x2A2:
 	CALL _SD_writeData
 	MOVW R16,R30
 	TST  R17
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x2A7:
+SUBOPT_0x2A3:
 	CALL SUBOPT_0xB5
 	__ADDD1N 5
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2A8:
+SUBOPT_0x2A4:
 	CALL SUBOPT_0xB5
 	__ADDD1N 7
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x2A9:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:7 WORDS
+SUBOPT_0x2A5:
 	CALL SUBOPT_0xD5
 	CALL SUBOPT_0xBC
-	__PUTD1S 10
+	RCALL SUBOPT_0x256
 	MOVW R26,R30
 	MOVW R24,R22
 	CALL _LOG_setLastInsert
@@ -51123,7 +51104,7 @@ SUBOPT_0x2A9:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 15 TIMES, CODE SIZE REDUCTION:25 WORDS
-SUBOPT_0x2AA:
+SUBOPT_0x2A6:
 	LDD  R30,Y+24
 	LDD  R31,Y+24+1
 	ST   -Y,R31
@@ -51131,7 +51112,7 @@ SUBOPT_0x2AA:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2AB:
+SUBOPT_0x2A7:
 	MOVW R26,R28
 	ADIW R26,14
 	CALL _LOG_getLastInsert
@@ -51140,7 +51121,7 @@ SUBOPT_0x2AB:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2AC:
+SUBOPT_0x2A8:
 	MOVW R26,R28
 	ADIW R26,10
 	CALL _LOG_getLastSend
@@ -51149,25 +51130,19 @@ SUBOPT_0x2AC:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2AD:
+SUBOPT_0x2A9:
 	__POINTD1FN _0x280000,370
 	JMP SUBOPT_0x8D
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2AE:
-	CALL __PUTPARD1
-	CALL SUBOPT_0xDC
-	JMP SUBOPT_0x21
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2AF:
+SUBOPT_0x2AA:
 	CALL SUBOPT_0xD9
 	CALL SUBOPT_0xD8
 	CALL __CPD21
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x2B0:
+SUBOPT_0x2AB:
 	LDI  R30,LOW(_LOGFILE_DATA)
 	LDI  R31,HIGH(_LOGFILE_DATA)
 	ST   -Y,R31
@@ -51186,14 +51161,14 @@ SUBOPT_0x2B0:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0x2B1:
+SUBOPT_0x2AC:
 	CALL _SD_readData
 	MOVW R16,R30
 	TST  R17
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x2B2:
+SUBOPT_0x2AD:
 	LDD  R30,Y+18
 	LDD  R31,Y+18+1
 	ST   -Y,R31
@@ -51201,25 +51176,25 @@ SUBOPT_0x2B2:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2B3:
+SUBOPT_0x2AE:
 	CALL SUBOPT_0x4F
 	CALL __PUTPARD1
 	JMP SUBOPT_0xA
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2B4:
+SUBOPT_0x2AF:
 	ST   -Y,R31
 	ST   -Y,R30
 	JMP SUBOPT_0x75
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2B5:
+SUBOPT_0x2B0:
 	CALL SUBOPT_0xB5
 	__ADDD1N 10
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x2B6:
+SUBOPT_0x2B1:
 	LDI  R30,LOW(_LOGFILE_EVENT)
 	LDI  R31,HIGH(_LOGFILE_EVENT)
 	ST   -Y,R31
@@ -51238,7 +51213,7 @@ SUBOPT_0x2B6:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x2B7:
+SUBOPT_0x2B2:
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
 	ST   -Y,R31
@@ -51246,25 +51221,25 @@ SUBOPT_0x2B7:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x2B8:
+SUBOPT_0x2B3:
 	__GETD1N 0x0
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2B9:
+SUBOPT_0x2B4:
 	__GETD1N 0x4
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x2BA:
+SUBOPT_0x2B5:
 	CALL __PUTPARD1
 	__GETW1SX 555
 	JMP SUBOPT_0x34
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0x2BB:
+SUBOPT_0x2B6:
 	__GETW1SX 548
 	ST   -Y,R31
 	ST   -Y,R30
@@ -51272,7 +51247,7 @@ SUBOPT_0x2BB:
 	JMP  _print_payload
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x2BC:
+SUBOPT_0x2B7:
 	LDI  R30,LOW(_LOG_INIT_STR)
 	LDI  R31,HIGH(_LOG_INIT_STR)
 	ST   -Y,R31
@@ -51285,19 +51260,19 @@ SUBOPT_0x2BC:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2BD:
+SUBOPT_0x2B8:
 	__POINTD1FN _0x280000,1916
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2BE:
+SUBOPT_0x2B9:
 	CALL __PUTPARD1
 	LDI  R30,LOW(_LOGFILE_ERROR)
 	LDI  R31,HIGH(_LOGFILE_ERROR)
 	JMP SUBOPT_0x34
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x2BF:
+SUBOPT_0x2BA:
 	MOVW R26,R30
 	CALL __GETD1P
 	LDD  R26,Y+6
@@ -51306,7 +51281,7 @@ SUBOPT_0x2BF:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x2C0:
+SUBOPT_0x2BB:
 	LDI  R26,LOW(11)
 	MUL  R17,R26
 	MOVW R30,R0
@@ -51315,7 +51290,7 @@ SUBOPT_0x2C0:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:24 WORDS
-SUBOPT_0x2C1:
+SUBOPT_0x2BC:
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 	LDI  R26,LOW(11)
@@ -51323,7 +51298,7 @@ SUBOPT_0x2C1:
 	MOVW R30,R0
 	__ADDW1MN _dataLogQueue,1
 	CALL SUBOPT_0x2C
-	RCALL SUBOPT_0x264
+	RCALL SUBOPT_0x261
 	LDI  R26,LOW(11)
 	MUL  R17,R26
 	MOVW R30,R0
@@ -51337,15 +51312,15 @@ SUBOPT_0x2C1:
 	MOVW R30,R0
 	__ADDW1MN _dataLogQueue,7
 	CALL SUBOPT_0x2C
-	RJMP SUBOPT_0x264
+	RJMP SUBOPT_0x261
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:18 WORDS
-SUBOPT_0x2C2:
+SUBOPT_0x2BD:
 	__MULBNWRU 16,17,7
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x2C3:
+SUBOPT_0x2BE:
 	LDI  R26,LOW(7)
 	MUL  R17,R26
 	MOVW R30,R0
@@ -51354,7 +51329,7 @@ SUBOPT_0x2C3:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x2C4:
+SUBOPT_0x2BF:
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
 	LDI  R26,LOW(7)
@@ -51363,18 +51338,18 @@ SUBOPT_0x2C4:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:8 WORDS
-SUBOPT_0x2C5:
+SUBOPT_0x2C0:
 	__ADDW1MN _eventLogQueue,1
 	CALL SUBOPT_0x2C
-	RCALL SUBOPT_0x264
+	RCALL SUBOPT_0x261
 	LDI  R26,LOW(7)
 	MUL  R17,R26
 	MOVW R30,R0
 	__ADDW1MN _eventLogQueue,5
-	RJMP SUBOPT_0x2C4
+	RJMP SUBOPT_0x2BF
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:16 WORDS
-SUBOPT_0x2C6:
+SUBOPT_0x2C1:
 	LDI  R30,LOW(1)
 	STS  _currentPage,R30
 	LDI  R30,LOW(0)
@@ -51384,15 +51359,15 @@ SUBOPT_0x2C6:
 	LDS  R30,_cursor_S0160000000
 	CALL __CBD1
 	CALL __PUTPARD1
-	RJMP SUBOPT_0x28D
+	RJMP SUBOPT_0x28A
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 31 TIMES, CODE SIZE REDUCTION:117 WORDS
-SUBOPT_0x2C7:
+SUBOPT_0x2C2:
 	__GETB1SX 86
-	RJMP SUBOPT_0x21D
+	RJMP SUBOPT_0x214
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 25 TIMES, CODE SIZE REDUCTION:93 WORDS
-SUBOPT_0x2C8:
+SUBOPT_0x2C3:
 	LDS  R26,_cursor_S0160000000
 	SUBI R26,LOW(1)
 	STS  _cursor_S0160000000,R26
@@ -51400,23 +51375,23 @@ SUBOPT_0x2C8:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 18 TIMES, CODE SIZE REDUCTION:218 WORDS
-SUBOPT_0x2C9:
+SUBOPT_0x2C4:
 	__POINTD1FN _0x2C0000,9
 	CALL __PUTPARD1
 	LDS  R30,_cursor_S0160000000
 	CALL __CBD1
 	CALL __PUTPARD1
-	RJMP SUBOPT_0x28D
+	RJMP SUBOPT_0x28A
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 25 TIMES, CODE SIZE REDUCTION:69 WORDS
-SUBOPT_0x2CA:
+SUBOPT_0x2C5:
 	LDS  R26,_cursor_S0160000000
 	SUBI R26,-LOW(1)
 	STS  _cursor_S0160000000,R26
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:35 WORDS
-SUBOPT_0x2CB:
+SUBOPT_0x2C6:
 	LDI  R30,LOW(2)
 	STS  _currentPage,R30
 	LDI  R30,LOW(0)
@@ -51426,42 +51401,42 @@ SUBOPT_0x2CB:
 	LDS  R30,_cursor_S0160000000
 	CALL __CBD1
 	CALL __PUTPARD1
-	RJMP SUBOPT_0x28D
+	RJMP SUBOPT_0x28A
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 57 TIMES, CODE SIZE REDUCTION:165 WORDS
-SUBOPT_0x2CC:
+SUBOPT_0x2C7:
 	STS  _currentPage,R30
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:23 WORDS
-SUBOPT_0x2CD:
+SUBOPT_0x2C8:
 	__POINTD1FN _0x2C0000,21
 	CALL __PUTPARD1
 	LDS  R30,_cursor_S0160000000
 	CALL __CBD1
 	CALL __PUTPARD1
-	RJMP SUBOPT_0x28D
+	RJMP SUBOPT_0x28A
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:36 WORDS
-SUBOPT_0x2CE:
+SUBOPT_0x2C9:
 	__POINTD1FN _0x2C0000,27
 	CALL __PUTPARD1
 	LDS  R30,_cursor_S0160000000
 	CALL __CBD1
 	CALL __PUTPARD1
-	RJMP SUBOPT_0x28D
+	RJMP SUBOPT_0x28A
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x2CF:
+SUBOPT_0x2CA:
 	STS  _currentPage,R30
 	LDI  R30,LOW(21)
 	STS  _tmpNextPage_S0160000000,R30
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x2D0:
+SUBOPT_0x2CB:
 	STS  _tmpPrevPage_S0160000000,R30
 	LDI  R30,LOW(_entPwd_S0160000000)
 	LDI  R31,HIGH(_entPwd_S0160000000)
@@ -51472,46 +51447,46 @@ SUBOPT_0x2D0:
 	JMP SUBOPT_0x77
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:12 WORDS
-SUBOPT_0x2D1:
+SUBOPT_0x2CC:
 	CALL _memset
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 21 TIMES, CODE SIZE REDUCTION:37 WORDS
-SUBOPT_0x2D2:
+SUBOPT_0x2CD:
 	__POINTD1FN _0x2C0000,6
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:36 WORDS
-SUBOPT_0x2D3:
+SUBOPT_0x2CE:
 	__POINTD1FN _0x2C0000,36
 	CALL __PUTPARD1
 	LDS  R30,_cursor_S0160000000
 	CALL __CBD1
 	CALL __PUTPARD1
-	RJMP SUBOPT_0x28D
+	RJMP SUBOPT_0x28A
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x2D4:
+SUBOPT_0x2CF:
 	STS  _currentPage,R30
 	LDI  R30,LOW(7)
 	STS  _tmpNextPage_S0160000000,R30
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2D5:
+SUBOPT_0x2D0:
 	__POINTD1FN _0x2C0000,42
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2D6:
+SUBOPT_0x2D1:
 	CALL __PUTPARD1
 	__POINTW1MN _properties_config,80
 	JMP SUBOPT_0x34
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x2D7:
+SUBOPT_0x2D2:
 	LDI  R26,LOW(50)
 	LDI  R27,0
 	CALL _memset
@@ -51527,19 +51502,19 @@ SUBOPT_0x2D7:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x2D8:
+SUBOPT_0x2D3:
 	MOVW R30,R28
 	ADIW R30,58
-	JMP SUBOPT_0xF7
+	JMP SUBOPT_0xF6
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x2D9:
+SUBOPT_0x2D4:
 	LDI  R26,LOW(20)
 	LDI  R27,0
 	JMP  _memset
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x2DA:
+SUBOPT_0x2D5:
 	MOVW R30,R28
 	ADIW R30,58
 	ST   -Y,R31
@@ -51547,14 +51522,14 @@ SUBOPT_0x2DA:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x2DB:
+SUBOPT_0x2D6:
 	LDI  R24,0
 	CALL _sprintf
 	ADIW R28,6
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x2DC:
+SUBOPT_0x2D7:
 	MOVW R30,R28
 	ADIW R30,8
 	ST   -Y,R31
@@ -51562,17 +51537,17 @@ SUBOPT_0x2DC:
 	MOVW R26,R28
 	ADIW R26,60
 	CALL _strcat
-	RJMP SUBOPT_0x2D8
+	RJMP SUBOPT_0x2D3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2DD:
+SUBOPT_0x2D8:
 	__POINTW1MN _operating_config,3
 	ADD  R30,R16
 	ADC  R31,R17
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x2DE:
+SUBOPT_0x2D9:
 	MOVW R30,R18
 	__ADDWRN 18,19,1
 	MOVW R26,R28
@@ -51582,29 +51557,29 @@ SUBOPT_0x2DE:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2DF:
+SUBOPT_0x2DA:
 	CALL __PUTPARD1
 	MOVW R30,R28
 	ADIW R30,12
 	JMP SUBOPT_0x34
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x2E0:
+SUBOPT_0x2DB:
 	__GETW1SX 84
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2E1:
+SUBOPT_0x2DC:
 	__GETW1SX 82
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2E2:
+SUBOPT_0x2DD:
 	__GETW2SX 84
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x2E3:
+SUBOPT_0x2DE:
 	LDI  R30,LOW(_setIp_S0160000000)
 	LDI  R31,HIGH(_setIp_S0160000000)
 	ST   -Y,R31
@@ -51622,7 +51597,7 @@ SUBOPT_0x2E3:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:37 WORDS
-SUBOPT_0x2E4:
+SUBOPT_0x2DF:
 	CALL __PUTPARD1
 	LDS  R26,_setIp_S0160000000
 	LDI  R30,LOW(100)
@@ -51637,10 +51612,10 @@ SUBOPT_0x2E4:
 	ADC  R27,R31
 	__GETB1MN _setIp_S0160000000,2
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x2E5:
+SUBOPT_0x2E0:
 	__GETB2MN _setIp_S0160000000,3
 	LDI  R30,LOW(100)
 	MUL  R30,R26
@@ -51654,10 +51629,10 @@ SUBOPT_0x2E5:
 	ADC  R27,R31
 	__GETB1MN _setIp_S0160000000,5
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x2E6:
+SUBOPT_0x2E1:
 	__GETB2MN _setIp_S0160000000,6
 	LDI  R30,LOW(100)
 	MUL  R30,R26
@@ -51671,10 +51646,10 @@ SUBOPT_0x2E6:
 	ADC  R27,R31
 	__GETB1MN _setIp_S0160000000,8
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x2E7:
+SUBOPT_0x2E2:
 	__GETB2MN _setIp_S0160000000,9
 	LDI  R30,LOW(100)
 	MUL  R30,R26
@@ -51688,10 +51663,10 @@ SUBOPT_0x2E7:
 	ADC  R27,R31
 	__GETB1MN _setIp_S0160000000,11
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x2E8:
+SUBOPT_0x2E3:
 	LDS  R26,_setMask_S0160000000
 	LDI  R30,LOW(100)
 	MUL  R30,R26
@@ -51705,10 +51680,10 @@ SUBOPT_0x2E8:
 	ADC  R27,R31
 	__GETB1MN _setMask_S0160000000,2
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x2E9:
+SUBOPT_0x2E4:
 	__GETB2MN _setMask_S0160000000,3
 	LDI  R30,LOW(100)
 	MUL  R30,R26
@@ -51722,10 +51697,10 @@ SUBOPT_0x2E9:
 	ADC  R27,R31
 	__GETB1MN _setMask_S0160000000,5
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x2EA:
+SUBOPT_0x2E5:
 	__GETB2MN _setMask_S0160000000,6
 	LDI  R30,LOW(100)
 	MUL  R30,R26
@@ -51739,10 +51714,10 @@ SUBOPT_0x2EA:
 	ADC  R27,R31
 	__GETB1MN _setMask_S0160000000,8
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x2EB:
+SUBOPT_0x2E6:
 	__GETB2MN _setMask_S0160000000,9
 	LDI  R30,LOW(100)
 	MUL  R30,R26
@@ -51756,10 +51731,10 @@ SUBOPT_0x2EB:
 	ADC  R27,R31
 	__GETB1MN _setMask_S0160000000,11
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x2EC:
+SUBOPT_0x2E7:
 	LDS  R26,_setGw_S0160000000
 	LDI  R30,LOW(100)
 	MUL  R30,R26
@@ -51773,10 +51748,10 @@ SUBOPT_0x2EC:
 	ADC  R27,R31
 	__GETB1MN _setGw_S0160000000,2
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x2ED:
+SUBOPT_0x2E8:
 	__GETB2MN _setGw_S0160000000,3
 	LDI  R30,LOW(100)
 	MUL  R30,R26
@@ -51790,10 +51765,10 @@ SUBOPT_0x2ED:
 	ADC  R27,R31
 	__GETB1MN _setGw_S0160000000,5
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x2EE:
+SUBOPT_0x2E9:
 	__GETB2MN _setGw_S0160000000,6
 	LDI  R30,LOW(100)
 	MUL  R30,R26
@@ -51807,10 +51782,10 @@ SUBOPT_0x2EE:
 	ADC  R27,R31
 	__GETB1MN _setGw_S0160000000,8
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x2EF:
+SUBOPT_0x2EA:
 	__GETB2MN _setGw_S0160000000,9
 	LDI  R30,LOW(100)
 	MUL  R30,R26
@@ -51824,10 +51799,10 @@ SUBOPT_0x2EF:
 	ADC  R27,R31
 	__GETB1MN _setGw_S0160000000,11
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x2F0:
+SUBOPT_0x2EB:
 	LDS  R26,_setServer_S0160000000
 	LDI  R30,LOW(100)
 	MUL  R30,R26
@@ -51841,10 +51816,10 @@ SUBOPT_0x2F0:
 	ADC  R27,R31
 	__GETB1MN _setServer_S0160000000,2
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x2F1:
+SUBOPT_0x2EC:
 	__GETB2MN _setServer_S0160000000,3
 	LDI  R30,LOW(100)
 	MUL  R30,R26
@@ -51858,10 +51833,10 @@ SUBOPT_0x2F1:
 	ADC  R27,R31
 	__GETB1MN _setServer_S0160000000,5
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x2F2:
+SUBOPT_0x2ED:
 	__GETB2MN _setServer_S0160000000,6
 	LDI  R30,LOW(100)
 	MUL  R30,R26
@@ -51875,10 +51850,10 @@ SUBOPT_0x2F2:
 	ADC  R27,R31
 	__GETB1MN _setServer_S0160000000,8
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x2F3:
+SUBOPT_0x2EE:
 	__GETB2MN _setServer_S0160000000,9
 	LDI  R30,LOW(100)
 	MUL  R30,R26
@@ -51892,15 +51867,15 @@ SUBOPT_0x2F3:
 	ADC  R27,R31
 	__GETB1MN _setServer_S0160000000,11
 	LDI  R31,0
-	JMP SUBOPT_0x1BD
+	JMP SUBOPT_0x1BC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 21 TIMES, CODE SIZE REDUCTION:37 WORDS
-SUBOPT_0x2F4:
+SUBOPT_0x2EF:
 	CALL __PUTPARD1
-	RJMP SUBOPT_0x292
+	RJMP SUBOPT_0x28F
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x2F5:
+SUBOPT_0x2F0:
 	__GETB1SX 86
 	LDI  R31,0
 	CPI  R30,LOW(0x2)
@@ -51909,79 +51884,79 @@ SUBOPT_0x2F5:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 17 TIMES, CODE SIZE REDUCTION:45 WORDS
-SUBOPT_0x2F6:
+SUBOPT_0x2F1:
 	STS  _currentPage,R30
 	LDI  R30,LOW(1)
 	STS  _cursor_S0160000000,R30
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x2F7:
+SUBOPT_0x2F2:
 	STS  _currentPage,R30
 	LDI  R30,LOW(2)
 	STS  _cursor_S0160000000,R30
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2F8:
+SUBOPT_0x2F3:
 	__POINTD1FN _0x2C0000,15
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 57 TIMES, CODE SIZE REDUCTION:501 WORDS
-SUBOPT_0x2F9:
+SUBOPT_0x2F4:
 	CALL __PUTPARD1
 	LDS  R30,_cursor_S0160000000
 	CALL __CBD1
 	CALL __PUTPARD1
-	RJMP SUBOPT_0x28D
+	RJMP SUBOPT_0x28A
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x2FA:
+SUBOPT_0x2F5:
 	CALL __PUTPARD1
 	LDS  R30,_devEn_S0160000000
 	JMP SUBOPT_0x65
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x2FB:
+SUBOPT_0x2F6:
 	__POINTD1FN _0x2C0000,526
-	RJMP SUBOPT_0x2F9
+	RJMP SUBOPT_0x2F4
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:18 WORDS
-SUBOPT_0x2FC:
+SUBOPT_0x2F7:
 	__POINTD1FN _0x2C0000,549
 	CALL __PUTPARD1
 	MOVW R30,R16
-	RJMP SUBOPT_0x258
+	RJMP SUBOPT_0x254
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x2FD:
+SUBOPT_0x2F8:
 	ADD  R26,R16
 	ADC  R27,R17
 	LD   R30,X
 	JMP SUBOPT_0x65
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x2FE:
+SUBOPT_0x2F9:
 	__POINTD1FN _0x2C0000,558
-	RJMP SUBOPT_0x2F9
+	RJMP SUBOPT_0x2F4
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:37 WORDS
-SUBOPT_0x2FF:
+SUBOPT_0x2FA:
 	CALL __PUTPARD1
 	LDS  R30,_cursor_S0160000000
 	LDI  R31,0
 	SBRC R30,7
 	SER  R31
 	ADIW R30,2
-	RJMP SUBOPT_0x258
+	RJMP SUBOPT_0x254
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x300:
+SUBOPT_0x2FB:
 	__POINTD1FN _0x2C0000,591
-	RJMP SUBOPT_0x2FF
+	RJMP SUBOPT_0x2FA
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x301:
+SUBOPT_0x2FC:
 	LDI  R26,LOW(_operating_config)
 	LDI  R27,HIGH(_operating_config)
 	CALL _setOperatingConfig
@@ -51990,12 +51965,12 @@ SUBOPT_0x301:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x302:
+SUBOPT_0x2FD:
 	__POINTD1FN _0x2C0000,636
 	JMP SUBOPT_0x3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x303:
+SUBOPT_0x2FE:
 	LDI  R30,LOW(8)
 	STS  _tmpPrevPage_S0160000000,R30
 	LDI  R30,LOW(0)
@@ -52003,22 +51978,22 @@ SUBOPT_0x303:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x304:
+SUBOPT_0x2FF:
 	__POINTD1FN _0x2C0000,684
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x305:
+SUBOPT_0x300:
 	__POINTD1FN _0x2C0000,687
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:25 WORDS
-SUBOPT_0x306:
+SUBOPT_0x301:
 	__POINTD1FN _0x2C0000,690
-	RJMP SUBOPT_0x2F9
+	RJMP SUBOPT_0x2F4
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x307:
+SUBOPT_0x302:
 	LDS  R26,_cursor_S0160000000
 	LDI  R27,0
 	SBRC R26,7
@@ -52030,7 +52005,7 @@ SUBOPT_0x307:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x308:
+SUBOPT_0x303:
 	LDS  R26,_cursor_S0160000000
 	LDI  R27,0
 	SUBI R26,LOW(-_setIp_S0160000000)
@@ -52041,7 +52016,7 @@ SUBOPT_0x308:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0x309:
+SUBOPT_0x304:
 	LDS  R30,_cursor_S0160000000
 	LDI  R31,0
 	SUBI R30,LOW(-_setIp_S0160000000)
@@ -52051,7 +52026,7 @@ SUBOPT_0x309:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:45 WORDS
-SUBOPT_0x30A:
+SUBOPT_0x305:
 	__POINTD1FN _0x2C0000,549
 	CALL __PUTPARD1
 	LDS  R30,_cursor_S0160000000
@@ -52062,7 +52037,7 @@ SUBOPT_0x30A:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x30B:
+SUBOPT_0x306:
 	LDS  R26,_cursor_S0160000000
 	LDI  R27,0
 	SUBI R26,LOW(-_setMask_S0160000000)
@@ -52073,7 +52048,7 @@ SUBOPT_0x30B:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0x30C:
+SUBOPT_0x307:
 	LDS  R30,_cursor_S0160000000
 	LDI  R31,0
 	SUBI R30,LOW(-_setMask_S0160000000)
@@ -52083,7 +52058,7 @@ SUBOPT_0x30C:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x30D:
+SUBOPT_0x308:
 	LDS  R26,_cursor_S0160000000
 	LDI  R27,0
 	SUBI R26,LOW(-_setGw_S0160000000)
@@ -52094,7 +52069,7 @@ SUBOPT_0x30D:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0x30E:
+SUBOPT_0x309:
 	LDS  R30,_cursor_S0160000000
 	LDI  R31,0
 	SUBI R30,LOW(-_setGw_S0160000000)
@@ -52104,7 +52079,7 @@ SUBOPT_0x30E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x30F:
+SUBOPT_0x30A:
 	LDS  R26,_cursor_S0160000000
 	LDI  R27,0
 	SUBI R26,LOW(-_setServer_S0160000000)
@@ -52115,7 +52090,7 @@ SUBOPT_0x30F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0x310:
+SUBOPT_0x30B:
 	LDS  R30,_cursor_S0160000000
 	LDI  R31,0
 	SUBI R30,LOW(-_setServer_S0160000000)
@@ -52125,19 +52100,19 @@ SUBOPT_0x310:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 12 TIMES, CODE SIZE REDUCTION:30 WORDS
-SUBOPT_0x311:
+SUBOPT_0x30C:
 	STS  _tmpPrevPage_S0160000000,R30
 	LDI  R30,LOW(0)
 	STS  _cursor_S0160000000,R30
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x312:
+SUBOPT_0x30D:
 	__POINTD1FN _0x2C0000,0
-	RJMP SUBOPT_0x2F9
+	RJMP SUBOPT_0x2F4
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x313:
+SUBOPT_0x30E:
 	LDS  R26,_cursor_S0160000000
 	LDI  R27,0
 	SBRC R26,7
@@ -52145,13 +52120,13 @@ SUBOPT_0x313:
 	JMP  _showProbeConfig
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:18 WORDS
-SUBOPT_0x314:
+SUBOPT_0x30F:
 	LDS  R26,_cursor_S0160000000
 	LDI  R27,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x315:
+SUBOPT_0x310:
 	LDS  R30,_cursor_S0160000000
 	LDI  R31,0
 	SUBI R30,LOW(-_prbEn_S0160000000)
@@ -52160,21 +52135,21 @@ SUBOPT_0x315:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x316:
+SUBOPT_0x311:
 	ST   X,R30
 	__POINTD1FN _0x2C0000,591
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:42 WORDS
-SUBOPT_0x317:
+SUBOPT_0x312:
 	LDS  R30,_cursor_S0160000000
 	CALL __CBD1
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x318:
+SUBOPT_0x313:
 	LDI  R30,LOW(36)
 	STS  _currentPage,R30
 	LDI  R30,LOW(14)
@@ -52182,12 +52157,12 @@ SUBOPT_0x318:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x319:
+SUBOPT_0x314:
 	__POINTD1FN _0x2C0000,800
-	RJMP SUBOPT_0x2F9
+	RJMP SUBOPT_0x2F4
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x31A:
+SUBOPT_0x315:
 	LDI  R30,LOW(36)
 	STS  _currentPage,R30
 	LDI  R30,LOW(17)
@@ -52195,17 +52170,17 @@ SUBOPT_0x31A:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:25 WORDS
-SUBOPT_0x31B:
+SUBOPT_0x316:
 	__POINTD1FN _0x2C0000,806
-	RJMP SUBOPT_0x2F9
+	RJMP SUBOPT_0x2F4
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:25 WORDS
-SUBOPT_0x31C:
+SUBOPT_0x317:
 	__POINTD1FN _0x2C0000,813
-	RJMP SUBOPT_0x2F9
+	RJMP SUBOPT_0x2F4
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x31D:
+SUBOPT_0x318:
 	LDI  R30,LOW(_confPwd_S0160000000)
 	LDI  R31,HIGH(_confPwd_S0160000000)
 	ST   -Y,R31
@@ -52215,7 +52190,7 @@ SUBOPT_0x31D:
 	JMP SUBOPT_0x77
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x31E:
+SUBOPT_0x319:
 	LD   R30,X
 	SUBI R30,-LOW(1)
 	ST   X,R30
@@ -52223,7 +52198,7 @@ SUBOPT_0x31E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x31F:
+SUBOPT_0x31A:
 	LDS  R30,_cursor_S0160000000
 	LDI  R31,0
 	SUBI R30,LOW(-_newPwd_S0160000000)
@@ -52231,19 +52206,19 @@ SUBOPT_0x31F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x320:
+SUBOPT_0x31B:
 	__POINTD1FN _0x2C0000,822
 	CALL __PUTPARD1
-	RJMP SUBOPT_0x317
+	RJMP SUBOPT_0x312
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x321:
+SUBOPT_0x31C:
 	LD   R30,Z
 	CALL __CBD1
-	RJMP SUBOPT_0x28C
+	RJMP SUBOPT_0x289
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x322:
+SUBOPT_0x31D:
 	LDI  R30,LOW(_newPwd_S0160000000)
 	LDI  R31,HIGH(_newPwd_S0160000000)
 	ST   -Y,R31
@@ -52251,20 +52226,20 @@ SUBOPT_0x322:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x323:
+SUBOPT_0x31E:
 	LDI  R30,LOW(255)
 	ST   -Y,R30
 	JMP SUBOPT_0x77
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x324:
+SUBOPT_0x31F:
 	__GETW1SX 80
 	ST   -Y,R31
 	ST   -Y,R30
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x325:
+SUBOPT_0x320:
 	LDS  R30,_cursor_S0160000000
 	LDI  R31,0
 	SUBI R30,LOW(-_confPwd_S0160000000)
@@ -52272,51 +52247,51 @@ SUBOPT_0x325:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x326:
+SUBOPT_0x321:
 	LDI  R30,LOW(1)
 	STS  _currentPage,R30
 	LDI  R30,LOW(3)
 	STS  _cursor_S0160000000,R30
-	RJMP SUBOPT_0x312
+	RJMP SUBOPT_0x30D
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x327:
+SUBOPT_0x322:
 	__POINTD1FN _0x2C0000,881
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:8 WORDS
-SUBOPT_0x328:
+SUBOPT_0x323:
 	__POINTD1FN _0x2C0000,890
 	CALL __PUTPARD1
 	LDS  R30,_prb1_S0160000000
 	LDI  R31,0
-	JMP SUBOPT_0x202
+	JMP SUBOPT_0x201
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x329:
+SUBOPT_0x324:
 	__POINTD1FN _0x2C0000,896
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:22 WORDS
-SUBOPT_0x32A:
+SUBOPT_0x325:
 	LDS  R30,_prb1_S0160000000
 	LDI  R31,0
-	JMP SUBOPT_0x202
+	JMP SUBOPT_0x201
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x32B:
+SUBOPT_0x326:
 	__POINTD1FN _0x2C0000,905
-	RJMP SUBOPT_0x2F9
+	RJMP SUBOPT_0x2F4
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x32C:
+SUBOPT_0x327:
 	__POINTD1FN _0x2C0000,911
-	RJMP SUBOPT_0x2F9
+	RJMP SUBOPT_0x2F4
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x32D:
+SUBOPT_0x328:
 	LDS  R30,_cursor_S0160000000
 	LDI  R31,0
 	SUBI R30,LOW(-_vRef_S0160000000)
@@ -52324,12 +52299,12 @@ SUBOPT_0x32D:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x32E:
+SUBOPT_0x329:
 	__POINTD1FN _0x2C0000,917
-	RJMP SUBOPT_0x2F9
+	RJMP SUBOPT_0x2F4
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x32F:
+SUBOPT_0x32A:
 	LDS  R26,_prb1_S0160000000
 	SUBI R26,-LOW(1)
 	STS  _prb1_S0160000000,R26
@@ -52337,25 +52312,25 @@ SUBOPT_0x32F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x330:
+SUBOPT_0x32B:
 	__POINTD1FN _0x2C0000,923
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:12 WORDS
-SUBOPT_0x331:
+SUBOPT_0x32C:
 	LDS  R30,_prb2_S0160000000
 	LDI  R31,0
-	JMP SUBOPT_0x202
+	JMP SUBOPT_0x201
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x332:
+SUBOPT_0x32D:
 	__POINTD1FN _0x2C0000,929
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x333:
+SUBOPT_0x32E:
 	LDS  R30,_prb1_S0160000000
 	LDI  R31,0
 	ST   -Y,R31
@@ -52363,20 +52338,20 @@ SUBOPT_0x333:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x334:
+SUBOPT_0x32F:
 	STS  _currentPage,R30
 	LDI  R30,LOW(24)
 	STS  _tmpNextPage_S0160000000,R30
 	LDI  R30,LOW(25)
-	RJMP SUBOPT_0x311
+	RJMP SUBOPT_0x30C
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x335:
+SUBOPT_0x330:
 	__POINTD1FN _0x2C0000,935
-	RJMP SUBOPT_0x2F9
+	RJMP SUBOPT_0x2F4
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x336:
+SUBOPT_0x331:
 	ST   -Y,R31
 	ST   -Y,R30
 	LDI  R26,LOW(_calPnt_S0160000000)
@@ -52384,18 +52359,18 @@ SUBOPT_0x336:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x337:
+SUBOPT_0x332:
 	__POINTD1FN _0x2C0000,950
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x338:
+SUBOPT_0x333:
 	__POINTD1FN _0x2C0000,979
-	RJMP SUBOPT_0x2F9
+	RJMP SUBOPT_0x2F4
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x339:
+SUBOPT_0x334:
 	LDI  R30,LOW(37)
 	STS  _currentPage,R30
 	LDI  R30,LOW(27)
@@ -52403,7 +52378,7 @@ SUBOPT_0x339:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x33A:
+SUBOPT_0x335:
 	LDI  R30,LOW(36)
 	STS  _currentPage,R30
 	LDI  R30,LOW(27)
@@ -52411,7 +52386,7 @@ SUBOPT_0x33A:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:12 WORDS
-SUBOPT_0x33B:
+SUBOPT_0x336:
 	LDS  R30,_cursor_S0160000000
 	LDI  R31,0
 	SUBI R30,LOW(-_calPnt_S0160000000)
@@ -52419,17 +52394,17 @@ SUBOPT_0x33B:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x33C:
+SUBOPT_0x337:
 	__POINTD1FN _0x2C0000,21
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x33D:
+SUBOPT_0x338:
 	__POINTD1FN _0x2C0000,27
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x33E:
+SUBOPT_0x339:
 	LDI  R30,LOW(_entPwd_S0160000000)
 	LDI  R31,HIGH(_entPwd_S0160000000)
 	ST   -Y,R31
@@ -52437,12 +52412,12 @@ SUBOPT_0x33E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x33F:
+SUBOPT_0x33A:
 	__POINTD1FN _0x2C0000,985
-	RJMP SUBOPT_0x2F4
+	RJMP SUBOPT_0x2EF
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x340:
+SUBOPT_0x33B:
 	LDS  R30,_tmpNextPage_S0160000000
 	LDI  R31,0
 	CPI  R30,LOW(0x7)
@@ -52451,7 +52426,7 @@ SUBOPT_0x340:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:12 WORDS
-SUBOPT_0x341:
+SUBOPT_0x33C:
 	LDS  R30,_cursor_S0160000000
 	LDI  R31,0
 	SUBI R30,LOW(-_entPwd_S0160000000)
@@ -52459,26 +52434,26 @@ SUBOPT_0x341:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x342:
+SUBOPT_0x33D:
 	STS  _currentPage,R30
 	LDS  R26,_tmpPrevPage_S0160000000
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 27 TIMES, CODE SIZE REDUCTION:49 WORDS
-SUBOPT_0x343:
+SUBOPT_0x33E:
 	CALL __GETW1P
 	ST   -Y,R31
 	ST   -Y,R30
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x344:
+SUBOPT_0x33F:
 	LDD  R30,Y+31
 	CALL __CBD1
 	JMP SUBOPT_0x11
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0x345:
+SUBOPT_0x340:
 	LDD  R26,Y+48
 	LDD  R27,Y+48+1
 	LDI  R30,LOW(29)
@@ -52487,7 +52462,7 @@ SUBOPT_0x345:
 	JMP SUBOPT_0x78
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x346:
+SUBOPT_0x341:
 	CALL __PUTPARD1
 	LDD  R26,Y+56
 	LDD  R27,Y+56+1
@@ -52497,7 +52472,7 @@ SUBOPT_0x346:
 	JMP SUBOPT_0x78
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0x347:
+SUBOPT_0x342:
 	LDD  R26,Y+60
 	LDD  R27,Y+60+1
 	LDI  R30,LOW(29)
@@ -52506,12 +52481,12 @@ SUBOPT_0x347:
 	JMP SUBOPT_0x78
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x348:
+SUBOPT_0x343:
 	__GETW2SX 64
-	RJMP SUBOPT_0x272
+	RJMP SUBOPT_0x26F
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:10 WORDS
-SUBOPT_0x349:
+SUBOPT_0x344:
 	CALL __PUTPARD1
 	__GETW2SX 68
 	LDI  R30,LOW(29)
@@ -52520,7 +52495,7 @@ SUBOPT_0x349:
 	JMP SUBOPT_0x78
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x34A:
+SUBOPT_0x345:
 	ST   -Y,R27
 	ST   -Y,R26
 	SBIW R28,2
@@ -52528,13 +52503,13 @@ SUBOPT_0x34A:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x34B:
+SUBOPT_0x346:
 	CALL __PUTPARD1
 	MOVW R30,R20
 	JMP SUBOPT_0x34
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:38 WORDS
-SUBOPT_0x34C:
+SUBOPT_0x347:
 	MOVW R26,R20
 	LDI  R30,LOW(100)
 	LDI  R31,HIGH(100)
@@ -52570,13 +52545,13 @@ SUBOPT_0x34C:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x34D:
+SUBOPT_0x348:
 	CALL __PUTPARD1
 	MOVW R30,R16
 	JMP SUBOPT_0x34
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:38 WORDS
-SUBOPT_0x34E:
+SUBOPT_0x349:
 	MOVW R26,R16
 	LDI  R30,LOW(100)
 	LDI  R31,HIGH(100)
@@ -52612,7 +52587,7 @@ SUBOPT_0x34E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x34F:
+SUBOPT_0x34A:
 	LDD  R26,Y+10
 	LDD  R27,Y+10+1
 	LDI  R30,LOW(100)
@@ -52620,31 +52595,26 @@ SUBOPT_0x34F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x350:
+SUBOPT_0x34B:
 	LDI  R26,LOW(_eep_vref_val)
 	LDI  R27,HIGH(_eep_vref_val)
 	CALL __EEPROMRDD
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x351:
+SUBOPT_0x34C:
 	MOVW R26,R30
 	MOVW R24,R22
-	JMP SUBOPT_0x10C
+	JMP SUBOPT_0x10B
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x352:
-	__PUTD1S 10
-	RET
-
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x353:
+SUBOPT_0x34D:
 	CALL SUBOPT_0xD5
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x354:
+SUBOPT_0x34E:
 	MOVW R30,R18
 	ADIW R30,4
 	CP   R16,R30
@@ -52652,7 +52622,7 @@ SUBOPT_0x354:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x355:
+SUBOPT_0x34F:
 	MOVW R30,R16
 	SUB  R30,R18
 	SBC  R31,R19
@@ -52661,7 +52631,7 @@ SUBOPT_0x355:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:30 WORDS
-SUBOPT_0x356:
+SUBOPT_0x350:
 	MOVW R30,R16
 	LSL  R30
 	ROL  R31
@@ -52677,7 +52647,7 @@ SUBOPT_0x356:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:24 WORDS
-SUBOPT_0x357:
+SUBOPT_0x351:
 	MOVW R30,R16
 	LSL  R30
 	ROL  R31
@@ -52690,7 +52660,7 @@ SUBOPT_0x357:
 	JMP  _h2i
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 12 TIMES, CODE SIZE REDUCTION:63 WORDS
-SUBOPT_0x358:
+SUBOPT_0x352:
 	ST   X,R30
 	MOVW R26,R16
 	SUB  R26,R18
@@ -52701,16 +52671,16 @@ SUBOPT_0x358:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x359:
+SUBOPT_0x353:
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
 	ADD  R30,R26
 	ADC  R31,R27
 	MOVW R22,R30
-	RJMP SUBOPT_0x355
+	RJMP SUBOPT_0x34F
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x35A:
+SUBOPT_0x354:
 	ADD  R26,R30
 	ADC  R27,R31
 	LD   R30,X
@@ -52720,10 +52690,10 @@ SUBOPT_0x35A:
 	LDI  R31,HIGH(100)
 	CALL __DIVW21
 	MOVW R26,R22
-	RJMP SUBOPT_0x358
+	RJMP SUBOPT_0x352
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x35B:
+SUBOPT_0x355:
 	ADD  R26,R30
 	ADC  R27,R31
 	LD   R26,X
@@ -52731,16 +52701,16 @@ SUBOPT_0x35B:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x35C:
+SUBOPT_0x356:
 	MOVW R26,R30
 	LDI  R30,LOW(10)
 	LDI  R31,HIGH(10)
 	CALL __DIVW21
 	MOVW R26,R22
-	RJMP SUBOPT_0x358
+	RJMP SUBOPT_0x352
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x35D:
+SUBOPT_0x357:
 	MOVW R30,R16
 	SUB  R30,R18
 	SBC  R31,R19
@@ -52749,16 +52719,16 @@ SUBOPT_0x35D:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x35E:
+SUBOPT_0x358:
 	LDD  R26,Y+24
 	LDD  R27,Y+24+1
 	ADD  R30,R26
 	ADC  R31,R27
 	MOVW R22,R30
-	RJMP SUBOPT_0x35D
+	RJMP SUBOPT_0x357
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x35F:
+SUBOPT_0x359:
 	MOVW R30,R16
 	SUB  R30,R18
 	SBC  R31,R19
@@ -52767,16 +52737,16 @@ SUBOPT_0x35F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x360:
+SUBOPT_0x35A:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
 	ADD  R30,R26
 	ADC  R31,R27
 	MOVW R22,R30
-	RJMP SUBOPT_0x35F
+	RJMP SUBOPT_0x359
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x361:
+SUBOPT_0x35B:
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
 	ADD  R30,R26
@@ -52785,22 +52755,22 @@ SUBOPT_0x361:
 	MOVW R30,R16
 	SUB  R30,R18
 	SBC  R31,R19
-	JMP SUBOPT_0x168
+	JMP SUBOPT_0x167
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x362:
+SUBOPT_0x35C:
 	LD   R30,X
 	LDI  R31,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x363:
+SUBOPT_0x35D:
 	LD   R30,Y
 	LDI  R31,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x364:
+SUBOPT_0x35E:
 	MOVW R26,R28
 	ADIW R26,30
 	ADD  R26,R30
@@ -52808,7 +52778,7 @@ SUBOPT_0x364:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x365:
+SUBOPT_0x35F:
 	LDI  R30,LOW(0)
 	STD  Y+34,R30
 	MOVW R26,R28
@@ -52816,7 +52786,7 @@ SUBOPT_0x365:
 	JMP  _atol
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x366:
+SUBOPT_0x360:
 	LDI  R30,LOW(0)
 	STD  Y+32,R30
 	MOVW R26,R28
@@ -52824,33 +52794,33 @@ SUBOPT_0x366:
 	JMP  _atol
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 11 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x367:
+SUBOPT_0x361:
 	__PUTD1S 8
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x368:
+SUBOPT_0x362:
 	__PUTD1S 16
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x369:
+SUBOPT_0x363:
 	__PUTD1S 20
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x36A:
+SUBOPT_0x364:
 	CALL __PUTPARD1
 	__GETD1S 28
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x36B:
+SUBOPT_0x365:
 	__POINTD1FN _0x2E0000,255
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x36C:
+SUBOPT_0x366:
 	MOVW R26,R28
 	ADIW R26,1
 	ADD  R26,R30
@@ -52858,7 +52828,7 @@ SUBOPT_0x36C:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x36D:
+SUBOPT_0x367:
 	LDI  R30,LOW(9)
 	LDI  R31,HIGH(9)
 	STS  _hwCalId,R30
@@ -52866,12 +52836,12 @@ SUBOPT_0x36D:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x36E:
+SUBOPT_0x368:
 	CALL __PUTPARD1
-	JMP SUBOPT_0xAB
+	JMP SUBOPT_0xAC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x36F:
+SUBOPT_0x369:
 	MOV  R26,R17
 	CLR  R27
 	LDI  R30,LOW(3)
@@ -52880,7 +52850,7 @@ SUBOPT_0x36F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:29 WORDS
-SUBOPT_0x370:
+SUBOPT_0x36A:
 	MOV  R26,R17
 	LDI  R27,0
 	LDI  R30,LOW(3)
@@ -52891,37 +52861,37 @@ SUBOPT_0x370:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x371:
+SUBOPT_0x36B:
 	LD   R26,X
 	CALL _isdigit
 	CPI  R30,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x372:
+SUBOPT_0x36C:
 	MOVW R22,R30
 	MOVW R26,R30
 	CALL __EEPROMRDB
 	MOV  R0,R30
-	JMP SUBOPT_0xAB
+	JMP SUBOPT_0xAC
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x373:
+SUBOPT_0x36D:
 	__POINTD1FN _0x2E0000,801
 	CALL __PUTPARD1
 	MOV  R26,R17
 	LDI  R27,0
 	SUBI R26,LOW(-_DEVICE_SERIAL)
 	SBCI R27,HIGH(-_DEVICE_SERIAL)
-	JMP SUBOPT_0x135
+	JMP SUBOPT_0x134
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x374:
+SUBOPT_0x36E:
 	__POINTD1FN _0x2E0000,19
 	JMP SUBOPT_0x3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x375:
+SUBOPT_0x36F:
 	LDI  R30,LOW(_rxPackage3)
 	LDI  R31,HIGH(_rxPackage3)
 	ST   -Y,R31
@@ -52929,7 +52899,7 @@ SUBOPT_0x375:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x376:
+SUBOPT_0x370:
 	CALL __PUTPARD1
 	LDI  R26,LOW(7)
 	CALL _strncmpf
@@ -52937,36 +52907,36 @@ SUBOPT_0x376:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x377:
+SUBOPT_0x371:
 	CALL __PUTPARD1
 	MOVW R26,R20
 	LD   R30,X
 	JMP SUBOPT_0x29
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x378:
+SUBOPT_0x372:
 	__POINTD1FN _0x2E0000,741
 	JMP SUBOPT_0x3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x379:
+SUBOPT_0x373:
 	__POINTD1FN _0x2E0000,869
 	JMP SUBOPT_0x3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x37A:
+SUBOPT_0x374:
 	LDD  R26,Y+12
 	LDD  R27,Y+12+1
 	JMP  _print_hex_ascii_line
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x37B:
+SUBOPT_0x375:
 	LDS  R30,_n
 	LDS  R31,_n+1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x37C:
+SUBOPT_0x376:
 	MOVW R30,R18
 	CALL __LSLW4
 	SUBI R30,LOW(-_a)
@@ -52974,13 +52944,13 @@ SUBOPT_0x37C:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x37D:
+SUBOPT_0x377:
 	MOVW R26,R30
 	MOVW R30,R16
-	JMP SUBOPT_0x274
+	JMP SUBOPT_0x271
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x37E:
+SUBOPT_0x378:
 	LDD  R30,Y+10
 	LDD  R31,Y+10+1
 	CALL __LSLW4
@@ -52989,37 +52959,49 @@ SUBOPT_0x37E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x37F:
+SUBOPT_0x379:
 	MOVW R26,R30
 	MOVW R30,R18
-	JMP SUBOPT_0x274
+	JMP SUBOPT_0x271
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x380:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
+SUBOPT_0x37A:
 	MOVW R26,R30
 	MOVW R30,R18
-	JMP SUBOPT_0x211
+	CALL __LSLW2
+	ADD  R30,R26
+	ADC  R31,R27
+	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x381:
+SUBOPT_0x37B:
 	MOVW R30,R16
 	CALL __LSLW4
 	SUBI R30,LOW(-_a)
 	SBCI R31,HIGH(-_a)
 	RET
 
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
+SUBOPT_0x37C:
+	MOVW R26,R30
+	RCALL SUBOPT_0x375
+	CALL __LSLW2
+	ADD  R30,R26
+	ADC  R31,R27
+	RET
+
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x382:
+SUBOPT_0x37D:
 	__GETD1N 0x3F800000
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x383:
+SUBOPT_0x37E:
 	__GETD2N 0x3F800000
-	JMP SUBOPT_0x264
+	JMP SUBOPT_0x261
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x384:
+SUBOPT_0x37F:
 	SBIW R28,63
 	SBIW R28,63
 	SBIW R28,63
@@ -53030,7 +53012,7 @@ SUBOPT_0x384:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x385:
+SUBOPT_0x380:
 	__GETD1N 0x44800000
 	CALL __DIVF21
 	__GETD2N 0x40533333
@@ -53038,31 +53020,31 @@ SUBOPT_0x385:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x386:
+SUBOPT_0x381:
 	__GETD2SX 186
 	__GETD1N 0xBDC08312
 	CALL __CMPF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 15 TIMES, CODE SIZE REDUCTION:81 WORDS
-SUBOPT_0x387:
+SUBOPT_0x382:
 	__GETD2SX 186
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x388:
+SUBOPT_0x383:
 	__GETD1N 0xBEC00000
 	CALL __CMPF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x389:
+SUBOPT_0x384:
 	__GETD1SX 62
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:34 WORDS
-SUBOPT_0x38A:
+SUBOPT_0x385:
 	CALL __PUTPARD1
 	MOVW R30,R28
 	SUBI R30,LOW(-(202))
@@ -53081,37 +53063,37 @@ SUBOPT_0x38A:
 	__GETD1SX 186
 	__GETD2SX 178
 	CALL __MULF12
-	RCALL SUBOPT_0x387
+	RCALL SUBOPT_0x382
 	CALL __MULF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:39 WORDS
-SUBOPT_0x38B:
+SUBOPT_0x386:
 	__GETD1SX 186
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:29 WORDS
-SUBOPT_0x38C:
+SUBOPT_0x387:
 	__GETD2SX 174
 	CALL __MULF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:37 WORDS
-SUBOPT_0x38D:
+SUBOPT_0x388:
 	CALL __ADDF12
 	__GETD2SX 170
 	CALL __ADDF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x38E:
-	RCALL SUBOPT_0x387
+SUBOPT_0x389:
+	RCALL SUBOPT_0x382
 	__GETD1N 0xBF381062
 	CALL __CMPF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x38F:
+SUBOPT_0x38A:
 	CALL __PUTPARD1
 	MOVW R30,R28
 	SUBI R30,LOW(-(66))
@@ -53119,7 +53101,7 @@ SUBOPT_0x38F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:55 WORDS
-SUBOPT_0x390:
+SUBOPT_0x38B:
 	MOVW R30,R28
 	SUBI R30,LOW(-(202))
 	SBCI R31,HIGH(-(202))
@@ -53134,57 +53116,57 @@ SUBOPT_0x390:
 	SUBI R26,LOW(-(198))
 	SBCI R27,HIGH(-(198))
 	CALL _gaussian
-	RCALL SUBOPT_0x38B
+	RCALL SUBOPT_0x386
 	__GETD2SX 178
 	CALL __MULF12
-	RCALL SUBOPT_0x387
+	RCALL SUBOPT_0x382
 	CALL __MULF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x391:
-	RCALL SUBOPT_0x38B
-	RJMP SUBOPT_0x38C
+SUBOPT_0x38C:
+	RCALL SUBOPT_0x386
+	RJMP SUBOPT_0x387
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x392:
-	RCALL SUBOPT_0x387
+SUBOPT_0x38D:
+	RCALL SUBOPT_0x382
 	__GETD1N 0xBF82B021
 	CALL __CMPF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x393:
-	RCALL SUBOPT_0x387
+SUBOPT_0x38E:
+	RCALL SUBOPT_0x382
 	__GETD1N 0xBFA26E98
 	CALL __CMPF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x394:
+SUBOPT_0x38F:
 	__GETD1N 0x447A0000
 	CALL __MULF12
-	RJMP SUBOPT_0x351
+	RJMP SUBOPT_0x34C
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x395:
-	RCALL SUBOPT_0x368
-	JMP SUBOPT_0x234
+SUBOPT_0x390:
+	RCALL SUBOPT_0x362
+	JMP SUBOPT_0x21E
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x396:
+SUBOPT_0x391:
 	__GETD2SX 184
 	__GETD1N 0xBDC08312
 	CALL __CMPF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 15 TIMES, CODE SIZE REDUCTION:81 WORDS
-SUBOPT_0x397:
+SUBOPT_0x392:
 	__GETD2SX 184
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:34 WORDS
-SUBOPT_0x398:
+SUBOPT_0x393:
 	CALL __PUTPARD1
 	MOVW R30,R28
 	SUBI R30,LOW(-(200))
@@ -53203,37 +53185,45 @@ SUBOPT_0x398:
 	__GETD1SX 184
 	__GETD2SX 176
 	CALL __MULF12
-	RCALL SUBOPT_0x397
+	RCALL SUBOPT_0x392
 	CALL __MULF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:39 WORDS
-SUBOPT_0x399:
+SUBOPT_0x394:
 	__GETD1SX 184
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:29 WORDS
-SUBOPT_0x39A:
+SUBOPT_0x395:
 	__GETD2SX 172
 	CALL __MULF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:37 WORDS
-SUBOPT_0x39B:
+SUBOPT_0x396:
 	CALL __ADDF12
 	__GETD2SX 168
 	CALL __ADDF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x39C:
-	RCALL SUBOPT_0x397
+SUBOPT_0x397:
+	RCALL SUBOPT_0x392
 	__GETD1N 0xBF381062
 	CALL __CMPF12
 	RET
 
+;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
+SUBOPT_0x398:
+	CALL __PUTPARD1
+	MOVW R30,R28
+	SUBI R30,LOW(-(64))
+	SBCI R31,HIGH(-(64))
+	RET
+
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:55 WORDS
-SUBOPT_0x39D:
+SUBOPT_0x399:
 	MOVW R30,R28
 	SUBI R30,LOW(-(200))
 	SBCI R31,HIGH(-(200))
@@ -53248,47 +53238,39 @@ SUBOPT_0x39D:
 	SUBI R26,LOW(-(196))
 	SBCI R27,HIGH(-(196))
 	CALL _gaussian
-	RCALL SUBOPT_0x399
+	RCALL SUBOPT_0x394
 	__GETD2SX 176
 	CALL __MULF12
-	RCALL SUBOPT_0x397
+	RCALL SUBOPT_0x392
 	CALL __MULF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x39E:
-	RCALL SUBOPT_0x399
-	RJMP SUBOPT_0x39A
+SUBOPT_0x39A:
+	RCALL SUBOPT_0x394
+	RJMP SUBOPT_0x395
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x39F:
-	RCALL SUBOPT_0x397
+SUBOPT_0x39B:
+	RCALL SUBOPT_0x392
 	__GETD1N 0xBF82B021
 	CALL __CMPF12
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3A0:
-	CALL __PUTPARD1
-	MOVW R30,R28
-	SUBI R30,LOW(-(64))
-	SBCI R31,HIGH(-(64))
-	RET
-
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3A1:
-	RCALL SUBOPT_0x397
+SUBOPT_0x39C:
+	RCALL SUBOPT_0x392
 	__GETD1N 0xBFA26E98
 	CALL __CMPF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x3A2:
+SUBOPT_0x39D:
 	__PUTD1S 9
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x3A3:
+SUBOPT_0x39E:
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	ADIW R26,1
@@ -53298,32 +53280,37 @@ SUBOPT_0x3A3:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3A4:
+SUBOPT_0x39F:
 	CALL SUBOPT_0xB4
 	__GETD1N 0x3DCCCCCD
 	CALL __MULF12
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x3A5:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
+SUBOPT_0x3A0:
 	CALL SUBOPT_0xB3
 	__GETD2S 9
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x3A6:
-	CALL SUBOPT_0x10C
+SUBOPT_0x3A1:
+	CALL SUBOPT_0x10B
 	CALL __MULF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3A7:
-	CALL SUBOPT_0x206
+SUBOPT_0x3A2:
+	CALL SUBOPT_0x205
 	CALL __ADDF12
 	RET
 
+;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
+SUBOPT_0x3A3:
+	__GETD2S 9
+	RET
+
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x3A8:
+SUBOPT_0x3A4:
 	MOV  R30,R16
 	SUBI R30,-LOW(48)
 	ST   X,R30
@@ -53332,18 +53319,13 @@ SUBOPT_0x3A8:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3A9:
+SUBOPT_0x3A5:
 	CALL __CWD1
 	CALL __CDF1
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x3AA:
-	__GETD2S 9
-	RET
-
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3AB:
+SUBOPT_0x3A6:
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	ADIW R30,1
@@ -53352,17 +53334,17 @@ SUBOPT_0x3AB:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3AC:
+SUBOPT_0x3A7:
 	CALL SUBOPT_0xB
-	RJMP SUBOPT_0x3A6
+	RJMP SUBOPT_0x3A1
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3AD:
+SUBOPT_0x3A8:
 	CALL __MULF12
 	JMP SUBOPT_0xEA
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3AE:
+SUBOPT_0x3A9:
 	STS  __seed_G100,R30
 	STS  __seed_G100+1,R31
 	STS  __seed_G100+2,R22
@@ -53370,38 +53352,38 @@ SUBOPT_0x3AE:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3AF:
+SUBOPT_0x3AA:
 	CALL __GETW1P
 	STD  Y+6,R30
 	STD  Y+6+1,R31
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x3B0:
+SUBOPT_0x3AB:
 	LDI  R31,0
 	CALL __CWD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x3B1:
+SUBOPT_0x3AC:
 	CALL __GETD1P_INC
 	CALL SUBOPT_0xD3
 	CALL __PUTDP1_DEC
 	JMP SUBOPT_0xDA
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3B2:
+SUBOPT_0x3AD:
 	CALL __GETD1P
 	__PUTD1S 1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x3B3:
+SUBOPT_0x3AE:
 	__GETD1S 5
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0x3B4:
+SUBOPT_0x3AF:
 	LDD  R30,Y+9
 	LDD  R31,Y+9+1
 	LDD  R26,Z+1
@@ -53417,12 +53399,12 @@ SUBOPT_0x3B4:
 	JMP  _disk_write
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3B5:
+SUBOPT_0x3B0:
 	__GETD2Z 34
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x3B6:
+SUBOPT_0x3B1:
 	ST   -Y,R31
 	ST   -Y,R30
 	CALL SUBOPT_0x4F
@@ -53433,12 +53415,12 @@ SUBOPT_0x3B6:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3B7:
+SUBOPT_0x3B2:
 	CALL SUBOPT_0x2C
 	JMP  _move_window_G103
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x3B8:
+SUBOPT_0x3B3:
 	ADIW R30,50
 	ST   -Y,R31
 	ST   -Y,R30
@@ -53451,7 +53433,7 @@ SUBOPT_0x3B8:
 	JMP  _mem_set_G103
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x3B9:
+SUBOPT_0x3B4:
 	CALL __GETD1P
 	MOVW R26,R0
 	CALL __PUTDP1
@@ -53460,44 +53442,44 @@ SUBOPT_0x3B9:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x3BA:
+SUBOPT_0x3B5:
 	__GETD2Z 18
 	CALL __PUTPARD2
 	LDI  R26,LOW(1)
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:32 WORDS
-SUBOPT_0x3BB:
+SUBOPT_0x3B6:
 	__CPD2N 0x2
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3BC:
+SUBOPT_0x3B7:
 	__GETD1N 0x1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3BD:
+SUBOPT_0x3B8:
 	CALL __GETD1P
-	JMP SUBOPT_0xA7
+	JMP SUBOPT_0xA8
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x3BE:
+SUBOPT_0x3B9:
 	MOVW R26,R18
 	LDI  R30,LOW(512)
 	LDI  R31,HIGH(512)
 	CALL __DIVW21U
-	JMP SUBOPT_0x201
+	JMP SUBOPT_0x200
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x3BF:
+SUBOPT_0x3BA:
 	CALL __ADDD21
 	CALL _move_window_G103
 	CPI  R30,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x3C0:
+SUBOPT_0x3BB:
 	LDD  R26,Y+12
 	LDD  R27,Y+12+1
 	ADIW R26,50
@@ -53508,13 +53490,13 @@ SUBOPT_0x3C0:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3C1:
+SUBOPT_0x3BC:
 	__GETD1N 0x100
 	CALL __DIVD21U
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3C2:
+SUBOPT_0x3BD:
 	CALL __MULB1W2U
 	ANDI R31,HIGH(0x1FF)
 	LDD  R26,Y+12
@@ -53523,18 +53505,18 @@ SUBOPT_0x3C2:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3C3:
+SUBOPT_0x3BE:
 	__GETD1N 0x80
 	CALL __DIVD21U
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3C4:
+SUBOPT_0x3BF:
 	__GETD2S 14
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:10 WORDS
-SUBOPT_0x3C5:
+SUBOPT_0x3C0:
 	MOVW R26,R16
 	LDI  R30,LOW(512)
 	LDI  R31,HIGH(512)
@@ -53549,7 +53531,7 @@ SUBOPT_0x3C5:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x3C6:
+SUBOPT_0x3C1:
 	LDD  R26,Y+18
 	LDD  R27,Y+18+1
 	ADIW R26,50
@@ -53563,7 +53545,7 @@ SUBOPT_0x3C6:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3C7:
+SUBOPT_0x3C2:
 	CALL SUBOPT_0xD8
 	CALL __ADDD21
 	CALL _move_window_G103
@@ -53572,7 +53554,7 @@ SUBOPT_0x3C7:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3C8:
+SUBOPT_0x3C3:
 	CALL __MULB1W2U
 	ANDI R31,HIGH(0x1FF)
 	LDD  R26,Y+18
@@ -53583,79 +53565,74 @@ SUBOPT_0x3C8:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x3C9:
+SUBOPT_0x3C4:
 	__GETD2S 5
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0x3CA:
+SUBOPT_0x3C5:
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
 	ADIW R26,30
 	CALL __GETD1P
-	RCALL SUBOPT_0x3C9
+	RCALL SUBOPT_0x3C4
 	CALL __CPD21
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3CB:
+SUBOPT_0x3C6:
 	__GETD1S 1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:32 WORDS
-SUBOPT_0x3CC:
+SUBOPT_0x3C7:
 	__CPD2N 0x1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3CD:
+SUBOPT_0x3C8:
 	__GETD2Z 14
 	JMP SUBOPT_0x3A
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3CE:
+SUBOPT_0x3C9:
 	__PUTD1S 5
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3CF:
+SUBOPT_0x3CA:
 	LDD  R30,Y+20
 	LDD  R31,Y+20+1
 	ST   -Y,R31
 	ST   -Y,R30
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3D0:
-	__GETD2S 18
-	RET
-
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3D1:
+SUBOPT_0x3CB:
 	__GETD1N 0x2
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3D2:
+SUBOPT_0x3CC:
 	CALL SUBOPT_0x89
 	CALL SUBOPT_0xD8
 	CALL __CPD12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x3D3:
+SUBOPT_0x3CD:
 	__GETD1N 0x0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 11 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x3D4:
+SUBOPT_0x3CE:
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3D5:
+SUBOPT_0x3CF:
 	ADIW R30,30
 	MOVW R26,R30
 	CALL __GETD1P
@@ -53664,26 +53641,26 @@ SUBOPT_0x3D5:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3D6:
+SUBOPT_0x3D0:
 	CALL SUBOPT_0xB3
 	__PUTD1SNS 8,10
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3D7:
+SUBOPT_0x3D1:
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
-	RJMP SUBOPT_0x343
+	RJMP SUBOPT_0x33E
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x3D8:
+SUBOPT_0x3D2:
 	CLR  R22
 	CLR  R23
 	CALL __ADDD12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x3D9:
+SUBOPT_0x3D3:
 	ANDI R30,LOW(0xF)
 	ANDI R31,HIGH(0xF)
 	LSL  R30
@@ -53693,46 +53670,46 @@ SUBOPT_0x3D9:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3DA:
+SUBOPT_0x3D4:
 	CALL __GETD1P
 	CALL __CPD10
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x3DB:
+SUBOPT_0x3D5:
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x3DC:
+SUBOPT_0x3D6:
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
-	RJMP SUBOPT_0x343
+	RJMP SUBOPT_0x33E
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3DD:
+SUBOPT_0x3D7:
 	LDD  R30,Y+11
 	LDD  R31,Y+11+1
 	__GETD2Z 10
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3DE:
+SUBOPT_0x3D8:
 	ADIW R30,30
 	MOVW R26,R30
 	CALL __GETD1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3DF:
+SUBOPT_0x3D9:
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
-	RJMP SUBOPT_0x343
+	RJMP SUBOPT_0x33E
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x3E0:
+SUBOPT_0x3DA:
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
 	__GETD2Z 14
@@ -53742,7 +53719,7 @@ SUBOPT_0x3E0:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x3E1:
+SUBOPT_0x3DB:
 	ST   -Y,R19
 	ST   -Y,R18
 	LDD  R30,Y+6
@@ -53754,7 +53731,7 @@ SUBOPT_0x3E1:
 	JMP SUBOPT_0x48
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x3E2:
+SUBOPT_0x3DC:
 	MOV  R30,R18
 	SUBI R18,-1
 	LDI  R31,0
@@ -53764,39 +53741,39 @@ SUBOPT_0x3E2:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3E3:
+SUBOPT_0x3DD:
 	LDI  R31,0
 	ADD  R30,R20
 	ADC  R31,R21
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3E4:
+SUBOPT_0x3DE:
 	__PUTD1SNS 6,6
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3E5:
+SUBOPT_0x3DF:
 	MOVW R26,R18
 	ADIW R26,20
 	JMP SUBOPT_0x1E
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3E6:
+SUBOPT_0x3E0:
 	MOVW R26,R18
 	ADIW R26,26
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3E7:
+SUBOPT_0x3E1:
 	CLR  R22
 	CLR  R23
 	CALL __ORD12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3E8:
+SUBOPT_0x3E2:
 	CALL __PUTPARD1
 	LDI  R26,LOW(1)
 	CALL _disk_read
@@ -53804,7 +53781,7 @@ SUBOPT_0x3E8:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0x3E9:
+SUBOPT_0x3E3:
 	ADIW R30,50
 	SUBI R30,LOW(-510)
 	SBCI R31,HIGH(-510)
@@ -53816,14 +53793,14 @@ SUBOPT_0x3E9:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:8 WORDS
-SUBOPT_0x3EA:
+SUBOPT_0x3E4:
 	CALL __GETD1P
 	__ANDD1N 0xFFFFFF
 	__CPD1N 0x544146
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0x3EB:
+SUBOPT_0x3E5:
 	LDI  R26,LOW(_FatFs_G103)
 	LDI  R27,HIGH(_FatFs_G103)
 	LDI  R31,0
@@ -53833,13 +53810,8 @@ SUBOPT_0x3EB:
 	ADC  R27,R31
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x3EC:
-	__PUTD1S 18
-	RET
-
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3ED:
+SUBOPT_0x3E6:
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	SUBI R26,LOW(-64)
@@ -53848,12 +53820,12 @@ SUBOPT_0x3ED:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x3EE:
+SUBOPT_0x3E7:
 	__PUTD1S 14
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x3EF:
+SUBOPT_0x3E8:
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
 	LDD  R26,Z+8
@@ -53863,29 +53835,29 @@ SUBOPT_0x3EF:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3F0:
+SUBOPT_0x3E9:
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
-	RCALL SUBOPT_0x3B5
+	RCALL SUBOPT_0x3B0
 	CALL SUBOPT_0xD4
 	CALL __ADDD12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3F1:
+SUBOPT_0x3EA:
 	CALL _move_window_G103
 	MOV  R17,R30
 	CPI  R17,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3F2:
+SUBOPT_0x3EB:
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
-	RJMP SUBOPT_0x343
+	RJMP SUBOPT_0x33E
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x3F3:
+SUBOPT_0x3EC:
 	LDD  R26,Z+2
 	LDD  R27,Z+3
 	CALL _validate_G103
@@ -53894,14 +53866,14 @@ SUBOPT_0x3F3:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x3F4:
+SUBOPT_0x3ED:
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	__GETD2Z 6
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3F5:
+SUBOPT_0x3EE:
 	MOVW R30,R26
 	MOVW R22,R24
 	ANDI R31,HIGH(0x1FF)
@@ -53909,14 +53881,14 @@ SUBOPT_0x3F5:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3F6:
+SUBOPT_0x3EF:
 	LDD  R30,Y+28
 	LDD  R31,Y+28+1
 	__GETD2Z 18
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x3F7:
+SUBOPT_0x3F0:
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
 	ADIW R26,4
@@ -53926,7 +53898,7 @@ SUBOPT_0x3F7:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3F8:
+SUBOPT_0x3F1:
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	LDD  R30,Z+5
@@ -53934,7 +53906,7 @@ SUBOPT_0x3F8:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x3F9:
+SUBOPT_0x3F2:
 	LDI  R30,LOW(512)
 	LDI  R31,HIGH(512)
 	CALL __DIVW21U
@@ -53944,14 +53916,14 @@ SUBOPT_0x3F9:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x3FA:
+SUBOPT_0x3F3:
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x3FB:
+SUBOPT_0x3F4:
 	LDD  R30,Z+1
 	ST   -Y,R30
 	LDD  R30,Y+7
@@ -53961,14 +53933,14 @@ SUBOPT_0x3FB:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x3FC:
+SUBOPT_0x3F5:
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	__GETD2Z 22
 	JMP SUBOPT_0xD9
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x3FD:
+SUBOPT_0x3F6:
 	CALL __SUBD21
 	MOVW R30,R20
 	CLR  R22
@@ -53977,14 +53949,14 @@ SUBOPT_0x3FD:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x3FE:
+SUBOPT_0x3F7:
 	CALL __SUBD21
 	__GETD1N 0x200
 	CALL __MULD12U
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x3FF:
+SUBOPT_0x3F8:
 	ADIW R26,5
 	LD   R30,X
 	ADD  R30,R20
@@ -53998,7 +53970,7 @@ SUBOPT_0x3FF:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x400:
+SUBOPT_0x3F9:
 	LDD  R30,Z+1
 	ST   -Y,R30
 	LDD  R30,Y+27
@@ -54009,7 +53981,7 @@ SUBOPT_0x400:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x401:
+SUBOPT_0x3FA:
 	__GETD2Z 22
 	CALL __PUTPARD2
 	LDI  R26,LOW(1)
@@ -54018,7 +53990,7 @@ SUBOPT_0x401:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x402:
+SUBOPT_0x3FB:
 	ADIW R26,4
 	LD   R30,X
 	ANDI R30,0xBF
@@ -54026,7 +53998,7 @@ SUBOPT_0x402:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x403:
+SUBOPT_0x3FC:
 	ADIW R26,5
 	LD   R30,X
 	SUBI R30,-LOW(1)
@@ -54034,14 +54006,14 @@ SUBOPT_0x403:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x404:
+SUBOPT_0x3FD:
 	ADIW R26,6
 	CALL __GETW1P
 	ANDI R31,HIGH(0x1FF)
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x405:
+SUBOPT_0x3FE:
 	ADIW R30,6
 	MOVW R0,R30
 	MOVW R26,R30
@@ -54049,10 +54021,10 @@ SUBOPT_0x405:
 	MOVW R26,R30
 	MOVW R24,R22
 	MOVW R30,R18
-	RJMP SUBOPT_0x3D8
+	RJMP SUBOPT_0x3D2
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x406:
+SUBOPT_0x3FF:
 	LD   R30,X+
 	LD   R31,X+
 	ADD  R30,R18
@@ -54062,13 +54034,13 @@ SUBOPT_0x406:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x407:
+SUBOPT_0x400:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	RJMP SUBOPT_0x343
+	RJMP SUBOPT_0x33E
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x408:
+SUBOPT_0x401:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
 	ADIW R26,10
@@ -54076,28 +54048,28 @@ SUBOPT_0x408:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x409:
+SUBOPT_0x402:
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	__GETD2Z 6
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 15 TIMES, CODE SIZE REDUCTION:25 WORDS
-SUBOPT_0x40A:
+SUBOPT_0x403:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x40B:
+SUBOPT_0x404:
 	LDD  R30,Y+24
 	LDD  R31,Y+24+1
 	__GETD2Z 18
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x40C:
+SUBOPT_0x405:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
 	ADIW R26,4
@@ -54107,7 +54079,7 @@ SUBOPT_0x40C:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x40D:
+SUBOPT_0x406:
 	LDD  R30,Z+1
 	ST   -Y,R30
 	LDD  R30,Y+23
@@ -54118,7 +54090,7 @@ SUBOPT_0x40D:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x40E:
+SUBOPT_0x407:
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	LDD  R30,Z+5
@@ -54126,14 +54098,14 @@ SUBOPT_0x40E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x40F:
+SUBOPT_0x408:
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	__GETD2Z 22
 	JMP SUBOPT_0x4F
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x410:
+SUBOPT_0x409:
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	ADIW R30,32
@@ -54144,13 +54116,13 @@ SUBOPT_0x410:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x411:
+SUBOPT_0x40A:
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
-	RJMP SUBOPT_0x343
+	RJMP SUBOPT_0x33E
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x412:
+SUBOPT_0x40B:
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	ADIW R26,10
@@ -54158,36 +54130,36 @@ SUBOPT_0x412:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x413:
+SUBOPT_0x40C:
 	__GETD2S 17
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x414:
+SUBOPT_0x40D:
 	__PUTD1S 17
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x415:
+SUBOPT_0x40E:
 	__PUTD1SNS 21,6
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x416:
+SUBOPT_0x40F:
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x417:
+SUBOPT_0x410:
 	__GETD1S 17
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x418:
+SUBOPT_0x411:
 	CALL SUBOPT_0xDA
 	MOVW R26,R30
 	MOVW R24,R22
@@ -54196,29 +54168,29 @@ SUBOPT_0x418:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x419:
+SUBOPT_0x412:
 	CALL __GETD1P
 	__PUTD1S 13
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x41A:
+SUBOPT_0x413:
 	__GETD1S 13
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x41B:
+SUBOPT_0x414:
 	CALL _create_chain_G103
 	__PUTD1S 13
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x41C:
+SUBOPT_0x415:
 	__GETD2S 13
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x41D:
+SUBOPT_0x416:
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	ADIW R26,4
@@ -54228,18 +54200,18 @@ SUBOPT_0x41D:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x41E:
-	RCALL SUBOPT_0x41A
+SUBOPT_0x417:
+	RCALL SUBOPT_0x413
 	__PUTD1SNS 21,18
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x41F:
+SUBOPT_0x418:
 	__GETD2S 15
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x420:
+SUBOPT_0x419:
 	LDD  R30,Y+21
 	LDD  R31,Y+21+1
 	ADIW R30,6
@@ -54249,38 +54221,38 @@ SUBOPT_0x420:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x421:
+SUBOPT_0x41A:
 	LDD  R30,Y+21
 	LDD  R31,Y+21+1
 	__GETD2Z 6
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x422:
+SUBOPT_0x41B:
 	CALL SUBOPT_0xD4
 	CALL SUBOPT_0xBC
-	RJMP SUBOPT_0x3EC
+	JMP SUBOPT_0x253
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x423:
-	CALL SUBOPT_0xA8
-	RJMP SUBOPT_0x3A6
+SUBOPT_0x41C:
+	CALL SUBOPT_0xA9
+	RJMP SUBOPT_0x3A1
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x424:
+SUBOPT_0x41D:
 	CALL SUBOPT_0x89
 	CALL SUBOPT_0xB
 	CALL __CMPF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x425:
+SUBOPT_0x41E:
 	CALL SUBOPT_0xB
 	__GETD1N 0x3DCCCCCD
-	RJMP SUBOPT_0x3AD
+	RJMP SUBOPT_0x3A8
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x426:
+SUBOPT_0x41F:
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	ADIW R26,1
@@ -54290,7 +54262,7 @@ SUBOPT_0x426:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x427:
+SUBOPT_0x420:
 	ST   -Y,R18
 	LDD  R26,Y+7
 	LDD  R27,Y+7+1
@@ -54300,18 +54272,18 @@ SUBOPT_0x427:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:25 WORDS
-SUBOPT_0x428:
+SUBOPT_0x421:
 	__GETW1SX 96
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x429:
+SUBOPT_0x422:
 	SBIW R30,4
 	__PUTW1SX 96
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x42A:
+SUBOPT_0x423:
 	LDD  R26,Y+7
 	LDD  R27,Y+7+1
 	CALL SUBOPT_0x6B
@@ -54320,17 +54292,17 @@ SUBOPT_0x42A:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x42B:
+SUBOPT_0x424:
 	__GETW2SX 96
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x42C:
-	RCALL SUBOPT_0x428
-	RJMP SUBOPT_0x429
+SUBOPT_0x425:
+	RCALL SUBOPT_0x421
+	RJMP SUBOPT_0x422
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x42D:
+SUBOPT_0x426:
 	STD  Y+16,R30
 	STD  Y+16+1,R31
 	LDD  R26,Y+16
@@ -54340,7 +54312,7 @@ SUBOPT_0x42D:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x42E:
+SUBOPT_0x427:
 	ANDI R16,LOW(251)
 	LDD  R30,Y+25
 	ST   -Y,R30
@@ -54352,7 +54324,7 @@ SUBOPT_0x42E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x42F:
+SUBOPT_0x428:
 	__POINTD1M _put_buff_G104
 	CALL __PUTPARD1
 	RET
