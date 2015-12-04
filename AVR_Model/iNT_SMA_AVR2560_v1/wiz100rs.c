@@ -280,7 +280,7 @@ int iWizConnected(){
     TIMER   timeout;
     char  pviCheckWizConn[200];
     
-    TIMER_setTimer(&timeout, 20); 
+    TIMER_setTimer(&timeout, 7); 
     memset(pviCheckWizConn,0,sizeof(pviCheckWizConn));
     index0Buffer = 0;
 #if (WIZ100SR_PRINT_DEBUG == 1)    
@@ -301,17 +301,20 @@ int iWizConnected(){
                //pch = strtok (pviCheckWizConn,"> ");
                while(pch != NULL){
                    //printDebug("[Data split]%s\r\n",pch);
-                   if(strncmp (pch," Connected",9)==0){
+                   if(strncmp (pch," Connected",10)==0){
                         printDebug("[Data split]%s\r\n",pch);
                         iReturn =  WIZ_CONNECTED;
                         break;
-                   }else if(strncmp (pch," Listen : OK",11)==0){
+                   }else if(strncmp (pch," Listen : OK",12)==0){
                         printDebug("[Data split]%s\r\n",pch);
                         iReturn =  WIZ_CONNECTED;
+                        break;
+                   }else if(strncmp (pch," Closed",7)==0){
+                        printDebug("[Data split]%s\r\n",pch);
+                        iReturn =  WIZ_CLOSE;
                         break;
                    }
                    pch = strtok (NULL, ">");
-                   //pch = strtok (NULL, "> ");
                }
                
                //free(pviCheckWizConn);
@@ -455,6 +458,29 @@ int iWizRead(){
     }
     index0Buffer = 0;
     return iReturn;
+}
+
+iUChar_t iWizCheckStatus(){
+    iUChar_t viReturn = 0; 
+    iChar_t viData[4];
+    
+    iWizSend(&viData[0],sizeof(viData));
+    viReturn = iWizConnected();
+    switch(viReturn){
+        case WIZ_CONNECTED:{
+           printDebug("[iWizCheckStatus]WIZ_CONNECTED.\r\n");
+           break;
+        }
+        case WIZ_CLOSE:{
+           printDebug("[iWizCheckStatus]WIZ_CLOSE.\r\n");
+           break;
+        }
+        case WIZ_CONN_FAIL:{
+           printDebug("[iWizCheckStatus]WIZ_CONN_FAIL.\r\n");
+           break;
+        }
+    }
+    return viReturn;
 }
 
 void iWizReActiveDataMode(){

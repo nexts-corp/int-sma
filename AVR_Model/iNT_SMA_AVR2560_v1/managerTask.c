@@ -222,7 +222,7 @@ iChar_t iSettlement(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
     char tid[8] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};  
     iUInt_t viRIDBuff[30];
     iUInt_t viRIDLength = 0; 
-    iUChar_t viLimitQuery = 10;
+    iUChar_t viLimitQuery = 5;  //Settlement every 5 record
     iUInt_t viCount = 0;
     iUInt_t viRetransmit = 2;  
     
@@ -280,20 +280,24 @@ iChar_t iSettlement(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
 ////            #asm("wdr")
 ////            delay_ms(200);
 ////            #asm("wdr")
+            
             viRetransmit = 2;
-            do{
-                if(iLanWriteData((iData_t const * const)pviTXDataBuff_arg)){
-                    if(iLanReadData(pviRXDataBuff_arg)){ 
-                        iDataUpdate(viRIDBuff[viCount],'S',(iChar_t const * const)pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);  //Y=> //no update date   ,only update status
-                        if(iPTCParser(pviRXDataBuff_arg)){ 
-                            //iDataUpdate(viRIDBuff[viCount],'S',(iChar_t const * const)pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);  //Y=> //no update date   ,only update status
-                            iTagParser(pviRXDataBuff_arg); 
+            do{  
+                //if(iLanStatus()==LAN_CONNECTED){  //connected
+                   if(iLanWriteData((iData_t const * const)pviTXDataBuff_arg)){
+                        if(iLanReadData(pviRXDataBuff_arg)){ 
+                            iDataUpdate(viRIDBuff[viCount],'S',(iChar_t const * const)pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);  //Y=> //no update date   ,only update status
+                            if(iPTCParser(pviRXDataBuff_arg)){ 
+                                //iDataUpdate(viRIDBuff[viCount],'S',(iChar_t const * const)pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);  //Y=> //no update date   ,only update status
+                                iTagParser(pviRXDataBuff_arg); 
+                            }
+                            break;
+                        }else{
+                            printDebug("[iSettlement]Host is not response or data invalid.\r\n");
                         }
-                        break;
-                    }else{
-                        printDebug("[iSettlement]Host is not response or data invalid.\r\n");
                     }
-                }
+                //}
+                
                 --viRetransmit;
             }while(viRetransmit>0);
             

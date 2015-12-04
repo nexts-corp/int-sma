@@ -89,9 +89,7 @@ void main(void){
 //	}else{
 //		printDebug("<main>data can not sent a data(b) to pviQueueData1.\r\n");
 //	}
-    delay_ms(5000);  
-    delay_ms(5000); 
-    //delay_ms(5000);     
+    delay_ms(5000);      
     iWizReadConfig();
 //    while(1){
 //     #asm("wdr")   

@@ -15,14 +15,14 @@ extern iChar_t viDirDataPath[];
 //extern iChar_t viDirEventPath[];
 //extern iChar_t viDirStatusPath[];
 //extern iChar_t viDirErrorPath[]; 
-//extern iChar_t viDirConfigPath[];
+extern iChar_t viDirConfigPath[];
 
 extern iChar_t viDataFName[];
 //extern iChar_t viDataLogFName[];
 //extern iChar_t viEventFName[];
 //extern iChar_t viStatusFName[];
 //extern iChar_t viErrorFName[];
-//extern iChar_t viConfigFName[];
+extern iChar_t viConfigFName[];
 
 piDataBaseHandle_t pviDataBaseHandle = NULL;
 eeprom unsigned int viLineID=0;
@@ -330,6 +330,57 @@ iChar_t iDataSelectToSettlement(iUInt_t *pviOutData_arg,iUInt_t *pviOutLength_ar
        } 
     } 
     
+    
+    return viReturn;
+}
+
+iUInt_t iDeviceConfigWrite(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
+    iUInt_t viReturn = 0;
+    iChar_t *pviDataBuffInsert;
+    iChar_t viDataBuff[DB_BLOCK_BUFFER_def];  
+    unsigned long indexWriteFile = 0;
+    unsigned long viFileSize = 0;
+    
+    #asm("wdr") 
+    indexWriteFile = 0;
+    memset(viDataBuff,0,sizeof(viDataBuff));
+    printDebug("[iDeviceConfigWrite]Check file.\r\n"); 
+    if(iFSize((char const * const)viDirConfigPath,(char const * const)viConfigFName,&viFileSize)){ 
+       if(viFileSize == 0){
+          printDebug("[iDeviceConfigWrite]File is empty.\r\n");
+       }
+    }
+             
+    memcpy(&viDataBuff[0],&pviDataBuffer_arg[0],viLength_arg);
+    iFRwite(viDataBuff,viLength_arg,(const char*)viDirConfigPath,(const char*)viConfigFName,&indexWriteFile);     
+    printDebug("[iDeviceConfigWrite]Write is success.\r\n");     
+    
+    viReturn = 1;
+    
+    return viReturn;
+}
+
+iUInt_t iDeviceConfigRead(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
+    iUInt_t viReturn = 0;
+    iChar_t *pviDataBuffInsert;
+    iChar_t viDataBuff[DB_BLOCK_BUFFER_def];  
+    unsigned long indexReadFile = 0;
+    unsigned long viFileSize = 0;
+    
+    #asm("wdr") 
+    indexReadFile = 0;
+    memset(viDataBuff,0,sizeof(viDataBuff));
+    printDebug("[iDeviceConfigRead]Check file.\r\n"); 
+    if(iFSize((char const * const)viDirConfigPath,(char const * const)viConfigFName,&viFileSize)){ 
+       if(viFileSize == 0){
+          printDebug("[iDeviceConfigRead]File is empty.\r\n");
+          viReturn = 0;
+       }else{
+          iFRead(viDataBuff,viLength_arg,(char const * const)viDirConfigPath,(char const * const)viConfigFName,&indexReadFile); 
+          printDebug("[iDeviceConfigRead]Read is success.\r\n"); 
+          viReturn = 1;
+       }
+    }
     
     return viReturn;
 }

@@ -338,55 +338,20 @@
 ;PCODE: $000000B6 VOL: 0
 ;PCODE: $000000B7 VOL: 0
 ;
-;iChar_t iLanStatus(){
-; 0020 0080 iChar_t iLanStatus(){
+;iUChar_t iLanStatus(){
+; 0020 0080 iUChar_t iLanStatus(){
 ;PCODE: $000000B8 VOL: 0
 ;PCODE: $000000B9 VOL: 0
-; 0020 0081        iChar_t viReturn;
-; 0020 0082        //iWizReActiveDataMode();
-; 0020 0083        iWizRXMode = WIZ_RX_STAT_MODE;
+; 0020 0081        iUChar_t viReturn;
+; 0020 0082        viReturn = iWizCheckStatus();
 ;PCODE: $000000BA VOL: 0
 ;	viReturn -> R17
 ;PCODE: $000000BB VOL: 0
 ;PCODE: $000000BC VOL: 0
-; 0020 0084        if(iWizConnected()){
+; 0020 0083        return viReturn;
 ;PCODE: $000000BD VOL: 0
 ;PCODE: $000000BE VOL: 0
 ;PCODE: $000000BF VOL: 0
-; 0020 0085             printDebug("[iLanInit]Status:Connected.\r\n");
+; 0020 0084 }
 ;PCODE: $000000C0 VOL: 0
-;PCODE: $000000C1 VOL: 0
-;PCODE: $000000C2 VOL: 0
-;PCODE: $000000C3 VOL: 0
-;PCODE: $000000C4 VOL: 0
-;PCODE: $000000C5 VOL: 0
-;PCODE: $000000C6 VOL: 0
-; 0020 0086             iWizRXMode = WIZ_RX_DATA_MODE;
-;PCODE: $000000C7 VOL: 0
-;PCODE: $000000C8 VOL: 0
-; 0020 0087             viReturn = LEN_DATA_WRITE_SUCCESS;
-;PCODE: $000000C9 VOL: 0
-;PCODE: $000000CA VOL: 0
-; 0020 0088        } else{
-;PCODE: $000000CB VOL: 0
-;PCODE: $000000CC VOL: 0
-; 0020 0089             viReturn = LEN_DATA_WRITE_FAIL;
-;PCODE: $000000CD VOL: 0
-;PCODE: $000000CE VOL: 0
-; 0020 008A             printDebug("[iLanInit]Status:Close.\r\n");
-;PCODE: $000000CF VOL: 0
-;PCODE: $000000D0 VOL: 0
-;PCODE: $000000D1 VOL: 0
-;PCODE: $000000D2 VOL: 0
-;PCODE: $000000D3 VOL: 0
-;PCODE: $000000D4 VOL: 0
-;PCODE: $000000D5 VOL: 0
-; 0020 008B        }
-;PCODE: $000000D6 VOL: 0
-; 0020 008C        return viReturn;
-;PCODE: $000000D7 VOL: 0
-;PCODE: $000000D8 VOL: 0
-;PCODE: $000000D9 VOL: 0
-; 0020 008D }
-;PCODE: $000000DA VOL: 0
 ;

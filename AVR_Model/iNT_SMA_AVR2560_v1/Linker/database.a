@@ -15,14 +15,14 @@
 ;//extern iChar_t viDirEventPath[];
 ;//extern iChar_t viDirStatusPath[];
 ;//extern iChar_t viDirErrorPath[];
-;//extern iChar_t viDirConfigPath[];
+;extern iChar_t viDirConfigPath[];
 ;
 ;extern iChar_t viDataFName[];
 ;//extern iChar_t viDataLogFName[];
 ;//extern iChar_t viEventFName[];
 ;//extern iChar_t viStatusFName[];
 ;//extern iChar_t viErrorFName[];
-;//extern iChar_t viConfigFName[];
+;extern iChar_t viConfigFName[];
 ;
 ;piDataBaseHandle_t pviDataBaseHandle = NULL;
 ;eeprom unsigned int viLineID=0;
@@ -1465,3 +1465,250 @@
 ;PCODE: $00000428 VOL: 0
 ; 0027 014F }
 ;PCODE: $00000429 VOL: 0
+;
+;iUInt_t iDeviceConfigWrite(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
+; 0027 0151 iUInt_t iDeviceConfigWrite(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
+;PCODE: $0000042A VOL: 0
+;PCODE: $0000042B VOL: 0
+; 0027 0152     iUInt_t viReturn = 0;
+; 0027 0153     iChar_t *pviDataBuffInsert;
+; 0027 0154     iChar_t viDataBuff[DB_BLOCK_BUFFER_def];
+; 0027 0155     unsigned long indexWriteFile = 0;
+; 0027 0156     unsigned long viFileSize = 0;
+; 0027 0157 
+; 0027 0158     #asm("wdr")
+;PCODE: $0000042C VOL: 0
+;PCODE: $0000042D VOL: 0
+;PCODE: $0000042E VOL: 0
+;PCODE: $0000042F VOL: 0
+;PCODE: $00000430 VOL: 0
+;PCODE: $00000431 VOL: 0
+;PCODE: $00000432 VOL: 0
+;PCODE: $00000433 VOL: 0
+;PCODE: $00000434 VOL: 0
+;PCODE: $00000435 VOL: 0
+;PCODE: $00000436 VOL: 0
+;PCODE: $00000437 VOL: 0
+;PCODE: $00000438 VOL: 0
+;PCODE: $00000439 VOL: 0
+;PCODE: $0000043A VOL: 0
+;PCODE: $0000043B VOL: 0
+;PCODE: $0000043C VOL: 0
+;PCODE: $0000043D VOL: 0
+;PCODE: $0000043E VOL: 0
+;	*pviDataBuffer_arg -> Y+270
+;	viLength_arg -> Y+268
+;	viReturn -> R16,R17
+;	*pviDataBuffInsert -> R18,R19
+;	viDataBuff -> Y+12
+;	indexWriteFile -> Y+8
+;	viFileSize -> Y+4
+;PCODE: $0000043F VOL: 0
+;PCODE: $00000440 VOL: 0
+;PCODE: $00000441 VOL: 0
+	wdr
+;PCODE: $00000442 VOL: 0
+; 0027 0159     indexWriteFile = 0;
+;PCODE: $00000443 VOL: 0
+;PCODE: $00000444 VOL: 0
+; 0027 015A     memset(viDataBuff,0,sizeof(viDataBuff));
+;PCODE: $00000445 VOL: 0
+;PCODE: $00000446 VOL: 0
+;PCODE: $00000447 VOL: 0
+;PCODE: $00000448 VOL: 0
+;PCODE: $00000449 VOL: 0
+;PCODE: $0000044A VOL: 0
+; 0027 015B     printDebug("[iDeviceConfigWrite]Check file.\r\n");
+;PCODE: $0000044B VOL: 0
+;PCODE: $0000044C VOL: 0
+;PCODE: $0000044D VOL: 0
+;PCODE: $0000044E VOL: 0
+;PCODE: $0000044F VOL: 0
+;PCODE: $00000450 VOL: 0
+;PCODE: $00000451 VOL: 0
+; 0027 015C     if(iFSize((char const * const)viDirConfigPath,(char const * const)viConfigFName,&viFileSize)){
+;PCODE: $00000452 VOL: 0
+;PCODE: $00000453 VOL: 0
+;PCODE: $00000454 VOL: 0
+;PCODE: $00000455 VOL: 0
+;PCODE: $00000456 VOL: 0
+;PCODE: $00000457 VOL: 0
+;PCODE: $00000458 VOL: 0
+;PCODE: $00000459 VOL: 0
+; 0027 015D        if(viFileSize == 0){
+;PCODE: $0000045A VOL: 0
+;PCODE: $0000045B VOL: 0
+;PCODE: $0000045C VOL: 0
+; 0027 015E           printDebug("[iDeviceConfigWrite]File is empty.\r\n");
+;PCODE: $0000045D VOL: 0
+;PCODE: $0000045E VOL: 0
+;PCODE: $0000045F VOL: 0
+;PCODE: $00000460 VOL: 0
+;PCODE: $00000461 VOL: 0
+;PCODE: $00000462 VOL: 0
+;PCODE: $00000463 VOL: 0
+; 0027 015F        }
+; 0027 0160     }
+;PCODE: $00000464 VOL: 0
+; 0027 0161 
+; 0027 0162     memcpy(&viDataBuff[0],&pviDataBuffer_arg[0],viLength_arg);
+;PCODE: $00000465 VOL: 0
+;PCODE: $00000466 VOL: 0
+;PCODE: $00000467 VOL: 0
+;PCODE: $00000468 VOL: 0
+;PCODE: $00000469 VOL: 0
+;PCODE: $0000046A VOL: 0
+;PCODE: $0000046B VOL: 0
+; 0027 0163     iFRwite(viDataBuff,viLength_arg,(const char*)viDirConfigPath,(const char*)viConfigFName,&indexWriteFile);
+;PCODE: $0000046C VOL: 0
+;PCODE: $0000046D VOL: 0
+;PCODE: $0000046E VOL: 0
+;PCODE: $0000046F VOL: 0
+;PCODE: $00000470 VOL: 0
+;PCODE: $00000471 VOL: 0
+;PCODE: $00000472 VOL: 0
+;PCODE: $00000473 VOL: 0
+;PCODE: $00000474 VOL: 0
+;PCODE: $00000475 VOL: 0
+; 0027 0164     printDebug("[iDeviceConfigWrite]Write is success.\r\n");
+;PCODE: $00000476 VOL: 0
+;PCODE: $00000477 VOL: 0
+;PCODE: $00000478 VOL: 0
+;PCODE: $00000479 VOL: 0
+;PCODE: $0000047A VOL: 0
+;PCODE: $0000047B VOL: 0
+;PCODE: $0000047C VOL: 0
+; 0027 0165 
+; 0027 0166     viReturn = 1;
+;PCODE: $0000047D VOL: 0
+;PCODE: $0000047E VOL: 0
+; 0027 0167 
+; 0027 0168     return viReturn;
+;PCODE: $0000047F VOL: 0
+;PCODE: $00000480 VOL: 0
+;PCODE: $00000481 VOL: 0
+;PCODE: $00000482 VOL: 0
+; 0027 0169 }
+;PCODE: $00000483 VOL: 0
+;
+;iUInt_t iDeviceConfigRead(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
+; 0027 016B iUInt_t iDeviceConfigRead(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
+;PCODE: $00000484 VOL: 0
+;PCODE: $00000485 VOL: 0
+; 0027 016C     iUInt_t viReturn = 0;
+; 0027 016D     iChar_t *pviDataBuffInsert;
+; 0027 016E     iChar_t viDataBuff[DB_BLOCK_BUFFER_def];
+; 0027 016F     unsigned long indexReadFile = 0;
+; 0027 0170     unsigned long viFileSize = 0;
+; 0027 0171 
+; 0027 0172     #asm("wdr")
+;PCODE: $00000486 VOL: 0
+;PCODE: $00000487 VOL: 0
+;PCODE: $00000488 VOL: 0
+;PCODE: $00000489 VOL: 0
+;PCODE: $0000048A VOL: 0
+;PCODE: $0000048B VOL: 0
+;PCODE: $0000048C VOL: 0
+;PCODE: $0000048D VOL: 0
+;PCODE: $0000048E VOL: 0
+;PCODE: $0000048F VOL: 0
+;PCODE: $00000490 VOL: 0
+;PCODE: $00000491 VOL: 0
+;PCODE: $00000492 VOL: 0
+;PCODE: $00000493 VOL: 0
+;PCODE: $00000494 VOL: 0
+;PCODE: $00000495 VOL: 0
+;PCODE: $00000496 VOL: 0
+;PCODE: $00000497 VOL: 0
+;PCODE: $00000498 VOL: 0
+;	*pviDataBuffer_arg -> Y+270
+;	viLength_arg -> Y+268
+;	viReturn -> R16,R17
+;	*pviDataBuffInsert -> R18,R19
+;	viDataBuff -> Y+12
+;	indexReadFile -> Y+8
+;	viFileSize -> Y+4
+;PCODE: $00000499 VOL: 0
+;PCODE: $0000049A VOL: 0
+;PCODE: $0000049B VOL: 0
+	wdr
+;PCODE: $0000049C VOL: 0
+; 0027 0173     indexReadFile = 0;
+;PCODE: $0000049D VOL: 0
+;PCODE: $0000049E VOL: 0
+; 0027 0174     memset(viDataBuff,0,sizeof(viDataBuff));
+;PCODE: $0000049F VOL: 0
+;PCODE: $000004A0 VOL: 0
+;PCODE: $000004A1 VOL: 0
+;PCODE: $000004A2 VOL: 0
+;PCODE: $000004A3 VOL: 0
+;PCODE: $000004A4 VOL: 0
+; 0027 0175     printDebug("[iDeviceConfigRead]Check file.\r\n");
+;PCODE: $000004A5 VOL: 0
+;PCODE: $000004A6 VOL: 0
+;PCODE: $000004A7 VOL: 0
+;PCODE: $000004A8 VOL: 0
+;PCODE: $000004A9 VOL: 0
+;PCODE: $000004AA VOL: 0
+;PCODE: $000004AB VOL: 0
+; 0027 0176     if(iFSize((char const * const)viDirConfigPath,(char const * const)viConfigFName,&viFileSize)){
+;PCODE: $000004AC VOL: 0
+;PCODE: $000004AD VOL: 0
+;PCODE: $000004AE VOL: 0
+;PCODE: $000004AF VOL: 0
+;PCODE: $000004B0 VOL: 0
+;PCODE: $000004B1 VOL: 0
+;PCODE: $000004B2 VOL: 0
+;PCODE: $000004B3 VOL: 0
+; 0027 0177        if(viFileSize == 0){
+;PCODE: $000004B4 VOL: 0
+;PCODE: $000004B5 VOL: 0
+;PCODE: $000004B6 VOL: 0
+; 0027 0178           printDebug("[iDeviceConfigRead]File is empty.\r\n");
+;PCODE: $000004B7 VOL: 0
+;PCODE: $000004B8 VOL: 0
+;PCODE: $000004B9 VOL: 0
+;PCODE: $000004BA VOL: 0
+;PCODE: $000004BB VOL: 0
+;PCODE: $000004BC VOL: 0
+;PCODE: $000004BD VOL: 0
+; 0027 0179           viReturn = 0;
+;PCODE: $000004BE VOL: 0
+;PCODE: $000004BF VOL: 0
+; 0027 017A        }else{
+;PCODE: $000004C0 VOL: 0
+;PCODE: $000004C1 VOL: 0
+; 0027 017B           iFRead(viDataBuff,viLength_arg,(char const * const)viDirConfigPath,(char const * const)viConfigFName,&indexReadFile);
+;PCODE: $000004C2 VOL: 0
+;PCODE: $000004C3 VOL: 0
+;PCODE: $000004C4 VOL: 0
+;PCODE: $000004C5 VOL: 0
+;PCODE: $000004C6 VOL: 0
+;PCODE: $000004C7 VOL: 0
+;PCODE: $000004C8 VOL: 0
+;PCODE: $000004C9 VOL: 0
+;PCODE: $000004CA VOL: 0
+;PCODE: $000004CB VOL: 0
+; 0027 017C           printDebug("[iDeviceConfigRead]Read is success.\r\n");
+;PCODE: $000004CC VOL: 0
+;PCODE: $000004CD VOL: 0
+;PCODE: $000004CE VOL: 0
+;PCODE: $000004CF VOL: 0
+;PCODE: $000004D0 VOL: 0
+;PCODE: $000004D1 VOL: 0
+;PCODE: $000004D2 VOL: 0
+; 0027 017D           viReturn = 1;
+;PCODE: $000004D3 VOL: 0
+;PCODE: $000004D4 VOL: 0
+; 0027 017E        }
+;PCODE: $000004D5 VOL: 0
+; 0027 017F     }
+; 0027 0180 
+; 0027 0181     return viReturn;
+;PCODE: $000004D6 VOL: 0
+;PCODE: $000004D7 VOL: 0
+;PCODE: $000004D8 VOL: 0
+;PCODE: $000004D9 VOL: 0
+;PCODE: $000004DA VOL: 0
+; 0027 0182 }
+;PCODE: $000004DB VOL: 0

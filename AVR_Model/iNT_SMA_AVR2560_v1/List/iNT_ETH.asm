@@ -2551,12 +2551,12 @@ _0x42001E:
 	.DB  0x72,0x74,0x64,0x65,0x76,0x69,0x63,0x65
 	.DB  0x20,0x48,0x54,0x54,0x50,0x2F,0x31,0x2E
 	.DB  0x31,0x0
-_0x420034:
+_0x420036:
 	.DB  0x0,0x0,0x0,0x0,0x0,0x0
-_0x420052:
+_0x42005A:
 	.DB  0x3C,0x57,0x52,0x3E,0x0,0x2B,0x2B,0x2B
 	.DB  0x0
-_0x420067:
+_0x42006F:
 	.DB  0x3C,0x57,0x52,0x3E,0x0,0x3C,0x52,0x57
 	.DB  0x3E,0x0,0x3C,0x52,0x54,0x3E,0x0,0x3C
 	.DB  0x52,0x42,0x3E,0x0,0x3C,0x52,0x4B,0x3E
@@ -2606,26 +2606,38 @@ _0x420000:
 	.DB  0x70,0x6C,0x69,0x74,0x5D,0x25,0x73,0xD
 	.DB  0xA,0x0,0x20,0x4C,0x69,0x73,0x74,0x65
 	.DB  0x6E,0x20,0x3A,0x20,0x4F,0x4B,0x0,0x48
-	.DB  0x54,0x54,0x50,0x2F,0x0,0x3C,0x45,0x3E
-	.DB  0x0,0x3C,0x53,0x3E,0x0,0x5B,0x69,0x57
-	.DB  0x69,0x7A,0x52,0x65,0x61,0x64,0x43,0x6F
-	.DB  0x6E,0x66,0x69,0x67,0x5D,0x4D,0x41,0x43
-	.DB  0x3A,0x0,0x25,0x30,0x32,0x78,0x3A,0x0
-	.DB  0x25,0x30,0x32,0x78,0x0,0x5B,0x69,0x57
-	.DB  0x69,0x7A,0x52,0x65,0x61,0x64,0x43,0x6F
-	.DB  0x6E,0x66,0x69,0x67,0x5D,0x49,0x50,0x3A
-	.DB  0x0,0x25,0x30,0x32,0x78,0x2E,0x0,0x5B
+	.DB  0x54,0x54,0x50,0x2F,0x0,0x5B,0x69,0x57
+	.DB  0x69,0x7A,0x43,0x68,0x65,0x63,0x6B,0x53
+	.DB  0x74,0x61,0x74,0x75,0x73,0x5D,0x57,0x49
+	.DB  0x5A,0x5F,0x43,0x4F,0x4E,0x4E,0x45,0x43
+	.DB  0x54,0x45,0x44,0x2E,0xD,0xA,0x0,0x5B
+	.DB  0x69,0x57,0x69,0x7A,0x43,0x68,0x65,0x63
+	.DB  0x6B,0x53,0x74,0x61,0x74,0x75,0x73,0x5D
+	.DB  0x57,0x49,0x5A,0x5F,0x43,0x4C,0x4F,0x53
+	.DB  0x45,0x2E,0xD,0xA,0x0,0x5B,0x69,0x57
+	.DB  0x69,0x7A,0x43,0x68,0x65,0x63,0x6B,0x53
+	.DB  0x74,0x61,0x74,0x75,0x73,0x5D,0x57,0x49
+	.DB  0x5A,0x5F,0x43,0x4F,0x4E,0x4E,0x5F,0x46
+	.DB  0x41,0x49,0x4C,0x2E,0xD,0xA,0x0,0x3C
+	.DB  0x45,0x3E,0x0,0x3C,0x53,0x3E,0x0,0x5B
+	.DB  0x69,0x57,0x69,0x7A,0x52,0x65,0x61,0x64
+	.DB  0x43,0x6F,0x6E,0x66,0x69,0x67,0x5D,0x4D
+	.DB  0x41,0x43,0x3A,0x0,0x25,0x30,0x32,0x78
+	.DB  0x3A,0x0,0x25,0x30,0x32,0x78,0x0,0x5B
+	.DB  0x69,0x57,0x69,0x7A,0x52,0x65,0x61,0x64
+	.DB  0x43,0x6F,0x6E,0x66,0x69,0x67,0x5D,0x49
+	.DB  0x50,0x3A,0x0,0x25,0x30,0x32,0x78,0x2E
+	.DB  0x0,0x5B,0x69,0x57,0x69,0x7A,0x52,0x65
+	.DB  0x61,0x64,0x43,0x6F,0x6E,0x66,0x69,0x67
+	.DB  0x5D,0x53,0x75,0x62,0x6E,0x65,0x74,0x20
+	.DB  0x6D,0x61,0x73,0x6B,0x3A,0x0,0x5B,0x69
+	.DB  0x57,0x69,0x7A,0x52,0x65,0x61,0x64,0x43
+	.DB  0x6F,0x6E,0x66,0x69,0x67,0x5D,0x47,0x61
+	.DB  0x74,0x65,0x77,0x61,0x79,0x3A,0x0,0x5B
 	.DB  0x69,0x57,0x69,0x7A,0x52,0x65,0x61,0x64
 	.DB  0x43,0x6F,0x6E,0x66,0x69,0x67,0x5D,0x53
-	.DB  0x75,0x62,0x6E,0x65,0x74,0x20,0x6D,0x61
-	.DB  0x73,0x6B,0x3A,0x0,0x5B,0x69,0x57,0x69
-	.DB  0x7A,0x52,0x65,0x61,0x64,0x43,0x6F,0x6E
-	.DB  0x66,0x69,0x67,0x5D,0x47,0x61,0x74,0x65
-	.DB  0x77,0x61,0x79,0x3A,0x0,0x5B,0x69,0x57
-	.DB  0x69,0x7A,0x52,0x65,0x61,0x64,0x43,0x6F
-	.DB  0x6E,0x66,0x69,0x67,0x5D,0x53,0x44,0x4E
-	.DB  0x3A,0x25,0x73,0xD,0xA,0x0,0x3C,0x53
-	.DB  0x0,0x25,0x73,0x0
+	.DB  0x44,0x4E,0x3A,0x25,0x73,0xD,0xA,0x0
+	.DB  0x3C,0x53,0x0,0x25,0x73,0x0
 _0x440003:
 	.DB  0xFF,0xFF
 _0x440004:
@@ -3154,7 +3166,34 @@ _0x4E0000:
 	.DB  0x6F,0x53,0x65,0x74,0x74,0x6C,0x65,0x6D
 	.DB  0x65,0x6E,0x74,0x5D,0x44,0x61,0x74,0x61
 	.DB  0x3A,0x5B,0xD,0xA,0x0,0x25,0x64,0x0
-	.DB  0x25,0x64,0x2C,0x0
+	.DB  0x25,0x64,0x2C,0x0,0x5B,0x69,0x44,0x65
+	.DB  0x76,0x69,0x63,0x65,0x43,0x6F,0x6E,0x66
+	.DB  0x69,0x67,0x57,0x72,0x69,0x74,0x65,0x5D
+	.DB  0x43,0x68,0x65,0x63,0x6B,0x20,0x66,0x69
+	.DB  0x6C,0x65,0x2E,0xD,0xA,0x0,0x5B,0x69
+	.DB  0x44,0x65,0x76,0x69,0x63,0x65,0x43,0x6F
+	.DB  0x6E,0x66,0x69,0x67,0x57,0x72,0x69,0x74
+	.DB  0x65,0x5D,0x46,0x69,0x6C,0x65,0x20,0x69
+	.DB  0x73,0x20,0x65,0x6D,0x70,0x74,0x79,0x2E
+	.DB  0xD,0xA,0x0,0x5B,0x69,0x44,0x65,0x76
+	.DB  0x69,0x63,0x65,0x43,0x6F,0x6E,0x66,0x69
+	.DB  0x67,0x57,0x72,0x69,0x74,0x65,0x5D,0x57
+	.DB  0x72,0x69,0x74,0x65,0x20,0x69,0x73,0x20
+	.DB  0x73,0x75,0x63,0x63,0x65,0x73,0x73,0x2E
+	.DB  0xD,0xA,0x0,0x5B,0x69,0x44,0x65,0x76
+	.DB  0x69,0x63,0x65,0x43,0x6F,0x6E,0x66,0x69
+	.DB  0x67,0x52,0x65,0x61,0x64,0x5D,0x43,0x68
+	.DB  0x65,0x63,0x6B,0x20,0x66,0x69,0x6C,0x65
+	.DB  0x2E,0xD,0xA,0x0,0x5B,0x69,0x44,0x65
+	.DB  0x76,0x69,0x63,0x65,0x43,0x6F,0x6E,0x66
+	.DB  0x69,0x67,0x52,0x65,0x61,0x64,0x5D,0x46
+	.DB  0x69,0x6C,0x65,0x20,0x69,0x73,0x20,0x65
+	.DB  0x6D,0x70,0x74,0x79,0x2E,0xD,0xA,0x0
+	.DB  0x5B,0x69,0x44,0x65,0x76,0x69,0x63,0x65
+	.DB  0x43,0x6F,0x6E,0x66,0x69,0x67,0x52,0x65
+	.DB  0x61,0x64,0x5D,0x52,0x65,0x61,0x64,0x20
+	.DB  0x69,0x73,0x20,0x73,0x75,0x63,0x63,0x65
+	.DB  0x73,0x73,0x2E,0xD,0xA,0x0
 _0x500000:
 	.DB  0x5B,0x69,0x53,0x65,0x6E,0x73,0x6F,0x72
 	.DB  0x52,0x65,0x61,0x64,0x5D,0x44,0x61,0x74
@@ -3321,41 +3360,45 @@ __GLOBAL_INI_TBL:
 	.DW  _0x42002F+11
 	.DD  _0x420000*2+306
 
+	.DW  0x08
+	.DW  _0x42002F+24
+	.DD  _0x420000*2+160
+
 	.DW  0x06
-	.DW  _0x42003F
+	.DW  _0x420041
 	.DD  _0x420000*2+319
 
 	.DW  0x04
-	.DW  _0x42003F+6
+	.DW  _0x420041+6
 	.DD  _0x420000*2+20
 
 	.DW  0x0F
-	.DW  _0x42003F+10
+	.DW  _0x420041+10
 	.DD  _0x420000*2+41
 
 	.DW  0x05
-	.DW  _0x42003F+25
+	.DW  _0x420041+25
 	.DD  _0x420000*2+202
 
 	.DW  0x04
-	.DW  _0x42005A
-	.DD  _0x420000*2+325
+	.DW  _0x420062
+	.DD  _0x420000*2+423
 
 	.DW  0x04
-	.DW  _0x42005A+4
-	.DD  _0x420000*2+329
+	.DW  _0x420062+4
+	.DD  _0x420000*2+427
 
 	.DW  0x04
-	.DW  _0x42006F
-	.DD  _0x420000*2+325
+	.DW  _0x420077
+	.DD  _0x420000*2+423
 
 	.DW  0x04
-	.DW  _0x42006F+4
-	.DD  _0x420000*2+329
+	.DW  _0x420077+4
+	.DD  _0x420000*2+427
 
 	.DW  0x03
-	.DW  _0x42009C
-	.DD  _0x420000*2+470
+	.DW  _0x4200A4
+	.DD  _0x420000*2+568
 
 	.DW  0x02
 	.DW  _wiz100srSetTimer
@@ -3392,6 +3435,10 @@ __GLOBAL_INI_TBL:
 	.DW  0x0F
 	.DW  _viDataFName
 	.DD  _0x4C0010*2
+
+	.DW  0x0E
+	.DW  _viConfigFName
+	.DD  _0x4C0015*2
 
 	.DW  0x0D
 	.DW  _0x5A0005
@@ -3627,205 +3674,200 @@ _0x4:
 	LDI  R26,LOW(5000)
 	LDI  R27,HIGH(5000)
 	CALL _delay_ms
-; 0000 005D     delay_ms(5000);
-	LDI  R26,LOW(5000)
-	LDI  R27,HIGH(5000)
-	CALL _delay_ms
-; 0000 005E     //delay_ms(5000);
-; 0000 005F     iWizReadConfig();
+; 0000 005D     iWizReadConfig();
 	CALL _iWizReadConfig
-; 0000 0060 //    while(1){
-; 0000 0061 //     #asm("wdr")
-; 0000 0062 //     delay_ms(1000);
-; 0000 0063 //    }
-; 0000 0064 
-; 0000 0065 //    ETH_switchMode((unsigned char) MODE_NORM);
-; 0000 0066     if(iLanInit()){
+; 0000 005E //    while(1){
+; 0000 005F //     #asm("wdr")
+; 0000 0060 //     delay_ms(1000);
+; 0000 0061 //    }
+; 0000 0062 
+; 0000 0063 //    ETH_switchMode((unsigned char) MODE_NORM);
+; 0000 0064     if(iLanInit()){
 	CALL _iLanInit
 	CPI  R30,0
 	BREQ _0x6
-; 0000 0067         printDebug("[main]Lan Connected.\r\n");
+; 0000 0065         printDebug("[main]Lan Connected.\r\n");
 	__POINTD1FN _0x0,19
 	CALL SUBOPT_0x0
-; 0000 0068     }else{
+; 0000 0066     }else{
 	RJMP _0x7
 _0x6:
-; 0000 0069         printDebug("[main]Lan Fail.\r\n");
+; 0000 0067         printDebug("[main]Lan Fail.\r\n");
 	__POINTD1FN _0x0,42
 	CALL SUBOPT_0x0
-; 0000 006A         iWizReadConfig();
+; 0000 0068         iWizReadConfig();
 	CALL _iWizReadConfig
-; 0000 006B         iLanInit();
+; 0000 0069         iLanInit();
 	CALL _iLanInit
-; 0000 006C     }
+; 0000 006A     }
 _0x7:
-; 0000 006D 
-; 0000 006E     iInitSDCard();
+; 0000 006B 
+; 0000 006C     iInitSDCard();
 	CALL _iInitSDCard
-; 0000 006F 
-; 0000 0070     ///////////////create queue////////////////
-; 0000 0071     pviQueueSensorToMang = iQueueCreate(2,sizeof(iSensorData_t));
+; 0000 006D 
+; 0000 006E     ///////////////create queue////////////////
+; 0000 006F     pviQueueSensorToMang = iQueueCreate(2,sizeof(iSensorData_t));
 	LDI  R30,LOW(2)
 	LDI  R31,HIGH(2)
 	CALL SUBOPT_0x1
 	CALL _iQueueCreate
 	STS  _pviQueueSensorToMang,R30
 	STS  _pviQueueSensorToMang+1,R31
-; 0000 0072     if(pviQueueSensorToMang == (int *)(-1)){
+; 0000 0070     if(pviQueueSensorToMang == (int *)(-1)){
 	LDS  R26,_pviQueueSensorToMang
 	LDS  R27,_pviQueueSensorToMang+1
 	CPI  R26,LOW(0xFFFF)
 	LDI  R30,HIGH(0xFFFF)
 	CPC  R27,R30
 	BRNE _0x8
-; 0000 0073        printDebug("[main],pviQueueSensorToMang can not create.\r\n");
+; 0000 0071        printDebug("[main],pviQueueSensorToMang can not create.\r\n");
 	__POINTD1FN _0x0,60
 	RJMP _0x14
-; 0000 0074     }else{
+; 0000 0072     }else{
 _0x8:
-; 0000 0075        printDebug("[main],pviQueueSensorToMang can create.\r\n");
+; 0000 0073        printDebug("[main],pviQueueSensorToMang can create.\r\n");
 	__POINTD1FN _0x0,106
 _0x14:
 	CALL __PUTPARD1
 	CALL SUBOPT_0x2
-; 0000 0076 //       printDebug("[main],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);
-; 0000 0077     }
-; 0000 0078 
-; 0000 0079     pviQueueMangToConfig = iQueueCreate(2,sizeof(iConfigFormat_t));
+; 0000 0074 //       printDebug("[main],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);
+; 0000 0075     }
+; 0000 0076 
+; 0000 0077     pviQueueMangToConfig = iQueueCreate(2,sizeof(iConfigFormat_t));
 	LDI  R30,LOW(2)
 	LDI  R31,HIGH(2)
 	CALL SUBOPT_0x3
 	CALL _iQueueCreate
 	STS  _pviQueueMangToConfig,R30
 	STS  _pviQueueMangToConfig+1,R31
-; 0000 007A     if(pviQueueMangToConfig == (int *)(-1)){
+; 0000 0078     if(pviQueueMangToConfig == (int *)(-1)){
 	LDS  R26,_pviQueueMangToConfig
 	LDS  R27,_pviQueueMangToConfig+1
 	CPI  R26,LOW(0xFFFF)
 	LDI  R30,HIGH(0xFFFF)
 	CPC  R27,R30
 	BRNE _0xA
-; 0000 007B        printDebug("[main],pviQueueMangToConfig can not create.\r\n");
+; 0000 0079        printDebug("[main],pviQueueMangToConfig can not create.\r\n");
 	__POINTD1FN _0x0,148
 	RJMP _0x15
-; 0000 007C     }else{
+; 0000 007A     }else{
 _0xA:
-; 0000 007D        printDebug("[main],pviQueueMangToConfig can create.\r\n");
+; 0000 007B        printDebug("[main],pviQueueMangToConfig can create.\r\n");
 	__POINTD1FN _0x0,194
 _0x15:
 	CALL __PUTPARD1
 	CALL SUBOPT_0x2
-; 0000 007E     }
-; 0000 007F 
-; 0000 0080     pviQueueDeviceToMang = iQueueCreate(1,sizeof(unsigned char));
+; 0000 007C     }
+; 0000 007D 
+; 0000 007E     pviQueueDeviceToMang = iQueueCreate(1,sizeof(unsigned char));
 	LDI  R30,LOW(1)
 	LDI  R31,HIGH(1)
 	CALL SUBOPT_0x4
 	CALL _iQueueCreate
 	STS  _pviQueueDeviceToMang,R30
 	STS  _pviQueueDeviceToMang+1,R31
-; 0000 0081     if(pviQueueDeviceToMang == (int *)(-1)){
+; 0000 007F     if(pviQueueDeviceToMang == (int *)(-1)){
 	LDS  R26,_pviQueueDeviceToMang
 	LDS  R27,_pviQueueDeviceToMang+1
 	CPI  R26,LOW(0xFFFF)
 	LDI  R30,HIGH(0xFFFF)
 	CPC  R27,R30
 	BRNE _0xC
-; 0000 0082        printDebug("[main],pviQueueDeviceToMang can not create.\r\n");
+; 0000 0080        printDebug("[main],pviQueueDeviceToMang can not create.\r\n");
 	__POINTD1FN _0x0,236
 	RJMP _0x16
-; 0000 0083     }else{
+; 0000 0081     }else{
 _0xC:
-; 0000 0084        printDebug("[main],pviQueueDeviceToMang can create.\r\n");
+; 0000 0082        printDebug("[main],pviQueueDeviceToMang can create.\r\n");
 	__POINTD1FN _0x0,282
 _0x16:
 	CALL __PUTPARD1
 	CALL SUBOPT_0x2
-; 0000 0085     }
-; 0000 0086 
-; 0000 0087 //    pviQueueMangToSensor = iQueueCreate(10,sizeof(int));
-; 0000 0088 //    if(pviQueueMangToSensor == (int *)(-1)){
-; 0000 0089 //       printDebug("<main>pviQueueSensorToMang can not create.\r\n");
-; 0000 008A //    }
-; 0000 008B 
-; 0000 008C     ///////////////create task////////////////
-; 0000 008D     piDeviceTask = iTaskCreate(logTask,"logger",5);
+; 0000 0083     }
+; 0000 0084 
+; 0000 0085 //    pviQueueMangToSensor = iQueueCreate(10,sizeof(int));
+; 0000 0086 //    if(pviQueueMangToSensor == (int *)(-1)){
+; 0000 0087 //       printDebug("<main>pviQueueSensorToMang can not create.\r\n");
+; 0000 0088 //    }
+; 0000 0089 
+; 0000 008A     ///////////////create task////////////////
+; 0000 008B     piDeviceTask = iTaskCreate(logTask,"logger",5);
 	__POINTD1M _logTask
 	CALL __PUTPARD1
 	__POINTW1MN _0xE,0
 	CALL SUBOPT_0x5
-; 0000 008E     if(piDeviceTask){
+; 0000 008C     if(piDeviceTask){
 	BREQ _0xF
-; 0000 008F         printDebug("<main>logTask addr : %p\r\n",piDeviceTask);
+; 0000 008D         printDebug("<main>logTask addr : %p\r\n",piDeviceTask);
 	__POINTD1FN _0x0,331
 	CALL SUBOPT_0x6
-; 0000 0090     }
-; 0000 0091 
-; 0000 0092     piDeviceTask = iTaskCreate(dataAndStatusTask,"dataAndStatus",5);
+; 0000 008E     }
+; 0000 008F 
+; 0000 0090     piDeviceTask = iTaskCreate(dataAndStatusTask,"dataAndStatus",5);
 _0xF:
 	__POINTD1M _dataAndStatusTask
 	CALL __PUTPARD1
 	__POINTW1MN _0xE,7
 	CALL SUBOPT_0x5
-; 0000 0093     if(piDeviceTask){
+; 0000 0091     if(piDeviceTask){
 	BREQ _0x10
-; 0000 0094         printDebug("<main>sensorTask addr : %p\r\n",piDeviceTask);
+; 0000 0092         printDebug("<main>sensorTask addr : %p\r\n",piDeviceTask);
 	__POINTD1FN _0x0,371
 	CALL SUBOPT_0x6
-; 0000 0095     }
-; 0000 0096 //    printDebug("[main],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);
-; 0000 0097     piDeviceTask = iTaskCreate(managerTask,"mang",5);
+; 0000 0093     }
+; 0000 0094 //    printDebug("[main],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);
+; 0000 0095     piDeviceTask = iTaskCreate(managerTask,"mang",5);
 _0x10:
 	__POINTD1M _managerTask
 	CALL __PUTPARD1
 	__POINTW1MN _0xE,21
 	CALL SUBOPT_0x5
-; 0000 0098     if(piDeviceTask){
+; 0000 0096     if(piDeviceTask){
 	BREQ _0x11
-; 0000 0099         printDebug("<main>managerTask addr : %p\r\n",piDeviceTask);
+; 0000 0097         printDebug("<main>managerTask addr : %p\r\n",piDeviceTask);
 	__POINTD1FN _0x0,405
 	CALL SUBOPT_0x6
-; 0000 009A     }
-; 0000 009B 
-; 0000 009C 
-; 0000 009D //
-; 0000 009E //    piDeviceTask = iTaskCreate(debugTask,"debug",5);
-; 0000 009F //    if(piDeviceTask){
-; 0000 00A0 //        printDebug("<main>debugTask addr : %p\r\n",&piDeviceTask);
-; 0000 00A1 //    }
-; 0000 00A2 //
-; 0000 00A3 //    piDeviceTask = iTaskCreate(communicateTask,"commu",5);
-; 0000 00A4 //    if(piDeviceTask){
-; 0000 00A5 //        printDebug("<main>communicateTask addr : %p\r\n",&piDeviceTask);
-; 0000 00A6 //    }
-; 0000 00A7 //
-; 0000 00A8 //    piDeviceTask = iTaskCreate(interruptTask,"intp",10);
-; 0000 00A9 //    if(piDeviceTask){
-; 0000 00AA //        printDebug("<main>interruptTask addr : %p\r\n",&piDeviceTask);
-; 0000 00AB //    }
-; 0000 00AC //
-; 0000 00AD //    piDeviceTask = iTaskCreate(deviceTask,"device",5);
-; 0000 00AE //    if(piDeviceTask){
-; 0000 00AF //        printDebug("<main>deviceTask addr : %p\r\n",&piDeviceTask);
-; 0000 00B0 //    }
-; 0000 00B1 
-; 0000 00B2     piDeviceTask = iTaskCreate(eventTask,"event",5);
+; 0000 0098     }
+; 0000 0099 
+; 0000 009A 
+; 0000 009B //
+; 0000 009C //    piDeviceTask = iTaskCreate(debugTask,"debug",5);
+; 0000 009D //    if(piDeviceTask){
+; 0000 009E //        printDebug("<main>debugTask addr : %p\r\n",&piDeviceTask);
+; 0000 009F //    }
+; 0000 00A0 //
+; 0000 00A1 //    piDeviceTask = iTaskCreate(communicateTask,"commu",5);
+; 0000 00A2 //    if(piDeviceTask){
+; 0000 00A3 //        printDebug("<main>communicateTask addr : %p\r\n",&piDeviceTask);
+; 0000 00A4 //    }
+; 0000 00A5 //
+; 0000 00A6 //    piDeviceTask = iTaskCreate(interruptTask,"intp",10);
+; 0000 00A7 //    if(piDeviceTask){
+; 0000 00A8 //        printDebug("<main>interruptTask addr : %p\r\n",&piDeviceTask);
+; 0000 00A9 //    }
+; 0000 00AA //
+; 0000 00AB //    piDeviceTask = iTaskCreate(deviceTask,"device",5);
+; 0000 00AC //    if(piDeviceTask){
+; 0000 00AD //        printDebug("<main>deviceTask addr : %p\r\n",&piDeviceTask);
+; 0000 00AE //    }
+; 0000 00AF 
+; 0000 00B0     piDeviceTask = iTaskCreate(eventTask,"event",5);
 _0x11:
 	__POINTD1M _eventTask
 	CALL __PUTPARD1
 	__POINTW1MN _0xE,26
 	CALL SUBOPT_0x5
-; 0000 00B3     if(piDeviceTask){
+; 0000 00B1     if(piDeviceTask){
 	BREQ _0x12
-; 0000 00B4         printDebug("<main>eventTask addr : %p\r\n",piDeviceTask);
+; 0000 00B2         printDebug("<main>eventTask addr : %p\r\n",piDeviceTask);
 	__POINTD1FN _0x0,441
 	CALL SUBOPT_0x6
-; 0000 00B5     }
-; 0000 00B6 
-; 0000 00B7    startSchedulerTask();
+; 0000 00B3     }
+; 0000 00B4 
+; 0000 00B5    startSchedulerTask();
 _0x12:
 	CALL _startSchedulerTask
-; 0000 00B8 }
+; 0000 00B6 }
 	ADIW R28,4
 _0x13:
 	RJMP _0x13
@@ -14692,7 +14734,8 @@ _managerTask:
 ; 001A 003A     //TIMER_setTimer(&viTEver1min, 60);
 ; 001A 003B     TIMER_setTimer(&viTEver1min, 20);
 	CALL SUBOPT_0x8A
-	CALL SUBOPT_0x9D
+	__GETD2N 0x14
+	CALL _TIMER_setTimer
 ; 001A 003C     while(!TIMER_checkTimerExceed(viTEver1min)){
 _0x340004:
 	CALL SUBOPT_0x59
@@ -14721,20 +14764,20 @@ _0x340006:
 	CPI  R30,0
 	BRNE _0x340007
 ; 001A 0047         mti[0] = 0x08;
-	CALL SUBOPT_0x9E
+	CALL SUBOPT_0x9D
 ; 001A 0048         mti[1] = 0x00;
 ; 001A 0049         iPTCPack(&viTXDataBuff,(char *)"",0,mti,tid);
 ; 001A 004A         viRecordID = iDataInsert(viTXDataBuff.value,viTXDataBuff.length);
-	CALL SUBOPT_0x9F
+	CALL SUBOPT_0x9E
 ; 001A 004B         if(viRecordID>0){
 	BRSH _0x340008
 ; 001A 004C             printDebug("[managerTask]Record ID(%04ld)\r\n",viRecordID);
-	CALL SUBOPT_0xA0
+	CALL SUBOPT_0x9F
 	CALL SUBOPT_0x66
 ; 001A 004D         }
 ; 001A 004E         iDataSelect(viRecordID,&viTXDataBuff);
 _0x340008:
-	CALL SUBOPT_0xA1
+	CALL SUBOPT_0xA0
 	MOVW R26,R28
 	SUBI R26,LOW(-(338))
 	SBCI R27,HIGH(-(338))
@@ -14744,14 +14787,14 @@ _0x340008:
 ; 001A 0051         delay_ms(100);
 	CALL SUBOPT_0x8
 ; 001A 0052         if(iLanWriteData(&viTXDataBuff)){
-	CALL SUBOPT_0xA2
+	CALL SUBOPT_0xA1
 	BREQ _0x340009
 ; 001A 0053             if(iLanReadData(&viRXDataBuff)){
-	CALL SUBOPT_0xA3
+	CALL SUBOPT_0xA2
 	BREQ _0x34000A
 ; 001A 0054                 memcpy(&viUniTime,&viRXDataBuff.value[13],4);
+	CALL SUBOPT_0xA3
 	CALL SUBOPT_0xA4
-	CALL SUBOPT_0xA5
 ; 001A 0055                 iSyncUniTime(&viUniTime);
 ; 001A 0056                 if(iPTCParser(&viRXDataBuff)){
 	MOVW R26,R28
@@ -14760,15 +14803,15 @@ _0x340008:
 	CPI  R30,0
 	BREQ _0x34000B
 ; 001A 0057                     iDataUpdate(viRecordID,'Y',(char *)"",0);  //Y=> //no update date   ,only update status
-	CALL SUBOPT_0xA1
-	CALL SUBOPT_0xA6
+	CALL SUBOPT_0xA0
+	CALL SUBOPT_0xA5
 ; 001A 0058                     viFlagTerInit = 1;
 	LDI  R26,LOW(_viFlagTerInit)
 	LDI  R27,HIGH(_viFlagTerInit)
 	LDI  R30,LOW(1)
 	CALL __EEPROMWRB
 ; 001A 0059                     iTagParser(&viRXDataBuff);      //tag process  othor do..
-	CALL SUBOPT_0xA7
+	CALL SUBOPT_0xA6
 ; 001A 005A                     if(iPTCCheckHostReq(&viRXDataBuff)){
 ; 001A 005B 
 ; 001A 005C                     }
@@ -14800,7 +14843,7 @@ _0x340007:
 	BREQ PC+3
 	JMP _0x34000F
 ; 001A 0069             TIMER_setTimer(&viDelay_s, 5);
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0xA7
 	__GETD2N 0x5
 	CALL _TIMER_setTimer
 ; 001A 006A             while(!TIMER_checkTimerExceed(viDelay_s)){
@@ -14912,12 +14955,12 @@ _0x340091:
 ; 001A 008A             //iPTCPack(&viTXDataBuff,viGenDataElem,sizeof(viGenDataElem),mti,tid);
 ; 001A 008B             iPTCPack(&viTXDataBuff,(const char*) pviDatAndStatBuff,viDatAndStatLength,mti,tid);
 _0x34001A:
-	CALL SUBOPT_0xA9
+	CALL SUBOPT_0xA8
 	ST   -Y,R21
 	ST   -Y,R20
 	LDD  R30,Y+36
 	LDD  R31,Y+36+1
-	CALL SUBOPT_0xAA
+	CALL SUBOPT_0xA9
 	MOVW R26,R28
 	ADIW R26,24
 	RCALL _iPTCPack
@@ -14926,23 +14969,23 @@ _0x34001A:
 	CALL _free
 ; 001A 008D 
 ; 001A 008E             viRecordID = iDataInsert(viTXDataBuff.value,viTXDataBuff.length);
-	CALL SUBOPT_0x9F
+	CALL SUBOPT_0x9E
 ; 001A 008F             if(viRecordID>0){
 	BRSH _0x34001B
 ; 001A 0090                 printDebug("[managerTask]Record ID(%04ld)\r\n",viRecordID);
-	CALL SUBOPT_0xA0
+	CALL SUBOPT_0x9F
 	CALL SUBOPT_0x66
 ; 001A 0091             }
 ; 001A 0092             //iDataSelect(viRecordID);
 ; 001A 0093             iDataSelect(viRecordID,&viTXDataBuff);
 _0x34001B:
-	CALL SUBOPT_0xA1
+	CALL SUBOPT_0xA0
 	MOVW R26,R28
 	SUBI R26,LOW(-(338))
 	SBCI R27,HIGH(-(338))
 	CALL _iDataSelect
 ; 001A 0094             iMangQueueAddItem(viRecordID,&viTXDataBuff,&viTXDataBuff.value[17]); //add protocol in mang queue
-	CALL SUBOPT_0xA1
+	CALL SUBOPT_0xA0
 	MOVW R30,R28
 	SUBI R30,LOW(-(338))
 	SBCI R31,HIGH(-(338))
@@ -14967,19 +15010,19 @@ _0x34001B:
 ; 001A 009C             //print_payload(viTXDataBuff.value, (sizeof(viGenDataElem)+20));               //20 = header + check sum
 ; 001A 009D             while(iMangCheckRetransmit(&viTXDataBuff.value[17])!=0){
 _0x34001C:
-	CALL SUBOPT_0xAB
+	CALL SUBOPT_0xAA
 	CPI  R30,0
 	BRNE PC+3
 	JMP _0x34001E
 ; 001A 009E                 if(iLanWriteData(&viTXDataBuff)){
-	CALL SUBOPT_0xA2
+	CALL SUBOPT_0xA1
 	BREQ _0x34001F
 ; 001A 009F                       if(iLanReadData(&viRXDataBuff)){
-	CALL SUBOPT_0xA3
+	CALL SUBOPT_0xA2
 	BREQ _0x340020
 ; 001A 00A0                             memcpy(&viUniTime,&viRXDataBuff.value[13],4);
+	CALL SUBOPT_0xA3
 	CALL SUBOPT_0xA4
-	CALL SUBOPT_0xA5
 ; 001A 00A1                             iSyncUniTime(&viUniTime);
 ; 001A 00A2                             iMangQueueDelItem(&viRXDataBuff.value[17]);       //del queue with fid
 	MOVW R26,R28
@@ -14992,22 +15035,22 @@ _0x34001C:
 	CPI  R30,0
 	BREQ _0x340021
 ; 001A 00A4                                   iDataUpdate(viRecordID,'Y',(char *)"",0);  //Y=> //no update date   ,only update status  (Real Time sending)
-	CALL SUBOPT_0xA1
-	CALL SUBOPT_0xA6
+	CALL SUBOPT_0xA0
+	CALL SUBOPT_0xA5
 ; 001A 00A5 #if (MANG_TASK_PRINT_DEBUG == 1)
 ; 001A 00A6                                   printDebug("[managerTask]viRXDataBuff.[\r\n");
 ; 001A 00A7                                   print_payload(viRXDataBuff.value,viRXDataBuff.length);
 ; 001A 00A8                                   printDebug("]\r\n");
 ; 001A 00A9 #endif
 ; 001A 00AA                                   iTagParser(&viRXDataBuff);      //tag process  othor do..
-	CALL SUBOPT_0xA7
+	CALL SUBOPT_0xA6
 ; 001A 00AB 
 ; 001A 00AC 
 ; 001A 00AD                                   if(iPTCCheckHostReq(&viRXDataBuff)){
 	CPI  R30,0
 	BREQ _0x340022
 ; 001A 00AE                                      mti[0] = 0x08;
-	CALL SUBOPT_0x9E
+	CALL SUBOPT_0x9D
 ; 001A 00AF                                      mti[1] = 0x00;
 ; 001A 00B0                                      iPTCPack(&viTXDataBuff,(char *)"",0,mti,tid);
 ; 001A 00B1                                      while(viHostRetransmit!=0){
@@ -15015,13 +15058,13 @@ _0x340023:
 	CPI  R19,0
 	BREQ _0x340025
 ; 001A 00B2                                         if(iLanWriteData(&viTXDataBuff)){
-	CALL SUBOPT_0xA2
+	CALL SUBOPT_0xA1
 	BREQ _0x340026
 ; 001A 00B3                                             if(iLanReadData(&viRXDataBuff)){
-	CALL SUBOPT_0xA3
+	CALL SUBOPT_0xA2
 	BREQ _0x340027
 ; 001A 00B4                                                 iHostReqProcess(&viTXDataBuff,&viRXDataBuff);
-	CALL SUBOPT_0xA9
+	CALL SUBOPT_0xA8
 	MOVW R26,R28
 	ADIW R26,36
 	RCALL _iHostReqProcess
@@ -15049,7 +15092,7 @@ _0x340020:
 ; 001A 00C0                 }
 ; 001A 00C1                 if(iMangCheckRetransmit(&viTXDataBuff.value[17])==1){
 _0x34001F:
-	CALL SUBOPT_0xAB
+	CALL SUBOPT_0xAA
 	CPI  R30,LOW(0x1)
 	BRNE _0x340029
 ; 001A 00C2                      //iDataLogInsert(viTXDataBuff.value,viTXDataBuff.length);
@@ -15067,7 +15110,7 @@ _0x34001F:
 	LDI  R30,LOW(0)
 	STD  Y+25,R30
 ; 001A 00C6                      iPTCMtiRepack(&viTXDataBuff,mti);
-	CALL SUBOPT_0xA9
+	CALL SUBOPT_0xA8
 	MOVW R26,R28
 	ADIW R26,26
 	CALL _iPTCMtiRepack
@@ -15077,7 +15120,7 @@ _0x34001F:
 ; 001A 00CA                      printDebug("]\r\n");
 ; 001A 00CB #endif
 ; 001A 00CC                      iDataUpdate(viRecordID,'L',viTXDataBuff.value,viTXDataBuff.length);  //L=> //update data and update status  (Log)
-	CALL SUBOPT_0xA1
+	CALL SUBOPT_0xA0
 	LDI  R30,LOW(76)
 	ST   -Y,R30
 	MOVW R30,R28
@@ -15097,7 +15140,7 @@ _0x34001E:
 ; 001A 00D0             //show statment
 ; 001A 00D1             //iDataSelectToSettlement((unsigned int *)0,(unsigned int *)0,20);
 ; 001A 00D2             iSettlement(&viTXDataBuff,&viRXDataBuff);
-	CALL SUBOPT_0xA9
+	CALL SUBOPT_0xA8
 	MOVW R26,R28
 	ADIW R26,36
 	RCALL _iSettlement
@@ -15126,7 +15169,7 @@ _iSettlement:
 ; 001A 00DE     char tid[8] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
 ; 001A 00DF     iUInt_t viRIDBuff[30];
 ; 001A 00E0     iUInt_t viRIDLength = 0;
-; 001A 00E1     iUChar_t viLimitQuery = 10;
+; 001A 00E1     iUChar_t viLimitQuery = 5;  //Settlement every 5 record
 ; 001A 00E2     iUInt_t viCount = 0;
 ; 001A 00E3     iUInt_t viRetransmit = 2;
 ; 001A 00E4 
@@ -15158,10 +15201,10 @@ _iSettlement:
 ;	timeout -> Y+6
 	LDI  R17,255
 	__GETWRN 18,19,0
-	LDI  R16,10
+	LDI  R16,5
 	__GETWRN 20,21,0
+	CALL SUBOPT_0xAB
 	CALL SUBOPT_0xAC
-	CALL SUBOPT_0xAD
 ; 001A 00E8 
 ; 001A 00E9 
 ; 001A 00EA     tid[0] =  (viDVConfigUpdate.viProperties.viDeviceID[0]<<4);
@@ -15181,7 +15224,7 @@ _iSettlement:
 	ADIW R30,1
 	MOVW R0,R30
 	CALL SUBOPT_0x8F
-	CALL SUBOPT_0xAE
+	CALL SUBOPT_0xAD
 ; 001A 00ED     tid[1] |=  (viDVConfigUpdate.viProperties.viDeviceID[3])&0x0f;
 	ADIW R30,1
 	CALL SUBOPT_0x90
@@ -15192,7 +15235,7 @@ _iSettlement:
 	ADIW R30,2
 	MOVW R0,R30
 	CALL SUBOPT_0x91
-	CALL SUBOPT_0xAE
+	CALL SUBOPT_0xAD
 ; 001A 00EF     tid[2] |=  (viDVConfigUpdate.viProperties.viDeviceID[5])&0x0f;
 	ADIW R30,2
 	CALL SUBOPT_0x92
@@ -15203,7 +15246,7 @@ _iSettlement:
 	ADIW R30,3
 	MOVW R0,R30
 	CALL SUBOPT_0x93
-	CALL SUBOPT_0xAE
+	CALL SUBOPT_0xAD
 ; 001A 00F1     tid[3] |=  (viDVConfigUpdate.viProperties.viDeviceID[7])&0x0f;
 	ADIW R30,3
 	CALL SUBOPT_0x94
@@ -15214,7 +15257,7 @@ _iSettlement:
 	ADIW R30,4
 	MOVW R0,R30
 	CALL SUBOPT_0x95
-	CALL SUBOPT_0xAE
+	CALL SUBOPT_0xAD
 ; 001A 00F3     tid[4] |=  (viDVConfigUpdate.viProperties.viDeviceID[9])&0x0f;
 	ADIW R30,4
 	CALL SUBOPT_0x96
@@ -15225,7 +15268,7 @@ _iSettlement:
 	ADIW R30,5
 	MOVW R0,R30
 	CALL SUBOPT_0x97
-	CALL SUBOPT_0xAE
+	CALL SUBOPT_0xAD
 ; 001A 00F5     tid[5] |=  (viDVConfigUpdate.viProperties.viDeviceID[11])&0x0f;
 	ADIW R30,5
 	CALL SUBOPT_0x98
@@ -15236,7 +15279,7 @@ _iSettlement:
 	ADIW R30,6
 	MOVW R0,R30
 	CALL SUBOPT_0x99
-	CALL SUBOPT_0xAE
+	CALL SUBOPT_0xAD
 ; 001A 00F7     tid[6] |=  (viDVConfigUpdate.viProperties.viDeviceID[13])&0x0f;
 	ADIW R30,6
 	CALL SUBOPT_0x9A
@@ -15247,7 +15290,7 @@ _iSettlement:
 	ADIW R30,7
 	MOVW R0,R30
 	CALL SUBOPT_0x9B
-	CALL SUBOPT_0xAE
+	CALL SUBOPT_0xAD
 ; 001A 00F9     tid[7] |=  (viDVConfigUpdate.viProperties.viDeviceID[15])&0x0f;
 	ADIW R30,7
 	CALL SUBOPT_0x9C
@@ -15255,7 +15298,7 @@ _iSettlement:
 ; 001A 00FB 
 ; 001A 00FC     //show statment
 ; 001A 00FD     if(iDataSelectToSettlement(viRIDBuff,&viRIDLength,viLimitQuery)==1){
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0xA7
 	IN   R30,SPL
 	IN   R31,SPH
 	SBIW R30,1
@@ -15272,7 +15315,7 @@ _iSettlement:
 	JMP _0x34002B
 ; 001A 00FE         printDebug("[iSettlement]RID count(%d).\r\n",viRIDLength);
 	__POINTD1FN _0x340000,145
-	CALL SUBOPT_0xAF
+	CALL SUBOPT_0xAE
 	CALL SUBOPT_0x66
 ; 001A 00FF         for(viCount=0;viCount<viRIDLength;viCount++){
 	__GETWRN 20,21,0
@@ -15290,7 +15333,7 @@ _0x34002D:
 ; 001A 0103             printDebug("[iSettlement]No %d. RID feed(%d).\r\n",(viCount+1),viRIDBuff[viCount]);
 ; 001A 0104     #endif
 ; 001A 0105             iDataSelect(viRIDBuff[viCount],pviTXDataBuff_arg);
-	CALL SUBOPT_0xB0
+	CALL SUBOPT_0xAF
 	__GETW2SX 86
 	CALL _iDataSelect
 ; 001A 0106     #if (MANG_SETTLEMENT_PRINT_DEBUG == 1)
@@ -15321,25 +15364,27 @@ _0x34002D:
 ; 001A 0118 ////            #asm("wdr")
 ; 001A 0119 ////            delay_ms(200);
 ; 001A 011A ////            #asm("wdr")
-; 001A 011B             viRetransmit = 2;
+; 001A 011B 
+; 001A 011C             viRetransmit = 2;
 	LDI  R30,LOW(2)
 	LDI  R31,HIGH(2)
 	STD  Y+10,R30
 	STD  Y+10+1,R31
-; 001A 011C             do{
+; 001A 011D             do{
 _0x340030:
-; 001A 011D                 if(iLanWriteData((iData_t const * const)pviTXDataBuff_arg)){
+; 001A 011E                 //if(iLanStatus()==LAN_CONNECTED){  //connected
+; 001A 011F                    if(iLanWriteData((iData_t const * const)pviTXDataBuff_arg)){
 	__GETW2SX 84
 	CALL _iLanWriteData
 	CPI  R30,0
 	BREQ _0x340032
-; 001A 011E                     if(iLanReadData(pviRXDataBuff_arg)){
-	CALL SUBOPT_0xB1
+; 001A 0120                         if(iLanReadData(pviRXDataBuff_arg)){
+	CALL SUBOPT_0xB0
 	CALL _iLanReadData
 	CPI  R30,0
 	BREQ _0x340033
-; 001A 011F                         iDataUpdate(viRIDBuff[viCount],'S',(iChar_t const * const)pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);  //Y=> //no update date   ,only update status
-	CALL SUBOPT_0xB0
+; 001A 0121                             iDataUpdate(viRIDBuff[viCount],'S',(iChar_t const * const)pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);  //Y=> //no update date   ,only update status
+	CALL SUBOPT_0xAF
 	LDI  R30,LOW(83)
 	ST   -Y,R30
 	__GETW1SX 87
@@ -15350,70 +15395,72 @@ _0x340030:
 	CALL __GETW1P
 	MOVW R26,R30
 	CALL _iDataUpdate
-; 001A 0120                         if(iPTCParser(pviRXDataBuff_arg)){
-	CALL SUBOPT_0xB1
+; 001A 0122                             if(iPTCParser(pviRXDataBuff_arg)){
+	CALL SUBOPT_0xB0
 	CALL _iPTCParser
 	CPI  R30,0
 	BREQ _0x340034
-; 001A 0121                             //iDataUpdate(viRIDBuff[viCount],'S',(iChar_t const * const)pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);  //Y=> //no update date   ,only update status
-; 001A 0122                             iTagParser(pviRXDataBuff_arg);
-	CALL SUBOPT_0xB1
+; 001A 0123                                 //iDataUpdate(viRIDBuff[viCount],'S',(iChar_t const * const)pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);  //Y=> //no update date   ,only update status
+; 001A 0124                                 iTagParser(pviRXDataBuff_arg);
+	CALL SUBOPT_0xB0
 	RCALL _iTagParser
-; 001A 0123                         }
-; 001A 0124                         break;
+; 001A 0125                             }
+; 001A 0126                             break;
 _0x340034:
 	RJMP _0x340031
-; 001A 0125                     }else{
+; 001A 0127                         }else{
 _0x340033:
-; 001A 0126                         printDebug("[iSettlement]Host is not response or data invalid.\r\n");
+; 001A 0128                             printDebug("[iSettlement]Host is not response or data invalid.\r\n");
 	__POINTD1FN _0x340000,175
 	CALL SUBOPT_0x0
-; 001A 0127                     }
-; 001A 0128                 }
-; 001A 0129                 --viRetransmit;
+; 001A 0129                         }
+; 001A 012A                     }
+; 001A 012B                 //}
+; 001A 012C 
+; 001A 012D                 --viRetransmit;
 _0x340032:
 	LDD  R30,Y+10
 	LDD  R31,Y+10+1
 	SBIW R30,1
 	STD  Y+10,R30
 	STD  Y+10+1,R31
-; 001A 012A             }while(viRetransmit>0);
+; 001A 012E             }while(viRetransmit>0);
 	LDD  R26,Y+10
 	LDD  R27,Y+10+1
 	CALL __CPW02
 	BRSH _0x340031
 	RJMP _0x340030
 _0x340031:
-; 001A 012B 
-; 001A 012C         }
+; 001A 012F 
+; 001A 0130         }
 	__ADDWRN 20,21,1
 	RJMP _0x34002D
 _0x34002E:
-; 001A 012D     }
-; 001A 012E     return viReturn;
+; 001A 0131     }
+; 001A 0132     return viReturn;
 _0x34002B:
 	MOV  R30,R17
 	CALL __LOADLOCR6
 	ADIW R28,63
 	ADIW R28,23
 	RET
-; 001A 012F }
+; 001A 0133 }
 ;
 ;iUInt_t iHostReqProcess(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
-; 001A 0131 iUInt_t iHostReqProcess(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
+; 001A 0135 iUInt_t iHostReqProcess(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
 _iHostReqProcess:
-; 001A 0132     char mti[2] = {0x08,0x00};
-; 001A 0133     char tid[8] = {0x01,0x01,0x01,0x01,0x01,0x01,0x01,0x01};
-; 001A 0134     iUInt_t viReturn = 0;
-; 001A 0135     iUChar_t viRetransmit = 1;
-; 001A 0136     iChar_t viHostNeedFlag = 0;
-; 001A 0137 
-; 001A 0138 
-; 001A 0139 //    iPTCPack(pviTXDataBuff_arg,(char *)"",0,mti,tid);
-; 001A 013A //    iMangQueueAddItem(pviTXDataBuff_arg,&pviTXDataBuff_arg->value[17]); //add protocol in mang queue
-; 001A 013B //    iMangQueueDisplay();//display mang queue
-; 001A 013C //    iDataInsert(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
-; 001A 013D     printDebug("[iHostReqProcess]TX Print 1.[\r\n");
+; 001A 0136     char mti[2] = {0x08,0x00};
+; 001A 0137     char tid[8] = {0x01,0x01,0x01,0x01,0x01,0x01,0x01,0x01};
+; 001A 0138     iUInt_t viReturn = 0;
+; 001A 0139     iUChar_t viRetransmit = 1;
+; 001A 013A     iChar_t viHostNeedFlag = 0;
+; 001A 013B 
+; 001A 013C 
+; 001A 013D //    iPTCPack(pviTXDataBuff_arg,(char *)"",0,mti,tid);
+; 001A 013E //    iMangQueueAddItem(pviTXDataBuff_arg,&pviTXDataBuff_arg->value[17]); //add protocol in mang queue
+; 001A 013F //    iMangQueueDisplay();//display mang queue
+; 001A 0140 //    iDataInsert(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
+; 001A 0141     printDebug("[iHostReqProcess]TX Print 1.[\r\n");
 	CALL SUBOPT_0x7A
 	LDI  R30,LOW(_0x340036*2)
 	LDI  R31,HIGH(_0x340036*2)
@@ -15432,7 +15479,7 @@ _iHostReqProcess:
 	LDI  R18,0
 	__POINTD1FN _0x340000,228
 	CALL SUBOPT_0x0
-; 001A 013E     print_payload(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
+; 001A 0142     print_payload(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	ADIW R30,2
@@ -15440,100 +15487,100 @@ _iHostReqProcess:
 	ST   -Y,R30
 	LDD  R26,Y+18
 	LDD  R27,Y+18+1
-	CALL SUBOPT_0xB2
-; 001A 013F     printDebug("]\r\n");
-; 001A 0140 
-; 001A 0141     printDebug("[iHostReqProcess]RX Print 2.[\r\n");
-	__POINTD1FN _0x340000,264
-	CALL SUBOPT_0x0
-; 001A 0142     print_payload(pviRXDataBuff_arg->value,pviRXDataBuff_arg->length);
-	CALL SUBOPT_0xB3
+	CALL SUBOPT_0xB1
 ; 001A 0143     printDebug("]\r\n");
 ; 001A 0144 
-; 001A 0145     if(iPTCParser(pviRXDataBuff_arg)){    //report success
+; 001A 0145     printDebug("[iHostReqProcess]RX Print 2.[\r\n");
+	__POINTD1FN _0x340000,264
+	CALL SUBOPT_0x0
+; 001A 0146     print_payload(pviRXDataBuff_arg->value,pviRXDataBuff_arg->length);
+	CALL SUBOPT_0xB2
+; 001A 0147     printDebug("]\r\n");
+; 001A 0148 
+; 001A 0149     if(iPTCParser(pviRXDataBuff_arg)){    //report success
 	LDD  R26,Y+14
 	LDD  R27,Y+14+1
 	CALL _iPTCParser
 	CPI  R30,0
 	BREQ _0x340037
-; 001A 0146         printDebug("[iHostReqProcess]Print.[\r\n");
+; 001A 014A         printDebug("[iHostReqProcess]Print.[\r\n");
 	__POINTD1FN _0x340000,296
 	CALL SUBOPT_0x0
-; 001A 0147         print_payload(pviRXDataBuff_arg->value,pviRXDataBuff_arg->length);
-	CALL SUBOPT_0xB3
-; 001A 0148         printDebug("]\r\n");
-; 001A 0149 
-; 001A 014A         iTagParser(pviRXDataBuff_arg);      //tag process  othor do..
+; 001A 014B         print_payload(pviRXDataBuff_arg->value,pviRXDataBuff_arg->length);
+	CALL SUBOPT_0xB2
+; 001A 014C         printDebug("]\r\n");
+; 001A 014D 
+; 001A 014E         iTagParser(pviRXDataBuff_arg);      //tag process  othor do..
 	LDD  R26,Y+14
 	LDD  R27,Y+14+1
 	RCALL _iTagParser
-; 001A 014B     }
-; 001A 014C //
-; 001A 014D //    printDebug("[iHostReqProcess]FID(%02x%02x).\r\n",*(pviTXDataBuff_arg->value+17),*(pviTXDataBuff_arg->value+18));
-; 001A 014E 
-; 001A 014F //        if(iLanReadData(pviRXDataBuff_arg)){
-; 001A 0150 //            iMangQueueDelItem((pviTXDataBuff_arg->value+17));       //del queue with fid
-; 001A 0151 //            if(iPTCParser(pviRXDataBuff_arg)){    report success
-; 001A 0152 //                printDebug("[iHostReqProcess]Print 1-1.[\r\n");
-; 001A 0153 //                print_payload(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
-; 001A 0154 //                printDebug("]\r\n");
-; 001A 0155 //            }
-; 001A 0156 //        }
-; 001A 0157 //
-; 001A 0158 //    while(iMangCheckRetransmit((pviTXDataBuff_arg->value+17))!=0){
-; 001A 0159 //        if(iLanWriteData(pviTXDataBuff_arg)){
-; 001A 015A //            if(iLanReadData(pviRXDataBuff_arg)){
-; 001A 015B //                iMangQueueDelItem((pviTXDataBuff_arg->value+17));       //del queue with fid
-; 001A 015C //                if(iPTCParser(pviRXDataBuff_arg)){    report success
-; 001A 015D //                    printDebug("[iHostReqProcess]Print 1-1.[\r\n");
-; 001A 015E //                    print_payload(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
-; 001A 015F //                    printDebug("]\r\n");
-; 001A 0160 //                }
-; 001A 0161 //            }
-; 001A 0162 //        }
-; 001A 0163 //        if(iMangCheckRetransmit((pviTXDataBuff_arg->value+17))==0){
-; 001A 0164 //             iDataLogInsert(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
-; 001A 0165 //             iMangQueueDelItem((pviTXDataBuff_arg->value+17));       //del queue with fid  due over retransmit
+; 001A 014F     }
+; 001A 0150 //
+; 001A 0151 //    printDebug("[iHostReqProcess]FID(%02x%02x).\r\n",*(pviTXDataBuff_arg->value+17),*(pviTXDataBuff_arg->value+18));
+; 001A 0152 
+; 001A 0153 //        if(iLanReadData(pviRXDataBuff_arg)){
+; 001A 0154 //            iMangQueueDelItem((pviTXDataBuff_arg->value+17));       //del queue with fid
+; 001A 0155 //            if(iPTCParser(pviRXDataBuff_arg)){    report success
+; 001A 0156 //                printDebug("[iHostReqProcess]Print 1-1.[\r\n");
+; 001A 0157 //                print_payload(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
+; 001A 0158 //                printDebug("]\r\n");
+; 001A 0159 //            }
+; 001A 015A //        }
+; 001A 015B //
+; 001A 015C //    while(iMangCheckRetransmit((pviTXDataBuff_arg->value+17))!=0){
+; 001A 015D //        if(iLanWriteData(pviTXDataBuff_arg)){
+; 001A 015E //            if(iLanReadData(pviRXDataBuff_arg)){
+; 001A 015F //                iMangQueueDelItem((pviTXDataBuff_arg->value+17));       //del queue with fid
+; 001A 0160 //                if(iPTCParser(pviRXDataBuff_arg)){    report success
+; 001A 0161 //                    printDebug("[iHostReqProcess]Print 1-1.[\r\n");
+; 001A 0162 //                    print_payload(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
+; 001A 0163 //                    printDebug("]\r\n");
+; 001A 0164 //                }
+; 001A 0165 //            }
 ; 001A 0166 //        }
-; 001A 0167 //    }
-; 001A 0168 
-; 001A 0169 
-; 001A 016A     return viReturn;
+; 001A 0167 //        if(iMangCheckRetransmit((pviTXDataBuff_arg->value+17))==0){
+; 001A 0168 //             iDataLogInsert(pviTXDataBuff_arg->value,pviTXDataBuff_arg->length);
+; 001A 0169 //             iMangQueueDelItem((pviTXDataBuff_arg->value+17));       //del queue with fid  due over retransmit
+; 001A 016A //        }
+; 001A 016B //    }
+; 001A 016C 
+; 001A 016D 
+; 001A 016E     return viReturn;
 _0x340037:
 	MOVW R30,R16
 	CALL __LOADLOCR4
 _0x20E0034:
 	ADIW R28,18
 	RET
-; 001A 016B }
+; 001A 016F }
 ;
 ;
 ;
 ;void iDataReportTX(){
-; 001A 016F void iDataReportTX(){
-; 001A 0170 
-; 001A 0171 }
-;
-;void iStatusReportTX(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
-; 001A 0173 void iStatusReportTX(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
+; 001A 0173 void iDataReportTX(){
 ; 001A 0174 
 ; 001A 0175 }
 ;
-;void iEventReportTX(){
-; 001A 0177 void iEventReportTX(){
+;void iStatusReportTX(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
+; 001A 0177 void iStatusReportTX(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
 ; 001A 0178 
 ; 001A 0179 }
 ;
+;void iEventReportTX(){
+; 001A 017B void iEventReportTX(){
+; 001A 017C 
+; 001A 017D }
+;
 ;void iTerAckByTagB(iChar_t viTagName, iChar_t viPropNumber){              //host requst = A , terminal ack = B
-; 001A 017B void iTerAckByTagB(iChar_t viTagName, iChar_t viPropNumber){
+; 001A 017F void iTerAckByTagB(iChar_t viTagName, iChar_t viPropNumber){
 _iTerAckByTagB:
-; 001A 017C      iChar_t viMTI[2] = {0x08,0x00};
-; 001A 017D      iChar_t viTID[8];
-; 001A 017E      iChar_t viAckData[4] = {0x4b,0x02,0x10,0x00};
-; 001A 017F      iData_t * pviDataTX;
-; 001A 0180      iData_t * pviDataRX;
-; 001A 0181 
-; 001A 0182      pviDataTX = (iData_t*)malloc(sizeof(iData_t));
+; 001A 0180      iChar_t viMTI[2] = {0x08,0x00};
+; 001A 0181      iChar_t viTID[8];
+; 001A 0182      iChar_t viAckData[4] = {0x4b,0x02,0x10,0x00};
+; 001A 0183      iData_t * pviDataTX;
+; 001A 0184      iData_t * pviDataRX;
+; 001A 0185 
+; 001A 0186      pviDataTX = (iData_t*)malloc(sizeof(iData_t));
 	ST   -Y,R26
 	SBIW R28,14
 	LDI  R24,14
@@ -15555,12 +15602,12 @@ _iTerAckByTagB:
 	LDI  R27,HIGH(302)
 	CALL _malloc
 	MOVW R16,R30
-; 001A 0183      pviDataRX = (iData_t*)malloc(sizeof(iData_t));
+; 001A 0187      pviDataRX = (iData_t*)malloc(sizeof(iData_t));
 	LDI  R26,LOW(302)
 	LDI  R27,HIGH(302)
 	CALL _malloc
 	MOVW R18,R30
-; 001A 0184      if(pviDataTX!=NULL && pviDataRX!=NULL){
+; 001A 0188      if(pviDataTX!=NULL && pviDataRX!=NULL){
 	CLR  R0
 	CP   R0,R16
 	CPC  R0,R17
@@ -15572,108 +15619,108 @@ _iTerAckByTagB:
 _0x34003A:
 	RJMP _0x340039
 _0x34003B:
-; 001A 0185          //memcpy(viTID,&viDVConfigUpdate.viProperties.viDeviceID[0],8);
-; 001A 0186          printConfig(&viDVConfigUpdate.viProperties.viDeviceID[0],sizeof(viDVConfigUpdate.viProperties.viDeviceID));
+; 001A 0189          //memcpy(viTID,&viDVConfigUpdate.viProperties.viDeviceID[0],8);
+; 001A 018A          printConfig(&viDVConfigUpdate.viProperties.viDeviceID[0],sizeof(viDVConfigUpdate.viProperties.viDeviceID));
 	__POINTW1MN _viDVConfigUpdate,80
 	ST   -Y,R31
 	ST   -Y,R30
 	CALL SUBOPT_0x2C
 	RCALL _printConfig
-; 001A 0187          memcpyd(viTID,(char eeprom  *)&viDVConfigUpdate.viProperties.viDeviceID[0],8);
+; 001A 018B          memcpyd(viTID,(char eeprom  *)&viDVConfigUpdate.viProperties.viDeviceID[0],8);
 	CALL SUBOPT_0x8A
 	__POINTW1MN _viDVConfigUpdate,80
 	CALL SUBOPT_0x89
 	RCALL _memcpyd
-; 001A 0188          print_payload(viTID,8);
+; 001A 018C          print_payload(viTID,8);
 	MOVW R30,R28
 	ADIW R30,8
 	CALL SUBOPT_0x89
 	CALL _print_payload
-; 001A 0189          if(viTagName==TAG_4A){
+; 001A 018D          if(viTagName==TAG_4A){
 	LDD  R26,Y+19
 	CPI  R26,LOW(0x4A)
 	BRNE _0x34003C
-; 001A 018A             if(viPropNumber==CONF_PROPERTIES){
+; 001A 018E             if(viPropNumber==CONF_PROPERTIES){
 	LDD  R26,Y+18
 	CPI  R26,LOW(0x10)
 	BRNE _0x34003D
-; 001A 018B                 iPTCPack(pviDataTX,viAckData,sizeof(viAckData),viMTI,viTID);
+; 001A 018F                 iPTCPack(pviDataTX,viAckData,sizeof(viAckData),viMTI,viTID);
 	ST   -Y,R17
 	ST   -Y,R16
-	CALL SUBOPT_0xAC
+	CALL SUBOPT_0xAB
 	LDI  R30,LOW(4)
 	LDI  R31,HIGH(4)
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0xB4
+	CALL SUBOPT_0xB3
 	MOVW R26,R28
 	ADIW R26,16
 	CALL _iPTCPack
-; 001A 018C                 if(iLanWriteData(pviDataTX)){
+; 001A 0190                 if(iLanWriteData(pviDataTX)){
 	MOVW R26,R16
 	CALL _iLanWriteData
 	CPI  R30,0
 	BREQ _0x34003E
-; 001A 018D                     if(iLanReadData(pviDataRX)){
+; 001A 0191                     if(iLanReadData(pviDataRX)){
 	MOVW R26,R18
 	CALL _iLanReadData
 	CPI  R30,0
 	BREQ _0x34003F
-; 001A 018E                         if(iPTCParser(pviDataRX)){
+; 001A 0192                         if(iPTCParser(pviDataRX)){
 	MOVW R26,R18
 	CALL _iPTCParser
 	CPI  R30,0
 	BREQ _0x340040
-; 001A 018F                             viFlagTerInit = 1;
+; 001A 0193                             viFlagTerInit = 1;
 	LDI  R26,LOW(_viFlagTerInit)
 	LDI  R27,HIGH(_viFlagTerInit)
 	LDI  R30,LOW(1)
 	CALL __EEPROMWRB
-; 001A 0190                             iTagParser(pviDataRX);      //tag process  othor do..
+; 001A 0194                             iTagParser(pviDataRX);      //tag process  othor do..
 	MOVW R26,R18
 	RCALL _iTagParser
-; 001A 0191                             if(iPTCCheckHostReq(pviDataRX)){
+; 001A 0195                             if(iPTCCheckHostReq(pviDataRX)){
 	MOVW R26,R18
 	CALL _iPTCCheckHostReq
-; 001A 0192 
-; 001A 0193                             }
-; 001A 0194                         }
-; 001A 0195                     }
+; 001A 0196 
+; 001A 0197                             }
+; 001A 0198                         }
+; 001A 0199                     }
 _0x340040:
-; 001A 0196                 }
+; 001A 019A                 }
 _0x34003F:
-; 001A 0197             }
+; 001A 019B             }
 _0x34003E:
-; 001A 0198 
-; 001A 0199          }
+; 001A 019C 
+; 001A 019D          }
 _0x34003D:
-; 001A 019A          free(pviDataTX);
+; 001A 019E          free(pviDataTX);
 _0x34003C:
 	MOVW R26,R16
 	CALL _free
-; 001A 019B          free(pviDataRX);
+; 001A 019F          free(pviDataRX);
 	MOVW R26,R18
 	CALL _free
-; 001A 019C      }else{
+; 001A 01A0      }else{
 	RJMP _0x340042
 _0x340039:
-; 001A 019D         printDebug("[iTerAckByTagB]Not allocate memory.\r\n");
+; 001A 01A1         printDebug("[iTerAckByTagB]Not allocate memory.\r\n");
 	__POINTD1FN _0x340000,323
 	CALL SUBOPT_0x0
-; 001A 019E      }
+; 001A 01A2      }
 _0x340042:
-; 001A 019F }
+; 001A 01A3 }
 	CALL __LOADLOCR4
 	ADIW R28,20
 	RET
 ;
 ;void iTagParser(iData_t *pviData_arg){
-; 001A 01A1 void iTagParser(iData_t *pviData_arg){
+; 001A 01A5 void iTagParser(iData_t *pviData_arg){
 _iTagParser:
-; 001A 01A2     int i,j;
-; 001A 01A3     iUInt_t viDataLen = 0;
-; 001A 01A4 
-; 001A 01A5     printDebug("[iTagParser]Host response\r\n");
+; 001A 01A6     int i,j;
+; 001A 01A7     iUInt_t viDataLen = 0;
+; 001A 01A8 
+; 001A 01A9     printDebug("[iTagParser]Host response\r\n");
 	CALL SUBOPT_0x6F
 ;	*pviData_arg -> Y+6
 ;	i -> R16,R17
@@ -15682,142 +15729,142 @@ _iTagParser:
 	__GETWRN 20,21,0
 	__POINTD1FN _0x340000,361
 	CALL SUBOPT_0x0
-; 001A 01A6     viDataLen = pviData_arg->value[1];
+; 001A 01AA     viDataLen = pviData_arg->value[1];
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
 	LDD  R20,Z+3
 	CLR  R21
-; 001A 01A7     printDebug("[iTagParser]Len(%d)\r\n",viDataLen);
+; 001A 01AB     printDebug("[iTagParser]Len(%d)\r\n",viDataLen);
 	__POINTD1FN _0x340000,389
 	CALL __PUTPARD1
 	MOVW R30,R20
 	CALL SUBOPT_0x62
 	CALL SUBOPT_0x66
-; 001A 01A8 
-; 001A 01A9     if(pviData_arg->value[0] == 0x00){
+; 001A 01AC 
+; 001A 01AD     if(pviData_arg->value[0] == 0x00){
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
 	LDD  R30,Z+2
 	CPI  R30,0
 	BREQ PC+3
 	JMP _0x340043
-; 001A 01AA         for(i=2;i<(viDataLen);i+=2){
+; 001A 01AE         for(i=2;i<(viDataLen);i+=2){
 	__GETWRN 16,17,2
 _0x340045:
 	__CPWRR 16,17,20,21
 	BRLO PC+3
 	JMP _0x340046
-; 001A 01AB              //printDebug("[iTagParser]Loop:%02x(%d)",iPTC_RX.dat.value[i],iPTC_RX.dat.value[(i+1)]);
-; 001A 01AC              switch(pviData_arg->value[i]){
+; 001A 01AF              //printDebug("[iTagParser]Loop:%02x(%d)",iPTC_RX.dat.value[i],iPTC_RX.dat.value[(i+1)]);
+; 001A 01B0              switch(pviData_arg->value[i]){
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
-	CALL SUBOPT_0xB5
+	CALL SUBOPT_0xB4
 	LDI  R31,0
-; 001A 01AD                 case TAG_2A:{
+; 001A 01B1                 case TAG_2A:{
 	CPI  R30,LOW(0x2A)
 	LDI  R26,HIGH(0x2A)
 	CPC  R31,R26
 	BRNE _0x34004A
-; 001A 01AE                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
-	CALL SUBOPT_0xB6
+; 001A 01B2                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 	CALL SUBOPT_0xB5
+	CALL SUBOPT_0xB4
 	CALL SUBOPT_0x7F
-	CALL SUBOPT_0xB7
+	CALL SUBOPT_0xB6
 	RJMP _0x340092
-; 001A 01AF                    break;
-; 001A 01B0                 }
-; 001A 01B1                 case TAG_3A:{
+; 001A 01B3                    break;
+; 001A 01B4                 }
+; 001A 01B5                 case TAG_3A:{
 _0x34004A:
 	CPI  R30,LOW(0x3A)
 	LDI  R26,HIGH(0x3A)
 	CPC  R31,R26
 	BRNE _0x34004B
-; 001A 01B2                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
-	CALL SUBOPT_0xB6
+; 001A 01B6                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 	CALL SUBOPT_0xB5
+	CALL SUBOPT_0xB4
 	CALL SUBOPT_0x7F
-	CALL SUBOPT_0xB7
+	CALL SUBOPT_0xB6
 	RJMP _0x340092
-; 001A 01B3                    break;
-; 001A 01B4                 }
-; 001A 01B5                 case TAG_4A:{
+; 001A 01B7                    break;
+; 001A 01B8                 }
+; 001A 01B9                 case TAG_4A:{
 _0x34004B:
 	CPI  R30,LOW(0x4A)
 	LDI  R26,HIGH(0x4A)
 	CPC  R31,R26
 	BRNE _0x34004C
-; 001A 01B6                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
-	CALL SUBOPT_0xB6
+; 001A 01BA                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 	CALL SUBOPT_0xB5
+	CALL SUBOPT_0xB4
 	CALL SUBOPT_0x7F
-	CALL SUBOPT_0xB7
+	CALL SUBOPT_0xB6
 	RJMP _0x340092
-; 001A 01B7                    break;
-; 001A 01B8                 }
-; 001A 01B9                 case TAG_5A:{
+; 001A 01BB                    break;
+; 001A 01BC                 }
+; 001A 01BD                 case TAG_5A:{
 _0x34004C:
 	CPI  R30,LOW(0x5A)
 	LDI  R26,HIGH(0x5A)
 	CPC  R31,R26
 	BRNE _0x34004D
-; 001A 01BA                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
-	CALL SUBOPT_0xB6
+; 001A 01BE                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 	CALL SUBOPT_0xB5
+	CALL SUBOPT_0xB4
 	CALL SUBOPT_0x7F
-	CALL SUBOPT_0xB7
+	CALL SUBOPT_0xB6
 	RJMP _0x340092
-; 001A 01BB                    break;
-; 001A 01BC                 }
-; 001A 01BD                 case TAG_6A:{
+; 001A 01BF                    break;
+; 001A 01C0                 }
+; 001A 01C1                 case TAG_6A:{
 _0x34004D:
 	CPI  R30,LOW(0x6A)
 	LDI  R26,HIGH(0x6A)
 	CPC  R31,R26
 	BRNE _0x34004E
-; 001A 01BE                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
-	CALL SUBOPT_0xB6
+; 001A 01C2                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 	CALL SUBOPT_0xB5
+	CALL SUBOPT_0xB4
 	CALL SUBOPT_0x7F
-	CALL SUBOPT_0xB7
+	CALL SUBOPT_0xB6
 	RJMP _0x340092
-; 001A 01BF                    break;
-; 001A 01C0                 }
-; 001A 01C1                 case TAG_7A:{
+; 001A 01C3                    break;
+; 001A 01C4                 }
+; 001A 01C5                 case TAG_7A:{
 _0x34004E:
 	CPI  R30,LOW(0x7A)
 	LDI  R26,HIGH(0x7A)
 	CPC  R31,R26
 	BRNE _0x34004F
-; 001A 01C2                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
-	CALL SUBOPT_0xB6
+; 001A 01C6                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 	CALL SUBOPT_0xB5
+	CALL SUBOPT_0xB4
 	CALL SUBOPT_0x7F
-	CALL SUBOPT_0xB7
+	CALL SUBOPT_0xB6
 	RJMP _0x340092
-; 001A 01C3                    break;
-; 001A 01C4                 }
-; 001A 01C5                 case TAG_8A:{
+; 001A 01C7                    break;
+; 001A 01C8                 }
+; 001A 01C9                 case TAG_8A:{
 _0x34004F:
 	CPI  R30,LOW(0x8A)
 	LDI  R26,HIGH(0x8A)
 	CPC  R31,R26
 	BRNE _0x340050
-; 001A 01C6                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
-	CALL SUBOPT_0xB6
+; 001A 01CA                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",pviData_arg->value[i],pviData_arg->value[(i+1)]);
 	CALL SUBOPT_0xB5
+	CALL SUBOPT_0xB4
 	CALL SUBOPT_0x7F
-	CALL SUBOPT_0xB7
+	CALL SUBOPT_0xB6
 	RJMP _0x340092
-; 001A 01C7                    break;
-; 001A 01C8                 }
-; 001A 01C9                 case TAG_9A:{
+; 001A 01CB                    break;
+; 001A 01CC                 }
+; 001A 01CD                 case TAG_9A:{
 _0x340050:
 	CPI  R30,LOW(0x9A)
 	LDI  R26,HIGH(0x9A)
 	CPC  R31,R26
 	BRNE _0x340049
-; 001A 01CA                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",&pviData_arg->value[i],&pviData_arg->value[(i+1)]);
-	CALL SUBOPT_0xB6
+; 001A 01CE                    printDebug("[iTagParser]Tag:%02x(%d)\r\n",&pviData_arg->value[i],&pviData_arg->value[(i+1)]);
+	CALL SUBOPT_0xB5
 	ADIW R30,2
 	ADD  R30,R16
 	ADC  R31,R17
@@ -15834,15 +15881,15 @@ _0x340050:
 _0x340092:
 	CALL __PUTPARD1
 	CALL SUBOPT_0x80
-; 001A 01CB                    break;
-; 001A 01CC                 }
-; 001A 01CD              }
+; 001A 01CF                    break;
+; 001A 01D0                 }
+; 001A 01D1              }
 _0x340049:
-; 001A 01CE         }
+; 001A 01D2         }
 	__ADDWRN 16,17,2
 	RJMP _0x340045
 _0x340046:
-; 001A 01CF     }else if(pviData_arg->value[0] == TAG_4A){
+; 001A 01D3     }else if(pviData_arg->value[0] == TAG_4A){
 	RJMP _0x340052
 _0x340043:
 	LDD  R30,Y+6
@@ -15851,22 +15898,22 @@ _0x340043:
 	CPI  R26,LOW(0x4A)
 	BREQ PC+3
 	JMP _0x340053
-; 001A 01D0         switch(pviData_arg->value[2]){
+; 001A 01D4         switch(pviData_arg->value[2]){
 	LDD  R30,Z+4
 	LDI  R31,0
-; 001A 01D1              case CONF_PROPERTIES:{      //config properties
+; 001A 01D5              case CONF_PROPERTIES:{      //config properties
 	CPI  R30,LOW(0x10)
 	LDI  R26,HIGH(0x10)
 	CPC  R31,R26
 	BRNE _0x340057
-; 001A 01D2                 printDebug("[iTagParser]Host need to config(Properties)\r\n");
+; 001A 01D6                 printDebug("[iTagParser]Host need to config(Properties)\r\n");
 	__POINTD1FN _0x340000,438
 	CALL SUBOPT_0x0
-; 001A 01D3                 memcpye((char eeprom *)&viDVConfigUpdate.viProperties,&pviData_arg->value[3],viDataLen);
+; 001A 01D7                 memcpye((char eeprom *)&viDVConfigUpdate.viProperties,&pviData_arg->value[3],viDataLen);
 	LDI  R30,LOW(_viDVConfigUpdate)
 	LDI  R31,HIGH(_viDVConfigUpdate)
-	CALL SUBOPT_0xB8
-; 001A 01D4                 printConfig((char eeprom *)&viDVConfigUpdate.viProperties,sizeof(viDVConfigUpdate.viProperties));
+	CALL SUBOPT_0xB7
+; 001A 01D8                 printConfig((char eeprom *)&viDVConfigUpdate.viProperties,sizeof(viDVConfigUpdate.viProperties));
 	LDI  R30,LOW(_viDVConfigUpdate)
 	LDI  R31,HIGH(_viDVConfigUpdate)
 	ST   -Y,R31
@@ -15874,126 +15921,126 @@ _0x340043:
 	LDI  R26,LOW(161)
 	LDI  R27,0
 	RCALL _printConfig
-; 001A 01D5                 iTerAckByTagB(TAG_4A,CONF_PROPERTIES);
+; 001A 01D9                 iTerAckByTagB(TAG_4A,CONF_PROPERTIES);
 	LDI  R30,LOW(74)
 	ST   -Y,R30
 	LDI  R26,LOW(16)
 	RCALL _iTerAckByTagB
-; 001A 01D6                 break;
+; 001A 01DA                 break;
 	RJMP _0x340056
-; 001A 01D7              }
-; 001A 01D8              case CONF_OPERATEING:{      //config properties
+; 001A 01DB              }
+; 001A 01DC              case CONF_OPERATEING:{      //config properties
 _0x340057:
 	CPI  R30,LOW(0x20)
 	LDI  R26,HIGH(0x20)
 	CPC  R31,R26
 	BRNE _0x340058
-; 001A 01D9                 printDebug("[iTagParser]Host need to config(Operating)\r\n");
+; 001A 01DD                 printDebug("[iTagParser]Host need to config(Operating)\r\n");
 	__POINTD1FN _0x340000,484
 	CALL SUBOPT_0x0
-; 001A 01DA                 memcpye((char eeprom *)&viDVConfigUpdate.viOperate,&pviData_arg->value[3],viDataLen);
+; 001A 01DE                 memcpye((char eeprom *)&viDVConfigUpdate.viOperate,&pviData_arg->value[3],viDataLen);
 	__POINTW1MN _viDVConfigUpdate,161
-	CALL SUBOPT_0xB8
-; 001A 01DB                 printConfig((char eeprom *)&viDVConfigUpdate.viOperate,sizeof(viDVConfigUpdate.viOperate));
+	CALL SUBOPT_0xB7
+; 001A 01DF                 printConfig((char eeprom *)&viDVConfigUpdate.viOperate,sizeof(viDVConfigUpdate.viOperate));
 	__POINTW1MN _viDVConfigUpdate,161
 	ST   -Y,R31
 	ST   -Y,R30
 	LDI  R26,LOW(9)
 	LDI  R27,0
 	RCALL _printConfig
-; 001A 01DC                 break;
+; 001A 01E0                 break;
 	RJMP _0x340056
-; 001A 01DD              }
-; 001A 01DE              case CONF_BUZZER:{      //config properties
+; 001A 01E1              }
+; 001A 01E2              case CONF_BUZZER:{      //config properties
 _0x340058:
 	CPI  R30,LOW(0x80)
 	LDI  R26,HIGH(0x80)
 	CPC  R31,R26
 	BRNE _0x340059
-; 001A 01DF                 printDebug("[iTagParser]Host need to config(Buzzer)\r\n");
+; 001A 01E3                 printDebug("[iTagParser]Host need to config(Buzzer)\r\n");
 	__POINTD1FN _0x340000,529
 	RJMP _0x340093
-; 001A 01E0                 break;
-; 001A 01E1              }
-; 001A 01E2              case CONF_ENVIRON_COND:{      //config properties
+; 001A 01E4                 break;
+; 001A 01E5              }
+; 001A 01E6              case CONF_ENVIRON_COND:{      //config properties
 _0x340059:
 	CPI  R30,LOW(0x90)
 	LDI  R26,HIGH(0x90)
 	CPC  R31,R26
 	BRNE _0x340056
-; 001A 01E3                 printDebug("[iTagParser]Host need to config(Environment Alarm Condition)\r\n");
+; 001A 01E7                 printDebug("[iTagParser]Host need to config(Environment Alarm Condition)\r\n");
 	__POINTD1FN _0x340000,571
 _0x340093:
 	CALL __PUTPARD1
 	CALL SUBOPT_0x2
-; 001A 01E4                 break;
-; 001A 01E5              }
-; 001A 01E6         }
+; 001A 01E8                 break;
+; 001A 01E9              }
+; 001A 01EA         }
 _0x340056:
-; 001A 01E7 
-; 001A 01E8         if((pviData_arg->value[2]&0xf0) == CONF_DIGI_IN){
-	CALL SUBOPT_0xB9
+; 001A 01EB 
+; 001A 01EC         if((pviData_arg->value[2]&0xf0) == CONF_DIGI_IN){
+	CALL SUBOPT_0xB8
 	CPI  R30,LOW(0x40)
 	BRNE _0x34005B
-; 001A 01E9              printDebug("[iTagParser]Host need to config(Digital Input)\r\n");
+; 001A 01ED              printDebug("[iTagParser]Host need to config(Digital Input)\r\n");
 	__POINTD1FN _0x340000,634
 	RJMP _0x340094
-; 001A 01EA         }else if((pviData_arg->value[2]&0xf0) == CONF_DIGI_OUT){
+; 001A 01EE         }else if((pviData_arg->value[2]&0xf0) == CONF_DIGI_OUT){
 _0x34005B:
-	CALL SUBOPT_0xB9
+	CALL SUBOPT_0xB8
 	CPI  R30,LOW(0x50)
 	BRNE _0x34005D
-; 001A 01EB              printDebug("[iTagParser]Host need to config(Digital Output)\r\n");
+; 001A 01EF              printDebug("[iTagParser]Host need to config(Digital Output)\r\n");
 	__POINTD1FN _0x340000,683
 	RJMP _0x340094
-; 001A 01EC         }else if((pviData_arg->value[2]&0xf0) == CONF_ANA_IN){
+; 001A 01F0         }else if((pviData_arg->value[2]&0xf0) == CONF_ANA_IN){
 _0x34005D:
-	CALL SUBOPT_0xB9
+	CALL SUBOPT_0xB8
 	CPI  R30,LOW(0x60)
 	BRNE _0x34005F
-; 001A 01ED              printDebug("[iTagParser]Host need to config(Analog Input)\r\n");
+; 001A 01F1              printDebug("[iTagParser]Host need to config(Analog Input)\r\n");
 	__POINTD1FN _0x340000,733
 	RJMP _0x340094
-; 001A 01EE         }else if((pviData_arg->value[2]&0xf0) == CONF_ANA_OUT){
+; 001A 01F2         }else if((pviData_arg->value[2]&0xf0) == CONF_ANA_OUT){
 _0x34005F:
-	CALL SUBOPT_0xB9
+	CALL SUBOPT_0xB8
 	CPI  R30,LOW(0x70)
 	BRNE _0x340061
-; 001A 01EF              printDebug("[iTagParser]Host need to config(Analog Output)\r\n");
+; 001A 01F3              printDebug("[iTagParser]Host need to config(Analog Output)\r\n");
 	__POINTD1FN _0x340000,781
 _0x340094:
 	CALL __PUTPARD1
 	CALL SUBOPT_0x2
-; 001A 01F0         }
-; 001A 01F1 
-; 001A 01F2     }else{
+; 001A 01F4         }
+; 001A 01F5 
+; 001A 01F6     }else{
 _0x340061:
 	RJMP _0x340062
 _0x340053:
-; 001A 01F3        printDebug("[iTagParser]Host response unknow(%02x).\r\n",pviData_arg->value[0]);
+; 001A 01F7        printDebug("[iTagParser]Host response unknow(%02x).\r\n",pviData_arg->value[0]);
 	__POINTD1FN _0x340000,830
 	CALL SUBOPT_0x70
 	LDD  R30,Z+2
-	CALL SUBOPT_0xBA
-; 001A 01F4     }
+	CALL SUBOPT_0xB9
+; 001A 01F8     }
 _0x340062:
 _0x340052:
-; 001A 01F5 
-; 001A 01F6 
-; 001A 01F7 }
+; 001A 01F9 
+; 001A 01FA 
+; 001A 01FB }
 	CALL __LOADLOCR6
 	JMP  _0x20E0032
 ;
 ;
 ;iInt_t iMangQueueAddItem(iUInt_t viRecordID_arg,iData_t *pviDataItem_arg,iChar_t *pviFid_arg){
-; 001A 01FA iInt_t iMangQueueAddItem(iUInt_t viRecordID_arg,iData_t *pviDataItem_arg,iChar_t *pviFid_arg){
+; 001A 01FE iInt_t iMangQueueAddItem(iUInt_t viRecordID_arg,iData_t *pviDataItem_arg,iChar_t *pviFid_arg){
 _iMangQueueAddItem:
-; 001A 01FB     iInt_t viReturn = -1;
-; 001A 01FC     iInt_t i;
-; 001A 01FD     iChar_t viFid[2];
-; 001A 01FE 
-; 001A 01FF     memcpy(viFid,&pviFid_arg[0],2);
-	CALL SUBOPT_0xBB
+; 001A 01FF     iInt_t viReturn = -1;
+; 001A 0200     iInt_t i;
+; 001A 0201     iChar_t viFid[2];
+; 001A 0202 
+; 001A 0203     memcpy(viFid,&pviFid_arg[0],2);
+	CALL SUBOPT_0xBA
 ;	viRecordID_arg -> Y+10
 ;	*pviDataItem_arg -> Y+8
 ;	*pviFid_arg -> Y+6
@@ -16001,53 +16048,53 @@ _iMangQueueAddItem:
 ;	i -> R18,R19
 ;	viFid -> Y+4
 	CALL _memcpy
-; 001A 0200     for(i=0;i<MANG_QUEUE_MAX;i++){
+; 001A 0204     for(i=0;i<MANG_QUEUE_MAX;i++){
 	__GETWRN 18,19,0
 _0x340064:
 	__CPWRN 18,19,2
 	BRLT PC+3
 	JMP _0x340065
-; 001A 0201         if(viMangQueue[i].value == NULL){
+; 001A 0205         if(viMangQueue[i].value == NULL){
+	CALL SUBOPT_0xBB
 	CALL SUBOPT_0xBC
-	CALL SUBOPT_0xBD
 	BREQ PC+3
 	JMP _0x340066
-; 001A 0202             viMangQueue[i].value = (iChar_t * const)malloc(pviDataItem_arg->length);
-	CALL SUBOPT_0xBC
+; 001A 0206             viMangQueue[i].value = (iChar_t * const)malloc(pviDataItem_arg->length);
+	CALL SUBOPT_0xBB
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	MOVW R26,R30
 	CALL _malloc
 	POP  R26
 	POP  R27
 	ST   X+,R30
 	ST   X,R31
-; 001A 0203             if(viMangQueue[i].value != NULL){
+; 001A 0207             if(viMangQueue[i].value != NULL){
+	CALL SUBOPT_0xBB
 	CALL SUBOPT_0xBC
-	CALL SUBOPT_0xBD
 	BRNE PC+3
 	JMP _0x340067
-; 001A 0204                 viMangQueue[i].length = pviDataItem_arg->length;
-	CALL SUBOPT_0xBF
+; 001A 0208                 viMangQueue[i].length = pviDataItem_arg->length;
+	CALL SUBOPT_0xBE
 	__ADDW1MN _viMangQueue,5
 	MOVW R0,R30
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	MOVW R26,R0
 	ST   X+,R30
 	ST   X,R31
-; 001A 0205                 viMangQueue[i].recordID = viRecordID_arg;
-	CALL SUBOPT_0xBF
+; 001A 0209                 viMangQueue[i].recordID = viRecordID_arg;
+	CALL SUBOPT_0xBE
 	SUBI R30,LOW(-_viMangQueue)
 	SBCI R31,HIGH(-_viMangQueue)
 	LDD  R26,Y+10
 	LDD  R27,Y+10+1
 	STD  Z+0,R26
 	STD  Z+1,R27
-; 001A 0206                 memcpy(viMangQueue[i].value,&pviDataItem_arg->value[0],pviDataItem_arg->length);
-	CALL SUBOPT_0xBC
+; 001A 020A                 memcpy(viMangQueue[i].value,&pviDataItem_arg->value[0],pviDataItem_arg->length);
+	CALL SUBOPT_0xBB
 	MOVW R26,R30
-	CALL SUBOPT_0xC0
+	CALL SUBOPT_0xBF
 	LDD  R30,Y+10
 	LDD  R31,Y+10+1
 	ADIW R30,2
@@ -16058,169 +16105,169 @@ _0x340064:
 	CALL __GETW1P
 	MOVW R26,R30
 	CALL _memcpy
-; 001A 0207                 memcpy(&viMangQueue[i].fid[0],&viFid[0],2);
-	CALL SUBOPT_0xBF
-	CALL SUBOPT_0xC1
+; 001A 020B                 memcpy(&viMangQueue[i].fid[0],&viFid[0],2);
+	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xC0
 	CALL SUBOPT_0x7
 	CALL _memcpy
-; 001A 0208                 viMangQueue[i].reTransmit = MANG_RETRANSMIT;
-	CALL SUBOPT_0xBF
+; 001A 020C                 viMangQueue[i].reTransmit = MANG_RETRANSMIT;
+	CALL SUBOPT_0xBE
 	__ADDW1MN _viMangQueue,4
 	LDI  R26,LOW(3)
 	STD  Z+0,R26
-; 001A 0209                 printDebug("[iMangQueueAddItem]Add by FID(%02x%02x).\r\n",viFid[0],viFid[1]);
+; 001A 020D                 printDebug("[iMangQueueAddItem]Add by FID(%02x%02x).\r\n",viFid[0],viFid[1]);
 	__POINTD1FN _0x340000,872
-	CALL SUBOPT_0xC2
+	CALL SUBOPT_0xC1
 	LDD  R30,Y+13
 	CALL SUBOPT_0x7F
 	CALL SUBOPT_0x80
-; 001A 020A                 viReturn = 1;
+; 001A 020E                 viReturn = 1;
 	__GETWRN 16,17,1
-; 001A 020B                 break;
+; 001A 020F                 break;
 	RJMP _0x340065
-; 001A 020C             }else{
+; 001A 0210             }else{
 _0x340067:
-; 001A 020D                printDebug("[iMangQueueAddItem]can't allocate mem.\r\n");
+; 001A 0211                printDebug("[iMangQueueAddItem]can't allocate mem.\r\n");
 	__POINTD1FN _0x340000,915
 	CALL SUBOPT_0x0
-; 001A 020E                viReturn = -1;
+; 001A 0212                viReturn = -1;
 	__GETWRN 16,17,-1
-; 001A 020F             }
-; 001A 0210         }else{
+; 001A 0213             }
+; 001A 0214         }else{
 	RJMP _0x340069
 _0x340066:
-; 001A 0211            viReturn = 0;
+; 001A 0215            viReturn = 0;
 	__GETWRN 16,17,0
-; 001A 0212         }
+; 001A 0216         }
 _0x340069:
-; 001A 0213     }
+; 001A 0217     }
 	__ADDWRN 18,19,1
 	RJMP _0x340064
 _0x340065:
-; 001A 0214     if(viReturn == 0){
+; 001A 0218     if(viReturn == 0){
 	MOV  R0,R16
 	OR   R0,R17
 	BRNE _0x34006A
-; 001A 0215         printDebug("[iMangQueueAddItem]MangQueue Full.\r\n");
+; 001A 0219         printDebug("[iMangQueueAddItem]MangQueue Full.\r\n");
 	__POINTD1FN _0x340000,956
 	CALL SUBOPT_0x0
-; 001A 0216     }
-; 001A 0217     return viReturn;
+; 001A 021A     }
+; 001A 021B     return viReturn;
 _0x34006A:
 	MOVW R30,R16
 	CALL __LOADLOCR4
 	ADIW R28,12
 	RET
-; 001A 0218 }
+; 001A 021C }
 ;iInt_t iMangQueueDelItem(iChar_t *pviFid_arg){
-; 001A 0219 iInt_t iMangQueueDelItem(iChar_t *pviFid_arg){
+; 001A 021D iInt_t iMangQueueDelItem(iChar_t *pviFid_arg){
 _iMangQueueDelItem:
-; 001A 021A     iInt_t viReturn = -1;
-; 001A 021B     iInt_t i;
-; 001A 021C     iChar_t viFid[2];
-; 001A 021D 
-; 001A 021E     memcpy(viFid,&pviFid_arg[0],2);
-	CALL SUBOPT_0xBB
+; 001A 021E     iInt_t viReturn = -1;
+; 001A 021F     iInt_t i;
+; 001A 0220     iChar_t viFid[2];
+; 001A 0221 
+; 001A 0222     memcpy(viFid,&pviFid_arg[0],2);
+	CALL SUBOPT_0xBA
 ;	*pviFid_arg -> Y+6
 ;	viReturn -> R16,R17
 ;	i -> R18,R19
 ;	viFid -> Y+4
 	CALL _memcpy
-; 001A 021F     printDebug("[iMangQueueDelItem]Del by FID(%02x%02x).\r\n",viFid[0],viFid[1]);
+; 001A 0223     printDebug("[iMangQueueDelItem]Del by FID(%02x%02x).\r\n",viFid[0],viFid[1]);
 	__POINTD1FN _0x340000,993
-	CALL SUBOPT_0xC2
+	CALL SUBOPT_0xC1
 	LDD  R30,Y+13
 	CALL SUBOPT_0x7F
 	CALL SUBOPT_0x80
-; 001A 0220     for(i=0;i<MANG_QUEUE_MAX;i++){
+; 001A 0224     for(i=0;i<MANG_QUEUE_MAX;i++){
 	__GETWRN 18,19,0
 _0x34006C:
 	__CPWRN 18,19,2
 	BRGE _0x34006D
-; 001A 0221         if(viMangQueue[i].value != NULL){
+; 001A 0225         if(viMangQueue[i].value != NULL){
+	CALL SUBOPT_0xBB
 	CALL SUBOPT_0xBC
-	CALL SUBOPT_0xBD
 	BREQ _0x34006E
-; 001A 0222             if(memcmp(viMangQueue[i].fid,&viFid[0],2)==0){
-	CALL SUBOPT_0xBF
-	CALL SUBOPT_0xC1
+; 001A 0226             if(memcmp(viMangQueue[i].fid,&viFid[0],2)==0){
+	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xC0
 	CALL SUBOPT_0x7
 	CALL _memcmp
 	CPI  R30,0
 	BRNE _0x34006F
-; 001A 0223                 free(viMangQueue[i].value);
-	CALL SUBOPT_0xBC
+; 001A 0227                 free(viMangQueue[i].value);
+	CALL SUBOPT_0xBB
 	MOVW R26,R30
 	CALL __GETW1P
 	MOVW R26,R30
 	CALL _free
-; 001A 0224                 viMangQueue[i].value = NULL;
-	CALL SUBOPT_0xBC
-	CALL SUBOPT_0xC3
-; 001A 0225                 memset(viMangQueue[i].fid,0,2);
-	CALL SUBOPT_0xBF
+; 001A 0228                 viMangQueue[i].value = NULL;
+	CALL SUBOPT_0xBB
+	CALL SUBOPT_0xC2
+; 001A 0229                 memset(viMangQueue[i].fid,0,2);
+	CALL SUBOPT_0xBE
 	__ADDW1MN _viMangQueue,2
-	CALL SUBOPT_0xC4
+	CALL SUBOPT_0xC3
 	CALL SUBOPT_0x7
 	CALL _memset
-; 001A 0226                 viMangQueue[i].length = 0;
-	CALL SUBOPT_0xBF
+; 001A 022A                 viMangQueue[i].length = 0;
+	CALL SUBOPT_0xBE
 	__ADDW1MN _viMangQueue,5
-	CALL SUBOPT_0xC3
-; 001A 0227                 viReturn = 1;
+	CALL SUBOPT_0xC2
+; 001A 022B                 viReturn = 1;
 	__GETWRN 16,17,1
-; 001A 0228                 break;
+; 001A 022C                 break;
 	RJMP _0x34006D
-; 001A 0229             }else{
+; 001A 022D             }else{
 _0x34006F:
-; 001A 022A                 viReturn = -1;
+; 001A 022E                 viReturn = -1;
 	__GETWRN 16,17,-1
-; 001A 022B             }
-; 001A 022C         }else{
+; 001A 022F             }
+; 001A 0230         }else{
 	RJMP _0x340071
 _0x34006E:
-; 001A 022D             viReturn = 0;
+; 001A 0231             viReturn = 0;
 	__GETWRN 16,17,0
-; 001A 022E         }
+; 001A 0232         }
 _0x340071:
-; 001A 022F     }
+; 001A 0233     }
 	__ADDWRN 18,19,1
 	RJMP _0x34006C
 _0x34006D:
-; 001A 0230     if(viReturn == 0){
+; 001A 0234     if(viReturn == 0){
 	MOV  R0,R16
 	OR   R0,R17
 	BRNE _0x340072
-; 001A 0231         printDebug("[iMangQueueDelItem]Queue is empty.\r\n");
+; 001A 0235         printDebug("[iMangQueueDelItem]Queue is empty.\r\n");
 	__POINTD1FN _0x340000,1036
 	RJMP _0x340095
-; 001A 0232     }else if(viReturn == -1){
+; 001A 0236     }else if(viReturn == -1){
 _0x340072:
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	CP   R30,R16
 	CPC  R31,R17
 	BRNE _0x340074
-; 001A 0233         printDebug("[iMangQueueDelItem]FID invalid.\r\n");
+; 001A 0237         printDebug("[iMangQueueDelItem]FID invalid.\r\n");
 	__POINTD1FN _0x340000,1073
 _0x340095:
 	CALL __PUTPARD1
 	CALL SUBOPT_0x2
-; 001A 0234     }
-; 001A 0235     return viReturn;
+; 001A 0238     }
+; 001A 0239     return viReturn;
 _0x340074:
 	MOVW R30,R16
 	CALL __LOADLOCR4
 	JMP  _0x20E0032
-; 001A 0236 }
+; 001A 023A }
 ;
 ;void iMangQueueDisplay(){
-; 001A 0238 void iMangQueueDisplay(){
+; 001A 023C void iMangQueueDisplay(){
 _iMangQueueDisplay:
-; 001A 0239     iInt_t viReturn = -1;
-; 001A 023A     iInt_t i;
-; 001A 023B 
-; 001A 023C     for(i=0;i<MANG_QUEUE_MAX;i++){
+; 001A 023D     iInt_t viReturn = -1;
+; 001A 023E     iInt_t i;
+; 001A 023F 
+; 001A 0240     for(i=0;i<MANG_QUEUE_MAX;i++){
 	CALL __SAVELOCR4
 ;	viReturn -> R16,R17
 ;	i -> R18,R19
@@ -16229,142 +16276,142 @@ _iMangQueueDisplay:
 _0x340076:
 	__CPWRN 18,19,2
 	BRGE _0x340077
-; 001A 023D         printDebug("[iMangQueueDisplay]Queue %d.[\r\n",i+1);
+; 001A 0241         printDebug("[iMangQueueDisplay]Queue %d.[\r\n",i+1);
 	__POINTD1FN _0x340000,1107
 	CALL __PUTPARD1
 	MOVW R30,R18
 	ADIW R30,1
 	CALL SUBOPT_0x71
-; 001A 023E         if(viMangQueue[i].value != NULL){
+; 001A 0242         if(viMangQueue[i].value != NULL){
+	CALL SUBOPT_0xBB
 	CALL SUBOPT_0xBC
-	CALL SUBOPT_0xBD
 	BREQ _0x340078
-; 001A 023F            print_payload(viMangQueue[i].value,viMangQueue[i].length);
-	CALL SUBOPT_0xBC
+; 001A 0243            print_payload(viMangQueue[i].value,viMangQueue[i].length);
+	CALL SUBOPT_0xBB
 	MOVW R26,R30
-	CALL SUBOPT_0xC0
 	CALL SUBOPT_0xBF
+	CALL SUBOPT_0xBE
 	__ADDW1MN _viMangQueue,5
 	MOVW R26,R30
 	CALL __GETW1P
 	MOVW R26,R30
 	CALL _print_payload
-; 001A 0240         }else{
+; 001A 0244         }else{
 	RJMP _0x340079
 _0x340078:
-; 001A 0241            printDebug("Empty\r\n");
+; 001A 0245            printDebug("Empty\r\n");
 	__POINTD1FN _0x340000,1139
 	CALL SUBOPT_0x0
-; 001A 0242         }
+; 001A 0246         }
 _0x340079:
-; 001A 0243         printDebug("]\r\n");
-	CALL SUBOPT_0xC5
-; 001A 0244     }
+; 001A 0247         printDebug("]\r\n");
+	CALL SUBOPT_0xC4
+; 001A 0248     }
 	__ADDWRN 18,19,1
 	RJMP _0x340076
 _0x340077:
-; 001A 0245 }
+; 001A 0249 }
 	CALL __LOADLOCR4
 	ADIW R28,4
 	RET
 ;
 ;iChar_t iMangCheckRetransmit(iChar_t *pviFid_arg){
-; 001A 0247 iChar_t iMangCheckRetransmit(iChar_t *pviFid_arg){
+; 001A 024B iChar_t iMangCheckRetransmit(iChar_t *pviFid_arg){
 _iMangCheckRetransmit:
-; 001A 0248     iInt_t viReturn = -1;
-; 001A 0249     iInt_t i;
-; 001A 024A     iChar_t viFid[2];
-; 001A 024B 
-; 001A 024C     memcpy(viFid,&pviFid_arg[0],2);
-	CALL SUBOPT_0xBB
+; 001A 024C     iInt_t viReturn = -1;
+; 001A 024D     iInt_t i;
+; 001A 024E     iChar_t viFid[2];
+; 001A 024F 
+; 001A 0250     memcpy(viFid,&pviFid_arg[0],2);
+	CALL SUBOPT_0xBA
 ;	*pviFid_arg -> Y+6
 ;	viReturn -> R16,R17
 ;	i -> R18,R19
 ;	viFid -> Y+4
 	CALL _memcpy
-; 001A 024D     for(i=0;i<MANG_QUEUE_MAX;i++){
+; 001A 0251     for(i=0;i<MANG_QUEUE_MAX;i++){
 	__GETWRN 18,19,0
 _0x34007B:
 	__CPWRN 18,19,2
 	BRLT PC+3
 	JMP _0x34007C
-; 001A 024E         if(viMangQueue[i].value != NULL){
+; 001A 0252         if(viMangQueue[i].value != NULL){
+	CALL SUBOPT_0xBB
 	CALL SUBOPT_0xBC
-	CALL SUBOPT_0xBD
 	BREQ _0x34007D
-; 001A 024F            if(memcmp(viMangQueue[i].fid,&viFid[0],2)==0){
-	CALL SUBOPT_0xBF
-	CALL SUBOPT_0xC1
+; 001A 0253            if(memcmp(viMangQueue[i].fid,&viFid[0],2)==0){
+	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xC0
 	CALL SUBOPT_0x7
 	CALL _memcmp
 	CPI  R30,0
 	BRNE _0x34007E
-; 001A 0250                 printDebug("[iMangCheckRetransmit]Retransmit remain %d.\r\n",viMangQueue[i].reTransmit);
+; 001A 0254                 printDebug("[iMangCheckRetransmit]Retransmit remain %d.\r\n",viMangQueue[i].reTransmit);
 	__POINTD1FN _0x340000,1147
 	CALL __PUTPARD1
-	CALL SUBOPT_0xBF
+	CALL SUBOPT_0xBE
 	__ADDW1MN _viMangQueue,4
 	LD   R30,Z
-	CALL SUBOPT_0xBA
-; 001A 0251                 viMangQueue[i].reTransmit--;
-	CALL SUBOPT_0xBF
+	CALL SUBOPT_0xB9
+; 001A 0255                 viMangQueue[i].reTransmit--;
+	CALL SUBOPT_0xBE
 	__ADDW1MN _viMangQueue,4
 	MOVW R26,R30
 	LD   R30,X
 	SUBI R30,LOW(1)
 	ST   X,R30
-; 001A 0252                 viReturn = viMangQueue[i].reTransmit;
-	CALL SUBOPT_0xBF
+; 001A 0256                 viReturn = viMangQueue[i].reTransmit;
+	CALL SUBOPT_0xBE
 	__ADDW1MN _viMangQueue,4
 	LD   R16,Z
 	CLR  R17
-; 001A 0253                 if(viReturn<0){
+; 001A 0257                 if(viReturn<0){
 	TST  R17
 	BRPL _0x34007F
-; 001A 0254                    viReturn = 0;
+; 001A 0258                    viReturn = 0;
 	__GETWRN 16,17,0
-; 001A 0255                 }
-; 001A 0256                 break;
+; 001A 0259                 }
+; 001A 025A                 break;
 _0x34007F:
 	RJMP _0x34007C
-; 001A 0257             }else{
+; 001A 025B             }else{
 _0x34007E:
-; 001A 0258                 viReturn = -1;
+; 001A 025C                 viReturn = -1;
 	__GETWRN 16,17,-1
-; 001A 0259             }
-; 001A 025A         }else{
+; 001A 025D             }
+; 001A 025E         }else{
 	RJMP _0x340081
 _0x34007D:
-; 001A 025B            printDebug("There is no FID(%02x%02x) in queue.\r\n",viFid[0],viFid[1]);
+; 001A 025F            printDebug("There is no FID(%02x%02x) in queue.\r\n",viFid[0],viFid[1]);
 	__POINTD1FN _0x340000,1193
-	CALL SUBOPT_0xC2
+	CALL SUBOPT_0xC1
 	LDD  R30,Y+13
 	CALL SUBOPT_0x7F
 	CALL SUBOPT_0x80
-; 001A 025C         }
+; 001A 0260         }
 _0x340081:
-; 001A 025D         printDebug("]\r\n");
-	CALL SUBOPT_0xC5
-; 001A 025E     }
+; 001A 0261         printDebug("]\r\n");
+	CALL SUBOPT_0xC4
+; 001A 0262     }
 	__ADDWRN 18,19,1
 	RJMP _0x34007B
 _0x34007C:
-; 001A 025F     return viReturn;
+; 001A 0263     return viReturn;
 	MOV  R30,R16
 	CALL __LOADLOCR4
 	JMP  _0x20E0032
-; 001A 0260 }
-;
-;iChar_t mangInitDevice(){
-; 001A 0262 iChar_t mangInitDevice(){
-; 001A 0263 
 ; 001A 0264 }
 ;
+;iChar_t mangInitDevice(){
+; 001A 0266 iChar_t mangInitDevice(){
+; 001A 0267 
+; 001A 0268 }
+;
 ;void memcpye(char eeprom *eptr, char *dptr, int len)
-; 001A 0267 {
+; 001A 026B {
 _memcpye:
-; 001A 0268    int i=0;
-; 001A 0269    for(i=0;i<len;i++) {
+; 001A 026C    int i=0;
+; 001A 026D    for(i=0;i<len;i++) {
 	CALL SUBOPT_0x14
 ;	*eptr -> Y+6
 ;	*dptr -> Y+4
@@ -16375,26 +16422,26 @@ _memcpye:
 _0x340083:
 	CALL SUBOPT_0x15
 	BRGE _0x340084
-; 001A 026A       *eptr++ = *dptr;
-	CALL SUBOPT_0xC6
+; 001A 026E       *eptr++ = *dptr;
+	CALL SUBOPT_0xC5
 	LD   R30,X
 	MOVW R26,R0
 	CALL __EEPROMWRB
-; 001A 026B       dptr++;
-	CALL SUBOPT_0xC7
-; 001A 026C    }
+; 001A 026F       dptr++;
+	CALL SUBOPT_0xC6
+; 001A 0270    }
 	__ADDWRN 16,17,1
 	RJMP _0x340083
 _0x340084:
-; 001A 026D    return;
+; 001A 0271    return;
 	JMP  _0x20E0033
-; 001A 026E }
+; 001A 0272 }
 ;
 ;void memcpyd(char *dptr, char eeprom *eptr,  int len)
-; 001A 0271 {
+; 001A 0275 {
 _memcpyd:
-; 001A 0272    int i=0;
-; 001A 0273    for(i=0;i<len;i++) {
+; 001A 0276    int i=0;
+; 001A 0277    for(i=0;i<len;i++) {
 	CALL SUBOPT_0x14
 ;	*dptr -> Y+6
 ;	*eptr -> Y+4
@@ -16405,26 +16452,26 @@ _memcpyd:
 _0x340086:
 	CALL SUBOPT_0x15
 	BRGE _0x340087
-; 001A 0274       *dptr++ = *eptr;
-	CALL SUBOPT_0xC6
+; 001A 0278       *dptr++ = *eptr;
+	CALL SUBOPT_0xC5
 	CALL __EEPROMRDB
 	MOVW R26,R0
 	ST   X,R30
-; 001A 0275       eptr++;
-	CALL SUBOPT_0xC7
-; 001A 0276    }
+; 001A 0279       eptr++;
+	CALL SUBOPT_0xC6
+; 001A 027A    }
 	__ADDWRN 16,17,1
 	RJMP _0x340086
 _0x340087:
-; 001A 0277    return;
+; 001A 027B    return;
 	JMP  _0x20E0033
-; 001A 0278 }
+; 001A 027C }
 ;
 ;void printConfig(char eeprom *eptr,unsigned int len)
-; 001A 027B {
+; 001A 027F {
 _printConfig:
-; 001A 027C    int i=0,j=0;
-; 001A 027D    printDebug("[printConfig]Data:[\r\n");
+; 001A 0280    int i=0,j=0;
+; 001A 0281    printDebug("[printConfig]Data:[\r\n");
 	CALL SUBOPT_0x81
 ;	*eptr -> Y+6
 ;	len -> Y+4
@@ -16433,11 +16480,11 @@ _printConfig:
 	__GETWRN 18,19,0
 	__POINTD1FN _0x340000,1231
 	CALL SUBOPT_0x0
-; 001A 027E    printDebug("%04d\t\t",0);
-	CALL SUBOPT_0xC8
+; 001A 0282    printDebug("%04d\t\t",0);
+	CALL SUBOPT_0xC7
 	CALL SUBOPT_0x24
 	CALL SUBOPT_0x64
-; 001A 027F    for(i=0,j=1;i<len;i++,j++) {
+; 001A 0283    for(i=0,j=1;i<len;i++,j++) {
 	__GETWRN 16,17,0
 	__GETWRN 18,19,1
 _0x340089:
@@ -16446,7 +16493,7 @@ _0x340089:
 	CP   R16,R30
 	CPC  R17,R31
 	BRSH _0x34008A
-; 001A 0280       printDebug("%02x",*(eptr++));
+; 001A 0284       printDebug("%02x",*(eptr++));
 	__POINTD1FN _0x340000,1260
 	CALL __PUTPARD1
 	LDD  R26,Y+10
@@ -16456,17 +16503,17 @@ _0x340089:
 	STD  Y+10+1,R27
 	SBIW R26,1
 	CALL __EEPROMRDB
-	CALL SUBOPT_0xBA
-; 001A 0281       if(j==8){
+	CALL SUBOPT_0xB9
+; 001A 0285       if(j==8){
 	LDI  R30,LOW(8)
 	LDI  R31,HIGH(8)
 	CP   R30,R18
 	CPC  R31,R19
 	BRNE _0x34008B
-; 001A 0282          printDebug("\t\t");
+; 001A 0286          printDebug("\t\t");
 	__POINTD1FN _0x340000,1257
 	CALL SUBOPT_0x0
-; 001A 0283       }else if(j==16){
+; 001A 0287       }else if(j==16){
 	RJMP _0x34008C
 _0x34008B:
 	LDI  R30,LOW(16)
@@ -16474,41 +16521,41 @@ _0x34008B:
 	CP   R30,R18
 	CPC  R31,R19
 	BRNE _0x34008D
-; 001A 0284          printDebug("\r\n");
+; 001A 0288          printDebug("\r\n");
 	__POINTD1FN _0x340000,28
 	CALL SUBOPT_0x0
-; 001A 0285          printDebug("%04d\t\t",i+1);
-	CALL SUBOPT_0xC8
+; 001A 0289          printDebug("%04d\t\t",i+1);
+	CALL SUBOPT_0xC7
 	MOVW R30,R16
 	ADIW R30,1
 	CALL SUBOPT_0x71
-; 001A 0286          j=0;
+; 001A 028A          j=0;
 	__GETWRN 18,19,0
-; 001A 0287       }
-; 001A 0288    }
+; 001A 028B       }
+; 001A 028C    }
 _0x34008D:
 _0x34008C:
 	__ADDWRN 16,17,1
 	__ADDWRN 18,19,1
 	RJMP _0x340089
 _0x34008A:
-; 001A 0289    printDebug("\r\n]\r\n");
+; 001A 028D    printDebug("\r\n]\r\n");
 	__POINTD1FN _0x340000,1265
 	CALL SUBOPT_0x0
-; 001A 028A    return;
+; 001A 028E    return;
 	CALL __LOADLOCR4
 	JMP  _0x20E0032
-; 001A 028B }
+; 001A 028F }
 ;
 ;void iSyncUniTime(unsigned long int *viUniTime_arg){
-; 001A 028D void iSyncUniTime(unsigned long int *viUniTime_arg){
+; 001A 0291 void iSyncUniTime(unsigned long int *viUniTime_arg){
 _iSyncUniTime:
-; 001A 028E      unsigned long int viUniTimeTerminal;
-; 001A 028F      unsigned long int viUniTimeServer;
-; 001A 0290      struct rtc_structure rtcTest;
-; 001A 0291 
-; 001A 0292      //tim
-; 001A 0293      viUniTimeTerminal = DS1672_read();
+; 001A 0292      unsigned long int viUniTimeTerminal;
+; 001A 0293      unsigned long int viUniTimeServer;
+; 001A 0294      struct rtc_structure rtcTest;
+; 001A 0295 
+; 001A 0296      //tim
+; 001A 0297      viUniTimeTerminal = DS1672_read();
 	ST   -Y,R27
 	ST   -Y,R26
 	SBIW R28,34
@@ -16518,43 +16565,43 @@ _iSyncUniTime:
 ;	rtcTest -> Y+0
 	CALL _DS1672_read
 	CALL SUBOPT_0x44
-; 001A 0294      viUniTimeServer = *viUniTime_arg;
+; 001A 0298      viUniTimeServer = *viUniTime_arg;
 	LDD  R26,Y+34
 	LDD  R27,Y+34+1
 	CALL __GETD1P
 	CALL SUBOPT_0x45
-; 001A 0295 
-; 001A 0296      if((viUniTimeServer-viUniTimeTerminal)>20){
-	CALL SUBOPT_0xC9
+; 001A 0299 
+; 001A 029A      if((viUniTimeServer-viUniTimeTerminal)>20){
+	CALL SUBOPT_0xC8
 	__CPD1N 0x15
 	BRSH _0x340096
-; 001A 0297 //         printDebug("[iSyncUniTime]Terminal %ld\r\n",viUniTimeTerminal);
-; 001A 0298 //         printDebug("[iSyncUniTime]Server %ld\r\n",viUniTimeServer);
-; 001A 0299 //         printDebug("[iSyncUniTime]Time Diff %ld\r\n",(viUniTimeServer-viUniTimeTerminal));
-; 001A 029A //
-; 001A 029B //         printDebug("[iSyncUniTime]Update Time.\r\n");
-; 001A 029C          RTC_setBinary(viUniTimeServer);
-; 001A 029D //         RTC_getDateTime(&rtcTest,0);
-; 001A 029E //         printRTC(rtcTest);
-; 001A 029F      }else if((viUniTimeServer-viUniTimeTerminal)>(-20)){
-	CALL SUBOPT_0xC9
+; 001A 029B //         printDebug("[iSyncUniTime]Terminal %ld\r\n",viUniTimeTerminal);
+; 001A 029C //         printDebug("[iSyncUniTime]Server %ld\r\n",viUniTimeServer);
+; 001A 029D //         printDebug("[iSyncUniTime]Time Diff %ld\r\n",(viUniTimeServer-viUniTimeTerminal));
+; 001A 029E //
+; 001A 029F //         printDebug("[iSyncUniTime]Update Time.\r\n");
+; 001A 02A0          RTC_setBinary(viUniTimeServer);
+; 001A 02A1 //         RTC_getDateTime(&rtcTest,0);
+; 001A 02A2 //         printRTC(rtcTest);
+; 001A 02A3      }else if((viUniTimeServer-viUniTimeTerminal)>(-20)){
+	CALL SUBOPT_0xC8
 	__CPD1N 0xFFFFFFED
 	BRLO _0x340090
-; 001A 02A0 //         printDebug("[iSyncUniTime]Terminal %ld\r\n",viUniTimeTerminal);
-; 001A 02A1 //         printDebug("[iSyncUniTime]Server %ld\r\n",viUniTimeServer);
-; 001A 02A2 //         printDebug("[iSyncUniTime]Time Diff %ld\r\n",(viUniTimeServer-viUniTimeTerminal));
-; 001A 02A3 //
-; 001A 02A4 //         printDebug("[iSyncUniTime]Update Time.\r\n");
-; 001A 02A5          RTC_setBinary(viUniTimeServer);
+; 001A 02A4 //         printDebug("[iSyncUniTime]Terminal %ld\r\n",viUniTimeTerminal);
+; 001A 02A5 //         printDebug("[iSyncUniTime]Server %ld\r\n",viUniTimeServer);
+; 001A 02A6 //         printDebug("[iSyncUniTime]Time Diff %ld\r\n",(viUniTimeServer-viUniTimeTerminal));
+; 001A 02A7 //
+; 001A 02A8 //         printDebug("[iSyncUniTime]Update Time.\r\n");
+; 001A 02A9          RTC_setBinary(viUniTimeServer);
 _0x340096:
 	__GETD2S 26
 	CALL _RTC_setBinary
-; 001A 02A6 //         RTC_getDateTime(&rtcTest,0);
-; 001A 02A7 //         printRTC(rtcTest);
-; 001A 02A8      }
-; 001A 02A9 
-; 001A 02AA 
-; 001A 02AB }
+; 001A 02AA //         RTC_getDateTime(&rtcTest,0);
+; 001A 02AB //         printRTC(rtcTest);
+; 001A 02AC      }
+; 001A 02AD 
+; 001A 02AE 
+; 001A 02AF }
 _0x340090:
 	ADIW R28,36
 	RET
@@ -16579,7 +16626,7 @@ _iQueueCreate:
 ;	*pviQueue -> R16,R17
 ;	*ipvReturnQueueHandle -> R18,R19
 	LDI  R26,LOW(16)
-	CALL SUBOPT_0xCA
+	CALL SUBOPT_0xC9
 	MOVW R16,R30
 ; 001B 0008     if(pviQueue != NULL){
 	MOV  R0,R16
@@ -16587,34 +16634,34 @@ _iQueueCreate:
 	BRNE PC+3
 	JMP _0x360003
 ; 001B 0009         pviQueue->head = (void *)malloc((iItemQuantity_p*iItemLength_p));
-	CALL SUBOPT_0xCB
+	CALL SUBOPT_0xCA
 	MOVW R26,R30
 	CALL _malloc
 	__PUTW1RNS 16,8
 ; 001B 000A         if(pviQueue->head != NULL){
-	CALL SUBOPT_0xCC
+	CALL SUBOPT_0xCB
 	SBIW R30,0
 	BREQ _0x360004
 ; 001B 000B             pviQueue->itemCount = 0;  //Empty
 	MOVW R26,R16
 	ADIW R26,2
-	CALL SUBOPT_0xCD
-; 001B 000C             pviQueue->writeTo = pviQueue->head;
 	CALL SUBOPT_0xCC
+; 001B 000C             pviQueue->writeTo = pviQueue->head;
+	CALL SUBOPT_0xCB
 	__PUTW1RNS 16,12
 ; 001B 000D             pviQueue->readDataFrom = pviQueue->head;
-	CALL SUBOPT_0xCC
+	CALL SUBOPT_0xCB
 	__PUTW1RNS 16,14
 ; 001B 000E             pviQueue->tail = pviQueue->head+((iItemQuantity_p*iItemLength_p)-iItemLength_p);
 	MOVW R30,R16
 	__GETWRZ 22,23,8
-	CALL SUBOPT_0xCB
+	CALL SUBOPT_0xCA
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	SUB  R30,R26
 	SBC  R31,R27
 	MOVW R26,R22
-	CALL SUBOPT_0xCE
+	CALL SUBOPT_0xCD
 	__PUTW1RNS 16,10
 ; 001B 000F             pviQueue->itemLength = iItemLength_p;  //size of type
 	LDD  R30,Y+4
@@ -16631,7 +16678,7 @@ _iQueueCreate:
 ; 001B 0012             printDebug("[iQueueCreate],itemCount(%d)\r\n",pviQueue->itemCount);
 	__POINTD1FN _0x360000,0
 	CALL __PUTPARD1
-	CALL SUBOPT_0xCF
+	CALL SUBOPT_0xCE
 	CALL SUBOPT_0x71
 ; 001B 0013             //printDebug("[iQueueCreate],itemCount2(%d)\r\n",((iQueue_t *)ipvReturnQueueHandle)->itemCount);
 ; 001B 0014         }else{
@@ -16781,7 +16828,7 @@ _iTaskCreate:
 ; 001D 000C     vp = &i;
 	ST   -Y,R27
 	ST   -Y,R26
-	CALL SUBOPT_0xD0
+	CALL SUBOPT_0xCF
 ;	*piTaskCode_p -> Y+12
 ;	*name_p -> Y+10
 ;	priority_p -> Y+8
@@ -16800,7 +16847,7 @@ _iTaskCreate:
 	BRGE _0x3A0003
 ; 001D 000F         pviTaskNew = (iTask_t *)malloc(sizeof(iTask_t));
 	LDI  R26,LOW(24)
-	CALL SUBOPT_0xCA
+	CALL SUBOPT_0xC9
 	MOVW R18,R30
 ; 001D 0010         if(pviTaskNew != NULL){
 	MOV  R0,R18
@@ -16811,7 +16858,7 @@ _iTaskCreate:
 	CALL SUBOPT_0x0
 ; 001D 0012             pviTaskNew->id = 0;
 	MOVW R26,R18
-	CALL SUBOPT_0xCD
+	CALL SUBOPT_0xCC
 ; 001D 0013             pviTaskNew->hookFunction = piTaskCode_p;
 	CALL SUBOPT_0x58
 	__PUTD1RNS 18,2
@@ -16822,17 +16869,17 @@ _iTaskCreate:
 	ST   -Y,R30
 	CALL SUBOPT_0x77
 	LDI  R26,LOW(16)
-	CALL SUBOPT_0xD1
+	CALL SUBOPT_0xD0
 ; 001D 0015             pviTaskNew->priority = priority_p;
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
 	__PUTW1RNS 18,22
 ; 001D 0016 
 ; 001D 0017             pviTaskList[task_count_g] = pviTaskNew;
-	CALL SUBOPT_0xD2
+	CALL SUBOPT_0xD1
 	LDI  R26,LOW(_pviTaskList)
 	LDI  R27,HIGH(_pviTaskList)
-	CALL SUBOPT_0xCE
+	CALL SUBOPT_0xCD
 	ST   Z,R18
 	STD  Z+1,R19
 ; 001D 0018             task_count_g++;
@@ -16893,7 +16940,7 @@ _startSchedulerTask:
 ; 001D 0037     int j=0;
 ; 001D 0038     //pvTaskRunHandle = iTaskCreate(task_a_print,"TaskAP",5);
 ; 001D 0039     for(;;){
-	CALL SUBOPT_0xD0
+	CALL SUBOPT_0xCF
 ;	*pvTaskRunHandle -> R16,R17
 ;	*vp -> R18,R19
 ;	i -> R20,R21
@@ -16905,7 +16952,7 @@ _0x3A0009:
 ; 001D 003B         for(i=0;i<task_count_g;i++){
 	__GETWRN 20,21,0
 _0x3A000C:
-	CALL SUBOPT_0xD2
+	CALL SUBOPT_0xD1
 	CP   R20,R30
 	CPC  R21,R31
 	BRLT PC+3
@@ -16915,14 +16962,14 @@ _0x3A000C:
 	STD  Y+6,R30
 	STD  Y+6+1,R30
 _0x3A000F:
-	CALL SUBOPT_0xD2
+	CALL SUBOPT_0xD1
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	CP   R26,R30
 	CPC  R27,R31
 	BRGE _0x3A0010
 ; 001D 003D                 if(pviTaskList[j]->priority == 10){
-	CALL SUBOPT_0xD3
+	CALL SUBOPT_0xD2
 	ADIW R30,22
 	MOVW R26,R30
 	CALL __GETW1P
@@ -16931,7 +16978,7 @@ _0x3A000F:
 	CPC  R31,R26
 	BRNE _0x3A0011
 ; 001D 003E                     pviTaskList[j]->hookFunction(vp);
-	CALL SUBOPT_0xD3
+	CALL SUBOPT_0xD2
 	ADIW R30,2
 	MOVW R26,R30
 	CALL __GETD1P
@@ -16960,7 +17007,7 @@ _0x3A0010:
 	MOVW R30,R20
 	LDI  R26,LOW(_pviTaskList)
 	LDI  R27,HIGH(_pviTaskList)
-	CALL SUBOPT_0xD4
+	CALL SUBOPT_0xD3
 	ADIW R30,2
 	MOVW R26,R30
 	CALL __GETD1P
@@ -17078,8 +17125,7 @@ _iLanReadData:
 	LDI  R17,LOW(0)
 ; 0020 001A    TIMER_setTimer(&timeout, 7);
 	CALL SUBOPT_0x6C
-	__GETD2N 0x7
-	CALL _TIMER_setTimer
+	CALL SUBOPT_0xD4
 ; 0020 001B 
 ; 0020 001C    iWizRXMode = WIZ_RX_DATA_MODE;
 	LDI  R30,LOW(2)
@@ -17218,7 +17264,7 @@ _iLanWriteData:
 	STS  _iWizRXMode,R30
 ; 0020 0065            iWizSend(pviData_agr->value,pviData_agr->length);
 	CALL SUBOPT_0xD5
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	MOVW R26,R30
 	RCALL _iWizSend
 ; 0020 0066            viReturn = LEN_DATA_WRITE_SUCCESS;
@@ -17281,22 +17327,13 @@ _0x40000D:
 ; 0020 007D      iWizReActiveDataMode();
 ; 0020 007E }
 ;
-;iChar_t iLanStatus(){
-; 0020 0080 iChar_t iLanStatus(){
-; 0020 0081        iChar_t viReturn;
-; 0020 0082        //iWizReActiveDataMode();
-; 0020 0083        iWizRXMode = WIZ_RX_STAT_MODE;
+;iUChar_t iLanStatus(){
+; 0020 0080 iUChar_t iLanStatus(){
+; 0020 0081        iUChar_t viReturn;
+; 0020 0082        viReturn = iWizCheckStatus();
 ;	viReturn -> R17
-; 0020 0084        if(iWizConnected()){
-; 0020 0085             printDebug("[iLanInit]Status:Connected.\r\n");
-; 0020 0086             iWizRXMode = WIZ_RX_DATA_MODE;
-; 0020 0087             viReturn = LEN_DATA_WRITE_SUCCESS;
-; 0020 0088        } else{
-; 0020 0089             viReturn = LEN_DATA_WRITE_FAIL;
-; 0020 008A             printDebug("[iLanInit]Status:Close.\r\n");
-; 0020 008B        }
-; 0020 008C        return viReturn;
-; 0020 008D }
+; 0020 0083        return viReturn;
+; 0020 0084 }
 ;
 ;#include <delay.h>
 ;#include "interruptTask.h"
@@ -17670,7 +17707,7 @@ _iWizSend:
 	ST   -Y,R31
 	ST   -Y,R30
 	LDI  R26,LOW(12)
-	CALL SUBOPT_0xD1
+	CALL SUBOPT_0xD0
 ; 0021 00E4         indexWrite += sizeof(iWiz100srConfig.macAddress);
 	__ADDWRN 18,19,12
 ; 0021 00E5 
@@ -17693,7 +17730,7 @@ _iWizSend:
 	CALL SUBOPT_0xD8
 ; 0021 00EB 
 ; 0021 00EC         memcpy(&pviWizBuff[indexWrite],&ivHTTPHeaderLen[0],strlen(ivHTTPHeaderLen));
-	CALL SUBOPT_0xAC
+	CALL SUBOPT_0xAB
 	MOVW R26,R28
 	ADIW R26,8
 	CALL SUBOPT_0xD7
@@ -17791,7 +17828,7 @@ _iWizConnected:
 ; 0021 0118     TIMER   timeout;
 ; 0021 0119     char  pviCheckWizConn[200];
 ; 0021 011A 
-; 0021 011B     TIMER_setTimer(&timeout, 20);
+; 0021 011B     TIMER_setTimer(&timeout, 7);
 	SBIW R28,63
 	SBIW R28,63
 	SBIW R28,63
@@ -17807,11 +17844,11 @@ _iWizConnected:
 	SBCI R31,HIGH(-(204))
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0x9D
+	CALL SUBOPT_0xD4
 ; 0021 011C     memset(pviCheckWizConn,0,sizeof(pviCheckWizConn));
 	MOVW R30,R28
 	ADIW R30,4
-	CALL SUBOPT_0xC4
+	CALL SUBOPT_0xC3
 	LDI  R26,LOW(200)
 	CALL SUBOPT_0xDA
 ; 0021 011D     index0Buffer = 0;
@@ -17870,13 +17907,13 @@ _0x42002B:
 	OR   R0,R19
 	BREQ _0x42002D
 ; 0021 012F                    //printDebug("[Data split]%s\r\n",pch);
-; 0021 0130                    if(strncmp (pch," Connected",9)==0){
+; 0021 0130                    if(strncmp (pch," Connected",10)==0){
 	ST   -Y,R19
 	ST   -Y,R18
 	__POINTW1MN _0x42002F,0
 	ST   -Y,R31
 	ST   -Y,R30
-	LDI  R26,LOW(9)
+	LDI  R26,LOW(10)
 	CALL _strncmp
 	CPI  R30,0
 	BRNE _0x42002E
@@ -17887,16 +17924,12 @@ _0x42002B:
 	__GETWRN 16,17,1
 ; 0021 0133                         break;
 	RJMP _0x42002D
-; 0021 0134                    }else if(strncmp (pch," Listen : OK",11)==0){
+; 0021 0134                    }else if(strncmp (pch," Listen : OK",12)==0){
 _0x42002E:
 	ST   -Y,R19
 	ST   -Y,R18
 	__POINTW1MN _0x42002F,11
-	ST   -Y,R31
-	ST   -Y,R30
-	LDI  R26,LOW(11)
-	CALL _strncmp
-	CPI  R30,0
+	CALL SUBOPT_0xDF
 	BRNE _0x420031
 ; 0021 0135                         printDebug("[Data split]%s\r\n",pch);
 	CALL SUBOPT_0xDE
@@ -17905,43 +17938,60 @@ _0x42002E:
 	__GETWRN 16,17,1
 ; 0021 0137                         break;
 	RJMP _0x42002D
-; 0021 0138                    }
-; 0021 0139                    pch = strtok (NULL, ">");
+; 0021 0138                    }else if(strncmp (pch," Closed",7)==0){
 _0x420031:
-	CALL SUBOPT_0xDF
+	ST   -Y,R19
+	ST   -Y,R18
+	__POINTW1MN _0x42002F,24
+	ST   -Y,R31
+	ST   -Y,R30
+	LDI  R26,LOW(7)
+	CALL _strncmp
+	CPI  R30,0
+	BRNE _0x420033
+; 0021 0139                         printDebug("[Data split]%s\r\n",pch);
+	CALL SUBOPT_0xDE
+	CALL SUBOPT_0x66
+; 0021 013A                         iReturn =  WIZ_CLOSE;
+	__GETWRN 16,17,2
+; 0021 013B                         break;
+	RJMP _0x42002D
+; 0021 013C                    }
+; 0021 013D                    pch = strtok (NULL, ">");
+_0x420033:
+	CALL SUBOPT_0xE0
 	CALL SUBOPT_0xDD
-; 0021 013A                    //pch = strtok (NULL, "> ");
-; 0021 013B                }
+; 0021 013E                }
 	RJMP _0x42002B
 _0x42002D:
-; 0021 013C 
-; 0021 013D                //free(pviCheckWizConn);
-; 0021 013E                if(iReturn ==  WIZ_CONNECTED){
+; 0021 013F 
+; 0021 0140                //free(pviCheckWizConn);
+; 0021 0141                if(iReturn ==  WIZ_CONNECTED){
 	LDI  R30,LOW(1)
 	LDI  R31,HIGH(1)
 	CP   R30,R16
 	CPC  R31,R17
 	BREQ _0x420027
-; 0021 013F                    break;
-; 0021 0140                }
-; 0021 0141 //            }else{
-; 0021 0142 //               printDebug("[iWizConnected]can 't allocate mem(%d).\r\n",index0Buffer);
-; 0021 0143 //               iReturn =  WIZ_CONN_FAIL;
-; 0021 0144 //            }
-; 0021 0145         }else{
-	RJMP _0x420033
+; 0021 0142                    break;
+; 0021 0143                }
+; 0021 0144 //            }else{
+; 0021 0145 //               printDebug("[iWizConnected]can 't allocate mem(%d).\r\n",index0Buffer);
+; 0021 0146 //               iReturn =  WIZ_CONN_FAIL;
+; 0021 0147 //            }
+; 0021 0148         }else{
+	RJMP _0x420035
 _0x420028:
-; 0021 0146            iReturn =  WIZ_CONN_FAIL;
+; 0021 0149            iReturn =  WIZ_CONN_FAIL;
 	__GETWRN 16,17,0
-; 0021 0147         }
-_0x420033:
-; 0021 0148     }
+; 0021 014A         }
+_0x420035:
+; 0021 014B     }
 	RJMP _0x420025
 _0x420027:
-; 0021 0149     index0Buffer = 0;
+; 0021 014C     index0Buffer = 0;
 	CALL SUBOPT_0xD9
-; 0021 014A 
-; 0021 014B     return iReturn;
+; 0021 014D 
+; 0021 014E     return iReturn;
 	MOVW R30,R16
 	CALL __LOADLOCR4
 	ADIW R28,63
@@ -17949,32 +17999,32 @@ _0x420027:
 	ADIW R28,63
 	ADIW R28,19
 	RET
-; 0021 014C }
+; 0021 014F }
 
 	.DSEG
 _0x42002F:
-	.BYTE 0x18
+	.BYTE 0x20
 ;
 ;int iWizRead(){
-; 0021 014E int iWizRead(){
+; 0021 0151 int iWizRead(){
 
 	.CSEG
 _iWizRead:
-; 0021 014F     //char * pviWizRead;
-; 0021 0150     int iReturn = WIZ_DATA_EMPTY;
-; 0021 0151     char * pch;
-; 0021 0152     char * pviHttpResCode;
-; 0021 0153     char * pviHttpLen;
-; 0021 0154     char * pviHttpData;
-; 0021 0155     int i = 0;
-; 0021 0156     char *pviReadLine;
-; 0021 0157     unsigned int viHtteDetaLen = 0;
-; 0021 0158     unsigned char viFlagHttpResCode;
-; 0021 0159     unsigned char viFlagHttpLen;
-; 0021 015A     char pviWizRead[400];
-; 0021 015B 
-; 0021 015C     TIMER   timeout;
-; 0021 015D     TIMER_setTimer(&timeout, 3);
+; 0021 0152     //char * pviWizRead;
+; 0021 0153     int iReturn = WIZ_DATA_EMPTY;
+; 0021 0154     char * pch;
+; 0021 0155     char * pviHttpResCode;
+; 0021 0156     char * pviHttpLen;
+; 0021 0157     char * pviHttpData;
+; 0021 0158     int i = 0;
+; 0021 0159     char *pviReadLine;
+; 0021 015A     unsigned int viHtteDetaLen = 0;
+; 0021 015B     unsigned char viFlagHttpResCode;
+; 0021 015C     unsigned char viFlagHttpLen;
+; 0021 015D     char pviWizRead[400];
+; 0021 015E 
+; 0021 015F     TIMER   timeout;
+; 0021 0160     TIMER_setTimer(&timeout, 3);
 	SBIW R28,63
 	SBIW R28,63
 	SBIW R28,34
@@ -17982,9 +18032,9 @@ _iWizRead:
 	LDI  R24,6
 	LDI  R26,LOW(406)
 	LDI  R27,HIGH(406)
-	LDI  R30,LOW(_0x420034*2)
-	LDI  R31,HIGH(_0x420034*2)
-	LDI  R22,BYTE3(_0x420034*2)
+	LDI  R30,LOW(_0x420036*2)
+	LDI  R31,HIGH(_0x420036*2)
+	LDI  R22,BYTE3(_0x420036*2)
 	CALL __INITLOCB
 	CALL __SAVELOCR6
 ;	iReturn -> R16,R17
@@ -18000,267 +18050,267 @@ _iWizRead:
 ;	pviWizRead -> Y+10
 ;	timeout -> Y+6
 	__GETWRN 16,17,0
-	CALL SUBOPT_0xAC
-	CALL SUBOPT_0xE0
-; 0021 015E     while(!TIMER_checkTimerExceed(timeout)){
-_0x420035:
+	CALL SUBOPT_0xAB
+	CALL SUBOPT_0xE1
+; 0021 0161     while(!TIMER_checkTimerExceed(timeout)){
+_0x420037:
 	CALL SUBOPT_0x3D
 	CALL _TIMER_checkTimerExceed
 	SBIW R30,0
-	BRNE _0x420037
-; 0021 015F        #asm("wdr")
+	BRNE _0x420039
+; 0021 0162        #asm("wdr")
 	wdr
-; 0021 0160     }
-	RJMP _0x420035
-_0x420037:
-; 0021 0161     //delay_ms(1000);
-; 0021 0162 
-; 0021 0163     memset(&pviWizRead,0,sizeof(pviWizRead));
-	CALL SUBOPT_0xE1
+; 0021 0163     }
+	RJMP _0x420037
+_0x420039:
+; 0021 0164     //delay_ms(1000);
+; 0021 0165 
+; 0021 0166     memset(&pviWizRead,0,sizeof(pviWizRead));
 	CALL SUBOPT_0xE2
-; 0021 0164 #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 0165     printDebug("[iWizRead]Function\r\n");
-; 0021 0166 #endif
-; 0021 0167     if((index0Buffer > 0) && (iWizRXMode == WIZ_RX_DATA_MODE)){
 	CALL SUBOPT_0xE3
-	BRSH _0x420039
+; 0021 0167 #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 0168     printDebug("[iWizRead]Function\r\n");
+; 0021 0169 #endif
+; 0021 016A     if((index0Buffer > 0) && (iWizRXMode == WIZ_RX_DATA_MODE)){
+	CALL SUBOPT_0xE4
+	BRSH _0x42003B
 	LDS  R26,_iWizRXMode
 	CPI  R26,LOW(0x2)
-	BREQ _0x42003A
-_0x420039:
-	RJMP _0x420038
-_0x42003A:
-; 0021 0168         //pviWizRead = (char *)malloc(index0Buffer);
-; 0021 0169         //if(pviWizRead != NULL){
-; 0021 016A            memcpy(&pviWizRead[0],&rx0Buffer[0],index0Buffer);
-	CALL SUBOPT_0xE4
-	CALL SUBOPT_0xDC
-; 0021 016B //           for(i=0;i<index0Buffer;i++){
-; 0021 016C //                printDebug("%c",*(pviReadDisplay++));
-; 0021 016D //           }
-; 0021 016E            //printDebug("[HTTP]Raw Data\r\n");
-; 0021 016F #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 0170            print_payload(pviWizRead, index0Buffer);
-; 0021 0171 #endif
-; 0021 0172 
-; 0021 0173             pviReadLine = strtok(pviWizRead,"\r\n");
-	CALL SUBOPT_0xE4
-	CALL SUBOPT_0xE5
-; 0021 0174 #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 0175             printDebug("[HTTP]Check ResCode\r\n");
-; 0021 0176 #endif
-; 0021 0177             while(pviReadLine != NULL){
+	BREQ _0x42003C
 _0x42003B:
+	RJMP _0x42003A
+_0x42003C:
+; 0021 016B         //pviWizRead = (char *)malloc(index0Buffer);
+; 0021 016C         //if(pviWizRead != NULL){
+; 0021 016D            memcpy(&pviWizRead[0],&rx0Buffer[0],index0Buffer);
+	CALL SUBOPT_0xE5
+	CALL SUBOPT_0xDC
+; 0021 016E //           for(i=0;i<index0Buffer;i++){
+; 0021 016F //                printDebug("%c",*(pviReadDisplay++));
+; 0021 0170 //           }
+; 0021 0171            //printDebug("[HTTP]Raw Data\r\n");
+; 0021 0172 #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 0173            print_payload(pviWizRead, index0Buffer);
+; 0021 0174 #endif
+; 0021 0175 
+; 0021 0176             pviReadLine = strtok(pviWizRead,"\r\n");
+	CALL SUBOPT_0xE5
 	CALL SUBOPT_0xE6
-	SBIW R30,0
-	BREQ _0x42003D
-; 0021 0178                 #asm("wdr")
-	wdr
-; 0021 0179                 if(strncmp(pviReadLine,"HTTP/",5)==0){
+; 0021 0177 #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 0178             printDebug("[HTTP]Check ResCode\r\n");
+; 0021 0179 #endif
+; 0021 017A             while(pviReadLine != NULL){
+_0x42003D:
 	CALL SUBOPT_0xE7
-	__POINTW1MN _0x42003F,0
+	SBIW R30,0
+	BREQ _0x42003F
+; 0021 017B                 #asm("wdr")
+	wdr
+; 0021 017C                 if(strncmp(pviReadLine,"HTTP/",5)==0){
+	CALL SUBOPT_0xE8
+	__POINTW1MN _0x420041,0
 	ST   -Y,R31
 	ST   -Y,R30
 	LDI  R26,LOW(5)
 	CALL _strncmp
 	CPI  R30,0
-	BRNE _0x42003E
-; 0021 017A                     pviHttpResCode = strtok (pviReadLine," ");
-	CALL SUBOPT_0xE7
+	BRNE _0x420040
+; 0021 017D                     pviHttpResCode = strtok (pviReadLine," ");
 	CALL SUBOPT_0xE8
-; 0021 017B                     while(pviHttpResCode != NULL){
-_0x420040:
+	CALL SUBOPT_0xE9
+; 0021 017E                     while(pviHttpResCode != NULL){
+_0x420042:
 	MOV  R0,R20
 	OR   R0,R21
-	BREQ _0x420042
-; 0021 017C                          #asm("wdr")
+	BREQ _0x420044
+; 0021 017F                          #asm("wdr")
 	wdr
-; 0021 017D                          if(strncmp(pviHttpResCode,"200",3)==0){
+; 0021 0180                          if(strncmp(pviHttpResCode,"200",3)==0){
 	ST   -Y,R21
 	ST   -Y,R20
-	__POINTW1MN _0x42003F,6
+	__POINTW1MN _0x420041,6
 	ST   -Y,R31
 	ST   -Y,R30
 	LDI  R26,LOW(3)
 	CALL _strncmp
 	CPI  R30,0
-	BRNE _0x420043
-; 0021 017E     #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 017F                               printDebug("[HTTP]200 OK\r\n");
-; 0021 0180     #endif
-; 0021 0181                               viFlagHttpResCode = WIZ_HTTP_RES_CODE_OK;
+	BRNE _0x420045
+; 0021 0181     #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 0182                               printDebug("[HTTP]200 OK\r\n");
+; 0021 0183     #endif
+; 0021 0184                               viFlagHttpResCode = WIZ_HTTP_RES_CODE_OK;
 	LDI  R30,LOW(1)
 	__PUTB1SX 411
-; 0021 0182                               //free(pviHttpResCode);
-; 0021 0183                               break;
-	RJMP _0x420042
-; 0021 0184                          }else{
-_0x420043:
-; 0021 0185                               viFlagHttpResCode = WIZ_HTTP_RES_CODE_ERROR;
+; 0021 0185                               //free(pviHttpResCode);
+; 0021 0186                               break;
+	RJMP _0x420044
+; 0021 0187                          }else{
+_0x420045:
+; 0021 0188                               viFlagHttpResCode = WIZ_HTTP_RES_CODE_ERROR;
 	LDI  R30,LOW(0)
 	__PUTB1SX 411
-; 0021 0186                          }
-; 0021 0187                          pviHttpResCode = strtok (NULL," ");
-	CALL SUBOPT_0xDF
-	CALL SUBOPT_0xE8
-; 0021 0188                     }
-	RJMP _0x420040
-_0x420042:
-; 0021 0189                     if(viFlagHttpResCode == WIZ_HTTP_RES_CODE_OK){
+; 0021 0189                          }
+; 0021 018A                          pviHttpResCode = strtok (NULL," ");
+	CALL SUBOPT_0xE0
+	CALL SUBOPT_0xE9
+; 0021 018B                     }
+	RJMP _0x420042
+_0x420044:
+; 0021 018C                     if(viFlagHttpResCode == WIZ_HTTP_RES_CODE_OK){
 	__GETB2SX 411
 	CPI  R26,LOW(0x1)
-	BREQ _0x42003D
-; 0021 018A                          break;
-; 0021 018B                     }
-; 0021 018C                     //pviReadLine = strtok(NULL,"\r\n");
-; 0021 018D                 }
-; 0021 018E                 pviReadLine = strtok(NULL,"\r\n");
-_0x42003E:
-	CALL SUBOPT_0xDF
-	CALL SUBOPT_0xE5
-; 0021 018F             }
-	RJMP _0x42003B
-_0x42003D:
-; 0021 0190             //free(pviReadLine);
-; 0021 0191 
-; 0021 0192             memset(&pviWizRead,0,sizeof(pviWizRead));
-	CALL SUBOPT_0xE1
-	CALL SUBOPT_0xE2
-; 0021 0193             memcpy(&pviWizRead[0],&rx0Buffer[0],index0Buffer);
-	CALL SUBOPT_0xE4
-	CALL SUBOPT_0xDC
-; 0021 0194 #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 0195             printDebug("[HTTP]Check Length\r\n");
-; 0021 0196 #endif
-; 0021 0197             pviReadLine = strtok(pviWizRead,"\r\n");
-	CALL SUBOPT_0xE4
-	CALL SUBOPT_0xE5
-; 0021 0198             while(pviReadLine != NULL){
-_0x420046:
+	BREQ _0x42003F
+; 0021 018D                          break;
+; 0021 018E                     }
+; 0021 018F                     //pviReadLine = strtok(NULL,"\r\n");
+; 0021 0190                 }
+; 0021 0191                 pviReadLine = strtok(NULL,"\r\n");
+_0x420040:
+	CALL SUBOPT_0xE0
 	CALL SUBOPT_0xE6
-	SBIW R30,0
-	BREQ _0x420048
-; 0021 0199                #asm("wdr")
-	wdr
-; 0021 019A                if(strncmp(pviReadLine,"Content-Length",14)==0){
+; 0021 0192             }
+	RJMP _0x42003D
+_0x42003F:
+; 0021 0193             //free(pviReadLine);
+; 0021 0194 
+; 0021 0195             memset(&pviWizRead,0,sizeof(pviWizRead));
+	CALL SUBOPT_0xE2
+	CALL SUBOPT_0xE3
+; 0021 0196             memcpy(&pviWizRead[0],&rx0Buffer[0],index0Buffer);
+	CALL SUBOPT_0xE5
+	CALL SUBOPT_0xDC
+; 0021 0197 #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 0198             printDebug("[HTTP]Check Length\r\n");
+; 0021 0199 #endif
+; 0021 019A             pviReadLine = strtok(pviWizRead,"\r\n");
+	CALL SUBOPT_0xE5
+	CALL SUBOPT_0xE6
+; 0021 019B             while(pviReadLine != NULL){
+_0x420048:
 	CALL SUBOPT_0xE7
-	__POINTW1MN _0x42003F,10
+	SBIW R30,0
+	BREQ _0x42004A
+; 0021 019C                #asm("wdr")
+	wdr
+; 0021 019D                if(strncmp(pviReadLine,"Content-Length",14)==0){
+	CALL SUBOPT_0xE8
+	__POINTW1MN _0x420041,10
 	ST   -Y,R31
 	ST   -Y,R30
 	LDI  R26,LOW(14)
 	CALL _strncmp
 	CPI  R30,0
-	BRNE _0x420049
-; 0021 019B                   pviHttpLen = strtok(pviReadLine," ");
-	CALL SUBOPT_0xE7
-	CALL SUBOPT_0xE9
-; 0021 019C                   if(pviHttpLen != NULL){
+	BRNE _0x42004B
+; 0021 019E                   pviHttpLen = strtok(pviReadLine," ");
+	CALL SUBOPT_0xE8
 	CALL SUBOPT_0xEA
+; 0021 019F                   if(pviHttpLen != NULL){
+	CALL SUBOPT_0xEB
 	SBIW R30,0
-	BREQ _0x42004A
-; 0021 019D                       pviHttpLen = strtok(NULL," ");
-	CALL SUBOPT_0xDF
-	CALL SUBOPT_0xE9
-; 0021 019E #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 019F                       printDebug("[DataLen][%s]\r\n",pviHttpLen);
-; 0021 01A0 #endif
-; 0021 01A1                       viHtteDetaLen = atoi(pviHttpLen);
+	BREQ _0x42004C
+; 0021 01A0                       pviHttpLen = strtok(NULL," ");
+	CALL SUBOPT_0xE0
+	CALL SUBOPT_0xEA
+; 0021 01A1 #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 01A2                       printDebug("[DataLen][%s]\r\n",pviHttpLen);
+; 0021 01A3 #endif
+; 0021 01A4                       viHtteDetaLen = atoi(pviHttpLen);
 	__GETW2SX 420
 	CALL _atoi
 	__PUTW1SX 412
-; 0021 01A2                       viFlagHttpLen = WIZ_HTTP_CONTEXT_LEN_OK;
+; 0021 01A5                       viFlagHttpLen = WIZ_HTTP_CONTEXT_LEN_OK;
 	LDI  R30,LOW(1)
 	__PUTB1SX 410
-; 0021 01A3                       break;
-	RJMP _0x420048
-; 0021 01A4                   }else{
-_0x42004A:
-; 0021 01A5                       viFlagHttpLen = WIZ_HTTP_CONTEXT_LEN_NOTFOUND;
+; 0021 01A6                       break;
+	RJMP _0x42004A
+; 0021 01A7                   }else{
+_0x42004C:
+; 0021 01A8                       viFlagHttpLen = WIZ_HTTP_CONTEXT_LEN_NOTFOUND;
 	LDI  R30,LOW(0)
 	__PUTB1SX 410
-; 0021 01A6                   }
-; 0021 01A7                }
-; 0021 01A8                if(viFlagHttpLen == WIZ_HTTP_CONTEXT_LEN_OK){
-_0x420049:
+; 0021 01A9                   }
+; 0021 01AA                }
+; 0021 01AB                if(viFlagHttpLen == WIZ_HTTP_CONTEXT_LEN_OK){
+_0x42004B:
 	__GETB2SX 410
 	CPI  R26,LOW(0x1)
-	BREQ _0x420048
-; 0021 01A9                   break;
-; 0021 01AA                }
-; 0021 01AB                pviReadLine = strtok(NULL,"\r\n");
-	CALL SUBOPT_0xDF
-	CALL SUBOPT_0xE5
-; 0021 01AC             }
-	RJMP _0x420046
-_0x420048:
-; 0021 01AD 
-; 0021 01AE             memset(&pviWizRead,0,sizeof(pviWizRead));
-	CALL SUBOPT_0xE1
+	BREQ _0x42004A
+; 0021 01AC                   break;
+; 0021 01AD                }
+; 0021 01AE                pviReadLine = strtok(NULL,"\r\n");
+	CALL SUBOPT_0xE0
+	CALL SUBOPT_0xE6
+; 0021 01AF             }
+	RJMP _0x420048
+_0x42004A:
+; 0021 01B0 
+; 0021 01B1             memset(&pviWizRead,0,sizeof(pviWizRead));
 	CALL SUBOPT_0xE2
-; 0021 01AF             memcpy(&pviWizRead[0],&rx0Buffer[0],index0Buffer);
-	CALL SUBOPT_0xE4
+	CALL SUBOPT_0xE3
+; 0021 01B2             memcpy(&pviWizRead[0],&rx0Buffer[0],index0Buffer);
+	CALL SUBOPT_0xE5
 	CALL SUBOPT_0xDC
-; 0021 01B0 #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 01B1             printDebug("[HTTP]Parser Data\r\n");
-; 0021 01B2 #endif
-; 0021 01B3             pviHttpData = strstr (pviWizRead,"\r\n\r\n");
-	CALL SUBOPT_0xE4
-	__POINTW2MN _0x42003F,25
+; 0021 01B3 #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 01B4             printDebug("[HTTP]Parser Data\r\n");
+; 0021 01B5 #endif
+; 0021 01B6             pviHttpData = strstr (pviWizRead,"\r\n\r\n");
+	CALL SUBOPT_0xE5
+	__POINTW2MN _0x420041,25
 	CALL _strstr
 	__PUTW1SX 418
-; 0021 01B4             if(pviHttpData){
+; 0021 01B7             if(pviHttpData){
 	SBIW R30,0
-	BREQ _0x42004D
-; 0021 01B5 #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 01B6                 printDebug("[Data][\r\n");
-; 0021 01B7                 print_payload(pviHttpData+4, viHtteDetaLen);
-; 0021 01B8                 printDebug("]\r\n");
-; 0021 01B9 #endif
-; 0021 01BA                 viRXData.length = viHtteDetaLen;
+	BREQ _0x42004F
+; 0021 01B8 #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 01B9                 printDebug("[Data][\r\n");
+; 0021 01BA                 print_payload(pviHttpData+4, viHtteDetaLen);
+; 0021 01BB                 printDebug("]\r\n");
+; 0021 01BC #endif
+; 0021 01BD                 viRXData.length = viHtteDetaLen;
 	__GETW1SX 412
 	STS  _viRXData,R30
 	STS  _viRXData+1,R31
-; 0021 01BB                 memcpy(&viRXData.value[0],pviHttpData+4,viHtteDetaLen);
+; 0021 01BE                 memcpy(&viRXData.value[0],pviHttpData+4,viHtteDetaLen);
 	__POINTW1MN _viRXData,2
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0xEA
+	CALL SUBOPT_0xEB
 	ADIW R30,4
 	ST   -Y,R31
 	ST   -Y,R30
 	__GETW2SX 416
 	CALL _memcpy
-; 0021 01BC 
-; 0021 01BD //                memset(&pviWizRead,0,sizeof(pviWizRead));
-; 0021 01BE //                memcpy(&pviWizRead[0],pviHttpData+4,viHtteDetaLen);
-; 0021 01BF             }
-; 0021 01C0 
-; 0021 01C1             if(viFlagHttpResCode==WIZ_HTTP_RES_CODE_OK && viFlagHttpLen == WIZ_HTTP_CONTEXT_LEN_OK){
-_0x42004D:
+; 0021 01BF 
+; 0021 01C0 //                memset(&pviWizRead,0,sizeof(pviWizRead));
+; 0021 01C1 //                memcpy(&pviWizRead[0],pviHttpData+4,viHtteDetaLen);
+; 0021 01C2             }
+; 0021 01C3 
+; 0021 01C4             if(viFlagHttpResCode==WIZ_HTTP_RES_CODE_OK && viFlagHttpLen == WIZ_HTTP_CONTEXT_LEN_OK){
+_0x42004F:
 	__GETB2SX 411
 	CPI  R26,LOW(0x1)
-	BRNE _0x42004F
+	BRNE _0x420051
 	__GETB2SX 410
 	CPI  R26,LOW(0x1)
-	BREQ _0x420050
-_0x42004F:
-	RJMP _0x42004E
-_0x420050:
-; 0021 01C2 
-; 0021 01C3                  iReturn =  WIZ_DATA_AVAILABLE;
-	__GETWRN 16,17,1
-; 0021 01C4             }
-; 0021 01C5     }else{
-_0x42004E:
-	RJMP _0x420051
-_0x420038:
-; 0021 01C6         iReturn =  WIZ_DATA_EMPTY;
-	__GETWRN 16,17,0
-; 0021 01C7     }
+	BREQ _0x420052
 _0x420051:
-; 0021 01C8     index0Buffer = 0;
+	RJMP _0x420050
+_0x420052:
+; 0021 01C5 
+; 0021 01C6                  iReturn =  WIZ_DATA_AVAILABLE;
+	__GETWRN 16,17,1
+; 0021 01C7             }
+; 0021 01C8     }else{
+_0x420050:
+	RJMP _0x420053
+_0x42003A:
+; 0021 01C9         iReturn =  WIZ_DATA_EMPTY;
+	__GETWRN 16,17,0
+; 0021 01CA     }
+_0x420053:
+; 0021 01CB     index0Buffer = 0;
 	CALL SUBOPT_0xD9
-; 0021 01C9     return iReturn;
+; 0021 01CC     return iReturn;
 	MOVW R30,R16
 	CALL __LOADLOCR6
 	ADIW R28,63
@@ -18268,27 +18318,53 @@ _0x420051:
 	ADIW R28,40
 	SUBI R29,-1
 	RET
-; 0021 01CA }
+; 0021 01CD }
 
 	.DSEG
-_0x42003F:
+_0x420041:
 	.BYTE 0x1E
 ;
-;void iWizReActiveDataMode(){
-; 0021 01CC void iWizReActiveDataMode(){
+;iUChar_t iWizCheckStatus(){
+; 0021 01CF iUChar_t iWizCheckStatus(){
 
 	.CSEG
-; 0021 01CD     iChar_t viCmdModeChar[] = "+++";
-; 0021 01CE     iChar_t viCmdRestart[] = "<WR>";       //Restart
-; 0021 01CF 
-; 0021 01D0     iChar_t viWizReadBuffer[30];
-; 0021 01D1     iChar_t viI = 0;
-; 0021 01D2     TIMER   timeout;
-; 0021 01D3     iChar_t viConfigMode;
-; 0021 01D4     iChar_t * pviCheckResponse;
-; 0021 01D5 
-; 0021 01D6     //Read configuration mode
-; 0021 01D7     iWizRXMode = WIZ_CONFIG_READ_MODE;
+; 0021 01D0     iUChar_t viReturn = 0;
+; 0021 01D1     iChar_t viData[4];
+; 0021 01D2 
+; 0021 01D3     iWizSend(&viData[0],sizeof(viData));
+;	viReturn -> R17
+;	viData -> Y+1
+; 0021 01D4     viReturn = iWizConnected();
+; 0021 01D5     switch(viReturn){
+; 0021 01D6         case WIZ_CONNECTED:{
+; 0021 01D7            printDebug("[iWizCheckStatus]WIZ_CONNECTED.\r\n");
+; 0021 01D8            break;
+; 0021 01D9         }
+; 0021 01DA         case WIZ_CLOSE:{
+; 0021 01DB            printDebug("[iWizCheckStatus]WIZ_CLOSE.\r\n");
+; 0021 01DC            break;
+; 0021 01DD         }
+; 0021 01DE         case WIZ_CONN_FAIL:{
+; 0021 01DF            printDebug("[iWizCheckStatus]WIZ_CONN_FAIL.\r\n");
+; 0021 01E0            break;
+; 0021 01E1         }
+; 0021 01E2     }
+; 0021 01E3     return viReturn;
+; 0021 01E4 }
+;
+;void iWizReActiveDataMode(){
+; 0021 01E6 void iWizReActiveDataMode(){
+; 0021 01E7     iChar_t viCmdModeChar[] = "+++";
+; 0021 01E8     iChar_t viCmdRestart[] = "<WR>";       //Restart
+; 0021 01E9 
+; 0021 01EA     iChar_t viWizReadBuffer[30];
+; 0021 01EB     iChar_t viI = 0;
+; 0021 01EC     TIMER   timeout;
+; 0021 01ED     iChar_t viConfigMode;
+; 0021 01EE     iChar_t * pviCheckResponse;
+; 0021 01EF 
+; 0021 01F0     //Read configuration mode
+; 0021 01F1     iWizRXMode = WIZ_CONFIG_READ_MODE;
 ;	viCmdModeChar -> Y+43
 ;	viCmdRestart -> Y+38
 ;	viWizReadBuffer -> Y+8
@@ -18296,112 +18372,112 @@ _0x42003F:
 ;	timeout -> Y+4
 ;	viConfigMode -> R16
 ;	*pviCheckResponse -> R18,R19
-; 0021 01D8     index0Buffer = 0;
-; 0021 01D9     for(viI=0;viI<strlen(viCmdModeChar);viI++){
-; 0021 01DA         putchar0(viCmdModeChar[viI]);
-; 0021 01DB     }
-; 0021 01DC 
-; 0021 01DD     //wait wiz module response
-; 0021 01DE     TIMER_setTimer(&timeout, 1);
-; 0021 01DF     while(!TIMER_checkTimerExceed(timeout)){
-; 0021 01E0        #asm("wdr")
-; 0021 01E1        if(index0Buffer>0){
-; 0021 01E2            delay_ms(100);
-; 0021 01E3            memset(viWizReadBuffer,0,sizeof(viWizReadBuffer));
-; 0021 01E4            memcpy(&viWizReadBuffer[0],&rx0Buffer[0],index0Buffer);
-; 0021 01E5 
-; 0021 01E6            pviCheckResponse = strstr(viWizReadBuffer,"<E>");
-; 0021 01E7            if(pviCheckResponse){
-; 0021 01E8 #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 01E9                printDebug("[iWizReadConfig]can config mode(Read).\r\n");
-; 0021 01EA #endif
-; 0021 01EB            }else{
-; 0021 01EC #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 01ED                printDebug("[iWizReadConfig]can config mode(Read).\r\n");
-; 0021 01EE #endif
-; 0021 01EF            }
-; 0021 01F0            break;
-; 0021 01F1        }
-; 0021 01F2     }
-; 0021 01F3 
-; 0021 01F4     if(pviCheckResponse){
-; 0021 01F5         index0Buffer = 0;
-; 0021 01F6         for(viI=0;viI<strlen(viCmdRestart);viI++){
-; 0021 01F7             putchar0(viCmdRestart[viI]);
-; 0021 01F8         }
-; 0021 01F9         delay_ms(20);
-; 0021 01FA         //wait wiz module response
-; 0021 01FB         TIMER_setTimer(&timeout, 3);
-; 0021 01FC         while(!TIMER_checkTimerExceed(timeout)){
-; 0021 01FD            #asm("wdr")
-; 0021 01FE            if(index0Buffer>0){
-; 0021 01FF                delay_ms(100);
-; 0021 0200                memset(viWizReadBuffer,0,sizeof(viWizReadBuffer));
-; 0021 0201                memcpy(&viWizReadBuffer[0],&rx0Buffer[0],index0Buffer);
-; 0021 0202 
-; 0021 0203                pviCheckResponse = strstr(viWizReadBuffer,"<S>");
-; 0021 0204                if(pviCheckResponse){
-; 0021 0205     #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 0206                    printDebug("[iWizReadConfig]Restart Wiz100SR success.\r\n");
-; 0021 0207     #endif
-; 0021 0208                }else{
-; 0021 0209     #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 020A                    printDebug("[iWizReadConfig]Restart Wiz100SR unsuccess.\r\n");
-; 0021 020B     #endif
-; 0021 020C                }
-; 0021 020D                break;
-; 0021 020E            }
-; 0021 020F         }
-; 0021 0210     }
-; 0021 0211 
-; 0021 0212     //viConfigMode = WIZ_CONFIG_READ_MODE;
-; 0021 0213     index0Buffer = 0;
-; 0021 0214     viConfigMode = WIZ_CONFIG_NORMAL_MODE;
-; 0021 0215 }
+; 0021 01F2     index0Buffer = 0;
+; 0021 01F3     for(viI=0;viI<strlen(viCmdModeChar);viI++){
+; 0021 01F4         putchar0(viCmdModeChar[viI]);
+; 0021 01F5     }
+; 0021 01F6 
+; 0021 01F7     //wait wiz module response
+; 0021 01F8     TIMER_setTimer(&timeout, 1);
+; 0021 01F9     while(!TIMER_checkTimerExceed(timeout)){
+; 0021 01FA        #asm("wdr")
+; 0021 01FB        if(index0Buffer>0){
+; 0021 01FC            delay_ms(100);
+; 0021 01FD            memset(viWizReadBuffer,0,sizeof(viWizReadBuffer));
+; 0021 01FE            memcpy(&viWizReadBuffer[0],&rx0Buffer[0],index0Buffer);
+; 0021 01FF 
+; 0021 0200            pviCheckResponse = strstr(viWizReadBuffer,"<E>");
+; 0021 0201            if(pviCheckResponse){
+; 0021 0202 #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 0203                printDebug("[iWizReadConfig]can config mode(Read).\r\n");
+; 0021 0204 #endif
+; 0021 0205            }else{
+; 0021 0206 #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 0207                printDebug("[iWizReadConfig]can config mode(Read).\r\n");
+; 0021 0208 #endif
+; 0021 0209            }
+; 0021 020A            break;
+; 0021 020B        }
+; 0021 020C     }
+; 0021 020D 
+; 0021 020E     if(pviCheckResponse){
+; 0021 020F         index0Buffer = 0;
+; 0021 0210         for(viI=0;viI<strlen(viCmdRestart);viI++){
+; 0021 0211             putchar0(viCmdRestart[viI]);
+; 0021 0212         }
+; 0021 0213         delay_ms(20);
+; 0021 0214         //wait wiz module response
+; 0021 0215         TIMER_setTimer(&timeout, 3);
+; 0021 0216         while(!TIMER_checkTimerExceed(timeout)){
+; 0021 0217            #asm("wdr")
+; 0021 0218            if(index0Buffer>0){
+; 0021 0219                delay_ms(100);
+; 0021 021A                memset(viWizReadBuffer,0,sizeof(viWizReadBuffer));
+; 0021 021B                memcpy(&viWizReadBuffer[0],&rx0Buffer[0],index0Buffer);
+; 0021 021C 
+; 0021 021D                pviCheckResponse = strstr(viWizReadBuffer,"<S>");
+; 0021 021E                if(pviCheckResponse){
+; 0021 021F     #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 0220                    printDebug("[iWizReadConfig]Restart Wiz100SR success.\r\n");
+; 0021 0221     #endif
+; 0021 0222                }else{
+; 0021 0223     #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 0224                    printDebug("[iWizReadConfig]Restart Wiz100SR unsuccess.\r\n");
+; 0021 0225     #endif
+; 0021 0226                }
+; 0021 0227                break;
+; 0021 0228            }
+; 0021 0229         }
+; 0021 022A     }
+; 0021 022B 
+; 0021 022C     //viConfigMode = WIZ_CONFIG_READ_MODE;
+; 0021 022D     index0Buffer = 0;
+; 0021 022E     viConfigMode = WIZ_CONFIG_NORMAL_MODE;
+; 0021 022F }
 
 	.DSEG
-_0x42005A:
+_0x420062:
 	.BYTE 0x8
 ;
 ;void iWizReadConfig(){
-; 0021 0217 void iWizReadConfig(){
+; 0021 0231 void iWizReadConfig(){
 
 	.CSEG
 _iWizReadConfig:
-; 0021 0218     iChar_t viCmdModeChar[] = "+++";
-; 0021 0219 
-; 0021 021A     iChar_t viCmdMAC[] = "<RA>";                 //Get MAC Address
-; 0021 021B     iChar_t viCmdIP[] = "<RI>";                  //Get Local IP
-; 0021 021C     iChar_t viCmdSubnet[] = "<RS>";              //Get Subnet mask
-; 0021 021D     iChar_t viCmdGateWay[] = "<RG>";             //Get Gateway
-; 0021 021E     iChar_t viCmdLocalPort[] = "<RP>";           //Get Local IP’s port number
-; 0021 021F     iChar_t viCmdIPMethod[] = "<RD>";            //Get the IP configuration method
-; 0021 0220     iChar_t viCmdOperMode[] = "<RM>";            //Get the operation mode
-; 0021 0221     iChar_t viCmdProtocal[] = "<RK>";            //Get the Protocol
-; 0021 0222     iChar_t viCmdBaudRate[] = "<RB>";            //Get the serial baud rate
-; 0021 0223     iChar_t viCmdCmdSerialMeth[] = "<RT>";       //Get the serial command method
-; 0021 0224     iChar_t viCmdCmdDomainName[] = "<RW>";       //Get the serial command method
-; 0021 0225 
-; 0021 0226     iChar_t viCmdRestart[] = "<WR>";       //Restart
-; 0021 0227 
-; 0021 0228     iChar_t viConfigMode;
-; 0021 0229     iChar_t * pviCheckResponse;
-; 0021 022A 
-; 0021 022B     iChar_t viWizReadBuffer[30];
-; 0021 022C     iChar_t viI = 0;
-; 0021 022D     TIMER   timeout;
-; 0021 022E 
-; 0021 022F     //Read configuration mode
-; 0021 0230     //viConfigMode = WIZ_CONFIG_READ_MODE;
-; 0021 0231     iWizRXMode = WIZ_CONFIG_READ_MODE;
+; 0021 0232     iChar_t viCmdModeChar[] = "+++";
+; 0021 0233 
+; 0021 0234     iChar_t viCmdMAC[] = "<RA>";                 //Get MAC Address
+; 0021 0235     iChar_t viCmdIP[] = "<RI>";                  //Get Local IP
+; 0021 0236     iChar_t viCmdSubnet[] = "<RS>";              //Get Subnet mask
+; 0021 0237     iChar_t viCmdGateWay[] = "<RG>";             //Get Gateway
+; 0021 0238     iChar_t viCmdLocalPort[] = "<RP>";           //Get Local IP’s port number
+; 0021 0239     iChar_t viCmdIPMethod[] = "<RD>";            //Get the IP configuration method
+; 0021 023A     iChar_t viCmdOperMode[] = "<RM>";            //Get the operation mode
+; 0021 023B     iChar_t viCmdProtocal[] = "<RK>";            //Get the Protocol
+; 0021 023C     iChar_t viCmdBaudRate[] = "<RB>";            //Get the serial baud rate
+; 0021 023D     iChar_t viCmdCmdSerialMeth[] = "<RT>";       //Get the serial command method
+; 0021 023E     iChar_t viCmdCmdDomainName[] = "<RW>";       //Get the serial command method
+; 0021 023F 
+; 0021 0240     iChar_t viCmdRestart[] = "<WR>";       //Restart
+; 0021 0241 
+; 0021 0242     iChar_t viConfigMode;
+; 0021 0243     iChar_t * pviCheckResponse;
+; 0021 0244 
+; 0021 0245     iChar_t viWizReadBuffer[30];
+; 0021 0246     iChar_t viI = 0;
+; 0021 0247     TIMER   timeout;
+; 0021 0248 
+; 0021 0249     //Read configuration mode
+; 0021 024A     //viConfigMode = WIZ_CONFIG_READ_MODE;
+; 0021 024B     iWizRXMode = WIZ_CONFIG_READ_MODE;
 	SBIW R28,63
 	SBIW R28,35
 	LDI  R24,64
 	LDI  R26,LOW(34)
 	LDI  R27,HIGH(34)
-	LDI  R30,LOW(_0x420067*2)
-	LDI  R31,HIGH(_0x420067*2)
-	LDI  R22,BYTE3(_0x420067*2)
+	LDI  R30,LOW(_0x42006F*2)
+	LDI  R31,HIGH(_0x42006F*2)
+	LDI  R22,BYTE3(_0x42006F*2)
 	CALL __INITLOCB
 	CALL __SAVELOCR4
 ;	viCmdModeChar -> Y+98
@@ -18425,417 +18501,417 @@ _iWizReadConfig:
 	LDI  R16,0
 	LDI  R30,LOW(4)
 	STS  _iWizRXMode,R30
-; 0021 0232     //send +++
-; 0021 0233 
-; 0021 0234     index0Buffer = 0;
+; 0021 024C     //send +++
+; 0021 024D 
+; 0021 024E     index0Buffer = 0;
 	CALL SUBOPT_0xD9
-; 0021 0235     for(viI=0;viI<strlen(viCmdModeChar);viI++){
+; 0021 024F     for(viI=0;viI<strlen(viCmdModeChar);viI++){
 	LDI  R16,LOW(0)
-_0x420069:
+_0x420071:
 	MOVW R26,R28
 	SUBI R26,LOW(-(98))
 	SBCI R27,HIGH(-(98))
-	CALL SUBOPT_0xEB
-	BRSH _0x42006A
-; 0021 0236         putchar0(viCmdModeChar[viI]);
+	CALL SUBOPT_0xEC
+	BRSH _0x420072
+; 0021 0250         putchar0(viCmdModeChar[viI]);
 	CALL SUBOPT_0x36
 	MOVW R26,R28
 	SUBI R26,LOW(-(98))
 	SBCI R27,HIGH(-(98))
 	CALL SUBOPT_0x16
-; 0021 0237     }
+; 0021 0251     }
 	SUBI R16,-1
-	RJMP _0x420069
-_0x42006A:
-; 0021 0238 
-; 0021 0239     //wait wiz module response
-; 0021 023A     TIMER_setTimer(&timeout, 1);
+	RJMP _0x420071
+_0x420072:
+; 0021 0252 
+; 0021 0253     //wait wiz module response
+; 0021 0254     TIMER_setTimer(&timeout, 1);
 	CALL SUBOPT_0xDB
-	CALL SUBOPT_0xAD
-; 0021 023B     while(!TIMER_checkTimerExceed(timeout)){
-_0x42006B:
-	CALL SUBOPT_0xEC
-	BRNE _0x42006D
-; 0021 023C        #asm("wdr")
+	CALL SUBOPT_0xAC
+; 0021 0255     while(!TIMER_checkTimerExceed(timeout)){
+_0x420073:
+	CALL SUBOPT_0xED
+	BRNE _0x420075
+; 0021 0256        #asm("wdr")
 	wdr
-; 0021 023D        if(index0Buffer>0){
-	CALL SUBOPT_0xE3
-	BRSH _0x42006E
-; 0021 023E            delay_ms(100);
+; 0021 0257        if(index0Buffer>0){
+	CALL SUBOPT_0xE4
+	BRSH _0x420076
+; 0021 0258            delay_ms(100);
 	CALL SUBOPT_0x8
-; 0021 023F            memset(viWizReadBuffer,0,sizeof(viWizReadBuffer));
+; 0021 0259            memset(viWizReadBuffer,0,sizeof(viWizReadBuffer));
 	CALL SUBOPT_0x8A
 	LDI  R30,LOW(0)
 	ST   -Y,R30
 	LDI  R26,LOW(30)
 	CALL SUBOPT_0xDA
-; 0021 0240            memcpy(&viWizReadBuffer[0],&rx0Buffer[0],index0Buffer);
+; 0021 025A            memcpy(&viWizReadBuffer[0],&rx0Buffer[0],index0Buffer);
 	CALL SUBOPT_0x8A
 	CALL SUBOPT_0xDC
-; 0021 0241 
-; 0021 0242            pviCheckResponse = strstr(viWizReadBuffer,"<E>");
+; 0021 025B 
+; 0021 025C            pviCheckResponse = strstr(viWizReadBuffer,"<E>");
 	CALL SUBOPT_0x8A
-	__POINTW2MN _0x42006F,0
+	__POINTW2MN _0x420077,0
 	CALL _strstr
 	MOVW R18,R30
-; 0021 0243            if(pviCheckResponse){
-; 0021 0244 #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 0245                printDebug("[iWizReadConfig]can config mode(Read).\r\n");
-; 0021 0246 #endif
-; 0021 0247            }else{
-; 0021 0248 #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 0249                printDebug("[iWizReadConfig]can not config mode(Read).\r\n");
-; 0021 024A #endif
-; 0021 024B            }
-; 0021 024C            break;
-	RJMP _0x42006D
-; 0021 024D        }
-; 0021 024E     }
-_0x42006E:
-	RJMP _0x42006B
-_0x42006D:
-; 0021 024F 
-; 0021 0250     if(pviCheckResponse){
+; 0021 025D            if(pviCheckResponse){
+; 0021 025E #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 025F                printDebug("[iWizReadConfig]can config mode(Read).\r\n");
+; 0021 0260 #endif
+; 0021 0261            }else{
+; 0021 0262 #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 0263                printDebug("[iWizReadConfig]can not config mode(Read).\r\n");
+; 0021 0264 #endif
+; 0021 0265            }
+; 0021 0266            break;
+	RJMP _0x420075
+; 0021 0267        }
+; 0021 0268     }
+_0x420076:
+	RJMP _0x420073
+_0x420075:
+; 0021 0269 
+; 0021 026A     if(pviCheckResponse){
 	MOV  R0,R18
 	OR   R0,R19
 	BRNE PC+3
-	JMP _0x420072
-; 0021 0251         delay_ms(20);
+	JMP _0x42007A
+; 0021 026B         delay_ms(20);
 	CALL SUBOPT_0x2C
 	CALL _delay_ms
-; 0021 0252         if(iWizConfigSend(viCmdMAC,viWizReadBuffer)==1){
+; 0021 026C         if(iWizConfigSend(viCmdMAC,viWizReadBuffer)==1){
 	MOVW R30,R28
 	SUBI R30,LOW(-(93))
 	SBCI R31,HIGH(-(93))
-	CALL SUBOPT_0xED
+	CALL SUBOPT_0xEE
 	RCALL _iWizConfigSend
 	CPI  R30,LOW(0x1)
-	BRNE _0x420073
-; 0021 0253             iWizConfigMACParser(iWiz100srConfig.macAddress,viWizReadBuffer);
+	BRNE _0x42007B
+; 0021 026D             iWizConfigMACParser(iWiz100srConfig.macAddress,viWizReadBuffer);
 	LDI  R30,LOW(_iWiz100srConfig)
 	LDI  R31,HIGH(_iWiz100srConfig)
-	CALL SUBOPT_0xED
-	RCALL _iWizConfigMACParser
-; 0021 0254             printDebug("[iWizReadConfig]MAC:");
-	__POINTD1FN _0x420000,333
-	CALL SUBOPT_0x0
-; 0021 0255             for(viI=0;viI<sizeof(iWiz100srConfig.macAddress);viI++){
-	LDI  R16,LOW(0)
-_0x420075:
-	CPI  R16,12
-	BRSH _0x420076
-; 0021 0256                 if(viI!=sizeof(iWiz100srConfig.macAddress)-1){
-	CPI  R16,11
-	BREQ _0x420077
-; 0021 0257                     printDebug("%02x:",iWiz100srConfig.macAddress[viI]);
-	__POINTD1FN _0x420000,354
-	RJMP _0x4200C3
-; 0021 0258                 }else{
-_0x420077:
-; 0021 0259                     printDebug("%02x",iWiz100srConfig.macAddress[viI]);
 	CALL SUBOPT_0xEE
-_0x4200C3:
+	RCALL _iWizConfigMACParser
+; 0021 026E             printDebug("[iWizReadConfig]MAC:");
+	__POINTD1FN _0x420000,431
+	CALL SUBOPT_0x0
+; 0021 026F             for(viI=0;viI<sizeof(iWiz100srConfig.macAddress);viI++){
+	LDI  R16,LOW(0)
+_0x42007D:
+	CPI  R16,12
+	BRSH _0x42007E
+; 0021 0270                 if(viI!=sizeof(iWiz100srConfig.macAddress)-1){
+	CPI  R16,11
+	BREQ _0x42007F
+; 0021 0271                     printDebug("%02x:",iWiz100srConfig.macAddress[viI]);
+	__POINTD1FN _0x420000,452
+	RJMP _0x4200CC
+; 0021 0272                 }else{
+_0x42007F:
+; 0021 0273                     printDebug("%02x",iWiz100srConfig.macAddress[viI]);
+	CALL SUBOPT_0xEF
+_0x4200CC:
 	CALL __PUTPARD1
 	CALL SUBOPT_0x36
 	SUBI R30,LOW(-_iWiz100srConfig)
 	SBCI R31,HIGH(-_iWiz100srConfig)
 	LD   R30,Z
-	CALL SUBOPT_0xBA
-; 0021 025A                 }
-; 0021 025B             }
+	CALL SUBOPT_0xB9
+; 0021 0274                 }
+; 0021 0275             }
 	SUBI R16,-1
-	RJMP _0x420075
-_0x420076:
-; 0021 025C 
-; 0021 025D             printDebug("\r\n");
-	CALL SUBOPT_0xEF
-; 0021 025E         }
-; 0021 025F         delay_ms(20);
-_0x420073:
+	RJMP _0x42007D
+_0x42007E:
+; 0021 0276 
+; 0021 0277             printDebug("\r\n");
+	CALL SUBOPT_0xF0
+; 0021 0278         }
+; 0021 0279         delay_ms(20);
+_0x42007B:
 	CALL SUBOPT_0x2C
 	CALL _delay_ms
-; 0021 0260         if(iWizConfigSend(viCmdIP,viWizReadBuffer)==1){
+; 0021 027A         if(iWizConfigSend(viCmdIP,viWizReadBuffer)==1){
 	MOVW R30,R28
 	SUBI R30,LOW(-(88))
 	SBCI R31,HIGH(-(88))
-	CALL SUBOPT_0xED
+	CALL SUBOPT_0xEE
 	RCALL _iWizConfigSend
 	CPI  R30,LOW(0x1)
-	BRNE _0x420079
-; 0021 0261             iWizConfigIPParser(iWiz100srConfig.ip,viWizReadBuffer);
+	BRNE _0x420081
+; 0021 027B             iWizConfigIPParser(iWiz100srConfig.ip,viWizReadBuffer);
 	__POINTW1MN _iWiz100srConfig,13
-	CALL SUBOPT_0xED
-	RCALL _iWizConfigIPParser
-; 0021 0262             printDebug("[iWizReadConfig]IP:");
-	__POINTD1FN _0x420000,365
-	CALL SUBOPT_0x0
-; 0021 0263             for(viI=0;viI<sizeof(iWiz100srConfig.ip);viI++){
-	LDI  R16,LOW(0)
-_0x42007B:
-	CPI  R16,4
-	BRSH _0x42007C
-; 0021 0264                 if(viI!=sizeof(iWiz100srConfig.ip)-1){
-	CPI  R16,3
-	BREQ _0x42007D
-; 0021 0265                     printDebug("%02x.",iWiz100srConfig.ip[viI]);
-	CALL SUBOPT_0xF0
-	RJMP _0x4200C4
-; 0021 0266                 }else{
-_0x42007D:
-; 0021 0267                     printDebug("%02x",iWiz100srConfig.ip[viI]);
 	CALL SUBOPT_0xEE
-_0x4200C4:
+	RCALL _iWizConfigIPParser
+; 0021 027C             printDebug("[iWizReadConfig]IP:");
+	__POINTD1FN _0x420000,463
+	CALL SUBOPT_0x0
+; 0021 027D             for(viI=0;viI<sizeof(iWiz100srConfig.ip);viI++){
+	LDI  R16,LOW(0)
+_0x420083:
+	CPI  R16,4
+	BRSH _0x420084
+; 0021 027E                 if(viI!=sizeof(iWiz100srConfig.ip)-1){
+	CPI  R16,3
+	BREQ _0x420085
+; 0021 027F                     printDebug("%02x.",iWiz100srConfig.ip[viI]);
+	CALL SUBOPT_0xF1
+	RJMP _0x4200CD
+; 0021 0280                 }else{
+_0x420085:
+; 0021 0281                     printDebug("%02x",iWiz100srConfig.ip[viI]);
+	CALL SUBOPT_0xEF
+_0x4200CD:
 	CALL __PUTPARD1
 	__POINTW2MN _iWiz100srConfig,13
-	CALL SUBOPT_0xF1
-	CALL SUBOPT_0x64
-; 0021 0268                 }
-; 0021 0269             }
-	SUBI R16,-1
-	RJMP _0x42007B
-_0x42007C:
-; 0021 026A             printDebug("\r\n");
-	CALL SUBOPT_0xEF
-; 0021 026B         }
-; 0021 026C         delay_ms(20);
-_0x420079:
-	CALL SUBOPT_0x2C
-	CALL _delay_ms
-; 0021 026D         if(iWizConfigSend(viCmdSubnet,viWizReadBuffer)==1){
-	MOVW R30,R28
-	SUBI R30,LOW(-(83))
-	SBCI R31,HIGH(-(83))
-	CALL SUBOPT_0xED
-	RCALL _iWizConfigSend
-	CPI  R30,LOW(0x1)
-	BRNE _0x42007F
-; 0021 026E             iWizConfigIPParser(iWiz100srConfig.subnet,viWizReadBuffer);
-	__POINTW1MN _iWiz100srConfig,17
-	CALL SUBOPT_0xED
-	RCALL _iWizConfigIPParser
-; 0021 026F             printDebug("[iWizReadConfig]Subnet mask:");
-	__POINTD1FN _0x420000,391
-	CALL SUBOPT_0x0
-; 0021 0270             for(viI=0;viI<sizeof(iWiz100srConfig.subnet);viI++){
-	LDI  R16,LOW(0)
-_0x420081:
-	CPI  R16,4
-	BRSH _0x420082
-; 0021 0271                 if(viI!=sizeof(iWiz100srConfig.subnet)-1){
-	CPI  R16,3
-	BREQ _0x420083
-; 0021 0272                     printDebug("%02x.",iWiz100srConfig.subnet[viI]);
-	CALL SUBOPT_0xF0
-	RJMP _0x4200C5
-; 0021 0273                 }else{
-_0x420083:
-; 0021 0274                     printDebug("%02x",iWiz100srConfig.subnet[viI]);
-	CALL SUBOPT_0xEE
-_0x4200C5:
-	CALL __PUTPARD1
-	__POINTW2MN _iWiz100srConfig,17
-	CALL SUBOPT_0xF1
-	CALL SUBOPT_0x64
-; 0021 0275                 }
-; 0021 0276             }
-	SUBI R16,-1
-	RJMP _0x420081
-_0x420082:
-; 0021 0277             printDebug("\r\n");
-	CALL SUBOPT_0xEF
-; 0021 0278         }
-; 0021 0279         delay_ms(20);
-_0x42007F:
-	CALL SUBOPT_0x2C
-	CALL _delay_ms
-; 0021 027A         if(iWizConfigSend(viCmdGateWay,viWizReadBuffer)==1){
-	MOVW R30,R28
-	SUBI R30,LOW(-(78))
-	SBCI R31,HIGH(-(78))
-	CALL SUBOPT_0xED
-	RCALL _iWizConfigSend
-	CPI  R30,LOW(0x1)
-	BRNE _0x420085
-; 0021 027B             iWizConfigIPParser(iWiz100srConfig.gateWay,viWizReadBuffer);
-	__POINTW1MN _iWiz100srConfig,21
-	CALL SUBOPT_0xED
-	RCALL _iWizConfigIPParser
-; 0021 027C             printDebug("[iWizReadConfig]Gateway:");
-	__POINTD1FN _0x420000,420
-	CALL SUBOPT_0x0
-; 0021 027D             for(viI=0;viI<sizeof(iWiz100srConfig.gateWay);viI++){
-	LDI  R16,LOW(0)
-_0x420087:
-	CPI  R16,4
-	BRSH _0x420088
-; 0021 027E                 if(viI!=sizeof(iWiz100srConfig.gateWay)-1){
-	CPI  R16,3
-	BREQ _0x420089
-; 0021 027F                     printDebug("%02x.",iWiz100srConfig.gateWay[viI]);
-	CALL SUBOPT_0xF0
-	RJMP _0x4200C6
-; 0021 0280                 }else{
-_0x420089:
-; 0021 0281                     printDebug("%02x",iWiz100srConfig.gateWay[viI]);
-	CALL SUBOPT_0xEE
-_0x4200C6:
-	CALL __PUTPARD1
-	__POINTW2MN _iWiz100srConfig,21
-	CALL SUBOPT_0xF1
+	CALL SUBOPT_0xF2
 	CALL SUBOPT_0x64
 ; 0021 0282                 }
 ; 0021 0283             }
 	SUBI R16,-1
-	RJMP _0x420087
-_0x420088:
+	RJMP _0x420083
+_0x420084:
 ; 0021 0284             printDebug("\r\n");
-	CALL SUBOPT_0xEF
+	CALL SUBOPT_0xF0
 ; 0021 0285         }
 ; 0021 0286         delay_ms(20);
-_0x420085:
+_0x420081:
 	CALL SUBOPT_0x2C
 	CALL _delay_ms
-; 0021 0287         iWizConfigSend(viCmdLocalPort,viWizReadBuffer);
+; 0021 0287         if(iWizConfigSend(viCmdSubnet,viWizReadBuffer)==1){
+	MOVW R30,R28
+	SUBI R30,LOW(-(83))
+	SBCI R31,HIGH(-(83))
+	CALL SUBOPT_0xEE
+	RCALL _iWizConfigSend
+	CPI  R30,LOW(0x1)
+	BRNE _0x420087
+; 0021 0288             iWizConfigIPParser(iWiz100srConfig.subnet,viWizReadBuffer);
+	__POINTW1MN _iWiz100srConfig,17
+	CALL SUBOPT_0xEE
+	RCALL _iWizConfigIPParser
+; 0021 0289             printDebug("[iWizReadConfig]Subnet mask:");
+	__POINTD1FN _0x420000,489
+	CALL SUBOPT_0x0
+; 0021 028A             for(viI=0;viI<sizeof(iWiz100srConfig.subnet);viI++){
+	LDI  R16,LOW(0)
+_0x420089:
+	CPI  R16,4
+	BRSH _0x42008A
+; 0021 028B                 if(viI!=sizeof(iWiz100srConfig.subnet)-1){
+	CPI  R16,3
+	BREQ _0x42008B
+; 0021 028C                     printDebug("%02x.",iWiz100srConfig.subnet[viI]);
+	CALL SUBOPT_0xF1
+	RJMP _0x4200CE
+; 0021 028D                 }else{
+_0x42008B:
+; 0021 028E                     printDebug("%02x",iWiz100srConfig.subnet[viI]);
+	CALL SUBOPT_0xEF
+_0x4200CE:
+	CALL __PUTPARD1
+	__POINTW2MN _iWiz100srConfig,17
+	CALL SUBOPT_0xF2
+	CALL SUBOPT_0x64
+; 0021 028F                 }
+; 0021 0290             }
+	SUBI R16,-1
+	RJMP _0x420089
+_0x42008A:
+; 0021 0291             printDebug("\r\n");
+	CALL SUBOPT_0xF0
+; 0021 0292         }
+; 0021 0293         delay_ms(20);
+_0x420087:
+	CALL SUBOPT_0x2C
+	CALL _delay_ms
+; 0021 0294         if(iWizConfigSend(viCmdGateWay,viWizReadBuffer)==1){
+	MOVW R30,R28
+	SUBI R30,LOW(-(78))
+	SBCI R31,HIGH(-(78))
+	CALL SUBOPT_0xEE
+	RCALL _iWizConfigSend
+	CPI  R30,LOW(0x1)
+	BRNE _0x42008D
+; 0021 0295             iWizConfigIPParser(iWiz100srConfig.gateWay,viWizReadBuffer);
+	__POINTW1MN _iWiz100srConfig,21
+	CALL SUBOPT_0xEE
+	RCALL _iWizConfigIPParser
+; 0021 0296             printDebug("[iWizReadConfig]Gateway:");
+	__POINTD1FN _0x420000,518
+	CALL SUBOPT_0x0
+; 0021 0297             for(viI=0;viI<sizeof(iWiz100srConfig.gateWay);viI++){
+	LDI  R16,LOW(0)
+_0x42008F:
+	CPI  R16,4
+	BRSH _0x420090
+; 0021 0298                 if(viI!=sizeof(iWiz100srConfig.gateWay)-1){
+	CPI  R16,3
+	BREQ _0x420091
+; 0021 0299                     printDebug("%02x.",iWiz100srConfig.gateWay[viI]);
+	CALL SUBOPT_0xF1
+	RJMP _0x4200CF
+; 0021 029A                 }else{
+_0x420091:
+; 0021 029B                     printDebug("%02x",iWiz100srConfig.gateWay[viI]);
+	CALL SUBOPT_0xEF
+_0x4200CF:
+	CALL __PUTPARD1
+	__POINTW2MN _iWiz100srConfig,21
+	CALL SUBOPT_0xF2
+	CALL SUBOPT_0x64
+; 0021 029C                 }
+; 0021 029D             }
+	SUBI R16,-1
+	RJMP _0x42008F
+_0x420090:
+; 0021 029E             printDebug("\r\n");
+	CALL SUBOPT_0xF0
+; 0021 029F         }
+; 0021 02A0         delay_ms(20);
+_0x42008D:
+	CALL SUBOPT_0x2C
+	CALL _delay_ms
+; 0021 02A1         iWizConfigSend(viCmdLocalPort,viWizReadBuffer);
 	MOVW R30,R28
 	SUBI R30,LOW(-(73))
 	SBCI R31,HIGH(-(73))
-	CALL SUBOPT_0xED
+	CALL SUBOPT_0xEE
 	RCALL _iWizConfigSend
-; 0021 0288         iWizConfigSend(viCmdIPMethod,viWizReadBuffer);
+; 0021 02A2         iWizConfigSend(viCmdIPMethod,viWizReadBuffer);
 	MOVW R30,R28
 	SUBI R30,LOW(-(68))
 	SBCI R31,HIGH(-(68))
-	CALL SUBOPT_0xED
+	CALL SUBOPT_0xEE
 	RCALL _iWizConfigSend
-; 0021 0289         iWizConfigSend(viCmdOperMode,viWizReadBuffer);
+; 0021 02A3         iWizConfigSend(viCmdOperMode,viWizReadBuffer);
 	MOVW R30,R28
 	ADIW R30,63
-	CALL SUBOPT_0xED
+	CALL SUBOPT_0xEE
 	RCALL _iWizConfigSend
-; 0021 028A         delay_ms(20);
+; 0021 02A4         delay_ms(20);
 	CALL SUBOPT_0x2C
 	CALL _delay_ms
-; 0021 028B         if(iWizConfigSend(viCmdCmdDomainName,viWizReadBuffer)){
+; 0021 02A5         if(iWizConfigSend(viCmdCmdDomainName,viWizReadBuffer)){
 	MOVW R30,R28
 	ADIW R30,43
-	CALL SUBOPT_0xED
+	CALL SUBOPT_0xEE
 	RCALL _iWizConfigSend
 	CPI  R30,0
-	BREQ _0x42008B
-; 0021 028C             memcpy(iWiz100srConfig.sdn,&viWizReadBuffer[2],sizeof(iWiz100srConfig.sdn));
+	BREQ _0x420093
+; 0021 02A6             memcpy(iWiz100srConfig.sdn,&viWizReadBuffer[2],sizeof(iWiz100srConfig.sdn));
 	__POINTW1MN _iWiz100srConfig,56
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0xA7
 	LDI  R26,LOW(32)
-	CALL SUBOPT_0xD1
-; 0021 028D             printDebug("[iWizReadConfig]SDN:%s\r\n",iWiz100srConfig.sdn);
-	__POINTD1FN _0x420000,445
+	CALL SUBOPT_0xD0
+; 0021 02A7             printDebug("[iWizReadConfig]SDN:%s\r\n",iWiz100srConfig.sdn);
+	__POINTD1FN _0x420000,543
 	CALL __PUTPARD1
 	__POINTW1MN _iWiz100srConfig,56
 	CALL SUBOPT_0x62
 	CALL SUBOPT_0x66
-; 0021 028E         }
-; 0021 028F 
-; 0021 0290 
-; 0021 0291 
-; 0021 0292         index0Buffer = 0;
-_0x42008B:
+; 0021 02A8         }
+; 0021 02A9 
+; 0021 02AA 
+; 0021 02AB 
+; 0021 02AC         index0Buffer = 0;
+_0x420093:
 	CALL SUBOPT_0xD9
-; 0021 0293         for(viI=0;viI<strlen(viCmdRestart);viI++){
+; 0021 02AD         for(viI=0;viI<strlen(viCmdRestart);viI++){
 	LDI  R16,LOW(0)
-_0x42008D:
+_0x420095:
 	MOVW R26,R28
 	ADIW R26,38
-	CALL SUBOPT_0xEB
-	BRSH _0x42008E
-; 0021 0294             putchar0(viCmdRestart[viI]);
+	CALL SUBOPT_0xEC
+	BRSH _0x420096
+; 0021 02AE             putchar0(viCmdRestart[viI]);
 	CALL SUBOPT_0x36
 	MOVW R26,R28
 	ADIW R26,38
 	CALL SUBOPT_0x16
-; 0021 0295         }
+; 0021 02AF         }
 	SUBI R16,-1
-	RJMP _0x42008D
-_0x42008E:
-; 0021 0296         delay_ms(20);
+	RJMP _0x420095
+_0x420096:
+; 0021 02B0         delay_ms(20);
 	CALL SUBOPT_0x2C
 	CALL _delay_ms
-; 0021 0297         //wait wiz module response
-; 0021 0298         TIMER_setTimer(&timeout, 3);
+; 0021 02B1         //wait wiz module response
+; 0021 02B2         TIMER_setTimer(&timeout, 3);
 	CALL SUBOPT_0xDB
-	CALL SUBOPT_0xE0
-; 0021 0299         while(!TIMER_checkTimerExceed(timeout)){
-_0x42008F:
-	CALL SUBOPT_0xEC
-	BRNE _0x420091
-; 0021 029A            #asm("wdr")
+	CALL SUBOPT_0xE1
+; 0021 02B3         while(!TIMER_checkTimerExceed(timeout)){
+_0x420097:
+	CALL SUBOPT_0xED
+	BRNE _0x420099
+; 0021 02B4            #asm("wdr")
 	wdr
-; 0021 029B            if(index0Buffer>0){
-	CALL SUBOPT_0xE3
-	BRSH _0x420092
-; 0021 029C                delay_ms(100);
+; 0021 02B5            if(index0Buffer>0){
+	CALL SUBOPT_0xE4
+	BRSH _0x42009A
+; 0021 02B6                delay_ms(100);
 	CALL SUBOPT_0x8
-; 0021 029D                memset(viWizReadBuffer,0,sizeof(viWizReadBuffer));
+; 0021 02B7                memset(viWizReadBuffer,0,sizeof(viWizReadBuffer));
 	CALL SUBOPT_0x8A
 	LDI  R30,LOW(0)
 	ST   -Y,R30
 	LDI  R26,LOW(30)
 	CALL SUBOPT_0xDA
-; 0021 029E                memcpy(&viWizReadBuffer[0],&rx0Buffer[0],index0Buffer);
+; 0021 02B8                memcpy(&viWizReadBuffer[0],&rx0Buffer[0],index0Buffer);
 	CALL SUBOPT_0x8A
 	CALL SUBOPT_0xDC
-; 0021 029F 
-; 0021 02A0                pviCheckResponse = strstr(viWizReadBuffer,"<S>");
+; 0021 02B9 
+; 0021 02BA                pviCheckResponse = strstr(viWizReadBuffer,"<S>");
 	CALL SUBOPT_0x8A
-	__POINTW2MN _0x42006F,4
+	__POINTW2MN _0x420077,4
 	CALL _strstr
 	MOVW R18,R30
-; 0021 02A1                if(pviCheckResponse){
-; 0021 02A2     #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 02A3                    printDebug("[iWizReadConfig]Restart Wiz100SR success.\r\n");
-; 0021 02A4     #endif
-; 0021 02A5                }else{
-; 0021 02A6     #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 02A7                    printDebug("[iWizReadConfig]Restart Wiz100SR unsuccess.\r\n");
-; 0021 02A8     #endif
-; 0021 02A9                }
-; 0021 02AA                break;
-	RJMP _0x420091
-; 0021 02AB            }
-; 0021 02AC         }
-_0x420092:
-	RJMP _0x42008F
-_0x420091:
-; 0021 02AD     }
-; 0021 02AE 
-; 0021 02AF 
-; 0021 02B0     index0Buffer = 0;
-_0x420072:
+; 0021 02BB                if(pviCheckResponse){
+; 0021 02BC     #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 02BD                    printDebug("[iWizReadConfig]Restart Wiz100SR success.\r\n");
+; 0021 02BE     #endif
+; 0021 02BF                }else{
+; 0021 02C0     #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 02C1                    printDebug("[iWizReadConfig]Restart Wiz100SR unsuccess.\r\n");
+; 0021 02C2     #endif
+; 0021 02C3                }
+; 0021 02C4                break;
+	RJMP _0x420099
+; 0021 02C5            }
+; 0021 02C6         }
+_0x42009A:
+	RJMP _0x420097
+_0x420099:
+; 0021 02C7     }
+; 0021 02C8 
+; 0021 02C9 
+; 0021 02CA     index0Buffer = 0;
+_0x42007A:
 	CALL SUBOPT_0xD9
-; 0021 02B1     viConfigMode = WIZ_CONFIG_NORMAL_MODE;
+; 0021 02CB     viConfigMode = WIZ_CONFIG_NORMAL_MODE;
 	LDI  R17,LOW(6)
-; 0021 02B2 }
+; 0021 02CC }
 	CALL __LOADLOCR4
 	ADIW R28,63
 	ADIW R28,39
 	RET
 
 	.DSEG
-_0x42006F:
+_0x420077:
 	.BYTE 0x8
 ;
 ;iChar_t iWizConfigSend(iChar_t * pviCmd_arg,iChar_t *pviDataBuff_arg){
-; 0021 02B4 iChar_t iWizConfigSend(iChar_t * pviCmd_arg,iChar_t *pviDataBuff_arg){
+; 0021 02CE iChar_t iWizConfigSend(iChar_t * pviCmd_arg,iChar_t *pviDataBuff_arg){
 
 	.CSEG
 _iWizConfigSend:
-; 0021 02B5     iChar_t viReturn = 0;
-; 0021 02B6     TIMER   timeout;
-; 0021 02B7     iChar_t viI = 0;
-; 0021 02B8     iChar_t * pviCheckResponse;
-; 0021 02B9 
-; 0021 02BA     index0Buffer = 0;
+; 0021 02CF     iChar_t viReturn = 0;
+; 0021 02D0     TIMER   timeout;
+; 0021 02D1     iChar_t viI = 0;
+; 0021 02D2     iChar_t * pviCheckResponse;
+; 0021 02D3 
+; 0021 02D4     index0Buffer = 0;
 	ST   -Y,R27
 	ST   -Y,R26
 	SBIW R28,4
@@ -18849,91 +18925,91 @@ _iWizConfigSend:
 	LDI  R17,0
 	LDI  R16,0
 	CALL SUBOPT_0xD9
-; 0021 02BB     for(viI=0;viI<strlen(pviCmd_arg);viI++){
+; 0021 02D5     for(viI=0;viI<strlen(pviCmd_arg);viI++){
 	LDI  R16,LOW(0)
-_0x420096:
+_0x42009E:
 	LDD  R26,Y+10
 	LDD  R27,Y+10+1
-	CALL SUBOPT_0xEB
-	BRSH _0x420097
-; 0021 02BC         putchar0(*(pviCmd_arg+viI));
+	CALL SUBOPT_0xEC
+	BRSH _0x42009F
+; 0021 02D6         putchar0(*(pviCmd_arg+viI));
 	CALL SUBOPT_0x36
 	LDD  R26,Y+10
 	LDD  R27,Y+10+1
 	CALL SUBOPT_0x16
-; 0021 02BD     }
+; 0021 02D7     }
 	SUBI R16,-1
-	RJMP _0x420096
-_0x420097:
-; 0021 02BE 
-; 0021 02BF     //wait wiz module response
-; 0021 02C0     TIMER_setTimer(&timeout, 1);
+	RJMP _0x42009E
+_0x42009F:
+; 0021 02D8 
+; 0021 02D9     //wait wiz module response
+; 0021 02DA     TIMER_setTimer(&timeout, 1);
 	CALL SUBOPT_0xDB
-	CALL SUBOPT_0xAD
-; 0021 02C1     while(!TIMER_checkTimerExceed(timeout)){
-_0x420098:
-	CALL SUBOPT_0xEC
-	BRNE _0x42009A
-; 0021 02C2        #asm("wdr")
+	CALL SUBOPT_0xAC
+; 0021 02DB     while(!TIMER_checkTimerExceed(timeout)){
+_0x4200A0:
+	CALL SUBOPT_0xED
+	BRNE _0x4200A2
+; 0021 02DC        #asm("wdr")
 	wdr
-; 0021 02C3        if(index0Buffer>0){
-	CALL SUBOPT_0xE3
-	BRSH _0x42009B
-; 0021 02C4            delay_ms(100);
+; 0021 02DD        if(index0Buffer>0){
+	CALL SUBOPT_0xE4
+	BRSH _0x4200A3
+; 0021 02DE            delay_ms(100);
 	CALL SUBOPT_0x8
-; 0021 02C5            memset(pviDataBuff_arg,0,sizeof(pviDataBuff_arg));
+; 0021 02DF            memset(pviDataBuff_arg,0,sizeof(pviDataBuff_arg));
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
-	CALL SUBOPT_0xC4
+	CALL SUBOPT_0xC3
 	CALL SUBOPT_0x7
 	CALL _memset
-; 0021 02C6            memcpy(pviDataBuff_arg,&rx0Buffer[0],index0Buffer);
-	CALL SUBOPT_0xF2
+; 0021 02E0            memcpy(pviDataBuff_arg,&rx0Buffer[0],index0Buffer);
+	CALL SUBOPT_0xF3
 	CALL SUBOPT_0xDC
-; 0021 02C7 
-; 0021 02C8            pviCheckResponse = strstr(pviDataBuff_arg,"<S");
-	CALL SUBOPT_0xF2
-	__POINTW2MN _0x42009C,0
+; 0021 02E1 
+; 0021 02E2            pviCheckResponse = strstr(pviDataBuff_arg,"<S");
+	CALL SUBOPT_0xF3
+	__POINTW2MN _0x4200A4,0
 	CALL _strstr
 	MOVW R18,R30
-; 0021 02C9            if(pviCheckResponse){
-; 0021 02CA #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 02CB                printDebug("[iWizReadConfig]response data[.\r\n");
-; 0021 02CC                print_payload(pviDataBuff_arg,strlen(pviDataBuff_arg));
-; 0021 02CD                printDebug("].\r\n");
-; 0021 02CE #endif
-; 0021 02CF            }else{
-; 0021 02D0 #if (WIZ100SR_PRINT_DEBUG == 1)
-; 0021 02D1                printDebug("[iWizReadConfig]wiz is not response.\r\n");
-; 0021 02D2 #endif
-; 0021 02D3            }
-; 0021 02D4            break;
-	RJMP _0x42009A
-; 0021 02D5        }
-; 0021 02D6     }
-_0x42009B:
-	RJMP _0x420098
-_0x42009A:
-; 0021 02D7     viReturn = 1;
+; 0021 02E3            if(pviCheckResponse){
+; 0021 02E4 #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 02E5                printDebug("[iWizReadConfig]response data[.\r\n");
+; 0021 02E6                print_payload(pviDataBuff_arg,strlen(pviDataBuff_arg));
+; 0021 02E7                printDebug("].\r\n");
+; 0021 02E8 #endif
+; 0021 02E9            }else{
+; 0021 02EA #if (WIZ100SR_PRINT_DEBUG == 1)
+; 0021 02EB                printDebug("[iWizReadConfig]wiz is not response.\r\n");
+; 0021 02EC #endif
+; 0021 02ED            }
+; 0021 02EE            break;
+	RJMP _0x4200A2
+; 0021 02EF        }
+; 0021 02F0     }
+_0x4200A3:
+	RJMP _0x4200A0
+_0x4200A2:
+; 0021 02F1     viReturn = 1;
 	LDI  R17,LOW(1)
-; 0021 02D8     return viReturn;
+; 0021 02F2     return viReturn;
 	MOV  R30,R17
 	CALL __LOADLOCR4
 	ADIW R28,12
 	RET
-; 0021 02D9 }
+; 0021 02F3 }
 
 	.DSEG
-_0x42009C:
+_0x4200A4:
 	.BYTE 0x3
 ;
 ;unsigned int* hex_decode(char *in, unsigned int len, unsigned int *out)
-; 0021 02DC {
+; 0021 02F6 {
 
 	.CSEG
-; 0021 02DD     unsigned int i, t, hn, ln;
-; 0021 02DE 
-; 0021 02DF     for (t = 0,i = 0; i < len; i+=2,++t) {
+; 0021 02F7     unsigned int i, t, hn, ln;
+; 0021 02F8 
+; 0021 02F9     for (t = 0,i = 0; i < len; i+=2,++t) {
 ;	*in -> Y+12
 ;	len -> Y+10
 ;	*out -> Y+8
@@ -18941,26 +19017,26 @@ _0x42009C:
 ;	t -> R18,R19
 ;	hn -> R20,R21
 ;	ln -> Y+6
-; 0021 02E0 
-; 0021 02E1             hn = in[i] > '9' ? (in[i]|32) - 'a' + 10 : in[i] - '0';
-; 0021 02E2             ln = in[i+1] > '9' ? (in[i+1]|32) - 'a' + 10 : in[i+1] - '0';
-; 0021 02E3 
-; 0021 02E4             out[t] = (hn << 4 ) | ln;
-; 0021 02E5             printf("%s",out[t]);
-; 0021 02E6     }
-; 0021 02E7     return out;
-; 0021 02E8 }
+; 0021 02FA 
+; 0021 02FB             hn = in[i] > '9' ? (in[i]|32) - 'a' + 10 : in[i] - '0';
+; 0021 02FC             ln = in[i+1] > '9' ? (in[i+1]|32) - 'a' + 10 : in[i+1] - '0';
+; 0021 02FD 
+; 0021 02FE             out[t] = (hn << 4 ) | ln;
+; 0021 02FF             printf("%s",out[t]);
+; 0021 0300     }
+; 0021 0301     return out;
+; 0021 0302 }
 ;
 ;iChar_t iWizConfigIPParser(iChar_t *pviOutData_arg,iChar_t *pviInData_arg){
-; 0021 02EA iChar_t iWizConfigIPParser(iChar_t *pviOutData_arg,iChar_t *pviInData_arg){
+; 0021 0304 iChar_t iWizConfigIPParser(iChar_t *pviOutData_arg,iChar_t *pviInData_arg){
 _iWizConfigIPParser:
-; 0021 02EB     iChar_t *ptrCh;
-; 0021 02EC     iChar_t viIP[4];   //ip,subnet,gateway
-; 0021 02ED     iInt_t viNumber;
-; 0021 02EE     iChar_t viReturn = 0;
-; 0021 02EF     iChar_t viI=0;
-; 0021 02F0 
-; 0021 02F1     ptrCh = strtok((pviInData_arg+2),".");   //2= <S
+; 0021 0305     iChar_t *ptrCh;
+; 0021 0306     iChar_t viIP[4];   //ip,subnet,gateway
+; 0021 0307     iInt_t viNumber;
+; 0021 0308     iChar_t viReturn = 0;
+; 0021 0309     iChar_t viI=0;
+; 0021 030A 
+; 0021 030B     ptrCh = strtok((pviInData_arg+2),".");   //2= <S
 	ST   -Y,R27
 	ST   -Y,R26
 	SBIW R28,4
@@ -18976,15 +19052,15 @@ _iWizConfigIPParser:
 	LDI  R20,0
 	LDD  R30,Y+10
 	LDD  R31,Y+10+1
-	CALL SUBOPT_0xF3
-; 0021 02F2 
-; 0021 02F3 	viI=0;
-; 0021 02F4 	while(ptrCh != NULL) {
-_0x4200A8:
+	CALL SUBOPT_0xF4
+; 0021 030C 
+; 0021 030D 	viI=0;
+; 0021 030E 	while(ptrCh != NULL) {
+_0x4200B0:
 	MOV  R0,R16
 	OR   R0,R17
-	BREQ _0x4200AA
-; 0021 02F5 		viIP[viI] = (unsigned char)(atoi(ptrCh));
+	BREQ _0x4200B2
+; 0021 030F 		viIP[viI] = (unsigned char)(atoi(ptrCh));
 	MOV  R30,R20
 	LDI  R31,0
 	MOVW R26,R28
@@ -18998,43 +19074,43 @@ _0x4200A8:
 	POP  R26
 	POP  R27
 	ST   X,R30
-; 0021 02F6 		ptrCh = strtok(NULL,".");
-	CALL SUBOPT_0xDF
-	CALL SUBOPT_0xF4
-; 0021 02F7 		viI++;
+; 0021 0310 		ptrCh = strtok(NULL,".");
+	CALL SUBOPT_0xE0
+	CALL SUBOPT_0xF5
+; 0021 0311 		viI++;
 	SUBI R20,-1
-; 0021 02F8 	}
-	RJMP _0x4200A8
-_0x4200AA:
-; 0021 02F9     memcpy(pviOutData_arg,viIP,4);
+; 0021 0312 	}
+	RJMP _0x4200B0
+_0x4200B2:
+; 0021 0313     memcpy(pviOutData_arg,viIP,4);
 	CALL SUBOPT_0x77
 	CALL SUBOPT_0x8A
 	CALL SUBOPT_0xA
 	CALL _memcpy
-; 0021 02FA //	printf("\r\n");
-; 0021 02FB //	for(i=0; i<4; i++) {
-; 0021 02FC //		printf("%02x ",ip[i]);
-; 0021 02FD //	}
-; 0021 02FE 
-; 0021 02FF     viReturn = 1;
+; 0021 0314 //	printf("\r\n");
+; 0021 0315 //	for(i=0; i<4; i++) {
+; 0021 0316 //		printf("%02x ",ip[i]);
+; 0021 0317 //	}
+; 0021 0318 
+; 0021 0319     viReturn = 1;
 	LDI  R21,LOW(1)
-; 0021 0300     return viReturn;
+; 0021 031A     return viReturn;
 	MOV  R30,R21
 	CALL __LOADLOCR6
 	ADIW R28,14
 	RET
-; 0021 0301 }
+; 0021 031B }
 ;
 ;iChar_t iWizConfigMACParser(iUChar_t *pviOutData_arg,iChar_t *pviInData_arg){
-; 0021 0303 iChar_t iWizConfigMACParser(iUChar_t *pviOutData_arg,iChar_t *pviInData_arg){
+; 0021 031D iChar_t iWizConfigMACParser(iUChar_t *pviOutData_arg,iChar_t *pviInData_arg){
 _iWizConfigMACParser:
-; 0021 0304     iChar_t *ptrCh;
-; 0021 0305     iChar_t viMAC[12];
-; 0021 0306     iInt_t viNumber;
-; 0021 0307     iChar_t viReturn = 0;
-; 0021 0308     iChar_t viI=0;
-; 0021 0309 
-; 0021 030A     ptrCh = strtok((pviInData_arg+2),".");    //2= <S
+; 0021 031E     iChar_t *ptrCh;
+; 0021 031F     iChar_t viMAC[12];
+; 0021 0320     iInt_t viNumber;
+; 0021 0321     iChar_t viReturn = 0;
+; 0021 0322     iChar_t viI=0;
+; 0021 0323 
+; 0021 0324     ptrCh = strtok((pviInData_arg+2),".");    //2= <S
 	ST   -Y,R27
 	ST   -Y,R26
 	SBIW R28,12
@@ -19050,15 +19126,15 @@ _iWizConfigMACParser:
 	LDI  R20,0
 	LDD  R30,Y+18
 	LDD  R31,Y+18+1
-	CALL SUBOPT_0xF3
-; 0021 030B 	viI=0;
-; 0021 030C 	while(ptrCh != NULL){
-_0x4200AB:
+	CALL SUBOPT_0xF4
+; 0021 0325 	viI=0;
+; 0021 0326 	while(ptrCh != NULL){
+_0x4200B3:
 	MOV  R0,R16
 	OR   R0,R17
-	BREQ _0x4200AD
-; 0021 030D 		//viMAC[viI] = iMapAsciiHexToChar(ptrCh);
-; 0021 030E         memcpy((pviOutData_arg+viI),ptrCh,2);
+	BREQ _0x4200B5
+; 0021 0327 		//viMAC[viI] = iMapAsciiHexToChar(ptrCh);
+; 0021 0328         memcpy((pviOutData_arg+viI),ptrCh,2);
 	MOV  R30,R20
 	LDI  R31,0
 	LDD  R26,Y+20
@@ -19068,31 +19144,31 @@ _0x4200AB:
 	ST   -Y,R16
 	CALL SUBOPT_0x7
 	CALL _memcpy
-; 0021 030F 		ptrCh = strtok(NULL,".");
-	CALL SUBOPT_0xDF
-	CALL SUBOPT_0xF4
-; 0021 0310 		viI+=2;
+; 0021 0329 		ptrCh = strtok(NULL,".");
+	CALL SUBOPT_0xE0
+	CALL SUBOPT_0xF5
+; 0021 032A 		viI+=2;
 	SUBI R20,-LOW(2)
-; 0021 0311 	}
-	RJMP _0x4200AB
-_0x4200AD:
-; 0021 0312     viReturn = 1;
+; 0021 032B 	}
+	RJMP _0x4200B3
+_0x4200B5:
+; 0021 032C     viReturn = 1;
 	LDI  R21,LOW(1)
-; 0021 0313     return viReturn;
+; 0021 032D     return viReturn;
 	MOV  R30,R21
 	CALL __LOADLOCR6
 	ADIW R28,22
 	RET
-; 0021 0314 }
+; 0021 032E }
 ;
 ;iChar_t iMapAsciiHexToChar(iChar_t *chIn_arg){      //ascii hex 2 byte => char 1 byte
-; 0021 0316 iChar_t iMapAsciiHexToChar(iChar_t *chIn_arg){
-; 0021 0317 	iChar_t ivChar=0x00;
-; 0021 0318 	iChar_t *ptrCh;
-; 0021 0319 	iChar_t chReturn;
-; 0021 031A 	iChar_t i,j,k,l;
-; 0021 031B 
-; 0021 031C 	ptrCh = chIn_arg;
+; 0021 0330 iChar_t iMapAsciiHexToChar(iChar_t *chIn_arg){
+; 0021 0331 	iChar_t ivChar=0x00;
+; 0021 0332 	iChar_t *ptrCh;
+; 0021 0333 	iChar_t chReturn;
+; 0021 0334 	iChar_t i,j,k,l;
+; 0021 0335 
+; 0021 0336 	ptrCh = chIn_arg;
 ;	*chIn_arg -> Y+8
 ;	ivChar -> R17
 ;	*ptrCh -> R18,R19
@@ -19101,40 +19177,40 @@ _0x4200AD:
 ;	j -> R20
 ;	k -> Y+7
 ;	l -> Y+6
-; 0021 031D 
-; 0021 031E 	for(i=0,j=0x41,k=0x61,l=10; i<6; i++,j++,k++,l++) { //41='A' //61='a'
-; 0021 031F 		//printDebug("[hex1]%02x:%02x:%02x (%d) \r\n",i,j,k,l);
-; 0021 0320 		if((*(ptrCh) == j) || (*(ptrCh) == k)) {
-; 0021 0321 			ivChar = l;
-; 0021 0322 			break;
-; 0021 0323 		}
-; 0021 0324 	}
-; 0021 0325 	for(i=0,j=0x30; i<10; i++,j++) { //0-9 = 0x30-0x39
-; 0021 0326 		if(*(ptrCh) == j) {
-; 0021 0327 			ivChar = i;
-; 0021 0328 			break;
-; 0021 0329 		}
-; 0021 032A 	}
-; 0021 032B 	//printDebug("hex1:%02x \r\n",ivChar);
-; 0021 032C 	ptrCh++;
-; 0021 032D 
-; 0021 032E 	for(i=0,j=0x41,k=0x61,l=10; i<6; i++,j++,k++,l++) { //41='A' //61='a'
-; 0021 032F 		//printDebug("[hex1]%02x:%02x:%02x (%d) \r\n",i,j,k,l);
-; 0021 0330 		if((*(ptrCh) == j) || (*(ptrCh) == k)) {
-; 0021 0331 			ivChar = (ivChar<<4)|l;
-; 0021 0332 			break;
-; 0021 0333 		}
-; 0021 0334 	}
-; 0021 0335 	for(i=0,j=0x30; i<10; i++,j++) { //0-9 = 0x30-0x39
-; 0021 0336 		if(*(ptrCh) == j) {
-; 0021 0337 			ivChar = (ivChar<<4)|i;
-; 0021 0338 			break;
-; 0021 0339 		}
-; 0021 033A 	}
-; 0021 033B 	//printDebug("hex2:%02x \r\n",ivChar);
-; 0021 033C 	chReturn = ivChar;
-; 0021 033D 	return chReturn;
-; 0021 033E }
+; 0021 0337 
+; 0021 0338 	for(i=0,j=0x41,k=0x61,l=10; i<6; i++,j++,k++,l++) { //41='A' //61='a'
+; 0021 0339 		//printDebug("[hex1]%02x:%02x:%02x (%d) \r\n",i,j,k,l);
+; 0021 033A 		if((*(ptrCh) == j) || (*(ptrCh) == k)) {
+; 0021 033B 			ivChar = l;
+; 0021 033C 			break;
+; 0021 033D 		}
+; 0021 033E 	}
+; 0021 033F 	for(i=0,j=0x30; i<10; i++,j++) { //0-9 = 0x30-0x39
+; 0021 0340 		if(*(ptrCh) == j) {
+; 0021 0341 			ivChar = i;
+; 0021 0342 			break;
+; 0021 0343 		}
+; 0021 0344 	}
+; 0021 0345 	//printDebug("hex1:%02x \r\n",ivChar);
+; 0021 0346 	ptrCh++;
+; 0021 0347 
+; 0021 0348 	for(i=0,j=0x41,k=0x61,l=10; i<6; i++,j++,k++,l++) { //41='A' //61='a'
+; 0021 0349 		//printDebug("[hex1]%02x:%02x:%02x (%d) \r\n",i,j,k,l);
+; 0021 034A 		if((*(ptrCh) == j) || (*(ptrCh) == k)) {
+; 0021 034B 			ivChar = (ivChar<<4)|l;
+; 0021 034C 			break;
+; 0021 034D 		}
+; 0021 034E 	}
+; 0021 034F 	for(i=0,j=0x30; i<10; i++,j++) { //0-9 = 0x30-0x39
+; 0021 0350 		if(*(ptrCh) == j) {
+; 0021 0351 			ivChar = (ivChar<<4)|i;
+; 0021 0352 			break;
+; 0021 0353 		}
+; 0021 0354 	}
+; 0021 0355 	//printDebug("hex2:%02x \r\n",ivChar);
+; 0021 0356 	chReturn = ivChar;
+; 0021 0357 	return chReturn;
+; 0021 0358 }
 ;#include "interruptTask.h"
 ;#include "timer.h"
 	#ifndef __SLEEP_DEFINED__
@@ -19373,10 +19449,10 @@ _iInitSDCard:
 	ST   -Y,R17
 ;	viFReturn -> R17
 ;	viOutDir -> Y+1
-	CALL SUBOPT_0xF5
+	CALL SUBOPT_0xF6
 	LDI  R26,LOW(_viDirDataPath)
 	LDI  R27,HIGH(_viDirDataPath)
-	CALL SUBOPT_0xF6
+	CALL SUBOPT_0xF7
 ; 0026 0070     if(viFReturn == FR_OK){
 	BRNE _0x4C0016
 ; 0026 0071         printDebug("[iInitSDCard]Record dir is exist.\r\n");
@@ -19385,13 +19461,13 @@ _iInitSDCard:
 ; 0026 0072     }else{
 _0x4C0016:
 ; 0026 0073         iFDisplayReturn(viFReturn);
-	CALL SUBOPT_0xF7
+	CALL SUBOPT_0xF8
 ; 0026 0074         if(viFReturn == FR_NO_PATH){
 	BRNE _0x4C0018
 ; 0026 0075             viFReturn = f_mkdir(viFolderDataName);
 	LDI  R26,LOW(_viFolderDataName)
 	LDI  R27,HIGH(_viFolderDataName)
-	CALL SUBOPT_0xF8
+	CALL SUBOPT_0xF9
 ; 0026 0076             if(viFReturn == FR_OK){
 	BRNE _0x4C0019
 ; 0026 0077                printDebug("[iInitSDCard]mkdir Record success.\r\n");
@@ -19455,10 +19531,10 @@ _0x4C0018:
 ; 0026 00A9 //    }
 ; 0026 00AA 
 ; 0026 00AB     viFReturn = f_opendir(&viOutDir, viDirErrorPath);
-	CALL SUBOPT_0xF5
+	CALL SUBOPT_0xF6
 	LDI  R26,LOW(_viDirErrorPath)
 	LDI  R27,HIGH(_viDirErrorPath)
-	CALL SUBOPT_0xF6
+	CALL SUBOPT_0xF7
 ; 0026 00AC     if(viFReturn == FR_OK){
 	BRNE _0x4C001B
 ; 0026 00AD         printDebug("[iInitSDCard]Error dir is exist.\r\n");
@@ -19467,13 +19543,13 @@ _0x4C0018:
 ; 0026 00AE     }else{
 _0x4C001B:
 ; 0026 00AF         iFDisplayReturn(viFReturn);
-	CALL SUBOPT_0xF7
+	CALL SUBOPT_0xF8
 ; 0026 00B0         if(viFReturn == FR_NO_PATH){
 	BRNE _0x4C001D
 ; 0026 00B1             viFReturn = f_mkdir(viFolderErrorName);
 	LDI  R26,LOW(_viFolderErrorName)
 	LDI  R27,HIGH(_viFolderErrorName)
-	CALL SUBOPT_0xF8
+	CALL SUBOPT_0xF9
 ; 0026 00B2             if(viFReturn == FR_OK){
 	BRNE _0x4C001E
 ; 0026 00B3                printDebug("[iInitSDCard]mkdir Error success.\r\n");
@@ -19492,10 +19568,10 @@ _0x4C0068:
 _0x4C001D:
 ; 0026 00B9 
 ; 0026 00BA     viFReturn = f_opendir(&viOutDir, viDirConfigPath);
-	CALL SUBOPT_0xF5
+	CALL SUBOPT_0xF6
 	LDI  R26,LOW(_viDirConfigPath)
 	LDI  R27,HIGH(_viDirConfigPath)
-	CALL SUBOPT_0xF6
+	CALL SUBOPT_0xF7
 ; 0026 00BB     if(viFReturn == FR_OK){
 	BRNE _0x4C0020
 ; 0026 00BC         printDebug("[iInitSDCard]Config dir is exist.\r\n");
@@ -19504,13 +19580,13 @@ _0x4C001D:
 ; 0026 00BD     }else{
 _0x4C0020:
 ; 0026 00BE         iFDisplayReturn(viFReturn);
-	CALL SUBOPT_0xF7
+	CALL SUBOPT_0xF8
 ; 0026 00BF         if(viFReturn == FR_NO_PATH){
 	BRNE _0x4C0022
 ; 0026 00C0             viFReturn = f_mkdir(viFolderConfigName);
 	LDI  R26,LOW(_viFolderConfigName)
 	LDI  R27,HIGH(_viFolderConfigName)
-	CALL SUBOPT_0xF8
+	CALL SUBOPT_0xF9
 ; 0026 00C1             if(viFReturn == FR_OK){
 	BRNE _0x4C0023
 ; 0026 00C2                printDebug("[iInitSDCard]mkdir Config success.\r\n");
@@ -19733,7 +19809,7 @@ _iFRwite:
 ; 0026 0125     //print_payload((const iChar_t *)pviDataBuff,ivLength_arg);
 ; 0026 0126     //print_payload(pviDataBuffRef,ivLength_arg);
 ; 0026 0127     viFilePtr = (FIL * const)malloc(sizeof(FIL));
-	CALL SUBOPT_0xF9
+	CALL SUBOPT_0xFA
 ;	*pviDataBuff -> Y+16
 ;	ivLength_arg -> Y+14
 ;	*pviDirPath_arg -> Y+12
@@ -19747,31 +19823,31 @@ _iFRwite:
 	LDD  R31,Y+16+1
 	STD  Y+6,R30
 	STD  Y+6+1,R31
-	CALL SUBOPT_0xFA
+	CALL SUBOPT_0xFB
 ; 0026 0128     if(viFilePtr!=NULL){
 	BRNE PC+3
 	JMP _0x4C003B
 ; 0026 0129         if((viFReturn=f_chdir(pviDirPath_arg))==FR_OK){
 	LDD  R26,Y+12
 	LDD  R27,Y+12+1
-	CALL SUBOPT_0xFB
+	CALL SUBOPT_0xFC
 	BREQ PC+3
 	JMP _0x4C003C
 ; 0026 012A            printDebug("[iFRwite]Current directory : %s.\r\n",pviDirPath_arg);
 	__POINTD1FN _0x4C0000,1040
-	CALL SUBOPT_0xFC
+	CALL SUBOPT_0xFD
 	CALL SUBOPT_0x66
 ; 0026 012B            if((viFReturn=f_open(viFilePtr,pviFilename_arg,FA_WRITE|FA_OPEN_ALWAYS))==FR_OK){
 	ST   -Y,R17
 	ST   -Y,R16
 	CALL SUBOPT_0x77
 	LDI  R26,LOW(18)
-	CALL SUBOPT_0xFD
+	CALL SUBOPT_0xFE
 	BREQ PC+3
 	JMP _0x4C003D
 ; 0026 012C                printDebug("[iFRwite]File %s is openned.\r\n",pviFilename_arg);
 	__POINTD1FN _0x4C0000,1075
-	CALL SUBOPT_0xFE
+	CALL SUBOPT_0xFF
 	CALL SUBOPT_0x66
 ; 0026 012D 
 ; 0026 012E                /* Move to end of the file to append data */
@@ -19782,7 +19858,7 @@ _iFRwite:
 	ST   -Y,R16
 	LDD  R26,Y+10
 	LDD  R27,Y+10+1
-	CALL SUBOPT_0xFF
+	CALL SUBOPT_0x100
 	BREQ PC+3
 	JMP _0x4C003E
 ; 0026 0132                    //printDebug("[iFRwite]Pointer(seek) of File moved(%ld).\r\n",viFilePtr->fsize);
@@ -19802,8 +19878,8 @@ _iFRwite:
 ; 0026 0136                    if((viFReturn=f_write(viFilePtr,(const iChar_t *)pviDataBuff,ivLength_arg,&nbytes))==FR_OK){    //viFReturn=f_write(viFilePtr,&pviDataBuff[0],strlen(pviDataBuff),&nbytes)
 	ST   -Y,R17
 	ST   -Y,R16
-	CALL SUBOPT_0x100
-	CALL SUBOPT_0x100
+	CALL SUBOPT_0x101
+	CALL SUBOPT_0x101
 	IN   R26,SPL
 	IN   R27,SPH
 	SBIW R26,1
@@ -19831,7 +19907,7 @@ _0x4C003F:
 	__POINTD1FN _0x4C0000,1185
 	CALL __PUTPARD1
 	MOV  R30,R19
-	CALL SUBOPT_0xBA
+	CALL SUBOPT_0xB9
 ; 0026 013A                        iFDisplayReturn(viFReturn);
 	MOV  R26,R19
 	RCALL _iFDisplayReturn
@@ -19847,7 +19923,7 @@ _0x4C003E:
 _0x4C0041:
 ; 0026 013F 
 ; 0026 0140                if((viFReturn=f_close(viFilePtr))==FR_OK){
-	CALL SUBOPT_0x101
+	CALL SUBOPT_0x102
 	BREQ _0x4C0043
 ; 0026 0141                }else{
 ; 0026 0142                   iFDisplayReturn(viFReturn);
@@ -19860,10 +19936,10 @@ _0x4C0043:
 _0x4C003D:
 ; 0026 0145                printDebug("[iFRwite]File %s : %s.[\r\n",pviFilename_arg);
 	__POINTD1FN _0x4C0000,1212
-	CALL SUBOPT_0xFE
+	CALL SUBOPT_0xFF
 	CALL SUBOPT_0x66
 ; 0026 0146                iFDisplayReturn(viFReturn);
-	CALL SUBOPT_0x102
+	CALL SUBOPT_0x103
 ; 0026 0147                printDebug("]\r\n");
 ; 0026 0148            }
 _0x4C0044:
@@ -19872,10 +19948,10 @@ _0x4C0044:
 _0x4C003C:
 ; 0026 014A            printDebug("[iFRwite]directory : %s.[\r\n",pviDirPath_arg);
 	__POINTD1FN _0x4C0000,1238
-	CALL SUBOPT_0xFC
+	CALL SUBOPT_0xFD
 	CALL SUBOPT_0x66
 ; 0026 014B            iFDisplayReturn(viFReturn);
-	CALL SUBOPT_0x102
+	CALL SUBOPT_0x103
 ; 0026 014C            printDebug("]\r\n");
 ; 0026 014D         }
 _0x4C0045:
@@ -19926,7 +20002,7 @@ _iFSize:
 ; 0026 016A     iChar_t viReturn = -1;
 ; 0026 016B 
 ; 0026 016C     viFilePtr = (FIL * const)malloc(sizeof(FIL));
-	CALL SUBOPT_0x103
+	CALL SUBOPT_0x104
 ;	*pviDirPath_arg -> Y+8
 ;	*pviFilename_arg -> Y+6
 ;	*pviOutFileSize_arg -> Y+4
@@ -19934,26 +20010,26 @@ _iFSize:
 ;	viFReturn -> R19
 ;	viReturn -> R18
 	LDI  R18,255
-	CALL SUBOPT_0xFA
+	CALL SUBOPT_0xFB
 ; 0026 016D     if(viFilePtr!=NULL){
 	BRNE PC+3
 	JMP _0x4C004B
 ; 0026 016E        if((viFReturn=f_chdir(pviDirPath_arg))==FR_OK){
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
-	CALL SUBOPT_0xFB
+	CALL SUBOPT_0xFC
 	BREQ PC+3
 	JMP _0x4C004C
 ; 0026 016F            printDebug("[iFSize]Current directory : %s.\r\n",pviDirPath_arg);
 	__POINTD1FN _0x4C0000,1435
-	CALL SUBOPT_0x104
+	CALL SUBOPT_0x105
 	CALL SUBOPT_0x66
 ; 0026 0170            if((viFReturn=f_open(viFilePtr,pviFilename_arg,FA_WRITE|FA_OPEN_ALWAYS))==FR_OK){
 	ST   -Y,R17
 	ST   -Y,R16
-	CALL SUBOPT_0xF2
+	CALL SUBOPT_0xF3
 	LDI  R26,LOW(18)
-	CALL SUBOPT_0xFD
+	CALL SUBOPT_0xFE
 	BRNE _0x4C004D
 ; 0026 0171                printDebug("[iFSize]File %s is openned.\r\n",pviFilename_arg);
 	__POINTD1FN _0x4C0000,1469
@@ -19966,7 +20042,7 @@ _iFSize:
 	__POINTD1FN _0x4C0000,1499
 	CALL __PUTPARD1
 	MOVW R30,R16
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x106
 	CALL __PUTPARD2
 	CALL SUBOPT_0x66
 ; 0026 0175                *pviOutFileSize_arg = viFilePtr->fsize;
@@ -19978,7 +20054,7 @@ _iFSize:
 	CALL __PUTDP1
 ; 0026 0176 
 ; 0026 0177                if((viFReturn=f_close(viFilePtr))==FR_OK){
-	CALL SUBOPT_0x101
+	CALL SUBOPT_0x102
 	BREQ _0x4C004F
 ; 0026 0178                }else{
 ; 0026 0179                   iFDisplayReturn(viFReturn);
@@ -19997,7 +20073,7 @@ _0x4C004D:
 	CALL SUBOPT_0x62
 	CALL SUBOPT_0x66
 ; 0026 017E                iFDisplayReturn(viFReturn);
-	CALL SUBOPT_0x102
+	CALL SUBOPT_0x103
 ; 0026 017F                printDebug("]\r\n");
 ; 0026 0180            }
 _0x4C0050:
@@ -20006,10 +20082,10 @@ _0x4C0050:
 _0x4C004C:
 ; 0026 0182            printDebug("[iFSize]directory : %s.[\r\n",pviDirPath_arg);
 	__POINTD1FN _0x4C0000,1550
-	CALL SUBOPT_0x104
+	CALL SUBOPT_0x105
 	CALL SUBOPT_0x66
 ; 0026 0183            iFDisplayReturn(viFReturn);
-	CALL SUBOPT_0x102
+	CALL SUBOPT_0x103
 ; 0026 0184            printDebug("]\r\n");
 ; 0026 0185         }
 _0x4C0051:
@@ -20086,14 +20162,14 @@ _iFRead:
 ;	nbytes -> R20,R21
 ;	viReturn -> R18
 	LDI  R18,255
-	CALL SUBOPT_0xFA
+	CALL SUBOPT_0xFB
 ; 0026 01B2     if(viFilePtr!=NULL){
 	BRNE PC+3
 	JMP _0x4C005B
 ; 0026 01B3         if((viFReturn=f_chdir(pviDirPath_arg))==FR_OK){
 	LDD  R26,Y+10
 	LDD  R27,Y+10+1
-	CALL SUBOPT_0xFB
+	CALL SUBOPT_0xFC
 	BREQ PC+3
 	JMP _0x4C005C
 ; 0026 01B4 #if (SD_MANG_PRINT_DEBUG == 1)
@@ -20107,7 +20183,7 @@ _iFRead:
 	ST   -Y,R31
 	ST   -Y,R30
 	LDI  R26,LOW(1)
-	CALL SUBOPT_0xFD
+	CALL SUBOPT_0xFE
 	BRNE _0x4C005D
 ; 0026 01B8 #if (SD_MANG_PRINT_DEBUG == 1)
 ; 0026 01B9                printDebug("[iFRead]File %s is openned.\r\n",pviFilename_arg);
@@ -20119,7 +20195,7 @@ _iFRead:
 	ST   -Y,R16
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
-	CALL SUBOPT_0xFF
+	CALL SUBOPT_0x100
 	BRNE _0x4C005E
 ; 0026 01BE #if (SD_MANG_PRINT_DEBUG == 1)
 ; 0026 01BF                    printDebug("[iFRead]Pointer(seek) of File moved(%ld).\r\n",*pviReadPtr_arg);
@@ -20160,7 +20236,7 @@ _0x4C005F:
 	__POINTD1FN _0x4C0000,1767
 	CALL __PUTPARD1
 	MOV  R30,R19
-	CALL SUBOPT_0xBA
+	CALL SUBOPT_0xB9
 ; 0026 01CA                        iFDisplayReturn(viFReturn);
 	MOV  R26,R19
 	RCALL _iFDisplayReturn
@@ -20176,7 +20252,7 @@ _0x4C005E:
 _0x4C0061:
 ; 0026 01CF 
 ; 0026 01D0                if((viFReturn=f_close(viFilePtr))==FR_OK){
-	CALL SUBOPT_0x101
+	CALL SUBOPT_0x102
 	BREQ _0x4C0063
 ; 0026 01D1                }else{
 ; 0026 01D2                   iFDisplayReturn(viFReturn);
@@ -20189,10 +20265,10 @@ _0x4C0063:
 _0x4C005D:
 ; 0026 01D5                printDebug("[iFRead]File %s : %s.[\r\n",pviFilename_arg);
 	__POINTD1FN _0x4C0000,1792
-	CALL SUBOPT_0x104
+	CALL SUBOPT_0x105
 	CALL SUBOPT_0x66
 ; 0026 01D6                iFDisplayReturn(viFReturn);
-	CALL SUBOPT_0x102
+	CALL SUBOPT_0x103
 ; 0026 01D7                printDebug("]\r\n");
 ; 0026 01D8            }
 _0x4C0064:
@@ -20201,10 +20277,10 @@ _0x4C0064:
 _0x4C005C:
 ; 0026 01DA            printDebug("[iFRead]directory : %s.[\r\n",pviDirPath_arg);
 	__POINTD1FN _0x4C0000,1817
-	CALL SUBOPT_0xFE
+	CALL SUBOPT_0xFF
 	CALL SUBOPT_0x66
 ; 0026 01DB            iFDisplayReturn(viFReturn);
-	CALL SUBOPT_0x102
+	CALL SUBOPT_0x103
 ; 0026 01DC            printDebug("]\r\n");
 ; 0026 01DD         }
 _0x4C0065:
@@ -20242,14 +20318,14 @@ _0x4C0066:
 ;//extern iChar_t viDirEventPath[];
 ;//extern iChar_t viDirStatusPath[];
 ;//extern iChar_t viDirErrorPath[];
-;//extern iChar_t viDirConfigPath[];
+;extern iChar_t viDirConfigPath[];
 ;
 ;extern iChar_t viDataFName[];
 ;//extern iChar_t viDataLogFName[];
 ;//extern iChar_t viEventFName[];
 ;//extern iChar_t viStatusFName[];
 ;//extern iChar_t viErrorFName[];
-;//extern iChar_t viConfigFName[];
+;extern iChar_t viConfigFName[];
 ;
 ;piDataBaseHandle_t pviDataBaseHandle = NULL;
 ;eeprom unsigned int viLineID=0;
@@ -20307,7 +20383,7 @@ _iDataUpdate:
 	__PUTB1SX 284
 	wdr
 ; 0027 002F     if(viRecordID_arg <= 0){    //reserv a all select
-	CALL SUBOPT_0x106
+	CALL SUBOPT_0x107
 	SBIW R26,0
 	BRNE _0x4E0004
 ; 0027 0030         return -1;
@@ -20315,27 +20391,27 @@ _iDataUpdate:
 	RJMP _0x20E0030
 ; 0027 0031     }else if(viRecordID_arg == 1){
 _0x4E0004:
-	CALL SUBOPT_0x106
+	CALL SUBOPT_0x107
 	SBIW R26,1
 	BRNE _0x4E0006
 ; 0027 0032         indexReadFile = 0;
-	CALL SUBOPT_0x107
+	CALL SUBOPT_0x108
 ; 0027 0033     }else if(viRecordID_arg > 1){
 	RJMP _0x4E0007
 _0x4E0006:
-	CALL SUBOPT_0x106
+	CALL SUBOPT_0x107
 	SBIW R26,2
 	BRLO _0x4E0008
 ; 0027 0034         indexReadFile = (DB_BLOCK_BUFFER_def*(viRecordID_arg-1));
-	CALL SUBOPT_0x108
 	CALL SUBOPT_0x109
 	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x10B
 ; 0027 0035     }
 ; 0027 0036     pviDBLogger = (iDB_t * const)malloc(sizeof(iDB_t));
 _0x4E0008:
 _0x4E0007:
 	LDI  R26,LOW(7)
-	CALL SUBOPT_0xCA
+	CALL SUBOPT_0xC9
 	MOVW R16,R30
 ; 0027 0037     if(pviDBLogger!=NULL){
 	MOV  R0,R16
@@ -20345,13 +20421,13 @@ _0x4E0007:
 ; 0027 0038         memset(viDataBuff,0,sizeof(viDataBuff));
 	MOVW R30,R28
 	ADIW R30,28
-	CALL SUBOPT_0xC4
-	CALL SUBOPT_0x10B
+	CALL SUBOPT_0xC3
+	CALL SUBOPT_0x10C
 ; 0027 0039         printDebug("[iDataUpdate]Check file.\r\n");
 	__POINTD1FN _0x4E0000,0
 	CALL SUBOPT_0x0
 ; 0027 003A         if(iFSize((char const * const)viDirDataPath,(char const * const)viDataFName,&viFileSize)){
-	CALL SUBOPT_0x10C
+	CALL SUBOPT_0x10D
 	MOVW R26,R28
 	ADIW R26,14
 	RCALL _iFSize
@@ -20369,34 +20445,34 @@ _0x4E0007:
 _0x4E000B:
 ; 0027 003E               printDebug("[iDataUpdate]File size(%ld),Read RecordID(%ld),Index read(%ld).\r\n",viFileSize,viRecordID_arg,indexReadFile);
 	__POINTD1FN _0x4E0000,57
-	CALL SUBOPT_0x10D
+	CALL SUBOPT_0x10E
 	CALL SUBOPT_0x51
 	CALL SUBOPT_0x23
 ; 0027 003F               iFRead(viDataBuff,(iUInt_t)DB_BLOCK_READ_def,(char const * const)viDirDataPath,(char const * const)viDataFName,&indexReadFile);
-	CALL SUBOPT_0x10E
 	CALL SUBOPT_0x10F
 	CALL SUBOPT_0x110
+	CALL SUBOPT_0x111
 ; 0027 0040               printDebug("[iDataUpdate]Read data:[\r\n");
 ; 0027 0041               print_payload(viDataBuff,DB_BLOCK_BUFFER_def);
-	CALL SUBOPT_0x10E
-	CALL SUBOPT_0x111
+	CALL SUBOPT_0x10F
+	CALL SUBOPT_0x112
 ; 0027 0042               printDebug("]\r\n");
 ; 0027 0043               memcpy(&viRecordIDBuff,viDataBuff,2);
 	MOVW R30,R28
 	ADIW R30,6
-	CALL SUBOPT_0xAA
+	CALL SUBOPT_0xA9
 	CALL SUBOPT_0x7
-	CALL SUBOPT_0x112
+	CALL SUBOPT_0x113
 ; 0027 0044               if(viRecordIDBuff!=viRecordID_arg){
 	BREQ _0x4E000D
 ; 0027 0045                  printDebug("[iDataUpdate]mem diff allocate.\r\n");
-	CALL SUBOPT_0x113
+	CALL SUBOPT_0x114
 ; 0027 0046               }else{
 	RJMP _0x4E000E
 _0x4E000D:
 ; 0027 0047                  printDebug("[iDataUpdate]Record id(%ld),status send(%c).\r\n",viRecordID_arg,viDataBuff[2]);
 	__POINTD1FN _0x4E0000,188
-	CALL SUBOPT_0x114
+	CALL SUBOPT_0x115
 	LDD  R30,Y+38
 	CALL SUBOPT_0x7F
 	CALL SUBOPT_0x80
@@ -20408,7 +20484,7 @@ _0x4E000C:
 ; 0027 004B 
 ; 0027 004C         if(viRecordID_arg <= 0){    //reserv a all select
 _0x4E000A:
-	CALL SUBOPT_0x106
+	CALL SUBOPT_0x107
 	SBIW R26,0
 	BRNE _0x4E000F
 ; 0027 004D             return -1;
@@ -20416,21 +20492,21 @@ _0x4E000A:
 	RJMP _0x20E0030
 ; 0027 004E         }else if(viRecordID_arg == 1){
 _0x4E000F:
-	CALL SUBOPT_0x106
+	CALL SUBOPT_0x107
 	SBIW R26,1
 	BRNE _0x4E0011
 ; 0027 004F             indexWriteFile = 0;
-	CALL SUBOPT_0x115
+	CALL SUBOPT_0x116
 ; 0027 0050         }else if(viRecordID_arg > 1){
 	RJMP _0x4E0012
 _0x4E0011:
-	CALL SUBOPT_0x106
+	CALL SUBOPT_0x107
 	SBIW R26,2
 	BRLO _0x4E0013
 ; 0027 0051             indexWriteFile = (DB_BLOCK_BUFFER_def*(viRecordID_arg-1));
-	CALL SUBOPT_0x108
 	CALL SUBOPT_0x109
-	CALL SUBOPT_0x116
+	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x117
 ; 0027 0052         }
 ; 0027 0053 
 ; 0027 0054         indexWrite = 0;
@@ -20439,7 +20515,7 @@ _0x4E0012:
 	LDI  R30,LOW(0)
 	__CLRD1S 22
 ; 0027 0055         memcpy(&viDataBuff[indexWrite],&viStatusField,1);
-	CALL SUBOPT_0x117
+	CALL SUBOPT_0x118
 	MOVW R30,R28
 	SUBI R30,LOW(-(286))
 	SBCI R31,HIGH(-(286))
@@ -20455,26 +20531,26 @@ _0x4E0012:
 	CPI  R26,LOW(0x4C)
 	BRNE _0x4E0014
 ; 0027 0059             memcpy(&viDataBuff[indexWrite],&viLength_arg,2);
-	CALL SUBOPT_0x117
+	CALL SUBOPT_0x118
 	MOVW R30,R28
 	SUBI R30,LOW(-(287))
 	SBCI R31,HIGH(-(287))
-	CALL SUBOPT_0x118
+	CALL SUBOPT_0x119
 	CALL _memcpy
 ; 0027 005A             indexWrite += 2;
 	CALL SUBOPT_0x4E
-	CALL SUBOPT_0x119
+	CALL SUBOPT_0x11A
 	CALL SUBOPT_0x4D
 ; 0027 005B             memcpy(&viDataBuff[indexWrite],&pviDataBuffer_arg[0],viLength_arg);
-	CALL SUBOPT_0x117
+	CALL SUBOPT_0x118
 	__GETW1SX 289
 	ST   -Y,R31
 	ST   -Y,R30
 	__GETW2SX 289
 	CALL _memcpy
 ; 0027 005C             indexWrite += viLength_arg;
-	CALL SUBOPT_0x11A
 	CALL SUBOPT_0x11B
+	CALL SUBOPT_0x11C
 	CALL SUBOPT_0x4D
 ; 0027 005D         }
 ; 0027 005E 
@@ -20490,10 +20566,10 @@ _0x4E0014:
 	__PUTW1RNS 16,5
 ; 0027 0062 
 ; 0027 0063         indexWriteFile += 2;             //go to status addr
-	CALL SUBOPT_0x11C
+	CALL SUBOPT_0x11D
 ; 0027 0064         printDebug("[iDataUpdate]File size(%ld),Read RecordID(%ld),Index write(%ld).\r\n",viFileSize,viRecordID_arg,(indexWriteFile));
 	__POINTD1FN _0x4E0000,235
-	CALL SUBOPT_0x10D
+	CALL SUBOPT_0x10E
 	CALL SUBOPT_0x48
 	CALL SUBOPT_0x23
 ; 0027 0065         iFRwite(pviDBLogger->viTable.value,indexWrite,(const char*)viDirDataPath,(const char*)viDataFName,&indexWriteFile);
@@ -20502,38 +20578,38 @@ _0x4E0014:
 	LDD  R27,Z+6
 	ST   -Y,R27
 	ST   -Y,R26
-	CALL SUBOPT_0x11D
-	CALL SUBOPT_0x10C
+	CALL SUBOPT_0x11E
+	CALL SUBOPT_0x10D
 	MOVW R26,R28
 	ADIW R26,26
 	RCALL _iFRwite
 ; 0027 0066 
 ; 0027 0067 
 ; 0027 0068         iFRead(viDataBuff,(iUInt_t)DB_BLOCK_READ_def,(char const * const)viDirDataPath,(char const * const)viDataFName,&indexReadFile);
-	CALL SUBOPT_0x10E
 	CALL SUBOPT_0x10F
 	CALL SUBOPT_0x110
+	CALL SUBOPT_0x111
 ; 0027 0069         printDebug("[iDataUpdate]Read data:[\r\n");
 ; 0027 006A         print_payload(viDataBuff,DB_BLOCK_BUFFER_def);
-	CALL SUBOPT_0x10E
-	CALL SUBOPT_0x111
+	CALL SUBOPT_0x10F
+	CALL SUBOPT_0x112
 ; 0027 006B         printDebug("]\r\n");
 ; 0027 006C         memcpy(&viRecordIDBuff,viDataBuff,2);
 	MOVW R30,R28
 	ADIW R30,6
-	CALL SUBOPT_0xAA
+	CALL SUBOPT_0xA9
 	CALL SUBOPT_0x7
-	CALL SUBOPT_0x112
+	CALL SUBOPT_0x113
 ; 0027 006D         if(viRecordIDBuff!=viRecordID_arg){
 	BREQ _0x4E0015
 ; 0027 006E            printDebug("[iDataUpdate]mem diff allocate.\r\n");
-	CALL SUBOPT_0x113
+	CALL SUBOPT_0x114
 ; 0027 006F         }else{
 	RJMP _0x4E0016
 _0x4E0015:
 ; 0027 0070           printDebug("[iDataUpdate]Record id(%d),status send(%c).\r\n",viRecordID_arg,viDataBuff[2]);
 	__POINTD1FN _0x4E0000,302
-	CALL SUBOPT_0x114
+	CALL SUBOPT_0x115
 	LDD  R30,Y+38
 	CALL SUBOPT_0x7F
 	CALL SUBOPT_0x80
@@ -20546,13 +20622,13 @@ _0x4E0016:
 ; 0027 0074 
 ; 0027 0075         printDebug("[iDataUpdate]Update is success.\r\n");
 	__POINTD1FN _0x4E0000,348
-	RJMP _0x4E004E
+	RJMP _0x4E0053
 ; 0027 0076         //viReturnID = viRecordID;
 ; 0027 0077     }else{
 _0x4E0009:
 ; 0027 0078         printDebug("[iDataUpdate]Databuff_arg can't allocate mem.\r\n");
 	__POINTD1FN _0x4E0000,382
-_0x4E004E:
+_0x4E0053:
 	CALL __PUTPARD1
 	CALL SUBOPT_0x2
 ; 0027 0079     }
@@ -20608,7 +20684,7 @@ _iDataInsert:
 	wdr
 ; 0027 008A     pviDBLogger = (iDB_t * const)malloc(sizeof(iDB_t));
 	LDI  R26,LOW(7)
-	CALL SUBOPT_0xCA
+	CALL SUBOPT_0xC9
 	MOVW R16,R30
 ; 0027 008B     if(pviDBLogger!=NULL){
 	MOV  R0,R16
@@ -20618,8 +20694,8 @@ _iDataInsert:
 ; 0027 008C         memset(viDataBuff,0,sizeof(viDataBuff));
 	MOVW R30,R28
 	ADIW R30,24
-	CALL SUBOPT_0xC4
-	CALL SUBOPT_0x10B
+	CALL SUBOPT_0xC3
+	CALL SUBOPT_0x10C
 ; 0027 008D         printDebug("[iDataInsert]Check file.\r\n");
 	__POINTD1FN _0x4E0000,430
 	CALL SUBOPT_0x0
@@ -20630,7 +20706,7 @@ _iDataInsert:
 	ST   -Y,R30
 	LDI  R30,LOW(_viDataFName)
 	LDI  R31,HIGH(_viDataFName)
-	CALL SUBOPT_0xED
+	CALL SUBOPT_0xEE
 	RCALL _iFSize
 	CPI  R30,0
 	BRNE PC+3
@@ -20646,7 +20722,7 @@ _iDataInsert:
 	LDI  R31,HIGH(0)
 	CALL __EEPROMWRW
 ; 0027 0091               indexWriteFile = 0;
-	CALL SUBOPT_0x107
+	CALL SUBOPT_0x108
 ; 0027 0092               printDebug("[iDataInsert]File is empty.\r\n");
 	__POINTD1FN _0x4E0000,457
 	CALL SUBOPT_0x0
@@ -20654,25 +20730,25 @@ _iDataInsert:
 	RJMP _0x4E001C
 _0x4E001B:
 ; 0027 0094               if(viLineID <= 0){    //reserv a all select
-	CALL SUBOPT_0x11E
+	CALL SUBOPT_0x11F
 	SBIW R30,0
 	BRNE _0x4E001D
 ; 0027 0095                   if((viFileSize/DB_BLOCK_BUFFER_def)>1){
-	CALL SUBOPT_0x11F
+	CALL SUBOPT_0x120
 	CALL SUBOPT_0x50
 	BRLO _0x4E001E
 ; 0027 0096                      indexReadFile = (DB_BLOCK_BUFFER_def*((viFileSize/DB_BLOCK_BUFFER_def)-1));
-	CALL SUBOPT_0x11F
 	CALL SUBOPT_0x120
+	CALL SUBOPT_0x121
 	__GETD2N 0x100
 	CALL __MULD12U
-	CALL SUBOPT_0x121
+	CALL SUBOPT_0x122
 ; 0027 0097                   }
 ; 0027 0098               }else if(viLineID == 1){
 _0x4E001E:
 	RJMP _0x4E001F
 _0x4E001D:
-	CALL SUBOPT_0x11E
+	CALL SUBOPT_0x11F
 	CPI  R30,LOW(0x1)
 	LDI  R26,HIGH(0x1)
 	CPC  R31,R26
@@ -20683,13 +20759,13 @@ _0x4E001D:
 ; 0027 009A               }else if(viLineID > 1){
 	RJMP _0x4E0021
 _0x4E0020:
-	CALL SUBOPT_0x11E
+	CALL SUBOPT_0x11F
 	SBIW R30,2
 	BRLO _0x4E0022
 ; 0027 009B                   indexReadFile = (DB_BLOCK_BUFFER_def*(viLineID-1));
-	CALL SUBOPT_0x11E
-	CALL SUBOPT_0x109
-	CALL SUBOPT_0x121
+	CALL SUBOPT_0x11F
+	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x122
 ; 0027 009C               }
 ; 0027 009D 
 ; 0027 009E //              if((viFileSize/DB_BLOCK_BUFFER_def)==1){
@@ -20705,15 +20781,15 @@ _0x4E001F:
 	ADIW R30,24
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0x10F
+	CALL SUBOPT_0x110
 	MOVW R26,R28
 	ADIW R26,18
 	RCALL _iFRead
 ; 0027 00A4               memcpy(&viRecordID,&viDataBuff[0],2);
-	CALL SUBOPT_0xB4
+	CALL SUBOPT_0xB3
 	MOVW R30,R28
 	ADIW R30,26
-	CALL SUBOPT_0x118
+	CALL SUBOPT_0x119
 	CALL _memcpy
 ; 0027 00A5               printDebug("[iDataInsert]Last record id(%d).\r\n",viRecordID);
 	__POINTD1FN _0x4E0000,487
@@ -20734,7 +20810,7 @@ _0x4E001C:
 ; 0027 00A9 
 ; 0027 00AA         viRecordID = ++viLineID;
 _0x4E001A:
-	CALL SUBOPT_0x11E
+	CALL SUBOPT_0x11F
 	ADIW R30,1
 	CALL __EEPROMWRW
 	STD  Y+22,R30
@@ -20755,7 +20831,7 @@ _0x4E0023:
 	SBIW R26,1
 	BRNE _0x4E0025
 ; 0027 00AE             indexWriteFile = 0;
-	CALL SUBOPT_0x107
+	CALL SUBOPT_0x108
 ; 0027 00AF         }else if(viRecordID > 1){
 	RJMP _0x4E0026
 _0x4E0025:
@@ -20766,24 +20842,24 @@ _0x4E0025:
 ; 0027 00B0             indexWriteFile = (unsigned long)(DB_BLOCK_BUFFER_def*(viRecordID-1));
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
-	CALL SUBOPT_0x109
 	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x10B
 ; 0027 00B1         }
 ; 0027 00B2 
 ; 0027 00B3         indexWrite = 0;
 _0x4E0027:
 _0x4E0026:
-	CALL SUBOPT_0x115
+	CALL SUBOPT_0x116
 ; 0027 00B4         memcpy(&viDataBuff[indexWrite],&viRecordID,2);
-	CALL SUBOPT_0x122
+	CALL SUBOPT_0x123
 	MOVW R30,R28
 	ADIW R30,24
-	CALL SUBOPT_0x118
+	CALL SUBOPT_0x119
 	CALL _memcpy
 ; 0027 00B5         indexWrite += 2;
-	CALL SUBOPT_0x11C
+	CALL SUBOPT_0x11D
 ; 0027 00B6         memcpy(&viDataBuff[indexWrite],&viStatusField,1);
-	CALL SUBOPT_0x122
+	CALL SUBOPT_0x123
 	MOVW R30,R28
 	SUBI R30,LOW(-(282))
 	SBCI R31,HIGH(-(282))
@@ -20792,28 +20868,28 @@ _0x4E0026:
 ; 0027 00B7         indexWrite += 1;
 	CALL SUBOPT_0x54
 	CALL SUBOPT_0x53
-	CALL SUBOPT_0x116
+	CALL SUBOPT_0x117
 ; 0027 00B8         memcpy(&viDataBuff[indexWrite],&viLength_arg,2);
-	CALL SUBOPT_0x122
+	CALL SUBOPT_0x123
 	MOVW R30,R28
 	SUBI R30,LOW(-(283))
 	SBCI R31,HIGH(-(283))
-	CALL SUBOPT_0x118
+	CALL SUBOPT_0x119
 	CALL _memcpy
 ; 0027 00B9         indexWrite += 2;
-	CALL SUBOPT_0x11C
+	CALL SUBOPT_0x11D
 ; 0027 00BA         memcpy(&viDataBuff[indexWrite],&pviDataBuffer_arg[0],viLength_arg);
-	CALL SUBOPT_0x122
-	CALL SUBOPT_0x11A
+	CALL SUBOPT_0x123
+	CALL SUBOPT_0x11B
 	ST   -Y,R31
 	ST   -Y,R30
 	__GETW2SX 285
 	CALL _memcpy
 ; 0027 00BB         indexWrite += viLength_arg;
 	__GETW1SX 281
-	CALL SUBOPT_0x123
 	CALL SUBOPT_0x124
-	CALL SUBOPT_0x116
+	CALL SUBOPT_0x125
+	CALL SUBOPT_0x117
 ; 0027 00BC 
 ; 0027 00BD         pviDBLogger->viTable.length = indexWrite;
 	LDD  R30,Y+18
@@ -20829,7 +20905,7 @@ _0x4E0026:
 	LDD  R27,Z+6
 	ST   -Y,R27
 	ST   -Y,R26
-	CALL SUBOPT_0x10F
+	CALL SUBOPT_0x110
 	MOVW R26,R28
 	ADIW R26,22
 	RCALL _iFRwite
@@ -20900,12 +20976,12 @@ _iDataSelect:
 	LDI  R19,0
 	wdr
 ; 0027 00D7     if(viRecordID_arg <= 0){    //reserv a all select
-	CALL SUBOPT_0x125
+	CALL SUBOPT_0x126
 	SBIW R26,0
 	BRNE _0x4E002A
 ; 0027 00D8         printDebug("[iDataSelect]RecordID(%d) fail.\r\n",viRecordID_arg);
 	__POINTD1FN _0x4E0000,604
-	CALL SUBOPT_0x126
+	CALL SUBOPT_0x127
 	CALL SUBOPT_0x66
 ; 0027 00D9         return -1;
 	LDI  R30,LOW(255)
@@ -20913,27 +20989,27 @@ _iDataSelect:
 ; 0027 00DA         //indexReadFile = 0;
 ; 0027 00DB     }else if(viRecordID_arg == 1){
 _0x4E002A:
-	CALL SUBOPT_0x125
+	CALL SUBOPT_0x126
 	SBIW R26,1
 	BRNE _0x4E002C
 ; 0027 00DC         indexReadFile = 0;
-	CALL SUBOPT_0x107
+	CALL SUBOPT_0x108
 ; 0027 00DD     }else if(viRecordID_arg > 1){
 	RJMP _0x4E002D
 _0x4E002C:
-	CALL SUBOPT_0x125
+	CALL SUBOPT_0x126
 	SBIW R26,2
 	BRLO _0x4E002E
 ; 0027 00DE         indexReadFile = (DB_BLOCK_BUFFER_def*(viRecordID_arg-1));
-	CALL SUBOPT_0x127
-	CALL SUBOPT_0x109
+	CALL SUBOPT_0x128
 	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x10B
 ; 0027 00DF     }
 ; 0027 00E0     pviDBLogger = (iDB_t * const)malloc(sizeof(iDB_t));
 _0x4E002E:
 _0x4E002D:
 	LDI  R26,LOW(7)
-	CALL SUBOPT_0xCA
+	CALL SUBOPT_0xC9
 	MOVW R16,R30
 ; 0027 00E1     if(pviDBLogger!=NULL){
 	MOV  R0,R16
@@ -20944,12 +21020,12 @@ _0x4E002D:
 	CALL SUBOPT_0x86
 	LDI  R30,LOW(0)
 	ST   -Y,R30
-	CALL SUBOPT_0x10B
+	CALL SUBOPT_0x10C
 ; 0027 00E3         printDebug("[iDataSelect]Check file.\r\n");
 	__POINTD1FN _0x4E0000,638
 	CALL SUBOPT_0x0
 ; 0027 00E4         if(iFSize((char const * const)viDirDataPath,(char const * const)viDataFName,&viFileSize)==1){
-	CALL SUBOPT_0x10C
+	CALL SUBOPT_0x10D
 	MOVW R26,R28
 	ADIW R26,12
 	RCALL _iFSize
@@ -20976,16 +21052,16 @@ _0x4E0031:
 	CALL SUBOPT_0x23
 ; 0027 00E9               iFRead(viDataBuff,(iUInt_t)DB_BLOCK_READ_def,(char const * const)viDirDataPath,(char const * const)viDataFName,&indexReadFile);
 	CALL SUBOPT_0x86
-	CALL SUBOPT_0x10F
+	CALL SUBOPT_0x110
 	MOVW R26,R28
 	ADIW R26,22
 	RCALL _iFRead
 ; 0027 00EA 
 ; 0027 00EB               memcpy(&viLenOfData,&viDataBuff[3],2);
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0xA7
 	MOVW R30,R28
 	ADIW R30,25
-	CALL SUBOPT_0x118
+	CALL SUBOPT_0x119
 	CALL _memcpy
 ; 0027 00EC               memcpy(&pviOutDataBuff_arg->value[0],&viDataBuff[5],viLenOfData);
 	__GETW1SX 276
@@ -21007,12 +21083,12 @@ _0x4E0031:
 	ST   X,R31
 ; 0027 00EE               //print_payload(viDataBuff,DB_BLOCK_BUFFER_def);
 ; 0027 00EF               memcpy(&viRecordIDBuff,(unsigned int *)&viDataBuff[0],2);
-	CALL SUBOPT_0xAC
-	CALL SUBOPT_0xB4
+	CALL SUBOPT_0xAB
+	CALL SUBOPT_0xB3
 	CALL SUBOPT_0x7
 	CALL _memcpy
 ; 0027 00F0               if(viRecordIDBuff!=viRecordID_arg){
-	CALL SUBOPT_0x127
+	CALL SUBOPT_0x128
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	CP   R30,R26
@@ -21026,7 +21102,7 @@ _0x4E0031:
 _0x4E0033:
 ; 0027 00F3                  printDebug("[iDataSelect]Record id(%d),status send(%c).\r\n",viRecordID_arg,viDataBuff[2]);
 	__POINTD1FN _0x4E0000,794
-	CALL SUBOPT_0x126
+	CALL SUBOPT_0x127
 	LDD  R30,Y+30
 	CALL SUBOPT_0x7F
 	CALL SUBOPT_0x80
@@ -21114,11 +21190,11 @@ _iDataSelectToSettlement:
 	MOVW R30,R28
 	SUBI R30,LOW(-(88))
 	SBCI R31,HIGH(-(88))
-	CALL SUBOPT_0xC4
+	CALL SUBOPT_0xC3
 	LDI  R26,LOW(6)
 	CALL SUBOPT_0xDA
 ; 0027 0112     if(iFSize((char const * const)viDirDataPath,(char const * const)viDataFName,&viFileSize)==1){
-	CALL SUBOPT_0x10C
+	CALL SUBOPT_0x10D
 	MOVW R26,R28
 	SUBI R26,LOW(-(80))
 	SBCI R27,HIGH(-(80))
@@ -21134,11 +21210,11 @@ _iDataSelectToSettlement:
 	__POINTD1FN _0x4E0000,927
 	CALL SUBOPT_0x0
 ; 0027 0115           viReturn = -1;
-	RJMP _0x4E004F
+	RJMP _0x4E0054
 ; 0027 0116        }else{
 _0x4E0038:
 ; 0027 0117           if(viLimitRecord_arg<viLineID){
-	CALL SUBOPT_0x11E
+	CALL SUBOPT_0x11F
 	__GETB2SX 94
 	LDI  R27,0
 	CP   R26,R30
@@ -21146,7 +21222,7 @@ _0x4E0038:
 	BRLO PC+3
 	JMP _0x4E003A
 ; 0027 0118               i=0;
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x129
 ; 0027 0119               j=0;
 	LDI  R30,LOW(0)
 	__CLRW1SX 70
@@ -21166,7 +21242,7 @@ _0x4E003C:
 	LDI  R31,HIGH(4)
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0x10C
+	CALL SUBOPT_0x10D
 	MOVW R26,R28
 	SUBI R26,LOW(-(90))
 	SBCI R27,HIGH(-(90))
@@ -21181,7 +21257,7 @@ _0x4E003C:
 	MOVW R30,R28
 	SUBI R30,LOW(-(90))
 	SBCI R31,HIGH(-(90))
-	CALL SUBOPT_0x118
+	CALL SUBOPT_0x119
 	CALL _memcpy
 ; 0027 0120                   if(viRecordIDBuff==NULL){
 	__GETW1SX 74
@@ -21212,13 +21288,13 @@ _0x4E003E:
 ; 0027 0128 
 ; 0027 0129                   if((viDataBuff[2] == 'N') || (viDataBuff[2] == 'Y') || (viDataBuff[2] == 'L')){
 _0x4E003F:
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x12A
 	CPI  R26,LOW(0x4E)
 	BREQ _0x4E0041
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x12A
 	CPI  R26,LOW(0x59)
 	BREQ _0x4E0041
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x12A
 	CPI  R26,LOW(0x4C)
 	BRNE _0x4E0040
 _0x4E0041:
@@ -21238,8 +21314,8 @@ _0x4E0041:
 	SBIW R30,1
 	MOVW R26,R28
 	ADIW R26,10
-	CALL SUBOPT_0xCE
-	CALL SUBOPT_0x12A
+	CALL SUBOPT_0xCD
+	CALL SUBOPT_0x12B
 	STD  Z+0,R26
 	STD  Z+1,R27
 ; 0027 012C                        viRIDLength = i;
@@ -21247,15 +21323,15 @@ _0x4E0041:
 	STD  Y+8,R30
 	STD  Y+8+1,R31
 ; 0027 012D                        if(viRIDLength==viLimitRecord_arg){
-	CALL SUBOPT_0x12B
 	CALL SUBOPT_0x12C
+	CALL SUBOPT_0x12D
 	BREQ _0x4E003D
 ; 0027 012E                           break;
 ; 0027 012F                        }
 ; 0027 0130                   }else if(viDataBuff[2] == 'S'){
 	RJMP _0x4E0044
 _0x4E0040:
-	CALL SUBOPT_0x129
+	CALL SUBOPT_0x12A
 	CPI  R26,LOW(0x53)
 	BREQ _0x4E003B
 ; 0027 0131                        continue;
@@ -21263,15 +21339,15 @@ _0x4E0040:
 ; 0027 0133                        printDebug("[iDataSelectToSettlement]Status unknow(%c).\r\n",viDataBuff[2]);
 	__POINTD1FN _0x4E0000,1018
 	CALL __PUTPARD1
-	CALL SUBOPT_0x12B
-	CALL SUBOPT_0xBA
+	CALL SUBOPT_0x12C
+	CALL SUBOPT_0xB9
 ; 0027 0134                   }
 _0x4E0044:
 ; 0027 0135 
 ; 0027 0136               }while(viRecordIDBuff<viLineID);
 _0x4E003B:
-	CALL SUBOPT_0x11E
-	CALL SUBOPT_0x12A
+	CALL SUBOPT_0x11F
+	CALL SUBOPT_0x12B
 	CP   R26,R30
 	CPC  R27,R31
 	BRSH _0x4E003D
@@ -21279,23 +21355,23 @@ _0x4E003B:
 _0x4E003D:
 ; 0027 0137 
 ; 0027 0138               if(viRIDLength==viLimitRecord_arg){
-	CALL SUBOPT_0x12B
 	CALL SUBOPT_0x12C
+	CALL SUBOPT_0x12D
 	BREQ PC+3
 	JMP _0x4E0047
 ; 0027 0139                   printDebug("[iDataSelectToSettlement]RID count(%ld).\r\n",viRIDLength);
 	__POINTD1FN _0x4E0000,1064
-	CALL SUBOPT_0x104
+	CALL SUBOPT_0x105
 	CALL SUBOPT_0x66
 ; 0027 013A                   printDebug("[iDataSelectToSettlement]Data:[\r\n");
 	__POINTD1FN _0x4E0000,1107
 	CALL SUBOPT_0x0
 ; 0027 013B                   for(i=0;i<viRIDLength;i++){
-	CALL SUBOPT_0x128
+	CALL SUBOPT_0x129
 _0x4E0049:
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
-	CALL SUBOPT_0x12D
+	CALL SUBOPT_0x12E
 	CP   R26,R30
 	CPC  R27,R31
 	BRSH _0x4E004A
@@ -21303,23 +21379,23 @@ _0x4E0049:
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
 	SBIW R30,1
-	CALL SUBOPT_0x12D
+	CALL SUBOPT_0x12E
 	CP   R30,R26
 	CPC  R31,R27
 	BRNE _0x4E004B
 ; 0027 013D                         printDebug("%d",viRIDBuff[i]);
 	__POINTD1FN _0x4E0000,1141
-	RJMP _0x4E0050
+	RJMP _0x4E0055
 ; 0027 013E                      }else{
 _0x4E004B:
 ; 0027 013F                         printDebug("%d,",viRIDBuff[i]);
 	__POINTD1FN _0x4E0000,1144
-_0x4E0050:
+_0x4E0055:
 	CALL __PUTPARD1
 	__GETW1SX 76
 	MOVW R26,R28
 	ADIW R26,14
-	CALL SUBOPT_0xD4
+	CALL SUBOPT_0xD3
 	CALL SUBOPT_0x62
 	CALL SUBOPT_0x66
 ; 0027 0140                      }
@@ -21334,7 +21410,7 @@ _0x4E004A:
 	__GETW1SX 97
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0xA8
+	CALL SUBOPT_0xA7
 	LDD  R26,Y+12
 	LDD  R27,Y+12+1
 	LDI  R30,LOW(2)
@@ -21358,7 +21434,7 @@ _0x4E0047:
 	RJMP _0x4E004D
 _0x4E003A:
 ; 0027 0148             viReturn = -1;
-_0x4E004F:
+_0x4E0054:
 	LDI  R19,LOW(255)
 ; 0027 0149           }
 _0x4E004D:
@@ -21374,6 +21450,73 @@ _0x4E0037:
 	ADIW R28,36
 	RET
 ; 0027 014F }
+;
+;iUInt_t iDeviceConfigWrite(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
+; 0027 0151 iUInt_t iDeviceConfigWrite(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
+; 0027 0152     iUInt_t viReturn = 0;
+; 0027 0153     iChar_t *pviDataBuffInsert;
+; 0027 0154     iChar_t viDataBuff[DB_BLOCK_BUFFER_def];
+; 0027 0155     unsigned long indexWriteFile = 0;
+; 0027 0156     unsigned long viFileSize = 0;
+; 0027 0157 
+; 0027 0158     #asm("wdr")
+;	*pviDataBuffer_arg -> Y+270
+;	viLength_arg -> Y+268
+;	viReturn -> R16,R17
+;	*pviDataBuffInsert -> R18,R19
+;	viDataBuff -> Y+12
+;	indexWriteFile -> Y+8
+;	viFileSize -> Y+4
+; 0027 0159     indexWriteFile = 0;
+; 0027 015A     memset(viDataBuff,0,sizeof(viDataBuff));
+; 0027 015B     printDebug("[iDeviceConfigWrite]Check file.\r\n");
+; 0027 015C     if(iFSize((char const * const)viDirConfigPath,(char const * const)viConfigFName,&viFileSize)){
+; 0027 015D        if(viFileSize == 0){
+; 0027 015E           printDebug("[iDeviceConfigWrite]File is empty.\r\n");
+; 0027 015F        }
+; 0027 0160     }
+; 0027 0161 
+; 0027 0162     memcpy(&viDataBuff[0],&pviDataBuffer_arg[0],viLength_arg);
+; 0027 0163     iFRwite(viDataBuff,viLength_arg,(const char*)viDirConfigPath,(const char*)viConfigFName,&indexWriteFile);
+; 0027 0164     printDebug("[iDeviceConfigWrite]Write is success.\r\n");
+; 0027 0165 
+; 0027 0166     viReturn = 1;
+; 0027 0167 
+; 0027 0168     return viReturn;
+; 0027 0169 }
+;
+;iUInt_t iDeviceConfigRead(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
+; 0027 016B iUInt_t iDeviceConfigRead(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg){
+; 0027 016C     iUInt_t viReturn = 0;
+; 0027 016D     iChar_t *pviDataBuffInsert;
+; 0027 016E     iChar_t viDataBuff[DB_BLOCK_BUFFER_def];
+; 0027 016F     unsigned long indexReadFile = 0;
+; 0027 0170     unsigned long viFileSize = 0;
+; 0027 0171 
+; 0027 0172     #asm("wdr")
+;	*pviDataBuffer_arg -> Y+270
+;	viLength_arg -> Y+268
+;	viReturn -> R16,R17
+;	*pviDataBuffInsert -> R18,R19
+;	viDataBuff -> Y+12
+;	indexReadFile -> Y+8
+;	viFileSize -> Y+4
+; 0027 0173     indexReadFile = 0;
+; 0027 0174     memset(viDataBuff,0,sizeof(viDataBuff));
+; 0027 0175     printDebug("[iDeviceConfigRead]Check file.\r\n");
+; 0027 0176     if(iFSize((char const * const)viDirConfigPath,(char const * const)viConfigFName,&viFileSize)){
+; 0027 0177        if(viFileSize == 0){
+; 0027 0178           printDebug("[iDeviceConfigRead]File is empty.\r\n");
+; 0027 0179           viReturn = 0;
+; 0027 017A        }else{
+; 0027 017B           iFRead(viDataBuff,viLength_arg,(char const * const)viDirConfigPath,(char const * const)viConfigFName,&indexReadFile);
+; 0027 017C           printDebug("[iDeviceConfigRead]Read is success.\r\n");
+; 0027 017D           viReturn = 1;
+; 0027 017E        }
+; 0027 017F     }
+; 0027 0180 
+; 0027 0181     return viReturn;
+; 0027 0182 }
 ;#include "sensorManager.h"
 ;#include "config.h"
 ;#include "sensor.h"
@@ -21413,7 +21556,7 @@ _iSensorRead:
 	LDI  R30,LOW(90)
 	ST   Y,R30
 	LDI  R30,LOW(7)
-	CALL SUBOPT_0x12E
+	CALL SUBOPT_0x12F
 ;	*pviOutData_arg -> Y+6
 ;	i -> R17
 ;	viReturn -> R16
@@ -21523,11 +21666,11 @@ _0x500004:
 	BREQ PC+3
 	JMP _0x500006
 ; 0028 003B            viDataReportBuff[i].viChannelID = viDVConfigUpdate.viSensorConfig[i].viChannelID;
-	CALL SUBOPT_0x12F
+	CALL SUBOPT_0x130
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x130
 	CALL SUBOPT_0x131
+	CALL SUBOPT_0x132
 	ADD  R26,R30
 	ADC  R27,R31
 	CALL __EEPROMRDB
@@ -21541,8 +21684,8 @@ _0x500004:
 	__ADDW1MN _viDataReportBuff,1
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x130
 	CALL SUBOPT_0x131
+	CALL SUBOPT_0x132
 	ADD  R26,R30
 	ADC  R27,R31
 	ADIW R26,1
@@ -21557,8 +21700,8 @@ _0x500004:
 	__ADDW1MN _viDataReportBuff,2
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x130
 	CALL SUBOPT_0x131
+	CALL SUBOPT_0x132
 	ADD  R26,R30
 	ADC  R27,R31
 	ADIW R26,2
@@ -21567,27 +21710,27 @@ _0x500004:
 	POP  R27
 	ST   X,R30
 ; 0028 003E            iSensorReadByType(&viDataReportBuff[i]);
-	CALL SUBOPT_0x12F
+	CALL SUBOPT_0x130
 	MOVW R26,R30
 	RCALL _iSensorReadByType
 ; 0028 003F            memcpy(&pviOutData_arg->value[viIndexWrite],viCMD,2);
-	CALL SUBOPT_0x132
+	CALL SUBOPT_0x133
 	CALL SUBOPT_0x84
-	CALL SUBOPT_0xAC
+	CALL SUBOPT_0xAB
 	CALL SUBOPT_0x7
 	CALL _memcpy
 ; 0028 0040            viIndexWrite += 2;
 	SUBI R19,-LOW(2)
 ; 0028 0041            memcpy(&pviOutData_arg->value[viIndexWrite],&viDataReportBuff[i],sizeof(viDataReportBuff[i]));
-	CALL SUBOPT_0x132
+	CALL SUBOPT_0x133
 	CALL SUBOPT_0x84
-	CALL SUBOPT_0x12F
+	CALL SUBOPT_0x130
 	CALL SUBOPT_0x3
 	CALL _memcpy
 ; 0028 0042            viIndexWrite += sizeof(viDataReportBuff[i]);
 	SUBI R19,-LOW(7)
 ; 0028 0043            pviOutData_arg->length = viIndexWrite;
-	CALL SUBOPT_0x133
+	CALL SUBOPT_0x134
 ; 0028 0044        }
 ; 0028 0045     }
 _0x500006:
@@ -21599,7 +21742,7 @@ _0x500005:
 	CALL SUBOPT_0x0
 ; 0028 0047     print_payload(&pviOutData_arg->value[0],pviOutData_arg->length);
 	CALL SUBOPT_0xD5
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	MOVW R26,R30
 	CALL _print_payload
 ; 0028 0048     printDebug("]\r\n");
@@ -21753,7 +21896,7 @@ _iStatusRead:
 	LDI  R30,LOW(42)
 	ST   Y,R30
 	LDI  R30,LOW(6)
-	CALL SUBOPT_0x12E
+	CALL SUBOPT_0x12F
 ;	*pviOutData_arg -> Y+6
 ;	i -> R17
 ;	viReturn -> R16
@@ -21774,33 +21917,33 @@ _iStatusRead:
 ; 0029 0016     viIndexWrite = 0;
 	LDI  R19,LOW(0)
 ; 0029 0017     memcpy(&pviOutData_arg->value[viIndexWrite],viCMD,2);
-	CALL SUBOPT_0x132
+	CALL SUBOPT_0x133
 	CALL SUBOPT_0x84
-	CALL SUBOPT_0xAC
+	CALL SUBOPT_0xAB
 	CALL SUBOPT_0x7
 	CALL _memcpy
 ; 0029 0018     viIndexWrite += 2;
 	SUBI R19,-LOW(2)
 ; 0029 0019     memcpy(&pviOutData_arg->value[viIndexWrite],&viStatusReportBuff,sizeof(viStatusReportBuff));
-	CALL SUBOPT_0x132
+	CALL SUBOPT_0x133
 	CALL SUBOPT_0x84
 	LDI  R30,LOW(_viStatusReportBuff)
 	LDI  R31,HIGH(_viStatusReportBuff)
 	ST   -Y,R31
 	ST   -Y,R30
 	LDI  R26,LOW(6)
-	CALL SUBOPT_0xD1
+	CALL SUBOPT_0xD0
 ; 0029 001A     viIndexWrite += sizeof(viStatusReportBuff);
 	SUBI R19,-LOW(6)
 ; 0029 001B     pviOutData_arg->length = viIndexWrite;
-	CALL SUBOPT_0x133
+	CALL SUBOPT_0x134
 ; 0029 001C 
 ; 0029 001D     printDebug("[iStatusRead]Data:[\r\n");
 	__POINTD1FN _0x520000,0
 	CALL SUBOPT_0x0
 ; 0029 001E     print_payload(&pviOutData_arg->value[0],pviOutData_arg->length);
 	CALL SUBOPT_0xD5
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	MOVW R26,R30
 	CALL _print_payload
 ; 0029 001F     printDebug("]\r\n");
@@ -22064,7 +22207,7 @@ _iEventRead:
 	LDI  R30,LOW(58)
 	ST   Y,R30
 	LDI  R30,LOW(5)
-	CALL SUBOPT_0x12E
+	CALL SUBOPT_0x12F
 ;	*pviOutData_arg -> Y+6
 ;	i -> R17
 ;	viReturn -> R16
@@ -22083,8 +22226,8 @@ _0x580004:
 ; 002C 0018         #asm("wdr")
 	wdr
 ; 002C 0019         if(viDVConfigUpdate.viSensorConfig[i].viAlarmEnable == SENSOR_ENABLE_def){
-	CALL SUBOPT_0x130
 	CALL SUBOPT_0x131
+	CALL SUBOPT_0x132
 	ADD  R26,R30
 	ADC  R27,R31
 	ADIW R26,3
@@ -22094,13 +22237,13 @@ _0x580004:
 	JMP _0x580006
 ; 002C 001A             //check lower case
 ; 002C 001B             if((viDataReportBuff[i].viData < viDVConfigUpdate.viSensorConfig[i].viAlarmLowerExtreme) && (viDataReportBuff[i].viData > viDVConfigUpdate.viSensorConfig[i].viAlarmLower)){
-	CALL SUBOPT_0x134
+	CALL SUBOPT_0x135
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x130
 	CALL SUBOPT_0x131
+	CALL SUBOPT_0x132
 	ADD  R26,R30
 	ADC  R27,R31
 	ADIW R26,12
@@ -22111,13 +22254,13 @@ _0x580004:
 	POP  R25
 	CALL __CMPF12
 	BRSH _0x580008
-	CALL SUBOPT_0x134
+	CALL SUBOPT_0x135
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x130
 	CALL SUBOPT_0x131
+	CALL SUBOPT_0x132
 	ADD  R26,R30
 	ADC  R27,R31
 	ADIW R26,4
@@ -22194,13 +22337,13 @@ _0x58000C:
 ; 002C 0032             }else if(viDataReportBuff[i].viData < viDVConfigUpdate.viSensorConfig[i].viAlarmLower){
 	RJMP _0x580012
 _0x580007:
-	CALL SUBOPT_0x134
+	CALL SUBOPT_0x135
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x130
 	CALL SUBOPT_0x131
+	CALL SUBOPT_0x132
 	ADD  R26,R30
 	ADC  R27,R31
 	ADIW R26,4
@@ -22274,13 +22417,13 @@ _0x580016:
 ; 002C 004C             if((viDataReportBuff[i].viData > viDVConfigUpdate.viSensorConfig[i].viAlarmUpperExtreme) && (viDataReportBuff[i].viData < viDVConfigUpdate.viSensorConfig[i].viAlarmUpper)){
 _0x580013:
 _0x580012:
-	CALL SUBOPT_0x134
+	CALL SUBOPT_0x135
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x130
 	CALL SUBOPT_0x131
+	CALL SUBOPT_0x132
 	ADD  R26,R30
 	ADC  R27,R31
 	ADIW R26,24
@@ -22293,13 +22436,13 @@ _0x580012:
 	BREQ PC+2
 	BRCC PC+3
 	JMP  _0x58001D
-	CALL SUBOPT_0x134
+	CALL SUBOPT_0x135
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x130
 	CALL SUBOPT_0x131
+	CALL SUBOPT_0x132
 	ADD  R26,R30
 	ADC  R27,R31
 	ADIW R26,16
@@ -22373,13 +22516,13 @@ _0x580021:
 ; 002C 0063             }else if(viDataReportBuff[i].viData > viDVConfigUpdate.viSensorConfig[i].viAlarmUpper){
 	RJMP _0x580027
 _0x58001C:
-	CALL SUBOPT_0x134
+	CALL SUBOPT_0x135
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x130
 	CALL SUBOPT_0x131
+	CALL SUBOPT_0x132
 	ADD  R26,R30
 	ADC  R27,R31
 	ADIW R26,16
@@ -22475,7 +22618,7 @@ _iPrintEventByCase:
 	__POINTD1FN _0x580000,0
 	CALL __PUTPARD1
 	LDD  R30,Y+4
-	CALL SUBOPT_0xBA
+	CALL SUBOPT_0xB9
 ; 002C 0083 }
 	JMP  _0x20E0029
 ;
@@ -22489,22 +22632,22 @@ _iTestSetValueSensorConfig:
 	CALL __EEPROMWRB
 ; 002C 0088     viDVConfigUpdate.viSensorConfig[0].viAlarmLower = 0.0;
 	__POINTW2MN _viDVConfigUpdate,174
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 0089     viDVConfigUpdate.viSensorConfig[0].viAlarmLowerDelay = 0.0;
 	__POINTW2MN _viDVConfigUpdate,178
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 008A     viDVConfigUpdate.viSensorConfig[0].viAlarmLowerExtreme = 0.0;
 	__POINTW2MN _viDVConfigUpdate,182
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 008B     viDVConfigUpdate.viSensorConfig[0].viAlarmUpper = 0.0;
 	__POINTW2MN _viDVConfigUpdate,186
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 008C     viDVConfigUpdate.viSensorConfig[0].viAlarmUpperDelay = 0.0;
 	__POINTW2MN _viDVConfigUpdate,190
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 008D     viDVConfigUpdate.viSensorConfig[0].viAlarmUpperExtreme = 0.0;
 	__POINTW2MN _viDVConfigUpdate,194
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 008E 
 ; 002C 008F     viDVConfigUpdate.viSensorConfig[1].viAlarmEnable = 0x01;
 	__POINTW2MN _viDVConfigUpdate,201
@@ -22512,22 +22655,22 @@ _iTestSetValueSensorConfig:
 	CALL __EEPROMWRB
 ; 002C 0090     viDVConfigUpdate.viSensorConfig[1].viAlarmLower = 0.0;
 	__POINTW2MN _viDVConfigUpdate,202
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 0091     viDVConfigUpdate.viSensorConfig[1].viAlarmLowerDelay = 0.0;
 	__POINTW2MN _viDVConfigUpdate,206
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 0092     viDVConfigUpdate.viSensorConfig[1].viAlarmLowerExtreme = 0.0;
 	__POINTW2MN _viDVConfigUpdate,210
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 0093     viDVConfigUpdate.viSensorConfig[1].viAlarmUpper = 0.0;
 	__POINTW2MN _viDVConfigUpdate,214
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 0094     viDVConfigUpdate.viSensorConfig[1].viAlarmUpperDelay = 0.0;
 	__POINTW2MN _viDVConfigUpdate,218
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 0095     viDVConfigUpdate.viSensorConfig[1].viAlarmUpperExtreme = 0.0;
 	__POINTW2MN _viDVConfigUpdate,222
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 0096 
 ; 002C 0097     viDVConfigUpdate.viSensorConfig[2].viAlarmEnable = 0x01;
 	__POINTW2MN _viDVConfigUpdate,229
@@ -22535,22 +22678,22 @@ _iTestSetValueSensorConfig:
 	CALL __EEPROMWRB
 ; 002C 0098     viDVConfigUpdate.viSensorConfig[2].viAlarmLower = 0.0;
 	__POINTW2MN _viDVConfigUpdate,230
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 0099     viDVConfigUpdate.viSensorConfig[2].viAlarmLowerDelay = 0.0;
 	__POINTW2MN _viDVConfigUpdate,234
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 009A     viDVConfigUpdate.viSensorConfig[2].viAlarmLowerExtreme = 0.0;
 	__POINTW2MN _viDVConfigUpdate,238
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 009B     viDVConfigUpdate.viSensorConfig[2].viAlarmUpper = 0.0;
 	__POINTW2MN _viDVConfigUpdate,242
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 009C     viDVConfigUpdate.viSensorConfig[2].viAlarmUpperDelay = 0.0;
 	__POINTW2MN _viDVConfigUpdate,246
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 009D     viDVConfigUpdate.viSensorConfig[2].viAlarmUpperExtreme = 0.0;
 	__POINTW2MN _viDVConfigUpdate,250
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 009E 
 ; 002C 009F     viDVConfigUpdate.viSensorConfig[3].viAlarmEnable = 0x01;
 	__POINTW2MN _viDVConfigUpdate,257
@@ -22558,22 +22701,22 @@ _iTestSetValueSensorConfig:
 	CALL __EEPROMWRB
 ; 002C 00A0     viDVConfigUpdate.viSensorConfig[3].viAlarmLower = 0.0;
 	__POINTW2MN _viDVConfigUpdate,258
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00A1     viDVConfigUpdate.viSensorConfig[3].viAlarmLowerDelay = 0.0;
 	__POINTW2MN _viDVConfigUpdate,262
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00A2     viDVConfigUpdate.viSensorConfig[3].viAlarmLowerExtreme = 0.0;
 	__POINTW2MN _viDVConfigUpdate,266
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00A3     viDVConfigUpdate.viSensorConfig[3].viAlarmUpper = 0.0;
 	__POINTW2MN _viDVConfigUpdate,270
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00A4     viDVConfigUpdate.viSensorConfig[3].viAlarmUpperDelay = 0.0;
 	__POINTW2MN _viDVConfigUpdate,274
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00A5     viDVConfigUpdate.viSensorConfig[3].viAlarmUpperExtreme = 0.0;
 	__POINTW2MN _viDVConfigUpdate,278
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00A6 
 ; 002C 00A7     viDVConfigUpdate.viSensorConfig[4].viAlarmEnable = 0x01;
 	__POINTW2MN _viDVConfigUpdate,285
@@ -22581,22 +22724,22 @@ _iTestSetValueSensorConfig:
 	CALL __EEPROMWRB
 ; 002C 00A8     viDVConfigUpdate.viSensorConfig[4].viAlarmLower = 0.0;
 	__POINTW2MN _viDVConfigUpdate,286
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00A9     viDVConfigUpdate.viSensorConfig[4].viAlarmLowerDelay = 0.0;
 	__POINTW2MN _viDVConfigUpdate,290
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00AA     viDVConfigUpdate.viSensorConfig[4].viAlarmLowerExtreme = 0.0;
 	__POINTW2MN _viDVConfigUpdate,294
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00AB     viDVConfigUpdate.viSensorConfig[4].viAlarmUpper = 0.0;
 	__POINTW2MN _viDVConfigUpdate,298
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00AC     viDVConfigUpdate.viSensorConfig[4].viAlarmUpperDelay = 0.0;
 	__POINTW2MN _viDVConfigUpdate,302
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00AD     viDVConfigUpdate.viSensorConfig[4].viAlarmUpperExtreme = 0.0;
 	__POINTW2MN _viDVConfigUpdate,306
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00AE 
 ; 002C 00AF     viDVConfigUpdate.viSensorConfig[5].viAlarmEnable = 0x01;
 	__POINTW2MN _viDVConfigUpdate,313
@@ -22604,22 +22747,22 @@ _iTestSetValueSensorConfig:
 	CALL __EEPROMWRB
 ; 002C 00B0     viDVConfigUpdate.viSensorConfig[5].viAlarmLower = 0.0;
 	__POINTW2MN _viDVConfigUpdate,314
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00B1     viDVConfigUpdate.viSensorConfig[5].viAlarmLowerDelay = 0.0;
 	__POINTW2MN _viDVConfigUpdate,318
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00B2     viDVConfigUpdate.viSensorConfig[5].viAlarmLowerExtreme = 0.0;
 	__POINTW2MN _viDVConfigUpdate,322
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00B3     viDVConfigUpdate.viSensorConfig[5].viAlarmUpper = 0.0;
 	__POINTW2MN _viDVConfigUpdate,326
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00B4     viDVConfigUpdate.viSensorConfig[5].viAlarmUpperDelay = 0.0;
 	__POINTW2MN _viDVConfigUpdate,330
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00B5     viDVConfigUpdate.viSensorConfig[5].viAlarmUpperExtreme = 0.0;
 	__POINTW2MN _viDVConfigUpdate,334
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00B6 
 ; 002C 00B7     viDVConfigUpdate.viSensorConfig[6].viAlarmEnable = 0x01;
 	__POINTW2MN _viDVConfigUpdate,341
@@ -22627,22 +22770,22 @@ _iTestSetValueSensorConfig:
 	CALL __EEPROMWRB
 ; 002C 00B8     viDVConfigUpdate.viSensorConfig[6].viAlarmLower = 0.0;
 	__POINTW2MN _viDVConfigUpdate,342
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00B9     viDVConfigUpdate.viSensorConfig[6].viAlarmLowerDelay = 0.0;
 	__POINTW2MN _viDVConfigUpdate,346
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00BA     viDVConfigUpdate.viSensorConfig[6].viAlarmLowerExtreme = 0.0;
 	__POINTW2MN _viDVConfigUpdate,350
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00BB     viDVConfigUpdate.viSensorConfig[6].viAlarmUpper = 0.0;
 	__POINTW2MN _viDVConfigUpdate,354
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00BC     viDVConfigUpdate.viSensorConfig[6].viAlarmUpperDelay = 0.0;
 	__POINTW2MN _viDVConfigUpdate,358
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00BD     viDVConfigUpdate.viSensorConfig[6].viAlarmUpperExtreme = 0.0;
 	__POINTW2MN _viDVConfigUpdate,362
-	CALL SUBOPT_0x135
+	CALL SUBOPT_0x136
 ; 002C 00BE }
 	RET
 ;#include "logManager.h"
@@ -22682,11 +22825,7 @@ _iGenFileDaily:
 	ST   -Y,R31
 	ST   -Y,R30
 	__POINTW1MN _0x5A0005,0
-	ST   -Y,R31
-	ST   -Y,R30
-	LDI  R26,LOW(12)
-	CALL _strncmp
-	CPI  R30,0
+	CALL SUBOPT_0xDF
 	BRNE _0x5A0003
 _0x5A0004:
 ; 002D 000D         printDebug("[iGenFileDaily]\r\n");
@@ -22720,7 +22859,7 @@ _0x5A0004:
 	LDI  R31,HIGH(_viDataFName)
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0x10E
+	CALL SUBOPT_0x10F
 	MOVW R26,R28
 	ADIW R26,30
 	CALL SUBOPT_0xD7
@@ -22733,7 +22872,12 @@ _0x5A0004:
 	CALL SUBOPT_0x66
 ; 002D 0013     }
 ; 002D 0014 
-; 002D 0015 }
+; 002D 0015 
+; 002D 0016 
+; 002D 0017     //Clear all file that status 'N','Y' and 'L'
+; 002D 0018     //Queue files not settlement
+; 002D 0019     //read file max 90 files
+; 002D 001A }
 _0x5A0003:
 	ADIW R28,46
 	RET
@@ -23996,7 +24140,7 @@ _0x2020004:
 	__GETD1N 0x3A210000
 	RJMP _0x20E0027
 _0x2020003:
-	CALL SUBOPT_0xAC
+	CALL SUBOPT_0xAB
 	MOVW R30,R28
 	ADIW R30,7
 	ST   -Y,R31
@@ -24025,7 +24169,7 @@ _0x2020003:
 	PUSH R31
 	PUSH R30
 	LDD  R30,Y+2
-	CALL SUBOPT_0x136
+	CALL SUBOPT_0x137
 	MOVW R26,R30
 	MOVW R24,R22
 	LDI  R30,LOW(21)
@@ -24038,7 +24182,7 @@ _0x2020003:
 	MOVW R26,R30
 	MOVW R24,R22
 	LDD  R30,Y+3
-	CALL SUBOPT_0x136
+	CALL SUBOPT_0x137
 	CALL __LSLD16
 	CALL __ORD12
 	PUSH R23
@@ -24046,7 +24190,7 @@ _0x2020003:
 	PUSH R31
 	PUSH R30
 	LDD  R30,Y+6
-	CALL SUBOPT_0x136
+	CALL SUBOPT_0x137
 	MOVW R26,R30
 	MOVW R24,R22
 	LDI  R30,LOW(11)
@@ -24061,7 +24205,7 @@ _0x2020003:
 	PUSH R31
 	PUSH R30
 	LDD  R30,Y+5
-	CALL SUBOPT_0x136
+	CALL SUBOPT_0x137
 	MOVW R26,R30
 	MOVW R24,R22
 	LDI  R30,LOW(5)
@@ -24083,7 +24227,7 @@ _0x20E0027:
 	ADIW R28,7
 	RET
 _mem_cpy_G101:
-	CALL SUBOPT_0x103
+	CALL SUBOPT_0x104
 	__GETWRS 16,17,8
 	__GETWRS 18,19,6
 _0x2020006:
@@ -24189,7 +24333,7 @@ _0x2020017:
 _0x2020018:
 	MOVW R26,R28
 	ADIW R26,2
-	CALL SUBOPT_0x137
+	CALL SUBOPT_0x138
 	RJMP _0x2020014
 _0x2020016:
 	CALL SUBOPT_0x3F
@@ -24204,8 +24348,8 @@ _move_window_G101:
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
 	ADIW R26,46
-	CALL SUBOPT_0x138
 	CALL SUBOPT_0x139
+	CALL SUBOPT_0x13A
 	CALL SUBOPT_0x69
 	CALL __CPD12
 	BRNE PC+3
@@ -24215,7 +24359,7 @@ _move_window_G101:
 	LDD  R30,Z+4
 	CPI  R30,0
 	BREQ _0x202001A
-	CALL SUBOPT_0x13A
+	CALL SUBOPT_0x13B
 	CPI  R30,0
 	BREQ _0x202001B
 	LDI  R30,LOW(1)
@@ -24228,7 +24372,7 @@ _0x202001B:
 	ST   X,R30
 	LDD  R30,Y+9
 	LDD  R31,Y+9+1
-	CALL SUBOPT_0x13B
+	CALL SUBOPT_0x13C
 	MOVW R0,R26
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
@@ -24252,13 +24396,13 @@ _0x202001E:
 	CALL SUBOPT_0x69
 	CALL __ADDD12
 	__PUTD1S 1
-	CALL SUBOPT_0x13A
+	CALL SUBOPT_0x13B
 	SUBI R17,1
 	RJMP _0x202001E
 _0x202001F:
 _0x202001C:
 _0x202001A:
-	CALL SUBOPT_0x139
+	CALL SUBOPT_0x13A
 	CALL __CPD10
 	BREQ _0x2020020
 	LDD  R30,Y+9
@@ -24268,12 +24412,12 @@ _0x202001A:
 	LDD  R30,Y+10
 	LDD  R31,Y+10+1
 	ADIW R30,50
-	CALL SUBOPT_0x13C
+	CALL SUBOPT_0x13D
 	BREQ _0x2020021
 	LDI  R30,LOW(1)
 	RJMP _0x20E0025
 _0x2020021:
-	CALL SUBOPT_0x139
+	CALL SUBOPT_0x13A
 	__PUTD1SNS 9,46
 _0x2020020:
 _0x2020019:
@@ -24288,8 +24432,8 @@ _sync_G101:
 	ST   -Y,R17
 	LDD  R30,Y+1
 	LDD  R31,Y+1+1
-	CALL SUBOPT_0x13D
 	CALL SUBOPT_0x13E
+	CALL SUBOPT_0x13F
 	BREQ PC+3
 	JMP _0x2020022
 	LDD  R26,Y+1
@@ -24308,14 +24452,14 @@ _0x2020025:
 	LDD  R26,Y+1
 	LDD  R27,Y+1+1
 	ADIW R26,46
-	CALL SUBOPT_0x13F
+	CALL SUBOPT_0x140
 	LDD  R30,Y+1
 	LDD  R31,Y+1+1
 	ADIW R30,50
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0xDF
-	CALL SUBOPT_0x140
+	CALL SUBOPT_0xE0
+	CALL SUBOPT_0x141
 	LDD  R30,Y+1
 	LDD  R31,Y+1+1
 	ADIW R30,50
@@ -24329,18 +24473,18 @@ _0x2020025:
 	LDD  R31,Y+1+1
 	ADIW R30,50
 	__GETD2N 0x41615252
-	CALL SUBOPT_0x141
+	CALL SUBOPT_0x142
 	SUBI R30,LOW(-484)
 	SBCI R31,HIGH(-484)
 	__GETD2N 0x61417272
-	CALL SUBOPT_0x141
+	CALL SUBOPT_0x142
 	SUBI R30,LOW(-488)
 	SBCI R31,HIGH(-488)
 	MOVW R0,R30
 	LDD  R26,Y+1
 	LDD  R27,Y+1+1
 	ADIW R26,14
-	CALL SUBOPT_0x142
+	CALL SUBOPT_0x143
 	ADIW R30,50
 	SUBI R30,LOW(-492)
 	SBCI R31,HIGH(-492)
@@ -24348,7 +24492,7 @@ _0x2020025:
 	LDD  R26,Y+1
 	LDD  R27,Y+1+1
 	ADIW R26,10
-	CALL SUBOPT_0x142
+	CALL SUBOPT_0x143
 	LDD  R26,Z+1
 	ST   -Y,R26
 	LDD  R30,Y+2
@@ -24358,7 +24502,7 @@ _0x2020025:
 	ST   -Y,R30
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
-	CALL SUBOPT_0x143
+	CALL SUBOPT_0x144
 	RCALL _disk_write
 	LDD  R26,Y+1
 	LDD  R27,Y+1+1
@@ -24390,7 +24534,7 @@ _get_fat:
 	SBIW R28,4
 	CALL __SAVELOCR4
 	CALL SUBOPT_0x59
-	CALL SUBOPT_0x144
+	CALL SUBOPT_0x145
 	BRLO _0x2020028
 	LDD  R26,Y+12
 	LDD  R27,Y+12+1
@@ -24400,13 +24544,13 @@ _get_fat:
 	CALL __CPD21
 	BRLO _0x2020027
 _0x2020028:
-	CALL SUBOPT_0x145
+	CALL SUBOPT_0x146
 	RJMP _0x20E0023
 _0x2020027:
 	LDD  R26,Y+12
 	LDD  R27,Y+12+1
 	ADIW R26,34
-	CALL SUBOPT_0x146
+	CALL SUBOPT_0x147
 	LDD  R26,Y+12
 	LDD  R27,Y+12+1
 	CALL SUBOPT_0x7C
@@ -24420,18 +24564,18 @@ _0x2020027:
 	ROR  R30
 	__ADDWRR 18,19,30,31
 	CALL SUBOPT_0x77
-	CALL SUBOPT_0x147
+	CALL SUBOPT_0x148
 	BREQ _0x202002E
 	RJMP _0x202002C
 _0x202002E:
-	CALL SUBOPT_0x148
+	CALL SUBOPT_0x149
 	LD   R16,X
 	CLR  R17
 	__ADDWRN 18,19,1
 	CALL SUBOPT_0x77
-	CALL SUBOPT_0x147
-	BRNE _0x202002C
 	CALL SUBOPT_0x148
+	BRNE _0x202002C
+	CALL SUBOPT_0x149
 	LD   R30,X
 	MOV  R31,R30
 	LDI  R30,0
@@ -24455,15 +24599,15 @@ _0x202002D:
 	CPC  R31,R26
 	BRNE _0x2020033
 	CALL SUBOPT_0x77
-	CALL SUBOPT_0x149
 	CALL SUBOPT_0x14A
 	CALL SUBOPT_0x14B
+	CALL SUBOPT_0x14C
 	BRNE _0x202002C
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	LDI  R30,LOW(2)
-	CALL SUBOPT_0x14C
 	CALL SUBOPT_0x14D
+	CALL SUBOPT_0x14E
 	RJMP _0x20E0023
 _0x2020033:
 	CPI  R30,LOW(0x3)
@@ -24471,15 +24615,15 @@ _0x2020033:
 	CPC  R31,R26
 	BRNE _0x202002C
 	CALL SUBOPT_0x77
-	CALL SUBOPT_0x149
-	CALL SUBOPT_0x14E
-	CALL SUBOPT_0x14B
+	CALL SUBOPT_0x14A
+	CALL SUBOPT_0x14F
+	CALL SUBOPT_0x14C
 	BRNE _0x202002C
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	LDI  R30,LOW(4)
-	CALL SUBOPT_0x14C
-	CALL SUBOPT_0x14F
+	CALL SUBOPT_0x14D
+	CALL SUBOPT_0x150
 	RJMP _0x20E0023
 _0x202002C:
 	CALL SUBOPT_0x1E
@@ -24491,14 +24635,14 @@ _put_fat:
 	CALL __PUTPARD2
 	SBIW R28,4
 	CALL __SAVELOCR6
-	CALL SUBOPT_0x150
-	CALL SUBOPT_0x144
+	CALL SUBOPT_0x151
+	CALL SUBOPT_0x145
 	BRLO _0x2020038
 	LDD  R26,Y+18
 	LDD  R27,Y+18+1
 	ADIW R26,30
 	CALL __GETD1P
-	CALL SUBOPT_0x150
+	CALL SUBOPT_0x151
 	CALL __CPD21
 	BRLO _0x2020037
 _0x2020038:
@@ -24523,12 +24667,12 @@ _0x2020037:
 	LSR  R31
 	ROR  R30
 	__ADDWRR 16,17,30,31
-	CALL SUBOPT_0x100
-	CALL SUBOPT_0x151
+	CALL SUBOPT_0x101
+	CALL SUBOPT_0x152
 	BREQ _0x202003F
 	RJMP _0x202003D
 _0x202003F:
-	CALL SUBOPT_0x152
+	CALL SUBOPT_0x153
 	BREQ _0x2020040
 	MOVW R26,R18
 	LD   R30,X
@@ -24550,14 +24694,14 @@ _0x2020041:
 	ADIW R26,4
 	LDI  R30,LOW(1)
 	ST   X,R30
-	CALL SUBOPT_0x100
-	CALL SUBOPT_0x151
+	CALL SUBOPT_0x101
+	CALL SUBOPT_0x152
 	BREQ _0x2020043
 	RJMP _0x202003D
 _0x2020043:
-	CALL SUBOPT_0x152
+	CALL SUBOPT_0x153
 	BREQ _0x2020044
-	CALL SUBOPT_0x149
+	CALL SUBOPT_0x14A
 	LDI  R30,LOW(4)
 	CALL __LSRD12
 	CLR  R31
@@ -24569,7 +24713,7 @@ _0x2020044:
 	LD   R30,X
 	ANDI R30,LOW(0xF0)
 	MOV  R1,R30
-	CALL SUBOPT_0x149
+	CALL SUBOPT_0x14A
 	LDI  R30,LOW(8)
 	CALL __LSRD12
 	CLR  R31
@@ -24586,15 +24730,15 @@ _0x202003E:
 	LDI  R26,HIGH(0x2)
 	CPC  R31,R26
 	BRNE _0x2020047
-	CALL SUBOPT_0x100
-	CALL SUBOPT_0x153
-	CALL SUBOPT_0x14A
+	CALL SUBOPT_0x101
 	CALL SUBOPT_0x154
+	CALL SUBOPT_0x14B
+	CALL SUBOPT_0x155
 	BRNE _0x202003D
 	LDD  R26,Y+14
 	LDD  R27,Y+14+1
 	LDI  R30,LOW(2)
-	CALL SUBOPT_0x155
+	CALL SUBOPT_0x156
 	LDD  R26,Y+10
 	LDD  R27,Y+10+1
 	STD  Z+0,R26
@@ -24605,17 +24749,17 @@ _0x2020047:
 	LDI  R26,HIGH(0x3)
 	CPC  R31,R26
 	BRNE _0x202004B
-	CALL SUBOPT_0x100
-	CALL SUBOPT_0x153
-	CALL SUBOPT_0x14E
+	CALL SUBOPT_0x101
 	CALL SUBOPT_0x154
+	CALL SUBOPT_0x14F
+	CALL SUBOPT_0x155
 	BRNE _0x202003D
 	LDD  R26,Y+14
 	LDD  R27,Y+14+1
 	LDI  R30,LOW(4)
-	CALL SUBOPT_0x155
-	CALL SUBOPT_0x149
 	CALL SUBOPT_0x156
+	CALL SUBOPT_0x14A
+	CALL SUBOPT_0x157
 	RJMP _0x202003D
 _0x202004B:
 	LDI  R21,LOW(2)
@@ -24634,10 +24778,10 @@ _remove_chain_G101:
 	CALL __PUTPARD2
 	SBIW R28,4
 	ST   -Y,R17
-	CALL SUBOPT_0x157
-	CALL SUBOPT_0x144
-	BRLO _0x202004D
 	CALL SUBOPT_0x158
+	CALL SUBOPT_0x145
+	BRLO _0x202004D
+	CALL SUBOPT_0x159
 	BRLO _0x202004C
 _0x202004D:
 	LDI  R17,LOW(2)
@@ -24645,7 +24789,7 @@ _0x202004D:
 _0x202004C:
 	LDI  R17,LOW(0)
 _0x2020050:
-	CALL SUBOPT_0x158
+	CALL SUBOPT_0x159
 	BRLO PC+3
 	JMP _0x2020052
 	LDD  R30,Y+9
@@ -24655,11 +24799,11 @@ _0x2020050:
 	__GETD2S 7
 	RCALL _get_fat
 	__PUTD1S 1
-	CALL SUBOPT_0x159
+	CALL SUBOPT_0x15A
 	CALL __CPD10
 	BREQ _0x2020052
 	CALL SUBOPT_0x69
-	CALL SUBOPT_0x15A
+	CALL SUBOPT_0x15B
 	BRNE _0x2020054
 	LDI  R17,LOW(2)
 	RJMP _0x2020052
@@ -24676,14 +24820,14 @@ _0x2020055:
 	ST   -Y,R30
 	__GETD1S 7
 	CALL __PUTPARD1
-	CALL SUBOPT_0x15B
+	CALL SUBOPT_0x15C
 	RCALL _put_fat
 	MOV  R17,R30
 	CPI  R17,0
 	BRNE _0x2020052
 	LDD  R30,Y+9
 	LDD  R31,Y+9+1
-	CALL SUBOPT_0x15C
+	CALL SUBOPT_0x15D
 	BREQ _0x2020057
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
@@ -24695,8 +24839,8 @@ _0x2020055:
 	LDI  R30,LOW(1)
 	ST   X,R30
 _0x2020057:
-	CALL SUBOPT_0x159
-	CALL SUBOPT_0x15D
+	CALL SUBOPT_0x15A
+	CALL SUBOPT_0x15E
 	RJMP _0x2020050
 _0x2020052:
 _0x202004F:
@@ -24711,13 +24855,13 @@ _create_chain_G101:
 	ADIW R26,30
 	CALL __GETD1P
 	CALL SUBOPT_0x1F
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15F
 	CALL __CPD10
 	BRNE _0x2020058
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
 	ADIW R26,10
-	CALL SUBOPT_0x146
+	CALL SUBOPT_0x147
 	CALL SUBOPT_0x32
 	CALL __CPD02
 	BREQ _0x202005A
@@ -24726,18 +24870,18 @@ _create_chain_G101:
 	CALL __CPD21
 	BRLO _0x2020059
 _0x202005A:
-	CALL SUBOPT_0x145
+	CALL SUBOPT_0x146
 	CALL SUBOPT_0x31
 _0x2020059:
 	RJMP _0x202005C
 _0x2020058:
-	CALL SUBOPT_0x15F
-	CALL SUBOPT_0x123
 	CALL SUBOPT_0x160
+	CALL SUBOPT_0x124
+	CALL SUBOPT_0x161
 	CALL SUBOPT_0x5A
-	CALL SUBOPT_0x144
-	BRSH _0x202005D
 	CALL SUBOPT_0x145
+	BRSH _0x202005D
+	CALL SUBOPT_0x146
 	RJMP _0x20E0022
 _0x202005D:
 	CALL SUBOPT_0x1B
@@ -24747,7 +24891,7 @@ _0x202005D:
 	CALL SUBOPT_0x58
 	RJMP _0x20E0022
 _0x202005E:
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15F
 	CALL SUBOPT_0x31
 _0x202005C:
 	CALL SUBOPT_0x1D
@@ -24760,35 +24904,35 @@ _0x2020060:
 	CALL SUBOPT_0x59
 	CALL __CPD21
 	BRLO _0x2020062
-	CALL SUBOPT_0x161
-	CALL SUBOPT_0x57
 	CALL SUBOPT_0x162
+	CALL SUBOPT_0x57
+	CALL SUBOPT_0x163
 	BRSH _0x2020063
 	CALL SUBOPT_0x24
 	RJMP _0x20E0022
 _0x2020063:
 _0x2020062:
-	CALL SUBOPT_0x15F
-	CALL SUBOPT_0x149
 	CALL SUBOPT_0x160
-	CALL SUBOPT_0x163
-	BREQ _0x2020061
+	CALL SUBOPT_0x14A
+	CALL SUBOPT_0x161
 	CALL SUBOPT_0x164
-	BREQ _0x2020066
+	BREQ _0x2020061
 	CALL SUBOPT_0x165
+	BREQ _0x2020066
+	CALL SUBOPT_0x166
 	BRNE _0x2020065
 _0x2020066:
 	CALL SUBOPT_0x58
 	RJMP _0x20E0022
 _0x2020065:
-	CALL SUBOPT_0x162
+	CALL SUBOPT_0x163
 	BRNE _0x2020068
 	CALL SUBOPT_0x24
 	RJMP _0x20E0022
 _0x2020068:
 	RJMP _0x2020060
 _0x2020061:
-	CALL SUBOPT_0x15F
+	CALL SUBOPT_0x160
 	CALL SUBOPT_0x56
 	CALL __PUTPARD1
 	__GETD2N 0xFFFFFFF
@@ -24798,13 +24942,13 @@ _0x2020061:
 	CALL SUBOPT_0x1E
 	RJMP _0x20E0022
 _0x2020069:
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15F
 	CALL __CPD10
 	BREQ _0x202006A
-	CALL SUBOPT_0x15F
+	CALL SUBOPT_0x160
 	CALL SUBOPT_0x54
 	CALL __PUTPARD1
-	CALL SUBOPT_0x150
+	CALL SUBOPT_0x151
 	RCALL _put_fat
 	CPI  R30,0
 	BREQ _0x202006B
@@ -24816,7 +24960,7 @@ _0x202006A:
 	__PUTD1SNS 20,10
 	LDD  R30,Y+20
 	LDD  R31,Y+20+1
-	CALL SUBOPT_0x15C
+	CALL SUBOPT_0x15D
 	BREQ _0x202006C
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
@@ -24843,7 +24987,7 @@ _clust2sect:
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
 	__GETD2Z 30
-	CALL SUBOPT_0x161
+	CALL SUBOPT_0x162
 	CALL SUBOPT_0x4C
 	CALL SUBOPT_0x21
 	CALL __CPD21
@@ -24881,10 +25025,10 @@ _dir_seek_G101:
 	ADIW R26,6
 	CALL __GETD1P
 	CALL SUBOPT_0x60
-	CALL SUBOPT_0x15A
+	CALL SUBOPT_0x15B
 	BREQ _0x202006F
-	CALL SUBOPT_0xBE
-	CALL SUBOPT_0x166
+	CALL SUBOPT_0xBD
+	CALL SUBOPT_0x167
 	BRLO _0x202006E
 _0x202006F:
 	LDI  R30,LOW(2)
@@ -24893,14 +25037,14 @@ _0x202006E:
 	CALL SUBOPT_0x3F
 	CALL __CPD10
 	BRNE _0x2020072
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	LD   R26,Z
 	CPI  R26,LOW(0x3)
 	BREQ _0x2020073
 _0x2020072:
 	RJMP _0x2020071
 _0x2020073:
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	ADIW R30,38
 	MOVW R26,R30
 	CALL __GETD1P
@@ -24909,7 +25053,7 @@ _0x2020071:
 	CALL SUBOPT_0x3F
 	CALL __CPD10
 	BRNE _0x2020074
-	CALL SUBOPT_0x167
+	CALL SUBOPT_0x168
 	ADIW R30,8
 	MOVW R26,R30
 	CALL __GETW1P
@@ -24921,13 +25065,13 @@ _0x2020071:
 	LDI  R30,LOW(2)
 	RJMP _0x20E0020
 _0x2020075:
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	ADIW R30,38
 	MOVW R26,R30
 	CALL __GETD1P
 	RJMP _0x202022C
 _0x2020074:
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	LDD  R30,Z+2
 	LDI  R26,LOW(16)
 	MUL  R30,R26
@@ -24938,7 +25082,7 @@ _0x2020077:
 	CP   R26,R16
 	CPC  R27,R17
 	BRLO _0x2020079
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	ST   -Y,R31
 	ST   -Y,R30
 	CALL SUBOPT_0x32
@@ -24950,10 +25094,10 @@ _0x2020077:
 	RJMP _0x20E0020
 _0x202007A:
 	CALL SUBOPT_0x40
-	CALL SUBOPT_0x144
+	CALL SUBOPT_0x145
 	BRLO _0x202007C
-	CALL SUBOPT_0xBE
-	CALL SUBOPT_0x166
+	CALL SUBOPT_0xBD
+	CALL SUBOPT_0x167
 	BRLO _0x202007B
 _0x202007C:
 	LDI  R30,LOW(2)
@@ -24967,7 +25111,7 @@ _0x202007B:
 	STD  Y+6+1,R31
 	RJMP _0x2020077
 _0x2020079:
-	CALL SUBOPT_0x167
+	CALL SUBOPT_0x168
 	ST   -Y,R31
 	ST   -Y,R30
 	CALL SUBOPT_0x32
@@ -24978,14 +25122,14 @@ _0x202022C:
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
 	CALL __LSRW4
-	CALL SUBOPT_0x124
+	CALL SUBOPT_0x125
 	__PUTD1SNS 8,14
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	ADIW R30,50
 	MOVW R26,R30
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
-	CALL SUBOPT_0x168
+	CALL SUBOPT_0x169
 	__PUTW1SNS 8,18
 	LDI  R30,LOW(0)
 _0x20E0020:
@@ -25010,7 +25154,7 @@ _dir_next_G101:
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
 	ADIW R26,14
-	CALL SUBOPT_0x169
+	CALL SUBOPT_0x16A
 	BRNE _0x202007E
 _0x202007F:
 	LDI  R30,LOW(4)
@@ -25027,9 +25171,9 @@ _0x202007E:
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
 	ADIW R26,10
-	CALL SUBOPT_0x169
-	BRNE _0x2020082
 	CALL SUBOPT_0x16A
+	BRNE _0x2020082
+	CALL SUBOPT_0x16B
 	ADIW R30,8
 	MOVW R26,R30
 	CALL __GETW1P
@@ -25044,7 +25188,7 @@ _0x2020082:
 	MOVW R30,R16
 	CALL __LSRW4
 	MOVW R0,R30
-	CALL SUBOPT_0x16A
+	CALL SUBOPT_0x16B
 	CALL SUBOPT_0x68
 	SBIW R30,1
 	AND  R30,R0
@@ -25052,14 +25196,14 @@ _0x2020082:
 	SBIW R30,0
 	BREQ PC+3
 	JMP _0x2020085
-	CALL SUBOPT_0x16B
+	CALL SUBOPT_0x16C
 	LDD  R30,Y+11
 	LDD  R31,Y+11+1
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x106
 	RCALL _get_fat
 	CALL SUBOPT_0x31
 	CALL SUBOPT_0x32
-	CALL SUBOPT_0x144
+	CALL SUBOPT_0x145
 	BRSH _0x2020086
 	LDI  R30,LOW(2)
 	RJMP _0x20E001E
@@ -25070,8 +25214,8 @@ _0x2020086:
 	LDI  R30,LOW(1)
 	RJMP _0x20E001E
 _0x2020087:
-	CALL SUBOPT_0x16A
-	CALL SUBOPT_0x16C
+	CALL SUBOPT_0x16B
+	CALL SUBOPT_0x16D
 	CALL SUBOPT_0x32
 	CALL __CPD21
 	BRSH PC+3
@@ -25082,10 +25226,10 @@ _0x2020087:
 	LDI  R30,LOW(4)
 	RJMP _0x20E001E
 _0x2020089:
-	CALL SUBOPT_0x16B
+	CALL SUBOPT_0x16C
 	LDD  R30,Y+11
 	LDD  R31,Y+11+1
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x106
 	RCALL _create_chain_G101
 	CALL SUBOPT_0x39
 	CALL __CPD10
@@ -25094,7 +25238,7 @@ _0x2020089:
 	RJMP _0x20E001E
 _0x202008A:
 	CALL SUBOPT_0x32
-	CALL SUBOPT_0x15A
+	CALL SUBOPT_0x15B
 	BRNE _0x202008B
 	LDI  R30,LOW(2)
 	RJMP _0x20E001E
@@ -25105,21 +25249,21 @@ _0x202008B:
 	LDI  R30,LOW(1)
 	RJMP _0x20E001E
 _0x202008C:
-	CALL SUBOPT_0x16B
-	CALL SUBOPT_0x15B
+	CALL SUBOPT_0x16C
+	CALL SUBOPT_0x15C
 	RCALL _move_window_G101
 	CPI  R30,0
 	BREQ _0x202008D
 	LDI  R30,LOW(1)
 	RJMP _0x20E001E
 _0x202008D:
-	CALL SUBOPT_0x16A
+	CALL SUBOPT_0x16B
 	ADIW R30,50
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0xDF
-	CALL SUBOPT_0x140
-	CALL SUBOPT_0x16A
+	CALL SUBOPT_0xE0
+	CALL SUBOPT_0x141
+	CALL SUBOPT_0x16B
 	MOVW R26,R30
 	ADIW R30,46
 	PUSH R31
@@ -25134,23 +25278,23 @@ _0x202008D:
 	CALL __PUTDP1
 	LDI  R19,LOW(0)
 _0x202008F:
-	CALL SUBOPT_0x16A
+	CALL SUBOPT_0x16B
 	LDD  R30,Z+2
 	CP   R19,R30
 	BRSH _0x2020090
-	CALL SUBOPT_0x16A
+	CALL SUBOPT_0x16B
 	ADIW R30,4
 	LDI  R26,LOW(1)
 	STD  Z+0,R26
-	CALL SUBOPT_0x16B
-	CALL SUBOPT_0x15B
+	CALL SUBOPT_0x16C
+	CALL SUBOPT_0x15C
 	RCALL _move_window_G101
 	CPI  R30,0
 	BREQ _0x2020091
 	LDI  R30,LOW(1)
 	RJMP _0x20E001E
 _0x2020091:
-	CALL SUBOPT_0x16A
+	CALL SUBOPT_0x16B
 	ADIW R30,46
 	MOVW R26,R30
 	CALL SUBOPT_0x27
@@ -25160,7 +25304,7 @@ _0x2020091:
 	SUBI R19,-1
 	RJMP _0x202008F
 _0x2020090:
-	CALL SUBOPT_0x16A
+	CALL SUBOPT_0x16B
 	ADIW R30,46
 	PUSH R31
 	PUSH R30
@@ -25177,7 +25321,7 @@ _0x2020090:
 _0x2020088:
 	CALL SUBOPT_0x1D
 	__PUTD1SNS 9,10
-	CALL SUBOPT_0x16B
+	CALL SUBOPT_0x16C
 	CALL SUBOPT_0x3D
 	RCALL _clust2sect
 	__PUTD1SNS 9,14
@@ -25186,11 +25330,11 @@ _0x2020084:
 _0x2020081:
 	MOVW R30,R16
 	__PUTW1SNS 9,4
-	CALL SUBOPT_0x16A
+	CALL SUBOPT_0x16B
 	ADIW R30,50
 	MOVW R26,R30
 	MOVW R30,R16
-	CALL SUBOPT_0x168
+	CALL SUBOPT_0x169
 	__PUTW1SNS 9,18
 	LDI  R30,LOW(0)
 _0x20E001E:
@@ -25199,17 +25343,17 @@ _0x20E001F:
 	ADIW R28,11
 	RET
 _dir_find_G101:
-	CALL SUBOPT_0x103
-	CALL SUBOPT_0x16D
+	CALL SUBOPT_0x104
 	CALL SUBOPT_0x16E
+	CALL SUBOPT_0x16F
 	BREQ _0x2020092
 	MOV  R30,R17
 	CALL __LOADLOCR4
 	RJMP _0x20E001B
 _0x2020092:
 _0x2020094:
-	CALL SUBOPT_0x16F
 	CALL SUBOPT_0x170
+	CALL SUBOPT_0x171
 	BRNE _0x2020095
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
@@ -25227,7 +25371,7 @@ _0x2020097:
 	LDD  R30,Z+11
 	ANDI R30,LOW(0x8)
 	BRNE _0x2020099
-	CALL SUBOPT_0x171
+	CALL SUBOPT_0x172
 	RCALL _mem_cmp_G101
 	SBIW R30,0
 	BREQ _0x202009A
@@ -25236,7 +25380,7 @@ _0x2020099:
 _0x202009A:
 	RJMP _0x2020095
 _0x2020098:
-	CALL SUBOPT_0x16D
+	CALL SUBOPT_0x16E
 	RCALL _dir_next_G101
 	MOV  R17,R30
 	CPI  R17,0
@@ -25246,13 +25390,13 @@ _0x2020095:
 	CALL __LOADLOCR4
 	RJMP _0x20E001B
 _dir_register_G101:
-	CALL SUBOPT_0x103
-	CALL SUBOPT_0x16D
+	CALL SUBOPT_0x104
 	CALL SUBOPT_0x16E
+	CALL SUBOPT_0x16F
 	BRNE _0x20200A7
 _0x20200A9:
-	CALL SUBOPT_0x16F
 	CALL SUBOPT_0x170
+	CALL SUBOPT_0x171
 	BRNE _0x20200AA
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
@@ -25279,18 +25423,18 @@ _0x20200AA:
 _0x20200A7:
 	CPI  R17,0
 	BRNE _0x20200AF
-	CALL SUBOPT_0x16F
 	CALL SUBOPT_0x170
+	CALL SUBOPT_0x171
 	BRNE _0x20200B0
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	ADIW R26,18
 	LD   R18,X+
 	LD   R19,X
-	CALL SUBOPT_0x172
-	LDI  R26,LOW(32)
 	CALL SUBOPT_0x173
-	CALL SUBOPT_0x171
+	LDI  R26,LOW(32)
+	CALL SUBOPT_0x174
+	CALL SUBOPT_0x172
 	RCALL _mem_cpy_G101
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
@@ -25322,7 +25466,7 @@ _create_name_G101:
 	LD   R21,X
 	ST   -Y,R21
 	ST   -Y,R20
-	CALL SUBOPT_0x174
+	CALL SUBOPT_0x175
 	LDI  R30,LOW(0)
 	STD  Y+8,R30
 	STD  Y+8+1,R30
@@ -25332,7 +25476,7 @@ _create_name_G101:
 	STD  Y+10,R30
 	LDD  R26,Y+11
 	LDD  R27,Y+11+1
-	CALL SUBOPT_0x175
+	CALL SUBOPT_0x176
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
 	CALL SUBOPT_0x82
@@ -25340,7 +25484,7 @@ _create_name_G101:
 	CPI  R26,LOW(0x2E)
 	BRNE _0x20200B3
 _0x20200B5:
-	CALL SUBOPT_0x176
+	CALL SUBOPT_0x177
 	LD   R16,X
 	CPI  R16,46
 	BRNE _0x20200B8
@@ -25351,7 +25495,7 @@ _0x20200B5:
 _0x20200B8:
 	RJMP _0x20200B6
 _0x20200B7:
-	CALL SUBOPT_0x177
+	CALL SUBOPT_0x178
 	RJMP _0x20200B5
 _0x20200B6:
 	CPI  R16,47
@@ -25384,7 +25528,7 @@ _0x20200BE:
 	RJMP _0x20E001D
 _0x20200B3:
 _0x20200C1:
-	CALL SUBOPT_0x176
+	CALL SUBOPT_0x177
 	LD   R16,X
 	CPI  R16,33
 	BRLO _0x20200C4
@@ -25454,7 +25598,7 @@ _0x20200D9:
 	SUBI R16,LOW(32)
 _0x20200D7:
 _0x20200D6:
-	CALL SUBOPT_0x177
+	CALL SUBOPT_0x178
 _0x20200C0:
 	RJMP _0x20200C1
 _0x20200C2:
@@ -25513,7 +25657,7 @@ _0x20E001C:
 	ADIW R28,15
 	RET
 _follow_path_G101:
-	CALL SUBOPT_0x103
+	CALL SUBOPT_0x104
 _0x20200F7:
 	LDI  R30,LOW(1)
 	CPI  R30,0
@@ -25526,7 +25670,7 @@ _0x20200F7:
 _0x20200FA:
 	RJMP _0x20200F9
 _0x20200FB:
-	CALL SUBOPT_0xC7
+	CALL SUBOPT_0xC6
 	RJMP _0x20200F7
 _0x20200F9:
 	LDD  R26,Y+4
@@ -25540,18 +25684,18 @@ _0x20200F9:
 	CPI  R26,LOW(0x5C)
 	BRNE _0x20200FC
 _0x20200FD:
-	CALL SUBOPT_0xC7
+	CALL SUBOPT_0xC6
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	ADIW R26,6
-	CALL SUBOPT_0x13F
+	CALL SUBOPT_0x140
 	RJMP _0x20200FF
 _0x20200FC:
 	CALL SUBOPT_0x83
 	ADIW R30,22
 	MOVW R26,R30
 	CALL __GETD1P
-	CALL SUBOPT_0x179
+	CALL SUBOPT_0x17A
 _0x20200FF:
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
@@ -25560,11 +25704,11 @@ _0x20200FF:
 	SBIW R26,32
 	BRSH _0x2020100
 	CALL SUBOPT_0x76
-	CALL SUBOPT_0x17A
+	CALL SUBOPT_0x17B
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	ADIW R26,18
-	CALL SUBOPT_0xCD
+	CALL SUBOPT_0xCC
 	RJMP _0x2020101
 _0x2020100:
 _0x2020103:
@@ -25613,19 +25757,19 @@ _0x2020106:
 	LDI  R17,LOW(5)
 	RJMP _0x2020104
 _0x202010B:
-	CALL SUBOPT_0x17B
+	CALL SUBOPT_0x17C
 	CALL __LSLD16
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x17C
+	CALL SUBOPT_0x17D
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x17D
-	CALL SUBOPT_0x179
+	CALL SUBOPT_0x17E
+	CALL SUBOPT_0x17A
 	RJMP _0x2020103
 _0x2020104:
 _0x2020101:
@@ -25645,14 +25789,14 @@ _check_fs_G101:
 	ST   -Y,R31
 	ST   -Y,R30
 	__GETD1S 3
-	CALL SUBOPT_0x17E
+	CALL SUBOPT_0x17F
 	BREQ _0x202010C
 	LDI  R30,LOW(3)
 	RJMP _0x20E001B
 _0x202010C:
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
-	CALL SUBOPT_0x17F
+	CALL SUBOPT_0x180
 	BREQ _0x202010D
 	LDI  R30,LOW(2)
 	RJMP _0x20E001B
@@ -25661,7 +25805,7 @@ _0x202010D:
 	LDD  R27,Y+4+1
 	SUBI R26,LOW(-104)
 	SBCI R27,HIGH(-104)
-	CALL SUBOPT_0x180
+	CALL SUBOPT_0x181
 	BRNE _0x202010E
 	LDI  R30,LOW(0)
 	RJMP _0x20E001B
@@ -25672,7 +25816,7 @@ _0x202010E:
 	SUBI R30,LOW(-82)
 	SBCI R31,HIGH(-82)
 	MOVW R26,R30
-	CALL SUBOPT_0x180
+	CALL SUBOPT_0x181
 	BRNE _0x202010F
 	LDI  R30,LOW(0)
 	RJMP _0x20E001B
@@ -25723,8 +25867,8 @@ _0x2020113:
 	RJMP _0x20E0019
 _0x2020114:
 	MOV  R30,R16
-	CALL SUBOPT_0x181
-	CALL SUBOPT_0xD4
+	CALL SUBOPT_0x182
+	CALL SUBOPT_0xD3
 	STD  Y+6,R30
 	STD  Y+6+1,R31
 	LDD  R26,Y+27
@@ -25841,8 +25985,8 @@ _0x2020122:
 	LDD  R27,Y+6+1
 	SUBI R26,LOW(-72)
 	SBCI R27,HIGH(-72)
-	CALL SUBOPT_0x14D
-	CALL SUBOPT_0x116
+	CALL SUBOPT_0x14E
+	CALL SUBOPT_0x117
 	CALL SUBOPT_0x54
 	CALL __CPD10
 	BRNE _0x2020125
@@ -25851,7 +25995,7 @@ _0x2020122:
 	SUBI R26,LOW(-86)
 	SBCI R27,HIGH(-86)
 	CALL __GETD1P
-	CALL SUBOPT_0x116
+	CALL SUBOPT_0x117
 _0x2020125:
 	CALL SUBOPT_0x54
 	__PUTD1SNS 6,26
@@ -25865,11 +26009,11 @@ _0x2020125:
 	LDD  R31,Y+6+1
 	LDD  R30,Z+3
 	LDI  R31,0
-	CALL SUBOPT_0x123
+	CALL SUBOPT_0x124
 	CALL SUBOPT_0x6A
-	CALL SUBOPT_0x116
-	CALL SUBOPT_0x182
-	CALL SUBOPT_0x11B
+	CALL SUBOPT_0x117
+	CALL SUBOPT_0x183
+	CALL SUBOPT_0x11C
 	__PUTD1SNS 6,34
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
@@ -25885,8 +26029,8 @@ _0x2020125:
 	LDD  R27,Y+6+1
 	SUBI R26,LOW(-69)
 	SBCI R27,HIGH(-69)
-	CALL SUBOPT_0x14D
-	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x14E
+	CALL SUBOPT_0x10B
 	CALL SUBOPT_0x55
 	CALL __CPD10
 	BRNE _0x2020126
@@ -25895,20 +26039,20 @@ _0x2020125:
 	SUBI R26,LOW(-82)
 	SBCI R27,HIGH(-82)
 	CALL __GETD1P
-	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x10B
 _0x2020126:
-	CALL SUBOPT_0x182
-	CALL SUBOPT_0x150
+	CALL SUBOPT_0x183
+	CALL SUBOPT_0x151
 	CLR  R22
 	CLR  R23
 	CALL SUBOPT_0x4C
-	CALL SUBOPT_0x123
+	CALL SUBOPT_0x124
 	CALL __SUBD12
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x183
+	CALL SUBOPT_0x184
 	POP  R26
 	POP  R27
 	POP  R24
@@ -25921,16 +26065,16 @@ _0x2020126:
 	CALL SUBOPT_0x68
 	CALL __CWD1
 	CALL __DIVD21U
-	CALL SUBOPT_0x119
-	CALL SUBOPT_0x121
+	CALL SUBOPT_0x11A
+	CALL SUBOPT_0x122
 	__PUTD1SNS 6,30
 	LDI  R17,LOW(1)
-	CALL SUBOPT_0x149
+	CALL SUBOPT_0x14A
 	__CPD2N 0xFF7
 	BRLO _0x2020127
 	LDI  R17,LOW(2)
 _0x2020127:
-	CALL SUBOPT_0x149
+	CALL SUBOPT_0x14A
 	__CPD2N 0xFFF7
 	BRLO _0x2020128
 	LDI  R17,LOW(3)
@@ -25944,20 +26088,20 @@ _0x2020128:
 	CALL __GETD1P
 	RJMP _0x202022D
 _0x2020129:
-	CALL SUBOPT_0x184
+	CALL SUBOPT_0x185
 _0x202022D:
 	__PUTD1SNS 6,38
-	CALL SUBOPT_0x184
+	CALL SUBOPT_0x185
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x183
+	CALL SUBOPT_0x184
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x124
+	CALL SUBOPT_0x125
 	__PUTD1SNS 6,42
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
@@ -25981,7 +26125,7 @@ _0x202022D:
 	SUBI R26,LOW(-98)
 	SBCI R27,HIGH(-98)
 	CALL __GETW1P
-	CALL SUBOPT_0x11B
+	CALL SUBOPT_0x11C
 	__PUTD1SNS 6,18
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
@@ -25994,13 +26138,13 @@ _0x202022D:
 	ST   -Y,R30
 	LDD  R30,Y+9
 	LDD  R31,Y+9+1
-	CALL SUBOPT_0x143
+	CALL SUBOPT_0x144
 	CALL _disk_read
 	CPI  R30,0
 	BRNE _0x202012D
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
-	CALL SUBOPT_0x17F
+	CALL SUBOPT_0x180
 	BRNE _0x202012D
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
@@ -26042,11 +26186,11 @@ _0x202012B:
 	LDD  R27,Y+6+1
 	ST   X,R17
 	ADIW R26,46
-	CALL SUBOPT_0x13F
+	CALL SUBOPT_0x140
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	ADIW R26,22
-	CALL SUBOPT_0x13F
+	CALL SUBOPT_0x140
 	LDI  R26,LOW(_Fsid_G101)
 	LDI  R27,HIGH(_Fsid_G101)
 	CALL SUBOPT_0x12
@@ -26104,7 +26248,7 @@ _f_mount:
 	RJMP _0x20E0017
 _0x2020133:
 	LDD  R30,Y+4
-	CALL SUBOPT_0x181
+	CALL SUBOPT_0x182
 	LSL  R30
 	ROL  R31
 	ADD  R26,R30
@@ -26128,8 +26272,8 @@ _0x2020134:
 	ST   X,R30
 _0x2020135:
 	LDD  R30,Y+4
-	CALL SUBOPT_0x181
-	CALL SUBOPT_0xCE
+	CALL SUBOPT_0x182
+	CALL SUBOPT_0xCD
 	LDD  R26,Y+2
 	LDD  R27,Y+2+1
 	STD  Z+0,R26
@@ -26146,22 +26290,22 @@ _f_open:
 	CALL __SAVELOCR4
 	LDD  R26,Y+41
 	LDD  R27,Y+41+1
-	CALL SUBOPT_0xCD
+	CALL SUBOPT_0xCC
 	LDD  R30,Y+38
 	ANDI R30,LOW(0x1F)
 	STD  Y+38,R30
 	MOVW R30,R28
 	ADIW R30,39
-	CALL SUBOPT_0x185
+	CALL SUBOPT_0x186
 	LDD  R30,Y+42
 	ANDI R30,LOW(0x1E)
 	MOV  R26,R30
-	CALL SUBOPT_0x186
+	CALL SUBOPT_0x187
 	BREQ _0x2020136
 	MOV  R30,R17
 	RJMP _0x20E0016
 _0x2020136:
-	CALL SUBOPT_0x187
+	CALL SUBOPT_0x188
 	LDD  R26,Y+41
 	LDD  R27,Y+41+1
 	RCALL _follow_path_G101
@@ -26216,29 +26360,29 @@ _0x202013D:
 	ANDI R30,LOW(0x8)
 	BRNE PC+3
 	JMP _0x2020140
-	CALL SUBOPT_0x17B
+	CALL SUBOPT_0x17C
 	CALL __LSLD16
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x17C
+	CALL SUBOPT_0x17D
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x17D
+	CALL SUBOPT_0x17E
 	CALL SUBOPT_0x1F
 	MOVW R30,R18
 	ADIW R30,20
-	CALL SUBOPT_0xC3
+	CALL SUBOPT_0xC2
 	MOVW R30,R18
 	ADIW R30,26
-	CALL SUBOPT_0xC3
+	CALL SUBOPT_0xC2
 	MOVW R30,R18
 	ADIW R30,28
-	CALL SUBOPT_0x15B
-	CALL SUBOPT_0x156
+	CALL SUBOPT_0x15C
+	CALL SUBOPT_0x157
 	LDD  R26,Y+24
 	LDD  R27,Y+24+1
 	ADIW R26,4
@@ -26247,11 +26391,11 @@ _0x202013D:
 	LDD  R26,Y+24
 	LDD  R27,Y+24+1
 	ADIW R26,46
-	CALL SUBOPT_0x146
+	CALL SUBOPT_0x147
 	CALL SUBOPT_0x1B
 	CALL __CPD10
 	BREQ _0x2020141
-	CALL SUBOPT_0x11D
+	CALL SUBOPT_0x11E
 	CALL SUBOPT_0x40
 	RCALL _remove_chain_G101
 	MOV  R17,R30
@@ -26262,12 +26406,12 @@ _0x202013D:
 	RJMP _0x20E0016
 _0x2020142:
 	CALL SUBOPT_0x1B
-	CALL SUBOPT_0x120
+	CALL SUBOPT_0x121
 	__PUTD1SNS 24,10
 _0x2020141:
-	CALL SUBOPT_0x11D
+	CALL SUBOPT_0x11E
 	CALL SUBOPT_0x3D
-	CALL SUBOPT_0x13E
+	CALL SUBOPT_0x13F
 	BREQ _0x2020143
 	MOV  R30,R17
 	ADIW R28,8
@@ -26282,7 +26426,7 @@ _0x202013B:
 	ADIW R30,11
 	LDI  R26,LOW(0)
 	STD  Z+0,R26
-	CALL SUBOPT_0x188
+	CALL SUBOPT_0x189
 	__PUTD1RNS 18,14
 	LDD  R26,Y+24
 	LDD  R27,Y+24+1
@@ -26337,18 +26481,18 @@ _0x2020145:
 	__PUTW1SNS 41,30
 	LDD  R30,Y+38
 	__PUTB1SNS 41,4
-	CALL SUBOPT_0x17B
+	CALL SUBOPT_0x17C
 	CALL __LSLD16
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x17C
+	CALL SUBOPT_0x17D
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x17D
+	CALL SUBOPT_0x17E
 	__PUTD1SNS 41,14
 	MOVW R26,R18
 	ADIW R26,28
@@ -26357,7 +26501,7 @@ _0x2020145:
 	LDD  R26,Y+41
 	LDD  R27,Y+41+1
 	ADIW R26,6
-	CALL SUBOPT_0x13F
+	CALL SUBOPT_0x140
 	LDD  R26,Y+41
 	LDD  R27,Y+41+1
 	ADIW R26,5
@@ -26366,7 +26510,7 @@ _0x2020145:
 	LDD  R26,Y+41
 	LDD  R27,Y+41+1
 	ADIW R26,22
-	CALL SUBOPT_0x13F
+	CALL SUBOPT_0x140
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	LDD  R26,Y+41
@@ -26394,11 +26538,11 @@ _f_read:
 	STD  Y+6+1,R31
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
-	CALL SUBOPT_0xCD
-	CALL SUBOPT_0x189
+	CALL SUBOPT_0xCC
+	CALL SUBOPT_0x18A
 	LDD  R30,Y+28
 	LDD  R31,Y+28+1
-	CALL SUBOPT_0x18A
+	CALL SUBOPT_0x18B
 	BREQ _0x202014D
 	MOV  R30,R17
 	RJMP _0x20E0015
@@ -26421,12 +26565,12 @@ _0x202014E:
 _0x202014F:
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x106
 	PUSH R25
 	PUSH R24
 	PUSH R27
 	PUSH R26
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18C
 	POP  R30
 	POP  R31
 	POP  R22
@@ -26451,8 +26595,8 @@ _0x2020152:
 	SBIW R30,0
 	BRNE PC+3
 	JMP _0x2020153
-	CALL SUBOPT_0x18B
 	CALL SUBOPT_0x18C
+	CALL SUBOPT_0x18D
 	BREQ PC+3
 	JMP _0x2020154
 	LDD  R30,Y+26
@@ -26464,7 +26608,7 @@ _0x2020152:
 	LDD  R30,Z+2
 	CP   R0,R30
 	BRLO _0x2020155
-	CALL SUBOPT_0x18B
+	CALL SUBOPT_0x18C
 	CALL __CPD02
 	BRNE _0x2020156
 	LDD  R26,Y+26
@@ -26473,26 +26617,26 @@ _0x2020152:
 	CALL __GETD1P
 	RJMP _0x2020157
 _0x2020156:
-	CALL SUBOPT_0x189
-	CALL SUBOPT_0x18D
+	CALL SUBOPT_0x18A
+	CALL SUBOPT_0x18E
 	CALL _get_fat
 _0x2020157:
-	CALL SUBOPT_0x18E
-	CALL SUBOPT_0x153
-	CALL SUBOPT_0x144
-	BRSH _0x2020159
 	CALL SUBOPT_0x18F
+	CALL SUBOPT_0x154
+	CALL SUBOPT_0x145
+	BRSH _0x2020159
+	CALL SUBOPT_0x190
 	LDI  R30,LOW(2)
 	RJMP _0x20E0015
 _0x2020159:
-	CALL SUBOPT_0x153
+	CALL SUBOPT_0x154
 	CALL SUBOPT_0x61
 	BRNE _0x202015A
-	CALL SUBOPT_0x18F
+	CALL SUBOPT_0x190
 	LDI  R30,LOW(1)
 	RJMP _0x20E0015
 _0x202015A:
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15F
 	__PUTD1SNS 26,18
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
@@ -26500,50 +26644,50 @@ _0x202015A:
 	LDI  R30,LOW(0)
 	ST   X,R30
 _0x2020155:
-	CALL SUBOPT_0x189
-	CALL SUBOPT_0x18D
+	CALL SUBOPT_0x18A
+	CALL SUBOPT_0x18E
 	RCALL _clust2sect
-	CALL SUBOPT_0x190
-	CALL SUBOPT_0x163
+	CALL SUBOPT_0x191
+	CALL SUBOPT_0x164
 	BRNE _0x202015B
-	CALL SUBOPT_0x18F
+	CALL SUBOPT_0x190
 	LDI  R30,LOW(2)
 	RJMP _0x20E0015
 _0x202015B:
-	CALL SUBOPT_0x191
+	CALL SUBOPT_0x192
 	CALL SUBOPT_0x5A
 	CALL SUBOPT_0x38
-	CALL SUBOPT_0x190
+	CALL SUBOPT_0x191
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	CALL SUBOPT_0x192
+	CALL SUBOPT_0x193
 	BRNE PC+3
 	JMP _0x202015C
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	LDD  R30,Z+5
-	CALL SUBOPT_0x178
+	CALL SUBOPT_0x179
 	MOVW R0,R30
-	CALL SUBOPT_0x193
 	CALL SUBOPT_0x194
+	CALL SUBOPT_0x195
 	BRSH _0x202015D
-	CALL SUBOPT_0x193
+	CALL SUBOPT_0x194
 	CALL SUBOPT_0x68
 	MOVW R26,R30
-	CALL SUBOPT_0x191
+	CALL SUBOPT_0x192
 	SUB  R26,R30
 	SBC  R27,R31
 	MOVW R20,R26
 _0x202015D:
-	CALL SUBOPT_0x193
-	CALL SUBOPT_0x195
+	CALL SUBOPT_0x194
+	CALL SUBOPT_0x196
 	__GETD1S 15
 	CALL __PUTPARD1
 	MOV  R26,R20
 	CALL _disk_read
 	CPI  R30,0
 	BREQ _0x202015E
-	CALL SUBOPT_0x18F
+	CALL SUBOPT_0x190
 	LDI  R30,LOW(1)
 	RJMP _0x20E0015
 _0x202015E:
@@ -26552,14 +26696,14 @@ _0x202015E:
 	LDD  R26,Z+4
 	ANDI R26,LOW(0x40)
 	BREQ _0x2020160
-	CALL SUBOPT_0x196
 	CALL SUBOPT_0x197
+	CALL SUBOPT_0x198
 	BRLO _0x2020161
 _0x2020160:
 	RJMP _0x202015F
 _0x2020161:
-	CALL SUBOPT_0x196
-	CALL SUBOPT_0x198
+	CALL SUBOPT_0x197
+	CALL SUBOPT_0x199
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	CLR  R24
@@ -26576,7 +26720,7 @@ _0x2020161:
 _0x202015F:
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
-	CALL SUBOPT_0x199
+	CALL SUBOPT_0x19A
 	RJMP _0x2020151
 _0x202015C:
 	LDD  R30,Y+26
@@ -26584,29 +26728,29 @@ _0x202015C:
 	LDD  R26,Z+4
 	ANDI R26,LOW(0x40)
 	BREQ _0x2020162
-	CALL SUBOPT_0x193
-	CALL SUBOPT_0x19A
+	CALL SUBOPT_0x194
+	CALL SUBOPT_0x19B
 	LDD  R30,Y+29
 	LDD  R31,Y+29+1
-	CALL SUBOPT_0x19B
+	CALL SUBOPT_0x19C
 	BREQ _0x2020163
-	CALL SUBOPT_0x18F
+	CALL SUBOPT_0x190
 	LDI  R30,LOW(1)
 	RJMP _0x20E0015
 _0x2020163:
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
-	CALL SUBOPT_0x19C
+	CALL SUBOPT_0x19D
 _0x2020162:
-	CALL SUBOPT_0x196
+	CALL SUBOPT_0x197
 	CALL __CPD12
 	BREQ _0x2020164
-	CALL SUBOPT_0x193
-	CALL SUBOPT_0x19A
+	CALL SUBOPT_0x194
+	CALL SUBOPT_0x19B
 	__GETD1S 15
-	CALL SUBOPT_0x17E
+	CALL SUBOPT_0x17F
 	BREQ _0x2020165
-	CALL SUBOPT_0x18F
+	CALL SUBOPT_0x190
 	LDI  R30,LOW(1)
 	RJMP _0x20E0015
 _0x2020165:
@@ -26615,11 +26759,11 @@ _0x2020164:
 	__PUTD1SNS 26,22
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
-	CALL SUBOPT_0x19D
+	CALL SUBOPT_0x19E
 _0x2020154:
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
-	CALL SUBOPT_0x19E
+	CALL SUBOPT_0x19F
 	LDI  R26,LOW(512)
 	LDI  R27,HIGH(512)
 	SUB  R26,R30
@@ -26635,7 +26779,7 @@ _0x2020166:
 	CALL SUBOPT_0x76
 	LDD  R26,Y+28
 	LDD  R27,Y+28+1
-	CALL SUBOPT_0x19E
+	CALL SUBOPT_0x19F
 	LDD  R26,Y+28
 	LDD  R27,Y+28+1
 	ADIW R26,32
@@ -26649,12 +26793,12 @@ _0x2020151:
 	STD  Y+6+1,R31
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
-	CALL SUBOPT_0x19F
+	CALL SUBOPT_0x1A0
 	MOVW R26,R0
 	CALL __PUTDP1
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
-	CALL SUBOPT_0x1A0
+	CALL SUBOPT_0x1A1
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	SUB  R30,R18
@@ -26679,11 +26823,11 @@ _f_write:
 	STD  Y+6+1,R31
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
-	CALL SUBOPT_0xCD
-	CALL SUBOPT_0x1A1
+	CALL SUBOPT_0xCC
+	CALL SUBOPT_0x1A2
 	LDD  R30,Y+24
 	LDD  R31,Y+24+1
-	CALL SUBOPT_0x18A
+	CALL SUBOPT_0x18B
 	BREQ _0x2020167
 	MOV  R30,R17
 	RJMP _0x20E0014
@@ -26706,15 +26850,15 @@ _0x2020168:
 _0x2020169:
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
-	CALL SUBOPT_0x105
+	CALL SUBOPT_0x106
 	LDD  R30,Y+18
 	LDD  R31,Y+18+1
-	CALL SUBOPT_0x124
+	CALL SUBOPT_0x125
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x1A2
+	CALL SUBOPT_0x1A3
 	POP  R26
 	POP  R27
 	POP  R24
@@ -26731,14 +26875,14 @@ _0x202016C:
 	SBIW R30,0
 	BRNE PC+3
 	JMP _0x202016D
-	CALL SUBOPT_0x1A3
-	CALL SUBOPT_0x18C
+	CALL SUBOPT_0x1A4
+	CALL SUBOPT_0x18D
 	BREQ PC+3
 	JMP _0x202016E
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	LDD  R0,Z+5
-	CALL SUBOPT_0x1A4
+	CALL SUBOPT_0x1A5
 	LDD  R30,Z+2
 	CP   R0,R30
 	BRSH PC+3
@@ -26746,39 +26890,39 @@ _0x202016C:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
 	ADIW R26,6
-	CALL SUBOPT_0x169
+	CALL SUBOPT_0x16A
 	BRNE _0x2020170
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
 	ADIW R26,14
 	CALL __GETD1P
-	CALL SUBOPT_0x190
-	CALL SUBOPT_0x163
+	CALL SUBOPT_0x191
+	CALL SUBOPT_0x164
 	BRNE _0x2020171
-	CALL SUBOPT_0x1A1
-	CALL SUBOPT_0x15B
-	CALL SUBOPT_0x1A5
+	CALL SUBOPT_0x1A2
+	CALL SUBOPT_0x15C
+	CALL SUBOPT_0x1A6
 	__PUTD1SNS 22,14
 _0x2020171:
 	RJMP _0x2020172
 _0x2020170:
-	CALL SUBOPT_0x1A1
+	CALL SUBOPT_0x1A2
+	CALL SUBOPT_0x1A7
 	CALL SUBOPT_0x1A6
-	CALL SUBOPT_0x1A5
 _0x2020172:
-	CALL SUBOPT_0x163
+	CALL SUBOPT_0x164
 	BRNE _0x2020173
 	RJMP _0x202016D
 _0x2020173:
-	CALL SUBOPT_0x165
+	CALL SUBOPT_0x166
 	BRNE _0x2020174
-	CALL SUBOPT_0x1A7
+	CALL SUBOPT_0x1A8
 	LDI  R30,LOW(2)
 	RJMP _0x20E0014
 _0x2020174:
-	CALL SUBOPT_0x164
+	CALL SUBOPT_0x165
 	BRNE _0x2020175
-	CALL SUBOPT_0x1A7
+	CALL SUBOPT_0x1A8
 	LDI  R30,LOW(1)
 	RJMP _0x20E0014
 _0x2020175:
@@ -26795,75 +26939,75 @@ _0x202016F:
 	LDD  R26,Z+4
 	ANDI R26,LOW(0x40)
 	BREQ _0x2020176
-	CALL SUBOPT_0x1A4
-	CALL SUBOPT_0x1A8
+	CALL SUBOPT_0x1A5
+	CALL SUBOPT_0x1A9
 	LDD  R30,Y+25
 	LDD  R31,Y+25+1
-	CALL SUBOPT_0x19B
+	CALL SUBOPT_0x19C
 	BREQ _0x2020177
-	CALL SUBOPT_0x1A7
+	CALL SUBOPT_0x1A8
 	LDI  R30,LOW(1)
 	RJMP _0x20E0014
 _0x2020177:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	CALL SUBOPT_0x19C
+	CALL SUBOPT_0x19D
 _0x2020176:
-	CALL SUBOPT_0x1A1
-	CALL SUBOPT_0x1A6
+	CALL SUBOPT_0x1A2
+	CALL SUBOPT_0x1A7
 	CALL _clust2sect
 	CALL SUBOPT_0x57
 	CALL SUBOPT_0x5B
 	CALL __CPD10
 	BRNE _0x2020178
-	CALL SUBOPT_0x1A7
+	CALL SUBOPT_0x1A8
 	LDI  R30,LOW(2)
 	RJMP _0x20E0014
 _0x2020178:
-	CALL SUBOPT_0x1A9
+	CALL SUBOPT_0x1AA
 	CALL SUBOPT_0x59
 	CALL SUBOPT_0x38
 	CALL SUBOPT_0x57
 	LDD  R26,Y+18
 	LDD  R27,Y+18+1
-	CALL SUBOPT_0x192
+	CALL SUBOPT_0x193
 	BRNE PC+3
 	JMP _0x2020179
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	LDD  R30,Z+5
-	CALL SUBOPT_0x178
+	CALL SUBOPT_0x179
 	MOVW R0,R30
-	CALL SUBOPT_0x1A4
-	CALL SUBOPT_0x194
+	CALL SUBOPT_0x1A5
+	CALL SUBOPT_0x195
 	BRSH _0x202017A
-	CALL SUBOPT_0x1A4
+	CALL SUBOPT_0x1A5
 	CALL SUBOPT_0x68
 	MOVW R26,R30
-	CALL SUBOPT_0x1A9
+	CALL SUBOPT_0x1AA
 	SUB  R26,R30
 	SBC  R27,R31
 	MOVW R20,R26
 _0x202017A:
-	CALL SUBOPT_0x1A4
-	CALL SUBOPT_0x195
+	CALL SUBOPT_0x1A5
+	CALL SUBOPT_0x196
 	__GETD1S 11
 	CALL __PUTPARD1
 	MOV  R26,R20
 	CALL _disk_write
 	CPI  R30,0
 	BREQ _0x202017B
-	CALL SUBOPT_0x1A7
+	CALL SUBOPT_0x1A8
 	LDI  R30,LOW(1)
 	RJMP _0x20E0014
 _0x202017B:
-	CALL SUBOPT_0x1AA
-	CALL SUBOPT_0x197
-	BRSH _0x202017C
 	CALL SUBOPT_0x1AB
+	CALL SUBOPT_0x198
+	BRSH _0x202017C
+	CALL SUBOPT_0x1AC
 	__GETD2Z 22
 	CALL SUBOPT_0x56
-	CALL SUBOPT_0x198
+	CALL SUBOPT_0x199
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	CLR  R24
@@ -26874,31 +27018,31 @@ _0x202017B:
 	CALL _mem_cpy_G101
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	CALL SUBOPT_0x19C
+	CALL SUBOPT_0x19D
 _0x202017C:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	CALL SUBOPT_0x199
+	CALL SUBOPT_0x19A
 	RJMP _0x202016B
 _0x2020179:
-	CALL SUBOPT_0x1AA
+	CALL SUBOPT_0x1AB
 	CALL __CPD12
 	BREQ _0x202017D
-	CALL SUBOPT_0x1A3
+	CALL SUBOPT_0x1A4
 	MOVW R0,R26
-	CALL SUBOPT_0x1A2
+	CALL SUBOPT_0x1A3
 	MOVW R26,R0
 	CALL __CPD21
 	BRSH _0x202017F
-	CALL SUBOPT_0x1A4
-	CALL SUBOPT_0x1A8
+	CALL SUBOPT_0x1A5
+	CALL SUBOPT_0x1A9
 	__GETD1S 11
-	CALL SUBOPT_0x17E
+	CALL SUBOPT_0x17F
 	BRNE _0x2020180
 _0x202017F:
 	RJMP _0x202017E
 _0x2020180:
-	CALL SUBOPT_0x1A7
+	CALL SUBOPT_0x1A8
 	LDI  R30,LOW(1)
 	RJMP _0x20E0014
 _0x202017E:
@@ -26907,11 +27051,11 @@ _0x202017D:
 	__PUTD1SNS 22,22
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	CALL SUBOPT_0x19D
+	CALL SUBOPT_0x19E
 _0x202016E:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	CALL SUBOPT_0x19E
+	CALL SUBOPT_0x19F
 	LDI  R26,LOW(512)
 	LDI  R27,HIGH(512)
 	SUB  R26,R30
@@ -26926,12 +27070,12 @@ _0x202016E:
 _0x2020181:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	CALL SUBOPT_0x19E
+	CALL SUBOPT_0x19F
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
 	ADIW R26,32
 	CALL SUBOPT_0x84
-	CALL SUBOPT_0xF2
+	CALL SUBOPT_0xF3
 	MOVW R26,R18
 	CALL _mem_cpy_G101
 	LDD  R26,Y+22
@@ -26947,12 +27091,12 @@ _0x202016B:
 	STD  Y+6+1,R31
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
-	CALL SUBOPT_0x19F
+	CALL SUBOPT_0x1A0
 	MOVW R26,R0
 	CALL __PUTDP1
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
-	CALL SUBOPT_0x1A0
+	CALL SUBOPT_0x1A1
 	LDD  R30,Y+18
 	LDD  R31,Y+18+1
 	SUB  R30,R18
@@ -26961,9 +27105,9 @@ _0x202016B:
 	STD  Y+18+1,R31
 	RJMP _0x202016C
 _0x202016D:
-	CALL SUBOPT_0x1A3
+	CALL SUBOPT_0x1A4
 	MOVW R0,R26
-	CALL SUBOPT_0x1A2
+	CALL SUBOPT_0x1A3
 	MOVW R26,R0
 	CALL __CPD12
 	BRSH _0x2020182
@@ -26989,12 +27133,12 @@ _f_sync:
 	ST   -Y,R26
 	SBIW R28,4
 	CALL __SAVELOCR4
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	ST   -Y,R31
 	ST   -Y,R30
 	LDD  R30,Y+10
 	LDD  R31,Y+10+1
-	CALL SUBOPT_0x18A
+	CALL SUBOPT_0x18B
 	BREQ PC+3
 	JMP _0x2020183
 	LDD  R30,Y+8
@@ -27006,7 +27150,7 @@ _f_sync:
 	LDD  R26,Z+4
 	ANDI R26,LOW(0x40)
 	BREQ _0x2020185
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	LDD  R30,Z+1
 	ST   -Y,R30
 	LDD  R30,Y+9
@@ -27016,22 +27160,22 @@ _f_sync:
 	ST   -Y,R30
 	LDD  R30,Y+11
 	LDD  R31,Y+11+1
-	CALL SUBOPT_0x19B
+	CALL SUBOPT_0x19C
 	BREQ _0x2020186
 	LDI  R30,LOW(1)
 	RJMP _0x20E0013
 _0x2020186:
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
-	CALL SUBOPT_0x19C
+	CALL SUBOPT_0x19D
 _0x2020185:
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	ST   -Y,R31
 	ST   -Y,R30
 	LDD  R30,Y+10
 	LDD  R31,Y+10+1
 	__GETD2Z 26
-	CALL SUBOPT_0x13E
+	CALL SUBOPT_0x13F
 	BRNE _0x2020187
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
@@ -27052,27 +27196,27 @@ _0x2020185:
 	LDD  R27,Y+8+1
 	ADIW R26,14
 	CALL __GETW1P
-	CALL SUBOPT_0x1AC
+	CALL SUBOPT_0x1AD
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
 	__GETD2Z 14
 	MOVW R30,R26
 	MOVW R22,R24
 	CALL __LSRD16
-	CALL SUBOPT_0x1AD
-	CALL SUBOPT_0x188
 	CALL SUBOPT_0x1AE
+	CALL SUBOPT_0x189
+	CALL SUBOPT_0x1AF
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	ADIW R26,4
 	LD   R30,X
 	ANDI R30,0xDF
 	ST   X,R30
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	ADIW R30,4
 	LDI  R26,LOW(1)
 	STD  Z+0,R26
-	CALL SUBOPT_0xBE
+	CALL SUBOPT_0xBD
 	MOVW R26,R30
 	CALL _sync_G101
 	MOV  R17,R30
@@ -27096,7 +27240,7 @@ _f_close:
 	BRNE _0x2020188
 	LDD  R26,Y+1
 	LDD  R27,Y+1+1
-	CALL SUBOPT_0xCD
+	CALL SUBOPT_0xCC
 _0x2020188:
 	MOV  R30,R17
 	JMP  _0x20E000D
@@ -27107,14 +27251,14 @@ _f_chdir:
 	CALL __SAVELOCR4
 	MOVW R30,R28
 	ADIW R30,38
-	CALL SUBOPT_0x185
-	LDI  R26,LOW(0)
 	CALL SUBOPT_0x186
-	BRNE _0x202018A
+	LDI  R26,LOW(0)
 	CALL SUBOPT_0x187
+	BRNE _0x202018A
+	CALL SUBOPT_0x188
 	LDD  R26,Y+40
 	LDD  R27,Y+40+1
-	CALL SUBOPT_0x1AF
+	CALL SUBOPT_0x1B0
 	BRNE _0x202018B
 	__GETWRS 18,19,34
 	MOV  R0,R18
@@ -27123,25 +27267,25 @@ _f_chdir:
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
 	ADIW R26,22
-	CALL SUBOPT_0x13F
+	CALL SUBOPT_0x140
 	RJMP _0x202018D
 _0x202018C:
 	MOVW R30,R18
 	LDD  R30,Z+11
 	ANDI R30,LOW(0x10)
 	BREQ _0x202018E
-	CALL SUBOPT_0x17B
+	CALL SUBOPT_0x17C
 	CALL __LSLD16
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x17C
+	CALL SUBOPT_0x17D
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x17D
+	CALL SUBOPT_0x17E
 	__PUTD1SNS 16,22
 	RJMP _0x202018F
 _0x202018E:
@@ -27162,10 +27306,10 @@ _f_lseek:
 	CALL __PUTPARD2
 	SBIW R28,16
 	ST   -Y,R17
-	CALL SUBOPT_0x1B0
+	CALL SUBOPT_0x1B1
 	LDD  R30,Y+23
 	LDD  R31,Y+23+1
-	CALL SUBOPT_0x18A
+	CALL SUBOPT_0x18B
 	BREQ _0x2020191
 	RJMP _0x20E0012
 _0x2020191:
@@ -27177,8 +27321,8 @@ _0x2020191:
 	LDI  R30,LOW(2)
 	RJMP _0x20E0011
 _0x2020192:
-	CALL SUBOPT_0x1B1
 	CALL SUBOPT_0x1B2
+	CALL SUBOPT_0x1B3
 	CALL __CPD12
 	BRSH _0x2020194
 	LDD  R30,Y+21
@@ -27189,40 +27333,40 @@ _0x2020192:
 _0x2020194:
 	RJMP _0x2020193
 _0x2020195:
-	CALL SUBOPT_0x1B1
-	CALL SUBOPT_0x1B3
+	CALL SUBOPT_0x1B2
+	CALL SUBOPT_0x1B4
 _0x2020193:
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	ADIW R26,6
-	CALL SUBOPT_0x138
+	CALL SUBOPT_0x139
 	CALL SUBOPT_0x24
-	CALL SUBOPT_0x15D
-	CALL SUBOPT_0x1B4
+	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x1B5
 	ADIW R26,5
 	LDI  R30,LOW(255)
 	ST   X,R30
-	CALL SUBOPT_0x1B2
+	CALL SUBOPT_0x1B3
 	CALL __CPD02
 	BRLO PC+3
 	JMP _0x2020196
-	CALL SUBOPT_0x1B5
+	CALL SUBOPT_0x1B6
 	CALL SUBOPT_0x68
 	CALL __CWD1
 	__GETD2N 0x200
 	CALL __MULD12U
-	CALL SUBOPT_0x1B6
+	CALL SUBOPT_0x1B7
 	CALL SUBOPT_0x69
 	CALL __CPD02
 	BRSH _0x2020198
-	CALL SUBOPT_0x1B7
 	CALL SUBOPT_0x1B8
+	CALL SUBOPT_0x1B9
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x159
-	CALL SUBOPT_0x1B8
+	CALL SUBOPT_0x15A
+	CALL SUBOPT_0x1B9
 	POP  R26
 	POP  R27
 	POP  R24
@@ -27232,62 +27376,62 @@ _0x2020193:
 _0x2020198:
 	RJMP _0x2020197
 _0x2020199:
-	CALL SUBOPT_0x159
-	CALL SUBOPT_0x120
+	CALL SUBOPT_0x15A
+	CALL SUBOPT_0x121
 	MOVW R26,R30
 	MOVW R24,R22
-	CALL SUBOPT_0x1B9
-	CALL SUBOPT_0x120
+	CALL SUBOPT_0x1BA
+	CALL SUBOPT_0x121
 	CALL __COMD1
 	CALL __ANDD12
-	CALL SUBOPT_0x1B4
+	CALL SUBOPT_0x1B5
 	ADIW R26,6
 	CALL __GETD1P
-	CALL SUBOPT_0x1B2
+	CALL SUBOPT_0x1B3
 	CALL __SUBD21
 	__PUTD2S 17
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	ADIW R26,18
-	CALL SUBOPT_0x1BA
+	CALL SUBOPT_0x1BB
 	RJMP _0x202019A
 _0x2020197:
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	ADIW R26,14
-	CALL SUBOPT_0x1BA
 	CALL SUBOPT_0x1BB
+	CALL SUBOPT_0x1BC
 	CALL __CPD10
 	BRNE _0x202019B
-	CALL SUBOPT_0x1B0
-	CALL SUBOPT_0x15B
-	CALL SUBOPT_0x1BC
+	CALL SUBOPT_0x1B1
+	CALL SUBOPT_0x15C
 	CALL SUBOPT_0x1BD
-	CALL SUBOPT_0x15A
-	BRNE _0x202019C
 	CALL SUBOPT_0x1BE
+	CALL SUBOPT_0x15B
+	BRNE _0x202019C
+	CALL SUBOPT_0x1BF
 	LDI  R30,LOW(2)
 	RJMP _0x20E0011
 _0x202019C:
-	CALL SUBOPT_0x1BD
+	CALL SUBOPT_0x1BE
 	CALL SUBOPT_0x61
 	BRNE _0x202019D
-	CALL SUBOPT_0x1BE
+	CALL SUBOPT_0x1BF
 	LDI  R30,LOW(1)
 	RJMP _0x20E0011
 _0x202019D:
-	CALL SUBOPT_0x1BB
+	CALL SUBOPT_0x1BC
 	__PUTD1SNS 21,14
 _0x202019B:
-	CALL SUBOPT_0x1BF
+	CALL SUBOPT_0x1C0
 _0x202019A:
-	CALL SUBOPT_0x1BB
+	CALL SUBOPT_0x1BC
 	CALL __CPD10
 	BRNE PC+3
 	JMP _0x202019E
 _0x202019F:
-	CALL SUBOPT_0x1B9
-	CALL SUBOPT_0x1B2
+	CALL SUBOPT_0x1BA
+	CALL SUBOPT_0x1B3
 	CALL __CPD12
 	BRLO PC+3
 	JMP _0x20201A1
@@ -27296,76 +27440,76 @@ _0x202019F:
 	LDD  R26,Z+4
 	ANDI R26,LOW(0x2)
 	BREQ _0x20201A2
-	CALL SUBOPT_0x1B0
-	CALL SUBOPT_0x1C0
+	CALL SUBOPT_0x1B1
+	CALL SUBOPT_0x1C1
+	CALL SUBOPT_0x1BD
 	CALL SUBOPT_0x1BC
-	CALL SUBOPT_0x1BB
 	CALL __CPD10
 	BRNE _0x20201A3
-	CALL SUBOPT_0x1B9
-	CALL SUBOPT_0x1B3
+	CALL SUBOPT_0x1BA
+	CALL SUBOPT_0x1B4
 	RJMP _0x20201A1
 _0x20201A3:
 	RJMP _0x20201A4
 _0x20201A2:
-	CALL SUBOPT_0x1B0
-	CALL SUBOPT_0x1C0
+	CALL SUBOPT_0x1B1
+	CALL SUBOPT_0x1C1
 	CALL _get_fat
 	__PUTD1S 13
 _0x20201A4:
-	CALL SUBOPT_0x1BD
+	CALL SUBOPT_0x1BE
 	CALL SUBOPT_0x61
 	BRNE _0x20201A5
-	CALL SUBOPT_0x1BE
+	CALL SUBOPT_0x1BF
 	LDI  R30,LOW(1)
 	RJMP _0x20E0011
 _0x20201A5:
-	CALL SUBOPT_0x1BD
-	CALL SUBOPT_0x144
+	CALL SUBOPT_0x1BE
+	CALL SUBOPT_0x145
 	BRLO _0x20201A7
-	CALL SUBOPT_0x1B5
-	CALL SUBOPT_0x16C
-	CALL SUBOPT_0x1BD
+	CALL SUBOPT_0x1B6
+	CALL SUBOPT_0x16D
+	CALL SUBOPT_0x1BE
 	CALL __CPD21
 	BRLO _0x20201A6
 _0x20201A7:
-	CALL SUBOPT_0x1BE
+	CALL SUBOPT_0x1BF
 	LDI  R30,LOW(2)
 	RJMP _0x20E0011
 _0x20201A6:
-	CALL SUBOPT_0x1BF
-	CALL SUBOPT_0x1C1
+	CALL SUBOPT_0x1C0
 	CALL SUBOPT_0x1C2
+	CALL SUBOPT_0x1C3
 	CALL __ADDD12
 	MOVW R26,R0
 	CALL __PUTDP1
-	CALL SUBOPT_0x1C2
-	CALL SUBOPT_0x1B7
+	CALL SUBOPT_0x1C3
+	CALL SUBOPT_0x1B8
 	CALL __SUBD12
-	CALL SUBOPT_0x1B3
+	CALL SUBOPT_0x1B4
 	RJMP _0x202019F
 _0x20201A1:
-	CALL SUBOPT_0x1C1
-	CALL SUBOPT_0x1B2
+	CALL SUBOPT_0x1C2
+	CALL SUBOPT_0x1B3
 	CALL __ADDD12
 	MOVW R26,R0
 	CALL __PUTDP1
-	CALL SUBOPT_0x1B2
+	CALL SUBOPT_0x1B3
 	__GETD1N 0x200
 	CALL __DIVD21U
 	__PUTB1SNS 21,5
-	CALL SUBOPT_0x1B7
+	CALL SUBOPT_0x1B8
 	ANDI R31,HIGH(0x1FF)
 	SBIW R30,0
 	BREQ _0x20201A9
-	CALL SUBOPT_0x1B0
-	CALL SUBOPT_0x1C0
+	CALL SUBOPT_0x1B1
+	CALL SUBOPT_0x1C1
 	CALL _clust2sect
-	CALL SUBOPT_0x15D
-	CALL SUBOPT_0x139
+	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x13A
 	CALL __CPD10
 	BRNE _0x20201AA
-	CALL SUBOPT_0x1BE
+	CALL SUBOPT_0x1BF
 	LDI  R30,LOW(2)
 	RJMP _0x20E0011
 _0x20201AA:
@@ -27373,23 +27517,23 @@ _0x20201AA:
 	LDD  R31,Y+21+1
 	LDD  R30,Z+5
 	LDI  R31,0
-	CALL SUBOPT_0x157
+	CALL SUBOPT_0x158
 	CALL SUBOPT_0x38
-	CALL SUBOPT_0x15D
+	CALL SUBOPT_0x15E
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
-	CALL SUBOPT_0x19D
+	CALL SUBOPT_0x19E
 _0x20201A9:
 _0x202019E:
 _0x2020196:
-	CALL SUBOPT_0x1C3
-	CALL SUBOPT_0x18C
+	CALL SUBOPT_0x1C4
+	CALL SUBOPT_0x18D
 	BREQ _0x20201AC
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	ADIW R26,22
 	CALL __GETD1P
-	CALL SUBOPT_0x157
+	CALL SUBOPT_0x158
 	CALL __CPD12
 	BRNE _0x20201AD
 _0x20201AC:
@@ -27400,38 +27544,38 @@ _0x20201AD:
 	LDD  R26,Z+4
 	ANDI R26,LOW(0x40)
 	BREQ _0x20201AE
-	CALL SUBOPT_0x1B5
+	CALL SUBOPT_0x1B6
 	LDD  R30,Z+1
 	ST   -Y,R30
-	CALL SUBOPT_0x1AB
-	CALL SUBOPT_0x19B
+	CALL SUBOPT_0x1AC
+	CALL SUBOPT_0x19C
 	BREQ _0x20201AF
-	CALL SUBOPT_0x1BE
+	CALL SUBOPT_0x1BF
 	LDI  R30,LOW(1)
 	RJMP _0x20E0011
 _0x20201AF:
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
-	CALL SUBOPT_0x19C
+	CALL SUBOPT_0x19D
 _0x20201AE:
-	CALL SUBOPT_0x1B5
+	CALL SUBOPT_0x1B6
 	LDD  R30,Z+1
 	ST   -Y,R30
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	ADIW R30,32
-	CALL SUBOPT_0x13C
+	CALL SUBOPT_0x13D
 	BREQ _0x20201B0
-	CALL SUBOPT_0x1BE
+	CALL SUBOPT_0x1BF
 	LDI  R30,LOW(1)
 	RJMP _0x20E0011
 _0x20201B0:
-	CALL SUBOPT_0x139
+	CALL SUBOPT_0x13A
 	__PUTD1SNS 21,22
 _0x20201AB:
-	CALL SUBOPT_0x1C3
+	CALL SUBOPT_0x1C4
 	MOVW R0,R26
-	CALL SUBOPT_0x1B1
+	CALL SUBOPT_0x1B2
 	MOVW R26,R0
 	CALL __CPD12
 	BRSH _0x20201B1
@@ -27459,18 +27603,18 @@ _f_opendir:
 	SBIW R28,12
 	CALL __SAVELOCR4
 	CALL SUBOPT_0x8B
-	CALL SUBOPT_0x15F
+	CALL SUBOPT_0x160
 	LDI  R26,LOW(0)
-	CALL SUBOPT_0x186
+	CALL SUBOPT_0x187
 	BREQ PC+3
 	JMP _0x20201B2
 	MOVW R30,R28
 	ADIW R30,4
 	__PUTW1SNS 18,20
-	CALL SUBOPT_0x100
+	CALL SUBOPT_0x101
 	LDD  R26,Y+18
 	LDD  R27,Y+18+1
-	CALL SUBOPT_0x1AF
+	CALL SUBOPT_0x1B0
 	BRNE _0x20201B3
 	LDD  R26,Y+18
 	LDD  R27,Y+18+1
@@ -27484,18 +27628,18 @@ _f_opendir:
 	LDD  R30,Z+11
 	ANDI R30,LOW(0x10)
 	BREQ _0x20201B5
-	CALL SUBOPT_0x17B
+	CALL SUBOPT_0x17C
 	CALL __LSLD16
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x17C
+	CALL SUBOPT_0x17D
 	POP  R26
 	POP  R27
 	POP  R24
 	POP  R25
-	CALL SUBOPT_0x17D
+	CALL SUBOPT_0x17E
 	__PUTD1SNS 18,6
 	RJMP _0x20201B6
 _0x20201B5:
@@ -27511,8 +27655,8 @@ _0x20201B4:
 	MOVW R26,R30
 	CALL __GETW1P
 	__PUTW1SNS 18,2
-	CALL SUBOPT_0x100
-	CALL SUBOPT_0x17A
+	CALL SUBOPT_0x101
+	CALL SUBOPT_0x17B
 _0x20201B7:
 _0x20201B3:
 	CPI  R17,4
@@ -27533,14 +27677,14 @@ _f_getfree:
 	ADIW R30,26
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0x11D
+	CALL SUBOPT_0x11E
 	LDI  R26,LOW(0)
-	CALL SUBOPT_0x186
+	CALL SUBOPT_0x187
 	BREQ _0x20201C3
 	MOV  R30,R17
 	RJMP _0x20E000F
 _0x20201C3:
-	CALL SUBOPT_0x1A4
+	CALL SUBOPT_0x1A5
 	MOVW R0,R30
 	ADIW R30,14
 	MOVW R26,R30
@@ -27559,22 +27703,22 @@ _0x20201C3:
 	POP  R25
 	CALL __CPD12
 	BRLO _0x20201C4
-	CALL SUBOPT_0x1A4
+	CALL SUBOPT_0x1A5
 	ADIW R30,14
 	MOVW R26,R30
 	CALL __GETD1P
 	RJMP _0x20E0010
 _0x20201C4:
-	CALL SUBOPT_0x1A4
+	CALL SUBOPT_0x1A5
 	LD   R16,Z
-	CALL SUBOPT_0x115
+	CALL SUBOPT_0x116
 	CPI  R16,1
 	BRNE _0x20201C5
-	CALL SUBOPT_0x161
-	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x162
+	CALL SUBOPT_0x10B
 _0x20201C7:
-	CALL SUBOPT_0x1A1
-	CALL SUBOPT_0x153
+	CALL SUBOPT_0x1A2
+	CALL SUBOPT_0x154
 	CALL _get_fat
 	CALL SUBOPT_0x42
 	CALL SUBOPT_0x3D
@@ -27584,7 +27728,7 @@ _0x20201C7:
 	RJMP _0x20E000F
 _0x20201C9:
 	CALL SUBOPT_0x3D
-	CALL SUBOPT_0x15A
+	CALL SUBOPT_0x15B
 	BRNE _0x20201CA
 	LDI  R30,LOW(2)
 	RJMP _0x20E000F
@@ -27592,17 +27736,17 @@ _0x20201CA:
 	CALL SUBOPT_0x41
 	CALL __CPD10
 	BRNE _0x20201CB
-	CALL SUBOPT_0x1C4
+	CALL SUBOPT_0x1C5
 _0x20201CB:
 	CALL SUBOPT_0x55
 	CALL SUBOPT_0x49
-	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x10B
 	PUSH R23
 	PUSH R22
 	PUSH R31
 	PUSH R30
-	CALL SUBOPT_0x1A4
-	CALL SUBOPT_0x16C
+	CALL SUBOPT_0x1A5
+	CALL SUBOPT_0x16D
 	POP  R26
 	POP  R27
 	POP  R24
@@ -27611,35 +27755,35 @@ _0x20201CB:
 	BRLO _0x20201C7
 	RJMP _0x20201CC
 _0x20201C5:
-	CALL SUBOPT_0x1A4
-	CALL SUBOPT_0x16C
-	CALL SUBOPT_0x10A
-	CALL SUBOPT_0x1A4
+	CALL SUBOPT_0x1A5
+	CALL SUBOPT_0x16D
+	CALL SUBOPT_0x10B
+	CALL SUBOPT_0x1A5
 	ADIW R30,34
 	MOVW R26,R30
 	CALL __GETD1P
-	CALL SUBOPT_0x121
+	CALL SUBOPT_0x122
 	__GETWRN 18,19,0
 	__GETWRN 20,21,0
 _0x20201CE:
 	MOV  R0,R18
 	OR   R0,R19
 	BRNE _0x20201D0
-	CALL SUBOPT_0x1A1
+	CALL SUBOPT_0x1A2
 	CALL SUBOPT_0x58
 	CALL SUBOPT_0x49
-	CALL SUBOPT_0x190
+	CALL SUBOPT_0x191
 	SBIW R30,1
 	SBCI R22,0
 	SBCI R23,0
 	MOVW R26,R30
 	MOVW R24,R22
-	CALL SUBOPT_0x13E
+	CALL SUBOPT_0x13F
 	BREQ _0x20201D1
 	MOV  R30,R17
 	RJMP _0x20E000F
 _0x20201D1:
-	CALL SUBOPT_0x1A4
+	CALL SUBOPT_0x1A5
 	ADIW R30,50
 	MOVW R20,R30
 	__GETWRN 18,19,512
@@ -27650,17 +27794,17 @@ _0x20201D0:
 	CALL __GETW1P
 	SBIW R30,0
 	BRNE _0x20201D3
-	CALL SUBOPT_0x1C4
+	CALL SUBOPT_0x1C5
 _0x20201D3:
 	__ADDWRN 20,21,2
 	__SUBWRN 18,19,2
 	RJMP _0x20201D4
 _0x20201D2:
 	MOVW R26,R20
-	CALL SUBOPT_0x14F
+	CALL SUBOPT_0x150
 	CALL __CPD10
 	BRNE _0x20201D5
-	CALL SUBOPT_0x1C4
+	CALL SUBOPT_0x1C5
 _0x20201D5:
 	__ADDWRN 20,21,4
 	__SUBWRN 18,19,4
@@ -27669,16 +27813,16 @@ _0x20201D4:
 	SBIW R30,1
 	SBCI R22,0
 	SBCI R23,0
-	CALL SUBOPT_0x10A
+	CALL SUBOPT_0x10B
 	BRNE _0x20201CE
 _0x20201CC:
-	CALL SUBOPT_0x1A4
+	CALL SUBOPT_0x1A5
 	ADIW R30,14
-	CALL SUBOPT_0x123
-	CALL SUBOPT_0x156
+	CALL SUBOPT_0x124
+	CALL SUBOPT_0x157
 	CPI  R16,3
 	BRNE _0x20201D6
-	CALL SUBOPT_0x1A4
+	CALL SUBOPT_0x1A5
 	ADIW R30,5
 	LDI  R26,LOW(1)
 	STD  Z+0,R26
@@ -27707,7 +27851,7 @@ _f_mkdir:
 	ST   -Y,R31
 	ST   -Y,R30
 	LDI  R26,LOW(1)
-	CALL SUBOPT_0x186
+	CALL SUBOPT_0x187
 	BREQ _0x20201F3
 	RJMP _0x20E000E
 _0x20201F3:
@@ -27721,7 +27865,7 @@ _0x20201F3:
 	ST   -Y,R30
 	LDD  R26,Y+56
 	LDD  R27,Y+56+1
-	CALL SUBOPT_0x1AF
+	CALL SUBOPT_0x1B0
 	BRNE _0x20201F4
 	LDI  R17,LOW(8)
 _0x20201F4:
@@ -27744,24 +27888,24 @@ _0x20201F5:
 	BREQ _0x20201F8
 	RJMP _0x20E000E
 _0x20201F8:
-	CALL SUBOPT_0x1C5
-	CALL SUBOPT_0x1A5
+	CALL SUBOPT_0x1C6
+	CALL SUBOPT_0x1A6
 	LDI  R17,LOW(0)
-	CALL SUBOPT_0x163
+	CALL SUBOPT_0x164
 	BRNE _0x20201F9
 	LDI  R17,LOW(7)
 _0x20201F9:
-	CALL SUBOPT_0x165
+	CALL SUBOPT_0x166
 	BRNE _0x20201FA
 	LDI  R17,LOW(2)
 _0x20201FA:
-	CALL SUBOPT_0x164
+	CALL SUBOPT_0x165
 	BRNE _0x20201FB
 	LDI  R17,LOW(1)
 _0x20201FB:
 	CPI  R17,0
 	BRNE _0x20201FC
-	CALL SUBOPT_0x1C5
+	CALL SUBOPT_0x1C6
 	CALL _move_window_G101
 	MOV  R17,R30
 _0x20201FC:
@@ -27769,20 +27913,20 @@ _0x20201FC:
 	BREQ _0x20201FD
 	RJMP _0x20E000E
 _0x20201FD:
-	CALL SUBOPT_0x1C6
+	CALL SUBOPT_0x1C7
 	CALL _clust2sect
-	CALL SUBOPT_0x18E
+	CALL SUBOPT_0x18F
 	LDD  R30,Y+32
 	LDD  R31,Y+32+1
 	ADIW R30,50
 	MOVW R18,R30
-	CALL SUBOPT_0x172
-	CALL SUBOPT_0x140
+	CALL SUBOPT_0x173
+	CALL SUBOPT_0x141
 	MOVW R30,R18
 	ADIW R30,0
 	ST   -Y,R31
 	ST   -Y,R30
-	CALL SUBOPT_0x174
+	CALL SUBOPT_0x175
 	MOVW R26,R18
 	LDI  R30,LOW(46)
 	ST   X,R30
@@ -27790,13 +27934,13 @@ _0x20201FD:
 	ADIW R30,11
 	LDI  R26,LOW(16)
 	STD  Z+0,R26
-	CALL SUBOPT_0x188
-	CALL SUBOPT_0x1AE
+	CALL SUBOPT_0x189
+	CALL SUBOPT_0x1AF
 	LDD  R30,Y+12
 	LDD  R31,Y+12+1
-	CALL SUBOPT_0x1AC
-	CALL SUBOPT_0x5E
 	CALL SUBOPT_0x1AD
+	CALL SUBOPT_0x5E
+	CALL SUBOPT_0x1AE
 	MOVW R30,R18
 	ADIW R30,32
 	ST   -Y,R31
@@ -27846,9 +27990,9 @@ _0x2020202:
 	LDD  R30,Z+2
 	CP   R16,R30
 	BRSH _0x2020203
-	CALL SUBOPT_0x15E
+	CALL SUBOPT_0x15F
 	CALL SUBOPT_0x49
-	CALL SUBOPT_0x18E
+	CALL SUBOPT_0x18F
 	SBIW R30,1
 	SBCI R22,0
 	SBCI R23,0
@@ -27858,11 +28002,11 @@ _0x2020202:
 	ADIW R26,4
 	LDI  R30,LOW(1)
 	ST   X,R30
-	CALL SUBOPT_0x1C5
-	CALL SUBOPT_0x13E
+	CALL SUBOPT_0x1C6
+	CALL SUBOPT_0x13F
 	BRNE _0x20E000E
-	CALL SUBOPT_0x172
-	CALL SUBOPT_0x140
+	CALL SUBOPT_0x173
+	CALL SUBOPT_0x141
 	SUBI R16,-1
 	RJMP _0x2020202
 _0x2020203:
@@ -27872,7 +28016,7 @@ _0x2020203:
 	MOV  R17,R30
 	CPI  R17,0
 	BREQ _0x2020205
-	CALL SUBOPT_0x1C6
+	CALL SUBOPT_0x1C7
 	CALL _remove_chain_G101
 	RJMP _0x2020206
 _0x2020205:
@@ -27882,12 +28026,12 @@ _0x2020205:
 	LDI  R26,LOW(16)
 	STD  Z+0,R26
 	CALL SUBOPT_0x1D
-	CALL SUBOPT_0x1AE
+	CALL SUBOPT_0x1AF
 	LDD  R30,Y+12
 	LDD  R31,Y+12+1
-	CALL SUBOPT_0x1AC
-	CALL SUBOPT_0x5E
 	CALL SUBOPT_0x1AD
+	CALL SUBOPT_0x5E
+	CALL SUBOPT_0x1AE
 	LDD  R26,Y+32
 	LDD  R27,Y+32+1
 	ADIW R26,4
@@ -28015,7 +28159,7 @@ __ftoe_G102:
 	LDI  R26,HIGH(0xFFFF)
 	CPC  R31,R26
 	BRNE _0x2040037
-	CALL SUBOPT_0xF2
+	CALL SUBOPT_0xF3
 	__POINTD2FN _0x2040000,0
 	CALL _strcpyf
 	CALL __LOADLOCR4
@@ -28025,7 +28169,7 @@ _0x2040037:
 	LDI  R26,HIGH(0x7FFF)
 	CPC  R31,R26
 	BRNE _0x2040036
-	CALL SUBOPT_0xF2
+	CALL SUBOPT_0xF3
 	__POINTD2FN _0x2040000,1
 	CALL _strcpyf
 	CALL __LOADLOCR4
@@ -28043,46 +28187,46 @@ _0x204003A:
 	SUBI R17,1
 	CPI  R30,0
 	BREQ _0x204003C
-	CALL SUBOPT_0x1C7
+	CALL SUBOPT_0x1C8
 	RJMP _0x204003A
 _0x204003C:
-	CALL SUBOPT_0x163
+	CALL SUBOPT_0x164
 	BRNE _0x204003D
 	LDI  R19,LOW(0)
-	CALL SUBOPT_0x1C7
+	CALL SUBOPT_0x1C8
 	RJMP _0x204003E
 _0x204003D:
 	LDD  R19,Y+11
-	CALL SUBOPT_0x1C8
+	CALL SUBOPT_0x1C9
 	BREQ PC+2
 	BRCC PC+3
 	JMP  _0x204003F
-	CALL SUBOPT_0x1C7
-_0x2040040:
 	CALL SUBOPT_0x1C8
-	BRLO _0x2040042
+_0x2040040:
 	CALL SUBOPT_0x1C9
+	BRLO _0x2040042
+	CALL SUBOPT_0x1CA
 	RJMP _0x2040040
 _0x2040042:
 	RJMP _0x2040043
 _0x204003F:
 _0x2040044:
-	CALL SUBOPT_0x1C8
+	CALL SUBOPT_0x1C9
 	BRSH _0x2040046
 	CALL SUBOPT_0x5A
-	CALL SUBOPT_0x1CA
-	CALL SUBOPT_0x190
+	CALL SUBOPT_0x1CB
+	CALL SUBOPT_0x191
 	SUBI R19,LOW(1)
 	RJMP _0x2040044
 _0x2040046:
-	CALL SUBOPT_0x1C7
+	CALL SUBOPT_0x1C8
 _0x2040043:
 	CALL SUBOPT_0x58
-	CALL SUBOPT_0x1CB
-	CALL SUBOPT_0x190
-	CALL SUBOPT_0x1C8
-	BRLO _0x2040047
+	CALL SUBOPT_0x1CC
+	CALL SUBOPT_0x191
 	CALL SUBOPT_0x1C9
+	BRLO _0x2040047
+	CALL SUBOPT_0x1CA
 _0x2040047:
 _0x204003E:
 	LDI  R17,LOW(0)
@@ -28091,8 +28235,8 @@ _0x2040048:
 	CP   R30,R17
 	BRLO _0x204004A
 	CALL SUBOPT_0x32
+	CALL SUBOPT_0x1CD
 	CALL SUBOPT_0x1CC
-	CALL SUBOPT_0x1CB
 	MOVW R26,R30
 	MOVW R24,R22
 	CALL _floor
@@ -28101,7 +28245,7 @@ _0x2040048:
 	CALL __DIVF21
 	CALL __CFD1U
 	MOV  R16,R30
-	CALL SUBOPT_0x1CD
+	CALL SUBOPT_0x1CE
 	MOV  R30,R16
 	SUBI R30,-LOW(48)
 	ST   X,R30
@@ -28113,18 +28257,18 @@ _0x2040048:
 	CALL SUBOPT_0x32
 	CALL __MULF12
 	CALL SUBOPT_0x5A
-	CALL SUBOPT_0x1CE
-	CALL SUBOPT_0x190
+	CALL SUBOPT_0x1CF
+	CALL SUBOPT_0x191
 	MOV  R30,R17
 	SUBI R17,-1
 	CPI  R30,0
 	BRNE _0x2040048
-	CALL SUBOPT_0x1CD
+	CALL SUBOPT_0x1CE
 	LDI  R30,LOW(46)
 	ST   X,R30
 	RJMP _0x2040048
 _0x204004A:
-	CALL SUBOPT_0x1CF
+	CALL SUBOPT_0x1D0
 	SBIW R30,1
 	LDD  R26,Y+10
 	STD  Z+0,R26
@@ -28141,8 +28285,8 @@ _0x204004C:
 	LDI  R30,LOW(43)
 _0x2040137:
 	ST   X,R30
-	CALL SUBOPT_0x1CF
-	CALL SUBOPT_0x1CF
+	CALL SUBOPT_0x1D0
+	CALL SUBOPT_0x1D0
 	SBIW R30,1
 	MOVW R22,R30
 	MOV  R26,R19
@@ -28151,7 +28295,7 @@ _0x2040137:
 	SUBI R30,-LOW(48)
 	MOVW R26,R22
 	ST   X,R30
-	CALL SUBOPT_0x1CF
+	CALL SUBOPT_0x1D0
 	SBIW R30,1
 	MOVW R22,R30
 	MOV  R26,R19
@@ -28180,12 +28324,12 @@ __print_G102:
 	STD  Y+6+1,R31
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
-	CALL SUBOPT_0xCD
+	CALL SUBOPT_0xCC
 _0x204004E:
 	MOVW R26,R28
 	SUBI R26,LOW(-(98))
 	SBCI R27,HIGH(-(98))
-	CALL SUBOPT_0x137
+	CALL SUBOPT_0x138
 	__GETBRPF 30
 	MOV  R18,R30
 	CPI  R30,0
@@ -28199,7 +28343,7 @@ _0x204004E:
 	LDI  R17,LOW(1)
 	RJMP _0x2040056
 _0x2040055:
-	CALL SUBOPT_0x1D0
+	CALL SUBOPT_0x1D1
 _0x2040056:
 	RJMP _0x2040053
 _0x2040054:
@@ -28207,7 +28351,7 @@ _0x2040054:
 	BRNE _0x2040057
 	CPI  R18,37
 	BRNE _0x2040058
-	CALL SUBOPT_0x1D0
+	CALL SUBOPT_0x1D1
 	RJMP _0x2040138
 _0x2040058:
 	LDI  R17,LOW(2)
@@ -28305,12 +28449,12 @@ _0x204006C:
 	MOV  R30,R18
 	CPI  R30,LOW(0x63)
 	BRNE _0x2040071
-	CALL SUBOPT_0x1D1
 	CALL SUBOPT_0x1D2
-	CALL SUBOPT_0x1D1
+	CALL SUBOPT_0x1D3
+	CALL SUBOPT_0x1D2
 	LDD  R26,Z+4
 	ST   -Y,R26
-	CALL SUBOPT_0x1D3
+	CALL SUBOPT_0x1D4
 	RJMP _0x2040072
 _0x2040071:
 	CPI  R30,LOW(0x45)
@@ -28328,10 +28472,10 @@ _0x2040077:
 	ADIW R30,26
 	STD  Y+16,R30
 	STD  Y+16+1,R31
-	CALL SUBOPT_0x1D4
-	CALL __GETD1P
-	CALL SUBOPT_0x190
 	CALL SUBOPT_0x1D5
+	CALL __GETD1P
+	CALL SUBOPT_0x191
+	CALL SUBOPT_0x1D6
 	LDD  R26,Y+15
 	TST  R26
 	BRMI _0x2040079
@@ -28342,7 +28486,7 @@ _0x2040077:
 _0x2040079:
 	CALL SUBOPT_0x58
 	CALL __ANEGF1
-	CALL SUBOPT_0x190
+	CALL SUBOPT_0x191
 	LDI  R30,LOW(45)
 	STD  Y+25,R30
 _0x204007B:
@@ -28350,7 +28494,7 @@ _0x204007B:
 	RJMP _0x204007D
 	LDD  R30,Y+25
 	ST   -Y,R30
-	CALL SUBOPT_0x1D3
+	CALL SUBOPT_0x1D4
 	RJMP _0x204007E
 _0x204007D:
 	LDD  R30,Y+16
@@ -28385,26 +28529,26 @@ _0x2040080:
 _0x2040081:
 	MOVW R30,R28
 	ADIW R30,26
-	CALL SUBOPT_0x1D6
+	CALL SUBOPT_0x1D7
 	RJMP _0x2040082
 _0x2040078:
 	CPI  R30,LOW(0x73)
 	BRNE _0x2040084
+	CALL SUBOPT_0x1D6
 	CALL SUBOPT_0x1D5
-	CALL SUBOPT_0x1D4
 	ADIW R26,4
 	CALL __GETW1P
-	CALL SUBOPT_0x1D6
+	CALL SUBOPT_0x1D7
 	RJMP _0x2040085
 _0x2040084:
 	CPI  R30,LOW(0x70)
 	BRNE _0x2040087
+	CALL SUBOPT_0x1D6
 	CALL SUBOPT_0x1D5
-	CALL SUBOPT_0x1D4
 	ADIW R26,4
 	CALL __GETD1P
-	CALL SUBOPT_0x18E
-	CALL SUBOPT_0x153
+	CALL SUBOPT_0x18F
+	CALL SUBOPT_0x154
 	CALL _strlenf
 	MOV  R17,R30
 	ORI  R16,LOW(8)
@@ -28442,12 +28586,12 @@ _0x2040090:
 	SBRS R16,1
 	RJMP _0x2040092
 	__GETD1N 0x3B9ACA00
-	CALL SUBOPT_0x1D7
+	CALL SUBOPT_0x1D8
 	LDI  R17,LOW(10)
 	RJMP _0x2040093
 _0x2040092:
 	__GETD1N 0x2710
-	CALL SUBOPT_0x1D7
+	CALL SUBOPT_0x1D8
 	LDI  R17,LOW(5)
 	RJMP _0x2040093
 _0x2040091:
@@ -28465,12 +28609,12 @@ _0x2040096:
 	SBRS R16,1
 	RJMP _0x2040098
 	__GETD1N 0x10000000
-	CALL SUBOPT_0x1D7
+	CALL SUBOPT_0x1D8
 	LDI  R17,LOW(8)
 	RJMP _0x2040093
 _0x2040098:
 	__GETD1N 0x1000
-	CALL SUBOPT_0x1D7
+	CALL SUBOPT_0x1D8
 	LDI  R17,LOW(4)
 _0x2040093:
 	CPI  R20,0
@@ -28482,25 +28626,25 @@ _0x2040099:
 _0x204009A:
 	SBRS R16,1
 	RJMP _0x204009B
+	CALL SUBOPT_0x1D6
 	CALL SUBOPT_0x1D5
-	CALL SUBOPT_0x1D4
 	ADIW R26,4
 	CALL __GETD1P
 	RJMP _0x2040139
 _0x204009B:
 	SBRS R16,2
 	RJMP _0x204009D
+	CALL SUBOPT_0x1D6
 	CALL SUBOPT_0x1D5
-	CALL SUBOPT_0x1D4
 	ADIW R26,4
 	CALL __GETW1P
 	CALL __CWD1
 	RJMP _0x2040139
 _0x204009D:
+	CALL SUBOPT_0x1D6
 	CALL SUBOPT_0x1D5
-	CALL SUBOPT_0x1D4
 	ADIW R26,4
-	CALL SUBOPT_0x14D
+	CALL SUBOPT_0x14E
 _0x2040139:
 	__PUTD1S 12
 	SBRS R16,2
@@ -28510,7 +28654,7 @@ _0x2040139:
 	BRPL _0x20400A0
 	CALL SUBOPT_0x58
 	CALL __ANEGD1
-	CALL SUBOPT_0x190
+	CALL SUBOPT_0x191
 	LDI  R30,LOW(45)
 	STD  Y+25,R30
 _0x20400A0:
@@ -28551,7 +28695,7 @@ _0x20400AB:
 _0x20400A9:
 	LDI  R18,LOW(32)
 _0x20400AC:
-	CALL SUBOPT_0x1D0
+	CALL SUBOPT_0x1D1
 	SUBI R21,LOW(1)
 	RJMP _0x20400A4
 _0x20400A6:
@@ -28562,7 +28706,7 @@ _0x20400AD:
 	ORI  R16,LOW(16)
 	SBRS R16,2
 	RJMP _0x20400B0
-	CALL SUBOPT_0x1D8
+	CALL SUBOPT_0x1D9
 	BREQ _0x20400B1
 	SUBI R21,LOW(1)
 _0x20400B1:
@@ -28571,7 +28715,7 @@ _0x20400B1:
 _0x20400B0:
 	LDI  R30,LOW(48)
 	ST   -Y,R30
-	CALL SUBOPT_0x1D3
+	CALL SUBOPT_0x1D4
 	CPI  R21,0
 	BREQ _0x20400B2
 	SUBI R21,LOW(1)
@@ -28590,7 +28734,7 @@ _0x20400B4:
 	RJMP _0x20400B7
 	MOVW R26,R28
 	ADIW R26,16
-	CALL SUBOPT_0x137
+	CALL SUBOPT_0x138
 	__GETBRPF 18
 	RJMP _0x20400B8
 _0x20400B7:
@@ -28600,7 +28744,7 @@ _0x20400B7:
 	STD  Y+16,R26
 	STD  Y+16+1,R27
 _0x20400B8:
-	CALL SUBOPT_0x1D0
+	CALL SUBOPT_0x1D1
 	CPI  R21,0
 	BREQ _0x20400B9
 	SUBI R21,LOW(1)
@@ -28633,7 +28777,7 @@ _0x20400C1:
 	CPI  R18,49
 	BRSH _0x20400C5
 	__GETD2S 20
-	CALL SUBOPT_0x15A
+	CALL SUBOPT_0x15B
 	BRNE _0x20400C4
 _0x20400C5:
 	RJMP _0x20400C7
@@ -28656,14 +28800,14 @@ _0x20400C7:
 	ORI  R16,LOW(16)
 	SBRS R16,2
 	RJMP _0x20400CD
-	CALL SUBOPT_0x1D8
+	CALL SUBOPT_0x1D9
 	BREQ _0x20400CE
 	SUBI R21,LOW(1)
 _0x20400CE:
 _0x20400CD:
 _0x20400CC:
 _0x20400C3:
-	CALL SUBOPT_0x1D0
+	CALL SUBOPT_0x1D1
 	CPI  R21,0
 	BREQ _0x20400CF
 	SUBI R21,LOW(1)
@@ -28673,14 +28817,14 @@ _0x20400C9:
 	CALL SUBOPT_0x5C
 	CALL SUBOPT_0x5A
 	CALL __MODD21U
-	CALL SUBOPT_0x190
+	CALL SUBOPT_0x191
 	LDD  R30,Y+24
 	__GETD2S 20
 	CLR  R31
 	CLR  R22
 	CLR  R23
 	CALL __DIVD21U
-	CALL SUBOPT_0x1D7
+	CALL SUBOPT_0x1D8
 	CALL SUBOPT_0x5C
 	CALL __CPD10
 	BREQ _0x20400BD
@@ -28695,7 +28839,7 @@ _0x20400D1:
 	SUBI R21,LOW(1)
 	LDI  R30,LOW(32)
 	ST   -Y,R30
-	CALL SUBOPT_0x1D3
+	CALL SUBOPT_0x1D4
 	RJMP _0x20400D1
 _0x20400D3:
 _0x20400D0:
@@ -28733,7 +28877,7 @@ _0x20400D5:
 	MOVW R26,R28
 	ADIW R26,14
 	CALL __ADDW2R15
-	CALL SUBOPT_0x175
+	CALL SUBOPT_0x176
 	LDI  R30,LOW(0)
 	STD  Y+8,R30
 	STD  Y+8+1,R30
@@ -28742,7 +28886,7 @@ _0x20400D5:
 	CALL SUBOPT_0x6E
 	ST   -Y,R17
 	ST   -Y,R16
-	CALL SUBOPT_0x1D9
+	CALL SUBOPT_0x1DA
 	MOVW R26,R28
 	ADIW R26,14
 	RCALL __print_G102
@@ -28781,7 +28925,7 @@ _0x20400D8:
 	CALL SUBOPT_0x56
 	CALL __PUTPARD1
 	CALL SUBOPT_0x77
-	CALL SUBOPT_0x1D9
+	CALL SUBOPT_0x1DA
 	MOVW R26,R28
 	ADIW R26,12
 	RCALL __print_G102
@@ -28894,10 +29038,10 @@ _0x206000C:
 	LDD  R26,Y+12
 	TST  R26
 	BRPL _0x206000F
-	CALL SUBOPT_0x1B9
+	CALL SUBOPT_0x1BA
 	CALL __ANEGF1
-	CALL SUBOPT_0x1B6
-	CALL SUBOPT_0x1DA
+	CALL SUBOPT_0x1B7
+	CALL SUBOPT_0x1DB
 	LDI  R30,LOW(45)
 	ST   X,R30
 _0x206000F:
@@ -28914,22 +29058,22 @@ _0x2060011:
 	CPI  R30,0
 	BREQ _0x2060013
 	CALL SUBOPT_0x40
-	CALL SUBOPT_0x1CC
+	CALL SUBOPT_0x1CD
 	CALL SUBOPT_0x3E
 	RJMP _0x2060011
 _0x2060013:
-	CALL SUBOPT_0x1DB
+	CALL SUBOPT_0x1DC
 	CALL __ADDF12
-	CALL SUBOPT_0x1B6
+	CALL SUBOPT_0x1B7
 	LDI  R17,LOW(0)
 	__GETD1N 0x3F800000
 	CALL SUBOPT_0x3E
 _0x2060014:
-	CALL SUBOPT_0x1DB
+	CALL SUBOPT_0x1DC
 	CALL __CMPF12
 	BRLO _0x2060016
 	CALL SUBOPT_0x40
-	CALL SUBOPT_0x1CA
+	CALL SUBOPT_0x1CB
 	CALL SUBOPT_0x3E
 	SUBI R17,-LOW(1)
 	CPI  R17,39
@@ -28943,7 +29087,7 @@ _0x2060017:
 _0x2060016:
 	CPI  R17,0
 	BRNE _0x2060018
-	CALL SUBOPT_0x1DA
+	CALL SUBOPT_0x1DB
 	LDI  R30,LOW(48)
 	ST   X,R30
 	RJMP _0x2060019
@@ -28954,17 +29098,17 @@ _0x206001A:
 	CPI  R30,0
 	BREQ _0x206001C
 	CALL SUBOPT_0x40
+	CALL SUBOPT_0x1CD
 	CALL SUBOPT_0x1CC
-	CALL SUBOPT_0x1CB
 	MOVW R26,R30
 	MOVW R24,R22
 	CALL _floor
 	CALL SUBOPT_0x3E
-	CALL SUBOPT_0x1DB
+	CALL SUBOPT_0x1DC
 	CALL __DIVF21
 	CALL __CFD1U
 	MOV  R16,R30
-	CALL SUBOPT_0x1DA
+	CALL SUBOPT_0x1DB
 	MOV  R30,R16
 	SUBI R30,-LOW(48)
 	ST   X,R30
@@ -28973,16 +29117,16 @@ _0x206001A:
 	CALL __CWD1
 	CALL __CDF1
 	CALL __MULF12
-	CALL SUBOPT_0x1C2
-	CALL SUBOPT_0x1CE
-	CALL SUBOPT_0x1B6
+	CALL SUBOPT_0x1C3
+	CALL SUBOPT_0x1CF
+	CALL SUBOPT_0x1B7
 	RJMP _0x206001A
 _0x206001C:
 _0x2060019:
 	LDD  R30,Y+8
 	CPI  R30,0
 	BREQ _0x20E0008
-	CALL SUBOPT_0x1DA
+	CALL SUBOPT_0x1DB
 	LDI  R30,LOW(46)
 	ST   X,R30
 _0x206001E:
@@ -28991,22 +29135,22 @@ _0x206001E:
 	STD  Y+8,R30
 	SUBI R30,-LOW(1)
 	BREQ _0x2060020
-	CALL SUBOPT_0x1C2
-	CALL SUBOPT_0x1CA
-	CALL SUBOPT_0x1B6
-	CALL SUBOPT_0x1B9
+	CALL SUBOPT_0x1C3
+	CALL SUBOPT_0x1CB
+	CALL SUBOPT_0x1B7
+	CALL SUBOPT_0x1BA
 	CALL __CFD1U
 	MOV  R16,R30
-	CALL SUBOPT_0x1DA
+	CALL SUBOPT_0x1DB
 	MOV  R30,R16
 	SUBI R30,-LOW(48)
 	ST   X,R30
 	CALL SUBOPT_0x36
-	CALL SUBOPT_0x1C2
+	CALL SUBOPT_0x1C3
 	CALL __CWD1
 	CALL __CDF1
-	CALL SUBOPT_0x1CE
-	CALL SUBOPT_0x1B6
+	CALL SUBOPT_0x1CF
+	CALL SUBOPT_0x1B7
 	RJMP _0x206001E
 _0x2060020:
 _0x20E0008:
@@ -29026,7 +29170,7 @@ _0x20E0009:
 _srand:
 	CALL SUBOPT_0x29
 	CALL __CWD1
-	CALL SUBOPT_0x1DC
+	CALL SUBOPT_0x1DD
 	RJMP _0x20E0005
 _rand:
 	LDS  R30,__seed_G103
@@ -29036,15 +29180,15 @@ _rand:
 	__GETD2N 0x41C64E6D
 	CALL __MULD12U
 	__ADDD1N 30562
-	CALL SUBOPT_0x1DC
+	CALL SUBOPT_0x1DD
 	movw r30,r22
 	andi r31,0x7F
 	RET
 _allocate_block_G103:
-	CALL SUBOPT_0xF9
+	CALL SUBOPT_0xFA
 	__GETWRN 16,17,6656
 	MOVW R26,R16
-	CALL SUBOPT_0xCD
+	CALL SUBOPT_0xCC
 _0x2060061:
 	MOV  R0,R16
 	OR   R0,R17
@@ -29055,7 +29199,7 @@ _0x2060061:
 	ADC  R31,R17
 	ADIW R30,4
 	MOVW R20,R30
-	CALL SUBOPT_0xCF
+	CALL SUBOPT_0xCE
 	MOVW R18,R30
 	SBIW R30,0
 	BREQ _0x2060064
@@ -29100,13 +29244,13 @@ _0x20E0007:
 	ADIW R28,10
 	RET
 _find_prev_block_G103:
-	CALL SUBOPT_0x103
+	CALL SUBOPT_0x104
 	__GETWRN 16,17,6656
 _0x2060067:
 	MOV  R0,R16
 	OR   R0,R17
 	BREQ _0x2060069
-	CALL SUBOPT_0xCF
+	CALL SUBOPT_0xCE
 	MOVW R18,R30
 	MOVW R26,R30
 	LDD  R30,Y+4
@@ -29126,7 +29270,7 @@ _0x2060069:
 	CALL __LOADLOCR4
 	JMP  _0x20E0004
 _realloc:
-	CALL SUBOPT_0xF9
+	CALL SUBOPT_0xFA
 	LDD  R30,Y+10
 	LDD  R31,Y+10+1
 	SBIW R30,0
@@ -29138,7 +29282,7 @@ _realloc:
 	MOVW R18,R30
 	SBIW R30,0
 	BREQ _0x206006C
-	CALL SUBOPT_0xCF
+	CALL SUBOPT_0xCE
 	__PUTW1RNS 18,2
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
@@ -29151,7 +29295,7 @@ _realloc:
 	SBIW R30,0
 	BREQ _0x206006E
 	MOVW R26,R16
-	CALL SUBOPT_0x175
+	CALL SUBOPT_0x176
 	MOVW R26,R30
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
@@ -29748,6 +29892,8 @@ _viDirConfigPath:
 	.BYTE 0xA
 _viDataFName:
 	.BYTE 0x10
+_viConfigFName:
+	.BYTE 0xF
 
 	.ESEG
 _viLineID:
@@ -30559,7 +30705,7 @@ SUBOPT_0x61:
 	__CPD2N 0xFFFFFFFF
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 39 TIMES, CODE SIZE REDUCTION:73 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 40 TIMES, CODE SIZE REDUCTION:75 WORDS
 SUBOPT_0x62:
 	CLR  R22
 	CLR  R23
@@ -30588,7 +30734,7 @@ SUBOPT_0x65:
 	LDI  R31,HIGH(_root_path)
 	RJMP SUBOPT_0x62
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 27 TIMES, CODE SIZE REDUCTION:49 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 28 TIMES, CODE SIZE REDUCTION:51 WORDS
 SUBOPT_0x66:
 	LDI  R24,4
 	CALL _printDebug
@@ -31041,13 +31187,8 @@ SUBOPT_0x9C:
 	ST   X,R30
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x9D:
-	__GETD2N 0x14
-	JMP  _TIMER_setTimer
-
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:22 WORDS
-SUBOPT_0x9E:
+SUBOPT_0x9D:
 	LDI  R30,LOW(8)
 	STD  Y+24,R30
 	LDI  R30,LOW(0)
@@ -31073,7 +31214,7 @@ SUBOPT_0x9E:
 	JMP  _iPTCPack
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x9F:
+SUBOPT_0x9E:
 	MOVW R30,R28
 	SUBI R30,LOW(-(336))
 	SBCI R31,HIGH(-(336))
@@ -31090,7 +31231,7 @@ SUBOPT_0x9F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0xA0:
+SUBOPT_0x9F:
 	__POINTD1FN _0x340000,31
 	CALL __PUTPARD1
 	LDD  R30,Y+30
@@ -31098,7 +31239,7 @@ SUBOPT_0xA0:
 	RJMP SUBOPT_0x62
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0xA1:
+SUBOPT_0xA0:
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	ST   -Y,R31
@@ -31106,7 +31247,7 @@ SUBOPT_0xA1:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0xA2:
+SUBOPT_0xA1:
 	MOVW R26,R28
 	SUBI R26,LOW(-(336))
 	SBCI R27,HIGH(-(336))
@@ -31115,7 +31256,7 @@ SUBOPT_0xA2:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xA3:
+SUBOPT_0xA2:
 	MOVW R26,R28
 	ADIW R26,34
 	CALL _iLanReadData
@@ -31123,7 +31264,7 @@ SUBOPT_0xA3:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0xA4:
+SUBOPT_0xA3:
 	MOVW R30,R28
 	ADIW R30,28
 	ST   -Y,R31
@@ -31135,14 +31276,14 @@ SUBOPT_0xA4:
 	RJMP SUBOPT_0xA
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xA5:
+SUBOPT_0xA4:
 	CALL _memcpy
 	MOVW R26,R28
 	ADIW R26,28
 	JMP  _iSyncUniTime
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0xA6:
+SUBOPT_0xA5:
 	LDI  R30,LOW(89)
 	ST   -Y,R30
 	__POINTD1FN _0x340000,30
@@ -31153,7 +31294,7 @@ SUBOPT_0xA6:
 	JMP  _iDataUpdate
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xA7:
+SUBOPT_0xA6:
 	MOVW R26,R28
 	ADIW R26,34
 	CALL _iTagParser
@@ -31162,7 +31303,7 @@ SUBOPT_0xA7:
 	JMP  _iPTCCheckHostReq
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0xA8:
+SUBOPT_0xA7:
 	MOVW R30,R28
 	ADIW R30,12
 	ST   -Y,R31
@@ -31170,7 +31311,7 @@ SUBOPT_0xA8:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0xA9:
+SUBOPT_0xA8:
 	MOVW R30,R28
 	SUBI R30,LOW(-(336))
 	SBCI R31,HIGH(-(336))
@@ -31179,7 +31320,7 @@ SUBOPT_0xA9:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0xAA:
+SUBOPT_0xA9:
 	ST   -Y,R31
 	ST   -Y,R30
 	MOVW R30,R28
@@ -31189,7 +31330,7 @@ SUBOPT_0xAA:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0xAB:
+SUBOPT_0xAA:
 	MOVW R30,R28
 	SUBI R30,LOW(-(336))
 	SBCI R31,HIGH(-(336))
@@ -31198,7 +31339,7 @@ SUBOPT_0xAB:
 	JMP  _iMangCheckRetransmit
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 11 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0xAC:
+SUBOPT_0xAB:
 	MOVW R30,R28
 	ADIW R30,6
 	ST   -Y,R31
@@ -31206,12 +31347,12 @@ SUBOPT_0xAC:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0xAD:
+SUBOPT_0xAC:
 	__GETD2N 0x1
 	JMP  _TIMER_setTimer
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0xAE:
+SUBOPT_0xAD:
 	MOVW R26,R0
 	ST   X,R30
 	MOVW R30,R28
@@ -31219,14 +31360,14 @@ SUBOPT_0xAE:
 	SBCI R31,HIGH(-(72))
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xAF:
+;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
+SUBOPT_0xAE:
 	CALL __PUTPARD1
 	MOVW R30,R18
 	RJMP SUBOPT_0x62
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0xB0:
+SUBOPT_0xAF:
 	MOVW R30,R20
 	MOVW R26,R28
 	ADIW R26,12
@@ -31240,12 +31381,12 @@ SUBOPT_0xB0:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0xB1:
+SUBOPT_0xB0:
 	__GETW2SX 82
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0xB2:
+SUBOPT_0xB1:
 	CALL __GETW1P
 	MOVW R26,R30
 	CALL _print_payload
@@ -31253,7 +31394,7 @@ SUBOPT_0xB2:
 	RJMP SUBOPT_0x0
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0xB3:
+SUBOPT_0xB2:
 	LDD  R30,Y+14
 	LDD  R31,Y+14+1
 	ADIW R30,2
@@ -31261,10 +31402,10 @@ SUBOPT_0xB3:
 	ST   -Y,R30
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
-	RJMP SUBOPT_0xB2
+	RJMP SUBOPT_0xB1
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xB4:
+SUBOPT_0xB3:
 	MOVW R30,R28
 	ADIW R30,22
 	ST   -Y,R31
@@ -31272,7 +31413,7 @@ SUBOPT_0xB4:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0xB5:
+SUBOPT_0xB4:
 	ADIW R30,2
 	ADD  R30,R16
 	ADC  R31,R17
@@ -31280,12 +31421,12 @@ SUBOPT_0xB5:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:25 WORDS
-SUBOPT_0xB6:
+SUBOPT_0xB5:
 	__POINTD1FN _0x340000,411
 	RJMP SUBOPT_0x70
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:39 WORDS
-SUBOPT_0xB7:
+SUBOPT_0xB6:
 	LDD  R26,Y+14
 	LDD  R27,Y+14+1
 	ADIW R26,2
@@ -31296,7 +31437,7 @@ SUBOPT_0xB7:
 	RJMP SUBOPT_0x7B
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0xB8:
+SUBOPT_0xB7:
 	ST   -Y,R31
 	ST   -Y,R30
 	LDD  R30,Y+8
@@ -31308,7 +31449,7 @@ SUBOPT_0xB8:
 	JMP  _memcpye
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xB9:
+SUBOPT_0xB8:
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
 	LDD  R30,Z+4
@@ -31316,14 +31457,14 @@ SUBOPT_0xB9:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:18 WORDS
-SUBOPT_0xBA:
+SUBOPT_0xB9:
 	CLR  R31
 	CLR  R22
 	CLR  R23
 	RJMP SUBOPT_0x64
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:27 WORDS
-SUBOPT_0xBB:
+SUBOPT_0xBA:
 	ST   -Y,R27
 	ST   -Y,R26
 	SBIW R28,2
@@ -31340,52 +31481,52 @@ SUBOPT_0xBB:
 	RJMP SUBOPT_0x7
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:42 WORDS
-SUBOPT_0xBC:
+SUBOPT_0xBB:
 	__MULBNWRU 18,19,9
 	__ADDW1MN _viMangQueue,7
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0xBD:
+SUBOPT_0xBC:
 	MOVW R26,R30
 	CALL __GETW1P
 	SBIW R30,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 20 TIMES, CODE SIZE REDUCTION:35 WORDS
-SUBOPT_0xBE:
+SUBOPT_0xBD:
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 12 TIMES, CODE SIZE REDUCTION:30 WORDS
-SUBOPT_0xBF:
+SUBOPT_0xBE:
 	__MULBNWRU 18,19,9
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 24 TIMES, CODE SIZE REDUCTION:43 WORDS
-SUBOPT_0xC0:
+SUBOPT_0xBF:
 	CALL __GETW1P
 	ST   -Y,R31
 	ST   -Y,R30
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0xC1:
+SUBOPT_0xC0:
 	__ADDW1MN _viMangQueue,2
 	ST   -Y,R31
 	ST   -Y,R30
-	RJMP SUBOPT_0xAC
+	RJMP SUBOPT_0xAB
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xC2:
+SUBOPT_0xC1:
 	CALL __PUTPARD1
 	LDD  R30,Y+8
 	RJMP SUBOPT_0x7F
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xC3:
+SUBOPT_0xC2:
 	LDI  R26,LOW(0)
 	LDI  R27,HIGH(0)
 	STD  Z+0,R26
@@ -31393,7 +31534,7 @@ SUBOPT_0xC3:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0xC4:
+SUBOPT_0xC3:
 	ST   -Y,R31
 	ST   -Y,R30
 	LDI  R30,LOW(0)
@@ -31401,12 +31542,12 @@ SUBOPT_0xC4:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xC5:
+SUBOPT_0xC4:
 	__POINTD1FN _0x340000,260
 	RJMP SUBOPT_0x0
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0xC6:
+SUBOPT_0xC5:
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
 	ADIW R30,1
@@ -31419,7 +31560,7 @@ SUBOPT_0xC6:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0xC7:
+SUBOPT_0xC6:
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
 	ADIW R30,1
@@ -31428,25 +31569,25 @@ SUBOPT_0xC7:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xC8:
+SUBOPT_0xC7:
 	__POINTD1FN _0x340000,1253
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xC9:
+SUBOPT_0xC8:
 	RCALL SUBOPT_0x4A
 	RCALL SUBOPT_0x51
 	CALL __SUBD12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0xCA:
+SUBOPT_0xC9:
 	LDI  R27,0
 	JMP  _malloc
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xCB:
+SUBOPT_0xCA:
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
 	LDD  R26,Y+6
@@ -31455,14 +31596,14 @@ SUBOPT_0xCB:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xCC:
+SUBOPT_0xCB:
 	MOVW R26,R16
 	ADIW R26,8
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0xCD:
+SUBOPT_0xCC:
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
 	ST   X+,R30
@@ -31470,7 +31611,7 @@ SUBOPT_0xCD:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xCE:
+SUBOPT_0xCD:
 	LSL  R30
 	ROL  R31
 	ADD  R30,R26
@@ -31478,14 +31619,14 @@ SUBOPT_0xCE:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xCF:
+SUBOPT_0xCE:
 	MOVW R26,R16
 	ADIW R26,2
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0xD0:
+SUBOPT_0xCF:
 	SBIW R28,2
 	LDI  R30,LOW(0)
 	ST   Y,R30
@@ -31494,18 +31635,18 @@ SUBOPT_0xD0:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0xD1:
+SUBOPT_0xD0:
 	LDI  R27,0
 	JMP  _memcpy
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xD2:
+SUBOPT_0xD1:
 	LDS  R30,_task_count_g
 	LDS  R31,_task_count_g+1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0xD3:
+SUBOPT_0xD2:
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
 	LDI  R26,LOW(_pviTaskList)
@@ -31518,13 +31659,18 @@ SUBOPT_0xD3:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0xD4:
+SUBOPT_0xD3:
 	LSL  R30
 	ROL  R31
 	ADD  R26,R30
 	ADC  R27,R31
 	CALL __GETW1P
 	RET
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
+SUBOPT_0xD4:
+	__GETD2N 0x7
+	JMP  _TIMER_setTimer
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
 SUBOPT_0xD5:
@@ -31592,13 +31738,22 @@ SUBOPT_0xDD:
 	MOVW R18,R30
 	RET
 
-;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
+;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
 SUBOPT_0xDE:
 	__POINTD1FN _0x420000,289
-	RJMP SUBOPT_0xAF
+	RJMP SUBOPT_0xAE
+
+;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
+SUBOPT_0xDF:
+	ST   -Y,R31
+	ST   -Y,R30
+	LDI  R26,LOW(12)
+	CALL _strncmp
+	CPI  R30,0
+	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 12 TIMES, CODE SIZE REDUCTION:19 WORDS
-SUBOPT_0xDF:
+SUBOPT_0xE0:
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
 	ST   -Y,R31
@@ -31606,30 +31761,30 @@ SUBOPT_0xDF:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xE0:
+SUBOPT_0xE1:
 	__GETD2N 0x3
 	JMP  _TIMER_setTimer
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xE1:
+SUBOPT_0xE2:
 	MOVW R30,R28
 	ADIW R30,10
-	RJMP SUBOPT_0xC4
+	RJMP SUBOPT_0xC3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xE2:
+SUBOPT_0xE3:
 	LDI  R26,LOW(400)
 	LDI  R27,HIGH(400)
 	JMP  _memset
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xE3:
+SUBOPT_0xE4:
 	RCALL SUBOPT_0x13
 	CALL __CPW02
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0xE4:
+SUBOPT_0xE5:
 	MOVW R30,R28
 	ADIW R30,10
 	ST   -Y,R31
@@ -31637,45 +31792,45 @@ SUBOPT_0xE4:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:24 WORDS
-SUBOPT_0xE5:
+SUBOPT_0xE6:
 	__POINTD2FN _0x420000,15
 	CALL _strtok
 	__PUTW1SX 414
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0xE6:
+SUBOPT_0xE7:
 	__GETW1SX 414
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xE7:
-	RCALL SUBOPT_0xE6
+SUBOPT_0xE8:
+	RCALL SUBOPT_0xE7
 	ST   -Y,R31
 	ST   -Y,R30
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0xE8:
+SUBOPT_0xE9:
 	__POINTD2FN _0x420000,18
 	CALL _strtok
 	MOVW R20,R30
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0xE9:
+SUBOPT_0xEA:
 	__POINTD2FN _0x420000,18
 	CALL _strtok
 	__PUTW1SX 420
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xEA:
+SUBOPT_0xEB:
 	__GETW1SX 420
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0xEB:
+SUBOPT_0xEC:
 	CALL _strlen
 	MOV  R26,R16
 	LDI  R27,0
@@ -31684,14 +31839,14 @@ SUBOPT_0xEB:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xEC:
+SUBOPT_0xED:
 	RCALL SUBOPT_0x32
 	CALL _TIMER_checkTimerExceed
 	SBIW R30,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 13 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0xED:
+SUBOPT_0xEE:
 	ST   -Y,R31
 	ST   -Y,R30
 	MOVW R26,R28
@@ -31699,29 +31854,29 @@ SUBOPT_0xED:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xEE:
-	__POINTD1FN _0x420000,360
+SUBOPT_0xEF:
+	__POINTD1FN _0x420000,458
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0xEF:
+SUBOPT_0xF0:
 	__POINTD1FN _0x420000,15
 	RJMP SUBOPT_0x0
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xF0:
-	__POINTD1FN _0x420000,385
+SUBOPT_0xF1:
+	__POINTD1FN _0x420000,483
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xF1:
+SUBOPT_0xF2:
 	CLR  R30
 	ADD  R26,R16
 	ADC  R27,R30
 	RJMP SUBOPT_0x7B
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0xF2:
+SUBOPT_0xF3:
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
 	ST   -Y,R31
@@ -31729,25 +31884,25 @@ SUBOPT_0xF2:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0xF3:
+SUBOPT_0xF4:
 	ADIW R30,2
 	ST   -Y,R31
 	ST   -Y,R30
-	__POINTD2FN _0x420000,389
+	__POINTD2FN _0x420000,487
 	CALL _strtok
 	MOVW R16,R30
 	LDI  R20,LOW(0)
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0xF4:
-	__POINTD2FN _0x420000,389
+SUBOPT_0xF5:
+	__POINTD2FN _0x420000,487
 	CALL _strtok
 	MOVW R16,R30
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xF5:
+SUBOPT_0xF6:
 	MOVW R30,R28
 	ADIW R30,1
 	ST   -Y,R31
@@ -31755,28 +31910,28 @@ SUBOPT_0xF5:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xF6:
+SUBOPT_0xF7:
 	CALL _f_opendir
 	MOV  R17,R30
 	CPI  R17,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xF7:
+SUBOPT_0xF8:
 	MOV  R26,R17
 	CALL _iFDisplayReturn
 	CPI  R17,5
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xF8:
+SUBOPT_0xF9:
 	CALL _f_mkdir
 	MOV  R17,R30
 	CPI  R17,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xF9:
+SUBOPT_0xFA:
 	ST   -Y,R27
 	ST   -Y,R26
 	SBIW R28,2
@@ -31784,41 +31939,41 @@ SUBOPT_0xF9:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xFA:
+SUBOPT_0xFB:
 	LDI  R26,LOW(544)
 	LDI  R27,HIGH(544)
 	RJMP SUBOPT_0xD6
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xFB:
+SUBOPT_0xFC:
 	CALL _f_chdir
 	MOV  R19,R30
 	CPI  R30,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xFC:
+SUBOPT_0xFD:
 	CALL __PUTPARD1
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	RJMP SUBOPT_0x62
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0xFD:
+SUBOPT_0xFE:
 	CALL _f_open
 	MOV  R19,R30
 	CPI  R30,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0xFE:
+SUBOPT_0xFF:
 	CALL __PUTPARD1
 	LDD  R30,Y+14
 	LDD  R31,Y+14+1
 	RJMP SUBOPT_0x62
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0xFF:
+SUBOPT_0x100:
 	CALL __GETD1P
 	MOVW R26,R30
 	MOVW R24,R22
@@ -31828,7 +31983,7 @@ SUBOPT_0xFF:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0x100:
+SUBOPT_0x101:
 	LDD  R30,Y+18
 	LDD  R31,Y+18+1
 	ST   -Y,R31
@@ -31836,7 +31991,7 @@ SUBOPT_0x100:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x101:
+SUBOPT_0x102:
 	MOVW R26,R16
 	CALL _f_close
 	MOV  R19,R30
@@ -31844,49 +31999,49 @@ SUBOPT_0x101:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:32 WORDS
-SUBOPT_0x102:
+SUBOPT_0x103:
 	MOV  R26,R19
 	CALL _iFDisplayReturn
 	__POINTD1FN _0x4C0000,1007
 	RJMP SUBOPT_0x0
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x103:
+SUBOPT_0x104:
 	ST   -Y,R27
 	ST   -Y,R26
 	CALL __SAVELOCR4
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x104:
+SUBOPT_0x105:
 	CALL __PUTPARD1
 	LDD  R30,Y+12
 	LDD  R31,Y+12+1
 	RJMP SUBOPT_0x62
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x105:
+SUBOPT_0x106:
 	__GETD2Z 10
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x106:
+SUBOPT_0x107:
 	__GETW2SX 290
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x107:
+SUBOPT_0x108:
 	LDI  R30,LOW(0)
 	__CLRD1S 14
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x108:
+SUBOPT_0x109:
 	__GETW1SX 290
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x109:
+SUBOPT_0x10A:
 	SBIW R30,1
 	MOV  R31,R30
 	LDI  R30,0
@@ -31895,18 +32050,18 @@ SUBOPT_0x109:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x10A:
+SUBOPT_0x10B:
 	__PUTD1S 14
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x10B:
+SUBOPT_0x10C:
 	LDI  R26,LOW(256)
 	LDI  R27,HIGH(256)
 	JMP  _memset
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:51 WORDS
-SUBOPT_0x10C:
+SUBOPT_0x10D:
 	LDI  R30,LOW(_viDirDataPath)
 	LDI  R31,HIGH(_viDirDataPath)
 	ST   -Y,R31
@@ -31918,7 +32073,7 @@ SUBOPT_0x10C:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x10D:
+SUBOPT_0x10E:
 	CALL __PUTPARD1
 	RCALL SUBOPT_0x55
 	CALL __PUTPARD1
@@ -31926,7 +32081,7 @@ SUBOPT_0x10D:
 	RJMP SUBOPT_0x62
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x10E:
+SUBOPT_0x10F:
 	MOVW R30,R28
 	ADIW R30,28
 	ST   -Y,R31
@@ -31934,15 +32089,15 @@ SUBOPT_0x10E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x10F:
+SUBOPT_0x110:
 	LDI  R30,LOW(256)
 	LDI  R31,HIGH(256)
 	ST   -Y,R31
 	ST   -Y,R30
-	RJMP SUBOPT_0x10C
+	RJMP SUBOPT_0x10D
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x110:
+SUBOPT_0x111:
 	MOVW R26,R28
 	ADIW R26,22
 	CALL _iFRead
@@ -31950,7 +32105,7 @@ SUBOPT_0x110:
 	RJMP SUBOPT_0x0
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x111:
+SUBOPT_0x112:
 	LDI  R26,LOW(256)
 	LDI  R27,HIGH(256)
 	CALL _print_payload
@@ -31958,9 +32113,9 @@ SUBOPT_0x111:
 	RJMP SUBOPT_0x0
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x112:
+SUBOPT_0x113:
 	CALL _memcpy
-	RCALL SUBOPT_0x108
+	RCALL SUBOPT_0x109
 	RCALL SUBOPT_0x3D
 	CLR  R22
 	CLR  R23
@@ -31968,29 +32123,29 @@ SUBOPT_0x112:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x113:
+SUBOPT_0x114:
 	__POINTD1FN _0x4E0000,154
 	RJMP SUBOPT_0x0
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x114:
+SUBOPT_0x115:
 	CALL __PUTPARD1
 	__GETW1SX 294
 	RJMP SUBOPT_0x62
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x115:
+SUBOPT_0x116:
 	LDI  R30,LOW(0)
 	__CLRD1S 18
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 12 TIMES, CODE SIZE REDUCTION:19 WORDS
-SUBOPT_0x116:
+SUBOPT_0x117:
 	__PUTD1S 18
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x117:
+SUBOPT_0x118:
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	MOVW R26,R28
@@ -31998,23 +32153,23 @@ SUBOPT_0x117:
 	RJMP SUBOPT_0x84
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x118:
+SUBOPT_0x119:
 	ST   -Y,R31
 	ST   -Y,R30
 	RJMP SUBOPT_0x7
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x119:
+SUBOPT_0x11A:
 	__ADDD1N 2
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x11A:
+SUBOPT_0x11B:
 	__GETW1SX 285
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x11B:
+SUBOPT_0x11C:
 	RCALL SUBOPT_0x52
 	CLR  R22
 	CLR  R23
@@ -32022,13 +32177,13 @@ SUBOPT_0x11B:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x11C:
+SUBOPT_0x11D:
 	RCALL SUBOPT_0x54
-	RCALL SUBOPT_0x119
-	RJMP SUBOPT_0x116
+	RCALL SUBOPT_0x11A
+	RJMP SUBOPT_0x117
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x11D:
+SUBOPT_0x11E:
 	LDD  R30,Y+24
 	LDD  R31,Y+24+1
 	ST   -Y,R31
@@ -32036,31 +32191,31 @@ SUBOPT_0x11D:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x11E:
+SUBOPT_0x11F:
 	LDI  R26,LOW(_viLineID)
 	LDI  R27,HIGH(_viLineID)
 	CALL __EEPROMRDW
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x11F:
+SUBOPT_0x120:
 	RCALL SUBOPT_0x3D
 	__GETD1N 0x100
 	CALL __DIVD21U
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x120:
+SUBOPT_0x121:
 	__SUBD1N 1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x121:
+SUBOPT_0x122:
 	__PUTD1S 10
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x122:
+SUBOPT_0x123:
 	LDD  R30,Y+18
 	LDD  R31,Y+18+1
 	MOVW R26,R28
@@ -32068,56 +32223,56 @@ SUBOPT_0x122:
 	RJMP SUBOPT_0x84
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x123:
+SUBOPT_0x124:
 	__GETD2S 18
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x124:
+SUBOPT_0x125:
 	CLR  R22
 	CLR  R23
 	CALL __ADDD12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x125:
+SUBOPT_0x126:
 	__GETW2SX 278
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x126:
+SUBOPT_0x127:
 	CALL __PUTPARD1
 	__GETW1SX 282
 	RJMP SUBOPT_0x62
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x127:
+SUBOPT_0x128:
 	__GETW1SX 278
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x128:
+SUBOPT_0x129:
 	LDI  R30,LOW(0)
 	__CLRW1SX 72
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x129:
+SUBOPT_0x12A:
 	__GETB2SX 90
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x12A:
+SUBOPT_0x12B:
 	__GETW2SX 74
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x12B:
+SUBOPT_0x12C:
 	__GETB1SX 94
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x12C:
+SUBOPT_0x12D:
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	LDI  R31,0
@@ -32126,12 +32281,12 @@ SUBOPT_0x12C:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x12D:
+SUBOPT_0x12E:
 	__GETW2SX 72
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x12E:
+SUBOPT_0x12F:
 	STD  Y+1,R30
 	CALL __SAVELOCR4
 	LDI  R16,0
@@ -32139,7 +32294,7 @@ SUBOPT_0x12E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x12F:
+SUBOPT_0x130:
 	LDI  R26,LOW(7)
 	MUL  R17,R26
 	MOVW R30,R0
@@ -32148,12 +32303,12 @@ SUBOPT_0x12F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x130:
+SUBOPT_0x131:
 	__POINTW2MN _viDVConfigUpdate,170
 	RJMP SUBOPT_0x37
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:33 WORDS
-SUBOPT_0x131:
+SUBOPT_0x132:
 	MOVW R22,R26
 	LDI  R26,LOW(28)
 	LDI  R27,HIGH(28)
@@ -32162,14 +32317,14 @@ SUBOPT_0x131:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x132:
+SUBOPT_0x133:
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	ADIW R26,2
 	RJMP SUBOPT_0x34
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x133:
+SUBOPT_0x134:
 	MOV  R30,R19
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
@@ -32179,7 +32334,7 @@ SUBOPT_0x133:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:27 WORDS
-SUBOPT_0x134:
+SUBOPT_0x135:
 	LDI  R26,LOW(7)
 	MUL  R17,R26
 	MOVW R30,R0
@@ -32189,37 +32344,37 @@ SUBOPT_0x134:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 42 TIMES, CODE SIZE REDUCTION:79 WORDS
-SUBOPT_0x135:
+SUBOPT_0x136:
 	RCALL SUBOPT_0x24
 	CALL __EEPROMWRD
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x136:
+SUBOPT_0x137:
 	LDI  R31,0
 	CALL __CWD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x137:
+SUBOPT_0x138:
 	CALL __GETD1P_INC
 	RCALL SUBOPT_0x53
 	CALL __PUTDP1_DEC
-	RJMP SUBOPT_0x120
+	RJMP SUBOPT_0x121
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x138:
+SUBOPT_0x139:
 	CALL __GETD1P
 	__PUTD1S 1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x139:
+SUBOPT_0x13A:
 	__GETD1S 5
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0x13A:
+SUBOPT_0x13B:
 	LDD  R30,Y+9
 	LDD  R31,Y+9+1
 	LDD  R26,Z+1
@@ -32235,12 +32390,12 @@ SUBOPT_0x13A:
 	JMP  _disk_write
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x13B:
+SUBOPT_0x13C:
 	__GETD2Z 34
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x13C:
+SUBOPT_0x13D:
 	ST   -Y,R31
 	ST   -Y,R30
 	RCALL SUBOPT_0x5B
@@ -32251,33 +32406,33 @@ SUBOPT_0x13C:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x13D:
+SUBOPT_0x13E:
 	ST   -Y,R31
 	ST   -Y,R30
 	__GETD2N 0x0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0x13E:
+SUBOPT_0x13F:
 	CALL _move_window_G101
 	MOV  R17,R30
 	CPI  R17,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x13F:
+SUBOPT_0x140:
 	RCALL SUBOPT_0x24
 	CALL __PUTDP1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x140:
+SUBOPT_0x141:
 	LDI  R26,LOW(512)
 	LDI  R27,HIGH(512)
 	JMP  _mem_set_G101
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x141:
+SUBOPT_0x142:
 	CALL __PUTDZ20
 	LDD  R30,Y+1
 	LDD  R31,Y+1+1
@@ -32285,7 +32440,7 @@ SUBOPT_0x141:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x142:
+SUBOPT_0x143:
 	CALL __GETD1P
 	MOVW R26,R0
 	CALL __PUTDP1
@@ -32294,29 +32449,29 @@ SUBOPT_0x142:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x143:
+SUBOPT_0x144:
 	__GETD2Z 18
 	CALL __PUTPARD2
 	LDI  R26,LOW(1)
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:32 WORDS
-SUBOPT_0x144:
+SUBOPT_0x145:
 	__CPD2N 0x2
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x145:
+SUBOPT_0x146:
 	__GETD1N 0x1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x146:
+SUBOPT_0x147:
 	CALL __GETD1P
 	RJMP SUBOPT_0x31
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x147:
+SUBOPT_0x148:
 	MOVW R26,R18
 	LDI  R30,LOW(512)
 	LDI  R31,HIGH(512)
@@ -32330,7 +32485,7 @@ SUBOPT_0x147:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x148:
+SUBOPT_0x149:
 	LDD  R26,Y+12
 	LDD  R27,Y+12+1
 	ADIW R26,50
@@ -32341,18 +32496,18 @@ SUBOPT_0x148:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0x149:
+SUBOPT_0x14A:
 	__GETD2S 10
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x14A:
+SUBOPT_0x14B:
 	__GETD1N 0x100
 	CALL __DIVD21U
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x14B:
+SUBOPT_0x14C:
 	RCALL SUBOPT_0x3D
 	CALL __ADDD21
 	CALL _move_window_G101
@@ -32360,7 +32515,7 @@ SUBOPT_0x14B:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x14C:
+SUBOPT_0x14D:
 	CALL __MULB1W2U
 	ANDI R31,HIGH(0x1FF)
 	LDD  R26,Y+12
@@ -32371,31 +32526,31 @@ SUBOPT_0x14C:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x14D:
+SUBOPT_0x14E:
 	CALL __GETW1P
 	CLR  R22
 	CLR  R23
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x14E:
+SUBOPT_0x14F:
 	__GETD1N 0x80
 	CALL __DIVD21U
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x14F:
+SUBOPT_0x150:
 	CALL __GETD1P
 	__ANDD1N 0xFFFFFFF
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x150:
+SUBOPT_0x151:
 	__GETD2S 14
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:10 WORDS
-SUBOPT_0x151:
+SUBOPT_0x152:
 	MOVW R26,R16
 	LDI  R30,LOW(512)
 	LDI  R31,HIGH(512)
@@ -32410,7 +32565,7 @@ SUBOPT_0x151:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x152:
+SUBOPT_0x153:
 	LDD  R26,Y+18
 	LDD  R27,Y+18+1
 	ADIW R26,50
@@ -32424,12 +32579,12 @@ SUBOPT_0x152:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x153:
+SUBOPT_0x154:
 	__GETD2S 16
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x154:
+SUBOPT_0x155:
 	RCALL SUBOPT_0x59
 	CALL __ADDD21
 	CALL _move_window_G101
@@ -32438,7 +32593,7 @@ SUBOPT_0x154:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x155:
+SUBOPT_0x156:
 	CALL __MULB1W2U
 	ANDI R31,HIGH(0x1FF)
 	LDD  R26,Y+18
@@ -32449,57 +32604,57 @@ SUBOPT_0x155:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x156:
+SUBOPT_0x157:
 	CALL __PUTDZ20
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x157:
+SUBOPT_0x158:
 	__GETD2S 5
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0x158:
+SUBOPT_0x159:
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
 	ADIW R26,30
 	CALL __GETD1P
-	RCALL SUBOPT_0x157
+	RCALL SUBOPT_0x158
 	CALL __CPD21
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x159:
+SUBOPT_0x15A:
 	__GETD1S 1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 9 TIMES, CODE SIZE REDUCTION:37 WORDS
-SUBOPT_0x15A:
+SUBOPT_0x15B:
 	__CPD2N 0x1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x15B:
+SUBOPT_0x15C:
 	__GETD2N 0x0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x15C:
+SUBOPT_0x15D:
 	__GETD2Z 14
 	RJMP SUBOPT_0x61
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x15D:
+SUBOPT_0x15E:
 	__PUTD1S 5
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x15E:
+SUBOPT_0x15F:
 	__GETD1S 16
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x15F:
+SUBOPT_0x160:
 	LDD  R30,Y+20
 	LDD  R31,Y+20+1
 	ST   -Y,R31
@@ -32507,41 +32662,41 @@ SUBOPT_0x15F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x160:
+SUBOPT_0x161:
 	CALL _get_fat
 	__PUTD1S 12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x161:
+SUBOPT_0x162:
 	__GETD1N 0x2
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x162:
+SUBOPT_0x163:
 	CALL SUBOPT_0x1D
 	RCALL SUBOPT_0x59
 	CALL __CPD12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x163:
+SUBOPT_0x164:
 	RCALL SUBOPT_0x58
 	CALL __CPD10
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x164:
+SUBOPT_0x165:
 	RCALL SUBOPT_0x5A
 	RJMP SUBOPT_0x61
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x165:
+SUBOPT_0x166:
 	RCALL SUBOPT_0x5A
-	RJMP SUBOPT_0x15A
+	RJMP SUBOPT_0x15B
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x166:
+SUBOPT_0x167:
 	ADIW R30,30
 	MOVW R26,R30
 	CALL __GETD1P
@@ -32550,13 +32705,13 @@ SUBOPT_0x166:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x167:
+SUBOPT_0x168:
 	RCALL SUBOPT_0x3F
 	__PUTD1SNS 8,10
-	RJMP SUBOPT_0xBE
+	RJMP SUBOPT_0xBD
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x168:
+SUBOPT_0x169:
 	ANDI R30,LOW(0xF)
 	ANDI R31,HIGH(0xF)
 	LSL  R30
@@ -32566,33 +32721,33 @@ SUBOPT_0x168:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x169:
+SUBOPT_0x16A:
 	CALL __GETD1P
 	CALL __CPD10
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 10 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x16A:
+SUBOPT_0x16B:
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x16B:
+SUBOPT_0x16C:
 	LDD  R26,Y+9
 	LDD  R27,Y+9+1
-	RJMP SUBOPT_0xC0
+	RJMP SUBOPT_0xBF
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x16C:
+SUBOPT_0x16D:
 	ADIW R30,30
 	MOVW R26,R30
 	CALL __GETD1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x16D:
+SUBOPT_0x16E:
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
 	ST   -Y,R31
@@ -32601,7 +32756,7 @@ SUBOPT_0x16D:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x16E:
+SUBOPT_0x16F:
 	LDI  R27,0
 	CALL _dir_seek_G101
 	MOV  R17,R30
@@ -32609,20 +32764,20 @@ SUBOPT_0x16E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x16F:
+SUBOPT_0x170:
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
-	RJMP SUBOPT_0xC0
+	RJMP SUBOPT_0xBF
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x170:
+SUBOPT_0x171:
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
 	__GETD2Z 14
-	RJMP SUBOPT_0x13E
+	RJMP SUBOPT_0x13F
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x171:
+SUBOPT_0x172:
 	ST   -Y,R19
 	ST   -Y,R18
 	LDD  R30,Y+6
@@ -32636,34 +32791,34 @@ SUBOPT_0x171:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x172:
+SUBOPT_0x173:
 	ST   -Y,R19
 	ST   -Y,R18
-	RJMP SUBOPT_0xDF
+	RJMP SUBOPT_0xE0
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x173:
+SUBOPT_0x174:
 	LDI  R27,0
 	JMP  _mem_set_G101
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x174:
+SUBOPT_0x175:
 	LDI  R30,LOW(32)
 	LDI  R31,HIGH(32)
 	ST   -Y,R31
 	ST   -Y,R30
 	LDI  R26,LOW(11)
-	RJMP SUBOPT_0x173
+	RJMP SUBOPT_0x174
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x175:
+SUBOPT_0x176:
 	CALL __GETW1P
 	STD  Y+6,R30
 	STD  Y+6+1,R31
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x176:
+SUBOPT_0x177:
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
 	ADIW R30,1
@@ -32673,7 +32828,7 @@ SUBOPT_0x176:
 	RJMP SUBOPT_0x82
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x177:
+SUBOPT_0x178:
 	MOV  R30,R18
 	SUBI R18,-1
 	LDI  R31,0
@@ -32683,19 +32838,19 @@ SUBOPT_0x177:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x178:
+SUBOPT_0x179:
 	LDI  R31,0
 	ADD  R30,R20
 	ADC  R31,R21
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x179:
+SUBOPT_0x17A:
 	__PUTD1SNS 6,6
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x17A:
+SUBOPT_0x17B:
 	LDI  R26,LOW(0)
 	LDI  R27,0
 	CALL _dir_seek_G101
@@ -32703,27 +32858,27 @@ SUBOPT_0x17A:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x17B:
+SUBOPT_0x17C:
 	MOVW R26,R18
 	ADIW R26,20
-	RJMP SUBOPT_0x14D
+	RJMP SUBOPT_0x14E
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x17C:
+SUBOPT_0x17D:
 	MOVW R26,R18
 	ADIW R26,26
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x17D:
+SUBOPT_0x17E:
 	CLR  R22
 	CLR  R23
 	CALL __ORD12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x17E:
+SUBOPT_0x17F:
 	CALL __PUTPARD1
 	LDI  R26,LOW(1)
 	CALL _disk_read
@@ -32731,7 +32886,7 @@ SUBOPT_0x17E:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:4 WORDS
-SUBOPT_0x17F:
+SUBOPT_0x180:
 	ADIW R30,50
 	SUBI R30,LOW(-510)
 	SBCI R31,HIGH(-510)
@@ -32743,21 +32898,21 @@ SUBOPT_0x17F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:8 WORDS
-SUBOPT_0x180:
+SUBOPT_0x181:
 	CALL __GETD1P
 	__ANDD1N 0xFFFFFF
 	__CPD1N 0x544146
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x181:
+SUBOPT_0x182:
 	LDI  R26,LOW(_FatFs_G101)
 	LDI  R27,HIGH(_FatFs_G101)
 	LDI  R31,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x182:
+SUBOPT_0x183:
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	SUBI R26,LOW(-64)
@@ -32766,7 +32921,7 @@ SUBOPT_0x182:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x183:
+SUBOPT_0x184:
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
 	LDD  R26,Z+8
@@ -32776,16 +32931,16 @@ SUBOPT_0x183:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x184:
+SUBOPT_0x185:
 	LDD  R30,Y+6
 	LDD  R31,Y+6+1
-	RCALL SUBOPT_0x13B
+	RCALL SUBOPT_0x13C
 	RCALL SUBOPT_0x54
 	CALL __ADDD12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x185:
+SUBOPT_0x186:
 	ST   -Y,R31
 	ST   -Y,R30
 	MOVW R30,R28
@@ -32795,14 +32950,14 @@ SUBOPT_0x185:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x186:
+SUBOPT_0x187:
 	CALL _chk_mounted
 	MOV  R17,R30
 	CPI  R17,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x187:
+SUBOPT_0x188:
 	MOVW R30,R28
 	ADIW R30,4
 	STD  Y+36,R30
@@ -32810,18 +32965,18 @@ SUBOPT_0x187:
 	RJMP SUBOPT_0x8B
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x188:
+SUBOPT_0x189:
 	CALL _get_fattime
 	JMP SUBOPT_0x39
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x189:
+SUBOPT_0x18A:
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
-	RJMP SUBOPT_0xC0
+	RJMP SUBOPT_0xBF
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x18A:
+SUBOPT_0x18B:
 	LDD  R26,Z+2
 	LDD  R27,Z+3
 	CALL _validate_G101
@@ -32830,14 +32985,14 @@ SUBOPT_0x18A:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x18B:
+SUBOPT_0x18C:
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	__GETD2Z 6
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x18C:
+SUBOPT_0x18D:
 	MOVW R30,R26
 	MOVW R22,R24
 	ANDI R31,HIGH(0x1FF)
@@ -32845,19 +33000,19 @@ SUBOPT_0x18C:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x18D:
+SUBOPT_0x18E:
 	LDD  R30,Y+28
 	LDD  R31,Y+28+1
 	__GETD2Z 18
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x18E:
+SUBOPT_0x18F:
 	__PUTD1S 16
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x18F:
+SUBOPT_0x190:
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
 	ADIW R26,4
@@ -32867,12 +33022,12 @@ SUBOPT_0x18F:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 16 TIMES, CODE SIZE REDUCTION:27 WORDS
-SUBOPT_0x190:
+SUBOPT_0x191:
 	__PUTD1S 12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x191:
+SUBOPT_0x192:
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	LDD  R30,Z+5
@@ -32880,7 +33035,7 @@ SUBOPT_0x191:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x192:
+SUBOPT_0x193:
 	LDI  R30,LOW(512)
 	LDI  R31,HIGH(512)
 	CALL __DIVW21U
@@ -32890,14 +33045,14 @@ SUBOPT_0x192:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x193:
+SUBOPT_0x194:
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x194:
+SUBOPT_0x195:
 	LDD  R30,Z+2
 	MOVW R26,R0
 	LDI  R31,0
@@ -32906,7 +33061,7 @@ SUBOPT_0x194:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x195:
+SUBOPT_0x196:
 	LDD  R30,Z+1
 	ST   -Y,R30
 	LDD  R30,Y+7
@@ -32916,14 +33071,14 @@ SUBOPT_0x195:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x196:
+SUBOPT_0x197:
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	__GETD2Z 22
 	JMP SUBOPT_0x58
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x197:
+SUBOPT_0x198:
 	CALL __SUBD21
 	MOVW R30,R20
 	CLR  R22
@@ -32932,14 +33087,14 @@ SUBOPT_0x197:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x198:
+SUBOPT_0x199:
 	CALL __SUBD21
 	__GETD1N 0x200
 	CALL __MULD12U
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x199:
+SUBOPT_0x19A:
 	ADIW R26,5
 	LD   R30,X
 	ADD  R30,R20
@@ -32953,7 +33108,7 @@ SUBOPT_0x199:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x19A:
+SUBOPT_0x19B:
 	LDD  R30,Z+1
 	ST   -Y,R30
 	LDD  R30,Y+27
@@ -32964,7 +33119,7 @@ SUBOPT_0x19A:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x19B:
+SUBOPT_0x19C:
 	__GETD2Z 22
 	CALL __PUTPARD2
 	LDI  R26,LOW(1)
@@ -32973,7 +33128,7 @@ SUBOPT_0x19B:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x19C:
+SUBOPT_0x19D:
 	ADIW R26,4
 	LD   R30,X
 	ANDI R30,0xBF
@@ -32981,7 +33136,7 @@ SUBOPT_0x19C:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x19D:
+SUBOPT_0x19E:
 	ADIW R26,5
 	LD   R30,X
 	SUBI R30,-LOW(1)
@@ -32989,14 +33144,14 @@ SUBOPT_0x19D:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x19E:
+SUBOPT_0x19F:
 	ADIW R26,6
 	CALL __GETW1P
 	ANDI R31,HIGH(0x1FF)
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x19F:
+SUBOPT_0x1A0:
 	ADIW R30,6
 	MOVW R0,R30
 	MOVW R26,R30
@@ -33004,10 +33159,10 @@ SUBOPT_0x19F:
 	MOVW R26,R30
 	MOVW R24,R22
 	MOVW R30,R18
-	RJMP SUBOPT_0x124
+	RJMP SUBOPT_0x125
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1A0:
+SUBOPT_0x1A1:
 	LD   R30,X+
 	LD   R31,X+
 	ADD  R30,R18
@@ -33017,13 +33172,13 @@ SUBOPT_0x1A0:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x1A1:
+SUBOPT_0x1A2:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
-	RJMP SUBOPT_0xC0
+	RJMP SUBOPT_0xBF
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1A2:
+SUBOPT_0x1A3:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
 	ADIW R26,10
@@ -33031,33 +33186,33 @@ SUBOPT_0x1A2:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1A3:
+SUBOPT_0x1A4:
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	__GETD2Z 6
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 15 TIMES, CODE SIZE REDUCTION:25 WORDS
-SUBOPT_0x1A4:
+SUBOPT_0x1A5:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1A5:
+SUBOPT_0x1A6:
 	CALL _create_chain_G101
-	RJMP SUBOPT_0x190
+	RJMP SUBOPT_0x191
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1A6:
+SUBOPT_0x1A7:
 	LDD  R30,Y+24
 	LDD  R31,Y+24+1
 	__GETD2Z 18
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x1A7:
+SUBOPT_0x1A8:
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
 	ADIW R26,4
@@ -33067,7 +33222,7 @@ SUBOPT_0x1A7:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x1A8:
+SUBOPT_0x1A9:
 	LDD  R30,Z+1
 	ST   -Y,R30
 	LDD  R30,Y+23
@@ -33078,7 +33233,7 @@ SUBOPT_0x1A8:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1A9:
+SUBOPT_0x1AA:
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	LDD  R30,Z+5
@@ -33086,14 +33241,14 @@ SUBOPT_0x1A9:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1AA:
+SUBOPT_0x1AB:
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	__GETD2Z 22
 	JMP SUBOPT_0x5B
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x1AB:
+SUBOPT_0x1AC:
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	ADIW R30,32
@@ -33104,35 +33259,35 @@ SUBOPT_0x1AB:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1AC:
+SUBOPT_0x1AD:
 	__PUTW1RNS 18,26
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1AD:
+SUBOPT_0x1AE:
 	__PUTW1RNS 18,20
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1AE:
+SUBOPT_0x1AF:
 	__PUTD1RNS 18,22
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1AF:
+SUBOPT_0x1B0:
 	CALL _follow_path_G101
 	MOV  R17,R30
 	CPI  R17,0
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1B0:
+SUBOPT_0x1B1:
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
-	RJMP SUBOPT_0xC0
+	RJMP SUBOPT_0xBF
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1B1:
+SUBOPT_0x1B2:
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	ADIW R26,10
@@ -33140,42 +33295,42 @@ SUBOPT_0x1B1:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x1B2:
+SUBOPT_0x1B3:
 	__GETD2S 17
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1B3:
+SUBOPT_0x1B4:
 	__PUTD1S 17
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1B4:
+SUBOPT_0x1B5:
 	__PUTD1SNS 21,6
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1B5:
+SUBOPT_0x1B6:
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	CALL __GETW1P
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x1B6:
+SUBOPT_0x1B7:
 	__PUTD1S 9
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1B7:
+SUBOPT_0x1B8:
 	__GETD1S 17
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1B8:
-	RCALL SUBOPT_0x120
+SUBOPT_0x1B9:
+	RCALL SUBOPT_0x121
 	MOVW R26,R30
 	MOVW R24,R22
 	__GETD1S 9
@@ -33183,34 +33338,34 @@ SUBOPT_0x1B8:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 14 TIMES, CODE SIZE REDUCTION:23 WORDS
-SUBOPT_0x1B9:
+SUBOPT_0x1BA:
 	__GETD1S 9
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1BA:
+SUBOPT_0x1BB:
 	CALL __GETD1P
 	__PUTD1S 13
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x1BB:
+SUBOPT_0x1BC:
 	__GETD1S 13
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1BC:
+SUBOPT_0x1BD:
 	CALL _create_chain_G101
 	__PUTD1S 13
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1BD:
+SUBOPT_0x1BE:
 	__GETD2S 13
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x1BE:
+SUBOPT_0x1BF:
 	LDD  R26,Y+21
 	LDD  R27,Y+21+1
 	ADIW R26,4
@@ -33220,18 +33375,18 @@ SUBOPT_0x1BE:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1BF:
-	RCALL SUBOPT_0x1BB
+SUBOPT_0x1C0:
+	RCALL SUBOPT_0x1BC
 	__PUTD1SNS 21,18
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1C0:
+SUBOPT_0x1C1:
 	__GETD2S 15
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x1C1:
+SUBOPT_0x1C2:
 	LDD  R30,Y+21
 	LDD  R31,Y+21+1
 	ADIW R30,6
@@ -33241,80 +33396,80 @@ SUBOPT_0x1C1:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:11 WORDS
-SUBOPT_0x1C2:
+SUBOPT_0x1C3:
 	__GETD2S 9
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1C3:
+SUBOPT_0x1C4:
 	LDD  R30,Y+21
 	LDD  R31,Y+21+1
 	__GETD2Z 6
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1C4:
+SUBOPT_0x1C5:
 	CALL SUBOPT_0x54
 	CALL SUBOPT_0x49
-	RJMP SUBOPT_0x116
+	RJMP SUBOPT_0x117
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1C5:
+SUBOPT_0x1C6:
 	LDD  R30,Y+32
 	LDD  R31,Y+32+1
-	RJMP SUBOPT_0x13D
+	RJMP SUBOPT_0x13E
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1C6:
+SUBOPT_0x1C7:
 	LDD  R30,Y+32
 	LDD  R31,Y+32+1
 	ST   -Y,R31
 	ST   -Y,R30
-	RJMP SUBOPT_0x150
+	RJMP SUBOPT_0x151
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x1C7:
+SUBOPT_0x1C8:
 	CALL SUBOPT_0x32
 	__GETD1N 0x41200000
 	CALL __MULF12
 	JMP SUBOPT_0x31
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x1C8:
+SUBOPT_0x1C9:
 	CALL SUBOPT_0x1D
 	CALL SUBOPT_0x5A
 	CALL __CMPF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x1C9:
+SUBOPT_0x1CA:
 	CALL SUBOPT_0x5A
 	__GETD1N 0x3DCCCCCD
 	CALL __MULF12
-	RCALL SUBOPT_0x190
+	RCALL SUBOPT_0x191
 	SUBI R19,-LOW(1)
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1CA:
+SUBOPT_0x1CB:
 	__GETD1N 0x41200000
 	CALL __MULF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1CB:
+SUBOPT_0x1CC:
 	__GETD2N 0x3F000000
 	CALL __ADDF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1CC:
+SUBOPT_0x1CD:
 	__GETD1N 0x3DCCCCCD
 	CALL __MULF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1CD:
+SUBOPT_0x1CE:
 	LDD  R26,Y+8
 	LDD  R27,Y+8+1
 	ADIW R26,1
@@ -33324,13 +33479,13 @@ SUBOPT_0x1CD:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1CE:
+SUBOPT_0x1CF:
 	CALL __SWAPD12
 	CALL __SUBF12
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:6 WORDS
-SUBOPT_0x1CF:
+SUBOPT_0x1D0:
 	LDD  R30,Y+8
 	LDD  R31,Y+8+1
 	ADIW R30,1
@@ -33339,47 +33494,47 @@ SUBOPT_0x1CF:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x1D0:
+SUBOPT_0x1D1:
 	ST   -Y,R18
 	LDD  R26,Y+7
 	LDD  R27,Y+7+1
-	RCALL SUBOPT_0x1B9
+	RCALL SUBOPT_0x1BA
 	OUT  EIND,R22
 	EICALL
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 8 TIMES, CODE SIZE REDUCTION:25 WORDS
-SUBOPT_0x1D1:
+SUBOPT_0x1D2:
 	__GETW1SX 96
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 7 TIMES, CODE SIZE REDUCTION:21 WORDS
-SUBOPT_0x1D2:
+SUBOPT_0x1D3:
 	SBIW R30,4
 	__PUTW1SX 96
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 4 TIMES, CODE SIZE REDUCTION:9 WORDS
-SUBOPT_0x1D3:
+SUBOPT_0x1D4:
 	LDD  R26,Y+7
 	LDD  R27,Y+7+1
-	RCALL SUBOPT_0x1B9
+	RCALL SUBOPT_0x1BA
 	OUT  EIND,R22
 	EICALL
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:17 WORDS
-SUBOPT_0x1D4:
+SUBOPT_0x1D5:
 	__GETW2SX 96
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 6 TIMES, CODE SIZE REDUCTION:7 WORDS
-SUBOPT_0x1D5:
-	RCALL SUBOPT_0x1D1
-	RJMP SUBOPT_0x1D2
+SUBOPT_0x1D6:
+	RCALL SUBOPT_0x1D2
+	RJMP SUBOPT_0x1D3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:2 WORDS
-SUBOPT_0x1D6:
+SUBOPT_0x1D7:
 	STD  Y+16,R30
 	STD  Y+16+1,R31
 	LDD  R26,Y+16
@@ -33389,12 +33544,12 @@ SUBOPT_0x1D6:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:5 WORDS
-SUBOPT_0x1D7:
+SUBOPT_0x1D8:
 	__PUTD1S 20
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:15 WORDS
-SUBOPT_0x1D8:
+SUBOPT_0x1D9:
 	ANDI R16,LOW(251)
 	LDD  R30,Y+25
 	ST   -Y,R30
@@ -33406,13 +33561,13 @@ SUBOPT_0x1D8:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1D9:
+SUBOPT_0x1DA:
 	__POINTD1M _put_buff_G102
 	CALL __PUTPARD1
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 5 TIMES, CODE SIZE REDUCTION:13 WORDS
-SUBOPT_0x1DA:
+SUBOPT_0x1DB:
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	ADIW R26,1
@@ -33422,12 +33577,12 @@ SUBOPT_0x1DA:
 	RET
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 3 TIMES, CODE SIZE REDUCTION:1 WORDS
-SUBOPT_0x1DB:
+SUBOPT_0x1DC:
 	CALL SUBOPT_0x3F
-	RJMP SUBOPT_0x1C2
+	RJMP SUBOPT_0x1C3
 
 ;OPTIMIZER ADDED SUBROUTINE, CALLED 2 TIMES, CODE SIZE REDUCTION:3 WORDS
-SUBOPT_0x1DC:
+SUBOPT_0x1DD:
 	STS  __seed_G103,R30
 	STS  __seed_G103+1,R31
 	STS  __seed_G103+2,R22

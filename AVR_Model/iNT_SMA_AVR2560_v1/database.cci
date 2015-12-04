@@ -1,4 +1,4 @@
-VERSION:3 SOURCE_TIMESTAMP:476DAB23
+VERSION:3 SOURCE_TIMESTAMP:477275F7
 NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\database.h"
 NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v1\sdManager.h"
 NODE:V LEVEL:0 LINE:27 "*pviDataBaseHandle -> RAM:????"
@@ -7,3 +7,5 @@ NODE:F LEVEL:0 LINE:32 "iDataUpdate(iUInt_t viRecordID_arg,iUChar_t viStatus_arg
 NODE:F LEVEL:0 LINE:125 "iDataInsert(const iChar_t * pviDataBuffer_arg,iUInt_t viLength_arg)"
 NODE:F LEVEL:0 LINE:203 "iDataSelect(iUInt_t viRecordID_arg,struct iData_t * pviOutDataBuff_arg)"
 NODE:F LEVEL:0 LINE:256 "iDataSelectToSettlement(iUInt_t * pviOutData_arg,iUInt_t * pviOutLength_arg,iUChar_t viLimitRecord_arg)"
+NODE:F LEVEL:0 LINE:337 "iDeviceConfigWrite(const iChar_t * pviDataBuffer_arg,iUInt_t viLength_arg)"
+NODE:F LEVEL:0 LINE:363 "iDeviceConfigRead(const iChar_t * pviDataBuffer_arg,iUInt_t viLength_arg)"

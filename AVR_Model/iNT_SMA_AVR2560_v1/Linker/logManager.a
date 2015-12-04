@@ -96,7 +96,12 @@
 ;PCODE: $00000048 VOL: 0
 ; 002D 0013     }
 ; 002D 0014 
-; 002D 0015 }
+; 002D 0015 
+; 002D 0016 
+; 002D 0017     //Clear all file that status 'N','Y' and 'L'
+; 002D 0018     //Queue files not settlement
+; 002D 0019     //read file max 90 files
+; 002D 001A }
 ;PCODE: $00000049 VOL: 0
 ;PCODE: $0000004A VOL: 0
 ;PCODE: $0000004B VOL: 0
