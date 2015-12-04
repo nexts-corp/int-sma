@@ -1,0 +1,66 @@
+#ifndef MENU_H
+#define MENU_H
+
+#define P_MONITOR           0
+#define P_MAIN_MENU         1       // -- (Device Config, Probe Config, Setting, Maintenance)
+
+#define P_DEV_MENU          2       // -- (View Config, Set Config)
+#define P_DEV_V_MENU        3
+#define P_DEV_V_PROP        4
+#define P_DEV_V_OPER        5
+#define P_DEV_V_NETW        6
+#define P_DEV_S_MENU        7
+#define P_DEV_S_OPER        8
+#define P_DEV_S_IP          9
+#define P_DEV_S_MASK        10
+#define P_DEV_S_GATEWAY     11
+#define P_DEV_S_SERVER      12
+#define P_DEV_S_CONFIRM     13
+
+#define P_PRB_MENU          14
+#define P_PRB_V             15
+#define P_PRB_S             16
+
+#define P_MANAGE_MENU       17
+#define P_MUTE_MENU         18
+#define P_PASS_NEW          19
+#define P_PASS_CONFIRM      20      
+
+#define P_MTNC_MENU         21
+#define P_SET_VREF          22
+#define P_CAL1_SEL_REF_PRB  23
+#define P_CAL1_SEL_CAL_PRB  24
+#define P_CAL1_CONFIRM      25
+#define P_CAL2_SEL_PRB      26
+#define P_CAL2_MENU         27
+#define P_CAL2_SPT1         28
+#define P_CAL2_SPT2         29
+#define P_CAL2_SPT3         30
+#define P_CAL2_CONFIRM      31
+#define P_RESET_CONFIRM     32
+
+#define P_ENTER_U_PASS      33
+#define P_ENTER_M_PASS      34
+#define P_WRONG_PASS        35
+
+#define P_FINISH            36
+#define P_FAILED            37
+
+extern eeprom char userPwd[];
+extern eeprom char servicePwd[];
+extern char currentPage;
+
+void MENU_processKey(char key);                      
+void showProbeConfig(int id);
+int get_current_sampling(unsigned int period, signed char *val); 
+int get_current_vref(char *buf);      
+int set_vref(char *buf);                           
+int getNetworkInfo(char *msg, char *ip, char *mask, char *gw, char *server);
+int setNetworkInfo(char *ip, char *mask, char *gw, char *server);
+                                                          
+int h2i(char hex);
+int e2rcpy(char *dest, char eeprom *src, int len);  
+int r2ecpy(char eeprom *dest, char *src, int len);
+int recmp(char *src1, char eeprom *src2, int len);
+
+#endif

@@ -1,0 +1,144 @@
+;#include <stdlib.h>
+;#include <stdio.h>
+;#include "dataqueue.h"
+;#include "debug.h"
+;
+;struct data_record_st dataQ[MAX_DATA_QUEUE];
+;int last_wr_dataQ = 0;
+;int last_rd_dataQ = 0;
+;int dataQ_len = 0;
+;
+;/*============================================================*/
+;int addDataQueue(unsigned long int timestamp, unsigned int channel, float value)
+; 000E 000D {
+
+	.CSEG
+;PCODE: $00000000 VOL: 0
+;PCODE: $00000001 VOL: 0
+; 000E 000E     if(dataQ_len == MAX_DATA_QUEUE){
+;PCODE: $00000002 VOL: 0
+;	timestamp -> Y+6
+;	channel -> Y+4
+;	value -> Y+0
+;PCODE: $00000003 VOL: 0
+;PCODE: $00000004 VOL: 0
+;PCODE: $00000005 VOL: 0
+; 000E 000F         return -1;
+;PCODE: $00000006 VOL: 0
+;PCODE: $00000007 VOL: 0
+;PCODE: $00000008 VOL: 0
+; 000E 0010     }
+; 000E 0011 
+; 000E 0012     dataQ[last_wr_dataQ].timestamp      = timestamp;
+;PCODE: $00000009 VOL: 0
+;PCODE: $0000000A VOL: 0
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+;PCODE: $0000000F VOL: 0
+; 000E 0013     dataQ[last_wr_dataQ].channel        = channel;
+;PCODE: $00000010 VOL: 0
+;PCODE: $00000011 VOL: 0
+;PCODE: $00000012 VOL: 0
+;PCODE: $00000013 VOL: 0
+;PCODE: $00000014 VOL: 0
+;PCODE: $00000015 VOL: 0
+;PCODE: $00000016 VOL: 0
+; 000E 0014     dataQ[last_wr_dataQ].value          = value;
+;PCODE: $00000017 VOL: 0
+;PCODE: $00000018 VOL: 0
+;PCODE: $00000019 VOL: 0
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+;PCODE: $0000001C VOL: 0
+;PCODE: $0000001D VOL: 0
+; 000E 0015 
+; 000E 0016     last_wr_dataQ = (last_wr_dataQ + 1) % MAX_DATA_QUEUE;
+;PCODE: $0000001E VOL: 0
+;PCODE: $0000001F VOL: 0
+;PCODE: $00000020 VOL: 0
+;PCODE: $00000021 VOL: 0
+;PCODE: $00000022 VOL: 0
+; 000E 0017 
+; 000E 0018     dataQ_len++;
+;PCODE: $00000023 VOL: 0
+;PCODE: $00000024 VOL: 0
+;PCODE: $00000025 VOL: 0
+;PCODE: $00000026 VOL: 0
+; 000E 0019 
+; 000E 001A     return 0;
+;PCODE: $00000027 VOL: 0
+;PCODE: $00000028 VOL: 0
+;PCODE: $00000029 VOL: 0
+; 000E 001B }
+;PCODE: $0000002A VOL: 0
+;/*============================================================*/
+;int fetchDataQueue(unsigned long int *timestamp, unsigned int *channel, float *value)
+; 000E 001E {
+;PCODE: $0000002B VOL: 0
+;PCODE: $0000002C VOL: 0
+; 000E 001F     if(dataQ_len == 0){
+;PCODE: $0000002D VOL: 0
+;	*timestamp -> Y+4
+;	*channel -> Y+2
+;	*value -> Y+0
+;PCODE: $0000002E VOL: 0
+;PCODE: $0000002F VOL: 0
+;PCODE: $00000030 VOL: 0
+; 000E 0020         return -1;
+;PCODE: $00000031 VOL: 0
+;PCODE: $00000032 VOL: 0
+;PCODE: $00000033 VOL: 0
+; 000E 0021     }
+; 000E 0022 
+; 000E 0023     *timestamp  =   dataQ[last_rd_dataQ].timestamp;
+;PCODE: $00000034 VOL: 0
+;PCODE: $00000035 VOL: 0
+;PCODE: $00000036 VOL: 0
+;PCODE: $00000037 VOL: 0
+;PCODE: $00000038 VOL: 0
+;PCODE: $00000039 VOL: 0
+;PCODE: $0000003A VOL: 0
+;PCODE: $0000003B VOL: 0
+;PCODE: $0000003C VOL: 0
+; 000E 0024     *channel    =   dataQ[last_rd_dataQ].channel;
+;PCODE: $0000003D VOL: 0
+;PCODE: $0000003E VOL: 0
+;PCODE: $0000003F VOL: 0
+;PCODE: $00000040 VOL: 0
+;PCODE: $00000041 VOL: 0
+;PCODE: $00000042 VOL: 0
+;PCODE: $00000043 VOL: 0
+;PCODE: $00000044 VOL: 0
+;PCODE: $00000045 VOL: 0
+; 000E 0025     *value      =   dataQ[last_rd_dataQ].value;
+;PCODE: $00000046 VOL: 0
+;PCODE: $00000047 VOL: 0
+;PCODE: $00000048 VOL: 0
+;PCODE: $00000049 VOL: 0
+;PCODE: $0000004A VOL: 0
+;PCODE: $0000004B VOL: 0
+;PCODE: $0000004C VOL: 0
+;PCODE: $0000004D VOL: 0
+;PCODE: $0000004E VOL: 0
+; 000E 0026 
+; 000E 0027     last_rd_dataQ = (last_rd_dataQ + 1) % MAX_DATA_QUEUE;
+;PCODE: $0000004F VOL: 0
+;PCODE: $00000050 VOL: 0
+;PCODE: $00000051 VOL: 0
+;PCODE: $00000052 VOL: 0
+;PCODE: $00000053 VOL: 0
+; 000E 0028 
+; 000E 0029     dataQ_len--;
+;PCODE: $00000054 VOL: 0
+;PCODE: $00000055 VOL: 0
+;PCODE: $00000056 VOL: 0
+;PCODE: $00000057 VOL: 0
+; 000E 002A     return 0;
+;PCODE: $00000058 VOL: 0
+;PCODE: $00000059 VOL: 0
+;PCODE: $0000005A VOL: 0
+; 000E 002B }
+;PCODE: $0000005B VOL: 0
+;/*============================================================*/

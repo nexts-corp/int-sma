@@ -1,0 +1,10 @@
+VERSION:3 SOURCE_TIMESTAMP:47385885
+NODE:M LEVEL:0 LINE:2 "AD595_H"
+NODE:I LEVEL:0 LINE:3 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\main.h"
+NODE:I LEVEL:0 LINE:4 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\debug.h"
+NODE:T LEVEL:0 LINE:6 "iAD595_t"
+LEVEL:1 LINE:7 ICON:T "tempCelsius"
+LEVEL:1 LINE:8 ICON:T "tempFahrenheit"
+NODE:V LEVEL:0 LINE:11 "iAD595 -> RAM:????"
+LEVEL:1 LINE:7 ICON:T "tempCelsius"
+LEVEL:1 LINE:8 ICON:T "tempFahrenheit"

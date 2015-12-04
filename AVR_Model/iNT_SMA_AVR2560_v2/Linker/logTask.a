@@ -1,0 +1,27 @@
+;#include "logTask.h"
+;#include "debug.h"
+;#include "logManager.h"
+;
+;void logTask(void *pviParameter){
+; 0024 0005 void logTask(void *pviParameter){
+
+	.CSEG
+;PCODE: $00000000 VOL: 0
+;PCODE: $00000001 VOL: 0
+; 0024 0006      printDebug("[logTask]Running...\r\n");
+;PCODE: $00000002 VOL: 0
+;	*pviParameter -> Y+0
+;PCODE: $00000003 VOL: 0
+;PCODE: $00000004 VOL: 0
+;PCODE: $00000005 VOL: 0
+;PCODE: $00000006 VOL: 0
+;PCODE: $00000007 VOL: 0
+;PCODE: $00000008 VOL: 0
+;PCODE: $00000009 VOL: 0
+; 0024 0007 
+; 0024 0008      iGenFileDaily();
+;PCODE: $0000000A VOL: 0
+; 0024 0009 }
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;PCODE: $0000000D VOL: 0

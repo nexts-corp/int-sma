@@ -1,0 +1,545 @@
+#include <stdlib.h>
+#include <stdio.h>
+//#include "alarm.h"
+//#include "config.h"
+//#include "debug.h"
+//
+///*eeprom*/ char sensorAlarm[MAX_SENS_CHANNEL]   = {SENS_NORMAL,SENS_NORMAL,SENS_NORMAL,SENS_NORMAL,SENS_NORMAL};        // -- oled -- //
+///*eeprom*/ char dataAlarm[MAX_SENS_CHANNEL]     = {DATA_NORMAL,DATA_NORMAL,DATA_NORMAL,DATA_NORMAL,DATA_NORMAL};        // -- oled -- //
+///*eeprom*/ char dinAlarm[MAX_DI_CHANNEL]        = {UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,     // -- oled -- //
+//                                               UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN};
+///*eeprom*/ char ainAlarm[MAX_AI_CHANNEL]        = {UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,
+//                                               UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN};   
+///*eeprom*/ char muteAlarm                       = UNKNOWN; 
+///*eeprom*/ char mtncAlarm                       = MTNC_NORMAL;
+///*eeprom*/ char powerSrcAlarm                   = PWR_NORMAL;
+///*eeprom*/ char batteryAlarm                    = BATT_NORMAL;                                                          // -- oled -- //
+///*eeprom*/ char communicationAlarm              = COMM_NORMAL;
+///*eeprom*/ char memoryAlarm                     = MEM_NORMAL;                                                           // -- oled -- //
+///*eeprom*/ char gsmAlarm                        = GSM_NORMAL;
+///*eeprom*/ char gsmBalanceAlarm                 = GBAL_NORMAL;
+//                                                                                    
+///*============================================================*/  
+///**************************************************************/
+///**************** Alarm Indicating decision *******************/
+///**************************************************************/
+//int checkAlarm(char *srcList,int srcLen)
+//{   
+//    int i=0, res=0, tmp=0;   
+//                          
+//    for(i=0;i<srcLen;i++)
+//    {              
+//        tmp  = checkAlarmFromSrc(srcList[i]);                                      
+//        res |= tmp;               
+//        //printDebug("<checkAlarm> SRC[0x%02X] -> %d\r\n",srcList[i],tmp);
+//    }                                           
+//    
+//    return res;
+//}
+///*============================================================*/
+//int checkAlarmFromSrc(char alarmSrc)
+//{   
+//    int i   = 0;
+//    int res = 0;
+//    
+//    switch(alarmSrc)
+//    {
+//        case SRC_SENS1_EVENT             :  if(((sensorStatus[0]!= SENS_NORMAL) && (sensorStatus[0] != SENS_ERR_UNKNOWN)) ||
+//                                                (dataStatus[0]  != DATA_NORMAL))        res = 1;    break;
+//        case SRC_SENS1_LOWER             :  if(dataStatus[0]    &  DATA_LOWER_LIMIT)    res = 1;    break;
+//        case SRC_SENS1_LOWERDELAY        :  if(dataStatus[0]    &  DATA_LOWER_DELAY)    res = 1;    break;
+//        case SRC_SENS1_LOWEREXTREME      :  if(dataStatus[0]    &  DATA_LOWER_EXTREME)  res = 1;    break;
+//        case SRC_SENS1_UPPER             :  if(dataStatus[0]    &  DATA_UPPER_LIMIT)    res = 1;    break;
+//        case SRC_SENS1_UPPERDELAY        :  if(dataStatus[0]    &  DATA_UPPER_DELAY)    res = 1;    break;
+//        case SRC_SENS1_UPPEREXTREME      :  if(dataStatus[0]    &  DATA_UPPER_EXTREME)  res = 1;    break;
+//        case SRC_SENS1_ERROR             :  if((sensorStatus[0] != SENS_NORMAL) &&
+//                                               (sensorStatus[0] != SENS_ERR_UNKNOWN))   res = 1;    break;
+//                          
+//        case SRC_SENS2_EVENT             :  if(((sensorStatus[1]!= SENS_NORMAL) && (sensorStatus[1] != SENS_ERR_UNKNOWN)) ||
+//                                                (dataStatus[1]  != DATA_NORMAL))        res = 1;    break;
+//        case SRC_SENS2_LOWER             :  if(dataStatus[1]    &  DATA_LOWER_LIMIT)    res = 1;    break;
+//        case SRC_SENS2_LOWERDELAY        :  if(dataStatus[1]    &  DATA_LOWER_DELAY)    res = 1;    break;
+//        case SRC_SENS2_LOWEREXTREME      :  if(dataStatus[1]    &  DATA_LOWER_EXTREME)  res = 1;    break;
+//        case SRC_SENS2_UPPER             :  if(dataStatus[1]    &  DATA_UPPER_LIMIT)    res = 1;    break;
+//        case SRC_SENS2_UPPERDELAY        :  if(dataStatus[1]    &  DATA_UPPER_DELAY)    res = 1;    break;
+//        case SRC_SENS2_UPPEREXTREME      :  if(dataStatus[1]    &  DATA_UPPER_EXTREME)  res = 1;    break;
+//        case SRC_SENS2_ERROR             :  if((sensorStatus[1] != SENS_NORMAL) &&
+//                                               (sensorStatus[1] != SENS_ERR_UNKNOWN))   res = 1;    break;         
+//                                            
+//        case SRC_SENS3_EVENT             :  if(((sensorStatus[2]!= SENS_NORMAL) && (sensorStatus[2] != SENS_ERR_UNKNOWN)) ||
+//                                                (dataStatus[2]  != DATA_NORMAL))        res = 1;    break;
+//        case SRC_SENS3_LOWER             :  if(dataStatus[2]    &  DATA_LOWER_LIMIT)    res = 1;    break;
+//        case SRC_SENS3_LOWERDELAY        :  if(dataStatus[2]    &  DATA_LOWER_DELAY)    res = 1;    break;
+//        case SRC_SENS3_LOWEREXTREME      :  if(dataStatus[2]    &  DATA_LOWER_EXTREME)  res = 1;    break;
+//        case SRC_SENS3_UPPER             :  if(dataStatus[2]    &  DATA_UPPER_LIMIT)    res = 1;    break;
+//        case SRC_SENS3_UPPERDELAY        :  if(dataStatus[2]    &  DATA_UPPER_DELAY)    res = 1;    break;
+//        case SRC_SENS3_UPPEREXTREME      :  if(dataStatus[2]    &  DATA_UPPER_EXTREME)  res = 1;    break;
+//        case SRC_SENS3_ERROR             :  if((sensorStatus[2] != SENS_NORMAL) &&
+//                                               (sensorStatus[2] != SENS_ERR_UNKNOWN))   res = 1;    break;
+//        
+//        case SRC_SENS4_EVENT             :  if(((sensorStatus[3]!= SENS_NORMAL) && (sensorStatus[3] != SENS_ERR_UNKNOWN)) ||
+//                                                (dataStatus[3]  != DATA_NORMAL))        res = 1;    break;
+//        case SRC_SENS4_LOWER             :  if(dataStatus[3]    &  DATA_LOWER_LIMIT)    res = 1;    break;
+//        case SRC_SENS4_LOWERDELAY        :  if(dataStatus[3]    &  DATA_LOWER_DELAY)    res = 1;    break;
+//        case SRC_SENS4_LOWEREXTREME      :  if(dataStatus[3]    &  DATA_LOWER_EXTREME)  res = 1;    break;
+//        case SRC_SENS4_UPPER             :  if(dataStatus[3]    &  DATA_UPPER_LIMIT)    res = 1;    break;
+//        case SRC_SENS4_UPPERDELAY        :  if(dataStatus[3]    &  DATA_UPPER_DELAY)    res = 1;    break;
+//        case SRC_SENS4_UPPEREXTREME      :  if(dataStatus[3]    &  DATA_UPPER_EXTREME)  res = 1;    break;
+//        case SRC_SENS4_ERROR             :  if((sensorStatus[3] != SENS_NORMAL) &&
+//                                               (sensorStatus[3] != SENS_ERR_UNKNOWN))   res = 1;    break;      
+//        
+//        case SRC_SENS5_EVENT             :  if(((sensorStatus[4]!= SENS_NORMAL) && (sensorStatus[4] != SENS_ERR_UNKNOWN)) ||
+//                                                (dataStatus[4]  != DATA_NORMAL))        res = 1;    break;
+//        case SRC_SENS5_LOWER             :  if(dataStatus[4]    &  DATA_LOWER_LIMIT)    res = 1;    break;
+//        case SRC_SENS5_LOWERDELAY        :  if(dataStatus[4]    &  DATA_LOWER_DELAY)    res = 1;    break;
+//        case SRC_SENS5_LOWEREXTREME      :  if(dataStatus[4]    &  DATA_LOWER_EXTREME)  res = 1;    break;
+//        case SRC_SENS5_UPPER             :  if(dataStatus[4]    &  DATA_UPPER_LIMIT)    res = 1;    break;
+//        case SRC_SENS5_UPPERDELAY        :  if(dataStatus[4]    &  DATA_UPPER_DELAY)    res = 1;    break;
+//        case SRC_SENS5_UPPEREXTREME      :  if(dataStatus[4]    &  DATA_UPPER_EXTREME)  res = 1;    break;
+//        case SRC_SENS5_ERROR             :  if((sensorStatus[4] != SENS_NORMAL) &&
+//                                               (sensorStatus[4] != SENS_ERR_UNKNOWN))   res = 1;    break; 
+//                              
+//        case SRC_DI_EVENT_ANY            :  break;
+//        case SRC_DI_RISING_ANY           :  for(i=0;i<USE_DIN;i++){
+//                                                if(dinStatus[i] == DIN_RISING)          res = 1;    break;
+//                                            }               
+//                                            break;
+//        case SRC_DI_FALLING_ANY          :  for(i=0;i<USE_DIN;i++){
+//                                                if(dinStatus[i] == DIN_FALLING)         res = 1;    break;
+//                                            }               
+//                                            break; 
+//                                            
+//        case SRC_DI_EVENT(0)             :  break;
+//        case SRC_DI_RISING(0)            :  if(dinStatus[0] == DIN_RISING) {          
+//                                                res = 1;  
+////                                                printDebug("DIN1 Rising Alarm \r\n");
+//                                            }  
+//                                            break;
+//        case SRC_DI_FALLING(0)           :  if(dinStatus[0]     == DIN_FALLING)         res = 1;    break;
+//        
+//        case SRC_DI_EVENT(1)             :  break;
+//        case SRC_DI_RISING(1)            :  if(dinStatus[1]     == DIN_RISING)          res = 1;    break;
+//        case SRC_DI_FALLING(1)           :  if(dinStatus[1]     == DIN_FALLING)         res = 1;    break;
+//        
+//        case SRC_MUTE_ALARM              :  break;
+//        case SRC_MIP                     :  // --- wait for menu MIP --- //
+//                                            break;
+//        case SRC_POWER_DOWN              :  if(powerSrcStatus   == PWR_DOWN)            res = 1;    break;
+//        case SRC_LOW_BATTERY             :  if(batteryStatus    == BATT_LOW)            res = 1;    break;
+//        case SRC_LOW_COMM_SIGNAL         :  break;
+//        case SRC_LOW_MEMORY              :  if(memoryAlarm      == MEM_LOW)             res = 1;    break;
+//        case SRC_MEMORY_ERROR            :  if(memoryAlarm      == MEM_ERROR)           res = 1;    break;
+//        case SRC_LOST_OF_COMM            :  if(serverCommStatus == COMM_LOST) {           
+//                                                res = 1;   
+////                                                printDebug("Comm Lost Alarm \r\n");
+//                                            }   
+////                                            printDebug("Check Comm Lost \r\n"); 
+//                                            break;
+//        case SRC_GSM_LOW_SIGNAL          :
+//        case SRC_GSM_DATE_EXPIRED        :
+//        case SRC_GSM_NO_OPERATOR         :
+//        case SRC_GSM_TOP_UP              :
+//        case SRC_GSM_LOW_BALANCE         :
+//        case SRC_GSM_UNKNOWN_FAILURE     :  printDebug("<checkAlarmFromSrc> GSM Not support yet [0x%02X]\r\n",alarmSrc);
+//                                            break;
+//        
+//        default                          :  printDebug("<checkAlarmFromSrc> alarmSrc unknown [0x%02X]\r\n",alarmSrc);
+//                                            break;   
+//    }     
+//    
+//    return res;
+//}
+///*============================================================*/
+//                                                                
+///**************************************************************/
+///****************** Send Alarm Detection **********************/
+///**************************************************************/
+///*============================================================*/
+//int checkSendMIPAlarm(unsigned char *code)
+//{
+//    if(mtncStatus != mtncAlarm)
+//    {                    
+//        mtncAlarm   = mtncStatus;
+//        *code       = mtncStatus;         
+//        return 1;
+//    }        
+//    
+//    return 0;
+//}
+///*============================================================*/
+//int checkSendPowerAlarm(unsigned char *code)
+//{
+//    static TIMER    t           = 0;
+//    static char     t_flag      = 0;    
+//    static char     lastCheck   = 0x69;   // -- initial with any unuse value -- // 
+//                                                                        
+//    if(powerSrcStatus != powerSrcAlarm)
+//    {   
+//        if(powerSrcStatus != lastCheck){
+//            t_flag      = 0;     
+//            lastCheck   = powerSrcStatus;
+//        }                  
+//        
+//        if(!t_flag){                 
+//            if(powerSrcStatus == PWR_DOWN){ 
+//                TIMER_setTimer(&t,30);   
+//            }                             
+//            else{
+//                TIMER_setTimer(&t,3);      
+//            }  
+//            t_flag              = 1;         
+//        }
+//        else{
+//            if(TIMER_checkTimerExceed(t))
+//            {                        
+//                powerSrcAlarm   = powerSrcStatus;
+//                
+//                *code           = powerSrcStatus;
+//                            
+//                t_flag          = 0;
+//                return 1; 
+//            }            
+//        }   
+//    }
+//    else
+//    {
+//        t_flag = 0;
+//    }                
+//    
+//    return 0;
+//}
+///*============================================================*/
+//int checkSendBatteryAlarm(unsigned char *code)
+//{                                              
+//    static TIMER    t           = 0;
+//    static char     t_flag      = 0;    
+//    static char     lastCheck   = 0x69;   // -- initial with any unuse value -- // 
+//    
+//    if(env_config.batteryLevel > 0)
+//    {
+//        if(batteryStatus != batteryAlarm)
+//        {
+//            if(batteryStatus != lastCheck)
+//            {
+//                t_flag      = 0;     
+//                lastCheck   = batteryStatus;
+//            }                  
+//            
+//            if(!t_flag)
+//            {                 
+//                if(batteryStatus == BATT_LOW){ 
+//                    TIMER_setTimer(&t,10);   
+//                }                             
+//                else{
+//                    TIMER_setTimer(&t,10);      
+//                }  
+//                t_flag              = 1;         
+//            }
+//            else
+//            {
+//                if(TIMER_checkTimerExceed(t))
+//                {                        
+//                    batteryAlarm   = batteryStatus;
+//                    
+//                    *code           = batteryStatus;
+//                                
+//                    t_flag          = 0;
+//                    return 1; 
+//                }            
+//            }   
+//        }
+//        else
+//        {
+//            t_flag = 0;
+//        }             
+//    }
+//    else                                // -- battery alarm disable -- //
+//    {                                    
+//        t           = 0;          
+//        t_flag      = 0;
+//        lastCheck   = 0x69;
+//        if(batteryAlarm != BATT_NORMAL)
+//        {
+//            batteryAlarm    = BATT_NORMAL;                                                
+//            *code           = BATT_NORMAL;     
+//            return 1;
+//        }
+//    }        
+//                                   
+//    return 0;
+//}
+///*============================================================*/
+//int checkSendMemoryAlarm(unsigned char *code)
+//{
+//    static TIMER    t      = 0;
+//    static char     t_flag = 0;
+//                                        
+//    if(env_config.memoryMin > 0)
+//    {
+//        if(memoryStatus != memoryAlarm)
+//        {                                     
+//            if(!t_flag){
+//                TIMER_setTimer(&t,15);        
+//                t_flag          = 1;
+//            }
+//            else{
+//                if(TIMER_checkTimerExceed(t))
+//                {                        
+//                    memoryAlarm     = memoryStatus;
+//                    
+//                    *code           = memoryStatus;
+//                                
+//                    t_flag          = 0;           
+//                    
+//                    return 1; 
+//                } 
+//            }   
+//        }   
+//        else{
+//            t_flag              = 0;          
+//        }                        
+//    }
+//    else                                // -- battery alarm disable -- //
+//    {                                    
+//        t           = 0;          
+//        t_flag      = 0;
+//        if(batteryAlarm != MEM_NORMAL)
+//        {
+//            memoryAlarm     = MEM_NORMAL;                                                
+//            *code           = MEM_NORMAL;     
+//            return 1;
+//        }
+//    }    
+//    
+//    return 0;
+//}
+///*============================================================*/
+//int checkSendDinAlarm(int ch, unsigned char *code)
+//{
+//    static TIMER    t[USE_DIN]         = {0,0};
+//    static char     t_flag[USE_DIN]    = {0,0};    
+//    static char     lastCheck[USE_DIN] = {0x69,0x69};   // -- initial with any unuse value -- //    
+//                    
+//    if((ch < 0) || (ch >= USE_DIN)){
+//        printDebug("<checkSendDinAlarm> channel out of range [%d]\r\n",ch);
+//        return 0;
+//    }
+//    
+//    if(dinStatus[ch] != dinAlarm[ch])
+//    {                      
+//        if(dinStatus[ch] != lastCheck[ch]){
+//            t_flag[ch]          = 0;     
+//            lastCheck[ch]       = dinStatus[ch];
+//        }                  
+//        
+//        if(!t_flag[ch]){                  
+//            TIMER_setTimer(&t[ch],5);   
+//            t_flag[ch]          = 1;         
+//        }
+//        else{
+//            if(TIMER_checkTimerExceed(t[ch]))
+//            {                        
+//                dinAlarm[ch]    = dinStatus[ch];
+//                *code           = dinStatus[ch];
+//                t_flag[ch]      = 0;
+//                return 1; 
+//            }            
+//        }   
+//    } 
+//    else{
+//        t_flag[ch]              =   0; 
+//    }                          
+//    
+//    return 0;
+//}
+///*============================================================*/
+//int checkSendSensorAlarm(int ch, unsigned char *code)
+//{
+//    static TIMER    t[MAX_SENS_CHANNEL]         = {0,0,0,0,0};
+//    static char     t_flag[MAX_SENS_CHANNEL]    = {0,0,0,0,0};    
+//    static char     lastCheck[MAX_SENS_CHANNEL] = {0x69,0x69,0x69,0x69,0x69};   // -- initial with any unuse value -- // 
+//                 
+//    if(sensorStatus[ch] != sensorAlarm[ch])
+//    {                      
+//        if(sensorStatus[ch] != lastCheck[ch]){
+//            t_flag[ch]          = 0;     
+//            lastCheck[ch]       = sensorStatus[ch];
+//        }                  
+//        
+//        if(!t_flag[ch]){                 
+//            if(sensorStatus[ch] == SENS_ERR_UNKNOWN){ 
+//                TIMER_setTimer(&t[ch],30);   
+//            }                             
+//            else{
+//                TIMER_setTimer(&t[ch],3);      
+//            }  
+//            t_flag[ch]          = 1;         
+//        }
+//        else{
+//            if(TIMER_checkTimerExceed(t[ch]))
+//            {                        
+//                sensorAlarm[ch] = sensorStatus[ch];
+//                
+//                *code           = sensorStatus[ch];
+//                            
+//                t_flag[ch]      = 0;
+//                return 1; 
+//            }            
+//        }   
+//    } 
+//    else{
+//        t_flag[ch]              =   0; 
+//    }                          
+//    
+//    return 0;
+//                      
+//    /*
+//    if(sensorStatus[ch] != sensorAlarm[ch])
+//    {                                  
+//        sensorAlarm[ch] = sensorStatus[ch];
+//        
+//        *code           = sensorStatus[ch];
+//        
+//        return 1; 
+//    } 
+//    */                     
+//    
+//    /*
+//    // -- mask for an error and compare with reported alarm -- //
+//    if((sensorStatus[ch] & SENS_ERR_LOWER_BOUND) != (sensorAlarm[ch] & SENS_ERR_LOWER_BOUND))           
+//    {     
+//        // -- check if it's an error or recover -- //
+//        if( (sensorStatus[ch] & SENS_ERR_LOWER_BOUND) == SENS_ERR_LOWER_BOUND )     // -- error -- //
+//        {
+//            
+//        }                                            
+//        else                                                                        // -- recover -- //
+//        {           
+//        
+//        }
+//        sensorAlarm[ch] = sensorStatus[ch];
+//        
+//        *code           = sensorStatus[ch];
+//                
+//        return 1;       
+//    }            
+//    
+//    return 0;
+//    */  
+//}
+///*============================================================*/
+//int checkSendDataAlarm(int ch, unsigned char *code)
+//{
+//    static TIMER    t[MAX_SENS_CHANNEL]      = {0,0,0,0,0};
+//    static char     t_flag[MAX_SENS_CHANNEL] = {0,0,0,0,0};
+//                
+//    if(dataStatus[ch] != dataAlarm[ch])
+//    {                                     
+//        if(!t_flag[ch]){
+//            TIMER_setTimer(&t[ch],3);        
+//            t_flag[ch]          = 1;              
+////            printDebug("<checkSendDataAlarm> Probe %d dataAlarm[0x%02X] != dataStatus[0x%02X]\r\n",ch+1,dataAlarm[ch],dataStatus[ch]);    
+//        }
+//        else{
+//            if(TIMER_checkTimerExceed(t[ch]))
+//            {                        
+//                dataAlarm[ch]   = dataStatus[ch];
+//                
+//                *code           = dataStatus[ch];
+//                            
+//                t_flag[ch]      = 0;    
+//                
+//                printDebug("<checkSendDataAlarm> Probe %d dataAlarm[0x%02X]\r\n",ch+1,dataAlarm[ch]);       
+//                
+//                return 1; 
+//            } 
+//        }   
+//    }   
+//    else{
+//        t_flag[ch]              = 0;          
+//    }
+//    
+//    return 0;
+//                     
+//    /*
+//    if(dataStatus[ch] != dataAlarm[ch])
+//    {
+//        dataAlarm[ch]   = dataStatus[ch];
+//        
+//        *code           = dataStatus[ch];
+//                
+//        return 1;       
+//    }            
+//    */
+//      
+//}
+///*============================================================*/
+//                                                                 
+///**************************************************************/
+///****************** Alarm Mute Management *********************/
+///**************************************************************/    
+//char muteMode   = 0;
+//TIMER muteAlarmExpired  = 0xFFFFFFFF;       // -- initial with maximum TIMER value -- //
+///*============================================================*/
+//int ALARM_mute(unsigned long int period)
+//{
+//    if(period == 0){
+//        muteAlarmExpired    = 0xFFFFFFFF;             
+//        muteMode            = MUTE_PERMAMENT;
+//    }
+//    else{
+//        TIMER_setTimer(&muteAlarmExpired,period);  
+//        muteMode            = MUTE_TEMPORARY;
+//    }
+//    
+//    return 0;
+//}
+///*============================================================*/
+//int ALARM_checkMuteExpired(void)
+//{
+//    switch(muteMode){
+//        case MUTE_PERMAMENT :   return 0;
+//                                break;
+//        case MUTE_TEMPORARY :   if( TIMER_checkTimerExceed(muteAlarmExpired) ){
+//                                    return 1;
+//                                }
+//                                else{
+//                                    return 0;
+//                                }   
+//                                break;  
+//        default :               printDebug("<ALARM_checkMuteExpired> invalid muteMode (%d)\r\n", muteMode);
+//                                return 1;
+//    }          
+//    return 0;
+//}
+///*============================================================*/     
+//                                                                
+///**************************************************************/
+///****************** Sevice Alarm Function *********************/
+///**************************************************************/
+///*============================================================*/
+//void resetAlarm(void)
+//{
+//    int i;
+//    
+//    for(i=0;i<MAX_SENS_CHANNEL;i++){
+//        sensorAlarm[i]      =   SENS_NORMAL; 
+//        dataAlarm[i]        =   DATA_NORMAL;
+//    }
+//    for(i=0;i<MAX_DI_CHANNEL;i++){
+//        dinAlarm[i]         =   UNKNOWN;
+//    }
+//    for(i=0;i<MAX_AI_CHANNEL;i++){
+//        ainAlarm[i]         =   UNKNOWN;
+//    }                                                         
+//    muteAlarm                       = UNKNOWN; 
+//    mtncAlarm                       = MTNC_NORMAL;
+//    powerSrcAlarm                   = PWR_NORMAL;
+//    batteryAlarm                    = BATT_NORMAL;
+//    communicationAlarm              = COMM_NORMAL;
+//    memoryAlarm                     = MEM_NORMAL;
+//    gsmAlarm                        = GSM_NORMAL;
+//    gsmBalanceAlarm                 = GBAL_NORMAL;
+//    
+//}
+///*============================================================*/

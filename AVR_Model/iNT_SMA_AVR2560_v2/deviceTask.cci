@@ -1,0 +1,10 @@
+VERSION:3 SOURCE_TIMESTAMP:475D5741
+NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\deviceTask.h"
+NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\config.h"
+NODE:V LEVEL:0 LINE:4 "viFlagTerInit -> EEPROM:????"
+NODE:V LEVEL:0 LINE:8 "viDataConfig -> RAM:????"
+LEVEL:1 LINE:40 ICON:T "viId"
+LEVEL:1 LINE:41 ICON:T "viCmd"
+LEVEL:1 LINE:42 ICON:T "viLength"
+LEVEL:1 LINE:43 ICON:T "pviValue"
+NODE:F LEVEL:0 LINE:10 "deviceTask(void * pviParameter)"

@@ -1,0 +1,47 @@
+;#include "event.h"
+;#include "config.h"
+;#include "eventTask.h"
+;
+;extern eeprom iDVConfig_t viDVConfigUpdate;
+;
+;extern iDataMini_t viEventReport;
+;extern iEventReport_t viEventReportBuff;
+;
+;iChar_t iEventRead(iDataMini_t *pviOutData_arg){
+; 0028 000A iChar_t iEventRead(iDataMini_t *pviOutData_arg){
+
+	.CSEG
+;PCODE: $00000000 VOL: 0
+;PCODE: $00000001 VOL: 0
+; 0028 000B     iChar_t i;
+; 0028 000C     iChar_t viReturn = 0;
+; 0028 000D     const iChar_t viCMD[2] = {0x5a,0x07};
+; 0028 000E     iUChar_t viIndexWrite = 0;
+; 0028 000F 
+; 0028 0010     /*test*/
+; 0028 0011     viDVConfigUpdate.viSensorConfig[0].viAlarmEnable = 0x01;
+;PCODE: $00000002 VOL: 0
+;PCODE: $00000003 VOL: 0
+;PCODE: $00000004 VOL: 0
+;PCODE: $00000005 VOL: 0
+;PCODE: $00000006 VOL: 0
+;PCODE: $00000007 VOL: 0
+;PCODE: $00000008 VOL: 0
+;	*pviOutData_arg -> Y+6
+;	i -> R17
+;	viReturn -> R16
+;	viCMD -> Y+4
+;	viIndexWrite -> R19
+;PCODE: $00000009 VOL: 0
+;PCODE: $0000000A VOL: 0
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+;PCODE: $0000000F VOL: 0
+;PCODE: $00000010 VOL: 0
+; 0028 0012 }
+;PCODE: $00000011 VOL: 0
+;PCODE: $00000012 VOL: 0
+;PCODE: $00000013 VOL: 0
+;PCODE: $00000014 VOL: 0

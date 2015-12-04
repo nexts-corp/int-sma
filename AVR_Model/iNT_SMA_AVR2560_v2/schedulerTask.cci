@@ -1,0 +1,6 @@
+VERSION:3 SOURCE_TIMESTAMP:47376C95
+NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\schedulerTask.h"
+NODE:V LEVEL:0 LINE:3 "task_count_g -> RAM:????"
+NODE:V LEVEL:0 LINE:5 "pviTaskList -> RAM:????"
+NODE:F LEVEL:0 LINE:7 "iTaskCreate(piTaskFunction piTaskCode_p,const unsigned char * name_p,uint_t priority_p)"
+NODE:F LEVEL:0 LINE:51 "startSchedulerTask(void)"

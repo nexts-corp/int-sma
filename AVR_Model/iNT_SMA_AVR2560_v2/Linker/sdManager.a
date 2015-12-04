@@ -1,0 +1,1642 @@
+;#include "sdManager.h"
+;#include "config.h"
+;#include "managerTask.h"
+;
+;// global variable
+;//iChar_t viFolderDataName[] = "Data";
+;iChar_t viFolderDataName[] = "Record";
+
+	.DSEG
+;//iChar_t viFolderDataLogName[] = "Data_Log";
+;iChar_t viFolderDataLogName[] = "Log";
+;iChar_t viFolderEventName[] = "Event";
+;iChar_t viFolderStatusName[] = "Status";
+;iChar_t viFolderErrorName[] = "Error";
+;iChar_t viFolderConfigName[] = "Config";
+;
+;iChar_t viDirRootPath[] = "0:/";
+;//iChar_t viDirDataPath[] = "0:/DATA";
+;//iChar_t viDirDataPath[] = "0:/RECORD";
+;iChar_t viDirDataPath[] = "0:/RECORD";
+;//iChar_t viDirDataLogPath[] = "0:/DATA_LOG";
+;iChar_t viDirDataLogPath[] = "0:/LOG";
+;iChar_t viDirEventPath[] = "0:/EVENT";
+;iChar_t viDirStatusPath[] = "0:/STATUS";
+;iChar_t viDirErrorPath[] = "0:/ERROR";
+;iChar_t viDirConfigPath[] = "0:/CONFIG";
+;
+;//iChar_t viDataFName[] = "0:./data1.nc";
+;iChar_t viDataFName[] = "0:./00000000.nx";
+;iChar_t viDataLogFName[] = "0:./dataLog1.nx";
+;iChar_t viEventFName[] = "0:./event1.nx";
+;iChar_t viStatusFName[] = "0:./status1.nx";
+;iChar_t viErrorFName[] = "0:./error1.nx";
+;iChar_t viConfigFName[] = "0:./config1.nx";
+;
+;/* will hold file/directory information returned by f_readdir*/
+;FILINFO file_info;
+;
+;
+;///* recursively scan directory entries and display them */
+;//FRESULT directory_scan(char *path){
+;//    /* will hold the directory information */
+;//    DIR directory;
+;//    /* FAT function result */
+;//    FRESULT res;
+;//    int i;
+;//
+;//
+;//    if ((res=f_opendir(&directory,path))==FR_OK){
+;//       while (((res=f_readdir(&directory,&file_info))==FR_OK) &&
+;//             file_info.fname[0])
+;//             {
+;//             /* display file/directory name and associated information */
+;//             printDebug("%c%c%c%c%c %02u/%02u/%u %02u:%02u:%02u %9lu"                 "  %s/%s\r\n",
+;//                    (file_info.fattrib & AM_DIR) ? 'D' : '-',
+;//                    (file_info.fattrib & AM_RDO) ? 'R' : '-',
+;//                    (file_info.fattrib & AM_HID) ? 'H' : '-',
+;//                    (file_info.fattrib & AM_SYS) ? 'S' : '-',
+;//                    (file_info.fattrib & AM_ARC) ? 'A' : '-',
+;//                    file_info.fdate & 0x1F,(file_info.fdate >> 5) & 0xF,
+;//                    (file_info.fdate >> 9)+1980,
+;//                    file_info.ftime >> 11,(file_info.ftime >> 5) & 0x3F,
+;//                    (file_info.ftime & 0xF) << 1,
+;//                    file_info.fsize,path,file_info.fname);
+;//             if (file_info.fattrib & AM_DIR)
+;//                {
+;//                /* its a subdirectory */
+;//                /* make sure to skip past "." and ".." when recursing */
+;//                if (file_info.fname[0]!='.')
+;//                   {
+;//                   i=strlen(path);
+;//                   /* append the subdirectory name to the path */
+;//                   if (path[i-1]!='/') strcatf(path,"/");
+;//                   strcat(path,file_info.fname);
+;//                   /* scan subdirectory */
+;//                   res=directory_scan(path);
+;//                   /* restore the old path name */
+;//                   path[i]=0;
+;//                   /* remove any eventual '/' from the end of the path */
+;//                   --i;
+;//                   if (path[i]=='/') path[i]=0;
+;//                   /* stop if an error occured */
+;//                   if (res!=FR_OK) break;
+;//                   }
+;//                }
+;//              }
+;//    }
+;//   return res;
+;//}
+;
+;
+;
+;iInt_t iCreateFolder(iUChar_t viFolderName_arg){
+; 0025 005B iInt_t iCreateFolder(iUChar_t viFolderName_arg){
+
+	.CSEG
+;PCODE: $00000000 VOL: 0
+;PCODE: $00000001 VOL: 0
+; 0025 005C 
+; 0025 005D }
+;PCODE: $00000002 VOL: 0
+;PCODE: $00000003 VOL: 0
+;
+;
+;iInt_t iInitSDCard(){
+; 0025 0060 iInt_t iInitSDCard(){
+;PCODE: $00000004 VOL: 0
+;PCODE: $00000005 VOL: 0
+; 0025 0061     //Check SD folder
+; 0025 0062 //    char viFolderDataName[] = "Data";
+; 0025 0063 //    char viFolderEventName[] = "Event";
+; 0025 0064 //    char viFolderStatusName[] = "Status";
+; 0025 0065 //    char viFolderErrorName[] = "Error";
+; 0025 0066 //    char viFolderConfigName[] = "Config";
+; 0025 0067 //    char viDirRootPath[] = "0:/";
+; 0025 0068 //    char viDirDataPath[] = "0:/DATA";
+; 0025 0069 //    char viDirEventPath[] = "0:/EVENT";
+; 0025 006A //    char viDirStatusPath[] = "0:/STATUS";
+; 0025 006B //    char viDirErrorPath[] = "0:/ERROR";
+; 0025 006C //    char viDirConfigPath[] = "0:/CONFIG";
+; 0025 006D     FRESULT viFReturn;
+; 0025 006E     DIR viOutDir;
+; 0025 006F 
+; 0025 0070 
+; 0025 0071     viFReturn = f_opendir(&viOutDir, viDirDataPath);
+;PCODE: $00000006 VOL: 0
+;PCODE: $00000007 VOL: 0
+;	viFReturn -> R17
+;	viOutDir -> Y+1
+;PCODE: $00000008 VOL: 0
+;PCODE: $00000009 VOL: 0
+;PCODE: $0000000A VOL: 0
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+; 0025 0072     if(viFReturn == FR_OK){
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+; 0025 0073         printDebug("[iInitSDCard]Record dir is exist.\r\n");
+;PCODE: $0000000F VOL: 0
+;PCODE: $00000010 VOL: 0
+;PCODE: $00000011 VOL: 0
+;PCODE: $00000012 VOL: 0
+;PCODE: $00000013 VOL: 0
+;PCODE: $00000014 VOL: 0
+;PCODE: $00000015 VOL: 0
+; 0025 0074     }else{
+;PCODE: $00000016 VOL: 0
+;PCODE: $00000017 VOL: 0
+; 0025 0075         iFDisplayReturn(viFReturn);
+;PCODE: $00000018 VOL: 0
+;PCODE: $00000019 VOL: 0
+; 0025 0076         if(viFReturn == FR_NO_PATH){
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+;PCODE: $0000001C VOL: 0
+; 0025 0077             viFReturn = f_mkdir(viFolderDataName);
+;PCODE: $0000001D VOL: 0
+;PCODE: $0000001E VOL: 0
+;PCODE: $0000001F VOL: 0
+; 0025 0078             if(viFReturn == FR_OK){
+;PCODE: $00000020 VOL: 0
+;PCODE: $00000021 VOL: 0
+; 0025 0079                printDebug("[iInitSDCard]mkdir Record success.\r\n");
+;PCODE: $00000022 VOL: 0
+;PCODE: $00000023 VOL: 0
+;PCODE: $00000024 VOL: 0
+;PCODE: $00000025 VOL: 0
+;PCODE: $00000026 VOL: 0
+;PCODE: $00000027 VOL: 0
+;PCODE: $00000028 VOL: 0
+; 0025 007A             }else{
+;PCODE: $00000029 VOL: 0
+;PCODE: $0000002A VOL: 0
+; 0025 007B                printDebug("[iInitSDCard]mkdir Record error.\r\n");
+;PCODE: $0000002B VOL: 0
+;PCODE: $0000002C VOL: 0
+;PCODE: $0000002D VOL: 0
+;PCODE: $0000002E VOL: 0
+;PCODE: $0000002F VOL: 0
+;PCODE: $00000030 VOL: 0
+;PCODE: $00000031 VOL: 0
+; 0025 007C             }
+;PCODE: $00000032 VOL: 0
+; 0025 007D         }
+; 0025 007E     }
+;PCODE: $00000033 VOL: 0
+;PCODE: $00000034 VOL: 0
+; 0025 007F 
+; 0025 0080 //    viFReturn = f_opendir(&viOutDir, viDirDataLogPath);
+; 0025 0081 //    if(viFReturn == FR_OK){
+; 0025 0082 //        printDebug("[iInitSDCard]DataLog dir is exist.\r\n");
+; 0025 0083 //    }else{
+; 0025 0084 //        iFDisplayReturn(viFReturn);
+; 0025 0085 //        if(viFReturn == FR_NO_PATH){
+; 0025 0086 //            viFReturn = f_mkdir(viFolderDataLogName);
+; 0025 0087 //            if(viFReturn == FR_OK){
+; 0025 0088 //               printDebug("[iInitSDCard]mkdir DataLog success.\r\n");
+; 0025 0089 //            }else{
+; 0025 008A //               printDebug("[iInitSDCard]mkdir DataLog error.\r\n");
+; 0025 008B //            }
+; 0025 008C //        }
+; 0025 008D //    }
+; 0025 008E 
+; 0025 008F //    viFReturn = f_opendir(&viOutDir, viDirEventPath);
+; 0025 0090 //    if(viFReturn == FR_OK){
+; 0025 0091 //        printDebug("[iInitSDCard]Event dir is exist.\r\n");
+; 0025 0092 //    }else{
+; 0025 0093 //        iFDisplayReturn(viFReturn);
+; 0025 0094 //        if(viFReturn == FR_NO_PATH){
+; 0025 0095 //            viFReturn = f_mkdir(viFolderEventName);
+; 0025 0096 //            if(viFReturn == FR_OK){
+; 0025 0097 //               printDebug("[iInitSDCard]mkdir Event success.\r\n");
+; 0025 0098 //            }else{
+; 0025 0099 //               printDebug("[iInitSDCard]mkdir Event error.\r\n");
+; 0025 009A //            }
+; 0025 009B //        }
+; 0025 009C //    }
+; 0025 009D 
+; 0025 009E //    viFReturn = f_opendir(&viOutDir, viDirStatusPath);
+; 0025 009F //    if(viFReturn == FR_OK){
+; 0025 00A0 //        printDebug("[iInitSDCard]Status dir is exist.\r\n");
+; 0025 00A1 //    }else{
+; 0025 00A2 //        iFDisplayReturn(viFReturn);
+; 0025 00A3 //        if(viFReturn == FR_NO_PATH){
+; 0025 00A4 //            viFReturn = f_mkdir(viFolderStatusName);
+; 0025 00A5 //            if(viFReturn == FR_OK){
+; 0025 00A6 //               printDebug("[iInitSDCard]mkdir Status success.\r\n");
+; 0025 00A7 //            }else{
+; 0025 00A8 //               printDebug("[iInitSDCard]mkdir Status error.\r\n");
+; 0025 00A9 //            }
+; 0025 00AA //        }
+; 0025 00AB //    }
+; 0025 00AC 
+; 0025 00AD     viFReturn = f_opendir(&viOutDir, viDirErrorPath);
+;PCODE: $00000035 VOL: 0
+;PCODE: $00000036 VOL: 0
+;PCODE: $00000037 VOL: 0
+;PCODE: $00000038 VOL: 0
+;PCODE: $00000039 VOL: 0
+; 0025 00AE     if(viFReturn == FR_OK){
+;PCODE: $0000003A VOL: 0
+;PCODE: $0000003B VOL: 0
+; 0025 00AF         printDebug("[iInitSDCard]Error dir is exist.\r\n");
+;PCODE: $0000003C VOL: 0
+;PCODE: $0000003D VOL: 0
+;PCODE: $0000003E VOL: 0
+;PCODE: $0000003F VOL: 0
+;PCODE: $00000040 VOL: 0
+;PCODE: $00000041 VOL: 0
+;PCODE: $00000042 VOL: 0
+; 0025 00B0     }else{
+;PCODE: $00000043 VOL: 0
+;PCODE: $00000044 VOL: 0
+; 0025 00B1         iFDisplayReturn(viFReturn);
+;PCODE: $00000045 VOL: 0
+;PCODE: $00000046 VOL: 0
+; 0025 00B2         if(viFReturn == FR_NO_PATH){
+;PCODE: $00000047 VOL: 0
+;PCODE: $00000048 VOL: 0
+;PCODE: $00000049 VOL: 0
+; 0025 00B3             viFReturn = f_mkdir(viFolderErrorName);
+;PCODE: $0000004A VOL: 0
+;PCODE: $0000004B VOL: 0
+;PCODE: $0000004C VOL: 0
+; 0025 00B4             if(viFReturn == FR_OK){
+;PCODE: $0000004D VOL: 0
+;PCODE: $0000004E VOL: 0
+; 0025 00B5                printDebug("[iInitSDCard]mkdir Error success.\r\n");
+;PCODE: $0000004F VOL: 0
+;PCODE: $00000050 VOL: 0
+;PCODE: $00000051 VOL: 0
+;PCODE: $00000052 VOL: 0
+;PCODE: $00000053 VOL: 0
+;PCODE: $00000054 VOL: 0
+;PCODE: $00000055 VOL: 0
+; 0025 00B6             }else{
+;PCODE: $00000056 VOL: 0
+;PCODE: $00000057 VOL: 0
+; 0025 00B7                printDebug("[iInitSDCard]mkdir Error error.\r\n");
+;PCODE: $00000058 VOL: 0
+;PCODE: $00000059 VOL: 0
+;PCODE: $0000005A VOL: 0
+;PCODE: $0000005B VOL: 0
+;PCODE: $0000005C VOL: 0
+;PCODE: $0000005D VOL: 0
+;PCODE: $0000005E VOL: 0
+; 0025 00B8             }
+;PCODE: $0000005F VOL: 0
+; 0025 00B9         }
+; 0025 00BA     }
+;PCODE: $00000060 VOL: 0
+;PCODE: $00000061 VOL: 0
+; 0025 00BB 
+; 0025 00BC     viFReturn = f_opendir(&viOutDir, viDirConfigPath);
+;PCODE: $00000062 VOL: 0
+;PCODE: $00000063 VOL: 0
+;PCODE: $00000064 VOL: 0
+;PCODE: $00000065 VOL: 0
+;PCODE: $00000066 VOL: 0
+; 0025 00BD     if(viFReturn == FR_OK){
+;PCODE: $00000067 VOL: 0
+;PCODE: $00000068 VOL: 0
+; 0025 00BE         printDebug("[iInitSDCard]Config dir is exist.\r\n");
+;PCODE: $00000069 VOL: 0
+;PCODE: $0000006A VOL: 0
+;PCODE: $0000006B VOL: 0
+;PCODE: $0000006C VOL: 0
+;PCODE: $0000006D VOL: 0
+;PCODE: $0000006E VOL: 0
+;PCODE: $0000006F VOL: 0
+; 0025 00BF     }else{
+;PCODE: $00000070 VOL: 0
+;PCODE: $00000071 VOL: 0
+; 0025 00C0         iFDisplayReturn(viFReturn);
+;PCODE: $00000072 VOL: 0
+;PCODE: $00000073 VOL: 0
+; 0025 00C1         if(viFReturn == FR_NO_PATH){
+;PCODE: $00000074 VOL: 0
+;PCODE: $00000075 VOL: 0
+;PCODE: $00000076 VOL: 0
+; 0025 00C2             viFReturn = f_mkdir(viFolderConfigName);
+;PCODE: $00000077 VOL: 0
+;PCODE: $00000078 VOL: 0
+;PCODE: $00000079 VOL: 0
+; 0025 00C3             if(viFReturn == FR_OK){
+;PCODE: $0000007A VOL: 0
+;PCODE: $0000007B VOL: 0
+; 0025 00C4                printDebug("[iInitSDCard]mkdir Config success.\r\n");
+;PCODE: $0000007C VOL: 0
+;PCODE: $0000007D VOL: 0
+;PCODE: $0000007E VOL: 0
+;PCODE: $0000007F VOL: 0
+;PCODE: $00000080 VOL: 0
+;PCODE: $00000081 VOL: 0
+;PCODE: $00000082 VOL: 0
+; 0025 00C5             }else{
+;PCODE: $00000083 VOL: 0
+;PCODE: $00000084 VOL: 0
+; 0025 00C6                printDebug("[iInitSDCard]mkdir Config error.\r\n");
+;PCODE: $00000085 VOL: 0
+;PCODE: $00000086 VOL: 0
+;PCODE: $00000087 VOL: 0
+;PCODE: $00000088 VOL: 0
+;PCODE: $00000089 VOL: 0
+;PCODE: $0000008A VOL: 0
+;PCODE: $0000008B VOL: 0
+; 0025 00C7             }
+;PCODE: $0000008C VOL: 0
+; 0025 00C8         }
+; 0025 00C9     }
+;PCODE: $0000008D VOL: 0
+;PCODE: $0000008E VOL: 0
+; 0025 00CA }
+;PCODE: $0000008F VOL: 0
+;PCODE: $00000090 VOL: 0
+;PCODE: $00000091 VOL: 0
+;PCODE: $00000092 VOL: 0
+;PCODE: $00000093 VOL: 0
+;
+;
+;void iFDisplayReturn(FRESULT viFResulyt_arg){
+; 0025 00CD void iFDisplayReturn(FRESULT viFResulyt_arg){
+;PCODE: $00000094 VOL: 0
+;PCODE: $00000095 VOL: 0
+; 0025 00CE     switch(viFResulyt_arg){
+;PCODE: $00000096 VOL: 0
+;	viFResulyt_arg -> Y+0
+;PCODE: $00000097 VOL: 0
+;PCODE: $00000098 VOL: 0
+; 0025 00CF         case FR_OK:{
+;PCODE: $00000099 VOL: 0
+;PCODE: $0000009A VOL: 0
+; 0025 00D0             printDebug("success.\r\n");
+;PCODE: $0000009B VOL: 0
+;PCODE: $0000009C VOL: 0
+;PCODE: $0000009D VOL: 0
+;PCODE: $0000009E VOL: 0
+;PCODE: $0000009F VOL: 0
+;PCODE: $000000A0 VOL: 0
+;PCODE: $000000A1 VOL: 0
+; 0025 00D1             break;
+;PCODE: $000000A2 VOL: 0
+; 0025 00D2         }
+; 0025 00D3         case FR_NO_PATH:{
+;PCODE: $000000A3 VOL: 0
+;PCODE: $000000A4 VOL: 0
+;PCODE: $000000A5 VOL: 0
+; 0025 00D4             printDebug("couldn't find the path.\r\n");
+;PCODE: $000000A6 VOL: 0
+;PCODE: $000000A7 VOL: 0
+;PCODE: $000000A8 VOL: 0
+;PCODE: $000000A9 VOL: 0
+;PCODE: $000000AA VOL: 0
+;PCODE: $000000AB VOL: 0
+;PCODE: $000000AC VOL: 0
+; 0025 00D5             break;
+;PCODE: $000000AD VOL: 0
+; 0025 00D6         }
+; 0025 00D7         case FR_INVALID_NAME:{
+;PCODE: $000000AE VOL: 0
+;PCODE: $000000AF VOL: 0
+;PCODE: $000000B0 VOL: 0
+; 0025 00D8             printDebug("the directory name is invalid.\r\n");
+;PCODE: $000000B1 VOL: 0
+;PCODE: $000000B2 VOL: 0
+;PCODE: $000000B3 VOL: 0
+;PCODE: $000000B4 VOL: 0
+;PCODE: $000000B5 VOL: 0
+;PCODE: $000000B6 VOL: 0
+;PCODE: $000000B7 VOL: 0
+; 0025 00D9             break;
+;PCODE: $000000B8 VOL: 0
+; 0025 00DA         }
+; 0025 00DB         case FR_INVALID_DRIVE:{
+;PCODE: $000000B9 VOL: 0
+;PCODE: $000000BA VOL: 0
+;PCODE: $000000BB VOL: 0
+; 0025 00DC             printDebug("the drive number is invalid.\r\n");
+;PCODE: $000000BC VOL: 0
+;PCODE: $000000BD VOL: 0
+;PCODE: $000000BE VOL: 0
+;PCODE: $000000BF VOL: 0
+;PCODE: $000000C0 VOL: 0
+;PCODE: $000000C1 VOL: 0
+;PCODE: $000000C2 VOL: 0
+; 0025 00DD             break;
+;PCODE: $000000C3 VOL: 0
+; 0025 00DE         }
+; 0025 00DF         case FR_NOT_READY:{
+;PCODE: $000000C4 VOL: 0
+;PCODE: $000000C5 VOL: 0
+;PCODE: $000000C6 VOL: 0
+; 0025 00E0             printDebug("no disk access was possible due to missing media or other reason.\r\n");
+;PCODE: $000000C7 VOL: 0
+;PCODE: $000000C8 VOL: 0
+;PCODE: $000000C9 VOL: 0
+;PCODE: $000000CA VOL: 0
+;PCODE: $000000CB VOL: 0
+;PCODE: $000000CC VOL: 0
+;PCODE: $000000CD VOL: 0
+; 0025 00E1             break;
+;PCODE: $000000CE VOL: 0
+; 0025 00E2         }
+; 0025 00E3         case FR_DISK_ERR:{
+;PCODE: $000000CF VOL: 0
+;PCODE: $000000D0 VOL: 0
+;PCODE: $000000D1 VOL: 0
+; 0025 00E4             printDebug("the function failed because of a physical disk access function failure.\r\n");
+;PCODE: $000000D2 VOL: 0
+;PCODE: $000000D3 VOL: 0
+;PCODE: $000000D4 VOL: 0
+;PCODE: $000000D5 VOL: 0
+;PCODE: $000000D6 VOL: 0
+;PCODE: $000000D7 VOL: 0
+;PCODE: $000000D8 VOL: 0
+; 0025 00E5             break;
+;PCODE: $000000D9 VOL: 0
+; 0025 00E6         }
+; 0025 00E7         case FR_INT_ERR:{
+;PCODE: $000000DA VOL: 0
+;PCODE: $000000DB VOL: 0
+;PCODE: $000000DC VOL: 0
+; 0025 00E8             printDebug("the function failed due to a wrong FAT structure or an internal error.\r\n");
+;PCODE: $000000DD VOL: 0
+;PCODE: $000000DE VOL: 0
+;PCODE: $000000DF VOL: 0
+;PCODE: $000000E0 VOL: 0
+;PCODE: $000000E1 VOL: 0
+;PCODE: $000000E2 VOL: 0
+;PCODE: $000000E3 VOL: 0
+; 0025 00E9             break;
+;PCODE: $000000E4 VOL: 0
+; 0025 00EA         }
+; 0025 00EB         case FR_NOT_ENABLED:{
+;PCODE: $000000E5 VOL: 0
+;PCODE: $000000E6 VOL: 0
+;PCODE: $000000E7 VOL: 0
+; 0025 00EC             printDebug("the logical drive was not mounted with f_mount.\r\n");
+;PCODE: $000000E8 VOL: 0
+;PCODE: $000000E9 VOL: 0
+;PCODE: $000000EA VOL: 0
+;PCODE: $000000EB VOL: 0
+;PCODE: $000000EC VOL: 0
+;PCODE: $000000ED VOL: 0
+;PCODE: $000000EE VOL: 0
+; 0025 00ED             break;
+;PCODE: $000000EF VOL: 0
+; 0025 00EE         }
+; 0025 00EF         case FR_NO_FILESYSTEM:{
+;PCODE: $000000F0 VOL: 0
+;PCODE: $000000F1 VOL: 0
+;PCODE: $000000F2 VOL: 0
+; 0025 00F0             printDebug("there is no valid FAT partition on the disk.\r\n");
+;PCODE: $000000F3 VOL: 0
+;PCODE: $000000F4 VOL: 0
+;PCODE: $000000F5 VOL: 0
+;PCODE: $000000F6 VOL: 0
+;PCODE: $000000F7 VOL: 0
+;PCODE: $000000F8 VOL: 0
+;PCODE: $000000F9 VOL: 0
+; 0025 00F1             break;
+;PCODE: $000000FA VOL: 0
+; 0025 00F2         }
+; 0025 00F3         case FR_DENIED:{
+;PCODE: $000000FB VOL: 0
+;PCODE: $000000FC VOL: 0
+;PCODE: $000000FD VOL: 0
+; 0025 00F4             printDebug("file access was denied because it was opened in read-only mode.\r\n");
+;PCODE: $000000FE VOL: 0
+;PCODE: $000000FF VOL: 0
+;PCODE: $00000100 VOL: 0
+;PCODE: $00000101 VOL: 0
+;PCODE: $00000102 VOL: 0
+;PCODE: $00000103 VOL: 0
+;PCODE: $00000104 VOL: 0
+; 0025 00F5             break;
+;PCODE: $00000105 VOL: 0
+; 0025 00F6         }
+; 0025 00F7         case FR_INVALID_OBJECT:{
+;PCODE: $00000106 VOL: 0
+;PCODE: $00000107 VOL: 0
+;PCODE: $00000108 VOL: 0
+; 0025 00F8             printDebug("the file was not opened with f_open.\r\n");
+;PCODE: $00000109 VOL: 0
+;PCODE: $0000010A VOL: 0
+;PCODE: $0000010B VOL: 0
+;PCODE: $0000010C VOL: 0
+;PCODE: $0000010D VOL: 0
+;PCODE: $0000010E VOL: 0
+;PCODE: $0000010F VOL: 0
+; 0025 00F9             break;
+;PCODE: $00000110 VOL: 0
+; 0025 00FA         }
+; 0025 00FB         case FR_NO_FILE:{
+;PCODE: $00000111 VOL: 0
+;PCODE: $00000112 VOL: 0
+;PCODE: $00000113 VOL: 0
+; 0025 00FC             printDebug("couldn't find the file or directory.\r\n");
+;PCODE: $00000114 VOL: 0
+;PCODE: $00000115 VOL: 0
+;PCODE: $00000116 VOL: 0
+;PCODE: $00000117 VOL: 0
+;PCODE: $00000118 VOL: 0
+;PCODE: $00000119 VOL: 0
+;PCODE: $0000011A VOL: 0
+; 0025 00FD             break;
+;PCODE: $0000011B VOL: 0
+; 0025 00FE         }
+; 0025 00FF         case FR_WRITE_PROTECTED:{
+;PCODE: $0000011C VOL: 0
+;PCODE: $0000011D VOL: 0
+;PCODE: $0000011E VOL: 0
+; 0025 0100             printDebug("the media in the drive is write protected.\r\n");
+;PCODE: $0000011F VOL: 0
+;PCODE: $00000120 VOL: 0
+;PCODE: $00000121 VOL: 0
+;PCODE: $00000122 VOL: 0
+;PCODE: $00000123 VOL: 0
+;PCODE: $00000124 VOL: 0
+;PCODE: $00000125 VOL: 0
+; 0025 0101             break;
+;PCODE: $00000126 VOL: 0
+; 0025 0102         }
+; 0025 0103     }
+;PCODE: $00000127 VOL: 0
+; 0025 0104 }
+;PCODE: $00000128 VOL: 0
+;PCODE: $00000129 VOL: 0
+;PCODE: $0000012A VOL: 0
+;
+;
+;void iFCreate(FIL *pviOutFilePtr_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg){
+; 0025 0107 void iFCreate(FIL *pviOutFilePtr_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg){
+;PCODE: $0000012B VOL: 0
+;PCODE: $0000012C VOL: 0
+; 0025 0108     FRESULT viFReturn;
+; 0025 0109     //iUChar_t viReturn = 0;
+; 0025 010A     DIR viOutDir;
+; 0025 010B     FIL pviFilePtr;
+; 0025 010C 
+; 0025 010D     if((viFReturn=f_chdir(pviDirPath_arg))==FR_OK){
+;PCODE: $0000012D VOL: 0
+;PCODE: $0000012E VOL: 0
+;PCODE: $0000012F VOL: 0
+;	*pviOutFilePtr_arg -> Y+571
+;	*pviDirPath_arg -> Y+569
+;	*pviFilename_arg -> Y+567
+;	viFReturn -> R17
+;	viOutDir -> Y+545
+;	pviFilePtr -> Y+1
+;PCODE: $00000130 VOL: 0
+;PCODE: $00000131 VOL: 0
+;PCODE: $00000132 VOL: 0
+;PCODE: $00000133 VOL: 0
+;PCODE: $00000134 VOL: 0
+; 0025 010E        printDebug("[iFCreate]Current directory : %s.\r\n",pviDirPath_arg);
+;PCODE: $00000135 VOL: 0
+;PCODE: $00000136 VOL: 0
+;PCODE: $00000137 VOL: 0
+;PCODE: $00000138 VOL: 0
+;PCODE: $00000139 VOL: 0
+;PCODE: $0000013A VOL: 0
+;PCODE: $0000013B VOL: 0
+;PCODE: $0000013C VOL: 0
+;PCODE: $0000013D VOL: 0
+;PCODE: $0000013E VOL: 0
+; 0025 010F        if((viFReturn=f_open(pviOutFilePtr_arg,pviFilename_arg,FA_CREATE_NEW))==FR_OK){
+;PCODE: $0000013F VOL: 0
+;PCODE: $00000140 VOL: 0
+;PCODE: $00000141 VOL: 0
+;PCODE: $00000142 VOL: 0
+;PCODE: $00000143 VOL: 0
+;PCODE: $00000144 VOL: 0
+;PCODE: $00000145 VOL: 0
+;PCODE: $00000146 VOL: 0
+;PCODE: $00000147 VOL: 0
+; 0025 0110            printDebug("[iFCreate]File %s is created.\r\n",pviFilename_arg);
+;PCODE: $00000148 VOL: 0
+;PCODE: $00000149 VOL: 0
+;PCODE: $0000014A VOL: 0
+;PCODE: $0000014B VOL: 0
+;PCODE: $0000014C VOL: 0
+;PCODE: $0000014D VOL: 0
+;PCODE: $0000014E VOL: 0
+;PCODE: $0000014F VOL: 0
+;PCODE: $00000150 VOL: 0
+;PCODE: $00000151 VOL: 0
+; 0025 0111            if((viFReturn=f_close(pviOutFilePtr_arg))==FR_OK){
+;PCODE: $00000152 VOL: 0
+;PCODE: $00000153 VOL: 0
+;PCODE: $00000154 VOL: 0
+;PCODE: $00000155 VOL: 0
+;PCODE: $00000156 VOL: 0
+; 0025 0112            }else{
+;PCODE: $00000157 VOL: 0
+;PCODE: $00000158 VOL: 0
+; 0025 0113               iFDisplayReturn(viFReturn);
+;PCODE: $00000159 VOL: 0
+;PCODE: $0000015A VOL: 0
+; 0025 0114            }
+;PCODE: $0000015B VOL: 0
+; 0025 0115        }else{
+;PCODE: $0000015C VOL: 0
+;PCODE: $0000015D VOL: 0
+; 0025 0116            printDebug("[iFCreate]File %s : %s.[\r\n",pviFilename_arg);
+;PCODE: $0000015E VOL: 0
+;PCODE: $0000015F VOL: 0
+;PCODE: $00000160 VOL: 0
+;PCODE: $00000161 VOL: 0
+;PCODE: $00000162 VOL: 0
+;PCODE: $00000163 VOL: 0
+;PCODE: $00000164 VOL: 0
+;PCODE: $00000165 VOL: 0
+;PCODE: $00000166 VOL: 0
+;PCODE: $00000167 VOL: 0
+; 0025 0117            iFDisplayReturn(viFReturn);
+;PCODE: $00000168 VOL: 0
+;PCODE: $00000169 VOL: 0
+; 0025 0118            printDebug("]\r\n");
+;PCODE: $0000016A VOL: 0
+;PCODE: $0000016B VOL: 0
+;PCODE: $0000016C VOL: 0
+;PCODE: $0000016D VOL: 0
+;PCODE: $0000016E VOL: 0
+;PCODE: $0000016F VOL: 0
+;PCODE: $00000170 VOL: 0
+; 0025 0119        }
+;PCODE: $00000171 VOL: 0
+; 0025 011A     }else{
+;PCODE: $00000172 VOL: 0
+;PCODE: $00000173 VOL: 0
+; 0025 011B        printDebug("[iFCreate]directory : %s.[\r\n",pviDirPath_arg);
+;PCODE: $00000174 VOL: 0
+;PCODE: $00000175 VOL: 0
+;PCODE: $00000176 VOL: 0
+;PCODE: $00000177 VOL: 0
+;PCODE: $00000178 VOL: 0
+;PCODE: $00000179 VOL: 0
+;PCODE: $0000017A VOL: 0
+;PCODE: $0000017B VOL: 0
+;PCODE: $0000017C VOL: 0
+;PCODE: $0000017D VOL: 0
+; 0025 011C        iFDisplayReturn(viFReturn);
+;PCODE: $0000017E VOL: 0
+;PCODE: $0000017F VOL: 0
+; 0025 011D        printDebug("]\r\n");
+;PCODE: $00000180 VOL: 0
+;PCODE: $00000181 VOL: 0
+;PCODE: $00000182 VOL: 0
+;PCODE: $00000183 VOL: 0
+;PCODE: $00000184 VOL: 0
+;PCODE: $00000185 VOL: 0
+;PCODE: $00000186 VOL: 0
+; 0025 011E     }
+;PCODE: $00000187 VOL: 0
+; 0025 011F }
+;PCODE: $00000188 VOL: 0
+;PCODE: $00000189 VOL: 0
+;PCODE: $0000018A VOL: 0
+;PCODE: $0000018B VOL: 0
+;PCODE: $0000018C VOL: 0
+;
+;void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long const * const pviWritePtr_arg){
+; 0025 0121 void iFRwite(const iChar_t * const pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long const * const pviWritePtr_arg){
+;PCODE: $0000018D VOL: 0
+;PCODE: $0000018E VOL: 0
+; 0025 0122     FIL *viFilePtr;
+; 0025 0123     FRESULT viFReturn;
+; 0025 0124     unsigned int nbytes;
+; 0025 0125     const iChar_t * pviDataBuffRef = (iChar_t * const )pviDataBuff;
+; 0025 0126 
+; 0025 0127     //print_payload((const iChar_t *)pviDataBuff,ivLength_arg);
+; 0025 0128     //print_payload(pviDataBuffRef,ivLength_arg);
+; 0025 0129     viFilePtr = (FIL * const)malloc(sizeof(FIL));
+;PCODE: $0000018F VOL: 0
+;PCODE: $00000190 VOL: 0
+;PCODE: $00000191 VOL: 0
+;	*pviDataBuff -> Y+16
+;	ivLength_arg -> Y+14
+;	*pviDirPath_arg -> Y+12
+;	*pviFilename_arg -> Y+10
+;	*pviWritePtr_arg -> Y+8
+;	*viFilePtr -> R16,R17
+;	viFReturn -> R19
+;	nbytes -> R20,R21
+;	*pviDataBuffRef -> Y+6
+;PCODE: $00000192 VOL: 0
+;PCODE: $00000193 VOL: 0
+;PCODE: $00000194 VOL: 0
+;PCODE: $00000195 VOL: 0
+;PCODE: $00000196 VOL: 0
+; 0025 012A     if(viFilePtr!=NULL){
+;PCODE: $00000197 VOL: 0
+;PCODE: $00000198 VOL: 0
+; 0025 012B         if((viFReturn=f_chdir(pviDirPath_arg))==FR_OK){
+;PCODE: $00000199 VOL: 0
+;PCODE: $0000019A VOL: 0
+;PCODE: $0000019B VOL: 0
+;PCODE: $0000019C VOL: 0
+;PCODE: $0000019D VOL: 0
+; 0025 012C            printDebug("[iFRwite]Current directory : %s.\r\n",pviDirPath_arg);
+;PCODE: $0000019E VOL: 0
+;PCODE: $0000019F VOL: 0
+;PCODE: $000001A0 VOL: 0
+;PCODE: $000001A1 VOL: 0
+;PCODE: $000001A2 VOL: 0
+;PCODE: $000001A3 VOL: 0
+;PCODE: $000001A4 VOL: 0
+;PCODE: $000001A5 VOL: 0
+;PCODE: $000001A6 VOL: 0
+;PCODE: $000001A7 VOL: 0
+; 0025 012D            if((viFReturn=f_open(viFilePtr,pviFilename_arg,FA_WRITE|FA_OPEN_ALWAYS))==FR_OK){
+;PCODE: $000001A8 VOL: 0
+;PCODE: $000001A9 VOL: 0
+;PCODE: $000001AA VOL: 0
+;PCODE: $000001AB VOL: 0
+;PCODE: $000001AC VOL: 0
+;PCODE: $000001AD VOL: 0
+;PCODE: $000001AE VOL: 0
+;PCODE: $000001AF VOL: 0
+; 0025 012E                printDebug("[iFRwite]File %s is openned.\r\n",pviFilename_arg);
+;PCODE: $000001B0 VOL: 0
+;PCODE: $000001B1 VOL: 0
+;PCODE: $000001B2 VOL: 0
+;PCODE: $000001B3 VOL: 0
+;PCODE: $000001B4 VOL: 0
+;PCODE: $000001B5 VOL: 0
+;PCODE: $000001B6 VOL: 0
+;PCODE: $000001B7 VOL: 0
+;PCODE: $000001B8 VOL: 0
+;PCODE: $000001B9 VOL: 0
+; 0025 012F 
+; 0025 0130                /* Move to end of the file to append data */
+; 0025 0131                //printDebug("[iFRwite]File size(%ld).\r\n",viFilePtr->fsize);
+; 0025 0132                //if((viFReturn=f_lseek(viFilePtr, viFilePtr->fsize))==FR_OK){        //seek end of file in order append
+; 0025 0133                if((viFReturn=f_lseek(viFilePtr, *pviWritePtr_arg))==FR_OK){        //seek to start write
+;PCODE: $000001BA VOL: 0
+;PCODE: $000001BB VOL: 0
+;PCODE: $000001BC VOL: 0
+;PCODE: $000001BD VOL: 0
+;PCODE: $000001BE VOL: 0
+;PCODE: $000001BF VOL: 0
+;PCODE: $000001C0 VOL: 0
+;PCODE: $000001C1 VOL: 0
+; 0025 0134                    //printDebug("[iFRwite]Pointer(seek) of File moved(%ld).\r\n",viFilePtr->fsize);
+; 0025 0135                    printDebug("[iFRwite]Pointer(seek) of File moved(%ld).\r\n",*pviWritePtr_arg);
+;PCODE: $000001C2 VOL: 0
+;PCODE: $000001C3 VOL: 0
+;PCODE: $000001C4 VOL: 0
+;PCODE: $000001C5 VOL: 0
+;PCODE: $000001C6 VOL: 0
+;PCODE: $000001C7 VOL: 0
+;PCODE: $000001C8 VOL: 0
+;PCODE: $000001C9 VOL: 0
+;PCODE: $000001CA VOL: 0
+;PCODE: $000001CB VOL: 0
+; 0025 0136                    //print_payload((const iChar_t *)pviDataBuff,ivLength_arg);
+; 0025 0137                    print_payload(pviDataBuffRef,ivLength_arg);
+;PCODE: $000001CC VOL: 0
+;PCODE: $000001CD VOL: 0
+;PCODE: $000001CE VOL: 0
+;PCODE: $000001CF VOL: 0
+; 0025 0138                    if((viFReturn=f_write(viFilePtr,(const iChar_t *)pviDataBuff,ivLength_arg,&nbytes))==FR_OK){    //viFReturn=f_write(viFilePtr,&pviDataBuff[0],strlen(pviDataBuff),&nbytes)
+;PCODE: $000001D0 VOL: 0
+;PCODE: $000001D1 VOL: 0
+;PCODE: $000001D2 VOL: 0
+;PCODE: $000001D3 VOL: 0
+;PCODE: $000001D4 VOL: 0
+;PCODE: $000001D5 VOL: 0
+;PCODE: $000001D6 VOL: 0
+;PCODE: $000001D7 VOL: 0
+;PCODE: $000001D8 VOL: 0
+;PCODE: $000001D9 VOL: 0
+;PCODE: $000001DA VOL: 0
+;PCODE: $000001DB VOL: 0
+;PCODE: $000001DC VOL: 0
+;PCODE: $000001DD VOL: 0
+;PCODE: $000001DE VOL: 0
+; 0025 0139                        printDebug("[iFRwite]%d bytes written of %d\r\n",nbytes,ivLength_arg);
+;PCODE: $000001DF VOL: 0
+;PCODE: $000001E0 VOL: 0
+;PCODE: $000001E1 VOL: 0
+;PCODE: $000001E2 VOL: 0
+;PCODE: $000001E3 VOL: 0
+;PCODE: $000001E4 VOL: 0
+;PCODE: $000001E5 VOL: 0
+;PCODE: $000001E6 VOL: 0
+;PCODE: $000001E7 VOL: 0
+;PCODE: $000001E8 VOL: 0
+;PCODE: $000001E9 VOL: 0
+;PCODE: $000001EA VOL: 0
+;PCODE: $000001EB VOL: 0
+; 0025 013A                    }else{
+;PCODE: $000001EC VOL: 0
+;PCODE: $000001ED VOL: 0
+; 0025 013B                        printDebug("[iFRwite]Write error(%d)\r\n",viFReturn);
+;PCODE: $000001EE VOL: 0
+;PCODE: $000001EF VOL: 0
+;PCODE: $000001F0 VOL: 0
+;PCODE: $000001F1 VOL: 0
+;PCODE: $000001F2 VOL: 0
+;PCODE: $000001F3 VOL: 0
+;PCODE: $000001F4 VOL: 0
+;PCODE: $000001F5 VOL: 0
+;PCODE: $000001F6 VOL: 0
+;PCODE: $000001F7 VOL: 0
+; 0025 013C                        iFDisplayReturn(viFReturn);
+;PCODE: $000001F8 VOL: 0
+;PCODE: $000001F9 VOL: 0
+; 0025 013D                    }
+;PCODE: $000001FA VOL: 0
+; 0025 013E                }else{
+;PCODE: $000001FB VOL: 0
+;PCODE: $000001FC VOL: 0
+; 0025 013F                    iFDisplayReturn(viFReturn);
+;PCODE: $000001FD VOL: 0
+;PCODE: $000001FE VOL: 0
+; 0025 0140                }
+;PCODE: $000001FF VOL: 0
+; 0025 0141 
+; 0025 0142                if((viFReturn=f_close(viFilePtr))==FR_OK){
+;PCODE: $00000200 VOL: 0
+;PCODE: $00000201 VOL: 0
+;PCODE: $00000202 VOL: 0
+;PCODE: $00000203 VOL: 0
+;PCODE: $00000204 VOL: 0
+; 0025 0143                }else{
+;PCODE: $00000205 VOL: 0
+;PCODE: $00000206 VOL: 0
+; 0025 0144                   iFDisplayReturn(viFReturn);
+;PCODE: $00000207 VOL: 0
+;PCODE: $00000208 VOL: 0
+; 0025 0145                }
+;PCODE: $00000209 VOL: 0
+; 0025 0146            }else{
+;PCODE: $0000020A VOL: 0
+;PCODE: $0000020B VOL: 0
+; 0025 0147                printDebug("[iFRwite]File %s : %s.[\r\n",pviFilename_arg);
+;PCODE: $0000020C VOL: 0
+;PCODE: $0000020D VOL: 0
+;PCODE: $0000020E VOL: 0
+;PCODE: $0000020F VOL: 0
+;PCODE: $00000210 VOL: 0
+;PCODE: $00000211 VOL: 0
+;PCODE: $00000212 VOL: 0
+;PCODE: $00000213 VOL: 0
+;PCODE: $00000214 VOL: 0
+;PCODE: $00000215 VOL: 0
+; 0025 0148                iFDisplayReturn(viFReturn);
+;PCODE: $00000216 VOL: 0
+;PCODE: $00000217 VOL: 0
+; 0025 0149                printDebug("]\r\n");
+;PCODE: $00000218 VOL: 0
+;PCODE: $00000219 VOL: 0
+;PCODE: $0000021A VOL: 0
+;PCODE: $0000021B VOL: 0
+;PCODE: $0000021C VOL: 0
+;PCODE: $0000021D VOL: 0
+;PCODE: $0000021E VOL: 0
+; 0025 014A            }
+;PCODE: $0000021F VOL: 0
+; 0025 014B         }else{
+;PCODE: $00000220 VOL: 0
+;PCODE: $00000221 VOL: 0
+; 0025 014C            printDebug("[iFRwite]directory : %s.[\r\n",pviDirPath_arg);
+;PCODE: $00000222 VOL: 0
+;PCODE: $00000223 VOL: 0
+;PCODE: $00000224 VOL: 0
+;PCODE: $00000225 VOL: 0
+;PCODE: $00000226 VOL: 0
+;PCODE: $00000227 VOL: 0
+;PCODE: $00000228 VOL: 0
+;PCODE: $00000229 VOL: 0
+;PCODE: $0000022A VOL: 0
+;PCODE: $0000022B VOL: 0
+; 0025 014D            iFDisplayReturn(viFReturn);
+;PCODE: $0000022C VOL: 0
+;PCODE: $0000022D VOL: 0
+; 0025 014E            printDebug("]\r\n");
+;PCODE: $0000022E VOL: 0
+;PCODE: $0000022F VOL: 0
+;PCODE: $00000230 VOL: 0
+;PCODE: $00000231 VOL: 0
+;PCODE: $00000232 VOL: 0
+;PCODE: $00000233 VOL: 0
+;PCODE: $00000234 VOL: 0
+; 0025 014F         }
+;PCODE: $00000235 VOL: 0
+; 0025 0150         free(viFilePtr);
+;PCODE: $00000236 VOL: 0
+;PCODE: $00000237 VOL: 0
+; 0025 0151     }else{
+;PCODE: $00000238 VOL: 0
+;PCODE: $00000239 VOL: 0
+; 0025 0152         printDebug("[iFRwite]can't allocate mem.\r\n");
+;PCODE: $0000023A VOL: 0
+;PCODE: $0000023B VOL: 0
+;PCODE: $0000023C VOL: 0
+;PCODE: $0000023D VOL: 0
+;PCODE: $0000023E VOL: 0
+;PCODE: $0000023F VOL: 0
+;PCODE: $00000240 VOL: 0
+; 0025 0153     }
+;PCODE: $00000241 VOL: 0
+; 0025 0154 
+; 0025 0155 }
+;PCODE: $00000242 VOL: 0
+;PCODE: $00000243 VOL: 0
+;PCODE: $00000244 VOL: 0
+;PCODE: $00000245 VOL: 0
+;
+;void iFDelete(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg){
+; 0025 0157 void iFDelete(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg){
+;PCODE: $00000246 VOL: 0
+;PCODE: $00000247 VOL: 0
+; 0025 0158     FRESULT viFReturn;
+; 0025 0159     if((viFReturn=f_chdir(pviDirPath_arg))==FR_OK){
+;PCODE: $00000248 VOL: 0
+;PCODE: $00000249 VOL: 0
+;	*pviDirPath_arg -> Y+3
+;	*pviFilename_arg -> Y+1
+;	viFReturn -> R17
+;PCODE: $0000024A VOL: 0
+;PCODE: $0000024B VOL: 0
+;PCODE: $0000024C VOL: 0
+;PCODE: $0000024D VOL: 0
+;PCODE: $0000024E VOL: 0
+; 0025 015A        printDebug("[iFDelete]Current directory : %s.\r\n",pviDirPath_arg);
+;PCODE: $0000024F VOL: 0
+;PCODE: $00000250 VOL: 0
+;PCODE: $00000251 VOL: 0
+;PCODE: $00000252 VOL: 0
+;PCODE: $00000253 VOL: 0
+;PCODE: $00000254 VOL: 0
+;PCODE: $00000255 VOL: 0
+;PCODE: $00000256 VOL: 0
+;PCODE: $00000257 VOL: 0
+;PCODE: $00000258 VOL: 0
+; 0025 015B        if((viFReturn=f_unlink(pviFilename_arg))==FR_OK){
+;PCODE: $00000259 VOL: 0
+;PCODE: $0000025A VOL: 0
+;PCODE: $0000025B VOL: 0
+;PCODE: $0000025C VOL: 0
+;PCODE: $0000025D VOL: 0
+; 0025 015C            printDebug("[iFDelete]File %s is deleted.\r\n",pviFilename_arg);
+;PCODE: $0000025E VOL: 0
+;PCODE: $0000025F VOL: 0
+;PCODE: $00000260 VOL: 0
+;PCODE: $00000261 VOL: 0
+;PCODE: $00000262 VOL: 0
+;PCODE: $00000263 VOL: 0
+;PCODE: $00000264 VOL: 0
+;PCODE: $00000265 VOL: 0
+;PCODE: $00000266 VOL: 0
+;PCODE: $00000267 VOL: 0
+; 0025 015D        }else{
+;PCODE: $00000268 VOL: 0
+;PCODE: $00000269 VOL: 0
+; 0025 015E            printDebug("[iFDelete]File %s : %s. can't delete.[\r\n",pviFilename_arg);
+;PCODE: $0000026A VOL: 0
+;PCODE: $0000026B VOL: 0
+;PCODE: $0000026C VOL: 0
+;PCODE: $0000026D VOL: 0
+;PCODE: $0000026E VOL: 0
+;PCODE: $0000026F VOL: 0
+;PCODE: $00000270 VOL: 0
+;PCODE: $00000271 VOL: 0
+;PCODE: $00000272 VOL: 0
+;PCODE: $00000273 VOL: 0
+; 0025 015F            iFDisplayReturn(viFReturn);
+;PCODE: $00000274 VOL: 0
+;PCODE: $00000275 VOL: 0
+; 0025 0160            printDebug("]\r\n");
+;PCODE: $00000276 VOL: 0
+;PCODE: $00000277 VOL: 0
+;PCODE: $00000278 VOL: 0
+;PCODE: $00000279 VOL: 0
+;PCODE: $0000027A VOL: 0
+;PCODE: $0000027B VOL: 0
+;PCODE: $0000027C VOL: 0
+; 0025 0161        }
+;PCODE: $0000027D VOL: 0
+; 0025 0162     }else{
+;PCODE: $0000027E VOL: 0
+;PCODE: $0000027F VOL: 0
+; 0025 0163        printDebug("[iFDelete]directory : %s.[\r\n",pviDirPath_arg);
+;PCODE: $00000280 VOL: 0
+;PCODE: $00000281 VOL: 0
+;PCODE: $00000282 VOL: 0
+;PCODE: $00000283 VOL: 0
+;PCODE: $00000284 VOL: 0
+;PCODE: $00000285 VOL: 0
+;PCODE: $00000286 VOL: 0
+;PCODE: $00000287 VOL: 0
+;PCODE: $00000288 VOL: 0
+;PCODE: $00000289 VOL: 0
+; 0025 0164        iFDisplayReturn(viFReturn);
+;PCODE: $0000028A VOL: 0
+;PCODE: $0000028B VOL: 0
+; 0025 0165        printDebug("]\r\n");
+;PCODE: $0000028C VOL: 0
+;PCODE: $0000028D VOL: 0
+;PCODE: $0000028E VOL: 0
+;PCODE: $0000028F VOL: 0
+;PCODE: $00000290 VOL: 0
+;PCODE: $00000291 VOL: 0
+;PCODE: $00000292 VOL: 0
+; 0025 0166     }
+;PCODE: $00000293 VOL: 0
+; 0025 0167 }
+;PCODE: $00000294 VOL: 0
+;PCODE: $00000295 VOL: 0
+;PCODE: $00000296 VOL: 0
+;PCODE: $00000297 VOL: 0
+;PCODE: $00000298 VOL: 0
+;
+;iChar_t iFSize(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long *pviOutFileSize_arg){
+; 0025 0169 iChar_t iFSize(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long *pviOutFileSize_arg){
+;PCODE: $00000299 VOL: 0
+;PCODE: $0000029A VOL: 0
+; 0025 016A     FIL *viFilePtr;
+; 0025 016B     FRESULT viFReturn;
+; 0025 016C     iChar_t viReturn = -1;
+; 0025 016D 
+; 0025 016E     viFilePtr = (FIL * const)malloc(sizeof(FIL));
+;PCODE: $0000029B VOL: 0
+;PCODE: $0000029C VOL: 0
+;	*pviDirPath_arg -> Y+8
+;	*pviFilename_arg -> Y+6
+;	*pviOutFileSize_arg -> Y+4
+;	*viFilePtr -> R16,R17
+;	viFReturn -> R19
+;	viReturn -> R18
+;PCODE: $0000029D VOL: 0
+;PCODE: $0000029E VOL: 0
+;PCODE: $0000029F VOL: 0
+;PCODE: $000002A0 VOL: 0
+;PCODE: $000002A1 VOL: 0
+; 0025 016F     if(viFilePtr!=NULL){
+;PCODE: $000002A2 VOL: 0
+;PCODE: $000002A3 VOL: 0
+; 0025 0170        if((viFReturn=f_chdir(pviDirPath_arg))==FR_OK){
+;PCODE: $000002A4 VOL: 0
+;PCODE: $000002A5 VOL: 0
+;PCODE: $000002A6 VOL: 0
+;PCODE: $000002A7 VOL: 0
+;PCODE: $000002A8 VOL: 0
+; 0025 0171            printDebug("[iFSize]Current directory : %s.\r\n",pviDirPath_arg);
+;PCODE: $000002A9 VOL: 0
+;PCODE: $000002AA VOL: 0
+;PCODE: $000002AB VOL: 0
+;PCODE: $000002AC VOL: 0
+;PCODE: $000002AD VOL: 0
+;PCODE: $000002AE VOL: 0
+;PCODE: $000002AF VOL: 0
+;PCODE: $000002B0 VOL: 0
+;PCODE: $000002B1 VOL: 0
+;PCODE: $000002B2 VOL: 0
+; 0025 0172            if((viFReturn=f_open(viFilePtr,pviFilename_arg,FA_WRITE|FA_OPEN_ALWAYS))==FR_OK){
+;PCODE: $000002B3 VOL: 0
+;PCODE: $000002B4 VOL: 0
+;PCODE: $000002B5 VOL: 0
+;PCODE: $000002B6 VOL: 0
+;PCODE: $000002B7 VOL: 0
+;PCODE: $000002B8 VOL: 0
+;PCODE: $000002B9 VOL: 0
+;PCODE: $000002BA VOL: 0
+; 0025 0173                printDebug("[iFSize]File %s is openned.\r\n",pviFilename_arg);
+;PCODE: $000002BB VOL: 0
+;PCODE: $000002BC VOL: 0
+;PCODE: $000002BD VOL: 0
+;PCODE: $000002BE VOL: 0
+;PCODE: $000002BF VOL: 0
+;PCODE: $000002C0 VOL: 0
+;PCODE: $000002C1 VOL: 0
+;PCODE: $000002C2 VOL: 0
+;PCODE: $000002C3 VOL: 0
+;PCODE: $000002C4 VOL: 0
+; 0025 0174 
+; 0025 0175                /* Move to end of the file to append data */
+; 0025 0176                printDebug("[iFSize]File size(%ld).\r\n",viFilePtr->fsize);
+;PCODE: $000002C5 VOL: 0
+;PCODE: $000002C6 VOL: 0
+;PCODE: $000002C7 VOL: 0
+;PCODE: $000002C8 VOL: 0
+;PCODE: $000002C9 VOL: 0
+;PCODE: $000002CA VOL: 0
+;PCODE: $000002CB VOL: 0
+;PCODE: $000002CC VOL: 0
+;PCODE: $000002CD VOL: 0
+;PCODE: $000002CE VOL: 0
+; 0025 0177                *pviOutFileSize_arg = viFilePtr->fsize;
+;PCODE: $000002CF VOL: 0
+;PCODE: $000002D0 VOL: 0
+;PCODE: $000002D1 VOL: 0
+;PCODE: $000002D2 VOL: 0
+;PCODE: $000002D3 VOL: 0
+; 0025 0178 
+; 0025 0179                if((viFReturn=f_close(viFilePtr))==FR_OK){
+;PCODE: $000002D4 VOL: 0
+;PCODE: $000002D5 VOL: 0
+;PCODE: $000002D6 VOL: 0
+;PCODE: $000002D7 VOL: 0
+;PCODE: $000002D8 VOL: 0
+; 0025 017A                }else{
+;PCODE: $000002D9 VOL: 0
+;PCODE: $000002DA VOL: 0
+; 0025 017B                   iFDisplayReturn(viFReturn);
+;PCODE: $000002DB VOL: 0
+;PCODE: $000002DC VOL: 0
+; 0025 017C                }
+;PCODE: $000002DD VOL: 0
+; 0025 017D                viReturn = 1;
+;PCODE: $000002DE VOL: 0
+;PCODE: $000002DF VOL: 0
+; 0025 017E            }else{
+;PCODE: $000002E0 VOL: 0
+;PCODE: $000002E1 VOL: 0
+; 0025 017F                printDebug("[iFSize]File %s : %s.[\r\n",pviFilename_arg);
+;PCODE: $000002E2 VOL: 0
+;PCODE: $000002E3 VOL: 0
+;PCODE: $000002E4 VOL: 0
+;PCODE: $000002E5 VOL: 0
+;PCODE: $000002E6 VOL: 0
+;PCODE: $000002E7 VOL: 0
+;PCODE: $000002E8 VOL: 0
+;PCODE: $000002E9 VOL: 0
+;PCODE: $000002EA VOL: 0
+;PCODE: $000002EB VOL: 0
+; 0025 0180                iFDisplayReturn(viFReturn);
+;PCODE: $000002EC VOL: 0
+;PCODE: $000002ED VOL: 0
+; 0025 0181                printDebug("]\r\n");
+;PCODE: $000002EE VOL: 0
+;PCODE: $000002EF VOL: 0
+;PCODE: $000002F0 VOL: 0
+;PCODE: $000002F1 VOL: 0
+;PCODE: $000002F2 VOL: 0
+;PCODE: $000002F3 VOL: 0
+;PCODE: $000002F4 VOL: 0
+; 0025 0182            }
+;PCODE: $000002F5 VOL: 0
+; 0025 0183         }else{
+;PCODE: $000002F6 VOL: 0
+;PCODE: $000002F7 VOL: 0
+; 0025 0184            printDebug("[iFSize]directory : %s.[\r\n",pviDirPath_arg);
+;PCODE: $000002F8 VOL: 0
+;PCODE: $000002F9 VOL: 0
+;PCODE: $000002FA VOL: 0
+;PCODE: $000002FB VOL: 0
+;PCODE: $000002FC VOL: 0
+;PCODE: $000002FD VOL: 0
+;PCODE: $000002FE VOL: 0
+;PCODE: $000002FF VOL: 0
+;PCODE: $00000300 VOL: 0
+;PCODE: $00000301 VOL: 0
+; 0025 0185            iFDisplayReturn(viFReturn);
+;PCODE: $00000302 VOL: 0
+;PCODE: $00000303 VOL: 0
+; 0025 0186            printDebug("]\r\n");
+;PCODE: $00000304 VOL: 0
+;PCODE: $00000305 VOL: 0
+;PCODE: $00000306 VOL: 0
+;PCODE: $00000307 VOL: 0
+;PCODE: $00000308 VOL: 0
+;PCODE: $00000309 VOL: 0
+;PCODE: $0000030A VOL: 0
+; 0025 0187         }
+;PCODE: $0000030B VOL: 0
+; 0025 0188         free(viFilePtr);
+;PCODE: $0000030C VOL: 0
+;PCODE: $0000030D VOL: 0
+; 0025 0189     }else{
+;PCODE: $0000030E VOL: 0
+;PCODE: $0000030F VOL: 0
+; 0025 018A         printDebug("[iFSize]can't allocate mem.\r\n");
+;PCODE: $00000310 VOL: 0
+;PCODE: $00000311 VOL: 0
+;PCODE: $00000312 VOL: 0
+;PCODE: $00000313 VOL: 0
+;PCODE: $00000314 VOL: 0
+;PCODE: $00000315 VOL: 0
+;PCODE: $00000316 VOL: 0
+; 0025 018B     }
+;PCODE: $00000317 VOL: 0
+; 0025 018C     return viReturn;
+;PCODE: $00000318 VOL: 0
+;PCODE: $00000319 VOL: 0
+;PCODE: $0000031A VOL: 0
+;PCODE: $0000031B VOL: 0
+; 0025 018D }
+;PCODE: $0000031C VOL: 0
+;
+;void iFCreateFileDaily(iChar_t *pviFilename_arg){
+; 0025 018F void iFCreateFileDaily(iChar_t *pviFilename_arg){
+;PCODE: $0000031D VOL: 0
+;PCODE: $0000031E VOL: 0
+; 0025 0190     FRESULT viFReturn;
+; 0025 0191     DIR viOutDir;
+; 0025 0192     FIL *viFilePtr;
+; 0025 0193 
+; 0025 0194     if((viFReturn=f_chdir(viDirDataPath))==FR_OK){
+;PCODE: $0000031F VOL: 0
+;PCODE: $00000320 VOL: 0
+;PCODE: $00000321 VOL: 0
+;	*pviFilename_arg -> Y+26
+;	viFReturn -> R17
+;	viOutDir -> Y+4
+;	*viFilePtr -> R18,R19
+;PCODE: $00000322 VOL: 0
+;PCODE: $00000323 VOL: 0
+;PCODE: $00000324 VOL: 0
+;PCODE: $00000325 VOL: 0
+;PCODE: $00000326 VOL: 0
+; 0025 0195         printDebug("[iFCreateFileDaily]Current directory : %s.\r\n",viDirDataPath);
+;PCODE: $00000327 VOL: 0
+;PCODE: $00000328 VOL: 0
+;PCODE: $00000329 VOL: 0
+;PCODE: $0000032A VOL: 0
+;PCODE: $0000032B VOL: 0
+;PCODE: $0000032C VOL: 0
+;PCODE: $0000032D VOL: 0
+;PCODE: $0000032E VOL: 0
+;PCODE: $0000032F VOL: 0
+;PCODE: $00000330 VOL: 0
+; 0025 0196         if(viFReturn == FR_OK){
+;PCODE: $00000331 VOL: 0
+;PCODE: $00000332 VOL: 0
+; 0025 0197             printDebug("[iFCreateFileDaily]Data dir is exist.\r\n");
+;PCODE: $00000333 VOL: 0
+;PCODE: $00000334 VOL: 0
+;PCODE: $00000335 VOL: 0
+;PCODE: $00000336 VOL: 0
+;PCODE: $00000337 VOL: 0
+;PCODE: $00000338 VOL: 0
+;PCODE: $00000339 VOL: 0
+; 0025 0198             if((viFReturn=f_open(viFilePtr,pviFilename_arg,FA_OPEN_ALWAYS))==FR_OK){
+;PCODE: $0000033A VOL: 0
+;PCODE: $0000033B VOL: 0
+;PCODE: $0000033C VOL: 0
+;PCODE: $0000033D VOL: 0
+;PCODE: $0000033E VOL: 0
+;PCODE: $0000033F VOL: 0
+;PCODE: $00000340 VOL: 0
+;PCODE: $00000341 VOL: 0
+; 0025 0199                 printDebug("[iGenFileDaily]File %s is openned.\r\n",pviFilename_arg);
+;PCODE: $00000342 VOL: 0
+;PCODE: $00000343 VOL: 0
+;PCODE: $00000344 VOL: 0
+;PCODE: $00000345 VOL: 0
+;PCODE: $00000346 VOL: 0
+;PCODE: $00000347 VOL: 0
+;PCODE: $00000348 VOL: 0
+;PCODE: $00000349 VOL: 0
+;PCODE: $0000034A VOL: 0
+;PCODE: $0000034B VOL: 0
+; 0025 019A                 if((viFReturn=f_close(viFilePtr))==FR_OK){
+;PCODE: $0000034C VOL: 0
+;PCODE: $0000034D VOL: 0
+;PCODE: $0000034E VOL: 0
+;PCODE: $0000034F VOL: 0
+;PCODE: $00000350 VOL: 0
+; 0025 019B                 }else{
+;PCODE: $00000351 VOL: 0
+;PCODE: $00000352 VOL: 0
+; 0025 019C                    iFDisplayReturn(viFReturn);
+;PCODE: $00000353 VOL: 0
+;PCODE: $00000354 VOL: 0
+; 0025 019D                 }
+;PCODE: $00000355 VOL: 0
+; 0025 019E             }else{
+;PCODE: $00000356 VOL: 0
+;PCODE: $00000357 VOL: 0
+; 0025 019F                 iFDisplayReturn(viFReturn);
+;PCODE: $00000358 VOL: 0
+;PCODE: $00000359 VOL: 0
+; 0025 01A0                 printDebug("\r\n");
+;PCODE: $0000035A VOL: 0
+;PCODE: $0000035B VOL: 0
+;PCODE: $0000035C VOL: 0
+;PCODE: $0000035D VOL: 0
+;PCODE: $0000035E VOL: 0
+;PCODE: $0000035F VOL: 0
+;PCODE: $00000360 VOL: 0
+; 0025 01A1             }
+;PCODE: $00000361 VOL: 0
+; 0025 01A2         }else{
+;PCODE: $00000362 VOL: 0
+;PCODE: $00000363 VOL: 0
+; 0025 01A3             iFDisplayReturn(viFReturn);
+;PCODE: $00000364 VOL: 0
+;PCODE: $00000365 VOL: 0
+; 0025 01A4         }
+;PCODE: $00000366 VOL: 0
+; 0025 01A5     }else{
+;PCODE: $00000367 VOL: 0
+;PCODE: $00000368 VOL: 0
+; 0025 01A6        printDebug("[iFCreateFileDaily]directory : %s.[\r\n",viDirDataPath);
+;PCODE: $00000369 VOL: 0
+;PCODE: $0000036A VOL: 0
+;PCODE: $0000036B VOL: 0
+;PCODE: $0000036C VOL: 0
+;PCODE: $0000036D VOL: 0
+;PCODE: $0000036E VOL: 0
+;PCODE: $0000036F VOL: 0
+;PCODE: $00000370 VOL: 0
+;PCODE: $00000371 VOL: 0
+;PCODE: $00000372 VOL: 0
+; 0025 01A7        iFDisplayReturn(viFReturn);
+;PCODE: $00000373 VOL: 0
+;PCODE: $00000374 VOL: 0
+; 0025 01A8        printDebug("]\r\n");
+;PCODE: $00000375 VOL: 0
+;PCODE: $00000376 VOL: 0
+;PCODE: $00000377 VOL: 0
+;PCODE: $00000378 VOL: 0
+;PCODE: $00000379 VOL: 0
+;PCODE: $0000037A VOL: 0
+;PCODE: $0000037B VOL: 0
+; 0025 01A9     }
+;PCODE: $0000037C VOL: 0
+; 0025 01AA }
+;PCODE: $0000037D VOL: 0
+;PCODE: $0000037E VOL: 0
+;PCODE: $0000037F VOL: 0
+;PCODE: $00000380 VOL: 0
+;
+;iChar_t iFRead(iChar_t * pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long const * const pviReadPtr_arg){
+; 0025 01AC iChar_t iFRead(iChar_t * pviDataBuff,iUInt_t ivLength_arg,iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long const * const pviReadPtr_arg){
+;PCODE: $00000381 VOL: 0
+;PCODE: $00000382 VOL: 0
+; 0025 01AD     FIL *viFilePtr;
+; 0025 01AE     FRESULT viFReturn;
+; 0025 01AF     unsigned int nbytes;
+; 0025 01B0     iChar_t viReturn = -1;
+; 0025 01B1 
+; 0025 01B2     //print_payload(pviDataBuffRef,ivLength_arg);
+; 0025 01B3     viFilePtr = (FIL * const)malloc(sizeof(FIL));
+;PCODE: $00000383 VOL: 0
+;PCODE: $00000384 VOL: 0
+;	*pviDataBuff -> Y+14
+;	ivLength_arg -> Y+12
+;	*pviDirPath_arg -> Y+10
+;	*pviFilename_arg -> Y+8
+;	*pviReadPtr_arg -> Y+6
+;	*viFilePtr -> R16,R17
+;	viFReturn -> R19
+;	nbytes -> R20,R21
+;	viReturn -> R18
+;PCODE: $00000385 VOL: 0
+;PCODE: $00000386 VOL: 0
+;PCODE: $00000387 VOL: 0
+;PCODE: $00000388 VOL: 0
+;PCODE: $00000389 VOL: 0
+; 0025 01B4     if(viFilePtr!=NULL){
+;PCODE: $0000038A VOL: 0
+;PCODE: $0000038B VOL: 0
+; 0025 01B5         if((viFReturn=f_chdir(pviDirPath_arg))==FR_OK){
+;PCODE: $0000038C VOL: 0
+;PCODE: $0000038D VOL: 0
+;PCODE: $0000038E VOL: 0
+;PCODE: $0000038F VOL: 0
+;PCODE: $00000390 VOL: 0
+; 0025 01B6 #if (SD_MANG_PRINT_DEBUG == 1)
+; 0025 01B7            printDebug("[iFRead]Current directory : %s.\r\n",pviDirPath_arg);
+; 0025 01B8 #endif
+; 0025 01B9            if((viFReturn=f_open(viFilePtr,pviFilename_arg,FA_READ))==FR_OK){
+;PCODE: $00000391 VOL: 0
+;PCODE: $00000392 VOL: 0
+;PCODE: $00000393 VOL: 0
+;PCODE: $00000394 VOL: 0
+;PCODE: $00000395 VOL: 0
+;PCODE: $00000396 VOL: 0
+;PCODE: $00000397 VOL: 0
+;PCODE: $00000398 VOL: 0
+; 0025 01BA #if (SD_MANG_PRINT_DEBUG == 1)
+; 0025 01BB                printDebug("[iFRead]File %s is openned.\r\n",pviFilename_arg);
+; 0025 01BC #endif
+; 0025 01BD                /* Move to end of the file to append data */
+; 0025 01BE                //printDebug("[iFRead]File size(%ld).\r\n",viFilePtr->fsize);
+; 0025 01BF                if((viFReturn=f_lseek(viFilePtr, *pviReadPtr_arg))==FR_OK){        //seek end of file in order append
+;PCODE: $00000399 VOL: 0
+;PCODE: $0000039A VOL: 0
+;PCODE: $0000039B VOL: 0
+;PCODE: $0000039C VOL: 0
+;PCODE: $0000039D VOL: 0
+;PCODE: $0000039E VOL: 0
+;PCODE: $0000039F VOL: 0
+;PCODE: $000003A0 VOL: 0
+; 0025 01C0 #if (SD_MANG_PRINT_DEBUG == 1)
+; 0025 01C1                    printDebug("[iFRead]Pointer(seek) of File moved(%ld).\r\n",*pviReadPtr_arg);
+; 0025 01C2 #endif
+; 0025 01C3                    //print_payload((const iChar_t *)pviDataBuff,ivLength_arg);
+; 0025 01C4                   // print_payload(pviDataBuffRef,ivLength_arg);
+; 0025 01C5                    if((viFReturn=f_read(viFilePtr,pviDataBuff,ivLength_arg,&nbytes))==FR_OK){    //viFReturn=f_write(viFilePtr,&pviDataBuff[0],strlen(pviDataBuff),&nbytes)
+;PCODE: $000003A1 VOL: 0
+;PCODE: $000003A2 VOL: 0
+;PCODE: $000003A3 VOL: 0
+;PCODE: $000003A4 VOL: 0
+;PCODE: $000003A5 VOL: 0
+;PCODE: $000003A6 VOL: 0
+;PCODE: $000003A7 VOL: 0
+;PCODE: $000003A8 VOL: 0
+;PCODE: $000003A9 VOL: 0
+;PCODE: $000003AA VOL: 0
+;PCODE: $000003AB VOL: 0
+;PCODE: $000003AC VOL: 0
+;PCODE: $000003AD VOL: 0
+;PCODE: $000003AE VOL: 0
+;PCODE: $000003AF VOL: 0
+; 0025 01C6 #if (SD_MANG_PRINT_DEBUG == 1)
+; 0025 01C7                        printDebug("[iFRead]%d bytes Reading of %d\r\n",nbytes,ivLength_arg);
+; 0025 01C8 #endif
+; 0025 01C9                        viReturn = 1;
+;PCODE: $000003B0 VOL: 0
+;PCODE: $000003B1 VOL: 0
+; 0025 01CA                    }else{
+;PCODE: $000003B2 VOL: 0
+;PCODE: $000003B3 VOL: 0
+; 0025 01CB                        printDebug("[iFRead]Read error(%d)\r\n",viFReturn);
+;PCODE: $000003B4 VOL: 0
+;PCODE: $000003B5 VOL: 0
+;PCODE: $000003B6 VOL: 0
+;PCODE: $000003B7 VOL: 0
+;PCODE: $000003B8 VOL: 0
+;PCODE: $000003B9 VOL: 0
+;PCODE: $000003BA VOL: 0
+;PCODE: $000003BB VOL: 0
+;PCODE: $000003BC VOL: 0
+;PCODE: $000003BD VOL: 0
+; 0025 01CC                        iFDisplayReturn(viFReturn);
+;PCODE: $000003BE VOL: 0
+;PCODE: $000003BF VOL: 0
+; 0025 01CD                    }
+;PCODE: $000003C0 VOL: 0
+; 0025 01CE                }else{
+;PCODE: $000003C1 VOL: 0
+;PCODE: $000003C2 VOL: 0
+; 0025 01CF                    iFDisplayReturn(viFReturn);
+;PCODE: $000003C3 VOL: 0
+;PCODE: $000003C4 VOL: 0
+; 0025 01D0                }
+;PCODE: $000003C5 VOL: 0
+; 0025 01D1 
+; 0025 01D2                if((viFReturn=f_close(viFilePtr))==FR_OK){
+;PCODE: $000003C6 VOL: 0
+;PCODE: $000003C7 VOL: 0
+;PCODE: $000003C8 VOL: 0
+;PCODE: $000003C9 VOL: 0
+;PCODE: $000003CA VOL: 0
+; 0025 01D3                }else{
+;PCODE: $000003CB VOL: 0
+;PCODE: $000003CC VOL: 0
+; 0025 01D4                   iFDisplayReturn(viFReturn);
+;PCODE: $000003CD VOL: 0
+;PCODE: $000003CE VOL: 0
+; 0025 01D5                }
+;PCODE: $000003CF VOL: 0
+; 0025 01D6            }else{
+;PCODE: $000003D0 VOL: 0
+;PCODE: $000003D1 VOL: 0
+; 0025 01D7                printDebug("[iFRead]File %s : %s.[\r\n",pviFilename_arg);
+;PCODE: $000003D2 VOL: 0
+;PCODE: $000003D3 VOL: 0
+;PCODE: $000003D4 VOL: 0
+;PCODE: $000003D5 VOL: 0
+;PCODE: $000003D6 VOL: 0
+;PCODE: $000003D7 VOL: 0
+;PCODE: $000003D8 VOL: 0
+;PCODE: $000003D9 VOL: 0
+;PCODE: $000003DA VOL: 0
+;PCODE: $000003DB VOL: 0
+; 0025 01D8                iFDisplayReturn(viFReturn);
+;PCODE: $000003DC VOL: 0
+;PCODE: $000003DD VOL: 0
+; 0025 01D9                printDebug("]\r\n");
+;PCODE: $000003DE VOL: 0
+;PCODE: $000003DF VOL: 0
+;PCODE: $000003E0 VOL: 0
+;PCODE: $000003E1 VOL: 0
+;PCODE: $000003E2 VOL: 0
+;PCODE: $000003E3 VOL: 0
+;PCODE: $000003E4 VOL: 0
+; 0025 01DA            }
+;PCODE: $000003E5 VOL: 0
+; 0025 01DB         }else{
+;PCODE: $000003E6 VOL: 0
+;PCODE: $000003E7 VOL: 0
+; 0025 01DC            printDebug("[iFRead]directory : %s.[\r\n",pviDirPath_arg);
+;PCODE: $000003E8 VOL: 0
+;PCODE: $000003E9 VOL: 0
+;PCODE: $000003EA VOL: 0
+;PCODE: $000003EB VOL: 0
+;PCODE: $000003EC VOL: 0
+;PCODE: $000003ED VOL: 0
+;PCODE: $000003EE VOL: 0
+;PCODE: $000003EF VOL: 0
+;PCODE: $000003F0 VOL: 0
+;PCODE: $000003F1 VOL: 0
+; 0025 01DD            iFDisplayReturn(viFReturn);
+;PCODE: $000003F2 VOL: 0
+;PCODE: $000003F3 VOL: 0
+; 0025 01DE            printDebug("]\r\n");
+;PCODE: $000003F4 VOL: 0
+;PCODE: $000003F5 VOL: 0
+;PCODE: $000003F6 VOL: 0
+;PCODE: $000003F7 VOL: 0
+;PCODE: $000003F8 VOL: 0
+;PCODE: $000003F9 VOL: 0
+;PCODE: $000003FA VOL: 0
+; 0025 01DF         }
+;PCODE: $000003FB VOL: 0
+; 0025 01E0         free(viFilePtr);
+;PCODE: $000003FC VOL: 0
+;PCODE: $000003FD VOL: 0
+; 0025 01E1     }else{
+;PCODE: $000003FE VOL: 0
+;PCODE: $000003FF VOL: 0
+; 0025 01E2         printDebug("[iFRead]can't allocate mem.\r\n");
+;PCODE: $00000400 VOL: 0
+;PCODE: $00000401 VOL: 0
+;PCODE: $00000402 VOL: 0
+;PCODE: $00000403 VOL: 0
+;PCODE: $00000404 VOL: 0
+;PCODE: $00000405 VOL: 0
+;PCODE: $00000406 VOL: 0
+; 0025 01E3     }
+;PCODE: $00000407 VOL: 0
+; 0025 01E4     return viReturn;
+;PCODE: $00000408 VOL: 0
+;PCODE: $00000409 VOL: 0
+;PCODE: $0000040A VOL: 0
+;PCODE: $0000040B VOL: 0
+; 0025 01E5 }
+;PCODE: $0000040C VOL: 0
+;
+;iChar_t iConfigFile(iChar_t viPropGroupID_arg, iChar_t viMode_arg){
+; 0025 01E7 iChar_t iConfigFile(iChar_t viPropGroupID_arg, iChar_t viMode_arg){
+;PCODE: $0000040D VOL: 0
+;PCODE: $0000040E VOL: 0
+; 0025 01E8         if(viMode_arg==SD_READ_CONF_FILE){
+;PCODE: $0000040F VOL: 0
+;	viPropGroupID_arg -> Y+1
+;	viMode_arg -> Y+0
+;PCODE: $00000410 VOL: 0
+;PCODE: $00000411 VOL: 0
+;PCODE: $00000412 VOL: 0
+; 0025 01E9 
+; 0025 01EA         }else if(viMode_arg==SD_WRITE_CONF_FILE){
+;PCODE: $00000413 VOL: 0
+;PCODE: $00000414 VOL: 0
+;PCODE: $00000415 VOL: 0
+;PCODE: $00000416 VOL: 0
+;PCODE: $00000417 VOL: 0
+; 0025 01EB              //memcpy(viDVConfigBuffer,(void *)(&viDVConfigUpdate[0]),sizeof(viDVConfigUpdate));
+; 0025 01EC              //iMemcpyeFile(iDVConfig_t);
+; 0025 01ED         }
+; 0025 01EE }
+;PCODE: $00000418 VOL: 0
+;PCODE: $00000419 VOL: 0
+;PCODE: $0000041A VOL: 0
+;PCODE: $0000041B VOL: 0
+;PCODE: $0000041C VOL: 0
+;
+;//void iMemcpyeFile(char eeprom *eptr, char *dptr, int len)
+;//{
+;//   int i=0;
+;//   for(i=0;i<len;i++) {
+;//      *eptr++ = *dptr;
+;//      dptr++;
+;//   }
+;//   return;
+;//}
+;//
+;//void iMemcpydFile(char *dptr, char eeprom *eptr,  int len)
+;//{
+;//   int i=0;
+;//   for(i=0;i<len;i++) {
+;//      *dptr++ = *eptr;
+;//      eptr++;
+;//   }
+;//   return;
+;//}
+;//
+;//void iPrintConfigFile(char eeprom *eptr,unsigned int len)
+;//{
+;//   int i=0,j=0;
+;//   printDebug("[iPrintConfigFile]Data:[\r\n");
+;//   printDebug("%04d\t\t",0);
+;//   for(i=0,j=1;i<len;i++,j++) {
+;//      printDebug("%02x",*(eptr++));
+;//      if(j==8){
+;//         printDebug("\t\t");
+;//      }else if(j==16){
+;//         printDebug("\r\n");
+;//         printDebug("%04d\t\t",i+1);
+;//         j=0;
+;//      }
+;//   }
+;//   printDebug("\r\n]\r\n");
+;//   return;
+;//}
