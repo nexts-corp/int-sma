@@ -122,11 +122,11 @@ float iUpdateSmoothlyADC(int ch){
      float viRawVoltValue = 0.0;
      unsigned int i = 0;
      viADCbuffer = 0;  
-     for(i=0;i<20;i++){
+     for(i=0;i<30;i++){     //20
         viADCbuffer += (unsigned long)(read_adc(8+ch));
      }
-     viRawVoltValue = iAD595ADCToVolt(viADCbuffer,20.0);  
-                                             
+     viRawVoltValue = iAD595ADCToVolt(viADCbuffer,30.0);  
+                                                                        //20
      return viRawVoltValue;
 }
 
@@ -185,7 +185,7 @@ int sensorRead(int ch, struct sens_val_st *sensor)
     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){    
     /*bongkot comment*/
         SENSOR_SELECT(ch);
-        delay_ms(20);                                               // -- for multiplex stable -- // 
+        //delay_ms(20);                                               // -- for multiplex stable -- // 
         channelConnect = SENSOR_CONNECT;    
         
         //updateSensorADC(ch);
@@ -329,15 +329,24 @@ int sensorRead(int ch, struct sens_val_st *sensor)
                                         /*bongkot comment*/
                                         //sensor->value   =   (ADC_CONV_FAC*100 * adcData[ch]) + epFactor_C[ch]; 
                                          //sensor->value   +=    epFactor_C[ch];  
-                                         viADCbuffer = 0;  
-                                         for(i=0;i<30;i++){
-                                            viADCbuffer += read_adc(8+ch);
-                                         } 
                                          
-                                         viSensorTempValue = iAD595ADCToTemp(viADCbuffer,30);
-                                         offset =  epTempRef1[ch] - epADCRef1[ch];   
-                                         printDebug("TempRaw(%f), TempRef(%f), Offset(%f)\r\n",viSensorTempValue,epTempRef1[ch],offset);
-                                         sensor->value = viSensorTempValue + offset;
+//                                         viADCbuffer = 0;  
+//                                         for(i=0;i<30;i++){
+//                                            viADCbuffer += read_adc(8+ch);
+//                                         } 
+//                                         
+//                                         viSensorTempValue = iAD595ADCToTemp(viADCbuffer,30);
+//                                         offset =  epTempRef1[ch] - epADCRef1[ch];   
+//                                         printDebug("TempRaw(%f), TempRef(%f), Offset(%f)\r\n",viSensorTempValue,epTempRef1[ch],offset);
+//                                         sensor->value = viSensorTempValue + offset;
+
+                                         viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+                                         viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet); 
+                                         offset =  epTempRef1[ch] - epADCRef1[ch]; 
+                                         viSensorTempValue = iAD595VoltToTemp(viVoltUseCaluate);  
+            //                             printDebug("T_Raw(%f), ADC_Raw(%f), T_Ref(%f), ADC_Ref(%f), Offset(%f)\r\n",viSensorTempValue,viVoltUseCaluate,epTempRef1[ch],epADCRef1[ch],offset);
+                                         sensor->value = viSensorTempValue + offset;        //0.213 *2 = 0.426
+
                                     }                
                                     else if(TEMP_SEL == TEMP_TMEC){  
                                                           
@@ -354,21 +363,33 @@ int sensorRead(int ch, struct sens_val_st *sensor)
                                         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
                                                //sensor->value   =   (epFactor_B[ch]   * adcData[ch]) + epFactor_C[ch];   
                                                
-                                               viADCbuffer = 0;  
-                                                 for(i=0;i<30;i++){
-                                                    viADCbuffer += read_adc(8+ch);
-                                                 }                
-                                                 
-                                                sensorRef1 = iAD595ADCToTemp(epADCRef1[ch],1);
-                                                sensorRef2 = iAD595ADCToTemp(epADCRef2[ch],1);
+//                                               viADCbuffer = 0;  
+//                                                 for(i=0;i<30;i++){
+//                                                    viADCbuffer += read_adc(8+ch);
+//                                                 }                
+//                                                 
+//                                                sensorRef1 = iAD595ADCToTemp(epADCRef1[ch],1);
+//                                                sensorRef2 = iAD595ADCToTemp(epADCRef2[ch],1);
+//                                                stdMeter1  = epTempRef1[ch]; 
+//                                                stdMeter2  = epTempRef2[ch];
+//                                                lowRange   =  sensorRef2 - sensorRef1;
+//                                                stdMeterRange = stdMeter2 - stdMeter1;  
+//                                                viSensorTempValue = iAD595ADCToTemp(viADCbuffer,30);
+//                                               sensor->value = (((viSensorTempValue-sensorRef1)*stdMeterRange)/lowRange)+stdMeter1;    
+                                               
+                                                sensorRef1 = epADCRef1[ch];    //become adc update => temp already
+                                                sensorRef2 = epADCRef2[ch];
                                                 stdMeter1  = epTempRef1[ch]; 
                                                 stdMeter2  = epTempRef2[ch];
                                                 lowRange   =  sensorRef2 - sensorRef1;
                                                 stdMeterRange = stdMeter2 - stdMeter1;  
-                                                viSensorTempValue = iAD595ADCToTemp(viADCbuffer,30);
-                                               sensor->value = (((viSensorTempValue-sensorRef1)*stdMeterRange)/lowRange)+stdMeter1;    
-                                               
-                                               
+                                                
+                                                viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+                                                viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
+                                                viSensorTempValue = iAD595VoltToTemp(viVoltUseCaluate);
+              //                                  printDebug("T_Raw(%f), ADC_Raw(%f), T_Ref(1,2)[%f,%f], ADC(T)_Ref(1,2)[%f,%f]\r\n",viSensorTempValue,viVoltUseCaluate,stdMeter1,stdMeter2,sensorRef1,sensorRef2); 
+                                                sensor->value = (((viSensorTempValue-sensorRef1)*stdMeterRange)/lowRange)+stdMeter1;  
+                                                 
                                                
                                         }else{
                                                sensor->value   =   (epFactor_B[ch]   * adcData[ch]) + epFactor_C[ch];  
@@ -377,20 +398,35 @@ int sensorRead(int ch, struct sens_val_st *sensor)
                                         break;  
                                     }
         case CAL_EXTPOLYNOMIAL  :   {   if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
-                                            viADCbuffer = 0;
-                                            for(i=0;i<30;i++){
-                                                viADCbuffer += read_adc(8+ch);
-                                            }  
+//                                            viADCbuffer = 0;
+//                                            for(i=0;i<30;i++){
+//                                                viADCbuffer += read_adc(8+ch);
+//                                            }  
+//                                            sensorRef1 = epADCRef1[ch];
+//                                            sensorRef2 = epADCRef2[ch];
+//                                            sensorRef3 = epADCRef3[ch]; 
+//                                            stdMeter1 = epTempRef1[ch];
+//                                            stdMeter2 = epTempRef2[ch];
+//                                            stdMeter3 = epTempRef3[ch];   
+//                                            viSensorTempValue = iAD595ADCToTemp(viADCbuffer,30);
+//                                            gaussian(sensorRef1,  sensorRef2,  sensorRef3, stdMeter1, stdMeter2, stdMeter3, &factorAA, &factorBB, &factorCC); 
+//                                            sensor->value = (factorAA*viSensorTempValue*viSensorTempValue) + (factorBB*viSensorTempValue) + factorCC;      //polynomail formula
+//            
                                             sensorRef1 = epADCRef1[ch];
                                             sensorRef2 = epADCRef2[ch];
                                             sensorRef3 = epADCRef3[ch]; 
                                             stdMeter1 = epTempRef1[ch];
                                             stdMeter2 = epTempRef2[ch];
-                                            stdMeter3 = epTempRef3[ch];   
-                                            viSensorTempValue = iAD595ADCToTemp(viADCbuffer,30);
+                                            stdMeter3 = epTempRef3[ch];
+                                            
+                                            viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+                                            viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet); 
+                                            viSensorTempValue = iAD595VoltToTemp(viVoltUseCaluate);  
+                                            
                                             gaussian(sensorRef1,  sensorRef2,  sensorRef3, stdMeter1, stdMeter2, stdMeter3, &factorAA, &factorBB, &factorCC); 
+               //                             printDebug("T_Raw(%f), ADC_Raw(%f), T_Ref[%f,%f,%f], ADC(T)_Ref[%f,%f,%f]\r\n",viSensorTempValue,viVoltUseCaluate,stdMeter1,stdMeter2,stdMeter3,sensorRef1,sensorRef2,sensorRef3); 
                                             sensor->value = (factorAA*viSensorTempValue*viSensorTempValue) + (factorBB*viSensorTempValue) + factorCC;      //polynomail formula
-            
+
                                         }else{
                                               sensor->value   =   (epFactor_A[ch]   * adcData[ch] * adcData[ch]) + 
                                                         (epFactor_B[ch]   * adcData[ch]) + 
@@ -731,12 +767,16 @@ int sensorSetCurrentSetPoint(int ch,int pnt,unsigned char *buf)
     else if(pnt == CALPOINT(2)){ 
       
         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
-           viADCbuffer = 0;  
-             for(i=0;i<30;i++){
-                viADCbuffer += read_adc(8+ch);
-             } 
-                                             
-             epADCRef2[ch] = iAD595ADCToTemp(viADCbuffer,30);
+//           viADCbuffer = 0;  
+//             for(i=0;i<30;i++){
+//                viADCbuffer += read_adc(8+ch);
+//             } 
+//                                             
+//             epADCRef2[ch] = iAD595ADCToTemp(viADCbuffer,30);
+
+             viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+             viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
+             epADCRef2[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
         }else{
            epADCRef2[ch]       = adcData[ch]; 
         }
@@ -748,12 +788,16 @@ int sensorSetCurrentSetPoint(int ch,int pnt,unsigned char *buf)
     }                
     else if(pnt == CALPOINT(3)){   
         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
-           viADCbuffer = 0;  
-             for(i=0;i<30;i++){
-                viADCbuffer += read_adc(8+ch);
-             } 
-                                             
-             epADCRef3[ch] = iAD595ADCToTemp(viADCbuffer,30);
+//           viADCbuffer = 0;  
+//             for(i=0;i<30;i++){
+//                viADCbuffer += read_adc(8+ch);
+//             } 
+//                                             
+//             epADCRef3[ch] = iAD595ADCToTemp(viADCbuffer,30);
+
+             viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+             viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
+             epADCRef3[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
         }else{
            epADCRef3[ch]       = adcData[ch]; 
         }
