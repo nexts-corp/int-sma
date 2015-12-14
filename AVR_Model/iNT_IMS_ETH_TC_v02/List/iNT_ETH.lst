@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.30  C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.asm Fri Dec 11 14:14:27 2015
+AVRASM ver. 2.1.30  C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.asm Mon Dec 14 10:35:08 2015
 
 C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.asm(1110): warning: Register r5 already defined by the .DEF directive
 C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.asm(1111): warning: Register r4 already defined by the .DEF directive

@@ -122,11 +122,11 @@ float iUpdateSmoothlyADC(int ch){
      float viRawVoltValue = 0.0;
      unsigned int i = 0;
      viADCbuffer = 0;  
-     for(i=0;i<20;i++){
+     for(i=0;i<30;i++){     //20
         viADCbuffer += (unsigned long)(read_adc(8+ch));
      }
-     viRawVoltValue = iAD595ADCToVolt(viADCbuffer,20.0);  
-                                             
+     viRawVoltValue = iAD595ADCToVolt(viADCbuffer,30.0);  
+                                                                        //20
      return viRawVoltValue;
 }
 
@@ -149,6 +149,7 @@ float iReadSmoothlyADC(int ch){
 //        adc_raw     = read_adc(8);                             
 //    }
 //}
+
 
 int sensorRead(int ch, struct sens_val_st *sensor)
 {                  
