@@ -54,7 +54,7 @@
 ;PCODE: $00000013 VOL: 0
 ;PCODE: $00000014 VOL: 0
 ;PCODE: $00000015 VOL: 0
-; 0007 001E     iMemcpye((char eeprom *)&viDVConfigUpdate.viNetworkConfig.viNetworkPort[0],viIP_Suit,4);
+; 0007 001E     iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viLocolIP,viIP_Suit,4);
 ;PCODE: $00000016 VOL: 0
 ;PCODE: $00000017 VOL: 0
 ;PCODE: $00000018 VOL: 0
@@ -63,7 +63,15 @@
 ;PCODE: $0000001B VOL: 0
 ;PCODE: $0000001C VOL: 0
 ;PCODE: $0000001D VOL: 0
-; 0007 001F //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
+; 0007 001F     iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viLocalPort,viIP_Suit,4);
+;PCODE: $0000001E VOL: 0
+;PCODE: $0000001F VOL: 0
+;PCODE: $00000020 VOL: 0
+;PCODE: $00000021 VOL: 0
+;PCODE: $00000022 VOL: 0
+;PCODE: $00000023 VOL: 0
+;PCODE: $00000024 VOL: 0
+;PCODE: $00000025 VOL: 0
 ; 0007 0020 //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
 ; 0007 0021 //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
 ; 0007 0022 //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
@@ -74,26 +82,18 @@
 ; 0007 0027 //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
 ; 0007 0028 //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
 ; 0007 0029 //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
-; 0007 002A 
-; 0007 002B     viDVConfigUpdate.viOperationConfig.viDeviceEnable = 0x01;
-;PCODE: $0000001E VOL: 0
-;PCODE: $0000001F VOL: 0
-;PCODE: $00000020 VOL: 0
-;PCODE: $00000021 VOL: 0
-;PCODE: $00000022 VOL: 0
-; 0007 002C 
-; 0007 002D 
-; 0007 002E     for(i=0;i<MAX_SENSOR_CHANNEL_def;i++){
-;PCODE: $00000023 VOL: 0
-;PCODE: $00000024 VOL: 0
-;PCODE: $00000025 VOL: 0
+; 0007 002A //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
+; 0007 002B 
+; 0007 002C     viDVConfigUpdate.viOperationConfig.viDeviceEnable = 0x01;
 ;PCODE: $00000026 VOL: 0
 ;PCODE: $00000027 VOL: 0
 ;PCODE: $00000028 VOL: 0
 ;PCODE: $00000029 VOL: 0
+; 0007 002D 
+; 0007 002E 
+; 0007 002F     for(i=0;i<MAX_SENSOR_CHANNEL_def;i++){
 ;PCODE: $0000002A VOL: 0
 ;PCODE: $0000002B VOL: 0
-; 0007 002F         viDVConfigUpdate.viSensorChannelConfig[i].viAlarmEnable = 0x00;
 ;PCODE: $0000002C VOL: 0
 ;PCODE: $0000002D VOL: 0
 ;PCODE: $0000002E VOL: 0
@@ -101,10 +101,10 @@
 ;PCODE: $00000030 VOL: 0
 ;PCODE: $00000031 VOL: 0
 ;PCODE: $00000032 VOL: 0
+; 0007 0030         viDVConfigUpdate.viSensorChannelConfig[i].viAlarmEnable = 0x00;
 ;PCODE: $00000033 VOL: 0
 ;PCODE: $00000034 VOL: 0
 ;PCODE: $00000035 VOL: 0
-; 0007 0030         viDVConfigUpdate.viSensorChannelConfig[i].viSensorEnable = 0x00;
 ;PCODE: $00000036 VOL: 0
 ;PCODE: $00000037 VOL: 0
 ;PCODE: $00000038 VOL: 0
@@ -112,11 +112,11 @@
 ;PCODE: $0000003A VOL: 0
 ;PCODE: $0000003B VOL: 0
 ;PCODE: $0000003C VOL: 0
+; 0007 0031         viDVConfigUpdate.viSensorChannelConfig[i].viSensorEnable = 0x00;
 ;PCODE: $0000003D VOL: 0
 ;PCODE: $0000003E VOL: 0
 ;PCODE: $0000003F VOL: 0
 ;PCODE: $00000040 VOL: 0
-; 0007 0031         viDVConfigUpdate.viSensorChannelConfig[i].viSamplingRate = 0x00;
 ;PCODE: $00000041 VOL: 0
 ;PCODE: $00000042 VOL: 0
 ;PCODE: $00000043 VOL: 0
@@ -124,11 +124,11 @@
 ;PCODE: $00000045 VOL: 0
 ;PCODE: $00000046 VOL: 0
 ;PCODE: $00000047 VOL: 0
+; 0007 0032         viDVConfigUpdate.viSensorChannelConfig[i].viSamplingRate = 0x00;
 ;PCODE: $00000048 VOL: 0
 ;PCODE: $00000049 VOL: 0
 ;PCODE: $0000004A VOL: 0
 ;PCODE: $0000004B VOL: 0
-; 0007 0032         viDVConfigUpdate.viSensorChannelConfig[i].viSensorOutput = 0x00;
 ;PCODE: $0000004C VOL: 0
 ;PCODE: $0000004D VOL: 0
 ;PCODE: $0000004E VOL: 0
@@ -136,11 +136,11 @@
 ;PCODE: $00000050 VOL: 0
 ;PCODE: $00000051 VOL: 0
 ;PCODE: $00000052 VOL: 0
+; 0007 0033         viDVConfigUpdate.viSensorChannelConfig[i].viSensorOutput = 0x00;
 ;PCODE: $00000053 VOL: 0
 ;PCODE: $00000054 VOL: 0
 ;PCODE: $00000055 VOL: 0
 ;PCODE: $00000056 VOL: 0
-; 0007 0033         viDVConfigUpdate.viSensorChannelConfig[i].viSensorTypeID = 0x00;
 ;PCODE: $00000057 VOL: 0
 ;PCODE: $00000058 VOL: 0
 ;PCODE: $00000059 VOL: 0
@@ -148,11 +148,11 @@
 ;PCODE: $0000005B VOL: 0
 ;PCODE: $0000005C VOL: 0
 ;PCODE: $0000005D VOL: 0
+; 0007 0034         viDVConfigUpdate.viSensorChannelConfig[i].viSensorTypeID = 0x00;
 ;PCODE: $0000005E VOL: 0
 ;PCODE: $0000005F VOL: 0
 ;PCODE: $00000060 VOL: 0
 ;PCODE: $00000061 VOL: 0
-; 0007 0034         viDVConfigUpdate.viSensorChannelConfig[i].viDataUnit = 0x00;
 ;PCODE: $00000062 VOL: 0
 ;PCODE: $00000063 VOL: 0
 ;PCODE: $00000064 VOL: 0
@@ -160,11 +160,11 @@
 ;PCODE: $00000066 VOL: 0
 ;PCODE: $00000067 VOL: 0
 ;PCODE: $00000068 VOL: 0
+; 0007 0035         viDVConfigUpdate.viSensorChannelConfig[i].viDataUnit = 0x00;
 ;PCODE: $00000069 VOL: 0
 ;PCODE: $0000006A VOL: 0
 ;PCODE: $0000006B VOL: 0
 ;PCODE: $0000006C VOL: 0
-; 0007 0035         viDVConfigUpdate.viSensorChannelConfig[i].viMinimum = 0.0;
 ;PCODE: $0000006D VOL: 0
 ;PCODE: $0000006E VOL: 0
 ;PCODE: $0000006F VOL: 0
@@ -172,11 +172,11 @@
 ;PCODE: $00000071 VOL: 0
 ;PCODE: $00000072 VOL: 0
 ;PCODE: $00000073 VOL: 0
+; 0007 0036         viDVConfigUpdate.viSensorChannelConfig[i].viMinimum = 0.0;
 ;PCODE: $00000074 VOL: 0
 ;PCODE: $00000075 VOL: 0
 ;PCODE: $00000076 VOL: 0
 ;PCODE: $00000077 VOL: 0
-; 0007 0036         viDVConfigUpdate.viSensorChannelConfig[i].viMaximum = 0.0;
 ;PCODE: $00000078 VOL: 0
 ;PCODE: $00000079 VOL: 0
 ;PCODE: $0000007A VOL: 0
@@ -184,11 +184,11 @@
 ;PCODE: $0000007C VOL: 0
 ;PCODE: $0000007D VOL: 0
 ;PCODE: $0000007E VOL: 0
+; 0007 0037         viDVConfigUpdate.viSensorChannelConfig[i].viMaximum = 0.0;
 ;PCODE: $0000007F VOL: 0
 ;PCODE: $00000080 VOL: 0
 ;PCODE: $00000081 VOL: 0
 ;PCODE: $00000082 VOL: 0
-; 0007 0037         viDVConfigUpdate.viSensorChannelConfig[i].viLower = 0.0;
 ;PCODE: $00000083 VOL: 0
 ;PCODE: $00000084 VOL: 0
 ;PCODE: $00000085 VOL: 0
@@ -196,11 +196,11 @@
 ;PCODE: $00000087 VOL: 0
 ;PCODE: $00000088 VOL: 0
 ;PCODE: $00000089 VOL: 0
+; 0007 0038         viDVConfigUpdate.viSensorChannelConfig[i].viLower = 0.0;
 ;PCODE: $0000008A VOL: 0
 ;PCODE: $0000008B VOL: 0
 ;PCODE: $0000008C VOL: 0
 ;PCODE: $0000008D VOL: 0
-; 0007 0038         viDVConfigUpdate.viSensorChannelConfig[i].viLowerDelay = 0.0;
 ;PCODE: $0000008E VOL: 0
 ;PCODE: $0000008F VOL: 0
 ;PCODE: $00000090 VOL: 0
@@ -208,11 +208,11 @@
 ;PCODE: $00000092 VOL: 0
 ;PCODE: $00000093 VOL: 0
 ;PCODE: $00000094 VOL: 0
+; 0007 0039         viDVConfigUpdate.viSensorChannelConfig[i].viLowerDelay = 0.0;
 ;PCODE: $00000095 VOL: 0
 ;PCODE: $00000096 VOL: 0
 ;PCODE: $00000097 VOL: 0
 ;PCODE: $00000098 VOL: 0
-; 0007 0039         viDVConfigUpdate.viSensorChannelConfig[i].viLowerExtreme = 0.0;
 ;PCODE: $00000099 VOL: 0
 ;PCODE: $0000009A VOL: 0
 ;PCODE: $0000009B VOL: 0
@@ -220,11 +220,11 @@
 ;PCODE: $0000009D VOL: 0
 ;PCODE: $0000009E VOL: 0
 ;PCODE: $0000009F VOL: 0
+; 0007 003A         viDVConfigUpdate.viSensorChannelConfig[i].viLowerExtreme = 0.0;
 ;PCODE: $000000A0 VOL: 0
 ;PCODE: $000000A1 VOL: 0
 ;PCODE: $000000A2 VOL: 0
 ;PCODE: $000000A3 VOL: 0
-; 0007 003A         viDVConfigUpdate.viSensorChannelConfig[i].viUpper = 0.0;
 ;PCODE: $000000A4 VOL: 0
 ;PCODE: $000000A5 VOL: 0
 ;PCODE: $000000A6 VOL: 0
@@ -232,11 +232,11 @@
 ;PCODE: $000000A8 VOL: 0
 ;PCODE: $000000A9 VOL: 0
 ;PCODE: $000000AA VOL: 0
+; 0007 003B         viDVConfigUpdate.viSensorChannelConfig[i].viUpper = 0.0;
 ;PCODE: $000000AB VOL: 0
 ;PCODE: $000000AC VOL: 0
 ;PCODE: $000000AD VOL: 0
 ;PCODE: $000000AE VOL: 0
-; 0007 003B         viDVConfigUpdate.viSensorChannelConfig[i].viUpperDelay = 0.00;
 ;PCODE: $000000AF VOL: 0
 ;PCODE: $000000B0 VOL: 0
 ;PCODE: $000000B1 VOL: 0
@@ -244,11 +244,11 @@
 ;PCODE: $000000B3 VOL: 0
 ;PCODE: $000000B4 VOL: 0
 ;PCODE: $000000B5 VOL: 0
+; 0007 003C         viDVConfigUpdate.viSensorChannelConfig[i].viUpperDelay = 0.00;
 ;PCODE: $000000B6 VOL: 0
 ;PCODE: $000000B7 VOL: 0
 ;PCODE: $000000B8 VOL: 0
 ;PCODE: $000000B9 VOL: 0
-; 0007 003C         viDVConfigUpdate.viSensorChannelConfig[i].viUpperExtreme = 0.0;
 ;PCODE: $000000BA VOL: 0
 ;PCODE: $000000BB VOL: 0
 ;PCODE: $000000BC VOL: 0
@@ -256,29 +256,29 @@
 ;PCODE: $000000BE VOL: 0
 ;PCODE: $000000BF VOL: 0
 ;PCODE: $000000C0 VOL: 0
+; 0007 003D         viDVConfigUpdate.viSensorChannelConfig[i].viUpperExtreme = 0.0;
 ;PCODE: $000000C1 VOL: 0
 ;PCODE: $000000C2 VOL: 0
 ;PCODE: $000000C3 VOL: 0
 ;PCODE: $000000C4 VOL: 0
-; 0007 003D     }
 ;PCODE: $000000C5 VOL: 0
 ;PCODE: $000000C6 VOL: 0
 ;PCODE: $000000C7 VOL: 0
 ;PCODE: $000000C8 VOL: 0
 ;PCODE: $000000C9 VOL: 0
-; 0007 003E 
-; 0007 003F 
-; 0007 0040     for(i=0;i<MAX_DI_CHANNEL_def;i++){
 ;PCODE: $000000CA VOL: 0
 ;PCODE: $000000CB VOL: 0
+; 0007 003E     }
 ;PCODE: $000000CC VOL: 0
 ;PCODE: $000000CD VOL: 0
 ;PCODE: $000000CE VOL: 0
 ;PCODE: $000000CF VOL: 0
 ;PCODE: $000000D0 VOL: 0
+; 0007 003F 
+; 0007 0040 
+; 0007 0041     for(i=0;i<MAX_DI_CHANNEL_def;i++){
 ;PCODE: $000000D1 VOL: 0
 ;PCODE: $000000D2 VOL: 0
-; 0007 0041         viDVConfigUpdate.viDI_ChannelConfig[i].viAlarmEnable = 0x00;
 ;PCODE: $000000D3 VOL: 0
 ;PCODE: $000000D4 VOL: 0
 ;PCODE: $000000D5 VOL: 0
@@ -286,7 +286,7 @@
 ;PCODE: $000000D7 VOL: 0
 ;PCODE: $000000D8 VOL: 0
 ;PCODE: $000000D9 VOL: 0
-; 0007 0042         viDVConfigUpdate.viDI_ChannelConfig[i].viDI_Enable = 0x00;
+; 0007 0042         viDVConfigUpdate.viDI_ChannelConfig[i].viAlarmEnable = 0x00;
 ;PCODE: $000000DA VOL: 0
 ;PCODE: $000000DB VOL: 0
 ;PCODE: $000000DC VOL: 0
@@ -294,8 +294,8 @@
 ;PCODE: $000000DE VOL: 0
 ;PCODE: $000000DF VOL: 0
 ;PCODE: $000000E0 VOL: 0
+; 0007 0043         viDVConfigUpdate.viDI_ChannelConfig[i].viDI_Enable = 0x00;
 ;PCODE: $000000E1 VOL: 0
-; 0007 0043         viDVConfigUpdate.viDI_ChannelConfig[i].viMode = 0x00;
 ;PCODE: $000000E2 VOL: 0
 ;PCODE: $000000E3 VOL: 0
 ;PCODE: $000000E4 VOL: 0
@@ -303,8 +303,8 @@
 ;PCODE: $000000E6 VOL: 0
 ;PCODE: $000000E7 VOL: 0
 ;PCODE: $000000E8 VOL: 0
+; 0007 0044         viDVConfigUpdate.viDI_ChannelConfig[i].viMode = 0x00;
 ;PCODE: $000000E9 VOL: 0
-; 0007 0044         viDVConfigUpdate.viDI_ChannelConfig[i].viDetectEdge = 0x00;
 ;PCODE: $000000EA VOL: 0
 ;PCODE: $000000EB VOL: 0
 ;PCODE: $000000EC VOL: 0
@@ -312,26 +312,26 @@
 ;PCODE: $000000EE VOL: 0
 ;PCODE: $000000EF VOL: 0
 ;PCODE: $000000F0 VOL: 0
+; 0007 0045         viDVConfigUpdate.viDI_ChannelConfig[i].viDetectEdge = 0x00;
 ;PCODE: $000000F1 VOL: 0
-; 0007 0045     }
 ;PCODE: $000000F2 VOL: 0
 ;PCODE: $000000F3 VOL: 0
 ;PCODE: $000000F4 VOL: 0
 ;PCODE: $000000F5 VOL: 0
 ;PCODE: $000000F6 VOL: 0
-; 0007 0046 
-; 0007 0047 
-; 0007 0048     for(i=0;i<MAX_DO_CHANNEL_def;i++){
 ;PCODE: $000000F7 VOL: 0
 ;PCODE: $000000F8 VOL: 0
+; 0007 0046     }
 ;PCODE: $000000F9 VOL: 0
 ;PCODE: $000000FA VOL: 0
 ;PCODE: $000000FB VOL: 0
 ;PCODE: $000000FC VOL: 0
 ;PCODE: $000000FD VOL: 0
+; 0007 0047 
+; 0007 0048 
+; 0007 0049     for(i=0;i<MAX_DO_CHANNEL_def;i++){
 ;PCODE: $000000FE VOL: 0
 ;PCODE: $000000FF VOL: 0
-; 0007 0049         viDVConfigUpdate.viDO_ChannelConfig[i].viD_O_Enable = 0x00;
 ;PCODE: $00000100 VOL: 0
 ;PCODE: $00000101 VOL: 0
 ;PCODE: $00000102 VOL: 0
@@ -339,10 +339,10 @@
 ;PCODE: $00000104 VOL: 0
 ;PCODE: $00000105 VOL: 0
 ;PCODE: $00000106 VOL: 0
+; 0007 004A         viDVConfigUpdate.viDO_ChannelConfig[i].viD_O_Enable = 0x00;
 ;PCODE: $00000107 VOL: 0
 ;PCODE: $00000108 VOL: 0
 ;PCODE: $00000109 VOL: 0
-; 0007 004A         viDVConfigUpdate.viDO_ChannelConfig[i].viState = 0x00;
 ;PCODE: $0000010A VOL: 0
 ;PCODE: $0000010B VOL: 0
 ;PCODE: $0000010C VOL: 0
@@ -350,11 +350,11 @@
 ;PCODE: $0000010E VOL: 0
 ;PCODE: $0000010F VOL: 0
 ;PCODE: $00000110 VOL: 0
+; 0007 004B         viDVConfigUpdate.viDO_ChannelConfig[i].viState = 0x00;
 ;PCODE: $00000111 VOL: 0
 ;PCODE: $00000112 VOL: 0
 ;PCODE: $00000113 VOL: 0
 ;PCODE: $00000114 VOL: 0
-; 0007 004B         viDVConfigUpdate.viDO_ChannelConfig[i].viDelay = 0x00;
 ;PCODE: $00000115 VOL: 0
 ;PCODE: $00000116 VOL: 0
 ;PCODE: $00000117 VOL: 0
@@ -362,63 +362,63 @@
 ;PCODE: $00000119 VOL: 0
 ;PCODE: $0000011A VOL: 0
 ;PCODE: $0000011B VOL: 0
+; 0007 004C         viDVConfigUpdate.viDO_ChannelConfig[i].viDelay = 0x00;
 ;PCODE: $0000011C VOL: 0
 ;PCODE: $0000011D VOL: 0
 ;PCODE: $0000011E VOL: 0
 ;PCODE: $0000011F VOL: 0
-; 0007 004C     }
 ;PCODE: $00000120 VOL: 0
 ;PCODE: $00000121 VOL: 0
 ;PCODE: $00000122 VOL: 0
 ;PCODE: $00000123 VOL: 0
 ;PCODE: $00000124 VOL: 0
-; 0007 004D 
-; 0007 004E 
-; 0007 004F     viDVConfigUpdate.viPWM_ChannelConfig.viPWM_Enable = 0x00;
 ;PCODE: $00000125 VOL: 0
 ;PCODE: $00000126 VOL: 0
+; 0007 004D     }
 ;PCODE: $00000127 VOL: 0
 ;PCODE: $00000128 VOL: 0
-; 0007 0050     viDVConfigUpdate.viPWM_ChannelConfig.viLevel = 0.0;
 ;PCODE: $00000129 VOL: 0
 ;PCODE: $0000012A VOL: 0
 ;PCODE: $0000012B VOL: 0
+; 0007 004E 
+; 0007 004F 
+; 0007 0050     viDVConfigUpdate.viPWM_ChannelConfig.viPWM_Enable = 0x00;
 ;PCODE: $0000012C VOL: 0
-; 0007 0051 
-; 0007 0052 }
 ;PCODE: $0000012D VOL: 0
 ;PCODE: $0000012E VOL: 0
 ;PCODE: $0000012F VOL: 0
+; 0007 0051     viDVConfigUpdate.viPWM_ChannelConfig.viLevel = 0.0;
 ;PCODE: $00000130 VOL: 0
 ;PCODE: $00000131 VOL: 0
 ;PCODE: $00000132 VOL: 0
 ;PCODE: $00000133 VOL: 0
-;
-;void iMemcpye(char eeprom *eptr, char *dptr, int len)
-; 0007 0055 {
+; 0007 0052 
+; 0007 0053 }
 ;PCODE: $00000134 VOL: 0
 ;PCODE: $00000135 VOL: 0
-; 0007 0056    int i=0;
-; 0007 0057    for(i=0;i<len;i++) {
 ;PCODE: $00000136 VOL: 0
 ;PCODE: $00000137 VOL: 0
 ;PCODE: $00000138 VOL: 0
+;PCODE: $00000139 VOL: 0
+;PCODE: $0000013A VOL: 0
+;
+;void iMemcpye(char eeprom *eptr, char *dptr, int len)
+; 0007 0056 {
+;PCODE: $0000013B VOL: 0
+;PCODE: $0000013C VOL: 0
+; 0007 0057    int i=0;
+; 0007 0058    for(i=0;i<len;i++) {
+;PCODE: $0000013D VOL: 0
+;PCODE: $0000013E VOL: 0
+;PCODE: $0000013F VOL: 0
 ;	*eptr -> Y+6
 ;	*dptr -> Y+4
 ;	len -> Y+2
 ;	i -> R16,R17
-;PCODE: $00000139 VOL: 0
-;PCODE: $0000013A VOL: 0
-;PCODE: $0000013B VOL: 0
-;PCODE: $0000013C VOL: 0
-;PCODE: $0000013D VOL: 0
-;PCODE: $0000013E VOL: 0
-;PCODE: $0000013F VOL: 0
 ;PCODE: $00000140 VOL: 0
 ;PCODE: $00000141 VOL: 0
 ;PCODE: $00000142 VOL: 0
 ;PCODE: $00000143 VOL: 0
-; 0007 0058       *eptr++ = *dptr;
 ;PCODE: $00000144 VOL: 0
 ;PCODE: $00000145 VOL: 0
 ;PCODE: $00000146 VOL: 0
@@ -426,53 +426,53 @@
 ;PCODE: $00000148 VOL: 0
 ;PCODE: $00000149 VOL: 0
 ;PCODE: $0000014A VOL: 0
+; 0007 0059       *eptr++ = *dptr;
 ;PCODE: $0000014B VOL: 0
 ;PCODE: $0000014C VOL: 0
-; 0007 0059       dptr++;
 ;PCODE: $0000014D VOL: 0
 ;PCODE: $0000014E VOL: 0
 ;PCODE: $0000014F VOL: 0
-; 0007 005A    }
 ;PCODE: $00000150 VOL: 0
 ;PCODE: $00000151 VOL: 0
 ;PCODE: $00000152 VOL: 0
 ;PCODE: $00000153 VOL: 0
+; 0007 005A       dptr++;
 ;PCODE: $00000154 VOL: 0
-; 0007 005B    return;
 ;PCODE: $00000155 VOL: 0
 ;PCODE: $00000156 VOL: 0
+; 0007 005B    }
 ;PCODE: $00000157 VOL: 0
 ;PCODE: $00000158 VOL: 0
 ;PCODE: $00000159 VOL: 0
 ;PCODE: $0000015A VOL: 0
-; 0007 005C }
 ;PCODE: $0000015B VOL: 0
-;
-;void iMemcpyd(char *dptr, char eeprom *eptr,  int len)
-; 0007 005F {
+; 0007 005C    return;
 ;PCODE: $0000015C VOL: 0
 ;PCODE: $0000015D VOL: 0
-; 0007 0060    int i=0;
-; 0007 0061    for(i=0;i<len;i++) {
 ;PCODE: $0000015E VOL: 0
 ;PCODE: $0000015F VOL: 0
 ;PCODE: $00000160 VOL: 0
+;PCODE: $00000161 VOL: 0
+; 0007 005D }
+;PCODE: $00000162 VOL: 0
+;
+;void iMemcpyd(char *dptr, char eeprom *eptr,  int len)
+; 0007 0060 {
+;PCODE: $00000163 VOL: 0
+;PCODE: $00000164 VOL: 0
+; 0007 0061    int i=0;
+; 0007 0062    for(i=0;i<len;i++) {
+;PCODE: $00000165 VOL: 0
+;PCODE: $00000166 VOL: 0
+;PCODE: $00000167 VOL: 0
 ;	*dptr -> Y+6
 ;	*eptr -> Y+4
 ;	len -> Y+2
 ;	i -> R16,R17
-;PCODE: $00000161 VOL: 0
-;PCODE: $00000162 VOL: 0
-;PCODE: $00000163 VOL: 0
-;PCODE: $00000164 VOL: 0
-;PCODE: $00000165 VOL: 0
-;PCODE: $00000166 VOL: 0
-;PCODE: $00000167 VOL: 0
 ;PCODE: $00000168 VOL: 0
 ;PCODE: $00000169 VOL: 0
 ;PCODE: $0000016A VOL: 0
 ;PCODE: $0000016B VOL: 0
-; 0007 0062       *dptr++ = *eptr;
 ;PCODE: $0000016C VOL: 0
 ;PCODE: $0000016D VOL: 0
 ;PCODE: $0000016E VOL: 0
@@ -480,52 +480,52 @@
 ;PCODE: $00000170 VOL: 0
 ;PCODE: $00000171 VOL: 0
 ;PCODE: $00000172 VOL: 0
+; 0007 0063       *dptr++ = *eptr;
 ;PCODE: $00000173 VOL: 0
 ;PCODE: $00000174 VOL: 0
-; 0007 0063       eptr++;
 ;PCODE: $00000175 VOL: 0
 ;PCODE: $00000176 VOL: 0
 ;PCODE: $00000177 VOL: 0
-; 0007 0064    }
 ;PCODE: $00000178 VOL: 0
 ;PCODE: $00000179 VOL: 0
 ;PCODE: $0000017A VOL: 0
 ;PCODE: $0000017B VOL: 0
+; 0007 0064       eptr++;
 ;PCODE: $0000017C VOL: 0
-; 0007 0065    return;
 ;PCODE: $0000017D VOL: 0
 ;PCODE: $0000017E VOL: 0
+; 0007 0065    }
 ;PCODE: $0000017F VOL: 0
 ;PCODE: $00000180 VOL: 0
 ;PCODE: $00000181 VOL: 0
 ;PCODE: $00000182 VOL: 0
-; 0007 0066 }
 ;PCODE: $00000183 VOL: 0
-;
-;void iPrintConfig(char eeprom *eptr,unsigned int len)
-; 0007 0069 {
+; 0007 0066    return;
 ;PCODE: $00000184 VOL: 0
 ;PCODE: $00000185 VOL: 0
-; 0007 006A    int i=0,j=0;
-; 0007 006B    printDebug("[printConfig]Data:[\r\n");
 ;PCODE: $00000186 VOL: 0
 ;PCODE: $00000187 VOL: 0
+;PCODE: $00000188 VOL: 0
+;PCODE: $00000189 VOL: 0
+; 0007 0067 }
+;PCODE: $0000018A VOL: 0
+;
+;void iPrintConfig(char eeprom *eptr,unsigned int len)
+; 0007 006A {
+;PCODE: $0000018B VOL: 0
+;PCODE: $0000018C VOL: 0
+; 0007 006B    int i=0,j=0;
+; 0007 006C    printDebug("[printConfig]Data:[\r\n");
+;PCODE: $0000018D VOL: 0
+;PCODE: $0000018E VOL: 0
 ;	*eptr -> Y+6
 ;	len -> Y+4
 ;	i -> R16,R17
 ;	j -> R18,R19
-;PCODE: $00000188 VOL: 0
-;PCODE: $00000189 VOL: 0
-;PCODE: $0000018A VOL: 0
-;PCODE: $0000018B VOL: 0
-;PCODE: $0000018C VOL: 0
-;PCODE: $0000018D VOL: 0
-;PCODE: $0000018E VOL: 0
 ;PCODE: $0000018F VOL: 0
 ;PCODE: $00000190 VOL: 0
 ;PCODE: $00000191 VOL: 0
 ;PCODE: $00000192 VOL: 0
-; 0007 006C    printDebug("%04d\t\t",0);
 ;PCODE: $00000193 VOL: 0
 ;PCODE: $00000194 VOL: 0
 ;PCODE: $00000195 VOL: 0
@@ -533,9 +533,9 @@
 ;PCODE: $00000197 VOL: 0
 ;PCODE: $00000198 VOL: 0
 ;PCODE: $00000199 VOL: 0
+; 0007 006D    printDebug("%04d\t\t",0);
 ;PCODE: $0000019A VOL: 0
 ;PCODE: $0000019B VOL: 0
-; 0007 006D    for(i=0,j=1;i<len;i++,j++) {
 ;PCODE: $0000019C VOL: 0
 ;PCODE: $0000019D VOL: 0
 ;PCODE: $0000019E VOL: 0
@@ -543,13 +543,13 @@
 ;PCODE: $000001A0 VOL: 0
 ;PCODE: $000001A1 VOL: 0
 ;PCODE: $000001A2 VOL: 0
+; 0007 006E    for(i=0,j=1;i<len;i++,j++) {
 ;PCODE: $000001A3 VOL: 0
 ;PCODE: $000001A4 VOL: 0
 ;PCODE: $000001A5 VOL: 0
 ;PCODE: $000001A6 VOL: 0
 ;PCODE: $000001A7 VOL: 0
 ;PCODE: $000001A8 VOL: 0
-; 0007 006E       printDebug("%02x",*(eptr++));
 ;PCODE: $000001A9 VOL: 0
 ;PCODE: $000001AA VOL: 0
 ;PCODE: $000001AB VOL: 0
@@ -557,6 +557,7 @@
 ;PCODE: $000001AD VOL: 0
 ;PCODE: $000001AE VOL: 0
 ;PCODE: $000001AF VOL: 0
+; 0007 006F       printDebug("%02x",*(eptr++));
 ;PCODE: $000001B0 VOL: 0
 ;PCODE: $000001B1 VOL: 0
 ;PCODE: $000001B2 VOL: 0
@@ -564,33 +565,32 @@
 ;PCODE: $000001B4 VOL: 0
 ;PCODE: $000001B5 VOL: 0
 ;PCODE: $000001B6 VOL: 0
-; 0007 006F       if(j==8){
 ;PCODE: $000001B7 VOL: 0
 ;PCODE: $000001B8 VOL: 0
 ;PCODE: $000001B9 VOL: 0
-; 0007 0070          printDebug("\t\t");
 ;PCODE: $000001BA VOL: 0
 ;PCODE: $000001BB VOL: 0
 ;PCODE: $000001BC VOL: 0
 ;PCODE: $000001BD VOL: 0
+; 0007 0070       if(j==8){
 ;PCODE: $000001BE VOL: 0
 ;PCODE: $000001BF VOL: 0
 ;PCODE: $000001C0 VOL: 0
-; 0007 0071       }else if(j==16){
+; 0007 0071          printDebug("\t\t");
 ;PCODE: $000001C1 VOL: 0
 ;PCODE: $000001C2 VOL: 0
 ;PCODE: $000001C3 VOL: 0
 ;PCODE: $000001C4 VOL: 0
 ;PCODE: $000001C5 VOL: 0
-; 0007 0072          printDebug("\r\n");
 ;PCODE: $000001C6 VOL: 0
 ;PCODE: $000001C7 VOL: 0
+; 0007 0072       }else if(j==16){
 ;PCODE: $000001C8 VOL: 0
 ;PCODE: $000001C9 VOL: 0
 ;PCODE: $000001CA VOL: 0
 ;PCODE: $000001CB VOL: 0
 ;PCODE: $000001CC VOL: 0
-; 0007 0073          printDebug("%04d\t\t",i+1);
+; 0007 0073          printDebug("\r\n");
 ;PCODE: $000001CD VOL: 0
 ;PCODE: $000001CE VOL: 0
 ;PCODE: $000001CF VOL: 0
@@ -598,25 +598,25 @@
 ;PCODE: $000001D1 VOL: 0
 ;PCODE: $000001D2 VOL: 0
 ;PCODE: $000001D3 VOL: 0
+; 0007 0074          printDebug("%04d\t\t",i+1);
 ;PCODE: $000001D4 VOL: 0
 ;PCODE: $000001D5 VOL: 0
 ;PCODE: $000001D6 VOL: 0
 ;PCODE: $000001D7 VOL: 0
-; 0007 0074          j=0;
 ;PCODE: $000001D8 VOL: 0
 ;PCODE: $000001D9 VOL: 0
-; 0007 0075       }
-; 0007 0076    }
 ;PCODE: $000001DA VOL: 0
 ;PCODE: $000001DB VOL: 0
 ;PCODE: $000001DC VOL: 0
 ;PCODE: $000001DD VOL: 0
 ;PCODE: $000001DE VOL: 0
+; 0007 0075          j=0;
 ;PCODE: $000001DF VOL: 0
 ;PCODE: $000001E0 VOL: 0
+; 0007 0076       }
+; 0007 0077    }
 ;PCODE: $000001E1 VOL: 0
 ;PCODE: $000001E2 VOL: 0
-; 0007 0077    printDebug("\r\n]\r\n");
 ;PCODE: $000001E3 VOL: 0
 ;PCODE: $000001E4 VOL: 0
 ;PCODE: $000001E5 VOL: 0
@@ -624,9 +624,17 @@
 ;PCODE: $000001E7 VOL: 0
 ;PCODE: $000001E8 VOL: 0
 ;PCODE: $000001E9 VOL: 0
-; 0007 0078    return;
+; 0007 0078    printDebug("\r\n]\r\n");
 ;PCODE: $000001EA VOL: 0
 ;PCODE: $000001EB VOL: 0
 ;PCODE: $000001EC VOL: 0
-; 0007 0079 }
 ;PCODE: $000001ED VOL: 0
+;PCODE: $000001EE VOL: 0
+;PCODE: $000001EF VOL: 0
+;PCODE: $000001F0 VOL: 0
+; 0007 0079    return;
+;PCODE: $000001F1 VOL: 0
+;PCODE: $000001F2 VOL: 0
+;PCODE: $000001F3 VOL: 0
+; 0007 007A }
+;PCODE: $000001F4 VOL: 0

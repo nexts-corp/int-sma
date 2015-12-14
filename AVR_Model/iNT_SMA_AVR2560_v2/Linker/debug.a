@@ -1764,12 +1764,12 @@
 ;PCODE: $00000524 VOL: 0
 ;PCODE: $00000525 VOL: 0
 ;PCODE: $00000526 VOL: 0
-;PCODE: $00000527 VOL: 0
 ; 0015 0194             }
 ; 0015 0195             else{
+;PCODE: $00000527 VOL: 0
 ;PCODE: $00000528 VOL: 0
-;PCODE: $00000529 VOL: 0
 ; 0015 0196                 DEVICE_SERIAL[i/3]  = (set_str[i] - 87) << 4;
+;PCODE: $00000529 VOL: 0
 ;PCODE: $0000052A VOL: 0
 ;PCODE: $0000052B VOL: 0
 ;PCODE: $0000052C VOL: 0
@@ -1784,22 +1784,22 @@
 ;PCODE: $00000535 VOL: 0
 ;PCODE: $00000536 VOL: 0
 ;PCODE: $00000537 VOL: 0
-;PCODE: $00000538 VOL: 0
-;PCODE: $00000539 VOL: 0
 ; 0015 0197             }
-;PCODE: $0000053A VOL: 0
+;PCODE: $00000538 VOL: 0
 ; 0015 0198         }
 ; 0015 0199         else if((i%3) == 2) {
+;PCODE: $00000539 VOL: 0
+;PCODE: $0000053A VOL: 0
 ;PCODE: $0000053B VOL: 0
 ;PCODE: $0000053C VOL: 0
 ;PCODE: $0000053D VOL: 0
 ;PCODE: $0000053E VOL: 0
 ;PCODE: $0000053F VOL: 0
 ;PCODE: $00000540 VOL: 0
-;PCODE: $00000541 VOL: 0
-;PCODE: $00000542 VOL: 0
 ; 0015 019A 
 ; 0015 019B             printDebug("%c]",set_str[i]);
+;PCODE: $00000541 VOL: 0
+;PCODE: $00000542 VOL: 0
 ;PCODE: $00000543 VOL: 0
 ;PCODE: $00000544 VOL: 0
 ;PCODE: $00000545 VOL: 0
@@ -1812,19 +1812,19 @@
 ;PCODE: $0000054C VOL: 0
 ;PCODE: $0000054D VOL: 0
 ;PCODE: $0000054E VOL: 0
-;PCODE: $0000054F VOL: 0
-;PCODE: $00000550 VOL: 0
 ; 0015 019C 
 ; 0015 019D             if(isdigit(set_str[i])){
+;PCODE: $0000054F VOL: 0
+;PCODE: $00000550 VOL: 0
 ;PCODE: $00000551 VOL: 0
 ;PCODE: $00000552 VOL: 0
 ;PCODE: $00000553 VOL: 0
 ;PCODE: $00000554 VOL: 0
 ;PCODE: $00000555 VOL: 0
 ;PCODE: $00000556 VOL: 0
+; 0015 019E                 DEVICE_SERIAL[i/3]  |= (set_str[i] - 48);
 ;PCODE: $00000557 VOL: 0
 ;PCODE: $00000558 VOL: 0
-; 0015 019E                 DEVICE_SERIAL[i/3]  |= (set_str[i] - 48);
 ;PCODE: $00000559 VOL: 0
 ;PCODE: $0000055A VOL: 0
 ;PCODE: $0000055B VOL: 0
@@ -1841,14 +1841,14 @@
 ;PCODE: $00000566 VOL: 0
 ;PCODE: $00000567 VOL: 0
 ;PCODE: $00000568 VOL: 0
-;PCODE: $00000569 VOL: 0
-;PCODE: $0000056A VOL: 0
-;PCODE: $0000056B VOL: 0
 ; 0015 019F             }
 ; 0015 01A0             else{
+;PCODE: $00000569 VOL: 0
+;PCODE: $0000056A VOL: 0
+; 0015 01A1                 DEVICE_SERIAL[i/3]  |= (set_str[i] - 87);
+;PCODE: $0000056B VOL: 0
 ;PCODE: $0000056C VOL: 0
 ;PCODE: $0000056D VOL: 0
-; 0015 01A1                 DEVICE_SERIAL[i/3]  |= (set_str[i] - 87);
 ;PCODE: $0000056E VOL: 0
 ;PCODE: $0000056F VOL: 0
 ;PCODE: $00000570 VOL: 0
@@ -1864,42 +1864,42 @@
 ;PCODE: $0000057A VOL: 0
 ;PCODE: $0000057B VOL: 0
 ;PCODE: $0000057C VOL: 0
+; 0015 01A2             }
 ;PCODE: $0000057D VOL: 0
+; 0015 01A3         }
+; 0015 01A4     }
 ;PCODE: $0000057E VOL: 0
 ;PCODE: $0000057F VOL: 0
 ;PCODE: $00000580 VOL: 0
-; 0015 01A2             }
 ;PCODE: $00000581 VOL: 0
-; 0015 01A3         }
-; 0015 01A4     }
 ;PCODE: $00000582 VOL: 0
 ;PCODE: $00000583 VOL: 0
 ;PCODE: $00000584 VOL: 0
 ;PCODE: $00000585 VOL: 0
+; 0015 01A5 
+; 0015 01A6     printDebug("<DEBUG_setSerialNumber> Success!! DEV_SERIAL ==> ");
 ;PCODE: $00000586 VOL: 0
 ;PCODE: $00000587 VOL: 0
 ;PCODE: $00000588 VOL: 0
 ;PCODE: $00000589 VOL: 0
-; 0015 01A5 
-; 0015 01A6     printDebug("<DEBUG_setSerialNumber> Success!! DEV_SERIAL ==> ");
 ;PCODE: $0000058A VOL: 0
 ;PCODE: $0000058B VOL: 0
 ;PCODE: $0000058C VOL: 0
+; 0015 01A7     for(i=0;i<8;i++){
 ;PCODE: $0000058D VOL: 0
 ;PCODE: $0000058E VOL: 0
 ;PCODE: $0000058F VOL: 0
 ;PCODE: $00000590 VOL: 0
-; 0015 01A7     for(i=0;i<8;i++){
 ;PCODE: $00000591 VOL: 0
 ;PCODE: $00000592 VOL: 0
 ;PCODE: $00000593 VOL: 0
 ;PCODE: $00000594 VOL: 0
 ;PCODE: $00000595 VOL: 0
+; 0015 01A8         printDebug("[%02X]",DEVICE_SERIAL[i]);
 ;PCODE: $00000596 VOL: 0
 ;PCODE: $00000597 VOL: 0
 ;PCODE: $00000598 VOL: 0
 ;PCODE: $00000599 VOL: 0
-; 0015 01A8         printDebug("[%02X]",DEVICE_SERIAL[i]);
 ;PCODE: $0000059A VOL: 0
 ;PCODE: $0000059B VOL: 0
 ;PCODE: $0000059C VOL: 0
@@ -1909,60 +1909,60 @@
 ;PCODE: $000005A0 VOL: 0
 ;PCODE: $000005A1 VOL: 0
 ;PCODE: $000005A2 VOL: 0
+; 0015 01A9     }
 ;PCODE: $000005A3 VOL: 0
 ;PCODE: $000005A4 VOL: 0
 ;PCODE: $000005A5 VOL: 0
 ;PCODE: $000005A6 VOL: 0
-; 0015 01A9     }
 ;PCODE: $000005A7 VOL: 0
+; 0015 01AA     printDebug("\r\n");
 ;PCODE: $000005A8 VOL: 0
 ;PCODE: $000005A9 VOL: 0
 ;PCODE: $000005AA VOL: 0
 ;PCODE: $000005AB VOL: 0
-; 0015 01AA     printDebug("\r\n");
 ;PCODE: $000005AC VOL: 0
 ;PCODE: $000005AD VOL: 0
 ;PCODE: $000005AE VOL: 0
+; 0015 01AB 
+; 0015 01AC     return;
 ;PCODE: $000005AF VOL: 0
 ;PCODE: $000005B0 VOL: 0
 ;PCODE: $000005B1 VOL: 0
 ;PCODE: $000005B2 VOL: 0
-; 0015 01AB 
-; 0015 01AC     return;
-;PCODE: $000005B3 VOL: 0
-;PCODE: $000005B4 VOL: 0
-;PCODE: $000005B5 VOL: 0
-;PCODE: $000005B6 VOL: 0
 ; 0015 01AD }
-;PCODE: $000005B7 VOL: 0
+;PCODE: $000005B3 VOL: 0
 ;/*============================================================*/
 ;void DEBUG_readSerialNumber(void)
 ; 0015 01B0 {
-;PCODE: $000005B8 VOL: 0
-;PCODE: $000005B9 VOL: 0
+;PCODE: $000005B4 VOL: 0
+;PCODE: $000005B5 VOL: 0
 ; 0015 01B1     unsigned char i;
 ; 0015 01B2 
 ; 0015 01B3     printDebug("<DEBUG_readSerialNumber> DEV_SERIAL ==> ");
-;PCODE: $000005BA VOL: 0
+;PCODE: $000005B6 VOL: 0
 ;	i -> R17
+;PCODE: $000005B7 VOL: 0
+;PCODE: $000005B8 VOL: 0
+;PCODE: $000005B9 VOL: 0
+;PCODE: $000005BA VOL: 0
 ;PCODE: $000005BB VOL: 0
 ;PCODE: $000005BC VOL: 0
 ;PCODE: $000005BD VOL: 0
+; 0015 01B4     for(i=0;i<8;i++){
 ;PCODE: $000005BE VOL: 0
 ;PCODE: $000005BF VOL: 0
 ;PCODE: $000005C0 VOL: 0
 ;PCODE: $000005C1 VOL: 0
-; 0015 01B4     for(i=0;i<8;i++){
 ;PCODE: $000005C2 VOL: 0
 ;PCODE: $000005C3 VOL: 0
 ;PCODE: $000005C4 VOL: 0
 ;PCODE: $000005C5 VOL: 0
 ;PCODE: $000005C6 VOL: 0
+; 0015 01B5         printDebug("[%02X]",DEVICE_SERIAL[i]);
 ;PCODE: $000005C7 VOL: 0
 ;PCODE: $000005C8 VOL: 0
 ;PCODE: $000005C9 VOL: 0
 ;PCODE: $000005CA VOL: 0
-; 0015 01B5         printDebug("[%02X]",DEVICE_SERIAL[i]);
 ;PCODE: $000005CB VOL: 0
 ;PCODE: $000005CC VOL: 0
 ;PCODE: $000005CD VOL: 0
@@ -1972,30 +1972,26 @@
 ;PCODE: $000005D1 VOL: 0
 ;PCODE: $000005D2 VOL: 0
 ;PCODE: $000005D3 VOL: 0
+; 0015 01B6     }
 ;PCODE: $000005D4 VOL: 0
 ;PCODE: $000005D5 VOL: 0
 ;PCODE: $000005D6 VOL: 0
 ;PCODE: $000005D7 VOL: 0
-; 0015 01B6     }
 ;PCODE: $000005D8 VOL: 0
+; 0015 01B7     printDebug("\r\n");
 ;PCODE: $000005D9 VOL: 0
 ;PCODE: $000005DA VOL: 0
 ;PCODE: $000005DB VOL: 0
 ;PCODE: $000005DC VOL: 0
-; 0015 01B7     printDebug("\r\n");
 ;PCODE: $000005DD VOL: 0
 ;PCODE: $000005DE VOL: 0
 ;PCODE: $000005DF VOL: 0
-;PCODE: $000005E0 VOL: 0
-;PCODE: $000005E1 VOL: 0
-;PCODE: $000005E2 VOL: 0
-;PCODE: $000005E3 VOL: 0
 ; 0015 01B8 
 ; 0015 01B9     return;
-;PCODE: $000005E4 VOL: 0
-;PCODE: $000005E5 VOL: 0
+;PCODE: $000005E0 VOL: 0
+;PCODE: $000005E1 VOL: 0
 ; 0015 01BA }
-;PCODE: $000005E6 VOL: 0
+;PCODE: $000005E2 VOL: 0
 ;/*============================================================*/
 ;
 ;/**************************************************************/
@@ -2004,201 +2000,205 @@
 ;/*============================================================*/
 ;void debug_req(void)
 ; 0015 01C2 {
-;PCODE: $000005E7 VOL: 0
-;PCODE: $000005E8 VOL: 0
+;PCODE: $000005E3 VOL: 0
+;PCODE: $000005E4 VOL: 0
 ; 0015 01C3     flag_PackageTerminate3 = 0;
-;PCODE: $000005E9 VOL: 0
-;PCODE: $000005EA VOL: 0
+;PCODE: $000005E5 VOL: 0
+;PCODE: $000005E6 VOL: 0
 ; 0015 01C4 
 ; 0015 01C5     printDebug("Get Debug Req.:");
+;PCODE: $000005E7 VOL: 0
+;PCODE: $000005E8 VOL: 0
+;PCODE: $000005E9 VOL: 0
+;PCODE: $000005EA VOL: 0
 ;PCODE: $000005EB VOL: 0
 ;PCODE: $000005EC VOL: 0
 ;PCODE: $000005ED VOL: 0
+; 0015 01C6 
+; 0015 01C7 
+; 0015 01C8     if(!strncmpf(rxPackage3,cmdSetRTCDateTime,7)){
 ;PCODE: $000005EE VOL: 0
 ;PCODE: $000005EF VOL: 0
 ;PCODE: $000005F0 VOL: 0
 ;PCODE: $000005F1 VOL: 0
-; 0015 01C6 
-; 0015 01C7 
-; 0015 01C8     if(!strncmpf(rxPackage3,cmdSetRTCDateTime,7)){
 ;PCODE: $000005F2 VOL: 0
 ;PCODE: $000005F3 VOL: 0
 ;PCODE: $000005F4 VOL: 0
 ;PCODE: $000005F5 VOL: 0
+; 0015 01C9         DEBUG_setDateTime();
 ;PCODE: $000005F6 VOL: 0
+; 0015 01CA     }
+; 0015 01CB     else if(!strncmpf(rxPackage3,cmdResetAlarmStatus,7)){
 ;PCODE: $000005F7 VOL: 0
 ;PCODE: $000005F8 VOL: 0
 ;PCODE: $000005F9 VOL: 0
-; 0015 01C9         DEBUG_setDateTime();
 ;PCODE: $000005FA VOL: 0
-; 0015 01CA     }
-; 0015 01CB     else if(!strncmpf(rxPackage3,cmdResetAlarmStatus,7)){
 ;PCODE: $000005FB VOL: 0
 ;PCODE: $000005FC VOL: 0
 ;PCODE: $000005FD VOL: 0
 ;PCODE: $000005FE VOL: 0
 ;PCODE: $000005FF VOL: 0
 ;PCODE: $00000600 VOL: 0
+; 0015 01CC         DEBUG_resetAlarm();
 ;PCODE: $00000601 VOL: 0
+; 0015 01CD     }
+; 0015 01CE     else if(!strncmpf(rxPackage3,cmdClearLogFile,7)){
 ;PCODE: $00000602 VOL: 0
 ;PCODE: $00000603 VOL: 0
 ;PCODE: $00000604 VOL: 0
-; 0015 01CC         DEBUG_resetAlarm();
 ;PCODE: $00000605 VOL: 0
-; 0015 01CD     }
-; 0015 01CE     else if(!strncmpf(rxPackage3,cmdClearLogFile,7)){
 ;PCODE: $00000606 VOL: 0
 ;PCODE: $00000607 VOL: 0
 ;PCODE: $00000608 VOL: 0
 ;PCODE: $00000609 VOL: 0
 ;PCODE: $0000060A VOL: 0
 ;PCODE: $0000060B VOL: 0
+; 0015 01CF         DEBUG_ClearLogFile();
 ;PCODE: $0000060C VOL: 0
+; 0015 01D0     }
+; 0015 01D1     else if(!strncmpf(rxPackage3,cmdSetVref,7)){
 ;PCODE: $0000060D VOL: 0
 ;PCODE: $0000060E VOL: 0
 ;PCODE: $0000060F VOL: 0
-; 0015 01CF         DEBUG_ClearLogFile();
 ;PCODE: $00000610 VOL: 0
-; 0015 01D0     }
-; 0015 01D1     else if(!strncmpf(rxPackage3,cmdSetVref,7)){
 ;PCODE: $00000611 VOL: 0
 ;PCODE: $00000612 VOL: 0
 ;PCODE: $00000613 VOL: 0
 ;PCODE: $00000614 VOL: 0
 ;PCODE: $00000615 VOL: 0
 ;PCODE: $00000616 VOL: 0
+; 0015 01D2         DEBUG_setRealVref();
 ;PCODE: $00000617 VOL: 0
+; 0015 01D3     }
+; 0015 01D4     else if(!strncmpf(rxPackage3,cmdSensorSelect,7)){
 ;PCODE: $00000618 VOL: 0
 ;PCODE: $00000619 VOL: 0
 ;PCODE: $0000061A VOL: 0
-; 0015 01D2         DEBUG_setRealVref();
 ;PCODE: $0000061B VOL: 0
-; 0015 01D3     }
-; 0015 01D4     else if(!strncmpf(rxPackage3,cmdSensorSelect,7)){
 ;PCODE: $0000061C VOL: 0
 ;PCODE: $0000061D VOL: 0
 ;PCODE: $0000061E VOL: 0
 ;PCODE: $0000061F VOL: 0
 ;PCODE: $00000620 VOL: 0
 ;PCODE: $00000621 VOL: 0
+; 0015 01D5         DEBUG_sensorSelect();
 ;PCODE: $00000622 VOL: 0
+; 0015 01D6     }
+; 0015 01D7     else if(!strncmpf(rxPackage3,cmdDeviceEnable,7)){
 ;PCODE: $00000623 VOL: 0
 ;PCODE: $00000624 VOL: 0
 ;PCODE: $00000625 VOL: 0
-; 0015 01D5         DEBUG_sensorSelect();
 ;PCODE: $00000626 VOL: 0
-; 0015 01D6     }
-; 0015 01D7     else if(!strncmpf(rxPackage3,cmdDeviceEnable,7)){
 ;PCODE: $00000627 VOL: 0
 ;PCODE: $00000628 VOL: 0
 ;PCODE: $00000629 VOL: 0
 ;PCODE: $0000062A VOL: 0
 ;PCODE: $0000062B VOL: 0
 ;PCODE: $0000062C VOL: 0
+; 0015 01D8         DEBUG_setDeviceEnable(1);
 ;PCODE: $0000062D VOL: 0
 ;PCODE: $0000062E VOL: 0
-;PCODE: $0000062F VOL: 0
-;PCODE: $00000630 VOL: 0
-; 0015 01D8         DEBUG_setDeviceEnable(1);
-;PCODE: $00000631 VOL: 0
-;PCODE: $00000632 VOL: 0
 ; 0015 01D9     }
 ; 0015 01DA     else if(!strncmpf(rxPackage3,cmdDeviceDisable,7)){
+;PCODE: $0000062F VOL: 0
+;PCODE: $00000630 VOL: 0
+;PCODE: $00000631 VOL: 0
+;PCODE: $00000632 VOL: 0
 ;PCODE: $00000633 VOL: 0
 ;PCODE: $00000634 VOL: 0
 ;PCODE: $00000635 VOL: 0
 ;PCODE: $00000636 VOL: 0
 ;PCODE: $00000637 VOL: 0
 ;PCODE: $00000638 VOL: 0
+; 0015 01DB         DEBUG_setDeviceEnable(0);
 ;PCODE: $00000639 VOL: 0
 ;PCODE: $0000063A VOL: 0
-;PCODE: $0000063B VOL: 0
-;PCODE: $0000063C VOL: 0
-; 0015 01DB         DEBUG_setDeviceEnable(0);
-;PCODE: $0000063D VOL: 0
-;PCODE: $0000063E VOL: 0
 ; 0015 01DC     }
 ; 0015 01DD     else if(!strncmpf(rxPackage3,cmdSetSerialNumber,7)){
+;PCODE: $0000063B VOL: 0
+;PCODE: $0000063C VOL: 0
+;PCODE: $0000063D VOL: 0
+;PCODE: $0000063E VOL: 0
 ;PCODE: $0000063F VOL: 0
 ;PCODE: $00000640 VOL: 0
 ;PCODE: $00000641 VOL: 0
 ;PCODE: $00000642 VOL: 0
 ;PCODE: $00000643 VOL: 0
 ;PCODE: $00000644 VOL: 0
+; 0015 01DE         DEBUG_setSerialNumber();
 ;PCODE: $00000645 VOL: 0
+; 0015 01DF     }
+; 0015 01E0     else if(!strncmpf(rxPackage3,cmdReadSerialNumber,7)){
 ;PCODE: $00000646 VOL: 0
 ;PCODE: $00000647 VOL: 0
 ;PCODE: $00000648 VOL: 0
-; 0015 01DE         DEBUG_setSerialNumber();
 ;PCODE: $00000649 VOL: 0
-; 0015 01DF     }
-; 0015 01E0     else if(!strncmpf(rxPackage3,cmdReadSerialNumber,7)){
 ;PCODE: $0000064A VOL: 0
 ;PCODE: $0000064B VOL: 0
 ;PCODE: $0000064C VOL: 0
 ;PCODE: $0000064D VOL: 0
 ;PCODE: $0000064E VOL: 0
 ;PCODE: $0000064F VOL: 0
+; 0015 01E1         DEBUG_readSerialNumber();
 ;PCODE: $00000650 VOL: 0
+; 0015 01E2     }else if(!strncmpf(rxPackage3,cmdGetCal,7)){
 ;PCODE: $00000651 VOL: 0
 ;PCODE: $00000652 VOL: 0
 ;PCODE: $00000653 VOL: 0
-; 0015 01E1         DEBUG_readSerialNumber();
 ;PCODE: $00000654 VOL: 0
-; 0015 01E2     }else if(!strncmpf(rxPackage3,cmdGetCal,7)){
 ;PCODE: $00000655 VOL: 0
 ;PCODE: $00000656 VOL: 0
 ;PCODE: $00000657 VOL: 0
 ;PCODE: $00000658 VOL: 0
 ;PCODE: $00000659 VOL: 0
 ;PCODE: $0000065A VOL: 0
+; 0015 01E3         debugGetCal();
 ;PCODE: $0000065B VOL: 0
+; 0015 01E4     }else if(!strncmpf(rxPackage3,cmdSetCal,7)){
 ;PCODE: $0000065C VOL: 0
 ;PCODE: $0000065D VOL: 0
 ;PCODE: $0000065E VOL: 0
-; 0015 01E3         debugGetCal();
 ;PCODE: $0000065F VOL: 0
-; 0015 01E4     }else if(!strncmpf(rxPackage3,cmdSetCal,7)){
 ;PCODE: $00000660 VOL: 0
 ;PCODE: $00000661 VOL: 0
 ;PCODE: $00000662 VOL: 0
 ;PCODE: $00000663 VOL: 0
 ;PCODE: $00000664 VOL: 0
 ;PCODE: $00000665 VOL: 0
+; 0015 01E5         debugSetCal();
 ;PCODE: $00000666 VOL: 0
+; 0015 01E6     }else if(!strncmpf(rxPackage3,cmdConfirmCal,7)){
 ;PCODE: $00000667 VOL: 0
 ;PCODE: $00000668 VOL: 0
 ;PCODE: $00000669 VOL: 0
-; 0015 01E5         debugSetCal();
 ;PCODE: $0000066A VOL: 0
-; 0015 01E6     }else if(!strncmpf(rxPackage3,cmdConfirmCal,7)){
 ;PCODE: $0000066B VOL: 0
 ;PCODE: $0000066C VOL: 0
 ;PCODE: $0000066D VOL: 0
 ;PCODE: $0000066E VOL: 0
 ;PCODE: $0000066F VOL: 0
 ;PCODE: $00000670 VOL: 0
+; 0015 01E7         debugConfirmCal();
 ;PCODE: $00000671 VOL: 0
+; 0015 01E8     }else if(!strncmpf(rxPackage3,cmdGetCurSensor,7)){
 ;PCODE: $00000672 VOL: 0
 ;PCODE: $00000673 VOL: 0
 ;PCODE: $00000674 VOL: 0
-; 0015 01E7         debugConfirmCal();
 ;PCODE: $00000675 VOL: 0
-; 0015 01E8     }else if(!strncmpf(rxPackage3,cmdGetCurSensor,7)){
 ;PCODE: $00000676 VOL: 0
 ;PCODE: $00000677 VOL: 0
 ;PCODE: $00000678 VOL: 0
 ;PCODE: $00000679 VOL: 0
 ;PCODE: $0000067A VOL: 0
 ;PCODE: $0000067B VOL: 0
+; 0015 01E9         debugGetCurSensor();
 ;PCODE: $0000067C VOL: 0
+; 0015 01EA     }
+; 0015 01EB     return;
 ;PCODE: $0000067D VOL: 0
 ;PCODE: $0000067E VOL: 0
 ;PCODE: $0000067F VOL: 0
-; 0015 01E9         debugGetCurSensor();
 ;PCODE: $00000680 VOL: 0
-; 0015 01EA     }
-; 0015 01EB     return;
 ;PCODE: $00000681 VOL: 0
 ;PCODE: $00000682 VOL: 0
 ;PCODE: $00000683 VOL: 0
@@ -2209,62 +2209,58 @@
 ;PCODE: $00000688 VOL: 0
 ;PCODE: $00000689 VOL: 0
 ;PCODE: $0000068A VOL: 0
-;PCODE: $0000068B VOL: 0
-;PCODE: $0000068C VOL: 0
-;PCODE: $0000068D VOL: 0
-;PCODE: $0000068E VOL: 0
 ; 0015 01EC }
-;PCODE: $0000068F VOL: 0
+;PCODE: $0000068B VOL: 0
 ;/*============================================================*/
 ;void printDebug(flash char *fmtstr, ...)
 ; 0015 01EF {
-;PCODE: $00000690 VOL: 0
-;PCODE: $00000691 VOL: 0
-;PCODE: $00000692 VOL: 0
-;PCODE: $00000693 VOL: 0
+;PCODE: $0000068C VOL: 0
+;PCODE: $0000068D VOL: 0
+;PCODE: $0000068E VOL: 0
+;PCODE: $0000068F VOL: 0
 ; 0015 01F0     char textBuffer[256];
 ; 0015 01F1     va_list argptr;
 ; 0015 01F2 
 ; 0015 01F3     va_start(argptr, fmtstr);
-;PCODE: $00000694 VOL: 0
-;PCODE: $00000695 VOL: 0
-;PCODE: $00000696 VOL: 0
+;PCODE: $00000690 VOL: 0
+;PCODE: $00000691 VOL: 0
+;PCODE: $00000692 VOL: 0
 ;	*fmtstr -> Y+258
 ;	textBuffer -> Y+2
 ;	*argptr -> R16,R17
+;PCODE: $00000693 VOL: 0
+;PCODE: $00000694 VOL: 0
+;PCODE: $00000695 VOL: 0
+; 0015 01F4     vsprintf(textBuffer,fmtstr,argptr);
+;PCODE: $00000696 VOL: 0
 ;PCODE: $00000697 VOL: 0
 ;PCODE: $00000698 VOL: 0
 ;PCODE: $00000699 VOL: 0
-; 0015 01F4     vsprintf(textBuffer,fmtstr,argptr);
 ;PCODE: $0000069A VOL: 0
 ;PCODE: $0000069B VOL: 0
 ;PCODE: $0000069C VOL: 0
 ;PCODE: $0000069D VOL: 0
+; 0015 01F5     send_uart(3,textBuffer);
 ;PCODE: $0000069E VOL: 0
 ;PCODE: $0000069F VOL: 0
 ;PCODE: $000006A0 VOL: 0
 ;PCODE: $000006A1 VOL: 0
-; 0015 01F5     send_uart(3,textBuffer);
+; 0015 01F6     va_end(argptr);
+; 0015 01F7 
+; 0015 01F8     return;
 ;PCODE: $000006A2 VOL: 0
 ;PCODE: $000006A3 VOL: 0
 ;PCODE: $000006A4 VOL: 0
 ;PCODE: $000006A5 VOL: 0
-; 0015 01F6     va_end(argptr);
-; 0015 01F7 
-; 0015 01F8     return;
 ;PCODE: $000006A6 VOL: 0
 ;PCODE: $000006A7 VOL: 0
-;PCODE: $000006A8 VOL: 0
-;PCODE: $000006A9 VOL: 0
-;PCODE: $000006AA VOL: 0
-;PCODE: $000006AB VOL: 0
 ; 0015 01F9 }
-;PCODE: $000006AC VOL: 0
+;PCODE: $000006A8 VOL: 0
 ;/*============================================================*/
 ;void print_hex_ascii_line(const unsigned char *payload, int len, int offset)
 ; 0015 01FC {
-;PCODE: $000006AD VOL: 0
-;PCODE: $000006AE VOL: 0
+;PCODE: $000006A9 VOL: 0
+;PCODE: $000006AA VOL: 0
 ; 0015 01FD 
 ; 0015 01FE     int i;
 ; 0015 01FF     int gap;
@@ -2272,41 +2268,45 @@
 ; 0015 0201 
 ; 0015 0202     // offset //
 ; 0015 0203     printDebug("%05d   ", offset);
-;PCODE: $000006AF VOL: 0
-;PCODE: $000006B0 VOL: 0
+;PCODE: $000006AB VOL: 0
+;PCODE: $000006AC VOL: 0
 ;	*payload -> Y+10
 ;	len -> Y+8
 ;	offset -> Y+6
 ;	i -> R16,R17
 ;	gap -> R18,R19
 ;	*ch -> R20,R21
+;PCODE: $000006AD VOL: 0
+;PCODE: $000006AE VOL: 0
+;PCODE: $000006AF VOL: 0
+;PCODE: $000006B0 VOL: 0
 ;PCODE: $000006B1 VOL: 0
 ;PCODE: $000006B2 VOL: 0
 ;PCODE: $000006B3 VOL: 0
 ;PCODE: $000006B4 VOL: 0
 ;PCODE: $000006B5 VOL: 0
 ;PCODE: $000006B6 VOL: 0
-;PCODE: $000006B7 VOL: 0
-;PCODE: $000006B8 VOL: 0
-;PCODE: $000006B9 VOL: 0
-;PCODE: $000006BA VOL: 0
 ; 0015 0204 
 ; 0015 0205 
 ; 0015 0206     // hex //
 ; 0015 0207     ch = payload;
+;PCODE: $000006B7 VOL: 0
+;PCODE: $000006B8 VOL: 0
+; 0015 0208     for(i = 0; i < len; i++) {
+;PCODE: $000006B9 VOL: 0
+;PCODE: $000006BA VOL: 0
 ;PCODE: $000006BB VOL: 0
 ;PCODE: $000006BC VOL: 0
-; 0015 0208     for(i = 0; i < len; i++) {
 ;PCODE: $000006BD VOL: 0
 ;PCODE: $000006BE VOL: 0
 ;PCODE: $000006BF VOL: 0
 ;PCODE: $000006C0 VOL: 0
 ;PCODE: $000006C1 VOL: 0
+; 0015 0209         printDebug("%02x ", *ch);
 ;PCODE: $000006C2 VOL: 0
 ;PCODE: $000006C3 VOL: 0
 ;PCODE: $000006C4 VOL: 0
 ;PCODE: $000006C5 VOL: 0
-; 0015 0209         printDebug("%02x ", *ch);
 ;PCODE: $000006C6 VOL: 0
 ;PCODE: $000006C7 VOL: 0
 ;PCODE: $000006C8 VOL: 0
@@ -2314,121 +2314,121 @@
 ;PCODE: $000006CA VOL: 0
 ;PCODE: $000006CB VOL: 0
 ;PCODE: $000006CC VOL: 0
-;PCODE: $000006CD VOL: 0
-;PCODE: $000006CE VOL: 0
-;PCODE: $000006CF VOL: 0
-;PCODE: $000006D0 VOL: 0
 ; 0015 020A 
 ; 0015 020B         ch++;
-;PCODE: $000006D1 VOL: 0
-;PCODE: $000006D2 VOL: 0
+;PCODE: $000006CD VOL: 0
+;PCODE: $000006CE VOL: 0
 ; 0015 020C         // print extra space after 8th byte for visual aid //
 ; 0015 020D         if (i == 7){
+;PCODE: $000006CF VOL: 0
+;PCODE: $000006D0 VOL: 0
+;PCODE: $000006D1 VOL: 0
+; 0015 020E             printDebug(" ");
+;PCODE: $000006D2 VOL: 0
 ;PCODE: $000006D3 VOL: 0
 ;PCODE: $000006D4 VOL: 0
 ;PCODE: $000006D5 VOL: 0
-; 0015 020E             printDebug(" ");
 ;PCODE: $000006D6 VOL: 0
 ;PCODE: $000006D7 VOL: 0
 ;PCODE: $000006D8 VOL: 0
+; 0015 020F 
+; 0015 0210         }
+; 0015 0211     }
 ;PCODE: $000006D9 VOL: 0
 ;PCODE: $000006DA VOL: 0
 ;PCODE: $000006DB VOL: 0
 ;PCODE: $000006DC VOL: 0
-; 0015 020F 
-; 0015 0210         }
-; 0015 0211     }
 ;PCODE: $000006DD VOL: 0
 ;PCODE: $000006DE VOL: 0
+; 0015 0212     // print space to handle line less than 8 bytes //
+; 0015 0213     if (len < 8){
 ;PCODE: $000006DF VOL: 0
 ;PCODE: $000006E0 VOL: 0
 ;PCODE: $000006E1 VOL: 0
+; 0015 0214         printDebug(" ");
 ;PCODE: $000006E2 VOL: 0
-; 0015 0212     // print space to handle line less than 8 bytes //
-; 0015 0213     if (len < 8){
 ;PCODE: $000006E3 VOL: 0
 ;PCODE: $000006E4 VOL: 0
 ;PCODE: $000006E5 VOL: 0
-; 0015 0214         printDebug(" ");
 ;PCODE: $000006E6 VOL: 0
 ;PCODE: $000006E7 VOL: 0
 ;PCODE: $000006E8 VOL: 0
-;PCODE: $000006E9 VOL: 0
-;PCODE: $000006EA VOL: 0
-;PCODE: $000006EB VOL: 0
-;PCODE: $000006EC VOL: 0
 ; 0015 0215 
 ; 0015 0216     }
 ; 0015 0217 
 ; 0015 0218     // fill hex gap with spaces if not full line //
 ; 0015 0219     if (len < 16) {
+;PCODE: $000006E9 VOL: 0
+;PCODE: $000006EA VOL: 0
+;PCODE: $000006EB VOL: 0
+;PCODE: $000006EC VOL: 0
+; 0015 021A         gap = 16 - len;
 ;PCODE: $000006ED VOL: 0
 ;PCODE: $000006EE VOL: 0
 ;PCODE: $000006EF VOL: 0
 ;PCODE: $000006F0 VOL: 0
-; 0015 021A         gap = 16 - len;
+; 0015 021B         for (i = 0; i < gap; i++) {
 ;PCODE: $000006F1 VOL: 0
 ;PCODE: $000006F2 VOL: 0
 ;PCODE: $000006F3 VOL: 0
 ;PCODE: $000006F4 VOL: 0
-; 0015 021B         for (i = 0; i < gap; i++) {
 ;PCODE: $000006F5 VOL: 0
 ;PCODE: $000006F6 VOL: 0
 ;PCODE: $000006F7 VOL: 0
 ;PCODE: $000006F8 VOL: 0
 ;PCODE: $000006F9 VOL: 0
+; 0015 021C             printDebug("   ");
 ;PCODE: $000006FA VOL: 0
 ;PCODE: $000006FB VOL: 0
 ;PCODE: $000006FC VOL: 0
 ;PCODE: $000006FD VOL: 0
-; 0015 021C             printDebug("   ");
 ;PCODE: $000006FE VOL: 0
 ;PCODE: $000006FF VOL: 0
 ;PCODE: $00000700 VOL: 0
+; 0015 021D 
+; 0015 021E         }
 ;PCODE: $00000701 VOL: 0
 ;PCODE: $00000702 VOL: 0
 ;PCODE: $00000703 VOL: 0
 ;PCODE: $00000704 VOL: 0
-; 0015 021D 
-; 0015 021E         }
 ;PCODE: $00000705 VOL: 0
+; 0015 021F     }
+; 0015 0220     printDebug("   ");
 ;PCODE: $00000706 VOL: 0
 ;PCODE: $00000707 VOL: 0
 ;PCODE: $00000708 VOL: 0
 ;PCODE: $00000709 VOL: 0
-; 0015 021F     }
-; 0015 0220     printDebug("   ");
 ;PCODE: $0000070A VOL: 0
 ;PCODE: $0000070B VOL: 0
 ;PCODE: $0000070C VOL: 0
 ;PCODE: $0000070D VOL: 0
-;PCODE: $0000070E VOL: 0
-;PCODE: $0000070F VOL: 0
-;PCODE: $00000710 VOL: 0
-;PCODE: $00000711 VOL: 0
 ; 0015 0221 
 ; 0015 0222 
 ; 0015 0223     // ascii (if printable) //
 ; 0015 0224     ch = payload;
+;PCODE: $0000070E VOL: 0
+;PCODE: $0000070F VOL: 0
+; 0015 0225     for(i = 0; i < len; i++) {
+;PCODE: $00000710 VOL: 0
+;PCODE: $00000711 VOL: 0
 ;PCODE: $00000712 VOL: 0
 ;PCODE: $00000713 VOL: 0
-; 0015 0225     for(i = 0; i < len; i++) {
 ;PCODE: $00000714 VOL: 0
 ;PCODE: $00000715 VOL: 0
 ;PCODE: $00000716 VOL: 0
 ;PCODE: $00000717 VOL: 0
 ;PCODE: $00000718 VOL: 0
+; 0015 0226         if (isprint(*ch)){
 ;PCODE: $00000719 VOL: 0
 ;PCODE: $0000071A VOL: 0
 ;PCODE: $0000071B VOL: 0
 ;PCODE: $0000071C VOL: 0
-; 0015 0226         if (isprint(*ch)){
 ;PCODE: $0000071D VOL: 0
+; 0015 0227             printDebug("%c", *ch);
 ;PCODE: $0000071E VOL: 0
 ;PCODE: $0000071F VOL: 0
 ;PCODE: $00000720 VOL: 0
 ;PCODE: $00000721 VOL: 0
-; 0015 0227             printDebug("%c", *ch);
 ;PCODE: $00000722 VOL: 0
 ;PCODE: $00000723 VOL: 0
 ;PCODE: $00000724 VOL: 0
@@ -2436,57 +2436,53 @@
 ;PCODE: $00000726 VOL: 0
 ;PCODE: $00000727 VOL: 0
 ;PCODE: $00000728 VOL: 0
-;PCODE: $00000729 VOL: 0
-;PCODE: $0000072A VOL: 0
-;PCODE: $0000072B VOL: 0
-;PCODE: $0000072C VOL: 0
 ; 0015 0228 
 ; 0015 0229         }
 ; 0015 022A         else{
+;PCODE: $00000729 VOL: 0
+;PCODE: $0000072A VOL: 0
+; 0015 022B             printDebug(".");
+;PCODE: $0000072B VOL: 0
+;PCODE: $0000072C VOL: 0
 ;PCODE: $0000072D VOL: 0
 ;PCODE: $0000072E VOL: 0
-; 0015 022B             printDebug(".");
 ;PCODE: $0000072F VOL: 0
 ;PCODE: $00000730 VOL: 0
 ;PCODE: $00000731 VOL: 0
-;PCODE: $00000732 VOL: 0
-;PCODE: $00000733 VOL: 0
-;PCODE: $00000734 VOL: 0
-;PCODE: $00000735 VOL: 0
 ; 0015 022C 
 ; 0015 022D         }
-;PCODE: $00000736 VOL: 0
+;PCODE: $00000732 VOL: 0
 ; 0015 022E         ch++;
+;PCODE: $00000733 VOL: 0
+;PCODE: $00000734 VOL: 0
+; 0015 022F     }
+;PCODE: $00000735 VOL: 0
+;PCODE: $00000736 VOL: 0
 ;PCODE: $00000737 VOL: 0
 ;PCODE: $00000738 VOL: 0
-; 0015 022F     }
 ;PCODE: $00000739 VOL: 0
+; 0015 0230 
+; 0015 0231     printDebug("\r\n");
 ;PCODE: $0000073A VOL: 0
 ;PCODE: $0000073B VOL: 0
 ;PCODE: $0000073C VOL: 0
 ;PCODE: $0000073D VOL: 0
-; 0015 0230 
-; 0015 0231     printDebug("\r\n");
 ;PCODE: $0000073E VOL: 0
 ;PCODE: $0000073F VOL: 0
 ;PCODE: $00000740 VOL: 0
-;PCODE: $00000741 VOL: 0
-;PCODE: $00000742 VOL: 0
-;PCODE: $00000743 VOL: 0
-;PCODE: $00000744 VOL: 0
 ; 0015 0232 
 ; 0015 0233 
 ; 0015 0234 return;
-;PCODE: $00000745 VOL: 0
-;PCODE: $00000746 VOL: 0
-;PCODE: $00000747 VOL: 0
+;PCODE: $00000741 VOL: 0
+;PCODE: $00000742 VOL: 0
+;PCODE: $00000743 VOL: 0
 ; 0015 0235 }
-;PCODE: $00000748 VOL: 0
+;PCODE: $00000744 VOL: 0
 ;/*============================================================*/
 ;void print_payload(const unsigned char *payload, int len)
 ; 0015 0238 {
-;PCODE: $00000749 VOL: 0
-;PCODE: $0000074A VOL: 0
+;PCODE: $00000745 VOL: 0
+;PCODE: $00000746 VOL: 0
 ; 0015 0239 
 ; 0015 023A     int len_rem = len;
 ; 0015 023B     int line_width = 16;            // number of bytes per line //
@@ -2495,13 +2491,13 @@
 ; 0015 023E     const unsigned char *ch = payload;
 ; 0015 023F 
 ; 0015 0240     if (len <= 0)
+;PCODE: $00000747 VOL: 0
+;PCODE: $00000748 VOL: 0
+;PCODE: $00000749 VOL: 0
+;PCODE: $0000074A VOL: 0
 ;PCODE: $0000074B VOL: 0
 ;PCODE: $0000074C VOL: 0
 ;PCODE: $0000074D VOL: 0
-;PCODE: $0000074E VOL: 0
-;PCODE: $0000074F VOL: 0
-;PCODE: $00000750 VOL: 0
-;PCODE: $00000751 VOL: 0
 ;	*payload -> Y+12
 ;	len -> Y+10
 ;	len_rem -> R16,R17
@@ -2509,105 +2505,105 @@
 ;	line_len -> R20,R21
 ;	offset -> Y+8
 ;	*ch -> Y+6
+;PCODE: $0000074E VOL: 0
+;PCODE: $0000074F VOL: 0
+;PCODE: $00000750 VOL: 0
+;PCODE: $00000751 VOL: 0
 ;PCODE: $00000752 VOL: 0
 ;PCODE: $00000753 VOL: 0
 ;PCODE: $00000754 VOL: 0
 ;PCODE: $00000755 VOL: 0
 ;PCODE: $00000756 VOL: 0
+; 0015 0241         return;
 ;PCODE: $00000757 VOL: 0
 ;PCODE: $00000758 VOL: 0
 ;PCODE: $00000759 VOL: 0
-;PCODE: $0000075A VOL: 0
-; 0015 0241         return;
-;PCODE: $0000075B VOL: 0
-;PCODE: $0000075C VOL: 0
-;PCODE: $0000075D VOL: 0
 ; 0015 0242 
 ; 0015 0243     // data fits on one line //
 ; 0015 0244     if (len <= line_width) {
+;PCODE: $0000075A VOL: 0
+;PCODE: $0000075B VOL: 0
+;PCODE: $0000075C VOL: 0
+;PCODE: $0000075D VOL: 0
+; 0015 0245         print_hex_ascii_line(ch, len, offset);
 ;PCODE: $0000075E VOL: 0
 ;PCODE: $0000075F VOL: 0
 ;PCODE: $00000760 VOL: 0
 ;PCODE: $00000761 VOL: 0
-; 0015 0245         print_hex_ascii_line(ch, len, offset);
 ;PCODE: $00000762 VOL: 0
 ;PCODE: $00000763 VOL: 0
+; 0015 0246         return;
 ;PCODE: $00000764 VOL: 0
 ;PCODE: $00000765 VOL: 0
 ;PCODE: $00000766 VOL: 0
-;PCODE: $00000767 VOL: 0
-; 0015 0246         return;
-;PCODE: $00000768 VOL: 0
-;PCODE: $00000769 VOL: 0
-;PCODE: $0000076A VOL: 0
 ; 0015 0247     }
 ; 0015 0248     // data spans multiple lines //
 ; 0015 0249     for ( ;; ) {
+;PCODE: $00000767 VOL: 0
+;PCODE: $00000768 VOL: 0
+;PCODE: $00000769 VOL: 0
+; 0015 024A         // compute current line length //
+; 0015 024B         line_len = line_width % len_rem;
+;PCODE: $0000076A VOL: 0
 ;PCODE: $0000076B VOL: 0
 ;PCODE: $0000076C VOL: 0
 ;PCODE: $0000076D VOL: 0
-; 0015 024A         // compute current line length //
-; 0015 024B         line_len = line_width % len_rem;
+; 0015 024C         // print line //
+; 0015 024D         print_hex_ascii_line(ch, line_len, offset);
 ;PCODE: $0000076E VOL: 0
 ;PCODE: $0000076F VOL: 0
 ;PCODE: $00000770 VOL: 0
 ;PCODE: $00000771 VOL: 0
-; 0015 024C         // print line //
-; 0015 024D         print_hex_ascii_line(ch, line_len, offset);
 ;PCODE: $00000772 VOL: 0
-;PCODE: $00000773 VOL: 0
-;PCODE: $00000774 VOL: 0
-;PCODE: $00000775 VOL: 0
-;PCODE: $00000776 VOL: 0
 ; 0015 024E         // compute total remaining //
 ; 0015 024F         len_rem = len_rem - line_len;
-;PCODE: $00000777 VOL: 0
-;PCODE: $00000778 VOL: 0
+;PCODE: $00000773 VOL: 0
+;PCODE: $00000774 VOL: 0
 ; 0015 0250         // shift pointer to remaining bytes to print //
 ; 0015 0251         ch = ch + line_len;
+;PCODE: $00000775 VOL: 0
+;PCODE: $00000776 VOL: 0
+;PCODE: $00000777 VOL: 0
+;PCODE: $00000778 VOL: 0
+; 0015 0252         // add offset //
+; 0015 0253         offset = offset + line_width;
 ;PCODE: $00000779 VOL: 0
 ;PCODE: $0000077A VOL: 0
 ;PCODE: $0000077B VOL: 0
 ;PCODE: $0000077C VOL: 0
-; 0015 0252         // add offset //
-; 0015 0253         offset = offset + line_width;
+; 0015 0254         // check if we have line width chars or less //
+; 0015 0255         if (len_rem <= line_width) {
 ;PCODE: $0000077D VOL: 0
 ;PCODE: $0000077E VOL: 0
 ;PCODE: $0000077F VOL: 0
+; 0015 0256             // print last line and get out //
+; 0015 0257             print_hex_ascii_line(ch, len_rem, offset);
 ;PCODE: $00000780 VOL: 0
-; 0015 0254         // check if we have line width chars or less //
-; 0015 0255         if (len_rem <= line_width) {
 ;PCODE: $00000781 VOL: 0
 ;PCODE: $00000782 VOL: 0
 ;PCODE: $00000783 VOL: 0
-; 0015 0256             // print last line and get out //
-; 0015 0257             print_hex_ascii_line(ch, len_rem, offset);
 ;PCODE: $00000784 VOL: 0
+; 0015 0258             break;
 ;PCODE: $00000785 VOL: 0
+; 0015 0259         }
+; 0015 025A     }
 ;PCODE: $00000786 VOL: 0
 ;PCODE: $00000787 VOL: 0
 ;PCODE: $00000788 VOL: 0
-; 0015 0258             break;
 ;PCODE: $00000789 VOL: 0
-; 0015 0259         }
-; 0015 025A     }
+; 0015 025B 
+; 0015 025C     return;
 ;PCODE: $0000078A VOL: 0
 ;PCODE: $0000078B VOL: 0
 ;PCODE: $0000078C VOL: 0
-;PCODE: $0000078D VOL: 0
-; 0015 025B 
-; 0015 025C     return;
-;PCODE: $0000078E VOL: 0
-;PCODE: $0000078F VOL: 0
-;PCODE: $00000790 VOL: 0
 ; 0015 025D }
-;PCODE: $00000791 VOL: 0
+;PCODE: $0000078D VOL: 0
 ;/*============================================================*/
 ;void debugConfWiz100sr(){
 ; 0015 025F void debugConfWiz100sr(){
-;PCODE: $00000792 VOL: 0
-;PCODE: $00000793 VOL: 0
+;PCODE: $0000078E VOL: 0
+;PCODE: $0000078F VOL: 0
 ; 0015 0260 
 ; 0015 0261 }
-;PCODE: $00000794 VOL: 0
-;PCODE: $00000795 VOL: 0
+;PCODE: $00000790 VOL: 0
+;PCODE: $00000791 VOL: 0

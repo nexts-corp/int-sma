@@ -306,15 +306,15 @@
 ;PCODE: $000000BF VOL: 0
 ;PCODE: $000000C0 VOL: 0
 ;PCODE: $000000C1 VOL: 0
-;PCODE: $000000C2 VOL: 0
 ; 000D 0050     if(ch==0){
+;PCODE: $000000C2 VOL: 0
 ;PCODE: $000000C3 VOL: 0
 ;PCODE: $000000C4 VOL: 0
-;PCODE: $000000C5 VOL: 0
 ; 000D 0051         //adcData[ch] =   adc_raw;
 ; 000D 0052         //mA420Value = ((((adcData[ch]+5.0/1023.0)*3.30)/3.30)*20.0);
 ; 000D 0053 
 ; 000D 0054         for(i=0;i<10;i++){
+;PCODE: $000000C5 VOL: 0
 ;PCODE: $000000C6 VOL: 0
 ;PCODE: $000000C7 VOL: 0
 ;PCODE: $000000C8 VOL: 0
@@ -323,8 +323,8 @@
 ;PCODE: $000000CB VOL: 0
 ;PCODE: $000000CC VOL: 0
 ;PCODE: $000000CD VOL: 0
-;PCODE: $000000CE VOL: 0
 ; 000D 0055             buff420Sensor[i] = read_adc(8+ch);
+;PCODE: $000000CE VOL: 0
 ;PCODE: $000000CF VOL: 0
 ;PCODE: $000000D0 VOL: 0
 ;PCODE: $000000D1 VOL: 0
@@ -335,17 +335,17 @@
 ;PCODE: $000000D6 VOL: 0
 ;PCODE: $000000D7 VOL: 0
 ;PCODE: $000000D8 VOL: 0
-;PCODE: $000000D9 VOL: 0
-;PCODE: $000000DA VOL: 0
 ; 000D 0056             delay_us(10);
-;PCODE: $000000DB VOL: 0
+;PCODE: $000000D9 VOL: 0
 ; 000D 0057         }
+;PCODE: $000000DA VOL: 0
+;PCODE: $000000DB VOL: 0
 ;PCODE: $000000DC VOL: 0
 ;PCODE: $000000DD VOL: 0
 ;PCODE: $000000DE VOL: 0
+; 000D 0058         mA420Value = ((average(buff420Sensor,10)+5.0)/1023.0)*20.0;
 ;PCODE: $000000DF VOL: 0
 ;PCODE: $000000E0 VOL: 0
-; 000D 0058         mA420Value = ((average(buff420Sensor,10)+5.0)/1023.0)*20.0;
 ;PCODE: $000000E1 VOL: 0
 ;PCODE: $000000E2 VOL: 0
 ;PCODE: $000000E3 VOL: 0
@@ -357,27 +357,27 @@
 ;PCODE: $000000E9 VOL: 0
 ;PCODE: $000000EA VOL: 0
 ;PCODE: $000000EB VOL: 0
-;PCODE: $000000EC VOL: 0
-;PCODE: $000000ED VOL: 0
 ; 000D 0059         //mA420Value = (((adcData[ch]+5.0/1023.0)*3.30)/165.0);     //R=165 Ohm
 ; 000D 005A        //printDebug("[%d]ADC: %f, mA: %f \r\n", ch, adcData[ch], mA420Value);
 ; 000D 005B        //adcData[ch] = (adcData[ch]+5/1023.0)*3.30;
 ; 000D 005C        adcData[ch] = mA420Value;
+;PCODE: $000000EC VOL: 0
+;PCODE: $000000ED VOL: 0
 ;PCODE: $000000EE VOL: 0
 ;PCODE: $000000EF VOL: 0
 ;PCODE: $000000F0 VOL: 0
 ;PCODE: $000000F1 VOL: 0
+; 000D 005D     }else if(ch==3){
 ;PCODE: $000000F2 VOL: 0
 ;PCODE: $000000F3 VOL: 0
-; 000D 005D     }else if(ch==3){
 ;PCODE: $000000F4 VOL: 0
 ;PCODE: $000000F5 VOL: 0
 ;PCODE: $000000F6 VOL: 0
-;PCODE: $000000F7 VOL: 0
-;PCODE: $000000F8 VOL: 0
 ; 000D 005E         //adcData[ch] =   adc_raw;
 ; 000D 005F         //voltValue = ((((adcData[ch]+5.0)/1023.0)*3.30)/3.30)*1000.0;
 ; 000D 0060         for(i=0;i<50;i++){
+;PCODE: $000000F7 VOL: 0
+;PCODE: $000000F8 VOL: 0
 ;PCODE: $000000F9 VOL: 0
 ;PCODE: $000000FA VOL: 0
 ;PCODE: $000000FB VOL: 0
@@ -385,9 +385,9 @@
 ;PCODE: $000000FD VOL: 0
 ;PCODE: $000000FE VOL: 0
 ;PCODE: $000000FF VOL: 0
+; 000D 0061             buffVoltSensor[i] = read_adc(8+ch);
 ;PCODE: $00000100 VOL: 0
 ;PCODE: $00000101 VOL: 0
-; 000D 0061             buffVoltSensor[i] = read_adc(8+ch);
 ;PCODE: $00000102 VOL: 0
 ;PCODE: $00000103 VOL: 0
 ;PCODE: $00000104 VOL: 0
@@ -397,20 +397,20 @@
 ;PCODE: $00000108 VOL: 0
 ;PCODE: $00000109 VOL: 0
 ;PCODE: $0000010A VOL: 0
+; 000D 0062             delay_us(10);
 ;PCODE: $0000010B VOL: 0
+; 000D 0063         }
 ;PCODE: $0000010C VOL: 0
 ;PCODE: $0000010D VOL: 0
-; 000D 0062             delay_us(10);
 ;PCODE: $0000010E VOL: 0
-; 000D 0063         }
 ;PCODE: $0000010F VOL: 0
 ;PCODE: $00000110 VOL: 0
-;PCODE: $00000111 VOL: 0
-;PCODE: $00000112 VOL: 0
-;PCODE: $00000113 VOL: 0
 ; 000D 0064 
 ; 000D 0065 
 ; 000D 0066         voltValue = ((average(buffVoltSensor,50)+5.0)/1023.0)*1000.0;
+;PCODE: $00000111 VOL: 0
+;PCODE: $00000112 VOL: 0
+;PCODE: $00000113 VOL: 0
 ;PCODE: $00000114 VOL: 0
 ;PCODE: $00000115 VOL: 0
 ;PCODE: $00000116 VOL: 0
@@ -421,44 +421,44 @@
 ;PCODE: $0000011B VOL: 0
 ;PCODE: $0000011C VOL: 0
 ;PCODE: $0000011D VOL: 0
-;PCODE: $0000011E VOL: 0
-;PCODE: $0000011F VOL: 0
-;PCODE: $00000120 VOL: 0
 ; 000D 0067         //printDebug("[%d]ADC: %f, Volt(raw): %f, Volt(AC): %f \r\n", ch, adcData[ch], (adcData[ch]+5.0/1023.0)*3.30, voltValue);
 ; 000D 0068 
 ; 000D 0069        adcData[ch] = voltValue;
+;PCODE: $0000011E VOL: 0
+;PCODE: $0000011F VOL: 0
+;PCODE: $00000120 VOL: 0
 ;PCODE: $00000121 VOL: 0
 ;PCODE: $00000122 VOL: 0
 ;PCODE: $00000123 VOL: 0
+; 000D 006A        //adcData[ch] = (adcData[ch]+5/1023)*3.30;
+; 000D 006B     }else if(ch==4){
 ;PCODE: $00000124 VOL: 0
 ;PCODE: $00000125 VOL: 0
 ;PCODE: $00000126 VOL: 0
-; 000D 006A        //adcData[ch] = (adcData[ch]+5/1023)*3.30;
-; 000D 006B     }else if(ch==4){
 ;PCODE: $00000127 VOL: 0
 ;PCODE: $00000128 VOL: 0
+; 000D 006C         memset(buffAmpSensor,0,sizeof(buffAmpSensor));
 ;PCODE: $00000129 VOL: 0
 ;PCODE: $0000012A VOL: 0
 ;PCODE: $0000012B VOL: 0
-; 000D 006C         memset(buffAmpSensor,0,sizeof(buffAmpSensor));
 ;PCODE: $0000012C VOL: 0
 ;PCODE: $0000012D VOL: 0
 ;PCODE: $0000012E VOL: 0
 ;PCODE: $0000012F VOL: 0
+; 000D 006D         for(i=0;i<60;i++){
 ;PCODE: $00000130 VOL: 0
 ;PCODE: $00000131 VOL: 0
 ;PCODE: $00000132 VOL: 0
-; 000D 006D         for(i=0;i<60;i++){
 ;PCODE: $00000133 VOL: 0
 ;PCODE: $00000134 VOL: 0
 ;PCODE: $00000135 VOL: 0
 ;PCODE: $00000136 VOL: 0
 ;PCODE: $00000137 VOL: 0
 ;PCODE: $00000138 VOL: 0
+; 000D 006E           buffAmpSensor[i] =  read_adc(8+ch);
 ;PCODE: $00000139 VOL: 0
 ;PCODE: $0000013A VOL: 0
 ;PCODE: $0000013B VOL: 0
-; 000D 006E           buffAmpSensor[i] =  read_adc(8+ch);
 ;PCODE: $0000013C VOL: 0
 ;PCODE: $0000013D VOL: 0
 ;PCODE: $0000013E VOL: 0
@@ -467,23 +467,23 @@
 ;PCODE: $00000141 VOL: 0
 ;PCODE: $00000142 VOL: 0
 ;PCODE: $00000143 VOL: 0
+; 000D 006F           delay_ms(1);
 ;PCODE: $00000144 VOL: 0
 ;PCODE: $00000145 VOL: 0
 ;PCODE: $00000146 VOL: 0
+; 000D 0070         }
 ;PCODE: $00000147 VOL: 0
-; 000D 006F           delay_ms(1);
 ;PCODE: $00000148 VOL: 0
 ;PCODE: $00000149 VOL: 0
 ;PCODE: $0000014A VOL: 0
-; 000D 0070         }
 ;PCODE: $0000014B VOL: 0
+; 000D 0071         //adcData[ch] = average(buffAmpSensor);
+; 000D 0072        // voltCutOff = fabs(((((adcData[ch]+5.0)/1023.0)*3.30)-1.65));
+; 000D 0073         voltCutOff = fabs(((((voltPeak(buffAmpSensor)+5.0)/1023.0)*3.30)-1.65));
 ;PCODE: $0000014C VOL: 0
 ;PCODE: $0000014D VOL: 0
 ;PCODE: $0000014E VOL: 0
 ;PCODE: $0000014F VOL: 0
-; 000D 0071         //adcData[ch] = average(buffAmpSensor);
-; 000D 0072        // voltCutOff = fabs(((((adcData[ch]+5.0)/1023.0)*3.30)-1.65));
-; 000D 0073         voltCutOff = fabs(((((voltPeak(buffAmpSensor)+5.0)/1023.0)*3.30)-1.65));
 ;PCODE: $00000150 VOL: 0
 ;PCODE: $00000151 VOL: 0
 ;PCODE: $00000152 VOL: 0
@@ -496,66 +496,62 @@
 ;PCODE: $00000159 VOL: 0
 ;PCODE: $0000015A VOL: 0
 ;PCODE: $0000015B VOL: 0
+; 000D 0074         ampValue = (voltCutOff*1000.0)/18.5;
 ;PCODE: $0000015C VOL: 0
 ;PCODE: $0000015D VOL: 0
 ;PCODE: $0000015E VOL: 0
 ;PCODE: $0000015F VOL: 0
-; 000D 0074         ampValue = (voltCutOff*1000.0)/18.5;
 ;PCODE: $00000160 VOL: 0
 ;PCODE: $00000161 VOL: 0
 ;PCODE: $00000162 VOL: 0
+; 000D 0075         //printDebug("[%d]ADC: %f, Volt(raw): %f, Amp: %f\r\n", ch, adcData[ch], (adcData[ch]-511.0), ampValue);
+; 000D 0076 
+; 000D 0077        adcData[ch] =  ampValue;
 ;PCODE: $00000163 VOL: 0
 ;PCODE: $00000164 VOL: 0
 ;PCODE: $00000165 VOL: 0
 ;PCODE: $00000166 VOL: 0
-; 000D 0075         //printDebug("[%d]ADC: %f, Volt(raw): %f, Amp: %f\r\n", ch, adcData[ch], (adcData[ch]-511.0), ampValue);
-; 000D 0076 
-; 000D 0077        adcData[ch] =  ampValue;
 ;PCODE: $00000167 VOL: 0
 ;PCODE: $00000168 VOL: 0
+; 000D 0078     }else if((ch==1) || (ch==2)){
 ;PCODE: $00000169 VOL: 0
 ;PCODE: $0000016A VOL: 0
 ;PCODE: $0000016B VOL: 0
 ;PCODE: $0000016C VOL: 0
-; 000D 0078     }else if((ch==1) || (ch==2)){
 ;PCODE: $0000016D VOL: 0
 ;PCODE: $0000016E VOL: 0
 ;PCODE: $0000016F VOL: 0
 ;PCODE: $00000170 VOL: 0
 ;PCODE: $00000171 VOL: 0
 ;PCODE: $00000172 VOL: 0
-;PCODE: $00000173 VOL: 0
-;PCODE: $00000174 VOL: 0
-;PCODE: $00000175 VOL: 0
-;PCODE: $00000176 VOL: 0
 ; 000D 0079 
 ; 000D 007A         //dhtRet = DHT11Read(&dhtDevice);
 ; 000D 007B 
 ; 000D 007C         dht11Reread = 0;
-;PCODE: $00000177 VOL: 0
-;PCODE: $00000178 VOL: 0
+;PCODE: $00000173 VOL: 0
+;PCODE: $00000174 VOL: 0
 ; 000D 007D         //memset(&dhtDevice,0,sizeof(dhtDevice));
 ; 000D 007E         for(i=0;i<20;i++){
+;PCODE: $00000175 VOL: 0
+;PCODE: $00000176 VOL: 0
+;PCODE: $00000177 VOL: 0
+;PCODE: $00000178 VOL: 0
 ;PCODE: $00000179 VOL: 0
 ;PCODE: $0000017A VOL: 0
 ;PCODE: $0000017B VOL: 0
 ;PCODE: $0000017C VOL: 0
 ;PCODE: $0000017D VOL: 0
+; 000D 007F 
+; 000D 0080             dhtRet = DHT11Read(&dhtDevice);
 ;PCODE: $0000017E VOL: 0
 ;PCODE: $0000017F VOL: 0
 ;PCODE: $00000180 VOL: 0
-;PCODE: $00000181 VOL: 0
-; 000D 007F 
-; 000D 0080             dhtRet = DHT11Read(&dhtDevice);
-;PCODE: $00000182 VOL: 0
-;PCODE: $00000183 VOL: 0
-;PCODE: $00000184 VOL: 0
 ; 000D 0081             //delay_ms(4);
 ; 000D 0082             //printDebug("[%d]ADC:DHT11:Return (%d). \r\n", ch,dhtRet);
 ; 000D 0083             if(dhtRet == DHT11_SUCCESS){
-;PCODE: $00000185 VOL: 0
-;PCODE: $00000186 VOL: 0
-;PCODE: $00000187 VOL: 0
+;PCODE: $00000181 VOL: 0
+;PCODE: $00000182 VOL: 0
+;PCODE: $00000183 VOL: 0
 ; 000D 0084 //                if(ch==1){
 ; 000D 0085 //                  bufferTemp[dht11Reread] = dhtDevice.temp;
 ; 000D 0086 //                }else if(ch==2){
@@ -563,51 +559,55 @@
 ; 000D 0088 //                }
 ; 000D 0089 
 ; 000D 008A                 bufferTemp[dht11Reread] = dhtDevice.temp;
+;PCODE: $00000184 VOL: 0
+;PCODE: $00000185 VOL: 0
+;PCODE: $00000186 VOL: 0
+;PCODE: $00000187 VOL: 0
 ;PCODE: $00000188 VOL: 0
 ;PCODE: $00000189 VOL: 0
+; 000D 008B                 bufferHumi[dht11Reread] = dhtDevice.humi;
 ;PCODE: $0000018A VOL: 0
 ;PCODE: $0000018B VOL: 0
 ;PCODE: $0000018C VOL: 0
 ;PCODE: $0000018D VOL: 0
-; 000D 008B                 bufferHumi[dht11Reread] = dhtDevice.humi;
 ;PCODE: $0000018E VOL: 0
 ;PCODE: $0000018F VOL: 0
 ;PCODE: $00000190 VOL: 0
+; 000D 008C 
+; 000D 008D                 ++dht11Reread;
 ;PCODE: $00000191 VOL: 0
 ;PCODE: $00000192 VOL: 0
 ;PCODE: $00000193 VOL: 0
+; 000D 008E             }
+; 000D 008F             if(dht11Reread>=2){
 ;PCODE: $00000194 VOL: 0
-; 000D 008C 
-; 000D 008D                 ++dht11Reread;
 ;PCODE: $00000195 VOL: 0
 ;PCODE: $00000196 VOL: 0
 ;PCODE: $00000197 VOL: 0
-; 000D 008E             }
-; 000D 008F             if(dht11Reread>=2){
+; 000D 0090                break;
 ;PCODE: $00000198 VOL: 0
+; 000D 0091             }
+; 000D 0092         }
 ;PCODE: $00000199 VOL: 0
 ;PCODE: $0000019A VOL: 0
 ;PCODE: $0000019B VOL: 0
-; 000D 0090                break;
 ;PCODE: $0000019C VOL: 0
-; 000D 0091             }
-; 000D 0092         }
 ;PCODE: $0000019D VOL: 0
 ;PCODE: $0000019E VOL: 0
+; 000D 0093 
+; 000D 0094         if(dht11Reread>=2){
 ;PCODE: $0000019F VOL: 0
 ;PCODE: $000001A0 VOL: 0
 ;PCODE: $000001A1 VOL: 0
+; 000D 0095             if(ch==1){
 ;PCODE: $000001A2 VOL: 0
-; 000D 0093 
-; 000D 0094         if(dht11Reread>=2){
 ;PCODE: $000001A3 VOL: 0
 ;PCODE: $000001A4 VOL: 0
+; 000D 0096                adcData[ch] = average(bufferTemp,2);
 ;PCODE: $000001A5 VOL: 0
-; 000D 0095             if(ch==1){
 ;PCODE: $000001A6 VOL: 0
 ;PCODE: $000001A7 VOL: 0
 ;PCODE: $000001A8 VOL: 0
-; 000D 0096                adcData[ch] = average(bufferTemp,2);
 ;PCODE: $000001A9 VOL: 0
 ;PCODE: $000001AA VOL: 0
 ;PCODE: $000001AB VOL: 0
@@ -616,17 +616,17 @@
 ;PCODE: $000001AE VOL: 0
 ;PCODE: $000001AF VOL: 0
 ;PCODE: $000001B0 VOL: 0
+; 000D 0097             }else if(ch==2){
 ;PCODE: $000001B1 VOL: 0
 ;PCODE: $000001B2 VOL: 0
 ;PCODE: $000001B3 VOL: 0
 ;PCODE: $000001B4 VOL: 0
-; 000D 0097             }else if(ch==2){
 ;PCODE: $000001B5 VOL: 0
+; 000D 0098                adcData[ch] = average(bufferHumi,2);
 ;PCODE: $000001B6 VOL: 0
 ;PCODE: $000001B7 VOL: 0
 ;PCODE: $000001B8 VOL: 0
 ;PCODE: $000001B9 VOL: 0
-; 000D 0098                adcData[ch] = average(bufferHumi,2);
 ;PCODE: $000001BA VOL: 0
 ;PCODE: $000001BB VOL: 0
 ;PCODE: $000001BC VOL: 0
@@ -635,24 +635,24 @@
 ;PCODE: $000001BF VOL: 0
 ;PCODE: $000001C0 VOL: 0
 ;PCODE: $000001C1 VOL: 0
+; 000D 0099             }
+; 000D 009A         }else if(dht11Reread>=1){
 ;PCODE: $000001C2 VOL: 0
 ;PCODE: $000001C3 VOL: 0
 ;PCODE: $000001C4 VOL: 0
 ;PCODE: $000001C5 VOL: 0
-; 000D 0099             }
-; 000D 009A         }else if(dht11Reread>=1){
 ;PCODE: $000001C6 VOL: 0
 ;PCODE: $000001C7 VOL: 0
 ;PCODE: $000001C8 VOL: 0
+; 000D 009B             if(ch==1){
 ;PCODE: $000001C9 VOL: 0
 ;PCODE: $000001CA VOL: 0
 ;PCODE: $000001CB VOL: 0
+; 000D 009C                adcData[ch] = average(bufferTemp,1);
 ;PCODE: $000001CC VOL: 0
-; 000D 009B             if(ch==1){
 ;PCODE: $000001CD VOL: 0
 ;PCODE: $000001CE VOL: 0
 ;PCODE: $000001CF VOL: 0
-; 000D 009C                adcData[ch] = average(bufferTemp,1);
 ;PCODE: $000001D0 VOL: 0
 ;PCODE: $000001D1 VOL: 0
 ;PCODE: $000001D2 VOL: 0
@@ -661,17 +661,17 @@
 ;PCODE: $000001D5 VOL: 0
 ;PCODE: $000001D6 VOL: 0
 ;PCODE: $000001D7 VOL: 0
+; 000D 009D             }else if(ch==2){
 ;PCODE: $000001D8 VOL: 0
 ;PCODE: $000001D9 VOL: 0
 ;PCODE: $000001DA VOL: 0
 ;PCODE: $000001DB VOL: 0
-; 000D 009D             }else if(ch==2){
 ;PCODE: $000001DC VOL: 0
+; 000D 009E                adcData[ch] = average(bufferHumi,1);
 ;PCODE: $000001DD VOL: 0
 ;PCODE: $000001DE VOL: 0
 ;PCODE: $000001DF VOL: 0
 ;PCODE: $000001E0 VOL: 0
-; 000D 009E                adcData[ch] = average(bufferHumi,1);
 ;PCODE: $000001E1 VOL: 0
 ;PCODE: $000001E2 VOL: 0
 ;PCODE: $000001E3 VOL: 0
@@ -680,36 +680,36 @@
 ;PCODE: $000001E6 VOL: 0
 ;PCODE: $000001E7 VOL: 0
 ;PCODE: $000001E8 VOL: 0
-;PCODE: $000001E9 VOL: 0
-;PCODE: $000001EA VOL: 0
-;PCODE: $000001EB VOL: 0
-;PCODE: $000001EC VOL: 0
 ; 000D 009F             }
 ; 000D 00A0         }
+;PCODE: $000001E9 VOL: 0
+;PCODE: $000001EA VOL: 0
+; 000D 00A1     }
+;PCODE: $000001EB VOL: 0
+;PCODE: $000001EC VOL: 0
+; 000D 00A2     return;
 ;PCODE: $000001ED VOL: 0
 ;PCODE: $000001EE VOL: 0
-; 000D 00A1     }
 ;PCODE: $000001EF VOL: 0
 ;PCODE: $000001F0 VOL: 0
-; 000D 00A2     return;
 ;PCODE: $000001F1 VOL: 0
 ;PCODE: $000001F2 VOL: 0
 ;PCODE: $000001F3 VOL: 0
-;PCODE: $000001F4 VOL: 0
-;PCODE: $000001F5 VOL: 0
-;PCODE: $000001F6 VOL: 0
-;PCODE: $000001F7 VOL: 0
 ; 000D 00A3 }
-;PCODE: $000001F8 VOL: 0
+;PCODE: $000001F4 VOL: 0
 ;
 ;float voltPeak(float data[]){       //Amp value
 ; 000D 00A5 float voltPeak(float data[]){
-;PCODE: $000001F9 VOL: 0
-;PCODE: $000001FA VOL: 0
+;PCODE: $000001F5 VOL: 0
+;PCODE: $000001F6 VOL: 0
 ; 000D 00A6      int i = 0;
 ; 000D 00A7      float sum=0.0;
 ; 000D 00A8 
 ; 000D 00A9      for(i=0;i<60;i++){
+;PCODE: $000001F7 VOL: 0
+;PCODE: $000001F8 VOL: 0
+;PCODE: $000001F9 VOL: 0
+;PCODE: $000001FA VOL: 0
 ;PCODE: $000001FB VOL: 0
 ;PCODE: $000001FC VOL: 0
 ;PCODE: $000001FD VOL: 0
@@ -718,13 +718,13 @@
 ;PCODE: $00000200 VOL: 0
 ;PCODE: $00000201 VOL: 0
 ;PCODE: $00000202 VOL: 0
+;	data -> Y+6
+;	i -> R16,R17
+;	sum -> Y+2
 ;PCODE: $00000203 VOL: 0
 ;PCODE: $00000204 VOL: 0
 ;PCODE: $00000205 VOL: 0
 ;PCODE: $00000206 VOL: 0
-;	data -> Y+6
-;	i -> R16,R17
-;	sum -> Y+2
 ;PCODE: $00000207 VOL: 0
 ;PCODE: $00000208 VOL: 0
 ;PCODE: $00000209 VOL: 0
@@ -732,11 +732,11 @@
 ;PCODE: $0000020B VOL: 0
 ;PCODE: $0000020C VOL: 0
 ;PCODE: $0000020D VOL: 0
+; 000D 00AA        sum = MAX(sum,data[i]);
 ;PCODE: $0000020E VOL: 0
 ;PCODE: $0000020F VOL: 0
 ;PCODE: $00000210 VOL: 0
 ;PCODE: $00000211 VOL: 0
-; 000D 00AA        sum = MAX(sum,data[i]);
 ;PCODE: $00000212 VOL: 0
 ;PCODE: $00000213 VOL: 0
 ;PCODE: $00000214 VOL: 0
@@ -752,35 +752,35 @@
 ;PCODE: $0000021E VOL: 0
 ;PCODE: $0000021F VOL: 0
 ;PCODE: $00000220 VOL: 0
+; 000D 00AB      }
 ;PCODE: $00000221 VOL: 0
 ;PCODE: $00000222 VOL: 0
 ;PCODE: $00000223 VOL: 0
 ;PCODE: $00000224 VOL: 0
-; 000D 00AB      }
 ;PCODE: $00000225 VOL: 0
+; 000D 00AC      return sum;
 ;PCODE: $00000226 VOL: 0
 ;PCODE: $00000227 VOL: 0
 ;PCODE: $00000228 VOL: 0
 ;PCODE: $00000229 VOL: 0
-; 000D 00AC      return sum;
 ;PCODE: $0000022A VOL: 0
 ;PCODE: $0000022B VOL: 0
 ;PCODE: $0000022C VOL: 0
-;PCODE: $0000022D VOL: 0
-;PCODE: $0000022E VOL: 0
-;PCODE: $0000022F VOL: 0
-;PCODE: $00000230 VOL: 0
 ; 000D 00AD }
-;PCODE: $00000231 VOL: 0
+;PCODE: $0000022D VOL: 0
 ;float average(float data[],int count){      //Volt value
 ; 000D 00AE float average(float data[],int count){
-;PCODE: $00000232 VOL: 0
-;PCODE: $00000233 VOL: 0
+;PCODE: $0000022E VOL: 0
+;PCODE: $0000022F VOL: 0
 ; 000D 00AF      int i = 0;
 ; 000D 00B0      float avg = 0.0, sum=0.0;
 ; 000D 00B1 
 ; 000D 00B2      //printDebug("raw data.\r\n");
 ; 000D 00B3      for(i=0;i<count;i++){
+;PCODE: $00000230 VOL: 0
+;PCODE: $00000231 VOL: 0
+;PCODE: $00000232 VOL: 0
+;PCODE: $00000233 VOL: 0
 ;PCODE: $00000234 VOL: 0
 ;PCODE: $00000235 VOL: 0
 ;PCODE: $00000236 VOL: 0
@@ -797,15 +797,15 @@
 ;PCODE: $00000241 VOL: 0
 ;PCODE: $00000242 VOL: 0
 ;PCODE: $00000243 VOL: 0
-;PCODE: $00000244 VOL: 0
-;PCODE: $00000245 VOL: 0
-;PCODE: $00000246 VOL: 0
-;PCODE: $00000247 VOL: 0
 ;	data -> Y+12
 ;	count -> Y+10
 ;	i -> R16,R17
 ;	avg -> Y+6
 ;	sum -> Y+2
+;PCODE: $00000244 VOL: 0
+;PCODE: $00000245 VOL: 0
+;PCODE: $00000246 VOL: 0
+;PCODE: $00000247 VOL: 0
 ;PCODE: $00000248 VOL: 0
 ;PCODE: $00000249 VOL: 0
 ;PCODE: $0000024A VOL: 0
@@ -813,47 +813,43 @@
 ;PCODE: $0000024C VOL: 0
 ;PCODE: $0000024D VOL: 0
 ;PCODE: $0000024E VOL: 0
+; 000D 00B4        //printDebug("%.2f ", data[i]);
+; 000D 00B5        sum += data[i];
 ;PCODE: $0000024F VOL: 0
 ;PCODE: $00000250 VOL: 0
 ;PCODE: $00000251 VOL: 0
 ;PCODE: $00000252 VOL: 0
-; 000D 00B4        //printDebug("%.2f ", data[i]);
-; 000D 00B5        sum += data[i];
 ;PCODE: $00000253 VOL: 0
 ;PCODE: $00000254 VOL: 0
 ;PCODE: $00000255 VOL: 0
 ;PCODE: $00000256 VOL: 0
+; 000D 00B6      }
 ;PCODE: $00000257 VOL: 0
 ;PCODE: $00000258 VOL: 0
 ;PCODE: $00000259 VOL: 0
 ;PCODE: $0000025A VOL: 0
-; 000D 00B6      }
 ;PCODE: $0000025B VOL: 0
-;PCODE: $0000025C VOL: 0
-;PCODE: $0000025D VOL: 0
-;PCODE: $0000025E VOL: 0
-;PCODE: $0000025F VOL: 0
 ; 000D 00B7      //printDebug("\r\nMax(%.2f) ", sum);
 ; 000D 00B8      //printDebug("\r\n");
 ; 000D 00B9      //return sum;
 ; 000D 00BA 
 ; 000D 00BB 
 ; 000D 00BC      avg =(sum/count);
+;PCODE: $0000025C VOL: 0
+;PCODE: $0000025D VOL: 0
+;PCODE: $0000025E VOL: 0
+;PCODE: $0000025F VOL: 0
 ;PCODE: $00000260 VOL: 0
+; 000D 00BD      return avg;
 ;PCODE: $00000261 VOL: 0
 ;PCODE: $00000262 VOL: 0
 ;PCODE: $00000263 VOL: 0
 ;PCODE: $00000264 VOL: 0
-; 000D 00BD      return avg;
 ;PCODE: $00000265 VOL: 0
 ;PCODE: $00000266 VOL: 0
 ;PCODE: $00000267 VOL: 0
-;PCODE: $00000268 VOL: 0
-;PCODE: $00000269 VOL: 0
-;PCODE: $0000026A VOL: 0
-;PCODE: $0000026B VOL: 0
 ; 000D 00BE }
-;PCODE: $0000026C VOL: 0
+;PCODE: $00000268 VOL: 0
 ;
 ;
 ;

@@ -840,21 +840,21 @@
 ; 0012 00F6         error(res);
 ;PCODE: $00000232 VOL: 0
 ;PCODE: $00000233 VOL: 0
-;PCODE: $00000234 VOL: 0
 ; 0012 00F7         sdFreeSpace = 0;
+;PCODE: $00000234 VOL: 0
 ;PCODE: $00000235 VOL: 0
-;PCODE: $00000236 VOL: 0
 ; 0012 00F8         return -1;
+;PCODE: $00000236 VOL: 0
 ;PCODE: $00000237 VOL: 0
 ;PCODE: $00000238 VOL: 0
 ;PCODE: $00000239 VOL: 0
 ;PCODE: $0000023A VOL: 0
 ;PCODE: $0000023B VOL: 0
 ;PCODE: $0000023C VOL: 0
-;PCODE: $0000023D VOL: 0
 ; 0012 00F9     }
 ; 0012 00FA 
 ; 0012 00FB     return 0;
+;PCODE: $0000023D VOL: 0
 ;PCODE: $0000023E VOL: 0
 ;PCODE: $0000023F VOL: 0
 ;PCODE: $00000240 VOL: 0
@@ -862,22 +862,22 @@
 ;PCODE: $00000242 VOL: 0
 ;PCODE: $00000243 VOL: 0
 ;PCODE: $00000244 VOL: 0
-;PCODE: $00000245 VOL: 0
 ; 0012 00FC }
-;PCODE: $00000246 VOL: 0
+;PCODE: $00000245 VOL: 0
 ;/*============================================================*/
 ;int SD_closeFile(FIL *file)
 ; 0012 00FF {
+;PCODE: $00000246 VOL: 0
 ;PCODE: $00000247 VOL: 0
-;PCODE: $00000248 VOL: 0
 ; 0012 0100     int res;
 ; 0012 0101 
 ; 0012 0102     if(sdFreeSpace == 0){ printDebug("<SD_closeFile> SD Card not ready\r\n");       return -1;}
+;PCODE: $00000248 VOL: 0
 ;PCODE: $00000249 VOL: 0
 ;PCODE: $0000024A VOL: 0
-;PCODE: $0000024B VOL: 0
 ;	*file -> Y+2
 ;	res -> R16,R17
+;PCODE: $0000024B VOL: 0
 ;PCODE: $0000024C VOL: 0
 ;PCODE: $0000024D VOL: 0
 ;PCODE: $0000024E VOL: 0
@@ -894,144 +894,144 @@
 ;PCODE: $00000259 VOL: 0
 ;PCODE: $0000025A VOL: 0
 ;PCODE: $0000025B VOL: 0
-;PCODE: $0000025C VOL: 0
 ; 0012 0103 
 ; 0012 0104     res = f_close( file );
+;PCODE: $0000025C VOL: 0
 ;PCODE: $0000025D VOL: 0
 ;PCODE: $0000025E VOL: 0
 ;PCODE: $0000025F VOL: 0
 ;PCODE: $00000260 VOL: 0
-;PCODE: $00000261 VOL: 0
 ; 0012 0105     if( res != FR_OK ){
+;PCODE: $00000261 VOL: 0
 ;PCODE: $00000262 VOL: 0
-;PCODE: $00000263 VOL: 0
 ; 0012 0106         printDebug("<SD_closeFile> f_close() failed\r\n");
+;PCODE: $00000263 VOL: 0
 ;PCODE: $00000264 VOL: 0
 ;PCODE: $00000265 VOL: 0
 ;PCODE: $00000266 VOL: 0
 ;PCODE: $00000267 VOL: 0
 ;PCODE: $00000268 VOL: 0
 ;PCODE: $00000269 VOL: 0
-;PCODE: $0000026A VOL: 0
 ; 0012 0107         error(res);
+;PCODE: $0000026A VOL: 0
 ;PCODE: $0000026B VOL: 0
+; 0012 0108         return -1;
 ;PCODE: $0000026C VOL: 0
 ;PCODE: $0000026D VOL: 0
-; 0012 0108         return -1;
 ;PCODE: $0000026E VOL: 0
 ;PCODE: $0000026F VOL: 0
 ;PCODE: $00000270 VOL: 0
 ;PCODE: $00000271 VOL: 0
 ;PCODE: $00000272 VOL: 0
-;PCODE: $00000273 VOL: 0
-;PCODE: $00000274 VOL: 0
 ; 0012 0109     }
 ; 0012 010A 
 ; 0012 010B     return 0;
+;PCODE: $00000273 VOL: 0
+;PCODE: $00000274 VOL: 0
 ;PCODE: $00000275 VOL: 0
 ;PCODE: $00000276 VOL: 0
 ;PCODE: $00000277 VOL: 0
 ;PCODE: $00000278 VOL: 0
 ;PCODE: $00000279 VOL: 0
 ;PCODE: $0000027A VOL: 0
-;PCODE: $0000027B VOL: 0
-;PCODE: $0000027C VOL: 0
 ; 0012 010C }
-;PCODE: $0000027D VOL: 0
+;PCODE: $0000027B VOL: 0
 ;/*============================================================*/
 ;int SD_init(void)
 ; 0012 010F {
-;PCODE: $0000027E VOL: 0
-;PCODE: $0000027F VOL: 0
+;PCODE: $0000027C VOL: 0
+;PCODE: $0000027D VOL: 0
 ; 0012 0110     int                 err;
 ; 0012 0111 
 ; 0012 0112     printDebug("<SD_init> Start initial memory card\r\n");
+;PCODE: $0000027E VOL: 0
+;PCODE: $0000027F VOL: 0
+;	err -> R16,R17
 ;PCODE: $00000280 VOL: 0
 ;PCODE: $00000281 VOL: 0
-;	err -> R16,R17
 ;PCODE: $00000282 VOL: 0
 ;PCODE: $00000283 VOL: 0
 ;PCODE: $00000284 VOL: 0
 ;PCODE: $00000285 VOL: 0
 ;PCODE: $00000286 VOL: 0
-;PCODE: $00000287 VOL: 0
-;PCODE: $00000288 VOL: 0
 ; 0012 0113 
 ; 0012 0114     /* point to the FATFS structure that holds
 ; 0012 0115     information for the logical drive 0: */
 ; 0012 0116     pfat=&fat;
-;PCODE: $00000289 VOL: 0
-;PCODE: $0000028A VOL: 0
+;PCODE: $00000287 VOL: 0
+;PCODE: $00000288 VOL: 0
 ; 0012 0117 
 ; 0012 0118     delay_ms(1000);
+;PCODE: $00000289 VOL: 0
+;PCODE: $0000028A VOL: 0
+; 0012 0119     printDebug("\r\n<SD_init> Mounting SD Card...");
 ;PCODE: $0000028B VOL: 0
 ;PCODE: $0000028C VOL: 0
-; 0012 0119     printDebug("\r\n<SD_init> Mounting SD Card...");
 ;PCODE: $0000028D VOL: 0
 ;PCODE: $0000028E VOL: 0
 ;PCODE: $0000028F VOL: 0
 ;PCODE: $00000290 VOL: 0
 ;PCODE: $00000291 VOL: 0
+; 0012 011A     err = SD_mount();
 ;PCODE: $00000292 VOL: 0
 ;PCODE: $00000293 VOL: 0
-; 0012 011A     err = SD_mount();
+; 0012 011B     if(err < 0){
 ;PCODE: $00000294 VOL: 0
 ;PCODE: $00000295 VOL: 0
-; 0012 011B     if(err < 0){
+; 0012 011C         printDebug("<SD_init> SD_mount() failed\r\n");
 ;PCODE: $00000296 VOL: 0
 ;PCODE: $00000297 VOL: 0
-; 0012 011C         printDebug("<SD_init> SD_mount() failed\r\n");
 ;PCODE: $00000298 VOL: 0
 ;PCODE: $00000299 VOL: 0
 ;PCODE: $0000029A VOL: 0
 ;PCODE: $0000029B VOL: 0
 ;PCODE: $0000029C VOL: 0
+; 0012 011D         return -1;
 ;PCODE: $0000029D VOL: 0
 ;PCODE: $0000029E VOL: 0
-; 0012 011D         return -1;
 ;PCODE: $0000029F VOL: 0
-;PCODE: $000002A0 VOL: 0
-;PCODE: $000002A1 VOL: 0
 ; 0012 011E     }
 ; 0012 011F 
 ; 0012 0120 
 ; 0012 0121     printDebug("\r\n<SD_init> Check Card Size...");
+;PCODE: $000002A0 VOL: 0
+;PCODE: $000002A1 VOL: 0
 ;PCODE: $000002A2 VOL: 0
 ;PCODE: $000002A3 VOL: 0
 ;PCODE: $000002A4 VOL: 0
 ;PCODE: $000002A5 VOL: 0
 ;PCODE: $000002A6 VOL: 0
 ;PCODE: $000002A7 VOL: 0
-;PCODE: $000002A8 VOL: 0
-;PCODE: $000002A9 VOL: 0
 ; 0012 0122 
 ; 0012 0123     delay_ms(1000);
-;PCODE: $000002AA VOL: 0
-;PCODE: $000002AB VOL: 0
+;PCODE: $000002A8 VOL: 0
+;PCODE: $000002A9 VOL: 0
 ; 0012 0124 
 ; 0012 0125     err = SD_readMemoryRemain(&sdFreeSpace);
+;PCODE: $000002AA VOL: 0
+;PCODE: $000002AB VOL: 0
 ;PCODE: $000002AC VOL: 0
+; 0012 0126     if(err < 0){
 ;PCODE: $000002AD VOL: 0
 ;PCODE: $000002AE VOL: 0
-; 0012 0126     if(err < 0){
+; 0012 0127         printDebug("<SD_init> SD_readMemoryRemain() failed\r\n");
 ;PCODE: $000002AF VOL: 0
 ;PCODE: $000002B0 VOL: 0
-; 0012 0127         printDebug("<SD_init> SD_readMemoryRemain() failed\r\n");
 ;PCODE: $000002B1 VOL: 0
 ;PCODE: $000002B2 VOL: 0
 ;PCODE: $000002B3 VOL: 0
 ;PCODE: $000002B4 VOL: 0
 ;PCODE: $000002B5 VOL: 0
+; 0012 0128         return -1;
 ;PCODE: $000002B6 VOL: 0
 ;PCODE: $000002B7 VOL: 0
-; 0012 0128         return -1;
 ;PCODE: $000002B8 VOL: 0
-;PCODE: $000002B9 VOL: 0
-;PCODE: $000002BA VOL: 0
 ; 0012 0129     }
 ; 0012 012A 
 ; 0012 012B     /* display the number of free kbytes */
 ; 0012 012C     printDebug("<SD_init> Free space on logical drive 0: %lu kbytes\r\n",sdFreeSpace);
+;PCODE: $000002B9 VOL: 0
+;PCODE: $000002BA VOL: 0
 ;PCODE: $000002BB VOL: 0
 ;PCODE: $000002BC VOL: 0
 ;PCODE: $000002BD VOL: 0
@@ -1040,14 +1040,12 @@
 ;PCODE: $000002C0 VOL: 0
 ;PCODE: $000002C1 VOL: 0
 ;PCODE: $000002C2 VOL: 0
-;PCODE: $000002C3 VOL: 0
-;PCODE: $000002C4 VOL: 0
 ; 0012 012D 
 ; 0012 012E     return 0;
+;PCODE: $000002C3 VOL: 0
+;PCODE: $000002C4 VOL: 0
 ;PCODE: $000002C5 VOL: 0
-;PCODE: $000002C6 VOL: 0
-;PCODE: $000002C7 VOL: 0
 ; 0012 012F }
-;PCODE: $000002C8 VOL: 0
+;PCODE: $000002C6 VOL: 0
 ;/*============================================================*/
 ;

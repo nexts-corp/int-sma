@@ -7418,10 +7418,12 @@ _0x20E003D:
 ; 0007 0019 //     iChar_t viAPN[20];
 ; 0007 001A //
 ; 0007 001B //
-; 0007 001C //    viDVConfigUpdate.viNetworkConfig.viNetworkPort  = 0x01;
-; 0007 001D //    viDVConfigUpdate.viNetworkConfig.viMethod       = 0x01;
-; 0007 001E //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
-; 0007 001F //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
+; 0007 001C     viDVConfigUpdate.viNetworkConfig.viNetworkPort  = 0x01;
+;	i -> R16,R17
+;	viIP_Suit -> Y+2
+; 0007 001D     viDVConfigUpdate.viNetworkConfig.viMethod       = 0x01;
+; 0007 001E     iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viLocolIP,viIP_Suit,4);
+; 0007 001F     iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viLocalPort,viIP_Suit,4);
 ; 0007 0020 //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
 ; 0007 0021 //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
 ; 0007 0022 //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
@@ -7432,100 +7434,99 @@ _0x20E003D:
 ; 0007 0027 //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
 ; 0007 0028 //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
 ; 0007 0029 //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
-; 0007 002A 
-; 0007 002B     viDVConfigUpdate.viOperationConfig.viDeviceEnable = 0x01;
-;	i -> R16,R17
-;	viIP_Suit -> Y+2
-; 0007 002C 
+; 0007 002A //    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;
+; 0007 002B 
+; 0007 002C     viDVConfigUpdate.viOperationConfig.viDeviceEnable = 0x01;
 ; 0007 002D 
-; 0007 002E     for(i=0;i<MAX_SENSOR_CHANNEL_def;i++){
-; 0007 002F         viDVConfigUpdate.viSensorChannelConfig[i].viAlarmEnable = 0x00;
-; 0007 0030         viDVConfigUpdate.viSensorChannelConfig[i].viSensorEnable = 0x00;
-; 0007 0031         viDVConfigUpdate.viSensorChannelConfig[i].viSamplingRate = 0x00;
-; 0007 0032         viDVConfigUpdate.viSensorChannelConfig[i].viSensorOutput = 0x00;
-; 0007 0033         viDVConfigUpdate.viSensorChannelConfig[i].viSensorTypeID = 0x00;
-; 0007 0034         viDVConfigUpdate.viSensorChannelConfig[i].viDataUnit = 0x00;
-; 0007 0035         viDVConfigUpdate.viSensorChannelConfig[i].viMinimum = 0.0;
-; 0007 0036         viDVConfigUpdate.viSensorChannelConfig[i].viMaximum = 0.0;
-; 0007 0037         viDVConfigUpdate.viSensorChannelConfig[i].viLower = 0.0;
-; 0007 0038         viDVConfigUpdate.viSensorChannelConfig[i].viLowerDelay = 0.0;
-; 0007 0039         viDVConfigUpdate.viSensorChannelConfig[i].viLowerExtreme = 0.0;
-; 0007 003A         viDVConfigUpdate.viSensorChannelConfig[i].viUpper = 0.0;
-; 0007 003B         viDVConfigUpdate.viSensorChannelConfig[i].viUpperDelay = 0.00;
-; 0007 003C         viDVConfigUpdate.viSensorChannelConfig[i].viUpperExtreme = 0.0;
-; 0007 003D     }
-; 0007 003E 
+; 0007 002E 
+; 0007 002F     for(i=0;i<MAX_SENSOR_CHANNEL_def;i++){
+; 0007 0030         viDVConfigUpdate.viSensorChannelConfig[i].viAlarmEnable = 0x00;
+; 0007 0031         viDVConfigUpdate.viSensorChannelConfig[i].viSensorEnable = 0x00;
+; 0007 0032         viDVConfigUpdate.viSensorChannelConfig[i].viSamplingRate = 0x00;
+; 0007 0033         viDVConfigUpdate.viSensorChannelConfig[i].viSensorOutput = 0x00;
+; 0007 0034         viDVConfigUpdate.viSensorChannelConfig[i].viSensorTypeID = 0x00;
+; 0007 0035         viDVConfigUpdate.viSensorChannelConfig[i].viDataUnit = 0x00;
+; 0007 0036         viDVConfigUpdate.viSensorChannelConfig[i].viMinimum = 0.0;
+; 0007 0037         viDVConfigUpdate.viSensorChannelConfig[i].viMaximum = 0.0;
+; 0007 0038         viDVConfigUpdate.viSensorChannelConfig[i].viLower = 0.0;
+; 0007 0039         viDVConfigUpdate.viSensorChannelConfig[i].viLowerDelay = 0.0;
+; 0007 003A         viDVConfigUpdate.viSensorChannelConfig[i].viLowerExtreme = 0.0;
+; 0007 003B         viDVConfigUpdate.viSensorChannelConfig[i].viUpper = 0.0;
+; 0007 003C         viDVConfigUpdate.viSensorChannelConfig[i].viUpperDelay = 0.00;
+; 0007 003D         viDVConfigUpdate.viSensorChannelConfig[i].viUpperExtreme = 0.0;
+; 0007 003E     }
 ; 0007 003F 
-; 0007 0040     for(i=0;i<MAX_DI_CHANNEL_def;i++){
-; 0007 0041         viDVConfigUpdate.viDI_ChannelConfig[i].viAlarmEnable = 0x00;
-; 0007 0042         viDVConfigUpdate.viDI_ChannelConfig[i].viDI_Enable = 0x00;
-; 0007 0043         viDVConfigUpdate.viDI_ChannelConfig[i].viMode = 0x00;
-; 0007 0044         viDVConfigUpdate.viDI_ChannelConfig[i].viDetectEdge = 0x00;
-; 0007 0045     }
-; 0007 0046 
+; 0007 0040 
+; 0007 0041     for(i=0;i<MAX_DI_CHANNEL_def;i++){
+; 0007 0042         viDVConfigUpdate.viDI_ChannelConfig[i].viAlarmEnable = 0x00;
+; 0007 0043         viDVConfigUpdate.viDI_ChannelConfig[i].viDI_Enable = 0x00;
+; 0007 0044         viDVConfigUpdate.viDI_ChannelConfig[i].viMode = 0x00;
+; 0007 0045         viDVConfigUpdate.viDI_ChannelConfig[i].viDetectEdge = 0x00;
+; 0007 0046     }
 ; 0007 0047 
-; 0007 0048     for(i=0;i<MAX_DO_CHANNEL_def;i++){
-; 0007 0049         viDVConfigUpdate.viDO_ChannelConfig[i].viD_O_Enable = 0x00;
-; 0007 004A         viDVConfigUpdate.viDO_ChannelConfig[i].viState = 0x00;
-; 0007 004B         viDVConfigUpdate.viDO_ChannelConfig[i].viDelay = 0x00;
-; 0007 004C     }
-; 0007 004D 
+; 0007 0048 
+; 0007 0049     for(i=0;i<MAX_DO_CHANNEL_def;i++){
+; 0007 004A         viDVConfigUpdate.viDO_ChannelConfig[i].viD_O_Enable = 0x00;
+; 0007 004B         viDVConfigUpdate.viDO_ChannelConfig[i].viState = 0x00;
+; 0007 004C         viDVConfigUpdate.viDO_ChannelConfig[i].viDelay = 0x00;
+; 0007 004D     }
 ; 0007 004E 
-; 0007 004F     viDVConfigUpdate.viPWM_ChannelConfig.viPWM_Enable = 0x00;
-; 0007 0050     viDVConfigUpdate.viPWM_ChannelConfig.viLevel = 0.0;
-; 0007 0051 
-; 0007 0052 }
+; 0007 004F 
+; 0007 0050     viDVConfigUpdate.viPWM_ChannelConfig.viPWM_Enable = 0x00;
+; 0007 0051     viDVConfigUpdate.viPWM_ChannelConfig.viLevel = 0.0;
+; 0007 0052 
+; 0007 0053 }
 ;
 ;void iMemcpye(char eeprom *eptr, char *dptr, int len)
-; 0007 0055 {
-; 0007 0056    int i=0;
-; 0007 0057    for(i=0;i<len;i++) {
+; 0007 0056 {
+; 0007 0057    int i=0;
+; 0007 0058    for(i=0;i<len;i++) {
 ;	*eptr -> Y+6
 ;	*dptr -> Y+4
 ;	len -> Y+2
 ;	i -> R16,R17
-; 0007 0058       *eptr++ = *dptr;
-; 0007 0059       dptr++;
-; 0007 005A    }
-; 0007 005B    return;
-; 0007 005C }
+; 0007 0059       *eptr++ = *dptr;
+; 0007 005A       dptr++;
+; 0007 005B    }
+; 0007 005C    return;
+; 0007 005D }
 ;
 ;void iMemcpyd(char *dptr, char eeprom *eptr,  int len)
-; 0007 005F {
-; 0007 0060    int i=0;
-; 0007 0061    for(i=0;i<len;i++) {
+; 0007 0060 {
+; 0007 0061    int i=0;
+; 0007 0062    for(i=0;i<len;i++) {
 ;	*dptr -> Y+6
 ;	*eptr -> Y+4
 ;	len -> Y+2
 ;	i -> R16,R17
-; 0007 0062       *dptr++ = *eptr;
-; 0007 0063       eptr++;
-; 0007 0064    }
-; 0007 0065    return;
-; 0007 0066 }
+; 0007 0063       *dptr++ = *eptr;
+; 0007 0064       eptr++;
+; 0007 0065    }
+; 0007 0066    return;
+; 0007 0067 }
 ;
 ;void iPrintConfig(char eeprom *eptr,unsigned int len)
-; 0007 0069 {
-; 0007 006A    int i=0,j=0;
-; 0007 006B    printDebug("[printConfig]Data:[\r\n");
+; 0007 006A {
+; 0007 006B    int i=0,j=0;
+; 0007 006C    printDebug("[printConfig]Data:[\r\n");
 ;	*eptr -> Y+6
 ;	len -> Y+4
 ;	i -> R16,R17
 ;	j -> R18,R19
-; 0007 006C    printDebug("%04d\t\t",0);
-; 0007 006D    for(i=0,j=1;i<len;i++,j++) {
-; 0007 006E       printDebug("%02x",*(eptr++));
-; 0007 006F       if(j==8){
-; 0007 0070          printDebug("\t\t");
-; 0007 0071       }else if(j==16){
-; 0007 0072          printDebug("\r\n");
-; 0007 0073          printDebug("%04d\t\t",i+1);
-; 0007 0074          j=0;
-; 0007 0075       }
-; 0007 0076    }
-; 0007 0077    printDebug("\r\n]\r\n");
-; 0007 0078    return;
-; 0007 0079 }
+; 0007 006D    printDebug("%04d\t\t",0);
+; 0007 006E    for(i=0,j=1;i<len;i++,j++) {
+; 0007 006F       printDebug("%02x",*(eptr++));
+; 0007 0070       if(j==8){
+; 0007 0071          printDebug("\t\t");
+; 0007 0072       }else if(j==16){
+; 0007 0073          printDebug("\r\n");
+; 0007 0074          printDebug("%04d\t\t",i+1);
+; 0007 0075          j=0;
+; 0007 0076       }
+; 0007 0077    }
+; 0007 0078    printDebug("\r\n]\r\n");
+; 0007 0079    return;
+; 0007 007A }
 ;#include <stdlib.h>
 ;#include "configstructure.h"
 ;

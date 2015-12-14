@@ -8,37 +8,25 @@ eeprom iDVConfig_t viDVConfigUpdate;
 void iConfigDefaultInt(){ 
     int i = 0; 
     iChar_t viIP_Suit[4]={0,0,0,0};  
-    
-//         iChar_t viNetworkPort;
-//     iChar_t viMethod;
-//     iChar_t viLocolIP[4];
-//     iChar_t viLocalPort[4];
-//     iChar_t viSubNetMask[4];
-//     iChar_t viGateWay[4];
-//     iChar_t viServerIP[4];
-//     iChar_t viServerPort[4];
-//     iChar_t viDNS_IP[4];
-//     iChar_t viSDN[32];
-//     iChar_t viSSID[32];
-//     iChar_t viPassword[20];
-//     iChar_t viSecurity;
-//     iChar_t viAPN[20];
-//     
-//    
+  
     viDVConfigUpdate.viNetworkConfig.viNetworkPort  = 0x01;  
     viDVConfigUpdate.viNetworkConfig.viMethod       = 0x01;
-    memcpye((char eeprom *)&viDVConfigUpdate.viNetworkConfig.viNetworkPort[0],viIP_Suit,4); 
-//    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01; 
-//    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01; 
-//    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01; 
-//    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01; 
-//    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01; 
-//    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01; 
-//    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01; 
-//    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01; 
-//    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01; 
-//    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01; 
-//    viDVConfigUpdate.viNetworkConfig.viNetworkPort = 0x01;   
+    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viLocolIP,viIP_Suit,4);  
+    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viLocalPort,viIP_Suit,4);   
+    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viLocalPort,viIP_Suit,4);
+    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viSubNetMask,viIP_Suit,4);
+    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viGateWay,viIP_Suit,4);
+    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viServerIP,viIP_Suit,4);
+    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viServerPort,viIP_Suit,4);
+    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viDNS_IP,viIP_Suit,4); 
+    
+    memset((char eeprom *)viDVConfigUpdate.viNetworkConfig.viSDN,0,32);
+    
+    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viSDN,viIP_Suit,32);
+    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viSSID,viIP_Suit,32);
+    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viPassword,viIP_Suit,20); 
+    viDVConfigUpdate.viNetworkConfig.viSecurity       = 0x00;
+    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viAPN,viIP_Suit,20);  
     
     viDVConfigUpdate.viOperationConfig.viDeviceEnable = 0x01; 
 
