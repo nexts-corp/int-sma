@@ -1,0 +1,5 @@
+VERSION:3 SOURCE_TIMESTAMP:4792A2CA
+NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\gsm.h"
+NODE:F LEVEL:0 LINE:3 "iGsmSetUart(iChar_t viChannel_arg,iChar_t viBaudRate_arg)"
+NODE:F LEVEL:0 LINE:7 "iSend_AtCmd(iChar_t * viBuff_arg)"
+NODE:F LEVEL:0 LINE:11 "iGsmReadSignal(iChar_t * viSignalOut_arg)"

@@ -1,5 +1,5 @@
 VERSION:3 SOURCE_TIMESTAMP:475D4DA6
-NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\statusManager.h"
-NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\adc.h"
+NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\statusManager.h"
+NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\adc.h"
 NODE:F LEVEL:0 LINE:10 "iStatusRead(struct iDataMini_t * pviOutData_arg)"
 NODE:F LEVEL:0 LINE:39 "iStatusReadByType(struct iStatusReport_t * pviInOutData_arg)"

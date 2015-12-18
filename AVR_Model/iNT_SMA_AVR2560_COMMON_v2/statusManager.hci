@@ -1,7 +1,7 @@
 VERSION:3 SOURCE_TIMESTAMP:475D4E9B
 NODE:M LEVEL:0 LINE:2 "STATUS_MANAGER_H"
-NODE:I LEVEL:0 LINE:4 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\main.h"
-NODE:I LEVEL:0 LINE:5 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\dataAndStatusTask.h"
+NODE:I LEVEL:0 LINE:4 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\main.h"
+NODE:I LEVEL:0 LINE:5 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\dataAndStatusTask.h"
 NODE:M LEVEL:0 LINE:7 "STATUS_MAX"
 NODE:M LEVEL:0 LINE:9 "STATUS_BATTERY_TYPE"
 NODE:M LEVEL:0 LINE:11 "STATUS_BIT_LAVEL"

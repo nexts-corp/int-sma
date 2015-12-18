@@ -1,6 +1,6 @@
 VERSION:3 SOURCE_TIMESTAMP:477275F7
-NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\database.h"
-NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\sdManager.h"
+NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\database.h"
+NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\sdManager.h"
 NODE:V LEVEL:0 LINE:27 "*pviDataBaseHandle -> RAM:????"
 NODE:V LEVEL:0 LINE:28 "viLineID -> EEPROM:????"
 NODE:F LEVEL:0 LINE:32 "iDataUpdate(iUInt_t viRecordID_arg,iUChar_t viStatus_arg,const iChar_t * pviDataBuffer_arg,iUInt_t viLength_arg)"

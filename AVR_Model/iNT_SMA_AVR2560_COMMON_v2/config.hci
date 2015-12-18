@@ -1,7 +1,7 @@
 VERSION:3 SOURCE_TIMESTAMP:47828B4D
 NODE:M LEVEL:0 LINE:2 "CONFIG_H"
-NODE:I LEVEL:0 LINE:4 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\main.h"
-NODE:I LEVEL:0 LINE:5 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\configDef.h"
+NODE:I LEVEL:0 LINE:4 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\main.h"
+NODE:I LEVEL:0 LINE:5 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\configDef.h"
 NODE:M LEVEL:0 LINE:7 "SENSOR_DISABLE_def"
 NODE:M LEVEL:0 LINE:8 "SENSOR_ENABLE_def"
 NODE:M LEVEL:0 LINE:14 "MAX_GROUP_TAG"

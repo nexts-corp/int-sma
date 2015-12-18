@@ -75,6 +75,11 @@ void main(void){
     
     printDebug("[main]Initial...\r\n");
     
+    while(1){
+       delay_ms(1000);
+    }
+    
+    
 //    pviQueueData1 = iQueueCreate(10,sizeof(int));
 //	printDebug("<main>pviQueueData1 adr : %p\r\n",pviQueueData1);
 //
@@ -146,10 +151,10 @@ void main(void){
         printDebug("<main>sensorTask addr : %p\r\n",piDeviceTask);
     }
 //    printDebug("[main],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);		
-//    piDeviceTask = iTaskCreate(managerTask,"mang",5);
-//    if(piDeviceTask){
-//        printDebug("<main>managerTask addr : %p\r\n",piDeviceTask);
-//    }  
+    piDeviceTask = iTaskCreate(managerTask,"mang",5);
+    if(piDeviceTask){
+        printDebug("<main>managerTask addr : %p\r\n",piDeviceTask);
+    }  
     
 
 //    

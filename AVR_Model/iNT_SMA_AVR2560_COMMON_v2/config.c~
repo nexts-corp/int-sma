@@ -22,9 +22,9 @@ void iConfigDefaultInt(){
     
     memset((char eeprom *)viDVConfigUpdate.viNetworkConfig.viSDN,0,32);
     
-    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viSDN,viIP_Suit,32);
-    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viSSID,viIP_Suit,32);
-    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viPassword,viIP_Suit,20); 
+//    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viSDN,viIP_Suit,32);
+//    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viSSID,viIP_Suit,32);
+//    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viPassword,viIP_Suit,20); 
     viDVConfigUpdate.viNetworkConfig.viSecurity       = 0x00;
     iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viAPN,viIP_Suit,20);  
     

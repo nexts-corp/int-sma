@@ -133,198 +133,202 @@
 ;PCODE: $00000025 VOL: 0
 ;PCODE: $00000026 VOL: 0
 ; 0000 004D 
-; 0000 004E //    pviQueueData1 = iQueueCreate(10,sizeof(int));
-; 0000 004F //	printDebug("<main>pviQueueData1 adr : %p\r\n",pviQueueData1);
-; 0000 0050 //
-; 0000 0051 //    if(iQueueSend(pviQueueData1,&a)==1){
-; 0000 0052 //
-; 0000 0053 //	}else{
-; 0000 0054 //		printDebug("<main>data can not sent a data(b) to pviQueueData1.\r\n");
-; 0000 0055 //	}
+; 0000 004E     while(1){
+;PCODE: $00000027 VOL: 0
+; 0000 004F         #asm("wdr")
+;PCODE: $00000028 VOL: 0
+	wdr
+;PCODE: $00000029 VOL: 0
+; 0000 0050        delay_ms(1000);
+;PCODE: $0000002A VOL: 0
+;PCODE: $0000002B VOL: 0
+; 0000 0051     }
+;PCODE: $0000002C VOL: 0
+;PCODE: $0000002D VOL: 0
+; 0000 0052 
+; 0000 0053 
+; 0000 0054 //    pviQueueData1 = iQueueCreate(10,sizeof(int));
+; 0000 0055 //	printDebug("<main>pviQueueData1 adr : %p\r\n",pviQueueData1);
 ; 0000 0056 //
-; 0000 0057 //    if(iQueueReceive(pviQueueData1,&b)==1){
-; 0000 0058 //        printDebug("<main>data : %d\r\n",b);
+; 0000 0057 //    if(iQueueSend(pviQueueData1,&a)==1){
+; 0000 0058 //
 ; 0000 0059 //	}else{
 ; 0000 005A //		printDebug("<main>data can not sent a data(b) to pviQueueData1.\r\n");
 ; 0000 005B //	}
-; 0000 005C     delay_ms(5000);
-;PCODE: $00000027 VOL: 0
-;PCODE: $00000028 VOL: 0
-; 0000 005D     iWizReadConfig();
-;PCODE: $00000029 VOL: 0
-; 0000 005E //    while(1){
-; 0000 005F //     #asm("wdr")
-; 0000 0060 //     delay_ms(1000);
-; 0000 0061 //    }
-; 0000 0062 
-; 0000 0063 //    ETH_switchMode((unsigned char) MODE_NORM);
-; 0000 0064     if(iLanInit()){
-;PCODE: $0000002A VOL: 0
-;PCODE: $0000002B VOL: 0
-;PCODE: $0000002C VOL: 0
-; 0000 0065         printDebug("[main]Lan Connected.\r\n");
-;PCODE: $0000002D VOL: 0
+; 0000 005C //
+; 0000 005D //    if(iQueueReceive(pviQueueData1,&b)==1){
+; 0000 005E //        printDebug("<main>data : %d\r\n",b);
+; 0000 005F //	}else{
+; 0000 0060 //		printDebug("<main>data can not sent a data(b) to pviQueueData1.\r\n");
+; 0000 0061 //	}
+; 0000 0062     delay_ms(5000);
 ;PCODE: $0000002E VOL: 0
 ;PCODE: $0000002F VOL: 0
+; 0000 0063     iWizReadConfig();
 ;PCODE: $00000030 VOL: 0
+; 0000 0064 //    while(1){
+; 0000 0065 //     #asm("wdr")
+; 0000 0066 //     delay_ms(1000);
+; 0000 0067 //    }
+; 0000 0068 
+; 0000 0069 //    ETH_switchMode((unsigned char) MODE_NORM);
+; 0000 006A     if(iLanInit()){
 ;PCODE: $00000031 VOL: 0
 ;PCODE: $00000032 VOL: 0
 ;PCODE: $00000033 VOL: 0
-; 0000 0066     }else{
+; 0000 006B         printDebug("[main]Lan Connected.\r\n");
 ;PCODE: $00000034 VOL: 0
 ;PCODE: $00000035 VOL: 0
-; 0000 0067         printDebug("[main]Lan Fail.\r\n");
 ;PCODE: $00000036 VOL: 0
 ;PCODE: $00000037 VOL: 0
 ;PCODE: $00000038 VOL: 0
 ;PCODE: $00000039 VOL: 0
 ;PCODE: $0000003A VOL: 0
+; 0000 006C     }else{
 ;PCODE: $0000003B VOL: 0
 ;PCODE: $0000003C VOL: 0
-; 0000 0068         iWizReadConfig();
+; 0000 006D         printDebug("[main]Lan Fail.\r\n");
 ;PCODE: $0000003D VOL: 0
-; 0000 0069         iLanInit();
 ;PCODE: $0000003E VOL: 0
-; 0000 006A     }
 ;PCODE: $0000003F VOL: 0
-; 0000 006B 
-; 0000 006C     iInitSDCard();
 ;PCODE: $00000040 VOL: 0
-; 0000 006D 
-; 0000 006E     ///////////////create queue////////////////
-; 0000 006F     pviQueueSensorToMang = iQueueCreate(2,sizeof(iSensorData_t));
 ;PCODE: $00000041 VOL: 0
 ;PCODE: $00000042 VOL: 0
 ;PCODE: $00000043 VOL: 0
+; 0000 006E         iWizReadConfig();
 ;PCODE: $00000044 VOL: 0
+; 0000 006F         iLanInit();
 ;PCODE: $00000045 VOL: 0
+; 0000 0070     }
 ;PCODE: $00000046 VOL: 0
-; 0000 0070     if(pviQueueSensorToMang == (int *)(-1)){
+; 0000 0071 
+; 0000 0072     iInitSDCard();
 ;PCODE: $00000047 VOL: 0
+; 0000 0073 
+; 0000 0074     ///////////////create queue////////////////
+; 0000 0075     pviQueueSensorToMang = iQueueCreate(2,sizeof(iSensorData_t));
 ;PCODE: $00000048 VOL: 0
 ;PCODE: $00000049 VOL: 0
-; 0000 0071        printDebug("[main],pviQueueSensorToMang can not create.\r\n");
 ;PCODE: $0000004A VOL: 0
 ;PCODE: $0000004B VOL: 0
 ;PCODE: $0000004C VOL: 0
 ;PCODE: $0000004D VOL: 0
+; 0000 0076     if(pviQueueSensorToMang == (int *)(-1)){
 ;PCODE: $0000004E VOL: 0
 ;PCODE: $0000004F VOL: 0
 ;PCODE: $00000050 VOL: 0
-; 0000 0072     }else{
+; 0000 0077        printDebug("[main],pviQueueSensorToMang can not create.\r\n");
 ;PCODE: $00000051 VOL: 0
 ;PCODE: $00000052 VOL: 0
-; 0000 0073        printDebug("[main],pviQueueSensorToMang can create.\r\n");
 ;PCODE: $00000053 VOL: 0
 ;PCODE: $00000054 VOL: 0
 ;PCODE: $00000055 VOL: 0
 ;PCODE: $00000056 VOL: 0
 ;PCODE: $00000057 VOL: 0
+; 0000 0078     }else{
 ;PCODE: $00000058 VOL: 0
 ;PCODE: $00000059 VOL: 0
-; 0000 0074 //       printDebug("[main],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);
-; 0000 0075     }
+; 0000 0079        printDebug("[main],pviQueueSensorToMang can create.\r\n");
 ;PCODE: $0000005A VOL: 0
-; 0000 0076 
-; 0000 0077     pviQueueMangToConfig = iQueueCreate(2,sizeof(iConfigFormat_t));
 ;PCODE: $0000005B VOL: 0
 ;PCODE: $0000005C VOL: 0
 ;PCODE: $0000005D VOL: 0
 ;PCODE: $0000005E VOL: 0
 ;PCODE: $0000005F VOL: 0
 ;PCODE: $00000060 VOL: 0
-; 0000 0078     if(pviQueueMangToConfig == (int *)(-1)){
+; 0000 007A //       printDebug("[main],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);
+; 0000 007B     }
 ;PCODE: $00000061 VOL: 0
+; 0000 007C 
+; 0000 007D     pviQueueMangToConfig = iQueueCreate(2,sizeof(iConfigFormat_t));
 ;PCODE: $00000062 VOL: 0
 ;PCODE: $00000063 VOL: 0
-; 0000 0079        printDebug("[main],pviQueueMangToConfig can not create.\r\n");
 ;PCODE: $00000064 VOL: 0
 ;PCODE: $00000065 VOL: 0
 ;PCODE: $00000066 VOL: 0
 ;PCODE: $00000067 VOL: 0
+; 0000 007E     if(pviQueueMangToConfig == (int *)(-1)){
 ;PCODE: $00000068 VOL: 0
 ;PCODE: $00000069 VOL: 0
 ;PCODE: $0000006A VOL: 0
-; 0000 007A     }else{
+; 0000 007F        printDebug("[main],pviQueueMangToConfig can not create.\r\n");
 ;PCODE: $0000006B VOL: 0
 ;PCODE: $0000006C VOL: 0
-; 0000 007B        printDebug("[main],pviQueueMangToConfig can create.\r\n");
 ;PCODE: $0000006D VOL: 0
 ;PCODE: $0000006E VOL: 0
 ;PCODE: $0000006F VOL: 0
 ;PCODE: $00000070 VOL: 0
 ;PCODE: $00000071 VOL: 0
+; 0000 0080     }else{
 ;PCODE: $00000072 VOL: 0
 ;PCODE: $00000073 VOL: 0
-; 0000 007C     }
+; 0000 0081        printDebug("[main],pviQueueMangToConfig can create.\r\n");
 ;PCODE: $00000074 VOL: 0
-; 0000 007D 
-; 0000 007E     pviQueueDeviceToMang = iQueueCreate(1,sizeof(unsigned char));
 ;PCODE: $00000075 VOL: 0
 ;PCODE: $00000076 VOL: 0
 ;PCODE: $00000077 VOL: 0
 ;PCODE: $00000078 VOL: 0
 ;PCODE: $00000079 VOL: 0
 ;PCODE: $0000007A VOL: 0
-; 0000 007F     if(pviQueueDeviceToMang == (int *)(-1)){
+; 0000 0082     }
 ;PCODE: $0000007B VOL: 0
+; 0000 0083 
+; 0000 0084     pviQueueDeviceToMang = iQueueCreate(1,sizeof(unsigned char));
 ;PCODE: $0000007C VOL: 0
 ;PCODE: $0000007D VOL: 0
-; 0000 0080        printDebug("[main],pviQueueDeviceToMang can not create.\r\n");
 ;PCODE: $0000007E VOL: 0
 ;PCODE: $0000007F VOL: 0
 ;PCODE: $00000080 VOL: 0
 ;PCODE: $00000081 VOL: 0
+; 0000 0085     if(pviQueueDeviceToMang == (int *)(-1)){
 ;PCODE: $00000082 VOL: 0
 ;PCODE: $00000083 VOL: 0
 ;PCODE: $00000084 VOL: 0
-; 0000 0081     }else{
+; 0000 0086        printDebug("[main],pviQueueDeviceToMang can not create.\r\n");
 ;PCODE: $00000085 VOL: 0
 ;PCODE: $00000086 VOL: 0
-; 0000 0082        printDebug("[main],pviQueueDeviceToMang can create.\r\n");
 ;PCODE: $00000087 VOL: 0
 ;PCODE: $00000088 VOL: 0
 ;PCODE: $00000089 VOL: 0
 ;PCODE: $0000008A VOL: 0
 ;PCODE: $0000008B VOL: 0
+; 0000 0087     }else{
 ;PCODE: $0000008C VOL: 0
 ;PCODE: $0000008D VOL: 0
-; 0000 0083     }
+; 0000 0088        printDebug("[main],pviQueueDeviceToMang can create.\r\n");
 ;PCODE: $0000008E VOL: 0
-; 0000 0084 
-; 0000 0085 //    pviQueueMangToSensor = iQueueCreate(10,sizeof(int));
-; 0000 0086 //    if(pviQueueMangToSensor == (int *)(-1)){
-; 0000 0087 //       printDebug("<main>pviQueueSensorToMang can not create.\r\n");
-; 0000 0088 //    }
-; 0000 0089 
-; 0000 008A     ///////////////create task////////////////
-; 0000 008B     piDeviceTask = iTaskCreate(logTask,"logger",5);
 ;PCODE: $0000008F VOL: 0
 ;PCODE: $00000090 VOL: 0
 ;PCODE: $00000091 VOL: 0
 ;PCODE: $00000092 VOL: 0
 ;PCODE: $00000093 VOL: 0
 ;PCODE: $00000094 VOL: 0
+; 0000 0089     }
 ;PCODE: $00000095 VOL: 0
+; 0000 008A 
+; 0000 008B //    pviQueueMangToSensor = iQueueCreate(10,sizeof(int));
+; 0000 008C //    if(pviQueueMangToSensor == (int *)(-1)){
+; 0000 008D //       printDebug("<main>pviQueueSensorToMang can not create.\r\n");
+; 0000 008E //    }
+; 0000 008F 
+; 0000 0090     ///////////////create task////////////////
+; 0000 0091     piDeviceTask = iTaskCreate(logTask,"logger",5);
 ;PCODE: $00000096 VOL: 0
 ;PCODE: $00000097 VOL: 0
-; 0000 008C     if(piDeviceTask){
 ;PCODE: $00000098 VOL: 0
 ;PCODE: $00000099 VOL: 0
-; 0000 008D         printDebug("<main>logTask addr : %p\r\n",piDeviceTask);
 ;PCODE: $0000009A VOL: 0
 ;PCODE: $0000009B VOL: 0
 ;PCODE: $0000009C VOL: 0
 ;PCODE: $0000009D VOL: 0
 ;PCODE: $0000009E VOL: 0
+; 0000 0092     if(piDeviceTask){
 ;PCODE: $0000009F VOL: 0
 ;PCODE: $000000A0 VOL: 0
+; 0000 0093         printDebug("<main>logTask addr : %p\r\n",piDeviceTask);
 ;PCODE: $000000A1 VOL: 0
 ;PCODE: $000000A2 VOL: 0
 ;PCODE: $000000A3 VOL: 0
-; 0000 008E     }
-; 0000 008F 
-; 0000 0090     piDeviceTask = iTaskCreate(dataAndStatusTask,"dataAndStatus",5);
 ;PCODE: $000000A4 VOL: 0
 ;PCODE: $000000A5 VOL: 0
 ;PCODE: $000000A6 VOL: 0
@@ -332,26 +336,26 @@
 ;PCODE: $000000A8 VOL: 0
 ;PCODE: $000000A9 VOL: 0
 ;PCODE: $000000AA VOL: 0
+; 0000 0094     }
+; 0000 0095 
+; 0000 0096     piDeviceTask = iTaskCreate(dataAndStatusTask,"dataAndStatus",5);
 ;PCODE: $000000AB VOL: 0
 ;PCODE: $000000AC VOL: 0
 ;PCODE: $000000AD VOL: 0
-; 0000 0091     if(piDeviceTask){
 ;PCODE: $000000AE VOL: 0
 ;PCODE: $000000AF VOL: 0
-; 0000 0092         printDebug("<main>sensorTask addr : %p\r\n",piDeviceTask);
 ;PCODE: $000000B0 VOL: 0
 ;PCODE: $000000B1 VOL: 0
 ;PCODE: $000000B2 VOL: 0
 ;PCODE: $000000B3 VOL: 0
 ;PCODE: $000000B4 VOL: 0
+; 0000 0097     if(piDeviceTask){
 ;PCODE: $000000B5 VOL: 0
 ;PCODE: $000000B6 VOL: 0
+; 0000 0098         printDebug("<main>sensorTask addr : %p\r\n",piDeviceTask);
 ;PCODE: $000000B7 VOL: 0
 ;PCODE: $000000B8 VOL: 0
 ;PCODE: $000000B9 VOL: 0
-; 0000 0093     }
-; 0000 0094 //    printDebug("[main],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);
-; 0000 0095     piDeviceTask = iTaskCreate(managerTask,"mang",5);
 ;PCODE: $000000BA VOL: 0
 ;PCODE: $000000BB VOL: 0
 ;PCODE: $000000BC VOL: 0
@@ -359,48 +363,26 @@
 ;PCODE: $000000BE VOL: 0
 ;PCODE: $000000BF VOL: 0
 ;PCODE: $000000C0 VOL: 0
+; 0000 0099     }
+; 0000 009A //    printDebug("[main],Queue->Quantity(%d).\r\n",((iQueue_t *)pviQueueSensorToMang)->itemCount);
+; 0000 009B     piDeviceTask = iTaskCreate(managerTask,"mang",5);
 ;PCODE: $000000C1 VOL: 0
 ;PCODE: $000000C2 VOL: 0
 ;PCODE: $000000C3 VOL: 0
-; 0000 0096     if(piDeviceTask){
 ;PCODE: $000000C4 VOL: 0
 ;PCODE: $000000C5 VOL: 0
-; 0000 0097         printDebug("<main>managerTask addr : %p\r\n",piDeviceTask);
 ;PCODE: $000000C6 VOL: 0
 ;PCODE: $000000C7 VOL: 0
 ;PCODE: $000000C8 VOL: 0
 ;PCODE: $000000C9 VOL: 0
 ;PCODE: $000000CA VOL: 0
+; 0000 009C     if(piDeviceTask){
 ;PCODE: $000000CB VOL: 0
 ;PCODE: $000000CC VOL: 0
+; 0000 009D         printDebug("<main>managerTask addr : %p\r\n",piDeviceTask);
 ;PCODE: $000000CD VOL: 0
 ;PCODE: $000000CE VOL: 0
 ;PCODE: $000000CF VOL: 0
-; 0000 0098     }
-; 0000 0099 
-; 0000 009A 
-; 0000 009B //
-; 0000 009C //    piDeviceTask = iTaskCreate(debugTask,"debug",5);
-; 0000 009D //    if(piDeviceTask){
-; 0000 009E //        printDebug("<main>debugTask addr : %p\r\n",&piDeviceTask);
-; 0000 009F //    }
-; 0000 00A0 //
-; 0000 00A1 //    piDeviceTask = iTaskCreate(communicateTask,"commu",5);
-; 0000 00A2 //    if(piDeviceTask){
-; 0000 00A3 //        printDebug("<main>communicateTask addr : %p\r\n",&piDeviceTask);
-; 0000 00A4 //    }
-; 0000 00A5 //
-; 0000 00A6 //    piDeviceTask = iTaskCreate(interruptTask,"intp",10);
-; 0000 00A7 //    if(piDeviceTask){
-; 0000 00A8 //        printDebug("<main>interruptTask addr : %p\r\n",&piDeviceTask);
-; 0000 00A9 //    }
-; 0000 00AA //
-; 0000 00AB //    piDeviceTask = iTaskCreate(deviceTask,"device",5);
-; 0000 00AC //    if(piDeviceTask){
-; 0000 00AD //        printDebug("<main>deviceTask addr : %p\r\n",&piDeviceTask);
-; 0000 00AE //    }
-; 0000 00AF 
-; 0000 00B0     piDeviceTask = iTaskCreate(eventTask,"event",5);
 ;PCODE: $000000D0 VOL: 0
 ;PCODE: $000000D1 VOL: 0
 ;PCODE: $000000D2 VOL: 0
@@ -408,34 +390,66 @@
 ;PCODE: $000000D4 VOL: 0
 ;PCODE: $000000D5 VOL: 0
 ;PCODE: $000000D6 VOL: 0
+; 0000 009E     }
+; 0000 009F 
+; 0000 00A0 
+; 0000 00A1 //
+; 0000 00A2 //    piDeviceTask = iTaskCreate(debugTask,"debug",5);
+; 0000 00A3 //    if(piDeviceTask){
+; 0000 00A4 //        printDebug("<main>debugTask addr : %p\r\n",&piDeviceTask);
+; 0000 00A5 //    }
+; 0000 00A6 //
+; 0000 00A7 //    piDeviceTask = iTaskCreate(communicateTask,"commu",5);
+; 0000 00A8 //    if(piDeviceTask){
+; 0000 00A9 //        printDebug("<main>communicateTask addr : %p\r\n",&piDeviceTask);
+; 0000 00AA //    }
+; 0000 00AB //
+; 0000 00AC //    piDeviceTask = iTaskCreate(interruptTask,"intp",10);
+; 0000 00AD //    if(piDeviceTask){
+; 0000 00AE //        printDebug("<main>interruptTask addr : %p\r\n",&piDeviceTask);
+; 0000 00AF //    }
+; 0000 00B0 //
+; 0000 00B1 //    piDeviceTask = iTaskCreate(deviceTask,"device",5);
+; 0000 00B2 //    if(piDeviceTask){
+; 0000 00B3 //        printDebug("<main>deviceTask addr : %p\r\n",&piDeviceTask);
+; 0000 00B4 //    }
+; 0000 00B5 
+; 0000 00B6     piDeviceTask = iTaskCreate(eventTask,"event",5);
 ;PCODE: $000000D7 VOL: 0
 ;PCODE: $000000D8 VOL: 0
 ;PCODE: $000000D9 VOL: 0
-; 0000 00B1     if(piDeviceTask){
 ;PCODE: $000000DA VOL: 0
 ;PCODE: $000000DB VOL: 0
-; 0000 00B2         printDebug("<main>eventTask addr : %p\r\n",piDeviceTask);
 ;PCODE: $000000DC VOL: 0
 ;PCODE: $000000DD VOL: 0
 ;PCODE: $000000DE VOL: 0
 ;PCODE: $000000DF VOL: 0
 ;PCODE: $000000E0 VOL: 0
+; 0000 00B7     if(piDeviceTask){
 ;PCODE: $000000E1 VOL: 0
 ;PCODE: $000000E2 VOL: 0
+; 0000 00B8         printDebug("<main>eventTask addr : %p\r\n",piDeviceTask);
 ;PCODE: $000000E3 VOL: 0
 ;PCODE: $000000E4 VOL: 0
 ;PCODE: $000000E5 VOL: 0
-; 0000 00B3     }
-; 0000 00B4 
-; 0000 00B5    startSchedulerTask();
 ;PCODE: $000000E6 VOL: 0
 ;PCODE: $000000E7 VOL: 0
-; 0000 00B6 }
 ;PCODE: $000000E8 VOL: 0
 ;PCODE: $000000E9 VOL: 0
 ;PCODE: $000000EA VOL: 0
 ;PCODE: $000000EB VOL: 0
+;PCODE: $000000EC VOL: 0
+; 0000 00B9     }
+; 0000 00BA 
+; 0000 00BB    startSchedulerTask();
+;PCODE: $000000ED VOL: 0
+;PCODE: $000000EE VOL: 0
+; 0000 00BC }
+;PCODE: $000000EF VOL: 0
+;PCODE: $000000F0 VOL: 0
+;PCODE: $000000F1 VOL: 0
+;PCODE: $000000F2 VOL: 0
 
 	.DSEG
-_0xE:
+_0x11:
 	.BYTE 0x20

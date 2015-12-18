@@ -10,14 +10,14 @@
 //#include "oled.h"
 #include "adc.h"
 #include "debug.h"
-//#include "log.h"
+#include "log.h"
 #include "sdcard.h"
 
 /*============================================================*/
 int initial_system(void)
 {                                   
     int res=0;
-
+    char viTest[9] = "AT+CSQ\r\n";
     // Crystal Oscillator division factor: 1
     #pragma optsize-
     CLKPR=0x80;
@@ -27,6 +27,7 @@ int initial_system(void)
     #endif
     
     init_uart();
+    iUartSetBaudRate(2,BAUD_RATE_115K_def);
            
     if(MCUSR & (1<<PORF)){                      
         printDebug("\r\nPower-on Reset\r\n");    
@@ -78,7 +79,12 @@ int initial_system(void)
     /*bongkot*/                                                        
     //playBeep();
     showLedInitComplete();
-    showDebugInitComplete();                                          
+    showDebugInitComplete();  
+    
+    delay_ms(2000);                                        
+    send_uart(2,viTest); 
+    delay_ms(2000); 
+    return;
     
     if(SD_init() == 0)
     {      

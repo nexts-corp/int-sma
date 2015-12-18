@@ -1,5 +1,5 @@
 VERSION:3 SOURCE_TIMESTAMP:449EAC35
 NODE:M LEVEL:0 LINE:2 "IMS_ETH_HEADER_H"
-NODE:I LEVEL:0 LINE:4 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\debug.h"
-NODE:I LEVEL:0 LINE:6 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\initial_sys.h"
-NODE:I LEVEL:0 LINE:9 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\ethcomm.h"
+NODE:I LEVEL:0 LINE:4 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\debug.h"
+NODE:I LEVEL:0 LINE:6 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\initial_sys.h"
+NODE:I LEVEL:0 LINE:9 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\ethcomm.h"

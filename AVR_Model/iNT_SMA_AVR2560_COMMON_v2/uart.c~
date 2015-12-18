@@ -57,6 +57,7 @@ extern int (*piWizCallBack)(char *,unsigned int);
 //iUartQueue_t iUartQueue = {0,0,0,511};
 
 // USART0 Receiver interrupt service routine
+//Wiznet
 interrupt [USART0_RXC] void usart0_rx_isr(void)
 {
    
@@ -85,7 +86,7 @@ interrupt [USART0_RXC] void usart0_rx_isr(void)
 //        }
         
         //iWizRXMode = 5;
-        putchar3(data);  
+        //putchar3(data);  
         if(iWizRXMode == WIZ_RX_STAT_MODE){  
             if(index0Buffer == 0){ 
                  flagCountStart0 = 0;
@@ -401,7 +402,8 @@ interrupt [USART2_RXC] void usart2_rx_isr(void)
 {
     char status,data;
     status=UCSR2A;
-    data=UDR2;   
+    data=UDR2;
+    putchar3(data);   
     if ((status & (FRAMING_ERROR | PARITY_ERROR | DATA_OVERRUN))==0)
     {
         if(data=='K'){
@@ -575,11 +577,11 @@ void init_uart(void)
     // USART2 Transmitter: On
     // USART2 Mode: Asynchronous
     // USART2 Baud Rate: 38400
-    UCSR2A=0x00;
-    UCSR2B=0x98;
-    UCSR2C=0x06;
-    UBRR2H=0x00;
-    UBRR2L=0x0C;
+//    UCSR2A=0x00;
+//    UCSR2B=0x98;
+//    UCSR2C=0x06;
+//    UBRR2H=0x00;
+//    UBRR2L=0x0C;
 
     // USART3 initialization
     // Communication Parameters: 8 Data, 1 Stop, No Parity
@@ -592,6 +594,109 @@ void init_uart(void)
     UCSR3C=0x06;
     UBRR3H=0x00;
     UBRR3L=0x0C;
+}
+
+void iUartSetBaudRate(char viChannel_arg,char viBaudRate){
+      if(viChannel_arg==0){  
+        UCSR0A=0x00;
+        UCSR0B=0x98;
+        UCSR0C=0x06;
+        UBRR0H=0x00;
+        switch(viBaudRate){
+             case BAUD_RATE_115K_def:{
+                UBRR0L=0x03;
+                break;
+             }
+             case BAUD_RATE_57K6_def:{
+                UBRR0L=0x08;
+                break;
+             }  
+             case BAUD_RATE_38K4_def:{
+                UBRR0L=0x0C;
+                break;
+             }
+             case BAUD_RATE_9K6_def:{
+                UBRR0L=0x33;
+                break;
+             }
+        }
+      }
+      else if(viChannel_arg==1){  
+        UCSR1A=0x00;
+        UCSR1B=0x98;
+        UCSR1C=0x06;
+        UBRR1H=0x00;
+        switch(viBaudRate){
+             case BAUD_RATE_115K_def:{
+                UBRR1L=0x03;
+                break;
+             }
+             case BAUD_RATE_57K6_def:{
+                UBRR1L=0x08;
+                break;
+             }  
+             case BAUD_RATE_38K4_def:{
+                UBRR1L=0x0C;
+                break;
+             }
+             case BAUD_RATE_9K6_def:{
+                UBRR1L=0x33;
+                break;
+             }
+        }
+      }
+      else if(viChannel_arg==2){
+          
+        UCSR2A=0x00;
+        UCSR2B=0x98;
+        UCSR2C=0x06;
+        UBRR2H=0x00;
+        switch(viBaudRate){
+             case BAUD_RATE_115K_def:{
+                // USART2 Baud Rate: 115200 (Double Speed Mode)
+                UCSR2A=0x02;
+                UBRR2L=0x08;
+                UBRR2L=0x03;
+                break;
+             }
+             case BAUD_RATE_57K6_def:{
+                UBRR2L=0x08;
+                break;
+             }  
+             case BAUD_RATE_38K4_def:{
+                UBRR2L=0x0C;
+                break;
+             }
+             case BAUD_RATE_9K6_def:{
+                UBRR2L=0x33;
+                break;
+             }
+        }
+      } 
+      else if(viChannel_arg==3){  
+        UCSR3A=0x00;
+        UCSR3B=0x98;
+        UCSR3C=0x06;
+        UBRR3H=0x00;
+        switch(viBaudRate){
+             case BAUD_RATE_115K_def:{
+                UBRR3L=0x03;
+                break;
+             }
+             case BAUD_RATE_57K6_def:{
+                UBRR3L=0x08;
+                break;
+             }  
+             case BAUD_RATE_38K4_def:{
+                UBRR3L=0x0C;
+                break;
+             }
+             case BAUD_RATE_9K6_def:{
+                UBRR3L=0x33;
+                break;
+             }
+        }
+      }
 }
 
 /*============================================================*/

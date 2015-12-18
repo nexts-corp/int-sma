@@ -7,6 +7,7 @@
 #include <delay.h>
 #include "schedulerTask.h"
 #include "queue.h"
+#include "uart.h"
 
 typedef void * pTaskHandle;
 typedef unsigned char iUChar_t;
@@ -49,6 +50,5 @@ extern iData_t viTXData;
 extern iDataMini_t viDataReport;
 extern iDataMini_t viStatusReport;
 extern iDataMini_t viEventReport;
-
 
 #endif 

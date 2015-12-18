@@ -20,7 +20,7 @@ void iConfigDefaultInt(){
     iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viServerPort,viIP_Suit,4);
     iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viDNS_IP,viIP_Suit,4); 
     
-    memset((char eeprom *)viDVConfigUpdate.viNetworkConfig.viSDN,0,32);
+  //  memset((char eeprom *)viDVConfigUpdate.viNetworkConfig.viSDN,0,32);
     
 //    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viSDN,viIP_Suit,32);
 //    iMemcpye((char eeprom *)viDVConfigUpdate.viNetworkConfig.viSSID,viIP_Suit,32);

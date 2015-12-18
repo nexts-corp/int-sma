@@ -1,6 +1,7 @@
 #ifndef UART_H
 #define UART_H
 
+
 #define RXB8 1
 #define TXB8 0
 
@@ -22,6 +23,12 @@
 
 #define UART0_LOCK_ACCESS           1
 #define UART0_UNLOCK_ACCESS         0
+
+#define UART_MAX_CHANNEL    4
+#define BAUD_RATE_115K_def      0 //115200
+#define BAUD_RATE_57K6_def      1 //57600
+#define BAUD_RATE_38K4_def      2 //38400
+#define BAUD_RATE_9K6_def       3 //9600
                                       
 extern bit              flag_oled_ack;
 extern char             flag_PackageTerminate3;
@@ -103,4 +110,5 @@ void putchar3(char c);
 
 void send_uart(char port,char *buffer);
 void init_uart(void);
+void iUartSetBaudRate(char viChannel_arg,char viBaudRate);
 #endif

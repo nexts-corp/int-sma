@@ -1,7 +1,7 @@
 VERSION:3 SOURCE_TIMESTAMP:478284F3
-NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\sdManager.h"
-NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\config.h"
-NODE:I LEVEL:0 LINE:3 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\managerTask.h"
+NODE:I LEVEL:0 LINE:1 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\sdManager.h"
+NODE:I LEVEL:0 LINE:2 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\config.h"
+NODE:I LEVEL:0 LINE:3 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\managerTask.h"
 NODE:V LEVEL:0 LINE:7 "viFolderDataName -> RAM:????"
 NODE:V LEVEL:0 LINE:9 "viFolderDataLogName -> RAM:????"
 NODE:V LEVEL:0 LINE:10 "viFolderEventName -> RAM:????"

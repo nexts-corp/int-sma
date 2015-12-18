@@ -2,6 +2,6 @@ VERSION:3 SOURCE_TIMESTAMP:474679AB
 NODE:I LEVEL:0 LINE:1 "C:\cvavr2\inc\stdio.h"
 NODE:I LEVEL:0 LINE:2 "C:\cvavr2\inc\stdlib.h"
 NODE:I LEVEL:0 LINE:3 "C:\cvavr2\inc\string.h"
-NODE:I LEVEL:0 LINE:4 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\ethqueue.h"
-NODE:I LEVEL:0 LINE:5 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_v2\debug.h"
+NODE:I LEVEL:0 LINE:4 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\ethqueue.h"
+NODE:I LEVEL:0 LINE:5 "C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_SMA_AVR2560_COMMON_v2\debug.h"
 NODE:M LEVEL:0 LINE:7 "MAX_SESS_LIST"
