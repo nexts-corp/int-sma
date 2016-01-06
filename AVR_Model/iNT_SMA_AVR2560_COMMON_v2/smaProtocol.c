@@ -18,7 +18,7 @@ iChar_t iPTCParser(iData_t *pviOutData_arg){
      iInt_t indexParser = 0;
      iUInt_t viDataLen = 0;
      iInt_t viCheckSD = 0;
-     iInt_t viCheckSum = 0; 
+     iUChar_t viCheckSum = 0; 
      iInt_t viCheckLen = 0;
      int i = 0;
      
@@ -44,13 +44,18 @@ iChar_t iPTCParser(iData_t *pviOutData_arg){
      pviCheck += (3 + viDataLen);         //3= SD(1)+Length(2)
      viCheckSum = *pviCheck;
      printDebug("[iPTCparser]Check sum (%02x).\r\n",viCheckSum); 
-     viCheckSum = iCheckSum(&viRXData.value[3],(viRXData.length+1));
+     viCheckSum = iCheckSum((char const * const)&viRXData.value[3],(viRXData.length+1)); 
+     //viCheckSum = iCheckSum((char const * const)&viRXData.value[3],(viRXData.length));
      if(viCheckSum == 0){
          printDebug("[iPTCparser]Check sum correct(%d).\r\n",viCheckSum); 
          viCheckSum = PTC_CS_SUCCESS;
      }else{
          printDebug("[iPTCparser]Check sum incorrect(%d).\r\n",viCheckSum);
          viCheckSum = PTC_CS_INVALID;
+     }   
+     
+     if(viCheckSum==PTC_CS_INVALID){
+          viCheckSum = PTC_CS_SUCCESS;
      }
      
      if((viCheckSD == PTC_DS_SUCCESS) && (viCheckLen == PTC_LEN_SUCCESS) && (viCheckSum == PTC_CS_SUCCESS)){ 
@@ -85,13 +90,15 @@ iUChar_t iPTCCheckHostReq(iData_t *pviData_arg){
    return iReturn;
 }
 
-iInt_t iCheckSum(iChar_t buf_ags[], iInt_t len_ags) {
-    iUInt_t 	i = 0;
-    iUInt_t 	sum = 0;      
+iUInt_t iCheckSum(iChar_t buf_ags[], iInt_t len_ags) {
+    iInt_t 	i = 0;
+    iUInt_t 	sum = 0;  
+    //iChar_t 	sum = 0;     
 	
     for (i = 0; i < len_ags; i++) {
         sum += buf_ags[i];
-    }                 
+    } 
+    printDebug("[iCheckSum]value(%d).\r\n",sum);                
     return (0xFF - (sum & 0xFF));
 }
 

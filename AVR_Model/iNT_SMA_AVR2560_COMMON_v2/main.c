@@ -75,10 +75,10 @@ void main(void){
     
     printDebug("[main]Initial...\r\n");
     
-    while(1){ 
-        #asm("wdr")        
-       delay_ms(1000);
-    }
+//    while(1){ 
+//        #asm("wdr")        
+//       delay_ms(1000);
+//    }
     
     
 //    pviQueueData1 = iQueueCreate(10,sizeof(int));

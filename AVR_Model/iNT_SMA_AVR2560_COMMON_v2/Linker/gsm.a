@@ -35,13 +35,21 @@
 ;PCODE: $00000012 VOL: 0
 ;PCODE: $00000013 VOL: 0
 ;
+;
+;/**
+;  * @brief  Read signal quality report.
+;  * @param  None
+;  * @retval Return signal percent(0-100%)
+;**/
 ;void iGsmReadSignal(iChar_t *viSignalOut_arg){
-; 002F 000B void iGsmReadSignal(iChar_t *viSignalOut_arg){
+; 002F 0011 void iGsmReadSignal(iChar_t *viSignalOut_arg){
 ;PCODE: $00000014 VOL: 0
 ;PCODE: $00000015 VOL: 0
-; 002F 000C     char viAtCmd[9] = "AT+CSQ\r\n";
-; 002F 000D 
-; 002F 000E     delay_ms(1000);
+; 002F 0012     char viAtCmd[9] = "AT+CSQ\r\n";
+; 002F 0013 
+; 002F 0014 
+; 002F 0015 
+; 002F 0016     delay_ms(1000);
 ;PCODE: $00000016 VOL: 0
 ;PCODE: $00000017 VOL: 0
 ;PCODE: $00000018 VOL: 0
@@ -52,15 +60,56 @@
 ;	viAtCmd -> Y+0
 ;PCODE: $0000001C VOL: 0
 ;PCODE: $0000001D VOL: 0
-; 002F 000F     send_uart(2,viAtCmd);
+; 002F 0017     send_uart(2,viAtCmd);
 ;PCODE: $0000001E VOL: 0
 ;PCODE: $0000001F VOL: 0
 ;PCODE: $00000020 VOL: 0
 ;PCODE: $00000021 VOL: 0
-; 002F 0010     delay_ms(2000);
+; 002F 0018 
+; 002F 0019 
+; 002F 001A     delay_ms(2000);
 ;PCODE: $00000022 VOL: 0
 ;PCODE: $00000023 VOL: 0
-; 002F 0011 }
+; 002F 001B }
 ;PCODE: $00000024 VOL: 0
 ;PCODE: $00000025 VOL: 0
 ;PCODE: $00000026 VOL: 0
+;
+;void iGsmCheckCB(iChar_t *viSignalOut_arg){    //check credit balance
+; 002F 001D void iGsmCheckCB(iChar_t *viSignalOut_arg){
+;PCODE: $00000027 VOL: 0
+;PCODE: $00000028 VOL: 0
+; 002F 001E 
+; 002F 001F }
+;PCODE: $00000029 VOL: 0
+;PCODE: $0000002A VOL: 0
+;
+;iChar_t iGsmInit(){
+; 002F 0021 iChar_t iGsmInit(){
+;PCODE: $0000002B VOL: 0
+;PCODE: $0000002C VOL: 0
+; 002F 0022      return 1;
+;PCODE: $0000002D VOL: 0
+;PCODE: $0000002E VOL: 0
+; 002F 0023 }
+;PCODE: $0000002F VOL: 0
+;
+;iChar_t iGsmConn(){
+; 002F 0025 iChar_t iGsmConn(){
+;PCODE: $00000030 VOL: 0
+;PCODE: $00000031 VOL: 0
+; 002F 0026      return 1;
+;PCODE: $00000032 VOL: 0
+;PCODE: $00000033 VOL: 0
+; 002F 0027 }
+;PCODE: $00000034 VOL: 0
+;
+;iChar_t iGsmClose(){
+; 002F 0029 iChar_t iGsmClose(){
+;PCODE: $00000035 VOL: 0
+;PCODE: $00000036 VOL: 0
+; 002F 002A      return 1;
+;PCODE: $00000037 VOL: 0
+;PCODE: $00000038 VOL: 0
+; 002F 002B }
+;PCODE: $00000039 VOL: 0

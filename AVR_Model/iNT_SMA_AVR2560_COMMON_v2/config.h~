@@ -153,10 +153,12 @@ typedef struct{
 }iDVConfig_t;
 
 
+
+
 extern eeprom iDVConfig_t viDVConfigUpdate;
 extern iDVConfig_t viDVConfigBuffer;
 
-
+void iConfigDefaultInt();
 void iMemcpye(char eeprom *eptr, char *dptr, int len);
 void iMemcpyd(char *dptr, char eeprom *eptr,  int len);
 void iPrintConfig(char eeprom *eptr,unsigned int len);

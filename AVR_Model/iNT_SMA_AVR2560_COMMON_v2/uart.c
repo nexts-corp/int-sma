@@ -51,6 +51,20 @@ unsigned int rx0IndexWriteConn = 0;
 
 char uart0LockAccess = 0;
 
+// USART2 Receiver buffer
+#define RX_BUFFER_SIZE2 8
+char rx_buffer2[RX_BUFFER_SIZE2];
+
+#if RX_BUFFER_SIZE2 <= 256
+unsigned char rx_wr_index2,rx_rd_index2,rx_counter2;
+#else
+unsigned int rx_wr_index2,rx_rd_index2,rx_counter2;
+#endif
+
+// This flag is set on USART2 Receiver buffer overflow
+bit rx_buffer_overflow2;
+
+
 extern piInterrupt_t pviUart0TimeOut;
 extern int (*piWizCallBack)(char *,unsigned int);
 //extern iHTTP_t iHTTPStatus;
@@ -396,6 +410,31 @@ interrupt [USART1_RXC] void usart1_rx_isr(void)
     }                        
 }    
 
+///*============================================================*/
+//// USART2 Receiver interrupt service routine
+//interrupt [USART2_RXC] void usart2_rx_isr(void)
+//{
+//    char status,data;
+//    status=UCSR2A;
+//    data=UDR2;
+//    putchar3(data);   
+//    if ((status & (FRAMING_ERROR | PARITY_ERROR | DATA_OVERRUN))==0)
+//    {
+//        rx_buffer2[rx_wr_index2++]=data;
+//        #if RX_BUFFER_SIZE2 == 256
+//           // special case for receiver buffer size=256
+//           if (++rx_counter2 == 0) rx_buffer_overflow2=1;
+//        #else
+//           if (rx_wr_index2 == RX_BUFFER_SIZE2) rx_wr_index2=0;
+//           if (++rx_counter2 == RX_BUFFER_SIZE2)
+//              {
+//              rx_counter2=0;
+//              rx_buffer_overflow2=1;
+//              }
+//    #endif
+//    }      
+//}
+
 /*============================================================*/
 // USART2 Receiver interrupt service routine
 interrupt [USART2_RXC] void usart2_rx_isr(void)
@@ -406,14 +445,37 @@ interrupt [USART2_RXC] void usart2_rx_isr(void)
     putchar3(data);   
     if ((status & (FRAMING_ERROR | PARITY_ERROR | DATA_OVERRUN))==0)
     {
-        if(data=='K'){
-            flag_oled_ack = 1;   
-        }                       
-        else{
-            //putchar3(data);
-        }
+        rx_buffer2[rx_wr_index2++]=data;
+        #if RX_BUFFER_SIZE2 == 256
+           // special case for receiver buffer size=256
+           if (++rx_counter2 == 0) rx_buffer_overflow2=1;
+        #else
+           if (rx_wr_index2 == RX_BUFFER_SIZE2) rx_wr_index2=0;
+           if (++rx_counter2 == RX_BUFFER_SIZE2)
+              {
+              rx_counter2=0;
+              rx_buffer_overflow2=1;
+              }
+    #endif
     }      
 }
+
+// Get a character from the USART2 Receiver buffer
+#pragma used+
+char getchar2(void)
+{
+    char data;
+    while (rx_counter2==0);
+    data=rx_buffer2[rx_rd_index2++];
+    #if RX_BUFFER_SIZE2 != 256
+    if (rx_rd_index2 == RX_BUFFER_SIZE2) rx_rd_index2=0;
+    #endif
+    #asm("cli")
+    --rx_counter2;
+    #asm("sei")
+    return data;
+}
+#pragma used-
 
 // Write a character to the USART2 Transmitter
 #pragma used+
@@ -424,6 +486,14 @@ void putchar2(char c)
 }
 #pragma used-
 
+
+iChar_t iReadUart2(char * viBuffer, char (*callback) (void)){
+    iChar_t viCh = '';
+//    char buffer[200];
+    *viBuffer = callback();
+    viBuffer++;
+    return  viCh;
+}
 
 /*============================================================*/
 // USART3 Receiver interrupt service routine
@@ -645,7 +715,7 @@ void iUartSetBaudRate(char viChannel_arg,char viBaudRate){
              }
         }
       }
-      else if(viChannel_arg==2){
+      else if(viChannel_arg==2){                      //GSM
           
         UCSR2A=0x00;
         UCSR2B=0x98;

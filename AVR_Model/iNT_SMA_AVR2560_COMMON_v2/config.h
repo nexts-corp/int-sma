@@ -11,7 +11,7 @@
 
 
 
-#define MAX_GROUP_TAG           0x0E
+#define MAX_GROUP_TAG           15
 
 #define MAX_PROP_SUB_TAG        0x0E
 
@@ -151,6 +151,8 @@ typedef struct{
    iAuxDigiInput_t   viAuxDigiInput;
    iAuxDigiOutput_t  viAuxDigiOutput;
 }iDVConfig_t;
+
+
 
 
 extern eeprom iDVConfig_t viDVConfigUpdate;

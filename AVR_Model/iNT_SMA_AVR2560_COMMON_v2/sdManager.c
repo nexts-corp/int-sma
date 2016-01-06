@@ -361,7 +361,7 @@ void iFDelete(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg){
 iChar_t iFSize(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long *pviOutFileSize_arg){
     FIL *viFilePtr;
     FRESULT viFReturn; 
-    iChar_t viReturn = -1; 
+    iChar_t viReturn = 0;     //0=fail,1=success
     
     viFilePtr = (FIL * const)malloc(sizeof(FIL)); 
     if(viFilePtr!=NULL){
@@ -380,11 +380,13 @@ iChar_t iFSize(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long *p
                }
                viReturn = 1;
            }else{
+               viReturn = 0;          
                printDebug("[iFSize]File %s : %s.[\r\n",pviFilename_arg); 
                iFDisplayReturn(viFReturn);
                printDebug("]\r\n");
            }
         }else{
+           viReturn = 0;
            printDebug("[iFSize]directory : %s.[\r\n",pviDirPath_arg); 
            iFDisplayReturn(viFReturn);
            printDebug("]\r\n"); 

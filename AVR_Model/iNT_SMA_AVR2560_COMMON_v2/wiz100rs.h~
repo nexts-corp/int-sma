@@ -13,6 +13,20 @@
 #define WIZ100RS_DATA_MAX_SIZE           500
 #define WIZ100SR_PRINT_DEBUG            0
 
+
+#define WIZ_SET_LIP     0
+#define WIZ_SET_LSN     1
+#define WIZ_SET_LGW     2
+#define WIZ_SET_LP      3
+#define WIZ_SET_LSN     4
+#define WIZ_SET_LSN     5
+#define WIZ_SET_LSN     6
+#define WIZ_SET_LSN     7
+#define WIZ_SET_LSN     8
+#define WIZ_SET_LSN     9
+#define WIZ_SET_LSN     10
+#define WIZ_SET_LSN     11
+
 typedef struct{
     char macAddress[12];       //MAC Address (xxxxxx is unique factory value)      //12=ASCII , 6 = byte
     char mode;                //Mode (MIXED mode: 01, SERVER mode: 02,Client mode: 00)
@@ -129,6 +143,8 @@ iChar_t iWizConfigIPParser(iChar_t *pviOutData_arg,iChar_t *pviInData_arg);
 iChar_t iWizConfigMACParser(iChar_t *pviOutData_arg,iChar_t *pviInData_arg);
 iChar_t iMapAsciiHexToChar(iChar_t *chIn_arg);
 void iWizReActiveDataMode();
+
+iUChar_t iWizCheckStatus();
 
 /*
     Serial.println("connected");

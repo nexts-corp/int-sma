@@ -361,7 +361,7 @@ void iFDelete(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg){
 iChar_t iFSize(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long *pviOutFileSize_arg){
     FIL *viFilePtr;
     FRESULT viFReturn; 
-    iChar_t viReturn = -1; 
+    iChar_t viReturn = 0; 
     
     viFilePtr = (FIL * const)malloc(sizeof(FIL)); 
     if(viFilePtr!=NULL){
@@ -380,11 +380,13 @@ iChar_t iFSize(iChar_t *pviDirPath_arg,iChar_t *pviFilename_arg,unsigned long *p
                }
                viReturn = 1;
            }else{
+               viReturn = 0;          
                printDebug("[iFSize]File %s : %s.[\r\n",pviFilename_arg); 
                iFDisplayReturn(viFReturn);
                printDebug("]\r\n");
            }
         }else{
+           viReturn = 0;
            printDebug("[iFSize]directory : %s.[\r\n",pviDirPath_arg); 
            iFDisplayReturn(viFReturn);
            printDebug("]\r\n"); 
@@ -493,41 +495,41 @@ iChar_t iConfigFile(iChar_t viPropGroupID_arg, iChar_t viMode_arg){
         }
 }
 
-void iMemcpyeFile(char eeprom *eptr, char *dptr, int len)
-{
-   int i=0; 
-   for(i=0;i<len;i++) {
-      *eptr++ = *dptr;
-      dptr++;
-   }
-   return;
-}
-
-void iMemcpydFile(char *dptr, char eeprom *eptr,  int len)
-{
-   int i=0; 
-   for(i=0;i<len;i++) {
-      *dptr++ = *eptr;
-      eptr++;
-   }
-   return;
-}
-
-void iPrintConfigFile(char eeprom *eptr,unsigned int len)
-{
-   int i=0,j=0;
-   printDebug("[iPrintConfigFile]Data:[\r\n"); 
-   printDebug("%04d\t\t",0);
-   for(i=0,j=1;i<len;i++,j++) {
-      printDebug("%02x",*(eptr++));
-      if(j==8){
-         printDebug("\t\t");
-      }else if(j==16){
-         printDebug("\r\n");
-         printDebug("%04d\t\t",i+1);
-         j=0;
-      }
-   } 
-   printDebug("\r\n]\r\n");
-   return;
-}
+//void iMemcpyeFile(char eeprom *eptr, char *dptr, int len)
+//{
+//   int i=0; 
+//   for(i=0;i<len;i++) {
+//      *eptr++ = *dptr;
+//      dptr++;
+//   }
+//   return;
+//}
+//
+//void iMemcpydFile(char *dptr, char eeprom *eptr,  int len)
+//{
+//   int i=0; 
+//   for(i=0;i<len;i++) {
+//      *dptr++ = *eptr;
+//      eptr++;
+//   }
+//   return;
+//}
+//
+//void iPrintConfigFile(char eeprom *eptr,unsigned int len)
+//{
+//   int i=0,j=0;
+//   printDebug("[iPrintConfigFile]Data:[\r\n"); 
+//   printDebug("%04d\t\t",0);
+//   for(i=0,j=1;i<len;i++,j++) {
+//      printDebug("%02x",*(eptr++));
+//      if(j==8){
+//         printDebug("\t\t");
+//      }else if(j==16){
+//         printDebug("\r\n");
+//         printDebug("%04d\t\t",i+1);
+//         j=0;
+//      }
+//   } 
+//   printDebug("\r\n]\r\n");
+//   return;
+//}

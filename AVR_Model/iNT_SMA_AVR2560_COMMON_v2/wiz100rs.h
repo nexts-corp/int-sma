@@ -13,6 +13,9 @@
 #define WIZ100RS_DATA_MAX_SIZE           500
 #define WIZ100SR_PRINT_DEBUG            0
 
+
+
+
 typedef struct{
     char macAddress[12];       //MAC Address (xxxxxx is unique factory value)      //12=ASCII , 6 = byte
     char mode;                //Mode (MIXED mode: 01, SERVER mode: 02,Client mode: 00)

@@ -715,6 +715,94 @@ void iWizReadConfig(){
     viConfigMode = WIZ_CONFIG_NORMAL_MODE;
 }
 
+//iChar_t iWizWriteConfig(){
+//    iChar_t viReturn = 0;//0==fail,1==success
+//    iChar_t viCmdModeChar[] = "+++";
+//                   
+//    iChar_t viCmdIP[] = "<WI>";                  //Set Local IP  
+//    iChar_t viCmdSubnet[] = "<WS>";              //Set Subnet mask
+//    iChar_t viCmdGateWay[] = "<WG>";             //Set Gateway
+//    iChar_t viCmdLocalPort[] = "<WP>";           //Set Local IP’s port number
+//    iChar_t viCmdIPMethod[] = "<WD>";            //Set the IP configuration method
+//    iChar_t viCmdOperMode[] = "<WM>";            //Set the operation mode
+//    iChar_t viCmdProtocal[] = "<WK>";            //Set the Protocol 
+//    iChar_t viCmdBaudRate[] = "<WB>";            //Set the serial baud rate
+//    iChar_t viCmdCmdSerialMeth[] = "<WT>";       //Set the serial command method    
+//    
+//    iChar_t viCmdDnsUse[] = "WU";                //Set DNS Use or Not  
+//    iChar_t viCmdServerIP[] = "WX";              //Set Server address 
+//    iChar_t viCmdServerPort[] = "WN";            //Set Server port
+//    iChar_t viCmdDnsIP[] = "WV";                 //Set DNS IP configuration
+//    iChar_t viCmdDomainName[] = "<WW>";          //Set Domain configuration  
+//    
+//    iChar_t viCmdRestart[] = "<WR>";       //Restart 
+//    
+//    iChar_t viConfigMode;  
+//    iChar_t * pviCheckResponse;
+//    
+//    iChar_t viWizReadBuffer[30]; 
+//    iChar_t viI = 0;
+//    TIMER   timeout;
+//    
+//    //Read configuration mode
+//    //viConfigMode = WIZ_CONFIG_READ_MODE; 
+//    iWizRXMode = WIZ_CONFIG_READ_MODE; 
+//    //send +++  
+//    
+//    index0Buffer = 0;
+//    for(viI=0;viI<strlen(viCmdModeChar);viI++){
+//        putchar0(viCmdModeChar[viI]);
+//    }  
+//    
+//    //wait wiz module response  
+//    TIMER_setTimer(&timeout, 2);
+//    while(!TIMER_checkTimerExceed(timeout)){
+//       #asm("wdr")  
+//       if(index0Buffer>0){ 
+//           delay_ms(100); 
+//           memset(viWizReadBuffer,0,sizeof(viWizReadBuffer));
+//           memcpy(&viWizReadBuffer[0],&rx0Buffer[0],index0Buffer);
+//           
+//           pviCheckResponse = strstr(viWizReadBuffer,"<E>");  
+//           if(pviCheckResponse){
+//#if (WIZ100SR_PRINT_DEBUG == 1)           
+//               printDebug("[iWizWriteConfig]can config mode.\r\n"); 
+//#endif               
+//           }else{
+//#if (WIZ100SR_PRINT_DEBUG == 1)            
+//               printDebug("[iWizReadConfig]can not config mode.\r\n"); 
+//#endif         viReturn = 0; 
+//               return viReturn;     
+//           }
+//           break;
+//       }
+//    }
+//    
+//    if(pviCheckResponse){
+////        delay_ms(20);
+////        if(iWizConfigSend(viCmdIP,viWizReadBuffer)==1){
+////            iWizConfigIPParser(iWiz100srConfig.ip,viWizReadBuffer);  
+////            printDebug("[iWizWriteConfig]IP:");
+////            for(viI=0;viI<sizeof(iWiz100srConfig.ip);viI++){
+////                if(viI!=sizeof(iWiz100srConfig.ip)-1){
+////                    printDebug("%02x.",iWiz100srConfig.ip[viI]);
+////                }else{
+////                    printDebug("%02x",iWiz100srConfig.ip[viI]);
+////                }
+////            } 
+////            printDebug("\r\n");
+////        } 
+//    } 
+//    
+//    
+//    index0Buffer = 0;
+//    viConfigMode = WIZ_CONFIG_NORMAL_MODE;   
+//    
+//    return viReturn;
+//}
+
+
+
 iChar_t iWizConfigSend(iChar_t * pviCmd_arg,iChar_t *pviDataBuff_arg){
     iChar_t viReturn = 0;
     TIMER   timeout;

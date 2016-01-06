@@ -37,7 +37,7 @@ typedef struct{
 extern eeprom unsigned int viLineID;
 
 iChar_t iDataUpdate(const iUInt_t viRecordID_arg,iUChar_t viStatus_arg,iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg);
-iUInt_t iDataInsert(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg);
+iInt_t iDataInsert(iChar_t const * const pviDataBuffer_arg,iUInt_t viLength_arg);
 iChar_t iDataSelect(const iUInt_t viRecordID_arg,iData_t * pviOutDataBuff_arg);
 iChar_t iDataSelectToSettlement(iUInt_t *pviOutData_arg,iUInt_t *pviOutLength_arg,iUChar_t viLimitRecord_arg);
 

@@ -28,9 +28,10 @@ void managerTask(void *pviParameter){
      iChar_t *  pviDatAndStatBuff;   
      iUInt_t    viDatAndStatLength = 0;    
      unsigned long int viUniTime = 0;
-     iUInt_t viRecordID = 0;
+     iInt_t viRecordID = -1;     
+     iChar_t viReturn = -1;
 
-     char mti[2] = {0x02,0x00}; 
+     char mti[2] = {0x00,0x00}; 
      char tid[8] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}; 
      TIMER   viDelay_s; 
      TIMER   viTEver1min;
@@ -48,7 +49,7 @@ void managerTask(void *pviParameter){
     
     #asm("wdr")
     
-     printDebug("[managerTask]Task Running...\r\n");    
+     printDebug("[manageTask]Task Running...\r\n");    
      
     
     //Terminal frist initial//
@@ -60,18 +61,31 @@ void managerTask(void *pviParameter){
         iPTCPack(&viTXDataBuff,(char *)"",0,mti,tid); 
         viRecordID = iDataInsert(viTXDataBuff.value,viTXDataBuff.length);
         if(viRecordID>0){
-            printDebug("[managerTask]Record ID(%04ld)\r\n",viRecordID);
-        }
-        iDataSelect(viRecordID,&viTXDataBuff);    
+            printDebug("[manageTask]Record ID(%04ld)\r\n",viRecordID);
+            iDataSelect(viRecordID,&viTXDataBuff);
+        }else if(viRecordID == -1){
+            printDebug("[manageTask]SD Card insert error.\r\n"); 
+            //switch mode to send non save to sd card
+            //while(1);
+        }   
+        
+            
         
         //iLanRestart();
         delay_ms(100);
         if(iLanWriteData(&viTXDataBuff)){
+            delay_ms(100);
             if(iLanReadData(&viRXDataBuff)){
                 memcpy(&viUniTime,&viRXDataBuff.value[13],4); 
                 iSyncUniTime(&viUniTime);
-                if(iPTCParser(&viRXDataBuff)){ 
-                    iDataUpdate(viRecordID,'Y',(char *)"",0);  //Y=> //no update date   ,only update status
+                if(iPTCParser(&viRXDataBuff)){
+                    if(viRecordID>0){
+                        viReturn = iDataUpdate(viRecordID,'Y',(char *)"",0);  //Y=> //no update date   ,only update status   
+                        printDebug("[manageTask]iDataUpdate return(%d).\r\n",viReturn);
+                        if(viReturn == 0){
+                            printDebug("[manageTask]SD Card update error.\r\n"); 
+                        }
+                    } 
                     viFlagTerInit = 1;
                     iTagParser(&viRXDataBuff);      //tag process  othor do..
                     if(iPTCCheckHostReq(&viRXDataBuff)){
@@ -80,7 +94,7 @@ void managerTask(void *pviParameter){
                 }
                 //iHostReqProcess(&viTXDataBuff,&viRXDataBuff);
             }else{
-                printDebug("[managerTask]Initial no ack.\r\n");
+                printDebug("[manageTask]Initial no ack.\r\n");
             }
         } 
     }else{
@@ -107,7 +121,7 @@ void managerTask(void *pviParameter){
                   memcpy(&pviDatAndStatBuff[viDataReport.length],viStatusReport.value,viStatusReport.length);
                }else{
                   free(pviDatAndStatBuff);
-                  printDebug("[managerTask]data and ststus can't allocate mem.\r\n"); 
+                  printDebug("[manageTask]data and ststus can't allocate mem.\r\n"); 
                   return;
                } 
                modeOperate = REALTIME_MODE;
@@ -128,10 +142,12 @@ void managerTask(void *pviParameter){
             
             viRecordID = iDataInsert(viTXDataBuff.value,viTXDataBuff.length);
             if(viRecordID>0){
-                printDebug("[managerTask]Record ID(%04ld)\r\n",viRecordID);
+                printDebug("[manageTask]Record ID(%04ld)\r\n",viRecordID);
+                iDataSelect(viRecordID,&viTXDataBuff);
+            }else if(viRecordID == 0){
+                printDebug("[manageTask]SD Card insert error.\r\n"); 
             }
             //iDataSelect(viRecordID); 
-            iDataSelect(viRecordID,&viTXDataBuff);
             iMangQueueAddItem(viRecordID,&viTXDataBuff,&viTXDataBuff.value[17]); //add protocol in mang queue
             iMangQueueDisplay();//display mang queue
             
@@ -142,15 +158,22 @@ void managerTask(void *pviParameter){
             
             //print_payload(viTXDataBuff.value, (sizeof(viGenDataElem)+20));               //20 = header + check sum   
             while(iMangCheckRetransmit(&viTXDataBuff.value[17])!=0){ 
-                if(iLanWriteData(&viTXDataBuff)){ 
+                if(iLanWriteData(&viTXDataBuff)){
+                      delay_ms(100); 
                       if(iLanReadData(&viRXDataBuff)){
                             memcpy(&viUniTime,&viRXDataBuff.value[13],4); 
                             iSyncUniTime(&viUniTime);
                             iMangQueueDelItem(&viRXDataBuff.value[17]);       //del queue with fid 
-                            if(iPTCParser(&viRXDataBuff)){    //report success   
-                                  iDataUpdate(viRecordID,'Y',(char *)"",0);  //Y=> //no update date   ,only update status  (Real Time sending) 
+                            if(iPTCParser(&viRXDataBuff)){    //report success  
+                                  if(viRecordID>0){
+                                      viReturn = iDataUpdate(viRecordID,'Y',(char *)"",0);  //Y=> //no update date   ,only update status  (Real Time sending)  
+                                      if(viReturn == 0){
+                                         printDebug("[manageTask]SD Card update error.\r\n"); 
+                                      }
+                                  } 
+                                  
 #if (MANG_TASK_PRINT_DEBUG == 1)
-                                  printDebug("[managerTask]viRXDataBuff.[\r\n");
+                                  printDebug("[manageTask]viRXDataBuff.[\r\n");
                                   print_payload(viRXDataBuff.value,viRXDataBuff.length);
                                   printDebug("]\r\n"); 
 #endif                                  
@@ -184,7 +207,7 @@ void managerTask(void *pviParameter){
                      mti[1] = 0x00;
                      iPTCMtiRepack(&viTXDataBuff,mti);
 #if (MANG_TASK_PRINT_DEBUG == 1)                     
-                     printDebug("[managerTask]MTI change to log(0x0300).[\r\n");
+                     printDebug("[manageTask]MTI change to log(0x0300).[\r\n");
                      print_payload(viTXDataBuff.value,viTXDataBuff.length);
                      printDebug("]\r\n"); 
 #endif                        
@@ -193,8 +216,13 @@ void managerTask(void *pviParameter){
             }
             
             //show statment
-            //iDataSelectToSettlement((unsigned int *)0,(unsigned int *)0,20);
-//            iSettlement(&viTXDataBuff,&viRXDataBuff);
+            viReturn = iDataSelectToSettlement((unsigned int *)0,(unsigned int *)0,20);
+            //printDebug("[manageTask]SD Card settle return(%d).\r\n",viReturn); 
+            if(viReturn == 0){
+                printDebug("[manageTask]SD Card settlement error.\r\n"); 
+            }else{
+                iSettlement(&viTXDataBuff,&viRXDataBuff);
+            }
         }
     
     }
@@ -204,7 +232,7 @@ void managerTask(void *pviParameter){
 }
 
 iChar_t iSettlement(iData_t * pviTXDataBuff_arg,iData_t * pviRXDataBuff_arg){
-    iChar_t viReturn = -1; 
+    iChar_t viReturn = 0; 
     char mti[2] = {0x05,0x00}; 
     char tid[8] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};  
     iUInt_t viRIDBuff[30];

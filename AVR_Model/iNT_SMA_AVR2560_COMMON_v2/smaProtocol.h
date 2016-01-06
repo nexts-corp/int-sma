@@ -109,7 +109,7 @@ void protocolManagement();
 
 void iPTCMtiRepack(iData_t *pviOutData_arg,iChar_t *pviMTI_arg);
 iChar_t iPTCParser(iData_t *pviOutData_arg);
-iInt_t iCheckSum(iChar_t buf_ags[], iInt_t len_ags);
+iUInt_t iCheckSum(iChar_t buf_ags[], iInt_t len_ags);
 
 iUChar_t iPTCCheckHostReq(iData_t *pviData_arg);
 iInt_t iGenFID();

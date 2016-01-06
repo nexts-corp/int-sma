@@ -5,5 +5,8 @@
 
 #define GSM_READ_SIGNAL_def "+CSQ"
 
+
+void iGsmSetUart(iChar_t viChannel_arg,iChar_t viBaudRate_arg);
+
 #endif 
 
