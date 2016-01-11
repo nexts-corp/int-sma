@@ -189,7 +189,7 @@
 ;PCODE: $0000005A VOL: 0
 ;PCODE: $0000005B VOL: 0
 ;PCODE: $0000005C VOL: 0
-; 001A 0042         }else if(viRecordID == -1){
+; 001A 0042         }else if(viRecordID <= 0){
 ;PCODE: $0000005D VOL: 0
 ;PCODE: $0000005E VOL: 0
 ;PCODE: $0000005F VOL: 0

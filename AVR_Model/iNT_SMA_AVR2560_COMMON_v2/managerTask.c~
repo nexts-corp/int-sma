@@ -63,7 +63,7 @@ void managerTask(void *pviParameter){
         if(viRecordID>0){
             printDebug("[manageTask]Record ID(%04ld)\r\n",viRecordID);
             iDataSelect(viRecordID,&viTXDataBuff);
-        }else if(viRecordID == -1){
+        }else if(viRecordID == 0){
             printDebug("[manageTask]SD Card insert error.\r\n"); 
             //switch mode to send non save to sd card
             //while(1);
@@ -82,7 +82,7 @@ void managerTask(void *pviParameter){
                     if(viRecordID>0){
                         viReturn = iDataUpdate(viRecordID,'Y',(char *)"",0);  //Y=> //no update date   ,only update status   
                         printDebug("[manageTask]iDataUpdate return(%d).\r\n",viReturn);
-                        if(viReturn == -1){
+                        if(viReturn == 0){
                             printDebug("[manageTask]SD Card update error.\r\n"); 
                         }
                     } 
@@ -144,7 +144,7 @@ void managerTask(void *pviParameter){
             if(viRecordID>0){
                 printDebug("[manageTask]Record ID(%04ld)\r\n",viRecordID);
                 iDataSelect(viRecordID,&viTXDataBuff);
-            }else if(viRecordID == -1){
+            }else if(viRecordID == 0){
                 printDebug("[manageTask]SD Card insert error.\r\n"); 
             }
             //iDataSelect(viRecordID); 
@@ -217,7 +217,7 @@ void managerTask(void *pviParameter){
             
             //show statment
             viReturn = iDataSelectToSettlement((unsigned int *)0,(unsigned int *)0,20);
-            printDebug("[manageTask]SD Card settle return(%d).\r\n",viReturn); 
+            //printDebug("[manageTask]SD Card settle return(%d).\r\n",viReturn); 
             if(viReturn == 0){
                 printDebug("[manageTask]SD Card settlement error.\r\n"); 
             }else{

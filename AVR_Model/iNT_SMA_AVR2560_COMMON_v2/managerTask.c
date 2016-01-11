@@ -63,7 +63,7 @@ void managerTask(void *pviParameter){
         if(viRecordID>0){
             printDebug("[manageTask]Record ID(%04ld)\r\n",viRecordID);
             iDataSelect(viRecordID,&viTXDataBuff);
-        }else if(viRecordID == -1){
+        }else if(viRecordID <= 0){
             printDebug("[manageTask]SD Card insert error.\r\n"); 
             //switch mode to send non save to sd card
             //while(1);

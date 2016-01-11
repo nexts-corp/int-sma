@@ -278,7 +278,8 @@ int iWizConnected(){
     int iReturn =  WIZ_CONN_FAIL; 
     char * pch; 
     TIMER   timeout;
-    char  pviCheckWizConn[200];
+    char  pviCheckWizConn[100];   
+    //char viDataTest[] = "Pool\r\n";
     
     TIMER_setTimer(&timeout, 7); 
     memset(pviCheckWizConn,0,sizeof(pviCheckWizConn));
@@ -291,40 +292,56 @@ int iWizConnected(){
         delay_ms(50);
         //printDebug("[iWizConnected len(%d)]\r\n",index0Buffer);
         
-        if((index0Buffer >= 11) && (index0Buffer <200) && (iWizRXMode == WIZ_RX_STAT_MODE)){        //11= >  Connected
+        if((index0Buffer >= 11) && (index0Buffer <100) && (iWizRXMode == WIZ_RX_DATA_MODE)){        //11= >  Connected   //WIZ_RX_DATA_MODE  //WIZ_RX_STAT_MODE
             //pviCheckWizConn = (char *)malloc(index0Buffer);  
             //pviCheckWizConn = (char *)malloc(400); 
             //if(pviCheckWizConn != NULL){
-               printDebug("[iWizConnected len(%d)]\r\n",index0Buffer);
+               printDebug("[iWizConnected]len(%d)\r\n",index0Buffer);
                memcpy(&pviCheckWizConn[0],&rx0Buffer[0],index0Buffer); 
                pch = strtok (pviCheckWizConn,">");  
                //pch = strtok (pviCheckWizConn,"> ");
                while(pch != NULL){
+                   #asm("wdr")
                    //printDebug("[Data split]%s\r\n",pch);
                    if(strncmp (pch," Connected",10)==0){
-                        printDebug("[Data split]%s\r\n",pch);
+                        printDebug("[iWizConnected] %s\r\n",pch);
                         iReturn =  WIZ_CONNECTED;
                         break;
                    }else if(strncmp (pch," Listen : OK",12)==0){
-                        printDebug("[Data split]%s\r\n",pch);
+                        printDebug("[iWizConnected] %s\r\n",pch);
                         iReturn =  WIZ_CONNECTED;
                         break;
                    }else if(strncmp (pch," Closed",7)==0){
-                        printDebug("[Data split]%s\r\n",pch);
+                        printDebug("[iWizConnected] %s\r\n",pch);
                         iReturn =  WIZ_CLOSE;
-                        break;
+                        //break;
+                   }else{
+                        printDebug("[iWizConnected] is unknow.\r\n");
+                        iReturn =  WIZ_UNKNOW;
                    }
                    pch = strtok (NULL, ">");
                }
                
                //free(pviCheckWizConn);
-               if(iReturn ==  WIZ_CONNECTED){
+               if(iReturn ==  WIZ_CONNECTED){   
+                   printDebug("[iWizConnected] is connected.\r\n");
                    break;
+               }else if((iReturn ==  WIZ_UNKNOW) || (iReturn ==  WIZ_CLOSE)){ 
+                   //memset(rx0Buffer,0,400);
+                   #asm("cli")
+                   index0Buffer = 0; 
+                   #asm("sei")
+                   TIMER_setTimer(&timeout, 5);
+                   printDebug("[iWizConnected] is close or unknow.\r\n");
+                   //write_uart0(viDataTest, sizeof(viDataTest)-1);
+                   delay_ms(100);
                }
 //            }else{
 //               printDebug("[iWizConnected]can 't allocate mem(%d).\r\n",index0Buffer); 
 //               iReturn =  WIZ_CONN_FAIL;
 //            } 
+        }else if(index0Buffer >= 100){
+           printDebug("[iWizConnected] buff overflow.\r\n");
         }else{
            iReturn =  WIZ_CONN_FAIL;
         }
@@ -616,13 +633,14 @@ void iWizReadConfig(){
     }
     
     if(pviCheckResponse){
-        delay_ms(20);
+        delay_ms(50);
         if(iWizConfigSend(viCmdMAC,viWizReadBuffer)==1){
             iWizConfigMACParser(iWiz100srConfig.macAddress,viWizReadBuffer);  
             printDebug("[iWizReadConfig]MAC:");
             for(viI=0;viI<sizeof(iWiz100srConfig.macAddress);viI++){
                 if(viI!=sizeof(iWiz100srConfig.macAddress)-1){
-                    printDebug("%02x:",iWiz100srConfig.macAddress[viI]);
+                    //printDebug("%02x:",iWiz100srConfig.macAddress[viI]);
+                    printDebug("%c",iWiz100srConfig.macAddress[viI]);
                 }else{
                     printDebug("%02x",iWiz100srConfig.macAddress[viI]);
                 } 
@@ -630,50 +648,53 @@ void iWizReadConfig(){
                
             printDebug("\r\n");
         }
-        delay_ms(20);
+        delay_ms(50);
         if(iWizConfigSend(viCmdIP,viWizReadBuffer)==1){
             iWizConfigIPParser(iWiz100srConfig.ip,viWizReadBuffer);  
             printDebug("[iWizReadConfig]IP:");
             for(viI=0;viI<sizeof(iWiz100srConfig.ip);viI++){
                 if(viI!=sizeof(iWiz100srConfig.ip)-1){
-                    printDebug("%02x.",iWiz100srConfig.ip[viI]);
+                    //printDebug("%02x.",iWiz100srConfig.ip[viI]);
+                    printDebug("%02d.",iWiz100srConfig.ip[viI]); 
                 }else{
                     printDebug("%02x",iWiz100srConfig.ip[viI]);
                 }
             } 
             printDebug("\r\n");
         }
-        delay_ms(20); 
+        delay_ms(50); 
         if(iWizConfigSend(viCmdSubnet,viWizReadBuffer)==1){
             iWizConfigIPParser(iWiz100srConfig.subnet,viWizReadBuffer);  
             printDebug("[iWizReadConfig]Subnet mask:");
             for(viI=0;viI<sizeof(iWiz100srConfig.subnet);viI++){
                 if(viI!=sizeof(iWiz100srConfig.subnet)-1){
-                    printDebug("%02x.",iWiz100srConfig.subnet[viI]);
+                    //printDebug("%02x.",iWiz100srConfig.subnet[viI]);  
+                    printDebug("%02d.",iWiz100srConfig.subnet[viI]);
                 }else{
                     printDebug("%02x",iWiz100srConfig.subnet[viI]);
                 }
             } 
             printDebug("\r\n");
         }
-        delay_ms(20);  
+        delay_ms(50);  
         if(iWizConfigSend(viCmdGateWay,viWizReadBuffer)==1){
             iWizConfigIPParser(iWiz100srConfig.gateWay,viWizReadBuffer);  
             printDebug("[iWizReadConfig]Gateway:");
             for(viI=0;viI<sizeof(iWiz100srConfig.gateWay);viI++){
                 if(viI!=sizeof(iWiz100srConfig.gateWay)-1){
-                    printDebug("%02x.",iWiz100srConfig.gateWay[viI]);
+                    //printDebug("%02x.",iWiz100srConfig.gateWay[viI]);
+                    printDebug("%02d.",iWiz100srConfig.gateWay[viI]);
                 }else{
                     printDebug("%02x",iWiz100srConfig.gateWay[viI]);
                 }
             } 
             printDebug("\r\n");
         }
-        delay_ms(20); 
+        delay_ms(50); 
         iWizConfigSend(viCmdLocalPort,viWizReadBuffer);
         iWizConfigSend(viCmdIPMethod,viWizReadBuffer);  
         iWizConfigSend(viCmdOperMode,viWizReadBuffer); 
-        delay_ms(20); 
+        delay_ms(50); 
         if(iWizConfigSend(viCmdCmdDomainName,viWizReadBuffer)){
             memcpy(iWiz100srConfig.sdn,&viWizReadBuffer[2],sizeof(iWiz100srConfig.sdn));
             printDebug("[iWizReadConfig]SDN:%s\r\n",iWiz100srConfig.sdn);
@@ -685,7 +706,7 @@ void iWizReadConfig(){
         for(viI=0;viI<strlen(viCmdRestart);viI++){
             putchar0(viCmdRestart[viI]);
         }    
-        delay_ms(20);
+        delay_ms(50);
         //wait wiz module response  
         TIMER_setTimer(&timeout, 3);
         while(!TIMER_checkTimerExceed(timeout)){

@@ -70,15 +70,16 @@ void main(void){
 
     
     
-    int err,i=0,k=0,res,last_status;   
+    int err,i=0,k=0,res,last_status; 
+    delay_ms(3000);  
     do{ err = initial_system();  }while(err);  
     
     printDebug("[main]Initial...\r\n");
     
-    while(1){ 
-        #asm("wdr")        
-       delay_ms(1000);
-    }
+//    while(1){ 
+//        #asm("wdr")        
+//       delay_ms(1000);
+//    }
     
     
 //    pviQueueData1 = iQueueCreate(10,sizeof(int));

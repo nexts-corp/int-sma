@@ -109,14 +109,15 @@ iUChar_t iLanWriteData(iData_t * pviData_agr){
 iChar_t iLanInit(){
        iChar_t viReturn;
        //iWizReActiveDataMode();
-       iWizRXMode = WIZ_RX_STAT_MODE; 
+      // iWizRXMode = WIZ_RX_STAT_MODE; 
+       iWizRXMode = WIZ_RX_DATA_MODE;
        if(iWizConnected()){
             printDebug("[iLanInit]Status:Connected.\r\n");
             iWizRXMode = WIZ_RX_DATA_MODE;
             viReturn = LEN_DATA_WRITE_SUCCESS;
        } else{
             viReturn = LEN_DATA_WRITE_FAIL;
-            printDebug("[iLanInit]Status:Close.\r\n");
+            printDebug("[iLanInit]Status:close or unknow.\r\n");
        }  
        return viReturn;
 }

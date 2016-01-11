@@ -70,7 +70,8 @@ void main(void){
 
     
     
-    int err,i=0,k=0,res,last_status;   
+    int err,i=0,k=0,res,last_status; 
+    delay_ms(1000);  
     do{ err = initial_system();  }while(err);  
     
     printDebug("[main]Initial...\r\n");

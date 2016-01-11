@@ -48,7 +48,7 @@ typedef struct{
 
 #define WIZ_CONNECTED       0x01
 #define WIZ_CLOSE           0x02
-#define WIZ_UNKNOW          0x00
+#define WIZ_UNKNOW          0x03
 #define WIZ_CONN_FAIL       0x00
 
 #define WIZ_DATA_EMPTY          0x00
