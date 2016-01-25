@@ -466,7 +466,8 @@ int sensorRead(int ch, struct sens_val_st *sensor)
                                     }      
                                     break;
     }                       
-    //printDebug("end read sensor.\r\n");
+    //printDebug("end read sensor.\r\n");   
+    //printDebug("Temp CH[0]= %f C\r\n",sensor->value);
     sensor->status  = SENS_NORMAL;               
     
     return 0;

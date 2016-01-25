@@ -1829,28 +1829,29 @@
 ; 000D 01D4     }
 ;PCODE: $00000513 VOL: 0
 ; 000D 01D5     //printDebug("end read sensor.\r\n");
-; 000D 01D6     sensor->status  = SENS_NORMAL;
+; 000D 01D6     //printDebug("Temp CH[0]= %f C\r\n",sensor->value);
+; 000D 01D7     sensor->status  = SENS_NORMAL;
 ;PCODE: $00000514 VOL: 0
 ;PCODE: $00000515 VOL: 0
 ;PCODE: $00000516 VOL: 0
 ;PCODE: $00000517 VOL: 0
-; 000D 01D7 
-; 000D 01D8     return 0;
+; 000D 01D8 
+; 000D 01D9     return 0;
 ;PCODE: $00000518 VOL: 0
 ;PCODE: $00000519 VOL: 0
 ;PCODE: $0000051A VOL: 0
 ;PCODE: $0000051B VOL: 0
-; 000D 01D9 }
+; 000D 01DA }
 ;PCODE: $0000051C VOL: 0
 ;/*============================================================*/
 ;void getInterval(float adcRaw, float *x1, float *x2, float *y1, float *y2) {
-; 000D 01DB void getInterval(float adcRaw, float *x1, float *x2, float *y1, float *y2) {
+; 000D 01DC void getInterval(float adcRaw, float *x1, float *x2, float *y1, float *y2) {
 ;PCODE: $0000051D VOL: 0
 ;PCODE: $0000051E VOL: 0
-; 000D 01DC 
-; 000D 01DD     int i = 0;
-; 000D 01DE 
-; 000D 01DF     for(i = 0; i < 15; i++) {
+; 000D 01DD 
+; 000D 01DE     int i = 0;
+; 000D 01DF 
+; 000D 01E0     for(i = 0; i < 15; i++) {
 ;PCODE: $0000051F VOL: 0
 ;PCODE: $00000520 VOL: 0
 ;PCODE: $00000521 VOL: 0
@@ -1871,7 +1872,7 @@
 ;PCODE: $0000052A VOL: 0
 ;PCODE: $0000052B VOL: 0
 ;PCODE: $0000052C VOL: 0
-; 000D 01E0         if(adcRaw <= adcTable[i]) {
+; 000D 01E1         if(adcRaw <= adcTable[i]) {
 ;PCODE: $0000052D VOL: 0
 ;PCODE: $0000052E VOL: 0
 ;PCODE: $0000052F VOL: 0
@@ -1882,7 +1883,7 @@
 ;PCODE: $00000534 VOL: 0
 ;PCODE: $00000535 VOL: 0
 ;PCODE: $00000536 VOL: 0
-; 000D 01E1             *x1 = adcTable[i-1];
+; 000D 01E2             *x1 = adcTable[i-1];
 ;PCODE: $00000537 VOL: 0
 ;PCODE: $00000538 VOL: 0
 ;PCODE: $00000539 VOL: 0
@@ -1893,7 +1894,7 @@
 ;PCODE: $0000053E VOL: 0
 ;PCODE: $0000053F VOL: 0
 ;PCODE: $00000540 VOL: 0
-; 000D 01E2             *y1 = tempTable[i-1];
+; 000D 01E3             *y1 = tempTable[i-1];
 ;PCODE: $00000541 VOL: 0
 ;PCODE: $00000542 VOL: 0
 ;PCODE: $00000543 VOL: 0
@@ -1904,7 +1905,7 @@
 ;PCODE: $00000548 VOL: 0
 ;PCODE: $00000549 VOL: 0
 ;PCODE: $0000054A VOL: 0
-; 000D 01E3             *x2 = adcTable[i];
+; 000D 01E4             *x2 = adcTable[i];
 ;PCODE: $0000054B VOL: 0
 ;PCODE: $0000054C VOL: 0
 ;PCODE: $0000054D VOL: 0
@@ -1914,7 +1915,7 @@
 ;PCODE: $00000551 VOL: 0
 ;PCODE: $00000552 VOL: 0
 ;PCODE: $00000553 VOL: 0
-; 000D 01E4             *y2 = tempTable[i];
+; 000D 01E5             *y2 = tempTable[i];
 ;PCODE: $00000554 VOL: 0
 ;PCODE: $00000555 VOL: 0
 ;PCODE: $00000556 VOL: 0
@@ -1924,34 +1925,34 @@
 ;PCODE: $0000055A VOL: 0
 ;PCODE: $0000055B VOL: 0
 ;PCODE: $0000055C VOL: 0
-; 000D 01E5             break;
+; 000D 01E6             break;
 ;PCODE: $0000055D VOL: 0
-; 000D 01E6         }
-; 000D 01E7     }
+; 000D 01E7         }
+; 000D 01E8     }
 ;PCODE: $0000055E VOL: 0
 ;PCODE: $0000055F VOL: 0
 ;PCODE: $00000560 VOL: 0
 ;PCODE: $00000561 VOL: 0
 ;PCODE: $00000562 VOL: 0
 ;PCODE: $00000563 VOL: 0
-; 000D 01E8 
-; 000D 01E9     return;
+; 000D 01E9 
+; 000D 01EA     return;
 ;PCODE: $00000564 VOL: 0
 ;PCODE: $00000565 VOL: 0
 ;PCODE: $00000566 VOL: 0
 ;PCODE: $00000567 VOL: 0
 ;PCODE: $00000568 VOL: 0
 ;PCODE: $00000569 VOL: 0
-; 000D 01EA }
+; 000D 01EB }
 ;PCODE: $0000056A VOL: 0
 ;/*============================================================*/
 ;int sensorCalibrate1(int p1, int p2)
-; 000D 01ED {
+; 000D 01EE {
 ;PCODE: $0000056B VOL: 0
 ;PCODE: $0000056C VOL: 0
-; 000D 01EE     float p2_raw;
-; 000D 01EF 
-; 000D 01F0     if(operating_config.sensorEnable[p1] != 0x01){
+; 000D 01EF     float p2_raw;
+; 000D 01F0 
+; 000D 01F1     if(operating_config.sensorEnable[p1] != 0x01){
 ;PCODE: $0000056D VOL: 0
 ;PCODE: $0000056E VOL: 0
 ;	p1 -> Y+6
@@ -1964,7 +1965,7 @@
 ;PCODE: $00000573 VOL: 0
 ;PCODE: $00000574 VOL: 0
 ;PCODE: $00000575 VOL: 0
-; 000D 01F1         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p1+1);
+; 000D 01F2         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p1+1);
 ;PCODE: $00000576 VOL: 0
 ;PCODE: $00000577 VOL: 0
 ;PCODE: $00000578 VOL: 0
@@ -1976,12 +1977,12 @@
 ;PCODE: $0000057E VOL: 0
 ;PCODE: $0000057F VOL: 0
 ;PCODE: $00000580 VOL: 0
-; 000D 01F2         return -1;
+; 000D 01F3         return -1;
 ;PCODE: $00000581 VOL: 0
 ;PCODE: $00000582 VOL: 0
 ;PCODE: $00000583 VOL: 0
-; 000D 01F3     }
-; 000D 01F4     if(operating_config.sensorEnable[p2] != 0x01){
+; 000D 01F4     }
+; 000D 01F5     if(operating_config.sensorEnable[p2] != 0x01){
 ;PCODE: $00000584 VOL: 0
 ;PCODE: $00000585 VOL: 0
 ;PCODE: $00000586 VOL: 0
@@ -1990,7 +1991,7 @@
 ;PCODE: $00000589 VOL: 0
 ;PCODE: $0000058A VOL: 0
 ;PCODE: $0000058B VOL: 0
-; 000D 01F5         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p2+1);
+; 000D 01F6         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p2+1);
 ;PCODE: $0000058C VOL: 0
 ;PCODE: $0000058D VOL: 0
 ;PCODE: $0000058E VOL: 0
@@ -2002,13 +2003,13 @@
 ;PCODE: $00000594 VOL: 0
 ;PCODE: $00000595 VOL: 0
 ;PCODE: $00000596 VOL: 0
-; 000D 01F6         return -1;
+; 000D 01F7         return -1;
 ;PCODE: $00000597 VOL: 0
 ;PCODE: $00000598 VOL: 0
 ;PCODE: $00000599 VOL: 0
-; 000D 01F7     }
-; 000D 01F8 
-; 000D 01F9     if(sensor[p1].status != SENS_NORMAL){
+; 000D 01F8     }
+; 000D 01F9 
+; 000D 01FA     if(sensor[p1].status != SENS_NORMAL){
 ;PCODE: $0000059A VOL: 0
 ;PCODE: $0000059B VOL: 0
 ;PCODE: $0000059C VOL: 0
@@ -2018,7 +2019,7 @@
 ;PCODE: $000005A0 VOL: 0
 ;PCODE: $000005A1 VOL: 0
 ;PCODE: $000005A2 VOL: 0
-; 000D 01FA         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p1+1,sensor[p1].status);
+; 000D 01FB         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p1+1,sensor[p1].status);
 ;PCODE: $000005A3 VOL: 0
 ;PCODE: $000005A4 VOL: 0
 ;PCODE: $000005A5 VOL: 0
@@ -2038,12 +2039,12 @@
 ;PCODE: $000005B3 VOL: 0
 ;PCODE: $000005B4 VOL: 0
 ;PCODE: $000005B5 VOL: 0
-; 000D 01FB         return -1;
+; 000D 01FC         return -1;
 ;PCODE: $000005B6 VOL: 0
 ;PCODE: $000005B7 VOL: 0
 ;PCODE: $000005B8 VOL: 0
-; 000D 01FC     }
-; 000D 01FD     if(sensor[p2].status != SENS_NORMAL){
+; 000D 01FD     }
+; 000D 01FE     if(sensor[p2].status != SENS_NORMAL){
 ;PCODE: $000005B9 VOL: 0
 ;PCODE: $000005BA VOL: 0
 ;PCODE: $000005BB VOL: 0
@@ -2053,7 +2054,7 @@
 ;PCODE: $000005BF VOL: 0
 ;PCODE: $000005C0 VOL: 0
 ;PCODE: $000005C1 VOL: 0
-; 000D 01FE         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p2+1,sensor[p2].status);
+; 000D 01FF         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p2+1,sensor[p2].status);
 ;PCODE: $000005C2 VOL: 0
 ;PCODE: $000005C3 VOL: 0
 ;PCODE: $000005C4 VOL: 0
@@ -2073,20 +2074,20 @@
 ;PCODE: $000005D2 VOL: 0
 ;PCODE: $000005D3 VOL: 0
 ;PCODE: $000005D4 VOL: 0
-; 000D 01FF         return -1;
+; 000D 0200         return -1;
 ;PCODE: $000005D5 VOL: 0
 ;PCODE: $000005D6 VOL: 0
 ;PCODE: $000005D7 VOL: 0
-; 000D 0200     }
-; 000D 0201 
-; 000D 0202     epCalType[p2]   = CAL_SELFCOMPARE;
+; 000D 0201     }
+; 000D 0202 
+; 000D 0203     epCalType[p2]   = CAL_SELFCOMPARE;
 ;PCODE: $000005D8 VOL: 0
 ;PCODE: $000005D9 VOL: 0
 ;PCODE: $000005DA VOL: 0
 ;PCODE: $000005DB VOL: 0
 ;PCODE: $000005DC VOL: 0
-; 000D 0203 
-; 000D 0204     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+; 000D 0204 
+; 000D 0205     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 ;PCODE: $000005DD VOL: 0
 ;PCODE: $000005DE VOL: 0
 ;PCODE: $000005DF VOL: 0
@@ -2106,7 +2107,7 @@
 ;PCODE: $000005ED VOL: 0
 ;PCODE: $000005EE VOL: 0
 ;PCODE: $000005EF VOL: 0
-; 000D 0205         p2_raw          = (ADC_CONV_FAC*100 * adcData[p2]);
+; 000D 0206         p2_raw          = (ADC_CONV_FAC*100 * adcData[p2]);
 ;PCODE: $000005F0 VOL: 0
 ;PCODE: $000005F1 VOL: 0
 ;PCODE: $000005F2 VOL: 0
@@ -2123,8 +2124,8 @@
 ;PCODE: $000005FD VOL: 0
 ;PCODE: $000005FE VOL: 0
 ;PCODE: $000005FF VOL: 0
-; 000D 0206     }
-; 000D 0207     else if(TEMP_SEL == TEMP_TMEC){
+; 000D 0207     }
+; 000D 0208     else if(TEMP_SEL == TEMP_TMEC){
 ;PCODE: $00000600 VOL: 0
 ;PCODE: $00000601 VOL: 0
 ;PCODE: $00000602 VOL: 0
@@ -2136,7 +2137,7 @@
 ;PCODE: $00000608 VOL: 0
 ;PCODE: $00000609 VOL: 0
 ;PCODE: $0000060A VOL: 0
-; 000D 0208         p2_raw          = epTMECTempSlope   * adcData[p2];
+; 000D 0209         p2_raw          = epTMECTempSlope   * adcData[p2];
 ;PCODE: $0000060B VOL: 0
 ;PCODE: $0000060C VOL: 0
 ;PCODE: $0000060D VOL: 0
@@ -2145,8 +2146,8 @@
 ;PCODE: $00000610 VOL: 0
 ;PCODE: $00000611 VOL: 0
 ;PCODE: $00000612 VOL: 0
-; 000D 0209     }
-; 000D 020A     else if(TEMP_SEL == TEMP_PT100){
+; 000D 020A     }
+; 000D 020B     else if(TEMP_SEL == TEMP_PT100){
 ;PCODE: $00000613 VOL: 0
 ;PCODE: $00000614 VOL: 0
 ;PCODE: $00000615 VOL: 0
@@ -2158,8 +2159,8 @@
 ;PCODE: $0000061B VOL: 0
 ;PCODE: $0000061C VOL: 0
 ;PCODE: $0000061D VOL: 0
-; 000D 020B         p2_raw          = (epPT100Temp_A    * adcData[p2] * adcData[p2]) +
-; 000D 020C                           (epPT100Temp_B    * adcData[p2]);
+; 000D 020C         p2_raw          = (epPT100Temp_A    * adcData[p2] * adcData[p2]) +
+; 000D 020D                           (epPT100Temp_B    * adcData[p2]);
 ;PCODE: $0000061E VOL: 0
 ;PCODE: $0000061F VOL: 0
 ;PCODE: $00000620 VOL: 0
@@ -2186,9 +2187,9 @@
 ;PCODE: $00000635 VOL: 0
 ;PCODE: $00000636 VOL: 0
 ;PCODE: $00000637 VOL: 0
-; 000D 020D     }
-; 000D 020E 
-; 000D 020F     epFactor_A[p2]  = 0;
+; 000D 020E     }
+; 000D 020F 
+; 000D 0210     epFactor_A[p2]  = 0;
 ;PCODE: $00000638 VOL: 0
 ;PCODE: $00000639 VOL: 0
 ;PCODE: $0000063A VOL: 0
@@ -2198,14 +2199,14 @@
 ;PCODE: $0000063E VOL: 0
 ;PCODE: $0000063F VOL: 0
 ;PCODE: $00000640 VOL: 0
-; 000D 0210     epFactor_B[p2]  = 0;
+; 000D 0211     epFactor_B[p2]  = 0;
 ;PCODE: $00000641 VOL: 0
 ;PCODE: $00000642 VOL: 0
 ;PCODE: $00000643 VOL: 0
 ;PCODE: $00000644 VOL: 0
 ;PCODE: $00000645 VOL: 0
 ;PCODE: $00000646 VOL: 0
-; 000D 0211     epFactor_C[p2]  = sensor[p1].value - p2_raw;
+; 000D 0212     epFactor_C[p2]  = sensor[p1].value - p2_raw;
 ;PCODE: $00000647 VOL: 0
 ;PCODE: $00000648 VOL: 0
 ;PCODE: $00000649 VOL: 0
@@ -2221,24 +2222,24 @@
 ;PCODE: $00000653 VOL: 0
 ;PCODE: $00000654 VOL: 0
 ;PCODE: $00000655 VOL: 0
-; 000D 0212 
-; 000D 0213     return 0;
+; 000D 0213 
+; 000D 0214     return 0;
 ;PCODE: $00000656 VOL: 0
 ;PCODE: $00000657 VOL: 0
 ;PCODE: $00000658 VOL: 0
-; 000D 0214 }
+; 000D 0215 }
 ;PCODE: $00000659 VOL: 0
 ;/*============================================================*/
 ;int sensorCalibrate2(int prbId)
-; 000D 0217 {
+; 000D 0218 {
 ;PCODE: $0000065A VOL: 0
 ;PCODE: $0000065B VOL: 0
-; 000D 0218     float p2_raw;
-; 000D 0219     float tmpA,tmpB,tmpC;
-; 000D 021A     //int i = 0;
-; 000D 021B     //long viADCbuffer = 0;
-; 000D 021C 
-; 000D 021D     if(epIsPointSet1[prbId] == 0){
+; 000D 0219     float p2_raw;
+; 000D 021A     float tmpA,tmpB,tmpC;
+; 000D 021B     //int i = 0;
+; 000D 021C     //long viADCbuffer = 0;
+; 000D 021D 
+; 000D 021E     if(epIsPointSet1[prbId] == 0){
 ;PCODE: $0000065C VOL: 0
 ;PCODE: $0000065D VOL: 0
 ;	prbId -> Y+16
@@ -2251,7 +2252,7 @@
 ;PCODE: $00000660 VOL: 0
 ;PCODE: $00000661 VOL: 0
 ;PCODE: $00000662 VOL: 0
-; 000D 021E         printDebug("<sensorCalibrate2> ABORT: sensor ch %d No set point found\r\n",prbId+1);
+; 000D 021F         printDebug("<sensorCalibrate2> ABORT: sensor ch %d No set point found\r\n",prbId+1);
 ;PCODE: $00000663 VOL: 0
 ;PCODE: $00000664 VOL: 0
 ;PCODE: $00000665 VOL: 0
@@ -2263,20 +2264,20 @@
 ;PCODE: $0000066B VOL: 0
 ;PCODE: $0000066C VOL: 0
 ;PCODE: $0000066D VOL: 0
-; 000D 021F         return -1;
+; 000D 0220         return -1;
 ;PCODE: $0000066E VOL: 0
 ;PCODE: $0000066F VOL: 0
 ;PCODE: $00000670 VOL: 0
-; 000D 0220     }
-; 000D 0221 
-; 000D 0222     if(epIsPointSet2[prbId] == 0){
+; 000D 0221     }
+; 000D 0222 
+; 000D 0223     if(epIsPointSet2[prbId] == 0){
 ;PCODE: $00000671 VOL: 0
 ;PCODE: $00000672 VOL: 0
 ;PCODE: $00000673 VOL: 0
 ;PCODE: $00000674 VOL: 0
 ;PCODE: $00000675 VOL: 0
 ;PCODE: $00000676 VOL: 0
-; 000D 0223         printDebug("<sensorCalibrate2> -- CAL_EXTOFFSET --\r\n");
+; 000D 0224         printDebug("<sensorCalibrate2> -- CAL_EXTOFFSET --\r\n");
 ;PCODE: $00000677 VOL: 0
 ;PCODE: $00000678 VOL: 0
 ;PCODE: $00000679 VOL: 0
@@ -2284,22 +2285,22 @@
 ;PCODE: $0000067B VOL: 0
 ;PCODE: $0000067C VOL: 0
 ;PCODE: $0000067D VOL: 0
-; 000D 0224         epFactor_A[prbId]   = 0;
+; 000D 0225         epFactor_A[prbId]   = 0;
 ;PCODE: $0000067E VOL: 0
 ;PCODE: $0000067F VOL: 0
 ;PCODE: $00000680 VOL: 0
 ;PCODE: $00000681 VOL: 0
 ;PCODE: $00000682 VOL: 0
 ;PCODE: $00000683 VOL: 0
-; 000D 0225         epFactor_B[prbId]   = 0;
+; 000D 0226         epFactor_B[prbId]   = 0;
 ;PCODE: $00000684 VOL: 0
 ;PCODE: $00000685 VOL: 0
 ;PCODE: $00000686 VOL: 0
 ;PCODE: $00000687 VOL: 0
 ;PCODE: $00000688 VOL: 0
 ;PCODE: $00000689 VOL: 0
-; 000D 0226 
-; 000D 0227         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+; 000D 0227 
+; 000D 0228         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 ;PCODE: $0000068A VOL: 0
 ;PCODE: $0000068B VOL: 0
 ;PCODE: $0000068C VOL: 0
@@ -2319,7 +2320,7 @@
 ;PCODE: $0000069A VOL: 0
 ;PCODE: $0000069B VOL: 0
 ;PCODE: $0000069C VOL: 0
-; 000D 0228             p2_raw          = (ADC_CONV_FAC*100 * epADCRef1[prbId]);
+; 000D 0229             p2_raw          = (ADC_CONV_FAC*100 * epADCRef1[prbId]);
 ;PCODE: $0000069D VOL: 0
 ;PCODE: $0000069E VOL: 0
 ;PCODE: $0000069F VOL: 0
@@ -2336,10 +2337,10 @@
 ;PCODE: $000006AA VOL: 0
 ;PCODE: $000006AB VOL: 0
 ;PCODE: $000006AC VOL: 0
-; 000D 0229 
 ; 000D 022A 
-; 000D 022B         }
-; 000D 022C         else if(TEMP_SEL == TEMP_TMEC){
+; 000D 022B 
+; 000D 022C         }
+; 000D 022D         else if(TEMP_SEL == TEMP_TMEC){
 ;PCODE: $000006AD VOL: 0
 ;PCODE: $000006AE VOL: 0
 ;PCODE: $000006AF VOL: 0
@@ -2351,7 +2352,7 @@
 ;PCODE: $000006B5 VOL: 0
 ;PCODE: $000006B6 VOL: 0
 ;PCODE: $000006B7 VOL: 0
-; 000D 022D             p2_raw          = epTMECTempSlope   * epADCRef1[prbId];
+; 000D 022E             p2_raw          = epTMECTempSlope   * epADCRef1[prbId];
 ;PCODE: $000006B8 VOL: 0
 ;PCODE: $000006B9 VOL: 0
 ;PCODE: $000006BA VOL: 0
@@ -2360,8 +2361,8 @@
 ;PCODE: $000006BD VOL: 0
 ;PCODE: $000006BE VOL: 0
 ;PCODE: $000006BF VOL: 0
-; 000D 022E         }
-; 000D 022F         else if(TEMP_SEL == TEMP_PT100){
+; 000D 022F         }
+; 000D 0230         else if(TEMP_SEL == TEMP_PT100){
 ;PCODE: $000006C0 VOL: 0
 ;PCODE: $000006C1 VOL: 0
 ;PCODE: $000006C2 VOL: 0
@@ -2373,8 +2374,8 @@
 ;PCODE: $000006C8 VOL: 0
 ;PCODE: $000006C9 VOL: 0
 ;PCODE: $000006CA VOL: 0
-; 000D 0230             p2_raw          = (epPT100Temp_A    * epADCRef1[prbId] * epADCRef1[prbId]) +
-; 000D 0231                               (epPT100Temp_B    * epADCRef1[prbId]);
+; 000D 0231             p2_raw          = (epPT100Temp_A    * epADCRef1[prbId] * epADCRef1[prbId]) +
+; 000D 0232                               (epPT100Temp_B    * epADCRef1[prbId]);
 ;PCODE: $000006CB VOL: 0
 ;PCODE: $000006CC VOL: 0
 ;PCODE: $000006CD VOL: 0
@@ -2401,9 +2402,9 @@
 ;PCODE: $000006E2 VOL: 0
 ;PCODE: $000006E3 VOL: 0
 ;PCODE: $000006E4 VOL: 0
-; 000D 0232         }
-; 000D 0233 
-; 000D 0234         epFactor_C[prbId]   = epTempRef1[prbId] - p2_raw;
+; 000D 0233         }
+; 000D 0234 
+; 000D 0235         epFactor_C[prbId]   = epTempRef1[prbId] - p2_raw;
 ;PCODE: $000006E5 VOL: 0
 ;PCODE: $000006E6 VOL: 0
 ;PCODE: $000006E7 VOL: 0
@@ -2421,12 +2422,12 @@
 ;PCODE: $000006F3 VOL: 0
 ;PCODE: $000006F4 VOL: 0
 ;PCODE: $000006F5 VOL: 0
-; 000D 0235         epCalType[prbId]    = CAL_EXTOFFSET;
+; 000D 0236         epCalType[prbId]    = CAL_EXTOFFSET;
 ;PCODE: $000006F6 VOL: 0
 ;PCODE: $000006F7 VOL: 0
 ;PCODE: $000006F8 VOL: 0
 ;PCODE: $000006F9 VOL: 0
-; 000D 0236         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
+; 000D 0237         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
 ;PCODE: $000006FA VOL: 0
 ;PCODE: $000006FB VOL: 0
 ;PCODE: $000006FC VOL: 0
@@ -2440,20 +2441,20 @@
 ;PCODE: $00000704 VOL: 0
 ;PCODE: $00000705 VOL: 0
 ;PCODE: $00000706 VOL: 0
-; 000D 0237         return 0;
+; 000D 0238         return 0;
 ;PCODE: $00000707 VOL: 0
 ;PCODE: $00000708 VOL: 0
 ;PCODE: $00000709 VOL: 0
-; 000D 0238     }
-; 000D 0239 
-; 000D 023A     if(epIsPointSet3[prbId] == 0){
+; 000D 0239     }
+; 000D 023A 
+; 000D 023B     if(epIsPointSet3[prbId] == 0){
 ;PCODE: $0000070A VOL: 0
 ;PCODE: $0000070B VOL: 0
 ;PCODE: $0000070C VOL: 0
 ;PCODE: $0000070D VOL: 0
 ;PCODE: $0000070E VOL: 0
 ;PCODE: $0000070F VOL: 0
-; 000D 023B         printDebug("<sensorCalibrate2> -- CAL_EXTLINEAR --\r\n");
+; 000D 023C         printDebug("<sensorCalibrate2> -- CAL_EXTLINEAR --\r\n");
 ;PCODE: $00000710 VOL: 0
 ;PCODE: $00000711 VOL: 0
 ;PCODE: $00000712 VOL: 0
@@ -2461,15 +2462,15 @@
 ;PCODE: $00000714 VOL: 0
 ;PCODE: $00000715 VOL: 0
 ;PCODE: $00000716 VOL: 0
-; 000D 023C         epFactor_A[prbId]   = 0;
+; 000D 023D         epFactor_A[prbId]   = 0;
 ;PCODE: $00000717 VOL: 0
 ;PCODE: $00000718 VOL: 0
 ;PCODE: $00000719 VOL: 0
 ;PCODE: $0000071A VOL: 0
 ;PCODE: $0000071B VOL: 0
 ;PCODE: $0000071C VOL: 0
-; 000D 023D 
-; 000D 023E         epFactor_B[prbId]   = (epTempRef2[prbId] - epTempRef1[prbId])/(epADCRef2[prbId] - epADCRef1[prbId]);
+; 000D 023E 
+; 000D 023F         epFactor_B[prbId]   = (epTempRef2[prbId] - epTempRef1[prbId])/(epADCRef2[prbId] - epADCRef1[prbId]);
 ;PCODE: $0000071D VOL: 0
 ;PCODE: $0000071E VOL: 0
 ;PCODE: $0000071F VOL: 0
@@ -2508,7 +2509,7 @@
 ;PCODE: $00000740 VOL: 0
 ;PCODE: $00000741 VOL: 0
 ;PCODE: $00000742 VOL: 0
-; 000D 023F         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
+; 000D 0240         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
 ;PCODE: $00000743 VOL: 0
 ;PCODE: $00000744 VOL: 0
 ;PCODE: $00000745 VOL: 0
@@ -2522,8 +2523,8 @@
 ;PCODE: $0000074D VOL: 0
 ;PCODE: $0000074E VOL: 0
 ;PCODE: $0000074F VOL: 0
-; 000D 0240 
-; 000D 0241         epFactor_C[prbId]   = epTempRef2[prbId] - (epFactor_B[prbId] * epADCRef2[prbId]);
+; 000D 0241 
+; 000D 0242         epFactor_C[prbId]   = epTempRef2[prbId] - (epFactor_B[prbId] * epADCRef2[prbId]);
 ;PCODE: $00000750 VOL: 0
 ;PCODE: $00000751 VOL: 0
 ;PCODE: $00000752 VOL: 0
@@ -2553,7 +2554,7 @@
 ;PCODE: $0000076A VOL: 0
 ;PCODE: $0000076B VOL: 0
 ;PCODE: $0000076C VOL: 0
-; 000D 0242         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
+; 000D 0243         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
 ;PCODE: $0000076D VOL: 0
 ;PCODE: $0000076E VOL: 0
 ;PCODE: $0000076F VOL: 0
@@ -2567,17 +2568,17 @@
 ;PCODE: $00000777 VOL: 0
 ;PCODE: $00000778 VOL: 0
 ;PCODE: $00000779 VOL: 0
-; 000D 0243 
-; 000D 0244         epCalType[prbId]    = CAL_EXTLINEAR;
+; 000D 0244 
+; 000D 0245         epCalType[prbId]    = CAL_EXTLINEAR;
 ;PCODE: $0000077A VOL: 0
 ;PCODE: $0000077B VOL: 0
 ;PCODE: $0000077C VOL: 0
 ;PCODE: $0000077D VOL: 0
-; 000D 0245     }
-; 000D 0246     else{
+; 000D 0246     }
+; 000D 0247     else{
 ;PCODE: $0000077E VOL: 0
 ;PCODE: $0000077F VOL: 0
-; 000D 0247         printDebug("<sensorCalibrate2> -- CAL_EXTPOLYNOMIAL --\r\n");
+; 000D 0248         printDebug("<sensorCalibrate2> -- CAL_EXTPOLYNOMIAL --\r\n");
 ;PCODE: $00000780 VOL: 0
 ;PCODE: $00000781 VOL: 0
 ;PCODE: $00000782 VOL: 0
@@ -2585,10 +2586,10 @@
 ;PCODE: $00000784 VOL: 0
 ;PCODE: $00000785 VOL: 0
 ;PCODE: $00000786 VOL: 0
-; 000D 0248 
-; 000D 0249         gaussian(epADCRef1[prbId],  epADCRef2[prbId],  epADCRef3[prbId],
-; 000D 024A                  epTempRef1[prbId], epTempRef2[prbId], epTempRef3[prbId],
-; 000D 024B                  &tmpA, &tmpB, &tmpC);
+; 000D 0249 
+; 000D 024A         gaussian(epADCRef1[prbId],  epADCRef2[prbId],  epADCRef3[prbId],
+; 000D 024B                  epTempRef1[prbId], epTempRef2[prbId], epTempRef3[prbId],
+; 000D 024C                  &tmpA, &tmpB, &tmpC);
 ;PCODE: $00000787 VOL: 0
 ;PCODE: $00000788 VOL: 0
 ;PCODE: $00000789 VOL: 0
@@ -2631,30 +2632,30 @@
 ;PCODE: $000007AE VOL: 0
 ;PCODE: $000007AF VOL: 0
 ;PCODE: $000007B0 VOL: 0
-; 000D 024C 
-; 000D 024D         epFactor_A[prbId]   = tmpA;
+; 000D 024D 
+; 000D 024E         epFactor_A[prbId]   = tmpA;
 ;PCODE: $000007B1 VOL: 0
 ;PCODE: $000007B2 VOL: 0
 ;PCODE: $000007B3 VOL: 0
 ;PCODE: $000007B4 VOL: 0
 ;PCODE: $000007B5 VOL: 0
 ;PCODE: $000007B6 VOL: 0
-; 000D 024E         epFactor_B[prbId]   = tmpB;
+; 000D 024F         epFactor_B[prbId]   = tmpB;
 ;PCODE: $000007B7 VOL: 0
 ;PCODE: $000007B8 VOL: 0
 ;PCODE: $000007B9 VOL: 0
 ;PCODE: $000007BA VOL: 0
 ;PCODE: $000007BB VOL: 0
 ;PCODE: $000007BC VOL: 0
-; 000D 024F         epFactor_C[prbId]   = tmpC;
+; 000D 0250         epFactor_C[prbId]   = tmpC;
 ;PCODE: $000007BD VOL: 0
 ;PCODE: $000007BE VOL: 0
 ;PCODE: $000007BF VOL: 0
 ;PCODE: $000007C0 VOL: 0
 ;PCODE: $000007C1 VOL: 0
 ;PCODE: $000007C2 VOL: 0
-; 000D 0250 
-; 000D 0251         printDebug("<sensorCalibrate2> --A--> %f\r\n", epFactor_A[prbId]);
+; 000D 0251 
+; 000D 0252         printDebug("<sensorCalibrate2> --A--> %f\r\n", epFactor_A[prbId]);
 ;PCODE: $000007C3 VOL: 0
 ;PCODE: $000007C4 VOL: 0
 ;PCODE: $000007C5 VOL: 0
@@ -2668,7 +2669,7 @@
 ;PCODE: $000007CD VOL: 0
 ;PCODE: $000007CE VOL: 0
 ;PCODE: $000007CF VOL: 0
-; 000D 0252         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
+; 000D 0253         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
 ;PCODE: $000007D0 VOL: 0
 ;PCODE: $000007D1 VOL: 0
 ;PCODE: $000007D2 VOL: 0
@@ -2682,7 +2683,7 @@
 ;PCODE: $000007DA VOL: 0
 ;PCODE: $000007DB VOL: 0
 ;PCODE: $000007DC VOL: 0
-; 000D 0253         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
+; 000D 0254         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
 ;PCODE: $000007DD VOL: 0
 ;PCODE: $000007DE VOL: 0
 ;PCODE: $000007DF VOL: 0
@@ -2696,34 +2697,34 @@
 ;PCODE: $000007E7 VOL: 0
 ;PCODE: $000007E8 VOL: 0
 ;PCODE: $000007E9 VOL: 0
-; 000D 0254 
 ; 000D 0255 
 ; 000D 0256 
-; 000D 0257         epCalType[prbId]    = CAL_EXTPOLYNOMIAL;
+; 000D 0257 
+; 000D 0258         epCalType[prbId]    = CAL_EXTPOLYNOMIAL;
 ;PCODE: $000007EA VOL: 0
 ;PCODE: $000007EB VOL: 0
 ;PCODE: $000007EC VOL: 0
 ;PCODE: $000007ED VOL: 0
-; 000D 0258     }
+; 000D 0259     }
 ;PCODE: $000007EE VOL: 0
-; 000D 0259 
-; 000D 025A     return 0;
+; 000D 025A 
+; 000D 025B     return 0;
 ;PCODE: $000007EF VOL: 0
 ;PCODE: $000007F0 VOL: 0
 ;PCODE: $000007F1 VOL: 0
-; 000D 025B }
+; 000D 025C }
 ;PCODE: $000007F2 VOL: 0
 ;/*============================================================*/
 ;int sensorGetCurrentSetPoint(int ch,int pnt, unsigned char *buf)
-; 000D 025E {
+; 000D 025F {
 ;PCODE: $000007F3 VOL: 0
 ;PCODE: $000007F4 VOL: 0
-; 000D 025F     unsigned char   valStr[10];
-; 000D 0260     float           valTmp;
-; 000D 0261     //signed int      val;
-; 000D 0262     int             i;
-; 000D 0263 
-; 000D 0264     if(pnt == CALPOINT(1)){
+; 000D 0260     unsigned char   valStr[10];
+; 000D 0261     float           valTmp;
+; 000D 0262     //signed int      val;
+; 000D 0263     int             i;
+; 000D 0264 
+; 000D 0265     if(pnt == CALPOINT(1)){
 ;PCODE: $000007F5 VOL: 0
 ;PCODE: $000007F6 VOL: 0
 ;PCODE: $000007F7 VOL: 0
@@ -2737,20 +2738,20 @@
 ;PCODE: $000007F9 VOL: 0
 ;PCODE: $000007FA VOL: 0
 ;PCODE: $000007FB VOL: 0
-; 000D 0265         if(epIsPointSet1[ch] == 1){
+; 000D 0266         if(epIsPointSet1[ch] == 1){
 ;PCODE: $000007FC VOL: 0
 ;PCODE: $000007FD VOL: 0
 ;PCODE: $000007FE VOL: 0
 ;PCODE: $000007FF VOL: 0
 ;PCODE: $00000800 VOL: 0
-; 000D 0266             valTmp  = epTempRef1[ch];
+; 000D 0267             valTmp  = epTempRef1[ch];
 ;PCODE: $00000801 VOL: 0
 ;PCODE: $00000802 VOL: 0
 ;PCODE: $00000803 VOL: 0
 ;PCODE: $00000804 VOL: 0
 ;PCODE: $00000805 VOL: 0
 ;PCODE: $00000806 VOL: 0
-; 000D 0267             printDebug("<sensorGetCurrentSetPoint> tempRef1 = [%f][%f]\r\n",epTempRef1[ch],valTmp);
+; 000D 0268             printDebug("<sensorGetCurrentSetPoint> tempRef1 = [%f][%f]\r\n",epTempRef1[ch],valTmp);
 ;PCODE: $00000807 VOL: 0
 ;PCODE: $00000808 VOL: 0
 ;PCODE: $00000809 VOL: 0
@@ -2766,19 +2767,19 @@
 ;PCODE: $00000813 VOL: 0
 ;PCODE: $00000814 VOL: 0
 ;PCODE: $00000815 VOL: 0
-; 000D 0268             ftoa(valTmp,2,valStr);
+; 000D 0269             ftoa(valTmp,2,valStr);
 ;PCODE: $00000816 VOL: 0
 ;PCODE: $00000817 VOL: 0
 ;PCODE: $00000818 VOL: 0
 ;PCODE: $00000819 VOL: 0
 ;PCODE: $0000081A VOL: 0
 ;PCODE: $0000081B VOL: 0
-; 000D 0269             //val = (epTempRef1[ch] * 100);
-; 000D 026A         }
-; 000D 026B         else{
+; 000D 026A             //val = (epTempRef1[ch] * 100);
+; 000D 026B         }
+; 000D 026C         else{
 ;PCODE: $0000081C VOL: 0
 ;PCODE: $0000081D VOL: 0
-; 000D 026C             printDebug("<sensorGetCurrentSetPoint> tempRef1 not set [0.00]\r\n");
+; 000D 026D             printDebug("<sensorGetCurrentSetPoint> tempRef1 not set [0.00]\r\n");
 ;PCODE: $0000081E VOL: 0
 ;PCODE: $0000081F VOL: 0
 ;PCODE: $00000820 VOL: 0
@@ -2786,7 +2787,7 @@
 ;PCODE: $00000822 VOL: 0
 ;PCODE: $00000823 VOL: 0
 ;PCODE: $00000824 VOL: 0
-; 000D 026D             sprintf(valStr,"0.00");                 //val = 0;
+; 000D 026E             sprintf(valStr,"0.00");                 //val = 0;
 ;PCODE: $00000825 VOL: 0
 ;PCODE: $00000826 VOL: 0
 ;PCODE: $00000827 VOL: 0
@@ -2796,29 +2797,29 @@
 ;PCODE: $0000082B VOL: 0
 ;PCODE: $0000082C VOL: 0
 ;PCODE: $0000082D VOL: 0
-; 000D 026E         }
+; 000D 026F         }
 ;PCODE: $0000082E VOL: 0
-; 000D 026F     }
-; 000D 0270     else if(pnt == CALPOINT(2)){
+; 000D 0270     }
+; 000D 0271     else if(pnt == CALPOINT(2)){
 ;PCODE: $0000082F VOL: 0
 ;PCODE: $00000830 VOL: 0
 ;PCODE: $00000831 VOL: 0
 ;PCODE: $00000832 VOL: 0
 ;PCODE: $00000833 VOL: 0
-; 000D 0271         if(epIsPointSet2[ch] == 1){
+; 000D 0272         if(epIsPointSet2[ch] == 1){
 ;PCODE: $00000834 VOL: 0
 ;PCODE: $00000835 VOL: 0
 ;PCODE: $00000836 VOL: 0
 ;PCODE: $00000837 VOL: 0
 ;PCODE: $00000838 VOL: 0
-; 000D 0272             valTmp  = epTempRef2[ch];
+; 000D 0273             valTmp  = epTempRef2[ch];
 ;PCODE: $00000839 VOL: 0
 ;PCODE: $0000083A VOL: 0
 ;PCODE: $0000083B VOL: 0
 ;PCODE: $0000083C VOL: 0
 ;PCODE: $0000083D VOL: 0
 ;PCODE: $0000083E VOL: 0
-; 000D 0273             printDebug("<sensorGetCurrentSetPoint> tempRef2 = [%f][%f]\r\n",epTempRef2[ch],valTmp);
+; 000D 0274             printDebug("<sensorGetCurrentSetPoint> tempRef2 = [%f][%f]\r\n",epTempRef2[ch],valTmp);
 ;PCODE: $0000083F VOL: 0
 ;PCODE: $00000840 VOL: 0
 ;PCODE: $00000841 VOL: 0
@@ -2834,19 +2835,19 @@
 ;PCODE: $0000084B VOL: 0
 ;PCODE: $0000084C VOL: 0
 ;PCODE: $0000084D VOL: 0
-; 000D 0274             ftoa(valTmp,2,valStr);
+; 000D 0275             ftoa(valTmp,2,valStr);
 ;PCODE: $0000084E VOL: 0
 ;PCODE: $0000084F VOL: 0
 ;PCODE: $00000850 VOL: 0
 ;PCODE: $00000851 VOL: 0
 ;PCODE: $00000852 VOL: 0
 ;PCODE: $00000853 VOL: 0
-; 000D 0275             //val = (epTempRef1[ch] * 100);
-; 000D 0276         }
-; 000D 0277         else{
+; 000D 0276             //val = (epTempRef1[ch] * 100);
+; 000D 0277         }
+; 000D 0278         else{
 ;PCODE: $00000854 VOL: 0
 ;PCODE: $00000855 VOL: 0
-; 000D 0278             printDebug("<sensorGetCurrentSetPoint> tempRef2 not set [0.00]\r\n");
+; 000D 0279             printDebug("<sensorGetCurrentSetPoint> tempRef2 not set [0.00]\r\n");
 ;PCODE: $00000856 VOL: 0
 ;PCODE: $00000857 VOL: 0
 ;PCODE: $00000858 VOL: 0
@@ -2854,7 +2855,7 @@
 ;PCODE: $0000085A VOL: 0
 ;PCODE: $0000085B VOL: 0
 ;PCODE: $0000085C VOL: 0
-; 000D 0279             sprintf(valStr,"0.00");                 //val = 0;
+; 000D 027A             sprintf(valStr,"0.00");                 //val = 0;
 ;PCODE: $0000085D VOL: 0
 ;PCODE: $0000085E VOL: 0
 ;PCODE: $0000085F VOL: 0
@@ -2864,33 +2865,33 @@
 ;PCODE: $00000863 VOL: 0
 ;PCODE: $00000864 VOL: 0
 ;PCODE: $00000865 VOL: 0
-; 000D 027A         }
+; 000D 027B         }
 ;PCODE: $00000866 VOL: 0
-; 000D 027B         /*
-; 000D 027C         if(epIsPointSet2[ch] == 1){ val = (epTempRef2[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef2[ch]);}
-; 000D 027D         else{                       val = 0;        }
-; 000D 027E         */
-; 000D 027F     }
-; 000D 0280     else if(pnt == CALPOINT(3)){
+; 000D 027C         /*
+; 000D 027D         if(epIsPointSet2[ch] == 1){ val = (epTempRef2[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef2[ch]);}
+; 000D 027E         else{                       val = 0;        }
+; 000D 027F         */
+; 000D 0280     }
+; 000D 0281     else if(pnt == CALPOINT(3)){
 ;PCODE: $00000867 VOL: 0
 ;PCODE: $00000868 VOL: 0
 ;PCODE: $00000869 VOL: 0
 ;PCODE: $0000086A VOL: 0
 ;PCODE: $0000086B VOL: 0
-; 000D 0281         if(epIsPointSet3[ch] == 1){
+; 000D 0282         if(epIsPointSet3[ch] == 1){
 ;PCODE: $0000086C VOL: 0
 ;PCODE: $0000086D VOL: 0
 ;PCODE: $0000086E VOL: 0
 ;PCODE: $0000086F VOL: 0
 ;PCODE: $00000870 VOL: 0
-; 000D 0282             valTmp  = epTempRef3[ch];
+; 000D 0283             valTmp  = epTempRef3[ch];
 ;PCODE: $00000871 VOL: 0
 ;PCODE: $00000872 VOL: 0
 ;PCODE: $00000873 VOL: 0
 ;PCODE: $00000874 VOL: 0
 ;PCODE: $00000875 VOL: 0
 ;PCODE: $00000876 VOL: 0
-; 000D 0283             printDebug("<sensorGetCurrentSetPoint> tempRef3 = [%f][%f]\r\n",epTempRef3[ch],valTmp);
+; 000D 0284             printDebug("<sensorGetCurrentSetPoint> tempRef3 = [%f][%f]\r\n",epTempRef3[ch],valTmp);
 ;PCODE: $00000877 VOL: 0
 ;PCODE: $00000878 VOL: 0
 ;PCODE: $00000879 VOL: 0
@@ -2906,19 +2907,19 @@
 ;PCODE: $00000883 VOL: 0
 ;PCODE: $00000884 VOL: 0
 ;PCODE: $00000885 VOL: 0
-; 000D 0284             ftoa(valTmp,2,valStr);
+; 000D 0285             ftoa(valTmp,2,valStr);
 ;PCODE: $00000886 VOL: 0
 ;PCODE: $00000887 VOL: 0
 ;PCODE: $00000888 VOL: 0
 ;PCODE: $00000889 VOL: 0
 ;PCODE: $0000088A VOL: 0
 ;PCODE: $0000088B VOL: 0
-; 000D 0285             //val = (epTempRef1[ch] * 100);
-; 000D 0286         }
-; 000D 0287         else{
+; 000D 0286             //val = (epTempRef1[ch] * 100);
+; 000D 0287         }
+; 000D 0288         else{
 ;PCODE: $0000088C VOL: 0
 ;PCODE: $0000088D VOL: 0
-; 000D 0288             printDebug("<sensorGetCurrentSetPoint> tempRef3 not set [0.00]\r\n");
+; 000D 0289             printDebug("<sensorGetCurrentSetPoint> tempRef3 not set [0.00]\r\n");
 ;PCODE: $0000088E VOL: 0
 ;PCODE: $0000088F VOL: 0
 ;PCODE: $00000890 VOL: 0
@@ -2926,7 +2927,7 @@
 ;PCODE: $00000892 VOL: 0
 ;PCODE: $00000893 VOL: 0
 ;PCODE: $00000894 VOL: 0
-; 000D 0289             sprintf(valStr,"0.00");                 //val = 0;
+; 000D 028A             sprintf(valStr,"0.00");                 //val = 0;
 ;PCODE: $00000895 VOL: 0
 ;PCODE: $00000896 VOL: 0
 ;PCODE: $00000897 VOL: 0
@@ -2936,17 +2937,17 @@
 ;PCODE: $0000089B VOL: 0
 ;PCODE: $0000089C VOL: 0
 ;PCODE: $0000089D VOL: 0
-; 000D 028A         }
+; 000D 028B         }
 ;PCODE: $0000089E VOL: 0
-; 000D 028B         /*
-; 000D 028C         if(epIsPointSet3[ch] == 1){ val = (epTempRef3[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef3[ch]);}
-; 000D 028D         else{                       val = 0;        }
-; 000D 028E         */
-; 000D 028F     }
-; 000D 0290     else{
+; 000D 028C         /*
+; 000D 028D         if(epIsPointSet3[ch] == 1){ val = (epTempRef3[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef3[ch]);}
+; 000D 028E         else{                       val = 0;        }
+; 000D 028F         */
+; 000D 0290     }
+; 000D 0291     else{
 ;PCODE: $0000089F VOL: 0
 ;PCODE: $000008A0 VOL: 0
-; 000D 0291         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
+; 000D 0292         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
 ;PCODE: $000008A1 VOL: 0
 ;PCODE: $000008A2 VOL: 0
 ;PCODE: $000008A3 VOL: 0
@@ -2957,7 +2958,7 @@
 ;PCODE: $000008A8 VOL: 0
 ;PCODE: $000008A9 VOL: 0
 ;PCODE: $000008AA VOL: 0
-; 000D 0292         return -1;
+; 000D 0293         return -1;
 ;PCODE: $000008AB VOL: 0
 ;PCODE: $000008AC VOL: 0
 ;PCODE: $000008AD VOL: 0
@@ -2965,12 +2966,12 @@
 ;PCODE: $000008AF VOL: 0
 ;PCODE: $000008B0 VOL: 0
 ;PCODE: $000008B1 VOL: 0
-; 000D 0293     }
+; 000D 0294     }
 ;PCODE: $000008B2 VOL: 0
 ;PCODE: $000008B3 VOL: 0
 ;PCODE: $000008B4 VOL: 0
-; 000D 0294     //printDebug("<sensorGetCurrentSetPoint> read val = [%d]\r\n",val);
-; 000D 0295     printDebug("<sensorGetCurrentSetPoint> read val(%d) = [%s]\r\n",strlen(valStr),valStr);
+; 000D 0295     //printDebug("<sensorGetCurrentSetPoint> read val = [%d]\r\n",val);
+; 000D 0296     printDebug("<sensorGetCurrentSetPoint> read val(%d) = [%s]\r\n",strlen(valStr),valStr);
 ;PCODE: $000008B5 VOL: 0
 ;PCODE: $000008B6 VOL: 0
 ;PCODE: $000008B7 VOL: 0
@@ -2985,21 +2986,21 @@
 ;PCODE: $000008C0 VOL: 0
 ;PCODE: $000008C1 VOL: 0
 ;PCODE: $000008C2 VOL: 0
-; 000D 0296 
-; 000D 0297     if(valStr[0] == '-'){
+; 000D 0297 
+; 000D 0298     if(valStr[0] == '-'){
 ;PCODE: $000008C3 VOL: 0
 ;PCODE: $000008C4 VOL: 0
 ;PCODE: $000008C5 VOL: 0
-; 000D 0298         buf[0] = 1;
+; 000D 0299         buf[0] = 1;
 ;PCODE: $000008C6 VOL: 0
 ;PCODE: $000008C7 VOL: 0
 ;PCODE: $000008C8 VOL: 0
-; 000D 0299         if(strlen(valStr) == 7){
+; 000D 029A         if(strlen(valStr) == 7){
 ;PCODE: $000008C9 VOL: 0
 ;PCODE: $000008CA VOL: 0
 ;PCODE: $000008CB VOL: 0
 ;PCODE: $000008CC VOL: 0
-; 000D 029A             buf[1]  = valStr[1] - 0x30;     buf[2]  = valStr[2] - 0x30;     buf[3]  = valStr[3] - 0x30;
+; 000D 029B             buf[1]  = valStr[1] - 0x30;     buf[2]  = valStr[2] - 0x30;     buf[3]  = valStr[3] - 0x30;
 ;PCODE: $000008CD VOL: 0
 ;PCODE: $000008CE VOL: 0
 ;PCODE: $000008CF VOL: 0
@@ -3012,7 +3013,7 @@
 ;PCODE: $000008D6 VOL: 0
 ;PCODE: $000008D7 VOL: 0
 ;PCODE: $000008D8 VOL: 0
-; 000D 029B             buf[4]  = valStr[5] - 0x30;     buf[5]  = valStr[6] - 0x30;
+; 000D 029C             buf[4]  = valStr[5] - 0x30;     buf[5]  = valStr[6] - 0x30;
 ;PCODE: $000008D9 VOL: 0
 ;PCODE: $000008DA VOL: 0
 ;PCODE: $000008DB VOL: 0
@@ -3021,15 +3022,15 @@
 ;PCODE: $000008DE VOL: 0
 ;PCODE: $000008DF VOL: 0
 ;PCODE: $000008E0 VOL: 0
-; 000D 029C         }
-; 000D 029D         else if(strlen(valStr) == 6){
+; 000D 029D         }
+; 000D 029E         else if(strlen(valStr) == 6){
 ;PCODE: $000008E1 VOL: 0
 ;PCODE: $000008E2 VOL: 0
 ;PCODE: $000008E3 VOL: 0
 ;PCODE: $000008E4 VOL: 0
 ;PCODE: $000008E5 VOL: 0
 ;PCODE: $000008E6 VOL: 0
-; 000D 029E             buf[1]  = 0;                    buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
+; 000D 029F             buf[1]  = 0;                    buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
 ;PCODE: $000008E7 VOL: 0
 ;PCODE: $000008E8 VOL: 0
 ;PCODE: $000008E9 VOL: 0
@@ -3042,7 +3043,7 @@
 ;PCODE: $000008F0 VOL: 0
 ;PCODE: $000008F1 VOL: 0
 ;PCODE: $000008F2 VOL: 0
-; 000D 029F             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
+; 000D 02A0             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
 ;PCODE: $000008F3 VOL: 0
 ;PCODE: $000008F4 VOL: 0
 ;PCODE: $000008F5 VOL: 0
@@ -3051,15 +3052,15 @@
 ;PCODE: $000008F8 VOL: 0
 ;PCODE: $000008F9 VOL: 0
 ;PCODE: $000008FA VOL: 0
-; 000D 02A0         }
-; 000D 02A1         else if(strlen(valStr) == 5){
+; 000D 02A1         }
+; 000D 02A2         else if(strlen(valStr) == 5){
 ;PCODE: $000008FB VOL: 0
 ;PCODE: $000008FC VOL: 0
 ;PCODE: $000008FD VOL: 0
 ;PCODE: $000008FE VOL: 0
 ;PCODE: $000008FF VOL: 0
 ;PCODE: $00000900 VOL: 0
-; 000D 02A2             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[1] - 0x30;
+; 000D 02A3             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[1] - 0x30;
 ;PCODE: $00000901 VOL: 0
 ;PCODE: $00000902 VOL: 0
 ;PCODE: $00000903 VOL: 0
@@ -3072,7 +3073,7 @@
 ;PCODE: $0000090A VOL: 0
 ;PCODE: $0000090B VOL: 0
 ;PCODE: $0000090C VOL: 0
-; 000D 02A3             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
+; 000D 02A4             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
 ;PCODE: $0000090D VOL: 0
 ;PCODE: $0000090E VOL: 0
 ;PCODE: $0000090F VOL: 0
@@ -3081,11 +3082,11 @@
 ;PCODE: $00000912 VOL: 0
 ;PCODE: $00000913 VOL: 0
 ;PCODE: $00000914 VOL: 0
-; 000D 02A4         }
-; 000D 02A5         else{
+; 000D 02A5         }
+; 000D 02A6         else{
 ;PCODE: $00000915 VOL: 0
 ;PCODE: $00000916 VOL: 0
-; 000D 02A6             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
+; 000D 02A7             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
 ;PCODE: $00000917 VOL: 0
 ;PCODE: $00000918 VOL: 0
 ;PCODE: $00000919 VOL: 0
@@ -3096,7 +3097,7 @@
 ;PCODE: $0000091E VOL: 0
 ;PCODE: $0000091F VOL: 0
 ;PCODE: $00000920 VOL: 0
-; 000D 02A7             return -1;
+; 000D 02A8             return -1;
 ;PCODE: $00000921 VOL: 0
 ;PCODE: $00000922 VOL: 0
 ;PCODE: $00000923 VOL: 0
@@ -3104,24 +3105,24 @@
 ;PCODE: $00000925 VOL: 0
 ;PCODE: $00000926 VOL: 0
 ;PCODE: $00000927 VOL: 0
-; 000D 02A8         }
+; 000D 02A9         }
 ;PCODE: $00000928 VOL: 0
 ;PCODE: $00000929 VOL: 0
 ;PCODE: $0000092A VOL: 0
-; 000D 02A9     }
-; 000D 02AA     else{
+; 000D 02AA     }
+; 000D 02AB     else{
 ;PCODE: $0000092B VOL: 0
 ;PCODE: $0000092C VOL: 0
-; 000D 02AB         buf[0] = 0;
+; 000D 02AC         buf[0] = 0;
 ;PCODE: $0000092D VOL: 0
 ;PCODE: $0000092E VOL: 0
 ;PCODE: $0000092F VOL: 0
-; 000D 02AC         if(strlen(valStr) == 6){
+; 000D 02AD         if(strlen(valStr) == 6){
 ;PCODE: $00000930 VOL: 0
 ;PCODE: $00000931 VOL: 0
 ;PCODE: $00000932 VOL: 0
 ;PCODE: $00000933 VOL: 0
-; 000D 02AD             buf[1]  = valStr[0] - 0x30;     buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
+; 000D 02AE             buf[1]  = valStr[0] - 0x30;     buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
 ;PCODE: $00000934 VOL: 0
 ;PCODE: $00000935 VOL: 0
 ;PCODE: $00000936 VOL: 0
@@ -3134,7 +3135,7 @@
 ;PCODE: $0000093D VOL: 0
 ;PCODE: $0000093E VOL: 0
 ;PCODE: $0000093F VOL: 0
-; 000D 02AE             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
+; 000D 02AF             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
 ;PCODE: $00000940 VOL: 0
 ;PCODE: $00000941 VOL: 0
 ;PCODE: $00000942 VOL: 0
@@ -3143,15 +3144,15 @@
 ;PCODE: $00000945 VOL: 0
 ;PCODE: $00000946 VOL: 0
 ;PCODE: $00000947 VOL: 0
-; 000D 02AF         }
-; 000D 02B0         else if(strlen(valStr) == 5){
+; 000D 02B0         }
+; 000D 02B1         else if(strlen(valStr) == 5){
 ;PCODE: $00000948 VOL: 0
 ;PCODE: $00000949 VOL: 0
 ;PCODE: $0000094A VOL: 0
 ;PCODE: $0000094B VOL: 0
 ;PCODE: $0000094C VOL: 0
 ;PCODE: $0000094D VOL: 0
-; 000D 02B1             buf[1]  = 0;                    buf[2]  = valStr[0] - 0x30;     buf[3]  = valStr[1] - 0x30;
+; 000D 02B2             buf[1]  = 0;                    buf[2]  = valStr[0] - 0x30;     buf[3]  = valStr[1] - 0x30;
 ;PCODE: $0000094E VOL: 0
 ;PCODE: $0000094F VOL: 0
 ;PCODE: $00000950 VOL: 0
@@ -3164,7 +3165,7 @@
 ;PCODE: $00000957 VOL: 0
 ;PCODE: $00000958 VOL: 0
 ;PCODE: $00000959 VOL: 0
-; 000D 02B2             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
+; 000D 02B3             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
 ;PCODE: $0000095A VOL: 0
 ;PCODE: $0000095B VOL: 0
 ;PCODE: $0000095C VOL: 0
@@ -3173,15 +3174,15 @@
 ;PCODE: $0000095F VOL: 0
 ;PCODE: $00000960 VOL: 0
 ;PCODE: $00000961 VOL: 0
-; 000D 02B3         }
-; 000D 02B4         else if(strlen(valStr) == 4){
+; 000D 02B4         }
+; 000D 02B5         else if(strlen(valStr) == 4){
 ;PCODE: $00000962 VOL: 0
 ;PCODE: $00000963 VOL: 0
 ;PCODE: $00000964 VOL: 0
 ;PCODE: $00000965 VOL: 0
 ;PCODE: $00000966 VOL: 0
 ;PCODE: $00000967 VOL: 0
-; 000D 02B5             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[0] - 0x30;
+; 000D 02B6             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[0] - 0x30;
 ;PCODE: $00000968 VOL: 0
 ;PCODE: $00000969 VOL: 0
 ;PCODE: $0000096A VOL: 0
@@ -3194,7 +3195,7 @@
 ;PCODE: $00000971 VOL: 0
 ;PCODE: $00000972 VOL: 0
 ;PCODE: $00000973 VOL: 0
-; 000D 02B6             buf[4]  = valStr[2] - 0x30;     buf[5]  = valStr[3] - 0x30;
+; 000D 02B7             buf[4]  = valStr[2] - 0x30;     buf[5]  = valStr[3] - 0x30;
 ;PCODE: $00000974 VOL: 0
 ;PCODE: $00000975 VOL: 0
 ;PCODE: $00000976 VOL: 0
@@ -3203,11 +3204,11 @@
 ;PCODE: $00000979 VOL: 0
 ;PCODE: $0000097A VOL: 0
 ;PCODE: $0000097B VOL: 0
-; 000D 02B7         }
-; 000D 02B8         else{
+; 000D 02B8         }
+; 000D 02B9         else{
 ;PCODE: $0000097C VOL: 0
 ;PCODE: $0000097D VOL: 0
-; 000D 02B9             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
+; 000D 02BA             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
 ;PCODE: $0000097E VOL: 0
 ;PCODE: $0000097F VOL: 0
 ;PCODE: $00000980 VOL: 0
@@ -3218,7 +3219,7 @@
 ;PCODE: $00000985 VOL: 0
 ;PCODE: $00000986 VOL: 0
 ;PCODE: $00000987 VOL: 0
-; 000D 02BA             return -1;
+; 000D 02BB             return -1;
 ;PCODE: $00000988 VOL: 0
 ;PCODE: $00000989 VOL: 0
 ;PCODE: $0000098A VOL: 0
@@ -3226,14 +3227,14 @@
 ;PCODE: $0000098C VOL: 0
 ;PCODE: $0000098D VOL: 0
 ;PCODE: $0000098E VOL: 0
-; 000D 02BB         }
+; 000D 02BC         }
 ;PCODE: $0000098F VOL: 0
 ;PCODE: $00000990 VOL: 0
 ;PCODE: $00000991 VOL: 0
-; 000D 02BC     }
+; 000D 02BD     }
 ;PCODE: $00000992 VOL: 0
-; 000D 02BD 
-; 000D 02BE     printDebug("<sensorGetCurrentSetPoint> buf read");
+; 000D 02BE 
+; 000D 02BF     printDebug("<sensorGetCurrentSetPoint> buf read");
 ;PCODE: $00000993 VOL: 0
 ;PCODE: $00000994 VOL: 0
 ;PCODE: $00000995 VOL: 0
@@ -3241,7 +3242,7 @@
 ;PCODE: $00000997 VOL: 0
 ;PCODE: $00000998 VOL: 0
 ;PCODE: $00000999 VOL: 0
-; 000D 02BF     for(i=0;i<6;i++){
+; 000D 02C0     for(i=0;i<6;i++){
 ;PCODE: $0000099A VOL: 0
 ;PCODE: $0000099B VOL: 0
 ;PCODE: $0000099C VOL: 0
@@ -3251,7 +3252,7 @@
 ;PCODE: $000009A0 VOL: 0
 ;PCODE: $000009A1 VOL: 0
 ;PCODE: $000009A2 VOL: 0
-; 000D 02C0         printDebug("[%d]",buf[i]);
+; 000D 02C1         printDebug("[%d]",buf[i]);
 ;PCODE: $000009A3 VOL: 0
 ;PCODE: $000009A4 VOL: 0
 ;PCODE: $000009A5 VOL: 0
@@ -3265,13 +3266,13 @@
 ;PCODE: $000009AD VOL: 0
 ;PCODE: $000009AE VOL: 0
 ;PCODE: $000009AF VOL: 0
-; 000D 02C1     }
+; 000D 02C2     }
 ;PCODE: $000009B0 VOL: 0
 ;PCODE: $000009B1 VOL: 0
 ;PCODE: $000009B2 VOL: 0
 ;PCODE: $000009B3 VOL: 0
 ;PCODE: $000009B4 VOL: 0
-; 000D 02C2     printDebug("\r\n");
+; 000D 02C3     printDebug("\r\n");
 ;PCODE: $000009B5 VOL: 0
 ;PCODE: $000009B6 VOL: 0
 ;PCODE: $000009B7 VOL: 0
@@ -3279,8 +3280,8 @@
 ;PCODE: $000009B9 VOL: 0
 ;PCODE: $000009BA VOL: 0
 ;PCODE: $000009BB VOL: 0
-; 000D 02C3 
-; 000D 02C4     return 0;
+; 000D 02C4 
+; 000D 02C5     return 0;
 ;PCODE: $000009BC VOL: 0
 ;PCODE: $000009BD VOL: 0
 ;PCODE: $000009BE VOL: 0
@@ -3288,21 +3289,21 @@
 ;PCODE: $000009C0 VOL: 0
 ;PCODE: $000009C1 VOL: 0
 ;PCODE: $000009C2 VOL: 0
-; 000D 02C5 }
+; 000D 02C6 }
 ;PCODE: $000009C3 VOL: 0
 ;/*============================================================*/
 ;int sensorSetCurrentSetPoint(int ch,int pnt,unsigned char *buf)
-; 000D 02C8 {
+; 000D 02C9 {
 ;PCODE: $000009C4 VOL: 0
 ;PCODE: $000009C5 VOL: 0
-; 000D 02C9     float   val=0;
-; 000D 02CA     long viADCbuffer = 0;
-; 000D 02CB     int i = 0;
-; 000D 02CC     float viVoltUseCaluate = 0.0;
-; 000D 02CD     float viRiaseUpVoltValue = 0.0;
-; 000D 02CE     const float viZeroSet = 1.667;
-; 000D 02CF 
-; 000D 02D0     if(operating_config.sensorEnable[ch] != 0x01){
+; 000D 02CA     float   val=0;
+; 000D 02CB     long viADCbuffer = 0;
+; 000D 02CC     int i = 0;
+; 000D 02CD     float viVoltUseCaluate = 0.0;
+; 000D 02CE     float viRiaseUpVoltValue = 0.0;
+; 000D 02CF     const float viZeroSet = 1.667;
+; 000D 02D0 
+; 000D 02D1     if(operating_config.sensorEnable[ch] != 0x01){
 ;PCODE: $000009C6 VOL: 0
 ;PCODE: $000009C7 VOL: 0
 ;PCODE: $000009C8 VOL: 0
@@ -3329,7 +3330,7 @@
 ;PCODE: $000009D4 VOL: 0
 ;PCODE: $000009D5 VOL: 0
 ;PCODE: $000009D6 VOL: 0
-; 000D 02D1         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d is disable\r\n",ch+1);
+; 000D 02D2         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d is disable\r\n",ch+1);
 ;PCODE: $000009D7 VOL: 0
 ;PCODE: $000009D8 VOL: 0
 ;PCODE: $000009D9 VOL: 0
@@ -3341,7 +3342,7 @@
 ;PCODE: $000009DF VOL: 0
 ;PCODE: $000009E0 VOL: 0
 ;PCODE: $000009E1 VOL: 0
-; 000D 02D2         return -1;
+; 000D 02D3         return -1;
 ;PCODE: $000009E2 VOL: 0
 ;PCODE: $000009E3 VOL: 0
 ;PCODE: $000009E4 VOL: 0
@@ -3349,9 +3350,9 @@
 ;PCODE: $000009E6 VOL: 0
 ;PCODE: $000009E7 VOL: 0
 ;PCODE: $000009E8 VOL: 0
-; 000D 02D3     }
-; 000D 02D4 
-; 000D 02D5     if(sensor[ch].status != SENS_NORMAL){
+; 000D 02D4     }
+; 000D 02D5 
+; 000D 02D6     if(sensor[ch].status != SENS_NORMAL){
 ;PCODE: $000009E9 VOL: 0
 ;PCODE: $000009EA VOL: 0
 ;PCODE: $000009EB VOL: 0
@@ -3361,7 +3362,7 @@
 ;PCODE: $000009EF VOL: 0
 ;PCODE: $000009F0 VOL: 0
 ;PCODE: $000009F1 VOL: 0
-; 000D 02D6         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d error(0x%02X)\r\n",ch+1,sensor[ch].status);
+; 000D 02D7         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d error(0x%02X)\r\n",ch+1,sensor[ch].status);
 ;PCODE: $000009F2 VOL: 0
 ;PCODE: $000009F3 VOL: 0
 ;PCODE: $000009F4 VOL: 0
@@ -3381,7 +3382,7 @@
 ;PCODE: $00000A02 VOL: 0
 ;PCODE: $00000A03 VOL: 0
 ;PCODE: $00000A04 VOL: 0
-; 000D 02D7         return -1;
+; 000D 02D8         return -1;
 ;PCODE: $00000A05 VOL: 0
 ;PCODE: $00000A06 VOL: 0
 ;PCODE: $00000A07 VOL: 0
@@ -3389,11 +3390,11 @@
 ;PCODE: $00000A09 VOL: 0
 ;PCODE: $00000A0A VOL: 0
 ;PCODE: $00000A0B VOL: 0
-; 000D 02D8     }
-; 000D 02D9 
-; 000D 02DA     printDebug("<sensorSetCurrentSetPoint> buf: [%d]/[%d][%d][%d][%d][%d]\r\n",
+; 000D 02D9     }
+; 000D 02DA 
+; 000D 02DB     printDebug("<sensorSetCurrentSetPoint> buf: [%d]/[%d][%d][%d][%d][%d]\r\n",
 ;PCODE: $00000A0C VOL: 0
-; 000D 02DB                                         buf[0],buf[1],buf[2],buf[3],buf[4],buf[5]);
+; 000D 02DC                                         buf[0],buf[1],buf[2],buf[3],buf[4],buf[5]);
 ;PCODE: $00000A0D VOL: 0
 ;PCODE: $00000A0E VOL: 0
 ;PCODE: $00000A0F VOL: 0
@@ -3425,11 +3426,11 @@
 ;PCODE: $00000A29 VOL: 0
 ;PCODE: $00000A2A VOL: 0
 ;PCODE: $00000A2B VOL: 0
-; 000D 02DC 
-; 000D 02DD     val =  (float) (0.0);
+; 000D 02DD 
+; 000D 02DE     val =  (float) (0.0);
 ;PCODE: $00000A2C VOL: 0
 ;PCODE: $00000A2D VOL: 0
-; 000D 02DE     val += (float) (buf[1] * 100);
+; 000D 02DF     val += (float) (buf[1] * 100);
 ;PCODE: $00000A2E VOL: 0
 ;PCODE: $00000A2F VOL: 0
 ;PCODE: $00000A30 VOL: 0
@@ -3438,7 +3439,7 @@
 ;PCODE: $00000A33 VOL: 0
 ;PCODE: $00000A34 VOL: 0
 ;PCODE: $00000A35 VOL: 0
-; 000D 02DF     val += (float) (buf[2] * 10);
+; 000D 02E0     val += (float) (buf[2] * 10);
 ;PCODE: $00000A36 VOL: 0
 ;PCODE: $00000A37 VOL: 0
 ;PCODE: $00000A38 VOL: 0
@@ -3447,14 +3448,14 @@
 ;PCODE: $00000A3B VOL: 0
 ;PCODE: $00000A3C VOL: 0
 ;PCODE: $00000A3D VOL: 0
-; 000D 02E0     val += (float) (buf[3]);
+; 000D 02E1     val += (float) (buf[3]);
 ;PCODE: $00000A3E VOL: 0
 ;PCODE: $00000A3F VOL: 0
 ;PCODE: $00000A40 VOL: 0
 ;PCODE: $00000A41 VOL: 0
 ;PCODE: $00000A42 VOL: 0
 ;PCODE: $00000A43 VOL: 0
-; 000D 02E1     val += (float) (buf[4] * 0.1);
+; 000D 02E2     val += (float) (buf[4] * 0.1);
 ;PCODE: $00000A44 VOL: 0
 ;PCODE: $00000A45 VOL: 0
 ;PCODE: $00000A46 VOL: 0
@@ -3464,7 +3465,7 @@
 ;PCODE: $00000A4A VOL: 0
 ;PCODE: $00000A4B VOL: 0
 ;PCODE: $00000A4C VOL: 0
-; 000D 02E2     val += (float) (buf[5] * 0.01);
+; 000D 02E3     val += (float) (buf[5] * 0.01);
 ;PCODE: $00000A4D VOL: 0
 ;PCODE: $00000A4E VOL: 0
 ;PCODE: $00000A4F VOL: 0
@@ -3474,7 +3475,7 @@
 ;PCODE: $00000A53 VOL: 0
 ;PCODE: $00000A54 VOL: 0
 ;PCODE: $00000A55 VOL: 0
-; 000D 02E3     if(buf[0] == 1){    val *= (float) (-1.0);  }
+; 000D 02E4     if(buf[0] == 1){    val *= (float) (-1.0);  }
 ;PCODE: $00000A56 VOL: 0
 ;PCODE: $00000A57 VOL: 0
 ;PCODE: $00000A58 VOL: 0
@@ -3483,8 +3484,8 @@
 ;PCODE: $00000A5B VOL: 0
 ;PCODE: $00000A5C VOL: 0
 ;PCODE: $00000A5D VOL: 0
-; 000D 02E4 
-; 000D 02E5     printDebug("<sensorSetCurrentSetPoint> sensor %1d, point %1d, set to [%f]",ch+1,pnt,val);
+; 000D 02E5 
+; 000D 02E6     printDebug("<sensorSetCurrentSetPoint> sensor %1d, point %1d, set to [%f]",ch+1,pnt,val);
 ;PCODE: $00000A5E VOL: 0
 ;PCODE: $00000A5F VOL: 0
 ;PCODE: $00000A60 VOL: 0
@@ -3502,12 +3503,12 @@
 ;PCODE: $00000A6C VOL: 0
 ;PCODE: $00000A6D VOL: 0
 ;PCODE: $00000A6E VOL: 0
-; 000D 02E6 
-; 000D 02E7     if(pnt == CALPOINT(1)){
+; 000D 02E7 
+; 000D 02E8     if(pnt == CALPOINT(1)){
 ;PCODE: $00000A6F VOL: 0
 ;PCODE: $00000A70 VOL: 0
 ;PCODE: $00000A71 VOL: 0
-; 000D 02E8         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+; 000D 02E9         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 ;PCODE: $00000A72 VOL: 0
 ;PCODE: $00000A73 VOL: 0
 ;PCODE: $00000A74 VOL: 0
@@ -3527,25 +3528,25 @@
 ;PCODE: $00000A82 VOL: 0
 ;PCODE: $00000A83 VOL: 0
 ;PCODE: $00000A84 VOL: 0
-; 000D 02E9 //           viADCbuffer = 0;
-; 000D 02EA //             for(i=0;i<30;i++){
-; 000D 02EB //                viADCbuffer += read_adc(8+ch);
-; 000D 02EC //             }
-; 000D 02ED //
-; 000D 02EE //             epADCRef1[ch] = iAD595ADCToTemp(viADCbuffer,30);
-; 000D 02EF 
-; 000D 02F0              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+; 000D 02EA //           viADCbuffer = 0;
+; 000D 02EB //             for(i=0;i<30;i++){
+; 000D 02EC //                viADCbuffer += read_adc(8+ch);
+; 000D 02ED //             }
+; 000D 02EE //
+; 000D 02EF //             epADCRef1[ch] = iAD595ADCToTemp(viADCbuffer,30);
+; 000D 02F0 
+; 000D 02F1              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
 ;PCODE: $00000A85 VOL: 0
 ;PCODE: $00000A86 VOL: 0
 ;PCODE: $00000A87 VOL: 0
 ;PCODE: $00000A88 VOL: 0
 ;PCODE: $00000A89 VOL: 0
-; 000D 02F1              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
+; 000D 02F2              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
 ;PCODE: $00000A8A VOL: 0
 ;PCODE: $00000A8B VOL: 0
 ;PCODE: $00000A8C VOL: 0
 ;PCODE: $00000A8D VOL: 0
-; 000D 02F2              epADCRef1[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
+; 000D 02F3              epADCRef1[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
 ;PCODE: $00000A8E VOL: 0
 ;PCODE: $00000A8F VOL: 0
 ;PCODE: $00000A90 VOL: 0
@@ -3555,10 +3556,10 @@
 ;PCODE: $00000A94 VOL: 0
 ;PCODE: $00000A95 VOL: 0
 ;PCODE: $00000A96 VOL: 0
-; 000D 02F3         }else{
+; 000D 02F4         }else{
 ;PCODE: $00000A97 VOL: 0
 ;PCODE: $00000A98 VOL: 0
-; 000D 02F4            epADCRef1[ch]       = adcData[ch];
+; 000D 02F5            epADCRef1[ch]       = adcData[ch];
 ;PCODE: $00000A99 VOL: 0
 ;PCODE: $00000A9A VOL: 0
 ;PCODE: $00000A9B VOL: 0
@@ -3571,43 +3572,43 @@
 ;PCODE: $00000AA2 VOL: 0
 ;PCODE: $00000AA3 VOL: 0
 ;PCODE: $00000AA4 VOL: 0
-; 000D 02F5         }
+; 000D 02F6         }
 ;PCODE: $00000AA5 VOL: 0
-; 000D 02F6 
 ; 000D 02F7 
 ; 000D 02F8 
-; 000D 02F9         epTempRef1[ch]      = val;
+; 000D 02F9 
+; 000D 02FA         epTempRef1[ch]      = val;
 ;PCODE: $00000AA6 VOL: 0
 ;PCODE: $00000AA7 VOL: 0
 ;PCODE: $00000AA8 VOL: 0
 ;PCODE: $00000AA9 VOL: 0
 ;PCODE: $00000AAA VOL: 0
 ;PCODE: $00000AAB VOL: 0
-; 000D 02FA         //epADCRef1[ch]       = adcData[ch];
-; 000D 02FB         epIsPointSet1[ch]   = 1;
+; 000D 02FB         //epADCRef1[ch]       = adcData[ch];
+; 000D 02FC         epIsPointSet1[ch]   = 1;
 ;PCODE: $00000AAC VOL: 0
 ;PCODE: $00000AAD VOL: 0
 ;PCODE: $00000AAE VOL: 0
 ;PCODE: $00000AAF VOL: 0
-; 000D 02FC         epIsPointSet2[ch]   = 0;                        // -- reset cal_point 2 -- //
+; 000D 02FD         epIsPointSet2[ch]   = 0;                        // -- reset cal_point 2 -- //
 ;PCODE: $00000AB0 VOL: 0
 ;PCODE: $00000AB1 VOL: 0
 ;PCODE: $00000AB2 VOL: 0
 ;PCODE: $00000AB3 VOL: 0
-; 000D 02FD         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
+; 000D 02FE         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
 ;PCODE: $00000AB4 VOL: 0
 ;PCODE: $00000AB5 VOL: 0
 ;PCODE: $00000AB6 VOL: 0
 ;PCODE: $00000AB7 VOL: 0
-; 000D 02FE     }
-; 000D 02FF     else if(pnt == CALPOINT(2)){
+; 000D 02FF     }
+; 000D 0300     else if(pnt == CALPOINT(2)){
 ;PCODE: $00000AB8 VOL: 0
 ;PCODE: $00000AB9 VOL: 0
 ;PCODE: $00000ABA VOL: 0
 ;PCODE: $00000ABB VOL: 0
 ;PCODE: $00000ABC VOL: 0
-; 000D 0300 
-; 000D 0301         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+; 000D 0301 
+; 000D 0302         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 ;PCODE: $00000ABD VOL: 0
 ;PCODE: $00000ABE VOL: 0
 ;PCODE: $00000ABF VOL: 0
@@ -3627,25 +3628,25 @@
 ;PCODE: $00000ACD VOL: 0
 ;PCODE: $00000ACE VOL: 0
 ;PCODE: $00000ACF VOL: 0
-; 000D 0302 //           viADCbuffer = 0;
-; 000D 0303 //             for(i=0;i<30;i++){
-; 000D 0304 //                viADCbuffer += read_adc(8+ch);
-; 000D 0305 //             }
-; 000D 0306 //
-; 000D 0307 //             epADCRef2[ch] = iAD595ADCToTemp(viADCbuffer,30);
-; 000D 0308 
-; 000D 0309              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+; 000D 0303 //           viADCbuffer = 0;
+; 000D 0304 //             for(i=0;i<30;i++){
+; 000D 0305 //                viADCbuffer += read_adc(8+ch);
+; 000D 0306 //             }
+; 000D 0307 //
+; 000D 0308 //             epADCRef2[ch] = iAD595ADCToTemp(viADCbuffer,30);
+; 000D 0309 
+; 000D 030A              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
 ;PCODE: $00000AD0 VOL: 0
 ;PCODE: $00000AD1 VOL: 0
 ;PCODE: $00000AD2 VOL: 0
 ;PCODE: $00000AD3 VOL: 0
 ;PCODE: $00000AD4 VOL: 0
-; 000D 030A              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
+; 000D 030B              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
 ;PCODE: $00000AD5 VOL: 0
 ;PCODE: $00000AD6 VOL: 0
 ;PCODE: $00000AD7 VOL: 0
 ;PCODE: $00000AD8 VOL: 0
-; 000D 030B              epADCRef2[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
+; 000D 030C              epADCRef2[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
 ;PCODE: $00000AD9 VOL: 0
 ;PCODE: $00000ADA VOL: 0
 ;PCODE: $00000ADB VOL: 0
@@ -3655,10 +3656,10 @@
 ;PCODE: $00000ADF VOL: 0
 ;PCODE: $00000AE0 VOL: 0
 ;PCODE: $00000AE1 VOL: 0
-; 000D 030C         }else{
+; 000D 030D         }else{
 ;PCODE: $00000AE2 VOL: 0
 ;PCODE: $00000AE3 VOL: 0
-; 000D 030D            epADCRef2[ch]       = adcData[ch];
+; 000D 030E            epADCRef2[ch]       = adcData[ch];
 ;PCODE: $00000AE4 VOL: 0
 ;PCODE: $00000AE5 VOL: 0
 ;PCODE: $00000AE6 VOL: 0
@@ -3671,35 +3672,35 @@
 ;PCODE: $00000AED VOL: 0
 ;PCODE: $00000AEE VOL: 0
 ;PCODE: $00000AEF VOL: 0
-; 000D 030E         }
+; 000D 030F         }
 ;PCODE: $00000AF0 VOL: 0
-; 000D 030F 
-; 000D 0310         epTempRef2[ch]      = val;
+; 000D 0310 
+; 000D 0311         epTempRef2[ch]      = val;
 ;PCODE: $00000AF1 VOL: 0
 ;PCODE: $00000AF2 VOL: 0
 ;PCODE: $00000AF3 VOL: 0
 ;PCODE: $00000AF4 VOL: 0
 ;PCODE: $00000AF5 VOL: 0
 ;PCODE: $00000AF6 VOL: 0
-; 000D 0311         //epADCRef2[ch]       = adcData[ch];
-; 000D 0312         epIsPointSet2[ch]   = 1;
+; 000D 0312         //epADCRef2[ch]       = adcData[ch];
+; 000D 0313         epIsPointSet2[ch]   = 1;
 ;PCODE: $00000AF7 VOL: 0
 ;PCODE: $00000AF8 VOL: 0
 ;PCODE: $00000AF9 VOL: 0
 ;PCODE: $00000AFA VOL: 0
-; 000D 0313         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
+; 000D 0314         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
 ;PCODE: $00000AFB VOL: 0
 ;PCODE: $00000AFC VOL: 0
 ;PCODE: $00000AFD VOL: 0
 ;PCODE: $00000AFE VOL: 0
-; 000D 0314     }
-; 000D 0315     else if(pnt == CALPOINT(3)){
+; 000D 0315     }
+; 000D 0316     else if(pnt == CALPOINT(3)){
 ;PCODE: $00000AFF VOL: 0
 ;PCODE: $00000B00 VOL: 0
 ;PCODE: $00000B01 VOL: 0
 ;PCODE: $00000B02 VOL: 0
 ;PCODE: $00000B03 VOL: 0
-; 000D 0316         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+; 000D 0317         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 ;PCODE: $00000B04 VOL: 0
 ;PCODE: $00000B05 VOL: 0
 ;PCODE: $00000B06 VOL: 0
@@ -3719,25 +3720,25 @@
 ;PCODE: $00000B14 VOL: 0
 ;PCODE: $00000B15 VOL: 0
 ;PCODE: $00000B16 VOL: 0
-; 000D 0317 //           viADCbuffer = 0;
-; 000D 0318 //             for(i=0;i<30;i++){
-; 000D 0319 //                viADCbuffer += read_adc(8+ch);
-; 000D 031A //             }
-; 000D 031B //
-; 000D 031C //             epADCRef3[ch] = iAD595ADCToTemp(viADCbuffer,30);
-; 000D 031D 
-; 000D 031E              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+; 000D 0318 //           viADCbuffer = 0;
+; 000D 0319 //             for(i=0;i<30;i++){
+; 000D 031A //                viADCbuffer += read_adc(8+ch);
+; 000D 031B //             }
+; 000D 031C //
+; 000D 031D //             epADCRef3[ch] = iAD595ADCToTemp(viADCbuffer,30);
+; 000D 031E 
+; 000D 031F              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
 ;PCODE: $00000B17 VOL: 0
 ;PCODE: $00000B18 VOL: 0
 ;PCODE: $00000B19 VOL: 0
 ;PCODE: $00000B1A VOL: 0
 ;PCODE: $00000B1B VOL: 0
-; 000D 031F              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
+; 000D 0320              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
 ;PCODE: $00000B1C VOL: 0
 ;PCODE: $00000B1D VOL: 0
 ;PCODE: $00000B1E VOL: 0
 ;PCODE: $00000B1F VOL: 0
-; 000D 0320              epADCRef3[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
+; 000D 0321              epADCRef3[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
 ;PCODE: $00000B20 VOL: 0
 ;PCODE: $00000B21 VOL: 0
 ;PCODE: $00000B22 VOL: 0
@@ -3747,10 +3748,10 @@
 ;PCODE: $00000B26 VOL: 0
 ;PCODE: $00000B27 VOL: 0
 ;PCODE: $00000B28 VOL: 0
-; 000D 0321         }else{
+; 000D 0322         }else{
 ;PCODE: $00000B29 VOL: 0
 ;PCODE: $00000B2A VOL: 0
-; 000D 0322            epADCRef3[ch]       = adcData[ch];
+; 000D 0323            epADCRef3[ch]       = adcData[ch];
 ;PCODE: $00000B2B VOL: 0
 ;PCODE: $00000B2C VOL: 0
 ;PCODE: $00000B2D VOL: 0
@@ -3763,27 +3764,27 @@
 ;PCODE: $00000B34 VOL: 0
 ;PCODE: $00000B35 VOL: 0
 ;PCODE: $00000B36 VOL: 0
-; 000D 0323         }
+; 000D 0324         }
 ;PCODE: $00000B37 VOL: 0
-; 000D 0324 
-; 000D 0325         epTempRef3[ch]      = val;
+; 000D 0325 
+; 000D 0326         epTempRef3[ch]      = val;
 ;PCODE: $00000B38 VOL: 0
 ;PCODE: $00000B39 VOL: 0
 ;PCODE: $00000B3A VOL: 0
 ;PCODE: $00000B3B VOL: 0
 ;PCODE: $00000B3C VOL: 0
 ;PCODE: $00000B3D VOL: 0
-; 000D 0326         //epADCRef3[ch]       = adcData[ch];
-; 000D 0327         epIsPointSet3[ch]   = 1;
+; 000D 0327         //epADCRef3[ch]       = adcData[ch];
+; 000D 0328         epIsPointSet3[ch]   = 1;
 ;PCODE: $00000B3E VOL: 0
 ;PCODE: $00000B3F VOL: 0
 ;PCODE: $00000B40 VOL: 0
 ;PCODE: $00000B41 VOL: 0
-; 000D 0328     }
-; 000D 0329     else{
+; 000D 0329     }
+; 000D 032A     else{
 ;PCODE: $00000B42 VOL: 0
 ;PCODE: $00000B43 VOL: 0
-; 000D 032A         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
+; 000D 032B         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
 ;PCODE: $00000B44 VOL: 0
 ;PCODE: $00000B45 VOL: 0
 ;PCODE: $00000B46 VOL: 0
@@ -3794,7 +3795,7 @@
 ;PCODE: $00000B4B VOL: 0
 ;PCODE: $00000B4C VOL: 0
 ;PCODE: $00000B4D VOL: 0
-; 000D 032B         return -1;
+; 000D 032C         return -1;
 ;PCODE: $00000B4E VOL: 0
 ;PCODE: $00000B4F VOL: 0
 ;PCODE: $00000B50 VOL: 0
@@ -3802,12 +3803,12 @@
 ;PCODE: $00000B52 VOL: 0
 ;PCODE: $00000B53 VOL: 0
 ;PCODE: $00000B54 VOL: 0
-; 000D 032C     }
+; 000D 032D     }
 ;PCODE: $00000B55 VOL: 0
 ;PCODE: $00000B56 VOL: 0
 ;PCODE: $00000B57 VOL: 0
-; 000D 032D 
-; 000D 032E     return 0;
+; 000D 032E 
+; 000D 032F     return 0;
 ;PCODE: $00000B58 VOL: 0
 ;PCODE: $00000B59 VOL: 0
 ;PCODE: $00000B5A VOL: 0
@@ -3815,6 +3816,6 @@
 ;PCODE: $00000B5C VOL: 0
 ;PCODE: $00000B5D VOL: 0
 ;PCODE: $00000B5E VOL: 0
-; 000D 032F }
+; 000D 0330 }
 ;PCODE: $00000B5F VOL: 0
 ;/*============================================================*/

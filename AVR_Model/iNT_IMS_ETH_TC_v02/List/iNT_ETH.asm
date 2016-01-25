@@ -22696,13 +22696,14 @@ _0x1A0065:
 ; 000D 01D4     }
 _0x1A0049:
 ; 000D 01D5     //printDebug("end read sensor.\r\n");
-; 000D 01D6     sensor->status  = SENS_NORMAL;
+; 000D 01D6     //printDebug("Temp CH[0]= %f C\r\n",sensor->value);
+; 000D 01D7     sensor->status  = SENS_NORMAL;
 	CALL SUBOPT_0x211
 	ADIW R26,4
 	LDI  R30,LOW(0)
 	ST   X,R30
-; 000D 01D7 
-; 000D 01D8     return 0;
+; 000D 01D8 
+; 000D 01D9     return 0;
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
 _0x20E006A:
@@ -22710,38 +22711,38 @@ _0x20E006A:
 	ADIW R28,63
 	ADIW R28,33
 	RET
-; 000D 01D9 }
+; 000D 01DA }
 ;/*============================================================*/
 ;void getInterval(float adcRaw, float *x1, float *x2, float *y1, float *y2) {
-; 000D 01DB void getInterval(float adcRaw, float *x1, float *x2, float *y1, float *y2) {
-; 000D 01DC 
-; 000D 01DD     int i = 0;
-; 000D 01DE 
-; 000D 01DF     for(i = 0; i < 15; i++) {
+; 000D 01DC void getInterval(float adcRaw, float *x1, float *x2, float *y1, float *y2) {
+; 000D 01DD 
+; 000D 01DE     int i = 0;
+; 000D 01DF 
+; 000D 01E0     for(i = 0; i < 15; i++) {
 ;	adcRaw -> Y+10
 ;	*x1 -> Y+8
 ;	*x2 -> Y+6
 ;	*y1 -> Y+4
 ;	*y2 -> Y+2
 ;	i -> R16,R17
-; 000D 01E0         if(adcRaw <= adcTable[i]) {
-; 000D 01E1             *x1 = adcTable[i-1];
-; 000D 01E2             *y1 = tempTable[i-1];
-; 000D 01E3             *x2 = adcTable[i];
-; 000D 01E4             *y2 = tempTable[i];
-; 000D 01E5             break;
-; 000D 01E6         }
-; 000D 01E7     }
-; 000D 01E8 
-; 000D 01E9     return;
-; 000D 01EA }
+; 000D 01E1         if(adcRaw <= adcTable[i]) {
+; 000D 01E2             *x1 = adcTable[i-1];
+; 000D 01E3             *y1 = tempTable[i-1];
+; 000D 01E4             *x2 = adcTable[i];
+; 000D 01E5             *y2 = tempTable[i];
+; 000D 01E6             break;
+; 000D 01E7         }
+; 000D 01E8     }
+; 000D 01E9 
+; 000D 01EA     return;
+; 000D 01EB }
 ;/*============================================================*/
 ;int sensorCalibrate1(int p1, int p2)
-; 000D 01ED {
+; 000D 01EE {
 _sensorCalibrate1:
-; 000D 01EE     float p2_raw;
-; 000D 01EF 
-; 000D 01F0     if(operating_config.sensorEnable[p1] != 0x01){
+; 000D 01EF     float p2_raw;
+; 000D 01F0 
+; 000D 01F1     if(operating_config.sensorEnable[p1] != 0x01){
 	ST   -Y,R27
 	ST   -Y,R26
 	SBIW R28,4
@@ -22753,42 +22754,42 @@ _sensorCalibrate1:
 	LD   R26,X
 	CPI  R26,LOW(0x1)
 	BREQ _0x1A006A
-; 000D 01F1         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p1+1);
+; 000D 01F2         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p1+1);
 	__POINTD1FN _0x1A0000,94
 	CALL SUBOPT_0x128
 	ADIW R30,1
 	CALL SUBOPT_0xE9
-; 000D 01F2         return -1;
+; 000D 01F3         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0069
-; 000D 01F3     }
-; 000D 01F4     if(operating_config.sensorEnable[p2] != 0x01){
+; 000D 01F4     }
+; 000D 01F5     if(operating_config.sensorEnable[p2] != 0x01){
 _0x1A006A:
 	__POINTW1MN _operating_config,3
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	CALL SUBOPT_0x228
 	BREQ _0x1A006B
-; 000D 01F5         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p2+1);
+; 000D 01F6         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p2+1);
 	__POINTD1FN _0x1A0000,94
 	CALL SUBOPT_0x1D9
 	ADIW R30,1
 	CALL SUBOPT_0xE9
-; 000D 01F6         return -1;
+; 000D 01F7         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0069
-; 000D 01F7     }
-; 000D 01F8 
-; 000D 01F9     if(sensor[p1].status != SENS_NORMAL){
+; 000D 01F8     }
+; 000D 01F9 
+; 000D 01FA     if(sensor[p1].status != SENS_NORMAL){
 _0x1A006B:
 	LDD  R26,Y+6
 	LDD  R27,Y+6+1
 	CALL SUBOPT_0x229
 	CPI  R30,0
 	BREQ _0x1A006C
-; 000D 01FA         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p1+1,sensor[p1].status);
+; 000D 01FB         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p1+1,sensor[p1].status);
 	__POINTD1FN _0x1A0000,146
 	CALL SUBOPT_0x128
 	CALL SUBOPT_0x200
@@ -22796,19 +22797,19 @@ _0x1A006B:
 	LDD  R27,Y+14+1
 	CALL SUBOPT_0x229
 	CALL SUBOPT_0x22A
-; 000D 01FB         return -1;
+; 000D 01FC         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0069
-; 000D 01FC     }
-; 000D 01FD     if(sensor[p2].status != SENS_NORMAL){
+; 000D 01FD     }
+; 000D 01FE     if(sensor[p2].status != SENS_NORMAL){
 _0x1A006C:
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
 	CALL SUBOPT_0x229
 	CPI  R30,0
 	BREQ _0x1A006D
-; 000D 01FE         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p2+1,sensor[p2].status);
+; 000D 01FF         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p2+1,sensor[p2].status);
 	__POINTD1FN _0x1A0000,146
 	CALL SUBOPT_0x1D9
 	CALL SUBOPT_0x200
@@ -22816,13 +22817,13 @@ _0x1A006C:
 	LDD  R27,Y+12+1
 	CALL SUBOPT_0x229
 	CALL SUBOPT_0x22A
-; 000D 01FF         return -1;
+; 000D 0200         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0069
-; 000D 0200     }
-; 000D 0201 
-; 000D 0202     epCalType[p2]   = CAL_SELFCOMPARE;
+; 000D 0201     }
+; 000D 0202 
+; 000D 0203     epCalType[p2]   = CAL_SELFCOMPARE;
 _0x1A006D:
 	LDD  R26,Y+4
 	LDD  R27,Y+4+1
@@ -22830,15 +22831,15 @@ _0x1A006D:
 	SBCI R27,HIGH(-_epCalType)
 	LDI  R30,LOW(1)
 	CALL __EEPROMWRB
-; 000D 0203 
-; 000D 0204     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+; 000D 0204 
+; 000D 0205     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 	CALL SUBOPT_0x2E
 	BREQ _0x1A006F
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
 	BRNE _0x1A006E
 _0x1A006F:
-; 000D 0205         p2_raw          = (ADC_CONV_FAC*100 * adcData[p2]);
+; 000D 0206         p2_raw          = (ADC_CONV_FAC*100 * adcData[p2]);
 	CALL SUBOPT_0x32
 	CALL SUBOPT_0x33
 	PUSH R23
@@ -22853,25 +22854,25 @@ _0x1A006F:
 	POP  R25
 	CALL __MULF12
 	RJMP _0x1A00BC
-; 000D 0206     }
-; 000D 0207     else if(TEMP_SEL == TEMP_TMEC){
+; 000D 0207     }
+; 000D 0208     else if(TEMP_SEL == TEMP_TMEC){
 _0x1A006E:
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x1)
 	BRNE _0x1A0072
-; 000D 0208         p2_raw          = epTMECTempSlope   * adcData[p2];
+; 000D 0209         p2_raw          = epTMECTempSlope   * adcData[p2];
 	CALL SUBOPT_0x22B
 	CALL SUBOPT_0x1B
 	CALL SUBOPT_0x219
 	RJMP _0x1A00BC
-; 000D 0209     }
-; 000D 020A     else if(TEMP_SEL == TEMP_PT100){
+; 000D 020A     }
+; 000D 020B     else if(TEMP_SEL == TEMP_PT100){
 _0x1A0072:
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x2)
 	BRNE _0x1A0074
-; 000D 020B         p2_raw          = (epPT100Temp_A    * adcData[p2] * adcData[p2]) +
-; 000D 020C                           (epPT100Temp_B    * adcData[p2]);
+; 000D 020C         p2_raw          = (epPT100Temp_A    * adcData[p2] * adcData[p2]) +
+; 000D 020D                           (epPT100Temp_B    * adcData[p2]);
 	CALL SUBOPT_0x22B
 	CALL SUBOPT_0x1B
 	CALL SUBOPT_0x21B
@@ -22900,18 +22901,18 @@ _0x1A0072:
 	CALL __ADDF12
 _0x1A00BC:
 	CALL __PUTD1S0
-; 000D 020D     }
-; 000D 020E 
-; 000D 020F     epFactor_A[p2]  = 0;
+; 000D 020E     }
+; 000D 020F 
+; 000D 0210     epFactor_A[p2]  = 0;
 _0x1A0074:
 	LDD  R30,Y+4
 	LDD  R31,Y+4+1
 	CALL SUBOPT_0x226
 	CALL SUBOPT_0x22C
-; 000D 0210     epFactor_B[p2]  = 0;
+; 000D 0211     epFactor_B[p2]  = 0;
 	CALL SUBOPT_0x22D
 	CALL SUBOPT_0x22C
-; 000D 0211     epFactor_C[p2]  = sensor[p1].value - p2_raw;
+; 000D 0212     epFactor_C[p2]  = sensor[p1].value - p2_raw;
 	CALL SUBOPT_0x22E
 	PUSH R31
 	PUSH R30
@@ -22925,24 +22926,24 @@ _0x1A0074:
 	POP  R26
 	POP  R27
 	CALL __EEPROMWRD
-; 000D 0212 
-; 000D 0213     return 0;
+; 000D 0213 
+; 000D 0214     return 0;
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
 _0x20E0069:
 	ADIW R28,8
 	RET
-; 000D 0214 }
+; 000D 0215 }
 ;/*============================================================*/
 ;int sensorCalibrate2(int prbId)
-; 000D 0217 {
+; 000D 0218 {
 _sensorCalibrate2:
-; 000D 0218     float p2_raw;
-; 000D 0219     float tmpA,tmpB,tmpC;
-; 000D 021A     //int i = 0;
-; 000D 021B     //long viADCbuffer = 0;
-; 000D 021C 
-; 000D 021D     if(epIsPointSet1[prbId] == 0){
+; 000D 0219     float p2_raw;
+; 000D 021A     float tmpA,tmpB,tmpC;
+; 000D 021B     //int i = 0;
+; 000D 021C     //long viADCbuffer = 0;
+; 000D 021D 
+; 000D 021E     if(epIsPointSet1[prbId] == 0){
 	ST   -Y,R27
 	ST   -Y,R26
 	SBIW R28,16
@@ -22958,18 +22959,18 @@ _sensorCalibrate2:
 	CALL __EEPROMRDB
 	CPI  R30,0
 	BRNE _0x1A0075
-; 000D 021E         printDebug("<sensorCalibrate2> ABORT: sensor ch %d No set point found\r\n",prbId+1);
+; 000D 021F         printDebug("<sensorCalibrate2> ABORT: sensor ch %d No set point found\r\n",prbId+1);
 	__POINTD1FN _0x1A0000,201
 	CALL SUBOPT_0xE8
 	ADIW R30,1
 	CALL SUBOPT_0xE9
-; 000D 021F         return -1;
+; 000D 0220         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0068
-; 000D 0220     }
-; 000D 0221 
-; 000D 0222     if(epIsPointSet2[prbId] == 0){
+; 000D 0221     }
+; 000D 0222 
+; 000D 0223     if(epIsPointSet2[prbId] == 0){
 _0x1A0075:
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
@@ -22979,28 +22980,28 @@ _0x1A0075:
 	CPI  R30,0
 	BREQ PC+3
 	JMP _0x1A0076
-; 000D 0223         printDebug("<sensorCalibrate2> -- CAL_EXTOFFSET --\r\n");
+; 000D 0224         printDebug("<sensorCalibrate2> -- CAL_EXTOFFSET --\r\n");
 	__POINTD1FN _0x1A0000,261
 	CALL SUBOPT_0x3
-; 000D 0224         epFactor_A[prbId]   = 0;
+; 000D 0225         epFactor_A[prbId]   = 0;
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	CALL SUBOPT_0x226
 	CALL SUBOPT_0x22F
-; 000D 0225         epFactor_B[prbId]   = 0;
+; 000D 0226         epFactor_B[prbId]   = 0;
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	CALL SUBOPT_0x22D
 	CALL SUBOPT_0x22F
-; 000D 0226 
-; 000D 0227         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+; 000D 0227 
+; 000D 0228         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 	CALL SUBOPT_0x2E
 	BREQ _0x1A0078
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
 	BRNE _0x1A0077
 _0x1A0078:
-; 000D 0228             p2_raw          = (ADC_CONV_FAC*100 * epADCRef1[prbId]);
+; 000D 0229             p2_raw          = (ADC_CONV_FAC*100 * epADCRef1[prbId]);
 	CALL SUBOPT_0x32
 	CALL SUBOPT_0x33
 	PUSH R23
@@ -23014,26 +23015,26 @@ _0x1A0078:
 	POP  R25
 	CALL __MULF12
 	RJMP _0x1A00BD
-; 000D 0229 
 ; 000D 022A 
-; 000D 022B         }
-; 000D 022C         else if(TEMP_SEL == TEMP_TMEC){
+; 000D 022B 
+; 000D 022C         }
+; 000D 022D         else if(TEMP_SEL == TEMP_TMEC){
 _0x1A0077:
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x1)
 	BRNE _0x1A007B
-; 000D 022D             p2_raw          = epTMECTempSlope   * epADCRef1[prbId];
+; 000D 022E             p2_raw          = epTMECTempSlope   * epADCRef1[prbId];
 	CALL SUBOPT_0x230
 	CALL SUBOPT_0x219
 	RJMP _0x1A00BD
-; 000D 022E         }
-; 000D 022F         else if(TEMP_SEL == TEMP_PT100){
+; 000D 022F         }
+; 000D 0230         else if(TEMP_SEL == TEMP_PT100){
 _0x1A007B:
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x2)
 	BRNE _0x1A007D
-; 000D 0230             p2_raw          = (epPT100Temp_A    * epADCRef1[prbId] * epADCRef1[prbId]) +
-; 000D 0231                               (epPT100Temp_B    * epADCRef1[prbId]);
+; 000D 0231             p2_raw          = (epPT100Temp_A    * epADCRef1[prbId] * epADCRef1[prbId]) +
+; 000D 0232                               (epPT100Temp_B    * epADCRef1[prbId]);
 	CALL SUBOPT_0x230
 	CALL SUBOPT_0x21B
 	PUSH R23
@@ -23059,9 +23060,9 @@ _0x1A007B:
 	CALL __ADDF12
 _0x1A00BD:
 	__PUTD1S 12
-; 000D 0232         }
-; 000D 0233 
-; 000D 0234         epFactor_C[prbId]   = epTempRef1[prbId] - p2_raw;
+; 000D 0233         }
+; 000D 0234 
+; 000D 0235         epFactor_C[prbId]   = epTempRef1[prbId] - p2_raw;
 _0x1A007D:
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
@@ -23074,18 +23075,18 @@ _0x1A007D:
 	POP  R26
 	POP  R27
 	CALL __EEPROMWRD
-; 000D 0235         epCalType[prbId]    = CAL_EXTOFFSET;
+; 000D 0236         epCalType[prbId]    = CAL_EXTOFFSET;
 	CALL SUBOPT_0x232
 	LDI  R30,LOW(2)
 	CALL __EEPROMWRB
-; 000D 0236         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
+; 000D 0237         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
 	CALL SUBOPT_0x233
 	CALL SUBOPT_0x234
-; 000D 0237         return 0;
+; 000D 0238         return 0;
 	RJMP _0x20E0067
-; 000D 0238     }
-; 000D 0239 
-; 000D 023A     if(epIsPointSet3[prbId] == 0){
+; 000D 0239     }
+; 000D 023A 
+; 000D 023B     if(epIsPointSet3[prbId] == 0){
 _0x1A0076:
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
@@ -23095,16 +23096,16 @@ _0x1A0076:
 	CPI  R30,0
 	BREQ PC+3
 	JMP _0x1A007E
-; 000D 023B         printDebug("<sensorCalibrate2> -- CAL_EXTLINEAR --\r\n");
+; 000D 023C         printDebug("<sensorCalibrate2> -- CAL_EXTLINEAR --\r\n");
 	__POINTD1FN _0x1A0000,333
 	CALL SUBOPT_0x3
-; 000D 023C         epFactor_A[prbId]   = 0;
+; 000D 023D         epFactor_A[prbId]   = 0;
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	CALL SUBOPT_0x226
 	CALL SUBOPT_0x22F
-; 000D 023D 
-; 000D 023E         epFactor_B[prbId]   = (epTempRef2[prbId] - epTempRef1[prbId])/(epADCRef2[prbId] - epADCRef1[prbId]);
+; 000D 023E 
+; 000D 023F         epFactor_B[prbId]   = (epTempRef2[prbId] - epTempRef1[prbId])/(epADCRef2[prbId] - epADCRef1[prbId]);
 	CALL SUBOPT_0x235
 	ADD  R30,R26
 	ADC  R31,R27
@@ -23144,12 +23145,12 @@ _0x1A0076:
 	POP  R26
 	POP  R27
 	CALL __EEPROMWRD
-; 000D 023F         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
+; 000D 0240         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
 	CALL SUBOPT_0x238
 	CALL SUBOPT_0x22D
 	CALL SUBOPT_0x14B
-; 000D 0240 
-; 000D 0241         epFactor_C[prbId]   = epTempRef2[prbId] - (epFactor_B[prbId] * epADCRef2[prbId]);
+; 000D 0241 
+; 000D 0242         epFactor_C[prbId]   = epTempRef2[prbId] - (epFactor_B[prbId] * epADCRef2[prbId]);
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	CALL SUBOPT_0x22E
@@ -23182,24 +23183,24 @@ _0x1A0076:
 	POP  R26
 	POP  R27
 	CALL __EEPROMWRD
-; 000D 0242         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
+; 000D 0243         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
 	CALL SUBOPT_0x233
 	CALL SUBOPT_0x234
-; 000D 0243 
-; 000D 0244         epCalType[prbId]    = CAL_EXTLINEAR;
+; 000D 0244 
+; 000D 0245         epCalType[prbId]    = CAL_EXTLINEAR;
 	CALL SUBOPT_0x232
 	LDI  R30,LOW(3)
 	RJMP _0x1A00BE
-; 000D 0245     }
-; 000D 0246     else{
+; 000D 0246     }
+; 000D 0247     else{
 _0x1A007E:
-; 000D 0247         printDebug("<sensorCalibrate2> -- CAL_EXTPOLYNOMIAL --\r\n");
+; 000D 0248         printDebug("<sensorCalibrate2> -- CAL_EXTPOLYNOMIAL --\r\n");
 	__POINTD1FN _0x1A0000,405
 	CALL SUBOPT_0x3
-; 000D 0248 
-; 000D 0249         gaussian(epADCRef1[prbId],  epADCRef2[prbId],  epADCRef3[prbId],
-; 000D 024A                  epTempRef1[prbId], epTempRef2[prbId], epTempRef3[prbId],
-; 000D 024B                  &tmpA, &tmpB, &tmpC);
+; 000D 0249 
+; 000D 024A         gaussian(epADCRef1[prbId],  epADCRef2[prbId],  epADCRef3[prbId],
+; 000D 024B                  epTempRef1[prbId], epTempRef2[prbId], epTempRef3[prbId],
+; 000D 024C                  &tmpA, &tmpB, &tmpC);
 	CALL SUBOPT_0x230
 	CALL SUBOPT_0xE8
 	CALL SUBOPT_0x239
@@ -23229,8 +23230,8 @@ _0x1A007E:
 	MOVW R26,R28
 	ADIW R26,28
 	CALL _gaussian
-; 000D 024C 
-; 000D 024D         epFactor_A[prbId]   = tmpA;
+; 000D 024D 
+; 000D 024E         epFactor_A[prbId]   = tmpA;
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	LDI  R26,LOW(_epFactor_A)
@@ -23240,13 +23241,13 @@ _0x1A007E:
 	ADC  R27,R31
 	CALL SUBOPT_0x4F
 	CALL __EEPROMWRD
-; 000D 024E         epFactor_B[prbId]   = tmpB;
+; 000D 024F         epFactor_B[prbId]   = tmpB;
 	CALL SUBOPT_0x235
 	ADD  R26,R30
 	ADC  R27,R31
 	CALL SUBOPT_0x89
 	CALL __EEPROMWRD
-; 000D 024F         epFactor_C[prbId]   = tmpC;
+; 000D 0250         epFactor_C[prbId]   = tmpC;
 	LDD  R30,Y+16
 	LDD  R31,Y+16+1
 	LDI  R26,LOW(_epFactor_C)
@@ -23254,47 +23255,47 @@ _0x1A007E:
 	CALL SUBOPT_0x23D
 	CALL SUBOPT_0x87
 	CALL __EEPROMWRD
-; 000D 0250 
-; 000D 0251         printDebug("<sensorCalibrate2> --A--> %f\r\n", epFactor_A[prbId]);
+; 000D 0251 
+; 000D 0252         printDebug("<sensorCalibrate2> --A--> %f\r\n", epFactor_A[prbId]);
 	__POINTD1FN _0x1A0000,450
 	CALL SUBOPT_0xE8
 	CALL SUBOPT_0x226
 	CALL SUBOPT_0x14B
-; 000D 0252         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
+; 000D 0253         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
 	CALL SUBOPT_0x238
 	CALL SUBOPT_0x22D
 	CALL SUBOPT_0x14B
-; 000D 0253         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
+; 000D 0254         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
 	CALL SUBOPT_0x233
 	CALL SUBOPT_0x234
-; 000D 0254 
 ; 000D 0255 
 ; 000D 0256 
-; 000D 0257         epCalType[prbId]    = CAL_EXTPOLYNOMIAL;
+; 000D 0257 
+; 000D 0258         epCalType[prbId]    = CAL_EXTPOLYNOMIAL;
 	CALL SUBOPT_0x232
 	LDI  R30,LOW(4)
 _0x1A00BE:
 	CALL __EEPROMWRB
-; 000D 0258     }
-; 000D 0259 
-; 000D 025A     return 0;
+; 000D 0259     }
+; 000D 025A 
+; 000D 025B     return 0;
 _0x20E0067:
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
 _0x20E0068:
 	ADIW R28,18
 	RET
-; 000D 025B }
+; 000D 025C }
 ;/*============================================================*/
 ;int sensorGetCurrentSetPoint(int ch,int pnt, unsigned char *buf)
-; 000D 025E {
+; 000D 025F {
 _sensorGetCurrentSetPoint:
-; 000D 025F     unsigned char   valStr[10];
-; 000D 0260     float           valTmp;
-; 000D 0261     //signed int      val;
-; 000D 0262     int             i;
-; 000D 0263 
-; 000D 0264     if(pnt == CALPOINT(1)){
+; 000D 0260     unsigned char   valStr[10];
+; 000D 0261     float           valTmp;
+; 000D 0262     //signed int      val;
+; 000D 0263     int             i;
+; 000D 0264 
+; 000D 0265     if(pnt == CALPOINT(1)){
 	ST   -Y,R27
 	ST   -Y,R26
 	SBIW R28,14
@@ -23312,7 +23313,7 @@ _sensorGetCurrentSetPoint:
 	LDI  R30,HIGH(0x65)
 	CPC  R27,R30
 	BRNE _0x1A0080
-; 000D 0265         if(epIsPointSet1[ch] == 1){
+; 000D 0266         if(epIsPointSet1[ch] == 1){
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
 	SUBI R26,LOW(-_epIsPointSet1)
@@ -23320,36 +23321,36 @@ _sensorGetCurrentSetPoint:
 	CALL __EEPROMRDB
 	CPI  R30,LOW(0x1)
 	BRNE _0x1A0081
-; 000D 0266             valTmp  = epTempRef1[ch];
+; 000D 0267             valTmp  = epTempRef1[ch];
 	LDD  R30,Y+20
 	LDD  R31,Y+20+1
 	CALL SUBOPT_0x23B
 	CALL SUBOPT_0x23E
 	CALL SUBOPT_0xB2
-; 000D 0267             printDebug("<sensorGetCurrentSetPoint> tempRef1 = [%f][%f]\r\n",epTempRef1[ch],valTmp);
+; 000D 0268             printDebug("<sensorGetCurrentSetPoint> tempRef1 = [%f][%f]\r\n",epTempRef1[ch],valTmp);
 	__POINTD1FN _0x1A0000,481
 	CALL SUBOPT_0x23F
 	CALL SUBOPT_0x23B
 	CALL SUBOPT_0x23E
 	CALL SUBOPT_0x57
 	CALL SUBOPT_0x21
-; 000D 0268             ftoa(valTmp,2,valStr);
+; 000D 0269             ftoa(valTmp,2,valStr);
 	CALL SUBOPT_0x240
-; 000D 0269             //val = (epTempRef1[ch] * 100);
-; 000D 026A         }
-; 000D 026B         else{
+; 000D 026A             //val = (epTempRef1[ch] * 100);
+; 000D 026B         }
+; 000D 026C         else{
 	RJMP _0x1A0082
 _0x1A0081:
-; 000D 026C             printDebug("<sensorGetCurrentSetPoint> tempRef1 not set [0.00]\r\n");
+; 000D 026D             printDebug("<sensorGetCurrentSetPoint> tempRef1 not set [0.00]\r\n");
 	__POINTD1FN _0x1A0000,530
 	CALL SUBOPT_0x3
-; 000D 026D             sprintf(valStr,"0.00");                 //val = 0;
+; 000D 026E             sprintf(valStr,"0.00");                 //val = 0;
 	CALL SUBOPT_0x56
 	CALL SUBOPT_0x241
-; 000D 026E         }
+; 000D 026F         }
 _0x1A0082:
-; 000D 026F     }
-; 000D 0270     else if(pnt == CALPOINT(2)){
+; 000D 0270     }
+; 000D 0271     else if(pnt == CALPOINT(2)){
 	RJMP _0x1A0083
 _0x1A0080:
 	LDD  R26,Y+18
@@ -23358,7 +23359,7 @@ _0x1A0080:
 	LDI  R30,HIGH(0x66)
 	CPC  R27,R30
 	BRNE _0x1A0084
-; 000D 0271         if(epIsPointSet2[ch] == 1){
+; 000D 0272         if(epIsPointSet2[ch] == 1){
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
 	SUBI R26,LOW(-_epIsPointSet2)
@@ -23366,40 +23367,40 @@ _0x1A0080:
 	CALL __EEPROMRDB
 	CPI  R30,LOW(0x1)
 	BRNE _0x1A0085
-; 000D 0272             valTmp  = epTempRef2[ch];
+; 000D 0273             valTmp  = epTempRef2[ch];
 	LDD  R30,Y+20
 	LDD  R31,Y+20+1
 	CALL SUBOPT_0x23C
 	CALL SUBOPT_0x23E
 	CALL SUBOPT_0xB2
-; 000D 0273             printDebug("<sensorGetCurrentSetPoint> tempRef2 = [%f][%f]\r\n",epTempRef2[ch],valTmp);
+; 000D 0274             printDebug("<sensorGetCurrentSetPoint> tempRef2 = [%f][%f]\r\n",epTempRef2[ch],valTmp);
 	__POINTD1FN _0x1A0000,588
 	CALL SUBOPT_0x23F
 	CALL SUBOPT_0x23C
 	CALL SUBOPT_0x23E
 	CALL SUBOPT_0x57
 	CALL SUBOPT_0x21
-; 000D 0274             ftoa(valTmp,2,valStr);
+; 000D 0275             ftoa(valTmp,2,valStr);
 	CALL SUBOPT_0x240
-; 000D 0275             //val = (epTempRef1[ch] * 100);
-; 000D 0276         }
-; 000D 0277         else{
+; 000D 0276             //val = (epTempRef1[ch] * 100);
+; 000D 0277         }
+; 000D 0278         else{
 	RJMP _0x1A0086
 _0x1A0085:
-; 000D 0278             printDebug("<sensorGetCurrentSetPoint> tempRef2 not set [0.00]\r\n");
+; 000D 0279             printDebug("<sensorGetCurrentSetPoint> tempRef2 not set [0.00]\r\n");
 	__POINTD1FN _0x1A0000,637
 	CALL SUBOPT_0x3
-; 000D 0279             sprintf(valStr,"0.00");                 //val = 0;
+; 000D 027A             sprintf(valStr,"0.00");                 //val = 0;
 	CALL SUBOPT_0x56
 	CALL SUBOPT_0x241
-; 000D 027A         }
+; 000D 027B         }
 _0x1A0086:
-; 000D 027B         /*
-; 000D 027C         if(epIsPointSet2[ch] == 1){ val = (epTempRef2[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef2[ch]);}
-; 000D 027D         else{                       val = 0;        }
-; 000D 027E         */
-; 000D 027F     }
-; 000D 0280     else if(pnt == CALPOINT(3)){
+; 000D 027C         /*
+; 000D 027D         if(epIsPointSet2[ch] == 1){ val = (epTempRef2[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef2[ch]);}
+; 000D 027E         else{                       val = 0;        }
+; 000D 027F         */
+; 000D 0280     }
+; 000D 0281     else if(pnt == CALPOINT(3)){
 	RJMP _0x1A0087
 _0x1A0084:
 	LDD  R26,Y+18
@@ -23408,7 +23409,7 @@ _0x1A0084:
 	LDI  R30,HIGH(0x67)
 	CPC  R27,R30
 	BRNE _0x1A0088
-; 000D 0281         if(epIsPointSet3[ch] == 1){
+; 000D 0282         if(epIsPointSet3[ch] == 1){
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
 	SUBI R26,LOW(-_epIsPointSet3)
@@ -23416,56 +23417,56 @@ _0x1A0084:
 	CALL __EEPROMRDB
 	CPI  R30,LOW(0x1)
 	BRNE _0x1A0089
-; 000D 0282             valTmp  = epTempRef3[ch];
+; 000D 0283             valTmp  = epTempRef3[ch];
 	LDD  R30,Y+20
 	LDD  R31,Y+20+1
 	CALL SUBOPT_0x222
 	CALL SUBOPT_0xB2
-; 000D 0283             printDebug("<sensorGetCurrentSetPoint> tempRef3 = [%f][%f]\r\n",epTempRef3[ch],valTmp);
+; 000D 0284             printDebug("<sensorGetCurrentSetPoint> tempRef3 = [%f][%f]\r\n",epTempRef3[ch],valTmp);
 	__POINTD1FN _0x1A0000,690
 	CALL SUBOPT_0x23F
 	CALL SUBOPT_0x222
 	CALL SUBOPT_0x57
 	CALL SUBOPT_0x21
-; 000D 0284             ftoa(valTmp,2,valStr);
+; 000D 0285             ftoa(valTmp,2,valStr);
 	CALL SUBOPT_0x240
-; 000D 0285             //val = (epTempRef1[ch] * 100);
-; 000D 0286         }
-; 000D 0287         else{
+; 000D 0286             //val = (epTempRef1[ch] * 100);
+; 000D 0287         }
+; 000D 0288         else{
 	RJMP _0x1A008A
 _0x1A0089:
-; 000D 0288             printDebug("<sensorGetCurrentSetPoint> tempRef3 not set [0.00]\r\n");
+; 000D 0289             printDebug("<sensorGetCurrentSetPoint> tempRef3 not set [0.00]\r\n");
 	__POINTD1FN _0x1A0000,739
 	CALL SUBOPT_0x3
-; 000D 0289             sprintf(valStr,"0.00");                 //val = 0;
+; 000D 028A             sprintf(valStr,"0.00");                 //val = 0;
 	CALL SUBOPT_0x56
 	CALL SUBOPT_0x241
-; 000D 028A         }
+; 000D 028B         }
 _0x1A008A:
-; 000D 028B         /*
-; 000D 028C         if(epIsPointSet3[ch] == 1){ val = (epTempRef3[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef3[ch]);}
-; 000D 028D         else{                       val = 0;        }
-; 000D 028E         */
-; 000D 028F     }
-; 000D 0290     else{
+; 000D 028C         /*
+; 000D 028D         if(epIsPointSet3[ch] == 1){ val = (epTempRef3[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef3[ch]);}
+; 000D 028E         else{                       val = 0;        }
+; 000D 028F         */
+; 000D 0290     }
+; 000D 0291     else{
 	RJMP _0x1A008B
 _0x1A0088:
-; 000D 0291         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
+; 000D 0292         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
 	__POINTD1FN _0x1A0000,792
 	CALL __PUTPARD1
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	CALL SUBOPT_0xE9
-; 000D 0292         return -1;
+; 000D 0293         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0066
-; 000D 0293     }
+; 000D 0294     }
 _0x1A008B:
 _0x1A0087:
 _0x1A0083:
-; 000D 0294     //printDebug("<sensorGetCurrentSetPoint> read val = [%d]\r\n",val);
-; 000D 0295     printDebug("<sensorGetCurrentSetPoint> read val(%d) = [%s]\r\n",strlen(valStr),valStr);
+; 000D 0295     //printDebug("<sensorGetCurrentSetPoint> read val = [%d]\r\n",val);
+; 000D 0296     printDebug("<sensorGetCurrentSetPoint> read val(%d) = [%s]\r\n",strlen(valStr),valStr);
 	__POINTD1FN _0x1A0000,848
 	CALL __PUTPARD1
 	MOVW R26,R28
@@ -23475,24 +23476,24 @@ _0x1A0083:
 	MOVW R30,R28
 	ADIW R30,14
 	CALL SUBOPT_0x13E
-; 000D 0296 
-; 000D 0297     if(valStr[0] == '-'){
+; 000D 0297 
+; 000D 0298     if(valStr[0] == '-'){
 	LDD  R26,Y+6
 	CPI  R26,LOW(0x2D)
 	BREQ PC+3
 	JMP _0x1A008C
-; 000D 0298         buf[0] = 1;
+; 000D 0299         buf[0] = 1;
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
 	LDI  R30,LOW(1)
 	ST   X,R30
-; 000D 0299         if(strlen(valStr) == 7){
+; 000D 029A         if(strlen(valStr) == 7){
 	CALL SUBOPT_0x242
 	CPI  R30,LOW(0x7)
 	LDI  R26,HIGH(0x7)
 	CPC  R31,R26
 	BRNE _0x1A008D
-; 000D 029A             buf[1]  = valStr[1] - 0x30;     buf[2]  = valStr[2] - 0x30;     buf[3]  = valStr[3] - 0x30;
+; 000D 029B             buf[1]  = valStr[1] - 0x30;     buf[2]  = valStr[2] - 0x30;     buf[3]  = valStr[3] - 0x30;
 	LDD  R30,Y+7
 	SUBI R30,LOW(48)
 	__PUTB1SNS 16,1
@@ -23500,13 +23501,13 @@ _0x1A0083:
 	CALL SUBOPT_0x243
 	LDD  R30,Y+9
 	CALL SUBOPT_0x244
-; 000D 029B             buf[4]  = valStr[5] - 0x30;     buf[5]  = valStr[6] - 0x30;
+; 000D 029C             buf[4]  = valStr[5] - 0x30;     buf[5]  = valStr[6] - 0x30;
 	LDD  R30,Y+11
 	CALL SUBOPT_0x245
 	LDD  R30,Y+12
 	CALL SUBOPT_0x246
-; 000D 029C         }
-; 000D 029D         else if(strlen(valStr) == 6){
+; 000D 029D         }
+; 000D 029E         else if(strlen(valStr) == 6){
 	RJMP _0x1A008E
 _0x1A008D:
 	CALL SUBOPT_0x242
@@ -23514,19 +23515,19 @@ _0x1A008D:
 	LDI  R26,HIGH(0x6)
 	CPC  R31,R26
 	BRNE _0x1A008F
-; 000D 029E             buf[1]  = 0;                    buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
+; 000D 029F             buf[1]  = 0;                    buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
 	CALL SUBOPT_0x247
 	LDD  R30,Y+7
 	CALL SUBOPT_0x243
 	LDD  R30,Y+8
 	CALL SUBOPT_0x244
-; 000D 029F             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
+; 000D 02A0             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
 	LDD  R30,Y+10
 	CALL SUBOPT_0x245
 	LDD  R30,Y+11
 	CALL SUBOPT_0x246
-; 000D 02A0         }
-; 000D 02A1         else if(strlen(valStr) == 5){
+; 000D 02A1         }
+; 000D 02A2         else if(strlen(valStr) == 5){
 	RJMP _0x1A0090
 _0x1A008F:
 	CALL SUBOPT_0x242
@@ -23534,7 +23535,7 @@ _0x1A008F:
 	LDI  R26,HIGH(0x5)
 	CPC  R31,R26
 	BRNE _0x1A0091
-; 000D 02A2             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[1] - 0x30;
+; 000D 02A3             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[1] - 0x30;
 	CALL SUBOPT_0x247
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
@@ -23543,42 +23544,42 @@ _0x1A008F:
 	ST   X,R30
 	LDD  R30,Y+7
 	CALL SUBOPT_0x244
-; 000D 02A3             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
+; 000D 02A4             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
 	LDD  R30,Y+9
 	CALL SUBOPT_0x245
 	LDD  R30,Y+10
 	CALL SUBOPT_0x246
-; 000D 02A4         }
-; 000D 02A5         else{
+; 000D 02A5         }
+; 000D 02A6         else{
 	RJMP _0x1A0092
 _0x1A0091:
-; 000D 02A6             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
+; 000D 02A7             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
 	CALL SUBOPT_0x248
 	CALL SUBOPT_0x12
-; 000D 02A7             return -1;
+; 000D 02A8             return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0066
-; 000D 02A8         }
+; 000D 02A9         }
 _0x1A0092:
 _0x1A0090:
 _0x1A008E:
-; 000D 02A9     }
-; 000D 02AA     else{
+; 000D 02AA     }
+; 000D 02AB     else{
 	RJMP _0x1A0093
 _0x1A008C:
-; 000D 02AB         buf[0] = 0;
+; 000D 02AC         buf[0] = 0;
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
 	LDI  R30,LOW(0)
 	ST   X,R30
-; 000D 02AC         if(strlen(valStr) == 6){
+; 000D 02AD         if(strlen(valStr) == 6){
 	CALL SUBOPT_0x242
 	CPI  R30,LOW(0x6)
 	LDI  R26,HIGH(0x6)
 	CPC  R31,R26
 	BRNE _0x1A0094
-; 000D 02AD             buf[1]  = valStr[0] - 0x30;     buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
+; 000D 02AE             buf[1]  = valStr[0] - 0x30;     buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
 	LDD  R30,Y+6
 	SUBI R30,LOW(48)
 	__PUTB1SNS 16,1
@@ -23586,13 +23587,13 @@ _0x1A008C:
 	CALL SUBOPT_0x243
 	LDD  R30,Y+8
 	CALL SUBOPT_0x244
-; 000D 02AE             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
+; 000D 02AF             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
 	LDD  R30,Y+10
 	CALL SUBOPT_0x245
 	LDD  R30,Y+11
 	CALL SUBOPT_0x246
-; 000D 02AF         }
-; 000D 02B0         else if(strlen(valStr) == 5){
+; 000D 02B0         }
+; 000D 02B1         else if(strlen(valStr) == 5){
 	RJMP _0x1A0095
 _0x1A0094:
 	CALL SUBOPT_0x242
@@ -23600,19 +23601,19 @@ _0x1A0094:
 	LDI  R26,HIGH(0x5)
 	CPC  R31,R26
 	BRNE _0x1A0096
-; 000D 02B1             buf[1]  = 0;                    buf[2]  = valStr[0] - 0x30;     buf[3]  = valStr[1] - 0x30;
+; 000D 02B2             buf[1]  = 0;                    buf[2]  = valStr[0] - 0x30;     buf[3]  = valStr[1] - 0x30;
 	CALL SUBOPT_0x247
 	LDD  R30,Y+6
 	CALL SUBOPT_0x243
 	LDD  R30,Y+7
 	CALL SUBOPT_0x244
-; 000D 02B2             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
+; 000D 02B3             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
 	LDD  R30,Y+9
 	CALL SUBOPT_0x245
 	LDD  R30,Y+10
 	CALL SUBOPT_0x246
-; 000D 02B3         }
-; 000D 02B4         else if(strlen(valStr) == 4){
+; 000D 02B4         }
+; 000D 02B5         else if(strlen(valStr) == 4){
 	RJMP _0x1A0097
 _0x1A0096:
 	CALL SUBOPT_0x242
@@ -23620,7 +23621,7 @@ _0x1A0096:
 	LDI  R26,HIGH(0x4)
 	CPC  R31,R26
 	BRNE _0x1A0098
-; 000D 02B5             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[0] - 0x30;
+; 000D 02B6             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[0] - 0x30;
 	CALL SUBOPT_0x247
 	LDD  R26,Y+16
 	LDD  R27,Y+16+1
@@ -23629,53 +23630,53 @@ _0x1A0096:
 	ST   X,R30
 	LDD  R30,Y+6
 	CALL SUBOPT_0x244
-; 000D 02B6             buf[4]  = valStr[2] - 0x30;     buf[5]  = valStr[3] - 0x30;
+; 000D 02B7             buf[4]  = valStr[2] - 0x30;     buf[5]  = valStr[3] - 0x30;
 	LDD  R30,Y+8
 	CALL SUBOPT_0x245
 	LDD  R30,Y+9
 	CALL SUBOPT_0x246
-; 000D 02B7         }
-; 000D 02B8         else{
+; 000D 02B8         }
+; 000D 02B9         else{
 	RJMP _0x1A0099
 _0x1A0098:
-; 000D 02B9             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
+; 000D 02BA             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
 	CALL SUBOPT_0x248
 	CALL SUBOPT_0x12
-; 000D 02BA             return -1;
+; 000D 02BB             return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0066
-; 000D 02BB         }
+; 000D 02BC         }
 _0x1A0099:
 _0x1A0097:
 _0x1A0095:
-; 000D 02BC     }
+; 000D 02BD     }
 _0x1A0093:
-; 000D 02BD 
-; 000D 02BE     printDebug("<sensorGetCurrentSetPoint> buf read");
+; 000D 02BE 
+; 000D 02BF     printDebug("<sensorGetCurrentSetPoint> buf read");
 	__POINTD1FN _0x1A0000,955
 	CALL SUBOPT_0x3
-; 000D 02BF     for(i=0;i<6;i++){
+; 000D 02C0     for(i=0;i<6;i++){
 	__GETWRN 16,17,0
 _0x1A009B:
 	__CPWRN 16,17,6
 	BRGE _0x1A009C
-; 000D 02C0         printDebug("[%d]",buf[i]);
+; 000D 02C1         printDebug("[%d]",buf[i]);
 	__POINTD1FN _0x1A0000,991
 	CALL __PUTPARD1
 	MOVW R30,R16
 	LDD  R26,Y+20
 	LDD  R27,Y+20+1
 	CALL SUBOPT_0x182
-; 000D 02C1     }
+; 000D 02C2     }
 	__ADDWRN 16,17,1
 	RJMP _0x1A009B
 _0x1A009C:
-; 000D 02C2     printDebug("\r\n");
+; 000D 02C3     printDebug("\r\n");
 	__POINTD1FN _0x1A0000,49
 	CALL SUBOPT_0x3
-; 000D 02C3 
-; 000D 02C4     return 0;
+; 000D 02C4 
+; 000D 02C5     return 0;
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
 _0x20E0066:
@@ -23683,19 +23684,19 @@ _0x20E0066:
 	LDD  R16,Y+0
 	ADIW R28,22
 	RET
-; 000D 02C5 }
+; 000D 02C6 }
 ;/*============================================================*/
 ;int sensorSetCurrentSetPoint(int ch,int pnt,unsigned char *buf)
-; 000D 02C8 {
+; 000D 02C9 {
 _sensorSetCurrentSetPoint:
-; 000D 02C9     float   val=0;
-; 000D 02CA     long viADCbuffer = 0;
-; 000D 02CB     int i = 0;
-; 000D 02CC     float viVoltUseCaluate = 0.0;
-; 000D 02CD     float viRiaseUpVoltValue = 0.0;
-; 000D 02CE     const float viZeroSet = 1.667;
-; 000D 02CF 
-; 000D 02D0     if(operating_config.sensorEnable[ch] != 0x01){
+; 000D 02CA     float   val=0;
+; 000D 02CB     long viADCbuffer = 0;
+; 000D 02CC     int i = 0;
+; 000D 02CD     float viVoltUseCaluate = 0.0;
+; 000D 02CE     float viRiaseUpVoltValue = 0.0;
+; 000D 02CF     const float viZeroSet = 1.667;
+; 000D 02D0 
+; 000D 02D1     if(operating_config.sensorEnable[ch] != 0x01){
 	CALL SUBOPT_0x249
 	LDI  R30,LOW(_0x1A009D*2)
 	LDI  R31,HIGH(_0x1A009D*2)
@@ -23716,25 +23717,25 @@ _sensorSetCurrentSetPoint:
 	LDD  R27,Y+26+1
 	CALL SUBOPT_0x228
 	BREQ _0x1A009E
-; 000D 02D1         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d is disable\r\n",ch+1);
+; 000D 02D2         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d is disable\r\n",ch+1);
 	__POINTD1FN _0x1A0000,996
 	CALL SUBOPT_0x24A
 	ADIW R30,1
 	CALL SUBOPT_0xE9
-; 000D 02D2         return -1;
+; 000D 02D3         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0065
-; 000D 02D3     }
-; 000D 02D4 
-; 000D 02D5     if(sensor[ch].status != SENS_NORMAL){
+; 000D 02D4     }
+; 000D 02D5 
+; 000D 02D6     if(sensor[ch].status != SENS_NORMAL){
 _0x1A009E:
 	LDD  R26,Y+26
 	LDD  R27,Y+26+1
 	CALL SUBOPT_0x229
 	CPI  R30,0
 	BREQ _0x1A009F
-; 000D 02D6         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d error(0x%02X)\r\n",ch+1,sensor[ch].status);
+; 000D 02D7         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d error(0x%02X)\r\n",ch+1,sensor[ch].status);
 	__POINTD1FN _0x1A0000,1056
 	CALL SUBOPT_0x24A
 	CALL SUBOPT_0x200
@@ -23742,15 +23743,15 @@ _0x1A009E:
 	LDD  R27,Y+34+1
 	CALL SUBOPT_0x229
 	CALL SUBOPT_0x22A
-; 000D 02D7         return -1;
+; 000D 02D8         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0065
-; 000D 02D8     }
-; 000D 02D9 
-; 000D 02DA     printDebug("<sensorSetCurrentSetPoint> buf: [%d]/[%d][%d][%d][%d][%d]\r\n",
+; 000D 02D9     }
+; 000D 02DA 
+; 000D 02DB     printDebug("<sensorSetCurrentSetPoint> buf: [%d]/[%d][%d][%d][%d][%d]\r\n",
 _0x1A009F:
-; 000D 02DB                                         buf[0],buf[1],buf[2],buf[3],buf[4],buf[5]);
+; 000D 02DC                                         buf[0],buf[1],buf[2],buf[3],buf[4],buf[5]);
 	__POINTD1FN _0x1A0000,1119
 	CALL __PUTPARD1
 	LDD  R26,Y+26
@@ -23780,33 +23781,33 @@ _0x1A009F:
 	LDI  R24,24
 	CALL _printDebug
 	ADIW R28,28
-; 000D 02DC 
-; 000D 02DD     val =  (float) (0.0);
+; 000D 02DD 
+; 000D 02DE     val =  (float) (0.0);
 	LDI  R30,LOW(0)
 	__CLRD1S 18
-; 000D 02DE     val += (float) (buf[1] * 100);
+; 000D 02DF     val += (float) (buf[1] * 100);
 	LDD  R30,Y+22
 	LDD  R31,Y+22+1
 	LDD  R30,Z+1
 	LDI  R26,LOW(100)
 	CALL SUBOPT_0x24B
-; 000D 02DF     val += (float) (buf[2] * 10);
+; 000D 02E0     val += (float) (buf[2] * 10);
 	LDD  R30,Z+2
 	LDI  R26,LOW(10)
 	CALL SUBOPT_0x24B
-; 000D 02E0     val += (float) (buf[3]);
+; 000D 02E1     val += (float) (buf[3]);
 	LDD  R30,Z+3
 	CLR  R31
 	CLR  R22
 	CLR  R23
 	CALL __CDF1
 	CALL SUBOPT_0x24C
-; 000D 02E1     val += (float) (buf[4] * 0.1);
+; 000D 02E2     val += (float) (buf[4] * 0.1);
 	LDD  R30,Z+4
 	CALL SUBOPT_0x24D
 	CALL SUBOPT_0x9E
 	CALL SUBOPT_0x24C
-; 000D 02E2     val += (float) (buf[5] * 0.01);
+; 000D 02E3     val += (float) (buf[5] * 0.01);
 	LDD  R30,Z+5
 	CALL SUBOPT_0x24D
 	__GETD2N 0x3C23D70A
@@ -23814,7 +23815,7 @@ _0x1A009F:
 	CALL SUBOPT_0x24E
 	CALL __ADDF12
 	CALL SUBOPT_0x24F
-; 000D 02E3     if(buf[0] == 1){    val *= (float) (-1.0);  }
+; 000D 02E4     if(buf[0] == 1){    val *= (float) (-1.0);  }
 	LDD  R26,Y+22
 	LDD  R27,Y+22+1
 	LD   R26,X
@@ -23824,8 +23825,8 @@ _0x1A009F:
 	__GETD1N 0xBF800000
 	CALL __MULF12
 	CALL SUBOPT_0x24F
-; 000D 02E4 
-; 000D 02E5     printDebug("<sensorSetCurrentSetPoint> sensor %1d, point %1d, set to [%f]",ch+1,pnt,val);
+; 000D 02E5 
+; 000D 02E6     printDebug("<sensorSetCurrentSetPoint> sensor %1d, point %1d, set to [%f]",ch+1,pnt,val);
 _0x1A00A0:
 	__POINTD1FN _0x1A0000,1179
 	CALL SUBOPT_0x24A
@@ -23836,33 +23837,33 @@ _0x1A00A0:
 	CALL SUBOPT_0xBB
 	CALL __PUTPARD1
 	CALL SUBOPT_0x66
-; 000D 02E6 
-; 000D 02E7     if(pnt == CALPOINT(1)){
+; 000D 02E7 
+; 000D 02E8     if(pnt == CALPOINT(1)){
 	LDD  R26,Y+24
 	LDD  R27,Y+24+1
 	CPI  R26,LOW(0x65)
 	LDI  R30,HIGH(0x65)
 	CPC  R27,R30
 	BRNE _0x1A00A1
-; 000D 02E8         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+; 000D 02E9         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 	CALL SUBOPT_0x2E
 	BREQ _0x1A00A3
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
 	BRNE _0x1A00A2
 _0x1A00A3:
-; 000D 02E9 //           viADCbuffer = 0;
-; 000D 02EA //             for(i=0;i<30;i++){
-; 000D 02EB //                viADCbuffer += read_adc(8+ch);
-; 000D 02EC //             }
-; 000D 02ED //
-; 000D 02EE //             epADCRef1[ch] = iAD595ADCToTemp(viADCbuffer,30);
-; 000D 02EF 
-; 000D 02F0              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+; 000D 02EA //           viADCbuffer = 0;
+; 000D 02EB //             for(i=0;i<30;i++){
+; 000D 02EC //                viADCbuffer += read_adc(8+ch);
+; 000D 02ED //             }
+; 000D 02EE //
+; 000D 02EF //             epADCRef1[ch] = iAD595ADCToTemp(viADCbuffer,30);
+; 000D 02F0 
+; 000D 02F1              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
 	CALL SUBOPT_0x251
-; 000D 02F1              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
+; 000D 02F2              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
 	CALL SUBOPT_0x252
-; 000D 02F2              epADCRef1[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
+; 000D 02F3              epADCRef1[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
 	CALL SUBOPT_0x253
 	PUSH R31
 	PUSH R30
@@ -23870,9 +23871,9 @@ _0x1A00A3:
 	POP  R26
 	POP  R27
 	RJMP _0x1A00BF
-; 000D 02F3         }else{
+; 000D 02F4         }else{
 _0x1A00A2:
-; 000D 02F4            epADCRef1[ch]       = adcData[ch];
+; 000D 02F5            epADCRef1[ch]       = adcData[ch];
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	CALL SUBOPT_0x253
@@ -23881,33 +23882,33 @@ _0x1A00A2:
 	MOVW R26,R0
 _0x1A00BF:
 	CALL __EEPROMWRD
-; 000D 02F5         }
-; 000D 02F6 
+; 000D 02F6         }
 ; 000D 02F7 
 ; 000D 02F8 
-; 000D 02F9         epTempRef1[ch]      = val;
+; 000D 02F9 
+; 000D 02FA         epTempRef1[ch]      = val;
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	CALL SUBOPT_0x23B
 	CALL SUBOPT_0x256
-; 000D 02FA         //epADCRef1[ch]       = adcData[ch];
-; 000D 02FB         epIsPointSet1[ch]   = 1;
+; 000D 02FB         //epADCRef1[ch]       = adcData[ch];
+; 000D 02FC         epIsPointSet1[ch]   = 1;
 	SUBI R26,LOW(-_epIsPointSet1)
 	SBCI R27,HIGH(-_epIsPointSet1)
 	LDI  R30,LOW(1)
 	CALL SUBOPT_0x257
-; 000D 02FC         epIsPointSet2[ch]   = 0;                        // -- reset cal_point 2 -- //
+; 000D 02FD         epIsPointSet2[ch]   = 0;                        // -- reset cal_point 2 -- //
 	SUBI R26,LOW(-_epIsPointSet2)
 	SBCI R27,HIGH(-_epIsPointSet2)
 	LDI  R30,LOW(0)
 	CALL SUBOPT_0x257
-; 000D 02FD         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
+; 000D 02FE         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
 	SUBI R26,LOW(-_epIsPointSet3)
 	SBCI R27,HIGH(-_epIsPointSet3)
 	LDI  R30,LOW(0)
 	CALL __EEPROMWRB
-; 000D 02FE     }
-; 000D 02FF     else if(pnt == CALPOINT(2)){
+; 000D 02FF     }
+; 000D 0300     else if(pnt == CALPOINT(2)){
 	RJMP _0x1A00A6
 _0x1A00A1:
 	LDD  R26,Y+24
@@ -23916,26 +23917,26 @@ _0x1A00A1:
 	LDI  R30,HIGH(0x66)
 	CPC  R27,R30
 	BRNE _0x1A00A7
-; 000D 0300 
-; 000D 0301         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+; 000D 0301 
+; 000D 0302         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 	CALL SUBOPT_0x2E
 	BREQ _0x1A00A9
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
 	BRNE _0x1A00A8
 _0x1A00A9:
-; 000D 0302 //           viADCbuffer = 0;
-; 000D 0303 //             for(i=0;i<30;i++){
-; 000D 0304 //                viADCbuffer += read_adc(8+ch);
-; 000D 0305 //             }
-; 000D 0306 //
-; 000D 0307 //             epADCRef2[ch] = iAD595ADCToTemp(viADCbuffer,30);
-; 000D 0308 
-; 000D 0309              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+; 000D 0303 //           viADCbuffer = 0;
+; 000D 0304 //             for(i=0;i<30;i++){
+; 000D 0305 //                viADCbuffer += read_adc(8+ch);
+; 000D 0306 //             }
+; 000D 0307 //
+; 000D 0308 //             epADCRef2[ch] = iAD595ADCToTemp(viADCbuffer,30);
+; 000D 0309 
+; 000D 030A              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
 	CALL SUBOPT_0x251
-; 000D 030A              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
+; 000D 030B              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
 	CALL SUBOPT_0x252
-; 000D 030B              epADCRef2[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
+; 000D 030C              epADCRef2[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
 	CALL SUBOPT_0x239
 	ADD  R30,R26
 	ADC  R31,R27
@@ -23945,9 +23946,9 @@ _0x1A00A9:
 	POP  R26
 	POP  R27
 	RJMP _0x1A00C0
-; 000D 030C         }else{
+; 000D 030D         }else{
 _0x1A00A8:
-; 000D 030D            epADCRef2[ch]       = adcData[ch];
+; 000D 030E            epADCRef2[ch]       = adcData[ch];
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	CALL SUBOPT_0x239
@@ -23958,26 +23959,26 @@ _0x1A00A8:
 	MOVW R26,R0
 _0x1A00C0:
 	CALL __EEPROMWRD
-; 000D 030E         }
-; 000D 030F 
-; 000D 0310         epTempRef2[ch]      = val;
+; 000D 030F         }
+; 000D 0310 
+; 000D 0311         epTempRef2[ch]      = val;
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	CALL SUBOPT_0x23C
 	CALL SUBOPT_0x256
-; 000D 0311         //epADCRef2[ch]       = adcData[ch];
-; 000D 0312         epIsPointSet2[ch]   = 1;
+; 000D 0312         //epADCRef2[ch]       = adcData[ch];
+; 000D 0313         epIsPointSet2[ch]   = 1;
 	SUBI R26,LOW(-_epIsPointSet2)
 	SBCI R27,HIGH(-_epIsPointSet2)
 	LDI  R30,LOW(1)
 	CALL SUBOPT_0x257
-; 000D 0313         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
+; 000D 0314         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
 	SUBI R26,LOW(-_epIsPointSet3)
 	SBCI R27,HIGH(-_epIsPointSet3)
 	LDI  R30,LOW(0)
 	CALL __EEPROMWRB
-; 000D 0314     }
-; 000D 0315     else if(pnt == CALPOINT(3)){
+; 000D 0315     }
+; 000D 0316     else if(pnt == CALPOINT(3)){
 	RJMP _0x1A00AC
 _0x1A00A7:
 	LDD  R26,Y+24
@@ -23986,25 +23987,25 @@ _0x1A00A7:
 	LDI  R30,HIGH(0x67)
 	CPC  R27,R30
 	BRNE _0x1A00AD
-; 000D 0316         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+; 000D 0317         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 	CALL SUBOPT_0x2E
 	BREQ _0x1A00AF
 	CALL SUBOPT_0x2E
 	CPI  R30,LOW(0x3)
 	BRNE _0x1A00AE
 _0x1A00AF:
-; 000D 0317 //           viADCbuffer = 0;
-; 000D 0318 //             for(i=0;i<30;i++){
-; 000D 0319 //                viADCbuffer += read_adc(8+ch);
-; 000D 031A //             }
-; 000D 031B //
-; 000D 031C //             epADCRef3[ch] = iAD595ADCToTemp(viADCbuffer,30);
-; 000D 031D 
-; 000D 031E              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+; 000D 0318 //           viADCbuffer = 0;
+; 000D 0319 //             for(i=0;i<30;i++){
+; 000D 031A //                viADCbuffer += read_adc(8+ch);
+; 000D 031B //             }
+; 000D 031C //
+; 000D 031D //             epADCRef3[ch] = iAD595ADCToTemp(viADCbuffer,30);
+; 000D 031E 
+; 000D 031F              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
 	CALL SUBOPT_0x251
-; 000D 031F              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
+; 000D 0320              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
 	CALL SUBOPT_0x252
-; 000D 0320              epADCRef3[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
+; 000D 0321              epADCRef3[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
 	CALL SUBOPT_0x258
 	PUSH R31
 	PUSH R30
@@ -24012,9 +24013,9 @@ _0x1A00AF:
 	POP  R26
 	POP  R27
 	RJMP _0x1A00C1
-; 000D 0321         }else{
+; 000D 0322         }else{
 _0x1A00AE:
-; 000D 0322            epADCRef3[ch]       = adcData[ch];
+; 000D 0323            epADCRef3[ch]       = adcData[ch];
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	CALL SUBOPT_0x258
@@ -24023,39 +24024,39 @@ _0x1A00AE:
 	MOVW R26,R0
 _0x1A00C1:
 	CALL __EEPROMWRD
-; 000D 0323         }
-; 000D 0324 
-; 000D 0325         epTempRef3[ch]      = val;
+; 000D 0324         }
+; 000D 0325 
+; 000D 0326         epTempRef3[ch]      = val;
 	LDD  R30,Y+26
 	LDD  R31,Y+26+1
 	LDI  R26,LOW(_epTempRef3)
 	LDI  R27,HIGH(_epTempRef3)
 	CALL __LSLW2
 	CALL SUBOPT_0x256
-; 000D 0326         //epADCRef3[ch]       = adcData[ch];
-; 000D 0327         epIsPointSet3[ch]   = 1;
+; 000D 0327         //epADCRef3[ch]       = adcData[ch];
+; 000D 0328         epIsPointSet3[ch]   = 1;
 	SUBI R26,LOW(-_epIsPointSet3)
 	SBCI R27,HIGH(-_epIsPointSet3)
 	LDI  R30,LOW(1)
 	CALL __EEPROMWRB
-; 000D 0328     }
-; 000D 0329     else{
+; 000D 0329     }
+; 000D 032A     else{
 	RJMP _0x1A00B2
 _0x1A00AD:
-; 000D 032A         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
+; 000D 032B         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
 	__POINTD1FN _0x1A0000,792
 	CALL SUBOPT_0xF1
 	CALL SUBOPT_0xE9
-; 000D 032B         return -1;
+; 000D 032C         return -1;
 	LDI  R30,LOW(65535)
 	LDI  R31,HIGH(65535)
 	RJMP _0x20E0065
-; 000D 032C     }
+; 000D 032D     }
 _0x1A00B2:
 _0x1A00AC:
 _0x1A00A6:
-; 000D 032D 
-; 000D 032E     return 0;
+; 000D 032E 
+; 000D 032F     return 0;
 	LDI  R30,LOW(0)
 	LDI  R31,HIGH(0)
 _0x20E0065:
@@ -24063,7 +24064,7 @@ _0x20E0065:
 	LDD  R16,Y+0
 	ADIW R28,28
 	RET
-; 000D 032F }
+; 000D 0330 }
 ;/*============================================================*/
 ;#include <stdlib.h>
 ;#include <stdio.h>

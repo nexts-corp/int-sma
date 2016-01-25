@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.30  C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.asm Mon Dec 14 10:35:08 2015
+AVRASM ver. 2.1.30  C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.asm Mon Jan 25 17:16:04 2016
 
 C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.asm(1110): warning: Register r5 already defined by the .DEF directive
 C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.asm(1111): warning: Register r4 already defined by the .DEF directive
@@ -36976,13 +36976,14 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
                  ; 000D 01D4     }
                  _0x1A0049:
                  ; 000D 01D5     //printDebug("end read sensor.\r\n");
-                 ; 000D 01D6     sensor->status  = SENS_NORMAL;
+                 ; 000D 01D6     //printDebug("Temp CH[0]= %f C\r\n",sensor->value);
+                 ; 000D 01D7     sensor->status  = SENS_NORMAL;
 006f17 940e cd63 	CALL SUBOPT_0x211
 006f19 9614      	ADIW R26,4
 006f1a e0e0      	LDI  R30,LOW(0)
 006f1b 93ec      	ST   X,R30
-                 ; 000D 01D7 
-                 ; 000D 01D8     return 0;
+                 ; 000D 01D8 
+                 ; 000D 01D9     return 0;
 006f1c e0e0      	LDI  R30,LOW(0)
 006f1d e0f0      	LDI  R31,HIGH(0)
                  _0x20E006A:
@@ -36990,38 +36991,38 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 006f20 96ef      	ADIW R28,63
 006f21 96a1      	ADIW R28,33
 006f22 9508      	RET
-                 ; 000D 01D9 }
+                 ; 000D 01DA }
                  ;/*============================================================*/
                  ;void getInterval(float adcRaw, float *x1, float *x2, float *y1, float *y2) {
-                 ; 000D 01DB void getInterval(float adcRaw, float *x1, float *x2, float *y1, float *y2) {
-                 ; 000D 01DC 
-                 ; 000D 01DD     int i = 0;
-                 ; 000D 01DE 
-                 ; 000D 01DF     for(i = 0; i < 15; i++) {
+                 ; 000D 01DC void getInterval(float adcRaw, float *x1, float *x2, float *y1, float *y2) {
+                 ; 000D 01DD 
+                 ; 000D 01DE     int i = 0;
+                 ; 000D 01DF 
+                 ; 000D 01E0     for(i = 0; i < 15; i++) {
                  ;	adcRaw -> Y+10
                  ;	*x1 -> Y+8
                  ;	*x2 -> Y+6
                  ;	*y1 -> Y+4
                  ;	*y2 -> Y+2
                  ;	i -> R16,R17
-                 ; 000D 01E0         if(adcRaw <= adcTable[i]) {
-                 ; 000D 01E1             *x1 = adcTable[i-1];
-                 ; 000D 01E2             *y1 = tempTable[i-1];
-                 ; 000D 01E3             *x2 = adcTable[i];
-                 ; 000D 01E4             *y2 = tempTable[i];
-                 ; 000D 01E5             break;
-                 ; 000D 01E6         }
-                 ; 000D 01E7     }
-                 ; 000D 01E8 
-                 ; 000D 01E9     return;
-                 ; 000D 01EA }
+                 ; 000D 01E1         if(adcRaw <= adcTable[i]) {
+                 ; 000D 01E2             *x1 = adcTable[i-1];
+                 ; 000D 01E3             *y1 = tempTable[i-1];
+                 ; 000D 01E4             *x2 = adcTable[i];
+                 ; 000D 01E5             *y2 = tempTable[i];
+                 ; 000D 01E6             break;
+                 ; 000D 01E7         }
+                 ; 000D 01E8     }
+                 ; 000D 01E9 
+                 ; 000D 01EA     return;
+                 ; 000D 01EB }
                  ;/*============================================================*/
                  ;int sensorCalibrate1(int p1, int p2)
-                 ; 000D 01ED {
+                 ; 000D 01EE {
                  _sensorCalibrate1:
-                 ; 000D 01EE     float p2_raw;
-                 ; 000D 01EF 
-                 ; 000D 01F0     if(operating_config.sensorEnable[p1] != 0x01){
+                 ; 000D 01EF     float p2_raw;
+                 ; 000D 01F0 
+                 ; 000D 01F1     if(operating_config.sensorEnable[p1] != 0x01){
 006f23 93ba      	ST   -Y,R27
 006f24 93aa      	ST   -Y,R26
 006f25 9724      	SBIW R28,4
@@ -37036,7 +37037,7 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 006f2a 91ac      	LD   R26,X
 006f2b 30a1      	CPI  R26,LOW(0x1)
 006f2c f061      	BREQ _0x1A006A
-                 ; 000D 01F1         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p1+1);
+                 ; 000D 01F2         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p1+1);
                 +
 006f2d e0ea     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 94 ) )
 006f2e e4f5     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 94 ) )
@@ -37046,12 +37047,12 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 006f31 940e c7b4 	CALL SUBOPT_0x128
 006f33 9631      	ADIW R30,1
 006f34 940e c64a 	CALL SUBOPT_0xE9
-                 ; 000D 01F2         return -1;
+                 ; 000D 01F3         return -1;
 006f36 efef      	LDI  R30,LOW(65535)
 006f37 efff      	LDI  R31,HIGH(65535)
 006f38 c0b6      	RJMP _0x20E0069
-                 ; 000D 01F3     }
-                 ; 000D 01F4     if(operating_config.sensorEnable[p2] != 0x01){
+                 ; 000D 01F4     }
+                 ; 000D 01F5     if(operating_config.sensorEnable[p2] != 0x01){
                  _0x1A006A:
                 +
 006f39 ebe9     +LDI R30 , LOW ( _operating_config + ( 3 ) )
@@ -37061,7 +37062,7 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 006f3c 81bd      	LDD  R27,Y+4+1
 006f3d 940e ce20 	CALL SUBOPT_0x228
 006f3f f061      	BREQ _0x1A006B
-                 ; 000D 01F5         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p2+1);
+                 ; 000D 01F6         printDebug("<sensorCalibrate1> ABORT: sensor ch %d is disable\r\n",p2+1);
                 +
 006f40 e0ea     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 94 ) )
 006f41 e4f5     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 94 ) )
@@ -37071,20 +37072,20 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 006f44 940e cbfa 	CALL SUBOPT_0x1D9
 006f46 9631      	ADIW R30,1
 006f47 940e c64a 	CALL SUBOPT_0xE9
-                 ; 000D 01F6         return -1;
+                 ; 000D 01F7         return -1;
 006f49 efef      	LDI  R30,LOW(65535)
 006f4a efff      	LDI  R31,HIGH(65535)
 006f4b c0a3      	RJMP _0x20E0069
-                 ; 000D 01F7     }
-                 ; 000D 01F8 
-                 ; 000D 01F9     if(sensor[p1].status != SENS_NORMAL){
+                 ; 000D 01F8     }
+                 ; 000D 01F9 
+                 ; 000D 01FA     if(sensor[p1].status != SENS_NORMAL){
                  _0x1A006B:
 006f4c 81ae      	LDD  R26,Y+6
 006f4d 81bf      	LDD  R27,Y+6+1
 006f4e 940e ce25 	CALL SUBOPT_0x229
 006f50 30e0      	CPI  R30,0
 006f51 f089      	BREQ _0x1A006C
-                 ; 000D 01FA         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p1+1,sensor[p1].status);
+                 ; 000D 01FB         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p1+1,sensor[p1].status);
                 +
 006f52 e3ee     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 146 ) )
 006f53 e4f5     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 146 ) )
@@ -37097,19 +37098,19 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 006f5b 85bf      	LDD  R27,Y+14+1
 006f5c 940e ce25 	CALL SUBOPT_0x229
 006f5e 940e ce2c 	CALL SUBOPT_0x22A
-                 ; 000D 01FB         return -1;
+                 ; 000D 01FC         return -1;
 006f60 efef      	LDI  R30,LOW(65535)
 006f61 efff      	LDI  R31,HIGH(65535)
 006f62 c08c      	RJMP _0x20E0069
-                 ; 000D 01FC     }
-                 ; 000D 01FD     if(sensor[p2].status != SENS_NORMAL){
+                 ; 000D 01FD     }
+                 ; 000D 01FE     if(sensor[p2].status != SENS_NORMAL){
                  _0x1A006C:
 006f63 81ac      	LDD  R26,Y+4
 006f64 81bd      	LDD  R27,Y+4+1
 006f65 940e ce25 	CALL SUBOPT_0x229
 006f67 30e0      	CPI  R30,0
 006f68 f089      	BREQ _0x1A006D
-                 ; 000D 01FE         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p2+1,sensor[p2].status);
+                 ; 000D 01FF         printDebug("<sensorCalibrate1> ABORT: sensor ch %d error(0x%02X)\r\n",p2+1,sensor[p2].status);
                 +
 006f69 e3ee     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 146 ) )
 006f6a e4f5     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 146 ) )
@@ -37122,13 +37123,13 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 006f72 85bd      	LDD  R27,Y+12+1
 006f73 940e ce25 	CALL SUBOPT_0x229
 006f75 940e ce2c 	CALL SUBOPT_0x22A
-                 ; 000D 01FF         return -1;
+                 ; 000D 0200         return -1;
 006f77 efef      	LDI  R30,LOW(65535)
 006f78 efff      	LDI  R31,HIGH(65535)
 006f79 c075      	RJMP _0x20E0069
-                 ; 000D 0200     }
-                 ; 000D 0201 
-                 ; 000D 0202     epCalType[p2]   = CAL_SELFCOMPARE;
+                 ; 000D 0201     }
+                 ; 000D 0202 
+                 ; 000D 0203     epCalType[p2]   = CAL_SELFCOMPARE;
                  _0x1A006D:
 006f7a 81ac      	LDD  R26,Y+4
 006f7b 81bd      	LDD  R27,Y+4+1
@@ -37136,15 +37137,15 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 006f7d 4fb9      	SBCI R27,HIGH(-_epCalType)
 006f7e e0e1      	LDI  R30,LOW(1)
 006f7f 940e e0a3 	CALL __EEPROMWRB
-                 ; 000D 0203 
-                 ; 000D 0204     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+                 ; 000D 0204 
+                 ; 000D 0205     if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 006f81 940e c172 	CALL SUBOPT_0x2E
 006f83 f021      	BREQ _0x1A006F
 006f84 940e c172 	CALL SUBOPT_0x2E
 006f86 30e3      	CPI  R30,LOW(0x3)
 006f87 f499      	BRNE _0x1A006E
                  _0x1A006F:
-                 ; 000D 0205         p2_raw          = (ADC_CONV_FAC*100 * adcData[p2]);
+                 ; 000D 0206         p2_raw          = (ADC_CONV_FAC*100 * adcData[p2]);
 006f88 940e c190 	CALL SUBOPT_0x32
 006f8a 940e c19d 	CALL SUBOPT_0x33
 006f8c 937f      	PUSH R23
@@ -37159,25 +37160,25 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 006f97 919f      	POP  R25
 006f98 940e ddfc 	CALL __MULF12
 006f9a c033      	RJMP _0x1A00BC
-                 ; 000D 0206     }
-                 ; 000D 0207     else if(TEMP_SEL == TEMP_TMEC){
+                 ; 000D 0207     }
+                 ; 000D 0208     else if(TEMP_SEL == TEMP_TMEC){
                  _0x1A006E:
 006f9b 940e c172 	CALL SUBOPT_0x2E
 006f9d 30e1      	CPI  R30,LOW(0x1)
 006f9e f439      	BRNE _0x1A0072
-                 ; 000D 0208         p2_raw          = epTMECTempSlope   * adcData[p2];
+                 ; 000D 0209         p2_raw          = epTMECTempSlope   * adcData[p2];
 006f9f 940e ce31 	CALL SUBOPT_0x22B
 006fa1 940e c0fc 	CALL SUBOPT_0x1B
 006fa3 940e cda0 	CALL SUBOPT_0x219
 006fa5 c028      	RJMP _0x1A00BC
-                 ; 000D 0209     }
-                 ; 000D 020A     else if(TEMP_SEL == TEMP_PT100){
+                 ; 000D 020A     }
+                 ; 000D 020B     else if(TEMP_SEL == TEMP_PT100){
                  _0x1A0072:
 006fa6 940e c172 	CALL SUBOPT_0x2E
 006fa8 30e2      	CPI  R30,LOW(0x2)
 006fa9 f531      	BRNE _0x1A0074
-                 ; 000D 020B         p2_raw          = (epPT100Temp_A    * adcData[p2] * adcData[p2]) +
-                 ; 000D 020C                           (epPT100Temp_B    * adcData[p2]);
+                 ; 000D 020C         p2_raw          = (epPT100Temp_A    * adcData[p2] * adcData[p2]) +
+                 ; 000D 020D                           (epPT100Temp_B    * adcData[p2]);
 006faa 940e ce31 	CALL SUBOPT_0x22B
 006fac 940e c0fc 	CALL SUBOPT_0x1B
 006fae 940e cdb1 	CALL SUBOPT_0x21B
@@ -37206,18 +37207,18 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 006fcc 940e ddac 	CALL __ADDF12
                  _0x1A00BC:
 006fce 940e e051 	CALL __PUTD1S0
-                 ; 000D 020D     }
-                 ; 000D 020E 
-                 ; 000D 020F     epFactor_A[p2]  = 0;
+                 ; 000D 020E     }
+                 ; 000D 020F 
+                 ; 000D 0210     epFactor_A[p2]  = 0;
                  _0x1A0074:
 006fd0 81ec      	LDD  R30,Y+4
 006fd1 81fd      	LDD  R31,Y+4+1
 006fd2 940e ce14 	CALL SUBOPT_0x226
 006fd4 940e ce35 	CALL SUBOPT_0x22C
-                 ; 000D 0210     epFactor_B[p2]  = 0;
+                 ; 000D 0211     epFactor_B[p2]  = 0;
 006fd6 940e ce3e 	CALL SUBOPT_0x22D
 006fd8 940e ce35 	CALL SUBOPT_0x22C
-                 ; 000D 0211     epFactor_C[p2]  = sensor[p1].value - p2_raw;
+                 ; 000D 0212     epFactor_C[p2]  = sensor[p1].value - p2_raw;
 006fda 940e ce45 	CALL SUBOPT_0x22E
 006fdc 93ff      	PUSH R31
 006fdd 93ef      	PUSH R30
@@ -37231,24 +37232,24 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 006fe9 91af      	POP  R26
 006fea 91bf      	POP  R27
 006feb 940e e093 	CALL __EEPROMWRD
-                 ; 000D 0212 
-                 ; 000D 0213     return 0;
+                 ; 000D 0213 
+                 ; 000D 0214     return 0;
 006fed e0e0      	LDI  R30,LOW(0)
 006fee e0f0      	LDI  R31,HIGH(0)
                  _0x20E0069:
 006fef 9628      	ADIW R28,8
 006ff0 9508      	RET
-                 ; 000D 0214 }
+                 ; 000D 0215 }
                  ;/*============================================================*/
                  ;int sensorCalibrate2(int prbId)
-                 ; 000D 0217 {
+                 ; 000D 0218 {
                  _sensorCalibrate2:
-                 ; 000D 0218     float p2_raw;
-                 ; 000D 0219     float tmpA,tmpB,tmpC;
-                 ; 000D 021A     //int i = 0;
-                 ; 000D 021B     //long viADCbuffer = 0;
-                 ; 000D 021C 
-                 ; 000D 021D     if(epIsPointSet1[prbId] == 0){
+                 ; 000D 0219     float p2_raw;
+                 ; 000D 021A     float tmpA,tmpB,tmpC;
+                 ; 000D 021B     //int i = 0;
+                 ; 000D 021C     //long viADCbuffer = 0;
+                 ; 000D 021D 
+                 ; 000D 021E     if(epIsPointSet1[prbId] == 0){
 006ff1 93ba      	ST   -Y,R27
 006ff2 93aa      	ST   -Y,R26
 006ff3 9760      	SBIW R28,16
@@ -37264,7 +37265,7 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 006ff8 940e e087 	CALL __EEPROMRDB
 006ffa 30e0      	CPI  R30,0
 006ffb f461      	BRNE _0x1A0075
-                 ; 000D 021E         printDebug("<sensorCalibrate2> ABORT: sensor ch %d No set point found\r\n",prbId+1);
+                 ; 000D 021F         printDebug("<sensorCalibrate2> ABORT: sensor ch %d No set point found\r\n",prbId+1);
                 +
 006ffc e7e5     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 201 ) )
 006ffd e4f5     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 201 ) )
@@ -37274,13 +37275,13 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007000 940e c645 	CALL SUBOPT_0xE8
 007002 9631      	ADIW R30,1
 007003 940e c64a 	CALL SUBOPT_0xE9
-                 ; 000D 021F         return -1;
+                 ; 000D 0220         return -1;
 007005 efef      	LDI  R30,LOW(65535)
 007006 efff      	LDI  R31,HIGH(65535)
 007007 c162      	RJMP _0x20E0068
-                 ; 000D 0220     }
-                 ; 000D 0221 
-                 ; 000D 0222     if(epIsPointSet2[prbId] == 0){
+                 ; 000D 0221     }
+                 ; 000D 0222 
+                 ; 000D 0223     if(epIsPointSet2[prbId] == 0){
                  _0x1A0075:
 007008 89a8      	LDD  R26,Y+16
 007009 89b9      	LDD  R27,Y+16+1
@@ -37290,7 +37291,7 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 00700e 30e0      	CPI  R30,0
 00700f f011      	BREQ PC+3
 007010 940c 7085 	JMP _0x1A0076
-                 ; 000D 0223         printDebug("<sensorCalibrate2> -- CAL_EXTOFFSET --\r\n");
+                 ; 000D 0224         printDebug("<sensorCalibrate2> -- CAL_EXTOFFSET --\r\n");
                 +
 007012 ebe1     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 261 ) )
 007013 e4f5     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 261 ) )
@@ -37298,25 +37299,25 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007015 e070     +LDI R23 , BYTE4 ( 2 * _0x1A0000 + ( 261 ) )
                  	__POINTD1FN _0x1A0000,261
 007016 940e c042 	CALL SUBOPT_0x3
-                 ; 000D 0224         epFactor_A[prbId]   = 0;
+                 ; 000D 0225         epFactor_A[prbId]   = 0;
 007018 89e8      	LDD  R30,Y+16
 007019 89f9      	LDD  R31,Y+16+1
 00701a 940e ce14 	CALL SUBOPT_0x226
 00701c 940e ce4c 	CALL SUBOPT_0x22F
-                 ; 000D 0225         epFactor_B[prbId]   = 0;
+                 ; 000D 0226         epFactor_B[prbId]   = 0;
 00701e 89e8      	LDD  R30,Y+16
 00701f 89f9      	LDD  R31,Y+16+1
 007020 940e ce3e 	CALL SUBOPT_0x22D
 007022 940e ce4c 	CALL SUBOPT_0x22F
-                 ; 000D 0226 
-                 ; 000D 0227         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+                 ; 000D 0227 
+                 ; 000D 0228         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 007024 940e c172 	CALL SUBOPT_0x2E
 007026 f021      	BREQ _0x1A0078
 007027 940e c172 	CALL SUBOPT_0x2E
 007029 30e3      	CPI  R30,LOW(0x3)
 00702a f489      	BRNE _0x1A0077
                  _0x1A0078:
-                 ; 000D 0228             p2_raw          = (ADC_CONV_FAC*100 * epADCRef1[prbId]);
+                 ; 000D 0229             p2_raw          = (ADC_CONV_FAC*100 * epADCRef1[prbId]);
 00702b 940e c190 	CALL SUBOPT_0x32
 00702d 940e c19d 	CALL SUBOPT_0x33
 00702f 937f      	PUSH R23
@@ -37330,26 +37331,26 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007038 919f      	POP  R25
 007039 940e ddfc 	CALL __MULF12
 00703b c02b      	RJMP _0x1A00BD
-                 ; 000D 0229 
                  ; 000D 022A 
-                 ; 000D 022B         }
-                 ; 000D 022C         else if(TEMP_SEL == TEMP_TMEC){
+                 ; 000D 022B 
+                 ; 000D 022C         }
+                 ; 000D 022D         else if(TEMP_SEL == TEMP_TMEC){
                  _0x1A0077:
 00703c 940e c172 	CALL SUBOPT_0x2E
 00703e 30e1      	CPI  R30,LOW(0x1)
 00703f f429      	BRNE _0x1A007B
-                 ; 000D 022D             p2_raw          = epTMECTempSlope   * epADCRef1[prbId];
+                 ; 000D 022E             p2_raw          = epTMECTempSlope   * epADCRef1[prbId];
 007040 940e ce53 	CALL SUBOPT_0x230
 007042 940e cda0 	CALL SUBOPT_0x219
 007044 c022      	RJMP _0x1A00BD
-                 ; 000D 022E         }
-                 ; 000D 022F         else if(TEMP_SEL == TEMP_PT100){
+                 ; 000D 022F         }
+                 ; 000D 0230         else if(TEMP_SEL == TEMP_PT100){
                  _0x1A007B:
 007045 940e c172 	CALL SUBOPT_0x2E
 007047 30e2      	CPI  R30,LOW(0x2)
 007048 f511      	BRNE _0x1A007D
-                 ; 000D 0230             p2_raw          = (epPT100Temp_A    * epADCRef1[prbId] * epADCRef1[prbId]) +
-                 ; 000D 0231                               (epPT100Temp_B    * epADCRef1[prbId]);
+                 ; 000D 0231             p2_raw          = (epPT100Temp_A    * epADCRef1[prbId] * epADCRef1[prbId]) +
+                 ; 000D 0232                               (epPT100Temp_B    * epADCRef1[prbId]);
 007049 940e ce53 	CALL SUBOPT_0x230
 00704b 940e cdb1 	CALL SUBOPT_0x21B
 00704d 937f      	PUSH R23
@@ -37380,9 +37381,9 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007069 876e     +STD Y + 12 + 2 , R22
 00706a 877f     +STD Y + 12 + 3 , R23
                  	__PUTD1S 12
-                 ; 000D 0232         }
-                 ; 000D 0233 
-                 ; 000D 0234         epFactor_C[prbId]   = epTempRef1[prbId] - p2_raw;
+                 ; 000D 0233         }
+                 ; 000D 0234 
+                 ; 000D 0235         epFactor_C[prbId]   = epTempRef1[prbId] - p2_raw;
                  _0x1A007D:
 00706b 89e8      	LDD  R30,Y+16
 00706c 89f9      	LDD  R31,Y+16+1
@@ -37395,18 +37396,18 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007077 91af      	POP  R26
 007078 91bf      	POP  R27
 007079 940e e093 	CALL __EEPROMWRD
-                 ; 000D 0235         epCalType[prbId]    = CAL_EXTOFFSET;
+                 ; 000D 0236         epCalType[prbId]    = CAL_EXTOFFSET;
 00707b 940e ce69 	CALL SUBOPT_0x232
 00707d e0e2      	LDI  R30,LOW(2)
 00707e 940e e0a3 	CALL __EEPROMWRB
-                 ; 000D 0236         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
+                 ; 000D 0237         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
 007080 940e ce6e 	CALL SUBOPT_0x233
 007082 940e ce74 	CALL SUBOPT_0x234
-                 ; 000D 0237         return 0;
+                 ; 000D 0238         return 0;
 007084 c0e3      	RJMP _0x20E0067
-                 ; 000D 0238     }
-                 ; 000D 0239 
-                 ; 000D 023A     if(epIsPointSet3[prbId] == 0){
+                 ; 000D 0239     }
+                 ; 000D 023A 
+                 ; 000D 023B     if(epIsPointSet3[prbId] == 0){
                  _0x1A0076:
 007085 89a8      	LDD  R26,Y+16
 007086 89b9      	LDD  R27,Y+16+1
@@ -37416,7 +37417,7 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 00708b 30e0      	CPI  R30,0
 00708c f011      	BREQ PC+3
 00708d 940c 7101 	JMP _0x1A007E
-                 ; 000D 023B         printDebug("<sensorCalibrate2> -- CAL_EXTLINEAR --\r\n");
+                 ; 000D 023C         printDebug("<sensorCalibrate2> -- CAL_EXTLINEAR --\r\n");
                 +
 00708f efe9     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 333 ) )
 007090 e4f5     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 333 ) )
@@ -37424,13 +37425,13 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007092 e070     +LDI R23 , BYTE4 ( 2 * _0x1A0000 + ( 333 ) )
                  	__POINTD1FN _0x1A0000,333
 007093 940e c042 	CALL SUBOPT_0x3
-                 ; 000D 023C         epFactor_A[prbId]   = 0;
+                 ; 000D 023D         epFactor_A[prbId]   = 0;
 007095 89e8      	LDD  R30,Y+16
 007096 89f9      	LDD  R31,Y+16+1
 007097 940e ce14 	CALL SUBOPT_0x226
 007099 940e ce4c 	CALL SUBOPT_0x22F
-                 ; 000D 023D 
-                 ; 000D 023E         epFactor_B[prbId]   = (epTempRef2[prbId] - epTempRef1[prbId])/(epADCRef2[prbId] - epADCRef1[prbId]);
+                 ; 000D 023E 
+                 ; 000D 023F         epFactor_B[prbId]   = (epTempRef2[prbId] - epTempRef1[prbId])/(epADCRef2[prbId] - epADCRef1[prbId]);
 00709b 940e ce7b 	CALL SUBOPT_0x235
 00709d 0fea      	ADD  R30,R26
 00709e 1ffb      	ADC  R31,R27
@@ -37470,12 +37471,12 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0070c7 91af      	POP  R26
 0070c8 91bf      	POP  R27
 0070c9 940e e093 	CALL __EEPROMWRD
-                 ; 000D 023F         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
+                 ; 000D 0240         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
 0070cb 940e ce98 	CALL SUBOPT_0x238
 0070cd 940e ce3e 	CALL SUBOPT_0x22D
 0070cf 940e c86d 	CALL SUBOPT_0x14B
-                 ; 000D 0240 
-                 ; 000D 0241         epFactor_C[prbId]   = epTempRef2[prbId] - (epFactor_B[prbId] * epADCRef2[prbId]);
+                 ; 000D 0241 
+                 ; 000D 0242         epFactor_C[prbId]   = epTempRef2[prbId] - (epFactor_B[prbId] * epADCRef2[prbId]);
 0070d1 89e8      	LDD  R30,Y+16
 0070d2 89f9      	LDD  R31,Y+16+1
 0070d3 940e ce45 	CALL SUBOPT_0x22E
@@ -37508,18 +37509,18 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0070f5 91af      	POP  R26
 0070f6 91bf      	POP  R27
 0070f7 940e e093 	CALL __EEPROMWRD
-                 ; 000D 0242         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
+                 ; 000D 0243         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
 0070f9 940e ce6e 	CALL SUBOPT_0x233
 0070fb 940e ce74 	CALL SUBOPT_0x234
-                 ; 000D 0243 
-                 ; 000D 0244         epCalType[prbId]    = CAL_EXTLINEAR;
+                 ; 000D 0244 
+                 ; 000D 0245         epCalType[prbId]    = CAL_EXTLINEAR;
 0070fd 940e ce69 	CALL SUBOPT_0x232
 0070ff e0e3      	LDI  R30,LOW(3)
 007100 c065      	RJMP _0x1A00BE
-                 ; 000D 0245     }
-                 ; 000D 0246     else{
+                 ; 000D 0246     }
+                 ; 000D 0247     else{
                  _0x1A007E:
-                 ; 000D 0247         printDebug("<sensorCalibrate2> -- CAL_EXTPOLYNOMIAL --\r\n");
+                 ; 000D 0248         printDebug("<sensorCalibrate2> -- CAL_EXTPOLYNOMIAL --\r\n");
                 +
 007101 e4e1     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 405 ) )
 007102 e4f6     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 405 ) )
@@ -37527,10 +37528,10 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007104 e070     +LDI R23 , BYTE4 ( 2 * _0x1A0000 + ( 405 ) )
                  	__POINTD1FN _0x1A0000,405
 007105 940e c042 	CALL SUBOPT_0x3
-                 ; 000D 0248 
-                 ; 000D 0249         gaussian(epADCRef1[prbId],  epADCRef2[prbId],  epADCRef3[prbId],
-                 ; 000D 024A                  epTempRef1[prbId], epTempRef2[prbId], epTempRef3[prbId],
-                 ; 000D 024B                  &tmpA, &tmpB, &tmpC);
+                 ; 000D 0249 
+                 ; 000D 024A         gaussian(epADCRef1[prbId],  epADCRef2[prbId],  epADCRef3[prbId],
+                 ; 000D 024B                  epTempRef1[prbId], epTempRef2[prbId], epTempRef3[prbId],
+                 ; 000D 024C                  &tmpA, &tmpB, &tmpC);
 007107 940e ce53 	CALL SUBOPT_0x230
 007109 940e c645 	CALL SUBOPT_0xE8
 00710b 940e ce9e 	CALL SUBOPT_0x239
@@ -37560,8 +37561,8 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 00712d 01de      	MOVW R26,R28
 00712e 965c      	ADIW R26,28
 00712f 940e a011 	CALL _gaussian
-                 ; 000D 024C 
-                 ; 000D 024D         epFactor_A[prbId]   = tmpA;
+                 ; 000D 024D 
+                 ; 000D 024E         epFactor_A[prbId]   = tmpA;
 007131 89e8      	LDD  R30,Y+16
 007132 89f9      	LDD  R31,Y+16+1
 007133 e9a5      	LDI  R26,LOW(_epFactor_A)
@@ -37571,13 +37572,13 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007138 1fbf      	ADC  R27,R31
 007139 940e c25f 	CALL SUBOPT_0x4F
 00713b 940e e093 	CALL __EEPROMWRD
-                 ; 000D 024E         epFactor_B[prbId]   = tmpB;
+                 ; 000D 024F         epFactor_B[prbId]   = tmpB;
 00713d 940e ce7b 	CALL SUBOPT_0x235
 00713f 0fae      	ADD  R26,R30
 007140 1fbf      	ADC  R27,R31
 007141 940e c3e5 	CALL SUBOPT_0x89
 007143 940e e093 	CALL __EEPROMWRD
-                 ; 000D 024F         epFactor_C[prbId]   = tmpC;
+                 ; 000D 0250         epFactor_C[prbId]   = tmpC;
 007145 89e8      	LDD  R30,Y+16
 007146 89f9      	LDD  R31,Y+16+1
 007147 ebad      	LDI  R26,LOW(_epFactor_C)
@@ -37585,8 +37586,8 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007149 940e ceb4 	CALL SUBOPT_0x23D
 00714b 940e c3d9 	CALL SUBOPT_0x87
 00714d 940e e093 	CALL __EEPROMWRD
-                 ; 000D 0250 
-                 ; 000D 0251         printDebug("<sensorCalibrate2> --A--> %f\r\n", epFactor_A[prbId]);
+                 ; 000D 0251 
+                 ; 000D 0252         printDebug("<sensorCalibrate2> --A--> %f\r\n", epFactor_A[prbId]);
                 +
 00714f e6ee     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 450 ) )
 007150 e4f6     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 450 ) )
@@ -37596,41 +37597,41 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007153 940e c645 	CALL SUBOPT_0xE8
 007155 940e ce14 	CALL SUBOPT_0x226
 007157 940e c86d 	CALL SUBOPT_0x14B
-                 ; 000D 0252         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
+                 ; 000D 0253         printDebug("<sensorCalibrate2> --B--> %f\r\n", epFactor_B[prbId]);
 007159 940e ce98 	CALL SUBOPT_0x238
 00715b 940e ce3e 	CALL SUBOPT_0x22D
 00715d 940e c86d 	CALL SUBOPT_0x14B
-                 ; 000D 0253         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
+                 ; 000D 0254         printDebug("<sensorCalibrate2> --C--> %f\r\n", epFactor_C[prbId]);
 00715f 940e ce6e 	CALL SUBOPT_0x233
 007161 940e ce74 	CALL SUBOPT_0x234
-                 ; 000D 0254 
                  ; 000D 0255 
                  ; 000D 0256 
-                 ; 000D 0257         epCalType[prbId]    = CAL_EXTPOLYNOMIAL;
+                 ; 000D 0257 
+                 ; 000D 0258         epCalType[prbId]    = CAL_EXTPOLYNOMIAL;
 007163 940e ce69 	CALL SUBOPT_0x232
 007165 e0e4      	LDI  R30,LOW(4)
                  _0x1A00BE:
 007166 940e e0a3 	CALL __EEPROMWRB
-                 ; 000D 0258     }
-                 ; 000D 0259 
-                 ; 000D 025A     return 0;
+                 ; 000D 0259     }
+                 ; 000D 025A 
+                 ; 000D 025B     return 0;
                  _0x20E0067:
 007168 e0e0      	LDI  R30,LOW(0)
 007169 e0f0      	LDI  R31,HIGH(0)
                  _0x20E0068:
 00716a 9662      	ADIW R28,18
 00716b 9508      	RET
-                 ; 000D 025B }
+                 ; 000D 025C }
                  ;/*============================================================*/
                  ;int sensorGetCurrentSetPoint(int ch,int pnt, unsigned char *buf)
-                 ; 000D 025E {
+                 ; 000D 025F {
                  _sensorGetCurrentSetPoint:
-                 ; 000D 025F     unsigned char   valStr[10];
-                 ; 000D 0260     float           valTmp;
-                 ; 000D 0261     //signed int      val;
-                 ; 000D 0262     int             i;
-                 ; 000D 0263 
-                 ; 000D 0264     if(pnt == CALPOINT(1)){
+                 ; 000D 0260     unsigned char   valStr[10];
+                 ; 000D 0261     float           valTmp;
+                 ; 000D 0262     //signed int      val;
+                 ; 000D 0263     int             i;
+                 ; 000D 0264 
+                 ; 000D 0265     if(pnt == CALPOINT(1)){
 00716c 93ba      	ST   -Y,R27
 00716d 93aa      	ST   -Y,R26
 00716e 972e      	SBIW R28,14
@@ -37648,7 +37649,7 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007174 e0e0      	LDI  R30,HIGH(0x65)
 007175 07be      	CPC  R27,R30
 007176 f561      	BRNE _0x1A0080
-                 ; 000D 0265         if(epIsPointSet1[ch] == 1){
+                 ; 000D 0266         if(epIsPointSet1[ch] == 1){
 007177 89ac      	LDD  R26,Y+20
 007178 89bd      	LDD  R27,Y+20+1
 007179 52af      	SUBI R26,LOW(-_epIsPointSet1)
@@ -37656,13 +37657,13 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 00717b 940e e087 	CALL __EEPROMRDB
 00717d 30e1      	CPI  R30,LOW(0x1)
 00717e f4c9      	BRNE _0x1A0081
-                 ; 000D 0266             valTmp  = epTempRef1[ch];
+                 ; 000D 0267             valTmp  = epTempRef1[ch];
 00717f 89ec      	LDD  R30,Y+20
 007180 89fd      	LDD  R31,Y+20+1
 007181 940e ceaa 	CALL SUBOPT_0x23B
 007183 940e ceb9 	CALL SUBOPT_0x23E
 007185 940e c4f1 	CALL SUBOPT_0xB2
-                 ; 000D 0267             printDebug("<sensorGetCurrentSetPoint> tempRef1 = [%f][%f]\r\n",epTempRef1[ch],valTmp);
+                 ; 000D 0268             printDebug("<sensorGetCurrentSetPoint> tempRef1 = [%f][%f]\r\n",epTempRef1[ch],valTmp);
                 +
 007187 e8ed     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 481 ) )
 007188 e4f6     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 481 ) )
@@ -37674,14 +37675,14 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 00718f 940e ceb9 	CALL SUBOPT_0x23E
 007191 940e c292 	CALL SUBOPT_0x57
 007193 940e c11b 	CALL SUBOPT_0x21
-                 ; 000D 0268             ftoa(valTmp,2,valStr);
+                 ; 000D 0269             ftoa(valTmp,2,valStr);
 007195 940e cec3 	CALL SUBOPT_0x240
-                 ; 000D 0269             //val = (epTempRef1[ch] * 100);
-                 ; 000D 026A         }
-                 ; 000D 026B         else{
+                 ; 000D 026A             //val = (epTempRef1[ch] * 100);
+                 ; 000D 026B         }
+                 ; 000D 026C         else{
 007197 c00a      	RJMP _0x1A0082
                  _0x1A0081:
-                 ; 000D 026C             printDebug("<sensorGetCurrentSetPoint> tempRef1 not set [0.00]\r\n");
+                 ; 000D 026D             printDebug("<sensorGetCurrentSetPoint> tempRef1 not set [0.00]\r\n");
                 +
 007198 ebee     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 530 ) )
 007199 e4f6     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 530 ) )
@@ -37689,13 +37690,13 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 00719b e070     +LDI R23 , BYTE4 ( 2 * _0x1A0000 + ( 530 ) )
                  	__POINTD1FN _0x1A0000,530
 00719c 940e c042 	CALL SUBOPT_0x3
-                 ; 000D 026D             sprintf(valStr,"0.00");                 //val = 0;
+                 ; 000D 026E             sprintf(valStr,"0.00");                 //val = 0;
 00719e 940e c28d 	CALL SUBOPT_0x56
 0071a0 940e cecd 	CALL SUBOPT_0x241
-                 ; 000D 026E         }
+                 ; 000D 026F         }
                  _0x1A0082:
-                 ; 000D 026F     }
-                 ; 000D 0270     else if(pnt == CALPOINT(2)){
+                 ; 000D 0270     }
+                 ; 000D 0271     else if(pnt == CALPOINT(2)){
 0071a2 c06d      	RJMP _0x1A0083
                  _0x1A0080:
 0071a3 89aa      	LDD  R26,Y+18
@@ -37704,7 +37705,7 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0071a6 e0e0      	LDI  R30,HIGH(0x66)
 0071a7 07be      	CPC  R27,R30
 0071a8 f561      	BRNE _0x1A0084
-                 ; 000D 0271         if(epIsPointSet2[ch] == 1){
+                 ; 000D 0272         if(epIsPointSet2[ch] == 1){
 0071a9 89ac      	LDD  R26,Y+20
 0071aa 89bd      	LDD  R27,Y+20+1
 0071ab 50a2      	SUBI R26,LOW(-_epIsPointSet2)
@@ -37712,13 +37713,13 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0071ad 940e e087 	CALL __EEPROMRDB
 0071af 30e1      	CPI  R30,LOW(0x1)
 0071b0 f4c9      	BRNE _0x1A0085
-                 ; 000D 0272             valTmp  = epTempRef2[ch];
+                 ; 000D 0273             valTmp  = epTempRef2[ch];
 0071b1 89ec      	LDD  R30,Y+20
 0071b2 89fd      	LDD  R31,Y+20+1
 0071b3 940e ceaf 	CALL SUBOPT_0x23C
 0071b5 940e ceb9 	CALL SUBOPT_0x23E
 0071b7 940e c4f1 	CALL SUBOPT_0xB2
-                 ; 000D 0273             printDebug("<sensorGetCurrentSetPoint> tempRef2 = [%f][%f]\r\n",epTempRef2[ch],valTmp);
+                 ; 000D 0274             printDebug("<sensorGetCurrentSetPoint> tempRef2 = [%f][%f]\r\n",epTempRef2[ch],valTmp);
                 +
 0071b9 efe8     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 588 ) )
 0071ba e4f6     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 588 ) )
@@ -37730,14 +37731,14 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0071c1 940e ceb9 	CALL SUBOPT_0x23E
 0071c3 940e c292 	CALL SUBOPT_0x57
 0071c5 940e c11b 	CALL SUBOPT_0x21
-                 ; 000D 0274             ftoa(valTmp,2,valStr);
+                 ; 000D 0275             ftoa(valTmp,2,valStr);
 0071c7 940e cec3 	CALL SUBOPT_0x240
-                 ; 000D 0275             //val = (epTempRef1[ch] * 100);
-                 ; 000D 0276         }
-                 ; 000D 0277         else{
+                 ; 000D 0276             //val = (epTempRef1[ch] * 100);
+                 ; 000D 0277         }
+                 ; 000D 0278         else{
 0071c9 c00a      	RJMP _0x1A0086
                  _0x1A0085:
-                 ; 000D 0278             printDebug("<sensorGetCurrentSetPoint> tempRef2 not set [0.00]\r\n");
+                 ; 000D 0279             printDebug("<sensorGetCurrentSetPoint> tempRef2 not set [0.00]\r\n");
                 +
 0071ca e2e9     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 637 ) )
 0071cb e4f7     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 637 ) )
@@ -37745,17 +37746,17 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0071cd e070     +LDI R23 , BYTE4 ( 2 * _0x1A0000 + ( 637 ) )
                  	__POINTD1FN _0x1A0000,637
 0071ce 940e c042 	CALL SUBOPT_0x3
-                 ; 000D 0279             sprintf(valStr,"0.00");                 //val = 0;
+                 ; 000D 027A             sprintf(valStr,"0.00");                 //val = 0;
 0071d0 940e c28d 	CALL SUBOPT_0x56
 0071d2 940e cecd 	CALL SUBOPT_0x241
-                 ; 000D 027A         }
+                 ; 000D 027B         }
                  _0x1A0086:
-                 ; 000D 027B         /*
-                 ; 000D 027C         if(epIsPointSet2[ch] == 1){ val = (epTempRef2[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef2[ch]);}
-                 ; 000D 027D         else{                       val = 0;        }
-                 ; 000D 027E         */
-                 ; 000D 027F     }
-                 ; 000D 0280     else if(pnt == CALPOINT(3)){
+                 ; 000D 027C         /*
+                 ; 000D 027D         if(epIsPointSet2[ch] == 1){ val = (epTempRef2[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef2[ch]);}
+                 ; 000D 027E         else{                       val = 0;        }
+                 ; 000D 027F         */
+                 ; 000D 0280     }
+                 ; 000D 0281     else if(pnt == CALPOINT(3)){
 0071d4 c03b      	RJMP _0x1A0087
                  _0x1A0084:
 0071d5 89aa      	LDD  R26,Y+18
@@ -37764,7 +37765,7 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0071d8 e0e0      	LDI  R30,HIGH(0x67)
 0071d9 07be      	CPC  R27,R30
 0071da f541      	BRNE _0x1A0088
-                 ; 000D 0281         if(epIsPointSet3[ch] == 1){
+                 ; 000D 0282         if(epIsPointSet3[ch] == 1){
 0071db 89ac      	LDD  R26,Y+20
 0071dc 89bd      	LDD  R27,Y+20+1
 0071dd 5da5      	SUBI R26,LOW(-_epIsPointSet3)
@@ -37772,12 +37773,12 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0071df 940e e087 	CALL __EEPROMRDB
 0071e1 30e1      	CPI  R30,LOW(0x1)
 0071e2 f4a9      	BRNE _0x1A0089
-                 ; 000D 0282             valTmp  = epTempRef3[ch];
+                 ; 000D 0283             valTmp  = epTempRef3[ch];
 0071e3 89ec      	LDD  R30,Y+20
 0071e4 89fd      	LDD  R31,Y+20+1
 0071e5 940e cdfa 	CALL SUBOPT_0x222
 0071e7 940e c4f1 	CALL SUBOPT_0xB2
-                 ; 000D 0283             printDebug("<sensorGetCurrentSetPoint> tempRef3 = [%f][%f]\r\n",epTempRef3[ch],valTmp);
+                 ; 000D 0284             printDebug("<sensorGetCurrentSetPoint> tempRef3 = [%f][%f]\r\n",epTempRef3[ch],valTmp);
                 +
 0071e9 e5ee     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 690 ) )
 0071ea e4f7     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 690 ) )
@@ -37788,14 +37789,14 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0071ef 940e cdfa 	CALL SUBOPT_0x222
 0071f1 940e c292 	CALL SUBOPT_0x57
 0071f3 940e c11b 	CALL SUBOPT_0x21
-                 ; 000D 0284             ftoa(valTmp,2,valStr);
+                 ; 000D 0285             ftoa(valTmp,2,valStr);
 0071f5 940e cec3 	CALL SUBOPT_0x240
-                 ; 000D 0285             //val = (epTempRef1[ch] * 100);
-                 ; 000D 0286         }
-                 ; 000D 0287         else{
+                 ; 000D 0286             //val = (epTempRef1[ch] * 100);
+                 ; 000D 0287         }
+                 ; 000D 0288         else{
 0071f7 c00a      	RJMP _0x1A008A
                  _0x1A0089:
-                 ; 000D 0288             printDebug("<sensorGetCurrentSetPoint> tempRef3 not set [0.00]\r\n");
+                 ; 000D 0289             printDebug("<sensorGetCurrentSetPoint> tempRef3 not set [0.00]\r\n");
                 +
 0071f8 e8ef     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 739 ) )
 0071f9 e4f7     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 739 ) )
@@ -37803,20 +37804,20 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0071fb e070     +LDI R23 , BYTE4 ( 2 * _0x1A0000 + ( 739 ) )
                  	__POINTD1FN _0x1A0000,739
 0071fc 940e c042 	CALL SUBOPT_0x3
-                 ; 000D 0289             sprintf(valStr,"0.00");                 //val = 0;
+                 ; 000D 028A             sprintf(valStr,"0.00");                 //val = 0;
 0071fe 940e c28d 	CALL SUBOPT_0x56
 007200 940e cecd 	CALL SUBOPT_0x241
-                 ; 000D 028A         }
+                 ; 000D 028B         }
                  _0x1A008A:
-                 ; 000D 028B         /*
-                 ; 000D 028C         if(epIsPointSet3[ch] == 1){ val = (epTempRef3[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef3[ch]);}
-                 ; 000D 028D         else{                       val = 0;        }
-                 ; 000D 028E         */
-                 ; 000D 028F     }
-                 ; 000D 0290     else{
+                 ; 000D 028C         /*
+                 ; 000D 028D         if(epIsPointSet3[ch] == 1){ val = (epTempRef3[ch] * 100);   printDebug("<sensorGetCurrentSetPoint> tempRef = [%f]\r\n",epTempRef3[ch]);}
+                 ; 000D 028E         else{                       val = 0;        }
+                 ; 000D 028F         */
+                 ; 000D 0290     }
+                 ; 000D 0291     else{
 007202 c00d      	RJMP _0x1A008B
                  _0x1A0088:
-                 ; 000D 0291         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
+                 ; 000D 0292         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
                 +
 007203 ece4     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 792 ) )
 007204 e4f7     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 792 ) )
@@ -37827,16 +37828,16 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007209 89ee      	LDD  R30,Y+22
 00720a 89ff      	LDD  R31,Y+22+1
 00720b 940e c64a 	CALL SUBOPT_0xE9
-                 ; 000D 0292         return -1;
+                 ; 000D 0293         return -1;
 00720d efef      	LDI  R30,LOW(65535)
 00720e efff      	LDI  R31,HIGH(65535)
 00720f c0d8      	RJMP _0x20E0066
-                 ; 000D 0293     }
+                 ; 000D 0294     }
                  _0x1A008B:
                  _0x1A0087:
                  _0x1A0083:
-                 ; 000D 0294     //printDebug("<sensorGetCurrentSetPoint> read val = [%d]\r\n",val);
-                 ; 000D 0295     printDebug("<sensorGetCurrentSetPoint> read val(%d) = [%s]\r\n",strlen(valStr),valStr);
+                 ; 000D 0295     //printDebug("<sensorGetCurrentSetPoint> read val = [%d]\r\n",val);
+                 ; 000D 0296     printDebug("<sensorGetCurrentSetPoint> read val(%d) = [%s]\r\n",strlen(valStr),valStr);
                 +
 007210 efec     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 848 ) )
 007211 e4f7     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 848 ) )
@@ -37851,24 +37852,24 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 00721c 01fe      	MOVW R30,R28
 00721d 963e      	ADIW R30,14
 00721e 940e c822 	CALL SUBOPT_0x13E
-                 ; 000D 0296 
-                 ; 000D 0297     if(valStr[0] == '-'){
+                 ; 000D 0297 
+                 ; 000D 0298     if(valStr[0] == '-'){
 007220 81ae      	LDD  R26,Y+6
 007221 32ad      	CPI  R26,LOW(0x2D)
 007222 f011      	BREQ PC+3
 007223 940c 7276 	JMP _0x1A008C
-                 ; 000D 0298         buf[0] = 1;
+                 ; 000D 0299         buf[0] = 1;
 007225 89a8      	LDD  R26,Y+16
 007226 89b9      	LDD  R27,Y+16+1
 007227 e0e1      	LDI  R30,LOW(1)
 007228 93ec      	ST   X,R30
-                 ; 000D 0299         if(strlen(valStr) == 7){
+                 ; 000D 029A         if(strlen(valStr) == 7){
 007229 940e ced8 	CALL SUBOPT_0x242
 00722b 30e7      	CPI  R30,LOW(0x7)
 00722c e0a0      	LDI  R26,HIGH(0x7)
 00722d 07fa      	CPC  R31,R26
 00722e f499      	BRNE _0x1A008D
-                 ; 000D 029A             buf[1]  = valStr[1] - 0x30;     buf[2]  = valStr[2] - 0x30;     buf[3]  = valStr[3] - 0x30;
+                 ; 000D 029B             buf[1]  = valStr[1] - 0x30;     buf[2]  = valStr[2] - 0x30;     buf[3]  = valStr[3] - 0x30;
 00722f 81ef      	LDD  R30,Y+7
 007230 53e0      	SUBI R30,LOW(48)
                 +
@@ -37881,13 +37882,13 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007236 940e cedc 	CALL SUBOPT_0x243
 007238 85e9      	LDD  R30,Y+9
 007239 940e cee2 	CALL SUBOPT_0x244
-                 ; 000D 029B             buf[4]  = valStr[5] - 0x30;     buf[5]  = valStr[6] - 0x30;
+                 ; 000D 029C             buf[4]  = valStr[5] - 0x30;     buf[5]  = valStr[6] - 0x30;
 00723b 85eb      	LDD  R30,Y+11
 00723c 940e cee8 	CALL SUBOPT_0x245
 00723e 85ec      	LDD  R30,Y+12
 00723f 940e ceee 	CALL SUBOPT_0x246
-                 ; 000D 029C         }
-                 ; 000D 029D         else if(strlen(valStr) == 6){
+                 ; 000D 029D         }
+                 ; 000D 029E         else if(strlen(valStr) == 6){
 007241 c033      	RJMP _0x1A008E
                  _0x1A008D:
 007242 940e ced8 	CALL SUBOPT_0x242
@@ -37895,19 +37896,19 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007245 e0a0      	LDI  R26,HIGH(0x6)
 007246 07fa      	CPC  R31,R26
 007247 f479      	BRNE _0x1A008F
-                 ; 000D 029E             buf[1]  = 0;                    buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
+                 ; 000D 029F             buf[1]  = 0;                    buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
 007248 940e cef4 	CALL SUBOPT_0x247
 00724a 81ef      	LDD  R30,Y+7
 00724b 940e cedc 	CALL SUBOPT_0x243
 00724d 85e8      	LDD  R30,Y+8
 00724e 940e cee2 	CALL SUBOPT_0x244
-                 ; 000D 029F             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
+                 ; 000D 02A0             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
 007250 85ea      	LDD  R30,Y+10
 007251 940e cee8 	CALL SUBOPT_0x245
 007253 85eb      	LDD  R30,Y+11
 007254 940e ceee 	CALL SUBOPT_0x246
-                 ; 000D 02A0         }
-                 ; 000D 02A1         else if(strlen(valStr) == 5){
+                 ; 000D 02A1         }
+                 ; 000D 02A2         else if(strlen(valStr) == 5){
 007256 c01e      	RJMP _0x1A0090
                  _0x1A008F:
 007257 940e ced8 	CALL SUBOPT_0x242
@@ -37915,7 +37916,7 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 00725a e0a0      	LDI  R26,HIGH(0x5)
 00725b 07fa      	CPC  R31,R26
 00725c f489      	BRNE _0x1A0091
-                 ; 000D 02A2             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[1] - 0x30;
+                 ; 000D 02A3             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[1] - 0x30;
 00725d 940e cef4 	CALL SUBOPT_0x247
 00725f 89a8      	LDD  R26,Y+16
 007260 89b9      	LDD  R27,Y+16+1
@@ -37924,42 +37925,42 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007263 93ec      	ST   X,R30
 007264 81ef      	LDD  R30,Y+7
 007265 940e cee2 	CALL SUBOPT_0x244
-                 ; 000D 02A3             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
+                 ; 000D 02A4             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
 007267 85e9      	LDD  R30,Y+9
 007268 940e cee8 	CALL SUBOPT_0x245
 00726a 85ea      	LDD  R30,Y+10
 00726b 940e ceee 	CALL SUBOPT_0x246
-                 ; 000D 02A4         }
-                 ; 000D 02A5         else{
+                 ; 000D 02A5         }
+                 ; 000D 02A6         else{
 00726d c007      	RJMP _0x1A0092
                  _0x1A0091:
-                 ; 000D 02A6             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
+                 ; 000D 02A7             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
 00726e 940e cefa 	CALL SUBOPT_0x248
 007270 940e c0b8 	CALL SUBOPT_0x12
-                 ; 000D 02A7             return -1;
+                 ; 000D 02A8             return -1;
 007272 efef      	LDI  R30,LOW(65535)
 007273 efff      	LDI  R31,HIGH(65535)
 007274 c073      	RJMP _0x20E0066
-                 ; 000D 02A8         }
+                 ; 000D 02A9         }
                  _0x1A0092:
                  _0x1A0090:
                  _0x1A008E:
-                 ; 000D 02A9     }
-                 ; 000D 02AA     else{
+                 ; 000D 02AA     }
+                 ; 000D 02AB     else{
 007275 c050      	RJMP _0x1A0093
                  _0x1A008C:
-                 ; 000D 02AB         buf[0] = 0;
+                 ; 000D 02AC         buf[0] = 0;
 007276 89a8      	LDD  R26,Y+16
 007277 89b9      	LDD  R27,Y+16+1
 007278 e0e0      	LDI  R30,LOW(0)
 007279 93ec      	ST   X,R30
-                 ; 000D 02AC         if(strlen(valStr) == 6){
+                 ; 000D 02AD         if(strlen(valStr) == 6){
 00727a 940e ced8 	CALL SUBOPT_0x242
 00727c 30e6      	CPI  R30,LOW(0x6)
 00727d e0a0      	LDI  R26,HIGH(0x6)
 00727e 07fa      	CPC  R31,R26
 00727f f499      	BRNE _0x1A0094
-                 ; 000D 02AD             buf[1]  = valStr[0] - 0x30;     buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
+                 ; 000D 02AE             buf[1]  = valStr[0] - 0x30;     buf[2]  = valStr[1] - 0x30;     buf[3]  = valStr[2] - 0x30;
 007280 81ee      	LDD  R30,Y+6
 007281 53e0      	SUBI R30,LOW(48)
                 +
@@ -37972,13 +37973,13 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007287 940e cedc 	CALL SUBOPT_0x243
 007289 85e8      	LDD  R30,Y+8
 00728a 940e cee2 	CALL SUBOPT_0x244
-                 ; 000D 02AE             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
+                 ; 000D 02AF             buf[4]  = valStr[4] - 0x30;     buf[5]  = valStr[5] - 0x30;
 00728c 85ea      	LDD  R30,Y+10
 00728d 940e cee8 	CALL SUBOPT_0x245
 00728f 85eb      	LDD  R30,Y+11
 007290 940e ceee 	CALL SUBOPT_0x246
-                 ; 000D 02AF         }
-                 ; 000D 02B0         else if(strlen(valStr) == 5){
+                 ; 000D 02B0         }
+                 ; 000D 02B1         else if(strlen(valStr) == 5){
 007292 c033      	RJMP _0x1A0095
                  _0x1A0094:
 007293 940e ced8 	CALL SUBOPT_0x242
@@ -37986,19 +37987,19 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007296 e0a0      	LDI  R26,HIGH(0x5)
 007297 07fa      	CPC  R31,R26
 007298 f479      	BRNE _0x1A0096
-                 ; 000D 02B1             buf[1]  = 0;                    buf[2]  = valStr[0] - 0x30;     buf[3]  = valStr[1] - 0x30;
+                 ; 000D 02B2             buf[1]  = 0;                    buf[2]  = valStr[0] - 0x30;     buf[3]  = valStr[1] - 0x30;
 007299 940e cef4 	CALL SUBOPT_0x247
 00729b 81ee      	LDD  R30,Y+6
 00729c 940e cedc 	CALL SUBOPT_0x243
 00729e 81ef      	LDD  R30,Y+7
 00729f 940e cee2 	CALL SUBOPT_0x244
-                 ; 000D 02B2             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
+                 ; 000D 02B3             buf[4]  = valStr[3] - 0x30;     buf[5]  = valStr[4] - 0x30;
 0072a1 85e9      	LDD  R30,Y+9
 0072a2 940e cee8 	CALL SUBOPT_0x245
 0072a4 85ea      	LDD  R30,Y+10
 0072a5 940e ceee 	CALL SUBOPT_0x246
-                 ; 000D 02B3         }
-                 ; 000D 02B4         else if(strlen(valStr) == 4){
+                 ; 000D 02B4         }
+                 ; 000D 02B5         else if(strlen(valStr) == 4){
 0072a7 c01e      	RJMP _0x1A0097
                  _0x1A0096:
 0072a8 940e ced8 	CALL SUBOPT_0x242
@@ -38006,7 +38007,7 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0072ab e0a0      	LDI  R26,HIGH(0x4)
 0072ac 07fa      	CPC  R31,R26
 0072ad f489      	BRNE _0x1A0098
-                 ; 000D 02B5             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[0] - 0x30;
+                 ; 000D 02B6             buf[1]  = 0;                    buf[2]  = 0;                    buf[3]  = valStr[0] - 0x30;
 0072ae 940e cef4 	CALL SUBOPT_0x247
 0072b0 89a8      	LDD  R26,Y+16
 0072b1 89b9      	LDD  R27,Y+16+1
@@ -38015,30 +38016,30 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0072b4 93ec      	ST   X,R30
 0072b5 81ee      	LDD  R30,Y+6
 0072b6 940e cee2 	CALL SUBOPT_0x244
-                 ; 000D 02B6             buf[4]  = valStr[2] - 0x30;     buf[5]  = valStr[3] - 0x30;
+                 ; 000D 02B7             buf[4]  = valStr[2] - 0x30;     buf[5]  = valStr[3] - 0x30;
 0072b8 85e8      	LDD  R30,Y+8
 0072b9 940e cee8 	CALL SUBOPT_0x245
 0072bb 85e9      	LDD  R30,Y+9
 0072bc 940e ceee 	CALL SUBOPT_0x246
-                 ; 000D 02B7         }
-                 ; 000D 02B8         else{
+                 ; 000D 02B8         }
+                 ; 000D 02B9         else{
 0072be c007      	RJMP _0x1A0099
                  _0x1A0098:
-                 ; 000D 02B9             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
+                 ; 000D 02BA             printDebug("<sensorGetCurrentSetPoint> out of condition valStr = '%s'",valStr);
 0072bf 940e cefa 	CALL SUBOPT_0x248
 0072c1 940e c0b8 	CALL SUBOPT_0x12
-                 ; 000D 02BA             return -1;
+                 ; 000D 02BB             return -1;
 0072c3 efef      	LDI  R30,LOW(65535)
 0072c4 efff      	LDI  R31,HIGH(65535)
 0072c5 c022      	RJMP _0x20E0066
-                 ; 000D 02BB         }
+                 ; 000D 02BC         }
                  _0x1A0099:
                  _0x1A0097:
                  _0x1A0095:
-                 ; 000D 02BC     }
+                 ; 000D 02BD     }
                  _0x1A0093:
-                 ; 000D 02BD 
-                 ; 000D 02BE     printDebug("<sensorGetCurrentSetPoint> buf read");
+                 ; 000D 02BE 
+                 ; 000D 02BF     printDebug("<sensorGetCurrentSetPoint> buf read");
                 +
 0072c6 e6e7     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 955 ) )
 0072c7 e4f8     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 955 ) )
@@ -38046,7 +38047,7 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0072c9 e070     +LDI R23 , BYTE4 ( 2 * _0x1A0000 + ( 955 ) )
                  	__POINTD1FN _0x1A0000,955
 0072ca 940e c042 	CALL SUBOPT_0x3
-                 ; 000D 02BF     for(i=0;i<6;i++){
+                 ; 000D 02C0     for(i=0;i<6;i++){
                 +
 0072cc e000     +LDI R16 , LOW ( 0 )
 0072cd e010     +LDI R17 , HIGH ( 0 )
@@ -38058,7 +38059,7 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0072d0 071e     +CPC R17 , R30
                  	__CPWRN 16,17,6
 0072d1 f474      	BRGE _0x1A009C
-                 ; 000D 02C0         printDebug("[%d]",buf[i]);
+                 ; 000D 02C1         printDebug("[%d]",buf[i]);
                 +
 0072d2 e8eb     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 991 ) )
 0072d3 e4f8     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 991 ) )
@@ -38070,14 +38071,14 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0072d9 89ac      	LDD  R26,Y+20
 0072da 89bd      	LDD  R27,Y+20+1
 0072db 940e c9e4 	CALL SUBOPT_0x182
-                 ; 000D 02C1     }
+                 ; 000D 02C2     }
                 +
 0072dd 5f0f     +SUBI R16 , LOW ( - 1 )
 0072de 4f1f     +SBCI R17 , HIGH ( - 1 )
                  	__ADDWRN 16,17,1
 0072df cfee      	RJMP _0x1A009B
                  _0x1A009C:
-                 ; 000D 02C2     printDebug("\r\n");
+                 ; 000D 02C3     printDebug("\r\n");
                 +
 0072e0 eded     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 49 ) )
 0072e1 e4f4     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 49 ) )
@@ -38085,8 +38086,8 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0072e3 e070     +LDI R23 , BYTE4 ( 2 * _0x1A0000 + ( 49 ) )
                  	__POINTD1FN _0x1A0000,49
 0072e4 940e c042 	CALL SUBOPT_0x3
-                 ; 000D 02C3 
-                 ; 000D 02C4     return 0;
+                 ; 000D 02C4 
+                 ; 000D 02C5     return 0;
 0072e6 e0e0      	LDI  R30,LOW(0)
 0072e7 e0f0      	LDI  R31,HIGH(0)
                  _0x20E0066:
@@ -38094,19 +38095,19 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0072e9 8108      	LDD  R16,Y+0
 0072ea 9666      	ADIW R28,22
 0072eb 9508      	RET
-                 ; 000D 02C5 }
+                 ; 000D 02C6 }
                  ;/*============================================================*/
                  ;int sensorSetCurrentSetPoint(int ch,int pnt,unsigned char *buf)
-                 ; 000D 02C8 {
+                 ; 000D 02C9 {
                  _sensorSetCurrentSetPoint:
-                 ; 000D 02C9     float   val=0;
-                 ; 000D 02CA     long viADCbuffer = 0;
-                 ; 000D 02CB     int i = 0;
-                 ; 000D 02CC     float viVoltUseCaluate = 0.0;
-                 ; 000D 02CD     float viRiaseUpVoltValue = 0.0;
-                 ; 000D 02CE     const float viZeroSet = 1.667;
-                 ; 000D 02CF 
-                 ; 000D 02D0     if(operating_config.sensorEnable[ch] != 0x01){
+                 ; 000D 02CA     float   val=0;
+                 ; 000D 02CB     long viADCbuffer = 0;
+                 ; 000D 02CC     int i = 0;
+                 ; 000D 02CD     float viVoltUseCaluate = 0.0;
+                 ; 000D 02CE     float viRiaseUpVoltValue = 0.0;
+                 ; 000D 02CF     const float viZeroSet = 1.667;
+                 ; 000D 02D0 
+                 ; 000D 02D1     if(operating_config.sensorEnable[ch] != 0x01){
 0072ec 940e cf04 	CALL SUBOPT_0x249
 0072ee e9e8      	LDI  R30,LOW(_0x1A009D*2)
 0072ef e4f4      	LDI  R31,HIGH(_0x1A009D*2)
@@ -38130,7 +38131,7 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0072f8 8dbb      	LDD  R27,Y+26+1
 0072f9 940e ce20 	CALL SUBOPT_0x228
 0072fb f061      	BREQ _0x1A009E
-                 ; 000D 02D1         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d is disable\r\n",ch+1);
+                 ; 000D 02D2         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d is disable\r\n",ch+1);
                 +
 0072fc e9e0     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 996 ) )
 0072fd e4f8     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 996 ) )
@@ -38140,20 +38141,20 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007300 940e cf0b 	CALL SUBOPT_0x24A
 007302 9631      	ADIW R30,1
 007303 940e c64a 	CALL SUBOPT_0xE9
-                 ; 000D 02D2         return -1;
+                 ; 000D 02D3         return -1;
 007305 efef      	LDI  R30,LOW(65535)
 007306 efff      	LDI  R31,HIGH(65535)
 007307 c142      	RJMP _0x20E0065
-                 ; 000D 02D3     }
-                 ; 000D 02D4 
-                 ; 000D 02D5     if(sensor[ch].status != SENS_NORMAL){
+                 ; 000D 02D4     }
+                 ; 000D 02D5 
+                 ; 000D 02D6     if(sensor[ch].status != SENS_NORMAL){
                  _0x1A009E:
 007308 8daa      	LDD  R26,Y+26
 007309 8dbb      	LDD  R27,Y+26+1
 00730a 940e ce25 	CALL SUBOPT_0x229
 00730c 30e0      	CPI  R30,0
 00730d f089      	BREQ _0x1A009F
-                 ; 000D 02D6         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d error(0x%02X)\r\n",ch+1,sensor[ch].status);
+                 ; 000D 02D7         printDebug("<sensorSetCurrentSetPoint> ABORT: sensor ch %d error(0x%02X)\r\n",ch+1,sensor[ch].status);
                 +
 00730e ecec     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 1056 ) )
 00730f e4f8     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 1056 ) )
@@ -38166,15 +38167,15 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007317 a1bb      	LDD  R27,Y+34+1
 007318 940e ce25 	CALL SUBOPT_0x229
 00731a 940e ce2c 	CALL SUBOPT_0x22A
-                 ; 000D 02D7         return -1;
+                 ; 000D 02D8         return -1;
 00731c efef      	LDI  R30,LOW(65535)
 00731d efff      	LDI  R31,HIGH(65535)
 00731e c12b      	RJMP _0x20E0065
-                 ; 000D 02D8     }
-                 ; 000D 02D9 
-                 ; 000D 02DA     printDebug("<sensorSetCurrentSetPoint> buf: [%d]/[%d][%d][%d][%d][%d]\r\n",
+                 ; 000D 02D9     }
+                 ; 000D 02DA 
+                 ; 000D 02DB     printDebug("<sensorSetCurrentSetPoint> buf: [%d]/[%d][%d][%d][%d][%d]\r\n",
                  _0x1A009F:
-                 ; 000D 02DB                                         buf[0],buf[1],buf[2],buf[3],buf[4],buf[5]);
+                 ; 000D 02DC                                         buf[0],buf[1],buf[2],buf[3],buf[4],buf[5]);
                 +
 00731f e0eb     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 1119 ) )
 007320 e4f9     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 1119 ) )
@@ -38209,8 +38210,8 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007343 e188      	LDI  R24,24
 007344 940e 9e24 	CALL _printDebug
 007346 966c      	ADIW R28,28
-                 ; 000D 02DC 
-                 ; 000D 02DD     val =  (float) (0.0);
+                 ; 000D 02DD 
+                 ; 000D 02DE     val =  (float) (0.0);
 007347 e0e0      	LDI  R30,LOW(0)
                 +
 007348 8bea     +STD Y + 18 , R30
@@ -38218,29 +38219,29 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 00734a 8bec     +STD Y + 18 + 2 , R30
 00734b 8bed     +STD Y + 18 + 3 , R30
                  	__CLRD1S 18
-                 ; 000D 02DE     val += (float) (buf[1] * 100);
+                 ; 000D 02DF     val += (float) (buf[1] * 100);
 00734c 89ee      	LDD  R30,Y+22
 00734d 89ff      	LDD  R31,Y+22+1
 00734e 81e1      	LDD  R30,Z+1
 00734f e6a4      	LDI  R26,LOW(100)
 007350 940e cf10 	CALL SUBOPT_0x24B
-                 ; 000D 02DF     val += (float) (buf[2] * 10);
+                 ; 000D 02E0     val += (float) (buf[2] * 10);
 007352 81e2      	LDD  R30,Z+2
 007353 e0aa      	LDI  R26,LOW(10)
 007354 940e cf10 	CALL SUBOPT_0x24B
-                 ; 000D 02E0     val += (float) (buf[3]);
+                 ; 000D 02E1     val += (float) (buf[3]);
 007356 81e3      	LDD  R30,Z+3
 007357 27ff      	CLR  R31
 007358 2766      	CLR  R22
 007359 2777      	CLR  R23
 00735a 940e dd72 	CALL __CDF1
 00735c 940e cf23 	CALL SUBOPT_0x24C
-                 ; 000D 02E1     val += (float) (buf[4] * 0.1);
+                 ; 000D 02E2     val += (float) (buf[4] * 0.1);
 00735e 81e4      	LDD  R30,Z+4
 00735f 940e cf30 	CALL SUBOPT_0x24D
 007361 940e c482 	CALL SUBOPT_0x9E
 007363 940e cf23 	CALL SUBOPT_0x24C
-                 ; 000D 02E2     val += (float) (buf[5] * 0.01);
+                 ; 000D 02E3     val += (float) (buf[5] * 0.01);
 007365 81e5      	LDD  R30,Z+5
 007366 940e cf30 	CALL SUBOPT_0x24D
                 +
@@ -38253,7 +38254,7 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 00736e 940e cf36 	CALL SUBOPT_0x24E
 007370 940e ddac 	CALL __ADDF12
 007372 940e cf3b 	CALL SUBOPT_0x24F
-                 ; 000D 02E3     if(buf[0] == 1){    val *= (float) (-1.0);  }
+                 ; 000D 02E4     if(buf[0] == 1){    val *= (float) (-1.0);  }
 007374 89ae      	LDD  R26,Y+22
 007375 89bf      	LDD  R27,Y+22+1
 007376 91ac      	LD   R26,X
@@ -38268,8 +38269,8 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
                  	__GETD1N 0xBF800000
 00737f 940e ddfc 	CALL __MULF12
 007381 940e cf3b 	CALL SUBOPT_0x24F
-                 ; 000D 02E4 
-                 ; 000D 02E5     printDebug("<sensorSetCurrentSetPoint> sensor %1d, point %1d, set to [%f]",ch+1,pnt,val);
+                 ; 000D 02E5 
+                 ; 000D 02E6     printDebug("<sensorSetCurrentSetPoint> sensor %1d, point %1d, set to [%f]",ch+1,pnt,val);
                  _0x1A00A0:
                 +
 007383 e4e7     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 1179 ) )
@@ -38285,33 +38286,33 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 00738f 940e c522 	CALL SUBOPT_0xBB
 007391 940e e05b 	CALL __PUTPARD1
 007393 940e c2f9 	CALL SUBOPT_0x66
-                 ; 000D 02E6 
-                 ; 000D 02E7     if(pnt == CALPOINT(1)){
+                 ; 000D 02E7 
+                 ; 000D 02E8     if(pnt == CALPOINT(1)){
 007395 8da8      	LDD  R26,Y+24
 007396 8db9      	LDD  R27,Y+24+1
 007397 36a5      	CPI  R26,LOW(0x65)
 007398 e0e0      	LDI  R30,HIGH(0x65)
 007399 07be      	CPC  R27,R30
 00739a f5a9      	BRNE _0x1A00A1
-                 ; 000D 02E8         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+                 ; 000D 02E9         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 00739b 940e c172 	CALL SUBOPT_0x2E
 00739d f021      	BREQ _0x1A00A3
 00739e 940e c172 	CALL SUBOPT_0x2E
 0073a0 30e3      	CPI  R30,LOW(0x3)
 0073a1 f469      	BRNE _0x1A00A2
                  _0x1A00A3:
-                 ; 000D 02E9 //           viADCbuffer = 0;
-                 ; 000D 02EA //             for(i=0;i<30;i++){
-                 ; 000D 02EB //                viADCbuffer += read_adc(8+ch);
-                 ; 000D 02EC //             }
-                 ; 000D 02ED //
-                 ; 000D 02EE //             epADCRef1[ch] = iAD595ADCToTemp(viADCbuffer,30);
-                 ; 000D 02EF 
-                 ; 000D 02F0              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+                 ; 000D 02EA //           viADCbuffer = 0;
+                 ; 000D 02EB //             for(i=0;i<30;i++){
+                 ; 000D 02EC //                viADCbuffer += read_adc(8+ch);
+                 ; 000D 02ED //             }
+                 ; 000D 02EE //
+                 ; 000D 02EF //             epADCRef1[ch] = iAD595ADCToTemp(viADCbuffer,30);
+                 ; 000D 02F0 
+                 ; 000D 02F1              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
 0073a2 940e cf45 	CALL SUBOPT_0x251
-                 ; 000D 02F1              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
+                 ; 000D 02F2              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
 0073a4 940e cf51 	CALL SUBOPT_0x252
-                 ; 000D 02F2              epADCRef1[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
+                 ; 000D 02F3              epADCRef1[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
 0073a6 940e cf5e 	CALL SUBOPT_0x253
 0073a8 93ff      	PUSH R31
 0073a9 93ef      	PUSH R30
@@ -38319,9 +38320,9 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0073ac 91af      	POP  R26
 0073ad 91bf      	POP  R27
 0073ae c009      	RJMP _0x1A00BF
-                 ; 000D 02F3         }else{
+                 ; 000D 02F4         }else{
                  _0x1A00A2:
-                 ; 000D 02F4            epADCRef1[ch]       = adcData[ch];
+                 ; 000D 02F5            epADCRef1[ch]       = adcData[ch];
 0073af 8dea      	LDD  R30,Y+26
 0073b0 8dfb      	LDD  R31,Y+26+1
 0073b1 940e cf5e 	CALL SUBOPT_0x253
@@ -38330,33 +38331,33 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0073b7 01d0      	MOVW R26,R0
                  _0x1A00BF:
 0073b8 940e e093 	CALL __EEPROMWRD
-                 ; 000D 02F5         }
-                 ; 000D 02F6 
+                 ; 000D 02F6         }
                  ; 000D 02F7 
                  ; 000D 02F8 
-                 ; 000D 02F9         epTempRef1[ch]      = val;
+                 ; 000D 02F9 
+                 ; 000D 02FA         epTempRef1[ch]      = val;
 0073ba 8dea      	LDD  R30,Y+26
 0073bb 8dfb      	LDD  R31,Y+26+1
 0073bc 940e ceaa 	CALL SUBOPT_0x23B
 0073be 940e cf6e 	CALL SUBOPT_0x256
-                 ; 000D 02FA         //epADCRef1[ch]       = adcData[ch];
-                 ; 000D 02FB         epIsPointSet1[ch]   = 1;
+                 ; 000D 02FB         //epADCRef1[ch]       = adcData[ch];
+                 ; 000D 02FC         epIsPointSet1[ch]   = 1;
 0073c0 52af      	SUBI R26,LOW(-_epIsPointSet1)
 0073c1 4fba      	SBCI R27,HIGH(-_epIsPointSet1)
 0073c2 e0e1      	LDI  R30,LOW(1)
 0073c3 940e cf77 	CALL SUBOPT_0x257
-                 ; 000D 02FC         epIsPointSet2[ch]   = 0;                        // -- reset cal_point 2 -- //
+                 ; 000D 02FD         epIsPointSet2[ch]   = 0;                        // -- reset cal_point 2 -- //
 0073c5 50a2      	SUBI R26,LOW(-_epIsPointSet2)
 0073c6 4fba      	SBCI R27,HIGH(-_epIsPointSet2)
 0073c7 e0e0      	LDI  R30,LOW(0)
 0073c8 940e cf77 	CALL SUBOPT_0x257
-                 ; 000D 02FD         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
+                 ; 000D 02FE         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
 0073ca 5da5      	SUBI R26,LOW(-_epIsPointSet3)
 0073cb 4fb9      	SBCI R27,HIGH(-_epIsPointSet3)
 0073cc e0e0      	LDI  R30,LOW(0)
 0073cd 940e e0a3 	CALL __EEPROMWRB
-                 ; 000D 02FE     }
-                 ; 000D 02FF     else if(pnt == CALPOINT(2)){
+                 ; 000D 02FF     }
+                 ; 000D 0300     else if(pnt == CALPOINT(2)){
 0073cf c078      	RJMP _0x1A00A6
                  _0x1A00A1:
 0073d0 8da8      	LDD  R26,Y+24
@@ -38365,26 +38366,26 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0073d3 e0e0      	LDI  R30,HIGH(0x66)
 0073d4 07be      	CPC  R27,R30
 0073d5 f5a1      	BRNE _0x1A00A7
-                 ; 000D 0300 
-                 ; 000D 0301         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+                 ; 000D 0301 
+                 ; 000D 0302         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 0073d6 940e c172 	CALL SUBOPT_0x2E
 0073d8 f021      	BREQ _0x1A00A9
 0073d9 940e c172 	CALL SUBOPT_0x2E
 0073db 30e3      	CPI  R30,LOW(0x3)
 0073dc f479      	BRNE _0x1A00A8
                  _0x1A00A9:
-                 ; 000D 0302 //           viADCbuffer = 0;
-                 ; 000D 0303 //             for(i=0;i<30;i++){
-                 ; 000D 0304 //                viADCbuffer += read_adc(8+ch);
-                 ; 000D 0305 //             }
-                 ; 000D 0306 //
-                 ; 000D 0307 //             epADCRef2[ch] = iAD595ADCToTemp(viADCbuffer,30);
-                 ; 000D 0308 
-                 ; 000D 0309              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+                 ; 000D 0303 //           viADCbuffer = 0;
+                 ; 000D 0304 //             for(i=0;i<30;i++){
+                 ; 000D 0305 //                viADCbuffer += read_adc(8+ch);
+                 ; 000D 0306 //             }
+                 ; 000D 0307 //
+                 ; 000D 0308 //             epADCRef2[ch] = iAD595ADCToTemp(viADCbuffer,30);
+                 ; 000D 0309 
+                 ; 000D 030A              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
 0073dd 940e cf45 	CALL SUBOPT_0x251
-                 ; 000D 030A              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
+                 ; 000D 030B              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
 0073df 940e cf51 	CALL SUBOPT_0x252
-                 ; 000D 030B              epADCRef2[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
+                 ; 000D 030C              epADCRef2[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
 0073e1 940e ce9e 	CALL SUBOPT_0x239
 0073e3 0fea      	ADD  R30,R26
 0073e4 1ffb      	ADC  R31,R27
@@ -38394,9 +38395,9 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0073e9 91af      	POP  R26
 0073ea 91bf      	POP  R27
 0073eb c00b      	RJMP _0x1A00C0
-                 ; 000D 030C         }else{
+                 ; 000D 030D         }else{
                  _0x1A00A8:
-                 ; 000D 030D            epADCRef2[ch]       = adcData[ch];
+                 ; 000D 030E            epADCRef2[ch]       = adcData[ch];
 0073ec 8dea      	LDD  R30,Y+26
 0073ed 8dfb      	LDD  R31,Y+26+1
 0073ee 940e ce9e 	CALL SUBOPT_0x239
@@ -38407,26 +38408,26 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 0073f6 01d0      	MOVW R26,R0
                  _0x1A00C0:
 0073f7 940e e093 	CALL __EEPROMWRD
-                 ; 000D 030E         }
-                 ; 000D 030F 
-                 ; 000D 0310         epTempRef2[ch]      = val;
+                 ; 000D 030F         }
+                 ; 000D 0310 
+                 ; 000D 0311         epTempRef2[ch]      = val;
 0073f9 8dea      	LDD  R30,Y+26
 0073fa 8dfb      	LDD  R31,Y+26+1
 0073fb 940e ceaf 	CALL SUBOPT_0x23C
 0073fd 940e cf6e 	CALL SUBOPT_0x256
-                 ; 000D 0311         //epADCRef2[ch]       = adcData[ch];
-                 ; 000D 0312         epIsPointSet2[ch]   = 1;
+                 ; 000D 0312         //epADCRef2[ch]       = adcData[ch];
+                 ; 000D 0313         epIsPointSet2[ch]   = 1;
 0073ff 50a2      	SUBI R26,LOW(-_epIsPointSet2)
 007400 4fba      	SBCI R27,HIGH(-_epIsPointSet2)
 007401 e0e1      	LDI  R30,LOW(1)
 007402 940e cf77 	CALL SUBOPT_0x257
-                 ; 000D 0313         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
+                 ; 000D 0314         epIsPointSet3[ch]   = 0;                        // -- reset cal_point 3 -- //
 007404 5da5      	SUBI R26,LOW(-_epIsPointSet3)
 007405 4fb9      	SBCI R27,HIGH(-_epIsPointSet3)
 007406 e0e0      	LDI  R30,LOW(0)
 007407 940e e0a3 	CALL __EEPROMWRB
-                 ; 000D 0314     }
-                 ; 000D 0315     else if(pnt == CALPOINT(3)){
+                 ; 000D 0315     }
+                 ; 000D 0316     else if(pnt == CALPOINT(3)){
 007409 c03e      	RJMP _0x1A00AC
                  _0x1A00A7:
 00740a 8da8      	LDD  R26,Y+24
@@ -38435,25 +38436,25 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 00740d e0e0      	LDI  R30,HIGH(0x67)
 00740e 07be      	CPC  R27,R30
 00740f f569      	BRNE _0x1A00AD
-                 ; 000D 0316         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
+                 ; 000D 0317         if((TEMP_SEL == TEMP_TYPE_K) || (TEMP_SEL == TEMP_RESERVED)){
 007410 940e c172 	CALL SUBOPT_0x2E
 007412 f021      	BREQ _0x1A00AF
 007413 940e c172 	CALL SUBOPT_0x2E
 007415 30e3      	CPI  R30,LOW(0x3)
 007416 f469      	BRNE _0x1A00AE
                  _0x1A00AF:
-                 ; 000D 0317 //           viADCbuffer = 0;
-                 ; 000D 0318 //             for(i=0;i<30;i++){
-                 ; 000D 0319 //                viADCbuffer += read_adc(8+ch);
-                 ; 000D 031A //             }
-                 ; 000D 031B //
-                 ; 000D 031C //             epADCRef3[ch] = iAD595ADCToTemp(viADCbuffer,30);
-                 ; 000D 031D 
-                 ; 000D 031E              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
+                 ; 000D 0318 //           viADCbuffer = 0;
+                 ; 000D 0319 //             for(i=0;i<30;i++){
+                 ; 000D 031A //                viADCbuffer += read_adc(8+ch);
+                 ; 000D 031B //             }
+                 ; 000D 031C //
+                 ; 000D 031D //             epADCRef3[ch] = iAD595ADCToTemp(viADCbuffer,30);
+                 ; 000D 031E 
+                 ; 000D 031F              viRiaseUpVoltValue = (float)((iUpdateSmoothlyADC(ch))+0.213);
 007417 940e cf45 	CALL SUBOPT_0x251
-                 ; 000D 031F              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
+                 ; 000D 0320              viVoltUseCaluate = (viRiaseUpVoltValue-viZeroSet);
 007419 940e cf51 	CALL SUBOPT_0x252
-                 ; 000D 0320              epADCRef3[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
+                 ; 000D 0321              epADCRef3[ch] = iAD595VoltToTemp(viVoltUseCaluate);        //0.213 *2 = 0.426
 00741b 940e cf7c 	CALL SUBOPT_0x258
 00741d 93ff      	PUSH R31
 00741e 93ef      	PUSH R30
@@ -38461,9 +38462,9 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 007421 91af      	POP  R26
 007422 91bf      	POP  R27
 007423 c009      	RJMP _0x1A00C1
-                 ; 000D 0321         }else{
+                 ; 000D 0322         }else{
                  _0x1A00AE:
-                 ; 000D 0322            epADCRef3[ch]       = adcData[ch];
+                 ; 000D 0323            epADCRef3[ch]       = adcData[ch];
 007424 8dea      	LDD  R30,Y+26
 007425 8dfb      	LDD  R31,Y+26+1
 007426 940e cf7c 	CALL SUBOPT_0x258
@@ -38472,26 +38473,26 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 00742c 01d0      	MOVW R26,R0
                  _0x1A00C1:
 00742d 940e e093 	CALL __EEPROMWRD
-                 ; 000D 0323         }
-                 ; 000D 0324 
-                 ; 000D 0325         epTempRef3[ch]      = val;
+                 ; 000D 0324         }
+                 ; 000D 0325 
+                 ; 000D 0326         epTempRef3[ch]      = val;
 00742f 8dea      	LDD  R30,Y+26
 007430 8dfb      	LDD  R31,Y+26+1
 007431 e4a4      	LDI  R26,LOW(_epTempRef3)
 007432 e0b6      	LDI  R27,HIGH(_epTempRef3)
 007433 940e df02 	CALL __LSLW2
 007435 940e cf6e 	CALL SUBOPT_0x256
-                 ; 000D 0326         //epADCRef3[ch]       = adcData[ch];
-                 ; 000D 0327         epIsPointSet3[ch]   = 1;
+                 ; 000D 0327         //epADCRef3[ch]       = adcData[ch];
+                 ; 000D 0328         epIsPointSet3[ch]   = 1;
 007437 5da5      	SUBI R26,LOW(-_epIsPointSet3)
 007438 4fb9      	SBCI R27,HIGH(-_epIsPointSet3)
 007439 e0e1      	LDI  R30,LOW(1)
 00743a 940e e0a3 	CALL __EEPROMWRB
-                 ; 000D 0328     }
-                 ; 000D 0329     else{
+                 ; 000D 0329     }
+                 ; 000D 032A     else{
 00743c c00b      	RJMP _0x1A00B2
                  _0x1A00AD:
-                 ; 000D 032A         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
+                 ; 000D 032B         printDebug("<sensorGetCurrentSetPoint> invalid paramter pnt->[%d]\r\n",pnt);
                 +
 00743d ece4     +LDI R30 , LOW ( 2 * _0x1A0000 + ( 792 ) )
 00743e e4f7     +LDI R31 , HIGH ( 2 * _0x1A0000 + ( 792 ) )
@@ -38500,16 +38501,16 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
                  	__POINTD1FN _0x1A0000,792
 007441 940e c66d 	CALL SUBOPT_0xF1
 007443 940e c64a 	CALL SUBOPT_0xE9
-                 ; 000D 032B         return -1;
+                 ; 000D 032C         return -1;
 007445 efef      	LDI  R30,LOW(65535)
 007446 efff      	LDI  R31,HIGH(65535)
 007447 c002      	RJMP _0x20E0065
-                 ; 000D 032C     }
+                 ; 000D 032D     }
                  _0x1A00B2:
                  _0x1A00AC:
                  _0x1A00A6:
-                 ; 000D 032D 
-                 ; 000D 032E     return 0;
+                 ; 000D 032E 
+                 ; 000D 032F     return 0;
 007448 e0e0      	LDI  R30,LOW(0)
 007449 e0f0      	LDI  R31,HIGH(0)
                  _0x20E0065:
@@ -38517,7 +38518,7 @@ C:\Data\MyProject\Intelenics\int-sma\AVR_Model\iNT_IMS_ETH_TC_v02\List\iNT_ETH.a
 00744b 8108      	LDD  R16,Y+0
 00744c 966c      	ADIW R28,28
 00744d 9508      	RET
-                 ; 000D 032F }
+                 ; 000D 0330 }
                  ;/*============================================================*/
                  ;#include <stdlib.h>
                  ;#include <stdio.h>
