@@ -54,11 +54,12 @@ public class MsgDDApi {
         //this.nxUrlString = "http://messagedd.com/httpapi/sendsms/sendsms.aspx?username=GLOBAL_DETECT&password=0135554014045&to=0892517885&text=URL-TX-data&sender=IMS";
     }
 
-    public String getHTML(String urlToRead) throws Exception {
+    public MasterData getHTML(String urlToRead) throws Exception {
+        MasterData nxReturn = new MasterData();
         char[] c = new char[1024];
         int i;
         int countReaderCh;
-        StringBuilder result = new StringBuilder();
+        //StringBuilder result = new StringBuilder();
         URL url = new URL(urlToRead);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
@@ -72,11 +73,26 @@ public class MsgDDApi {
             // int to character
             c[countReaderCh++] = (char) i;
         }
-        if(countReaderCh > 0){
-            System.out.println("Character Read: " + new String(String.valueOf(c)));
+        if (countReaderCh > 0) {
+            String StringResult = null;
+            StringResult = new String(String.valueOf(c));
+            System.out.println("Character Read: " + StringResult);
+            
+            String[] parts = StringResult.split(":");
+            String part1 = parts[0]; // 004
+            String part2 = parts[1]; // 034556
+            if (part1.equals("0")) {
+                //System.out.println("Field Password is exsit.");
+                nxReturn.setNxKey(part1);
+                nxReturn.setNxValue(part2);
+            }else{
+                //nxReturn.setNxKey("0");
+                //nxReturn.setNxValue("0");
+            }
         }
         rd.close();
-        return result.toString();
+        //return result.toString();
+        return nxReturn;
     }
 
 }

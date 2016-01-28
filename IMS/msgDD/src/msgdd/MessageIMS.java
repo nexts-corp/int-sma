@@ -5,6 +5,7 @@
  */
 package msgdd;
 
+import java.io.IOException;
 import java.net.URLEncoder;
 import java.sql.*;
 import java.util.logging.Level;
@@ -33,21 +34,25 @@ public class MessageIMS {
     Connection conn = null;
     Statement stmt = null;
     MsgProvider nxMsgProvider = new MsgProvider();
+    int nxId;
+    String nxUserName;
+    String nxDistination;
+    String nxMsg1;
+    String nxMsg2;
+    String nxProviderName;
+    String nxTimestamp;
+    int nxSuccess;
 
     void nxGetData() throws SQLException {
-//        byte[]   bytesEncoded = Base64.encodeBase64("0135554014045".getBytes());
-//        System.out.println("ecncoded value is " + new String(bytesEncoded ));
-//        String orig = "0135554014045";
-//
-//        //encoding  byte array into base 64
-//        byte[] encoded = Base64.encodeBase64(orig.getBytes());
-//
-//        System.out.println("Original String: " + orig);
-//        System.out.println("Base64 Encoded String : " + new String(encoded));
-//
-//        //decoding byte array into base64
-//        byte[] decoded = Base64.decodeBase64("527C95B40C033077965651130529399D".getBytes());
-//        System.out.println("Base 64 Decoded  String : " + new String(decoded));
+        ReadFileConfig nxFileConfig = new ReadFileConfig();
+        MasterData nxFlieMapValue = new MasterData();
+        MasterData nxAckStatus = new MasterData();
+        try {
+            //nxFlieMapValue = nxFileConfig.nxReadFile();
+            nxFlieMapValue = nxFileConfig.nxReadFile("Password");
+        } catch (IOException ex) {
+            Logger.getLogger(MessageIMS.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         if (nxGetMsgProvider()) {
             System.out.println("Message provider OK.");
@@ -65,35 +70,35 @@ public class MessageIMS {
 
                 while (rs.next()) {
                     //Retrieve by column name
-                    int nxId = rs.getInt("SMS_ID");
-                    String nxUserName = rs.getString("USER_USERNAME");
-                    String nxDistination = rs.getString("DESTINATION");
-                    String nxMsg1 = rs.getString("MESSAGE1");
-                    String nxMsg2 = rs.getString("MESSAGE2");
-                    String nxProviderName = rs.getString("PROVIDER_NAME");
-                    String nxTimestamp = rs.getString("TIMESTAMP");
-                    int nxSuccess = rs.getInt("SUCCESS");
+                    this.nxId = rs.getInt("SMS_ID");
+                    this.nxUserName = rs.getString("USER_USERNAME");
+                    this.nxDistination = rs.getString("DESTINATION");
+                    this.nxMsg1 = rs.getString("MESSAGE1");
+                    this.nxMsg2 = rs.getString("MESSAGE2");
+                    this.nxProviderName = rs.getString("PROVIDER_NAME");
+                    this.nxTimestamp = rs.getString("TIMESTAMP");
+                    this.nxSuccess = rs.getInt("SUCCESS");
 
                     //Display values
-                    System.out.print("id: " + nxId);
-                    System.out.print(", user: " + nxUserName);
-                    System.out.print(", des-tel: " + nxDistination);
-                    System.out.print(", msg1: " + nxMsg1);
+                    System.out.print("id: " + this.nxId);
+                    System.out.print(", user: " + this.nxUserName);
+                    System.out.print(", des-tel: " + this.nxDistination);
+                    System.out.print(", msg1: " + this.nxMsg1);
                     //System.out.print(", msg2: " + nxMsg2);
                     //System.out.print(", PROVIDER_NAME: " + nxProviderName);
-                    System.out.print(", timestamp: " + nxTimestamp);
-                    System.out.println(", success: " + nxSuccess);
+                    System.out.print(", timestamp: " + this.nxTimestamp);
+                    System.out.println(", success: " + this.nxSuccess);
 
-                    nxMsgProvider.setNxTo(nxDistination);
-                    nxMsgProvider.setNxText(nxMsg1);
-                    
-                    
+                    nxMsgProvider.setNxTo(this.nxDistination);
+                    nxMsgProvider.setNxText(this.nxMsg1);
+
                     //test
-                    nxMsgProvider.setNxPassword("0135554014045");
+                    nxMsgProvider.setNxPassword(nxFlieMapValue.getNxValue());
+                    //nxMsgProvider.setNxPassword("0135554014045");
                     nxMsgProvider.setNxTo("0892517885");
                     System.out.println("setNxText Length: " + nxMsgProvider.getNxText().length());
-                    
-                    nxMsgProvider.setNxText("Test-IMS-Send-to");
+
+                    //nxMsgProvider.setNxText("Test-IMS-Send-to2");
                     //nxMsgProvider.setNxSender("IMS-RAMA"); no work
 
                     MsgDDApi nxMsgApi = new MsgDDApi(nxMsgProvider);
@@ -102,10 +107,9 @@ public class MessageIMS {
 //                    byte[] bytes = nxMsgProvider.getNxPassword().getBytes(); // Charset to encode into
 //                    String s2 = new String(bytes); // Charset with which bytes were encoded 
 //                    System.out.println("Password decode: " + s2);
-
                     try {
-                        
-                        nxMsgApi.getHTML(nxMsgApi.getNxUrlString());
+
+                        nxAckStatus = nxMsgApi.getHTML(nxMsgApi.getNxUrlString());
                     } catch (Exception ex) {
                         Logger.getLogger(MsgDDApi.class.getName()).log(Level.SEVERE, null, ex);
                     }
@@ -139,11 +143,59 @@ public class MessageIMS {
         } else {
             System.out.println("Message provider fail.");
         }
-
+        if(nxAckStatus.getNxKey()!=null && (nxAckStatus.getNxKey().equals("0")==true)){
+            System.out.println("Data Update Process.");
+            boolean vnxReturn = nxEditSMSLogDB(this.nxId);
+            if(vnxReturn){
+                System.out.println("Update SUCCESS flag is is success.");
+            }
+        }
     }
 
-    void nxEditData() {
+    boolean nxEditSMSLogDB(int vnxId_arg) {
+        boolean nxReturn = false;
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            System.out.println("Connecting to database...");
+            conn = DriverManager.getConnection(DB_URL_Log, USER, PASS);
 
+            System.out.println("Creating statement...");
+            stmt = conn.createStatement();
+            String sql;
+            sql = "UPDATE `sms_log` "
+                    + "SET  `SUCCESS` = 1 WHERE SMS_ID = "
+                    + vnxId_arg;
+            int nxCountUpdate = stmt.executeUpdate(sql);
+            
+            if(nxCountUpdate==1){
+                nxReturn = true;
+            }
+
+            stmt.close();
+            conn.close();
+        } catch (SQLException se) {
+            //Handle errors for JDBC
+            se.printStackTrace();
+        } catch (Exception e) {
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        } finally {
+            //finally block used to close resources
+            try {
+                if (stmt != null) {
+                    stmt.close();
+                }
+            } catch (SQLException se2) {
+            }// nothing we can do
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException se) {
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        return nxReturn; 
     }
 
     boolean nxGetMsgProvider() {
