@@ -6,6 +6,7 @@
 package msgdd;
 import java.io.*;
 import java.net.*;
+import java.lang.*;
 
 
 /**
@@ -19,8 +20,13 @@ public class MsgDD {
      */
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
-        MessageIMS msgIms = new MessageIMS();
-        msgIms.nxGetData();
+        
+        while(true){
+            MessageIMS msgIms = new MessageIMS();
+            msgIms.nxGetData();
+            Thread.sleep(1000*30);
+        }
+        
         
 //        int i=1;
 //        //String urlString = "http://messagedd.com/httpapi/sendsms/sendsms.aspx?username=GLOBAL_DETECT&password=0135554014045&to=0892517885&text=URL-TX-data&sender=IMS";

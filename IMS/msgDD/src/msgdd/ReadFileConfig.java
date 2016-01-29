@@ -60,18 +60,19 @@ public class ReadFileConfig {
                 String part1 = parts[0]; // 004
                 String part2 = parts[1]; // 034556
                 if (part1.equals(nxKey_arg)) {
-                    System.out.println("Field Password is exsit.");
+                    System.out.println("Key Value: "+ part1);
                     nxMapValue.setNxKey(part1);
                     nxMapValue.setNxValue(part2);
+                    br.close();
                     break;
                 }
                 sb.append(line);
                 sb.append(System.lineSeparator());
                 line = br.readLine();
             }
-            String everything = sb.toString();
+            //String everything = sb.toString();
         } finally {
-            System.out.println("Field is not exsit.");
+            //System.out.println("Field is not exsit.");
             br.close();
         }
         return nxMapValue;

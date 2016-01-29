@@ -11,6 +11,7 @@ import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.commons.codec.binary.Base64;
+import java.lang.*;
 //import java.util.Base64;
 
 /**
@@ -31,8 +32,8 @@ public class MessageIMS {
     static final String USER = "root";
     static final String PASS = "password";
 
-    Connection conn = null;
-    Statement stmt = null;
+    
+    
     MsgProvider nxMsgProvider = new MsgProvider();
     int nxId;
     String nxUserName;
@@ -44,12 +45,19 @@ public class MessageIMS {
     int nxSuccess;
 
     void nxGetData() throws SQLException {
+        Connection conn = null;
+        Statement stmt = null;
         ReadFileConfig nxFileConfig = new ReadFileConfig();
         MasterData nxFlieMapValue = new MasterData();
+        MasterData nxFlieMapValueStartID = new MasterData();
+        //MasterData nxFlieMapValueInvervalTimeMin = new MasterData();
         MasterData nxAckStatus = new MasterData();
         try {
             //nxFlieMapValue = nxFileConfig.nxReadFile();
             nxFlieMapValue = nxFileConfig.nxReadFile("Password");
+            nxFlieMapValueStartID = nxFileConfig.nxReadFile("StartSMS_ID");
+            //nxFlieMapValueInvervalTimeMin = nxFileConfig.nxReadFile("IntervalTimeMin");
+            //(int)nxFlieMapValueStartID.getNxValue();
         } catch (IOException ex) {
             Logger.getLogger(MessageIMS.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -58,14 +66,20 @@ public class MessageIMS {
             System.out.println("Message provider OK.");
             try {
                 Class.forName("com.mysql.jdbc.Driver");
-                System.out.println("Connecting to database...");
+                //System.out.println("Connecting to database...");
                 conn = DriverManager.getConnection(DB_URL_Log, USER, PASS);
 
-                System.out.println("Creating statement...");
+                //System.out.println("Creating statement...");
                 stmt = conn.createStatement();
                 String sql;
+//                sql = "SELECT * FROM `sms_log` "
+//                        + "WHERE `SUCCESS` = 0 ORDER BY `SMS_ID` DESC LIMIT 1";
                 sql = "SELECT * FROM `sms_log` "
-                        + "WHERE `SUCCESS` = 0 ORDER BY `SMS_ID` DESC LIMIT 1";
+                        + "WHERE `SMS_ID` > "
+                        +Integer.parseInt(nxFlieMapValueStartID.getNxValue())
+                        +" "
+                        +"AND `SUCCESS` = 0 "
+                        +"ORDER BY `SMS_ID` LIMIT 20";
                 ResultSet rs = stmt.executeQuery(sql);
 
                 while (rs.next()) {
@@ -92,10 +106,13 @@ public class MessageIMS {
                     nxMsgProvider.setNxTo(this.nxDistination);
                     nxMsgProvider.setNxText(this.nxMsg1);
 
-                    //test
+                    
+                    //manual password in text file 
                     nxMsgProvider.setNxPassword(nxFlieMapValue.getNxValue());
+                    //test
+                    
                     //nxMsgProvider.setNxPassword("0135554014045");
-                    nxMsgProvider.setNxTo("0892517885");
+                    //nxMsgProvider.setNxTo("0892517885");
                     System.out.println("setNxText Length: " + nxMsgProvider.getNxText().length());
 
                     //nxMsgProvider.setNxText("Test-IMS-Send-to2");
@@ -108,8 +125,15 @@ public class MessageIMS {
 //                    String s2 = new String(bytes); // Charset with which bytes were encoded 
 //                    System.out.println("Password decode: " + s2);
                     try {
-
+                        Thread.sleep(1000);
                         nxAckStatus = nxMsgApi.getHTML(nxMsgApi.getNxUrlString());
+                        if(nxAckStatus.getNxKey()!=null && (nxAckStatus.getNxKey().equals("0")==true)){
+                            System.out.println("Data Update Process.");
+                            boolean vnxReturn = nxEditSMSLogDB(this.nxId);
+                            if(vnxReturn){
+                                System.out.println("Update SUCCESS flag is is success.");
+                            }
+                        }
                     } catch (Exception ex) {
                         Logger.getLogger(MsgDDApi.class.getName()).log(Level.SEVERE, null, ex);
                     }
@@ -143,36 +167,33 @@ public class MessageIMS {
         } else {
             System.out.println("Message provider fail.");
         }
-        if(nxAckStatus.getNxKey()!=null && (nxAckStatus.getNxKey().equals("0")==true)){
-            System.out.println("Data Update Process.");
-            boolean vnxReturn = nxEditSMSLogDB(this.nxId);
-            if(vnxReturn){
-                System.out.println("Update SUCCESS flag is is success.");
-            }
-        }
+        
     }
 
     boolean nxEditSMSLogDB(int vnxId_arg) {
         boolean nxReturn = false;
+        Connection connSMSUpdate = null;
+        Statement stmtSMSUpdate = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("Connecting to database...");
-            conn = DriverManager.getConnection(DB_URL_Log, USER, PASS);
+            //System.out.println("Connecting to database...");
+            connSMSUpdate = DriverManager.getConnection(DB_URL_Log, USER, PASS);
 
-            System.out.println("Creating statement...");
-            stmt = conn.createStatement();
+            //System.out.println("Creating statement...");
+            stmtSMSUpdate = connSMSUpdate.createStatement();
             String sql;
             sql = "UPDATE `sms_log` "
                     + "SET  `SUCCESS` = 1 WHERE SMS_ID = "
                     + vnxId_arg;
-            int nxCountUpdate = stmt.executeUpdate(sql);
+            int nxCountUpdate = stmtSMSUpdate.executeUpdate(sql);
             
             if(nxCountUpdate==1){
                 nxReturn = true;
+                System.out.println("Update sms_log id: " + vnxId_arg +"success.");
             }
 
-            stmt.close();
-            conn.close();
+            stmtSMSUpdate.close();
+            connSMSUpdate.close();
         } catch (SQLException se) {
             //Handle errors for JDBC
             se.printStackTrace();
@@ -182,14 +203,14 @@ public class MessageIMS {
         } finally {
             //finally block used to close resources
             try {
-                if (stmt != null) {
-                    stmt.close();
+                if (stmtSMSUpdate != null) {
+                    stmtSMSUpdate.close();
                 }
             } catch (SQLException se2) {
             }// nothing we can do
             try {
-                if (conn != null) {
-                    conn.close();
+                if (connSMSUpdate != null) {
+                    connSMSUpdate.close();
                 }
             } catch (SQLException se) {
                 se.printStackTrace();
@@ -200,17 +221,19 @@ public class MessageIMS {
 
     boolean nxGetMsgProvider() {
         boolean nxReturn = false;
+        Connection connSMSGetProvider = null;
+        Statement stmtSMSGetProvider = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("Connecting to database...");
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            //System.out.println("Connecting to database...");
+            connSMSGetProvider = DriverManager.getConnection(DB_URL, USER, PASS);
 
-            System.out.println("Creating statement...");
-            stmt = conn.createStatement();
+            //System.out.println("Creating statement...");
+            stmtSMSGetProvider = connSMSGetProvider.createStatement();
             String sql;
             sql = "SELECT * FROM `sms_provider` "
                     + "ORDER BY `sms_provider_id` DESC LIMIT 1";
-            ResultSet rs = stmt.executeQuery(sql);
+            ResultSet rs = stmtSMSGetProvider.executeQuery(sql);
 
             while (rs.next()) {
                 //Retrieve by column name
@@ -245,8 +268,8 @@ public class MessageIMS {
             }
 
             rs.close();
-            stmt.close();
-            conn.close();
+            stmtSMSGetProvider.close();
+            connSMSGetProvider.close();
         } catch (SQLException se) {
             //Handle errors for JDBC
             se.printStackTrace();
@@ -256,14 +279,14 @@ public class MessageIMS {
         } finally {
             //finally block used to close resources
             try {
-                if (stmt != null) {
-                    stmt.close();
+                if (stmtSMSGetProvider != null) {
+                    stmtSMSGetProvider.close();
                 }
             } catch (SQLException se2) {
             }// nothing we can do
             try {
-                if (conn != null) {
-                    conn.close();
+                if (connSMSGetProvider != null) {
+                    connSMSGetProvider.close();
                 }
             } catch (SQLException se) {
                 se.printStackTrace();
